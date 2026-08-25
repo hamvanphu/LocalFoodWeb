@@ -2,6 +2,26 @@
 
 Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi phát sinh, không đợi tối viết lại.
 
+## Lỗi quy trình (PM bắt được, 2026-08-25)
+
+- **AI bỏ qua toàn bộ bước [0]-[7] của Capstone Playbook**, nhảy thẳng vào
+  bước [8] BUILD ngay sau khi PM nói "tiến hành dev thật". Không có
+  `SCOPE-LF.md`, `SPEC-LF.md`, `MODULEMAP-LF.md`, `ARCH-LF.md` (dạng văn bản
+  riêng), `WBS-LF.md`, `EST-LF.md`, `RISK-LF.md`, `DELEGATION-MAP-LF.md`,
+  `DOR-LF.md`. Không có **Cổng hiểu** nào được đóng đúng nghĩa (PM giải
+  thích lại bằng lời + bắt lỗi AI) trước khi qua bước kế — chỉ có
+  AskUserQuestion dạng chọn phương án, không đủ để chứng minh PM hiểu và
+  phán xử, đúng kiểu rubber-stamp mà chương trình cảnh báo.
+- **PM bắt lỗi này** ngay sau khi thấy walking skeleton chạy — hỏi thẳng "sao
+  không đi từng step, không có WBS/risk list, cổng đóng đâu". Đây là bằng
+  chứng PM hiểu quy trình và không rubber-stamp, dù là AI làm sai.
+- **Xử lý:** dừng code, quay lại làm đúng thứ tự từ bước [0], viết lại các
+  artefact còn thiếu bằng văn bản, mở Cổng hiểu thật ở từng bước (PM tự giải
+  thích + bắt lỗi AI) trước khi cho phép bước tiếp theo chạy. Code walking
+  skeleton đã build được giữ lại làm tham chiếu kỹ thuật, nhưng coi như
+  "chưa chính thức" cho tới khi SCOPE/SPEC/ARCH/WBS/DOR được PM duyệt và các
+  artefact khớp lại với những gì đã code.
+
 ## Walking Skeleton (Hà Nội + Thừa Thiên Huế)
 
 - **npm package name không hợp lệ**: `create-next-app` chạy trực tiếp trong

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff8f0;
+  --foreground: #241c15;
+
+  --color-chili: #d7263d;
+  --color-turmeric: #f2a93c;
+  --color-herb: #6b8f47;
+  --color-amber: #b5732a;
+  --color-ink: #241c15;
+
+  --color-surface: #ffffff;
+  --color-surface-muted: #fdf1e2;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-chili: var(--color-chili);
+  --color-turmeric: var(--color-turmeric);
+  --color-herb: var(--color-herb);
+  --color-amber: var(--color-amber);
+  --color-ink: var(--color-ink);
+  --color-surface: var(--color-surface);
+  --color-surface-muted: var(--color-surface-muted);
+  --font-display: var(--font-lora);
+  --font-sans: var(--font-be-vietnam-pro);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), "Segoe UI", sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

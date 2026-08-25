@@ -1,0 +1,168 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PM-AI-Bootcamp-Workbook-SA-v1.0</title><style>
+body { font-family: Calibri, Arial, sans-serif; color: #1A2733; margin: 42px; line-height: 1.45; }
+h1,h2,h3 { font-family: Cambria, Georgia, serif; color: #12294D; }
+h1 { font-size: 26pt; margin-bottom: 8px; }
+h2 { font-size: 18pt; margin-top: 28px; }
+h3 { font-size: 14pt; margin-top: 20px; }
+p, li { font-size: 11pt; }
+blockquote { border-left: 4px solid #E07B29; margin: 16px 0; padding: 8px 16px; background: #FBECDB; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0 22px; }
+th { background: #12294D; color: white; text-align: left; }
+th, td { border: 1px solid #D9E1EA; padding: 8px 10px; font-size: 10.5pt; vertical-align: top; }
+code { background: #F4F8FD; padding: 1px 4px; border-radius: 3px; }
+pre { background: #F4F8FD; padding: 12px 16px; border-radius: 6px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+hr { border: none; border-top: 1px solid #D9E1EA; margin: 24px 0; }
+</style></head><body><h1>SA AI Bootcamp — Workbook (SA track) v2.0</h1>
+<blockquote>
+<p><strong>Companion to:</strong> Program and the common workbook<br />
+<strong>Role focus:</strong> Solution Architect<br />
+<strong>Common core:</strong> delegation, governance, telemetry, capstone, and viva remain shared. This workbook changes the role-specific artifacts.<br />
+<strong>Terminology:</strong> For unified terminology, see <code>docs/GLOSSARY.md</code>.</p>
+</blockquote>
+<hr />
+<h2>0. Shared case study</h2>
+<p>Use the LMS case or replace it with one of the six project briefs.</p>
+<p>The SA objective is not to produce pretty diagrams. It is to make trade-offs explicit and create an architecture that supports a real vertical slice.</p>
+<hr />
+<h2>Common rules</h2>
+<ul>
+<li>Use an AI coding agent to orchestrate architectural work, not just describe it.</li>
+<li>Keep a visible line between assumptions, decisions, and open risks.</li>
+<li>Log telemetry and human corrections.</li>
+<li>Hard-stop when architecture depends on unresolved business or security decisions.</li>
+</ul>
+<hr />
+<h2>SA-EX-01 — Architecture options and ADR</h2>
+<p><strong>Goal:</strong> compare architectural options and record the decision.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>at least two architecture options</li>
+<li>trade-off analysis</li>
+<li>one ADR</li>
+<li>telemetry</li>
+</ul>
+<p><strong>Pass bar:</strong> the learner can explain why the chosen path is better for the brief, not just why it is familiar.</p>
+<hr />
+<h2>SA-EX-02 — Tech stack selection with criteria</h2>
+<p><strong>Goal:</strong> choose technology by fit, not habit.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>tech stack matrix</li>
+<li>evaluation criteria</li>
+<li>rationale and risks</li>
+<li>telemetry</li>
+</ul>
+<p><strong>Pass bar:</strong> the learner corrects at least one AI suggestion that is misaligned with the brief or environment.</p>
+<hr />
+<h2>SA-EX-03 — NFR and architecture response</h2>
+<p><strong>Goal:</strong> connect non-functional requirements to structural choices.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>NFR table</li>
+<li>architecture response per NFR</li>
+<li>measurable acceptance signals</li>
+<li>telemetry</li>
+</ul>
+<p><strong>Pass bar:</strong> security, performance, availability, and traceability are all covered concretely.</p>
+<hr />
+<h2>SA-EX-04 — Threat model + design-first / four-lens review</h2>
+<p><strong>Goal:</strong> review the system before build through architecture, requirement, test, and acceptance lenses.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>simple STRIDE or equivalent threat model</li>
+<li>design-first checklist</li>
+<li>four-lens notes</li>
+<li>telemetry</li>
+</ul>
+<p><strong>Pass bar:</strong> at least one security or control problem is caught before implementation.</p>
+<hr />
+<h2>SA-EX-05 — Real architectural vertical slice</h2>
+<p><strong>Goal:</strong> create the SA form of Customer Zero.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>container or component layout for the slice</li>
+<li>API contract</li>
+<li>data model subset</li>
+<li>a working or runnable skeleton</li>
+<li>Dev Book notes</li>
+</ul>
+<p><strong>Pass bar:</strong> the learner can point to the real boundaries of the slice and defend why they are enough for MVP-first learning.</p>
+<hr />
+<h2>SA-EX-06 — Delegation Map from an architecture point of view</h2>
+<p><strong>Goal:</strong> define which architectural tasks AI may support and which still need human control.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>delegation map</li>
+<li>L0-L5 assignment</li>
+<li>A / A+ split</li>
+<li>rationale for high-risk design zones</li>
+</ul>
+<p><strong>Pass bar:</strong> security, permissions, data sensitivity, and irreversible structural changes are not over-delegated.</p>
+<hr />
+<h2>SA capability map</h2>
+<table>
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Capability emphasis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SA-EX-01</td>
+<td>Trade-off judgment</td>
+</tr>
+<tr>
+<td>SA-EX-02</td>
+<td>Stack fit</td>
+</tr>
+<tr>
+<td>SA-EX-03</td>
+<td>NFR discipline</td>
+</tr>
+<tr>
+<td>SA-EX-04</td>
+<td>Early risk discovery</td>
+</tr>
+<tr>
+<td>SA-EX-05</td>
+<td>Vertical slice realism</td>
+</tr>
+<tr>
+<td>SA-EX-06</td>
+<td>Safe delegation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Facilitator notes</h2>
+<ul>
+<li>The architecture is only useful if it survives real build work.</li>
+<li>Good SA work makes trade-offs visible, not hidden.</li>
+<li>A beautiful diagram with no risk model is weak output.</li>
+<li>Learners still need telemetry and concrete AI correction evidence.</li>
+</ul>
+<hr />
+<h2>Changelog</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0</td>
+<td>2026-07-02</td>
+<td>First SA track workbook</td>
+</tr>
+<tr>
+<td>v2.0</td>
+<td>2026-08-25</td>
+<td>Header: shorten Program ref, tool-agnostic orchestrator note, add glossary pointer; move changelog to end</td>
+</tr>
+</tbody>
+</table></body></html>

@@ -1,0 +1,541 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PM-AI-Bootcamp-Workbook-Common-v1.0</title><style>
+body { font-family: Calibri, Arial, sans-serif; color: #1A2733; margin: 42px; line-height: 1.45; }
+h1,h2,h3 { font-family: Cambria, Georgia, serif; color: #12294D; }
+h1 { font-size: 26pt; margin-bottom: 8px; }
+h2 { font-size: 18pt; margin-top: 28px; }
+h3 { font-size: 14pt; margin-top: 20px; }
+p, li { font-size: 11pt; }
+blockquote { border-left: 4px solid #E07B29; margin: 16px 0; padding: 8px 16px; background: #FBECDB; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0 22px; }
+th { background: #12294D; color: white; text-align: left; }
+th, td { border: 1px solid #D9E1EA; padding: 8px 10px; font-size: 10.5pt; vertical-align: top; }
+code { background: #F4F8FD; padding: 1px 4px; border-radius: 3px; }
+pre { background: #F4F8FD; padding: 12px 16px; border-radius: 6px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+hr { border: none; border-top: 1px solid #D9E1EA; margin: 24px 0; }
+</style></head><body><h1>PM AI Bootcamp — Workbook (Common) v2.0</h1>
+<blockquote>
+<p><strong>Companion to:</strong> <code>Program</code> (Phase 2 — Hands-on).<br />
+<strong>Goal:</strong> turn assignment guidance into <strong>hands-on exercises learners can run immediately</strong>.<br />
+<strong>Scope:</strong> common exercises for all PM learners before role-specific specializations.<br />
+<strong>How to use:</strong> five exercises run on <strong>the same case study</strong> — learners work through them as one continuous project.<br />
+<strong>Operating rule:</strong> use <strong>an AI coding agent as a super orchestrator</strong> through the loop <code>Context -&gt; Plan -&gt; Delegate -&gt; Execute -&gt; Gate -&gt; Log -&gt; Iterate</code> — getting started: <code>Orchestrator Guide</code>.<br />
+<strong>Date:</strong> 2026-08-24 · <strong>Version:</strong> v2.0</p>
+</blockquote>
+<hr />
+<h2>0. Shared case study — Leave Management System</h2>
+<p><strong>Context:</strong> a 500-person company currently manages leave requests through email and Excel, which makes approvals slow and error-prone.</p>
+<p><strong>Stakeholder brief (intentionally incomplete):</strong></p>
+<blockquote>
+<p>"We want an online leave request app. Managers should approve quickly on mobile. Employees need to see remaining leave days. HR needs a monthly report. We also want attendance integration. It should be done in about two months, and security should be like our other internal apps."</p>
+</blockquote>
+<p><strong>Training assumption:</strong></p>
+<ul>
+<li>1 PM learner</li>
+<li>3 developers</li>
+<li>1 QA</li>
+<li>0.5 designer</li>
+<li>target timeline about 8 weeks</li>
+</ul>
+<blockquote>
+<p>This ambiguity is intentional — the brief is vague so learners see that AI <strong>cannot replace</strong> the work of clarifying intent. That is the PM's job.</p>
+</blockquote>
+<hr />
+<h2>Common telemetry for every exercise</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tool used</td>
+<td>model / tool name</td>
+</tr>
+<tr>
+<td>Token estimate</td>
+<td>estimated total input/output tokens</td>
+</tr>
+<tr>
+<td>Real time spent</td>
+<td>total working minutes including review</td>
+</tr>
+<tr>
+<td>Iterations</td>
+<td>how many prompt / correction loops were needed</td>
+</tr>
+<tr>
+<td>Rework</td>
+<td>whether the artifact had to be redone</td>
+</tr>
+<tr>
+<td>PM-edit</td>
+<td>at least one point where the PM corrected AI intent or output</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Honest measurement rules:</strong></p>
+<ul>
+<li>time is <strong>real human time</strong>, not a proxy from token count,</li>
+<li>token numbers may start as estimates and be reconciled later,</li>
+<li>side work and correction loops must still be logged,</li>
+<li><code>PM-edit</code> is the most valuable field because it proves judgment.</li>
+</ul>
+<hr />
+<h2>Exercise structure</h2>
+<p>Each exercise contains:</p>
+<ul>
+<li>capability target,</li>
+<li>duration,</li>
+<li>input,</li>
+<li>execution steps,</li>
+<li>required submission,</li>
+<li>mandatory telemetry,</li>
+<li>rubric (0-4),</li>
+<li>prompt starter.</li>
+</ul>
+<hr />
+<h2>EX-01 — AI writes and reviews requirements <em>(maps to T1 + T2)</em></h2>
+<p><strong>Capabilities:</strong> C1 AI Literacy · C2 Delegation · C6 Outcome.<br />
+<strong>Duration:</strong> 90 minutes</p>
+<p><strong>Input:</strong> Raw brief from section 0.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>AI drafts a structured requirement</strong> from the brief: objective, scope (in/out), user stories, NFRs (performance / security / availability), acceptance criteria.</li>
+<li><strong>AI self-reviews</strong> its own draft: find <strong>contradictions, gaps, ambiguities</strong> and produce a <strong>list of clarification questions</strong> for the stakeholder.</li>
+<li><strong>PM judges:</strong> mark which questions truly need stakeholder input and which stem from AI misunderstanding. Correct at least one point where AI misread intent (hint: "attendance integration" — in or out of MVP scope? "security like our other apps" — the PM must make that concrete).</li>
+<li><strong>Hard-stop reflex:</strong> identify at least one place where the brief <strong>contradicts itself or lacks enough information to decide</strong> and the PM <strong>does not let AI guess</strong> — instead, mark it as "awaiting stakeholder clarification" (e.g., "done in about two months" <strong>vs.</strong> scope that includes attendance integration + data migration). AI stopping to ask is a <em>strength</em>, not a failure.</li>
+<li><strong>Simulation: stakeholder demands additional scope.</strong>
+   Use AI to role-play a <strong>project sponsor / client</strong> who makes a reasonable but out-of-MVP-scope request. For example:</li>
+<li>PB-01: <em>"We need a coupon / discount-code feature in the MVP — the launch campaign depends on it."</em></li>
+<li>LMS case: <em>"We also want an overtime-request feature built in."</em>
+   The PM must respond <strong>in writing</strong> (not verbally):</li>
+<li>(a) <strong>Impact</strong> on scope / timeline / team if the feature is added — cite the requirement document already produced.</li>
+<li>(b) <strong>Alternative proposal</strong> (e.g., for the launch campaign, manually adjust prices — keep the MVP scope, push coupons to phase 2).</li>
+<li>(c) <strong>"Email / chat reply to the stakeholder"</strong> — five lines or fewer, clear, professional, protecting scope while preserving the relationship.</li>
+</ol>
+<blockquote>
+<p><em>The skill of "saying NO with reasons" is the gap most PMs need to close. AI simulating a difficult stakeholder fits the programme's philosophy: AI does the work, the human makes the judgment call.</em></p>
+</blockquote>
+<p><strong>Submission:</strong></p>
+<ul>
+<li><code>REQ-LMS.md</code>: structured requirement, reviewed by the PM.</li>
+<li>At least five clarification questions, each labelled <code>[Ask stakeholder]</code> or <code>[AI got it wrong]</code>.</li>
+<li>At least one <strong>hard-stop</strong> marked <code>[AWAITING CLARIFICATION — do not let AI guess]</code>.</li>
+<li>"Email reply to stakeholder" (five lines or fewer) plus the reasoning behind it.</li>
+<li>Telemetry.</li>
+</ul>
+<p><strong>Rubric (0-4):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 (Pass)</td>
+<td>All requirement sections present, follows the brief, at least five valid questions, PM corrected at least one intent error</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Questions correctly classified as real vs. AI-misunderstanding; scope in/out is clear; at least one valid hard-stop; stakeholder response includes a feasible alternative</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Acceptance criteria are measurable and the template is reusable for other projects; email maintains an appropriate tone while protecting scope</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prompt starter:</strong></p>
+<blockquote>
+<p><em>"You are a BA. From the following brief, write a structured requirement: Objective, Scope (in/out), User Stories (As a... I want... so that...), NFRs, Acceptance Criteria. Clearly flag anything the brief does not cover instead of making it up. Brief: [...]"</em> — then: <em>"Now play the role of a tough reviewer: list contradictions, gaps, and ambiguities in the draft above, and write clarification questions for the stakeholder."</em></p>
+</blockquote>
+<hr />
+<h2>EX-02 — AI generates WBS <em>(maps to T3)</em></h2>
+<p><strong>Capabilities:</strong> C1 · C3 Workflow Design.<br />
+<strong>Duration:</strong> 60 minutes</p>
+<p><strong>Input:</strong> <code>REQ-LMS.md</code> from EX-01.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>AI breaks the scope into a <strong>WBS</strong> with at least two levels (Epic -&gt; Task), including <strong>dependencies</strong> between tasks.</li>
+<li>AI tags each task with an SDLC phase (Design / Code / Test ...).</li>
+<li>PM reviews: find tasks AI <strong>missed</strong> (e.g., migrating legacy leave data from Excel, role-based access for managers/HR, notifications) and tasks that are <strong>unnecessary or out of MVP scope</strong>.</li>
+</ol>
+<p><strong>Submission:</strong></p>
+<ul>
+<li><code>WBS-LMS.md</code> (table or tree), adjusted by the PM.</li>
+<li>Notes on at least two tasks the PM added or removed compared to the AI draft, with reasons.</li>
+<li>Telemetry.</li>
+</ul>
+<p><strong>Rubric (0-4):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 (Pass)</td>
+<td>WBS covers scope, dependencies are reasonable, PM has adjusted it</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Caught important tasks AI missed; SDLC phases are correctly assigned</td>
+</tr>
+<tr>
+<td>4</td>
+<td>WBS is ready for estimation and task assignment; structure is reusable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prompt starter:</strong></p>
+<blockquote>
+<p><em>"From the following requirement, create a two-level WBS (Epic -&gt; Task) for a team of 3 devs + 1 QA, internal project, ~8 weeks. For each task state: SDLC phase, dependency (which task must finish first). State your assumptions. Requirement: [...]"</em></p>
+</blockquote>
+<hr />
+<h2>EX-03 — AI estimation <em>(maps to T4)</em></h2>
+<p><strong>Capabilities:</strong> C1 · C5 Telemetry &amp; Economics.<br />
+<strong>Duration:</strong> 60 minutes</p>
+<p><strong>Input:</strong> <code>WBS-LMS.md</code> from EX-02.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>AI estimates effort per task using <strong>three-point estimation</strong> (optimistic / likely / pessimistic) and converts to <strong>person-days (PD)</strong>.</li>
+<li>AI states <strong>assumptions</strong> behind each estimate, then totals everything and adds a risk buffer.</li>
+<li>PM adjusts for real team capacity (e.g., junior dev, unfamiliar tech) and <strong>compares with the 8-week target</strong> — conclusion: feasible, or must cut scope.</li>
+<li><strong>Compare and trade-off (mandatory — the most important PM skill).</strong>
+   Compare total effort (likely scenario + buffer) against the timeline multiplied by team capacity.</li>
+<li><strong>If it exceeds the target</strong> (very likely — the exercise is designed that way): the PM <strong>must go back and revise</strong> <code>REQ-PB0X.md</code> and <code>WBS-PB0X.md</code> — cut scope, document what was cut and why. Submit an additional <code>TRADEOFF-PB0X.md</code> containing: (a) a comparison table "full scope vs. cut scope"; (b) a <strong>diff</strong> between REQ v1 -&gt; v2 and WBS v1 -&gt; v2 (what was dropped, what was pushed to phase 2); (c) a short justification for the stakeholder explaining why the cut was made and which business goals are affected.</li>
+<li><strong>If it fits or has room to spare</strong>: the PM explains why the numbers are low (which assumptions drive this?), and prepares a contingency plan in case those assumptions prove wrong.</li>
+</ol>
+<blockquote>
+<p><em>This is a real iteration loop: estimate blows the budget -&gt; cut scope -&gt; update WBS -&gt; update requirement. PMs do this on every project — the exercise forces the trade-off reflex: scope vs. time vs. resources.</em></p>
+</blockquote>
+<p><strong>Submission:</strong></p>
+<ul>
+<li>Estimation table (task, three-point, PD, assumptions).</li>
+<li>Feasibility conclusion against the target, with a proposal if it exceeds (which scope to cut).</li>
+<li><code>TRADEOFF-PB0X.md</code> (if the target is exceeded): scope cut + diff REQ/WBS v1 -&gt; v2 + stakeholder justification.</li>
+<li>Telemetry.</li>
+</ul>
+<p><strong>Rubric (0-4):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 (Pass)</td>
+<td>Three-point estimate exists with clear assumptions; PM adjusted for real team context</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Total effort compared against the target, with a clear feasibility / cut-scope decision; <strong>diff of REQ + WBS v1 -&gt; v2 provided when scope was cut</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Includes sensitivity analysis (changing assumptions changes the outcome) + scope was cut while preserving core business goals; phase 2 proposal is clear</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prompt starter:</strong></p>
+<blockquote>
+<p><em>"Estimate effort for the following WBS using three-point estimation (optimistic / likely / pessimistic) in person-days. For each task, state your assumptions. Summarize and propose a buffer. Assume team: 3 devs (2 mid-level, 1 junior), 1 QA. WBS: [...]"</em></p>
+</blockquote>
+<hr />
+<h2>EX-04 — AI risk register <em>(maps to T5 — required for Phase 2 graduation)</em></h2>
+<p><strong>Capabilities:</strong> C3 · C4 Governance &amp; Risk.<br />
+<strong>Duration:</strong> 60 minutes</p>
+<p><strong>Input:</strong> <code>REQ-LMS.md</code> + <code>WBS-LMS.md</code> + <code>Estimation</code>.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>AI generates a <strong>risk register</strong> with at least 10 risks: description, <strong>Likelihood (1-5)</strong>, <strong>Impact (1-5)</strong>, score = L x I, <strong>mitigation</strong>, owner.</li>
+<li>Require AI to cover multiple categories: technical (attendance integration), schedule (tight 8-week target), data (Excel migration), and <strong>AI-related risks</strong> (hallucination when AI generates code/documents, leaking HR data into prompts).</li>
+<li>PM prioritizes the top five and checks that mitigations are <strong>actionable</strong> (reject generic or hollow mitigations).</li>
+<li><strong>Attach a control level for AI-risks:</strong> for every risk involving <em>AI use</em> (e.g., leaking HR data, AI-generated code with bugs), record the <strong>allowed autonomy level (L0-L5)</strong> and the <strong>fail-closed gate</strong> that blocks it (e.g., "AI generates code -&gt; must pass human review before merge; HR data -&gt; never included in prompts"). Mitigation must be a <em>verifiable mechanism</em>, not a promise.</li>
+</ol>
+<p><strong>Submission:</strong></p>
+<ul>
+<li><code>RISK-LMS.md</code>: table with at least 10 risks, ranked, top-five highlighted.</li>
+<li>Column for "autonomy level + fail-closed gate" on AI-risk rows.</li>
+<li>Telemetry.</li>
+</ul>
+<p><strong>Rubric (0-4):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 (Pass)</td>
+<td>At least 10 risks with L x I scores + actionable mitigations</td>
+</tr>
+<tr>
+<td>3</td>
+<td>All categories covered including <strong>AI risks</strong>; hollow mitigations rejected; AI-risks have autonomy level + fail-closed gate</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Mitigations have owners + monitoring triggers; register is usable for a real risk review</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prompt starter:</strong></p>
+<blockquote>
+<p><em>"Generate a risk register for the LMS project (internal, 8 weeks, includes attendance integration + Excel data migration, team uses AI for code/document generation). At least 10 risks, each with: description, Likelihood 1-5, Impact 1-5, L x I score, specific mitigation, owner. Must include a category for risks arising from USING AI in delivery."</em></p>
+</blockquote>
+<hr />
+<h2>EX-05 — AI weekly report + mini dashboard <em>(maps to T7 + T10 — T10 required for graduation)</em></h2>
+<p><strong>Capabilities:</strong> C5 Telemetry &amp; Economics · C6 Outcome.<br />
+<strong>Duration:</strong> 90 minutes</p>
+<p><strong>Input (simulated data for one project week — distributed with this exercise):</strong></p>
+<blockquote>
+<p>Week 3 of 8. Plan for the week: complete core module #1 + core module #2 (varies by brief — e.g., PB-01: "Product Catalogue" + "Shopping Cart"; LMS case: "Leave Request" + "Approval"). Actual: module #1 done. Module #2 delayed by one day due to business logic being more complex than expected. 3 open bugs (2 UI, 1 logic). AI assisted with CRUD code generation (saved approx. 1.5 PD). Tokens this week: ~120k. 1 new risk: third-party integration lacks good API documentation.
+<strong>The data above is ALL there is.</strong> There is no: revenue, conversion rate, order count, page load speed, or any other number. If the report or dashboard contains a number not on this list, AI fabricated it.</p>
+</blockquote>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>AI writes a <strong>weekly report</strong>: progress (plan vs. actual), blockers, risks, <strong>next week</strong>, noting <strong>AI's contribution</strong>.</li>
+<li>AI proposes a <strong>mini dashboard</strong> with at least five KPIs drawn from the Telemetry Framework (programme section 10): e.g., AI Adoption, Review Time, Rework Rate, Token Cost, Schedule Variance — each KPI must state its <strong>formula + data source</strong>.</li>
+<li>PM verifies every number against the source data (AI must not fabricate) and writes one <strong>management decision</strong> derived from the dashboard.</li>
+<li><strong>Catch AI fabrications — hallucination detection drill (mandatory).</strong>
+   After AI generates the weekly report + dashboard, the PM audits every number: <strong>is there any figure NOT present in the input data?</strong></li>
+<li>AI commonly fabricates things like: "conversion rate 3.2%", "weekly revenue reached 15M", "page load time 1.8s" — numbers <strong>nobody provided</strong>.</li>
+<li>Mark each fabricated number: <em>"Figure X in section Y — not in the input data, AI-generated."</em></li>
+<li>Submit <strong>at least one real hallucination finding</strong> plus the correction (replace with "data not available" or "N/A" — do not substitute another made-up number).</li>
+</ol>
+<blockquote>
+<p><em>This is a survival skill: when a PM uses AI to write a report for leadership, one fabricated number leads to a wrong decision. The correct reflex is: "where does this number come from?" — if there is no source, delete it; do not replace it with another guess.</em></p>
+</blockquote>
+<p><strong>Submission:</strong></p>
+<ul>
+<li><code>WEEKLY-W3.md</code> (report, one page or less).</li>
+<li><code>DASHBOARD-LMS.md</code>: at least five KPIs with formula + data source.</li>
+<li>One management decision by the PM based on the data.</li>
+<li>At least one hallucination finding (fabricated number + how it was corrected).</li>
+<li>Telemetry.</li>
+</ul>
+<p><strong>Rubric (0-4):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 (Pass)</td>
+<td>Report uses only source data; dashboard has at least five KPIs with formula + source</td>
+</tr>
+<tr>
+<td>3</td>
+<td>No fabricated numbers; management decision is grounded in the dashboard; caught at least one AI fabrication + corrected properly ("N/A" instead of another guess)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dashboard can be reused the following week; KPIs have targets + alert thresholds; PM establishes a dashboard rule: any KPI without a verified data source displays "N/A"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prompt starter:</strong></p>
+<blockquote>
+<p><em>"From the following week's data, write a weekly report (one page max): progress (plan vs. actual), blockers, risks, next-week plan, AI contribution. Do NOT fabricate numbers beyond what is provided. Then propose five dashboard KPIs, each with formula + data source. Data: [...]"</em></p>
+</blockquote>
+<hr />
+<h2>EX-06 — Delegation Map + Autonomy Leash <em>(maps to Lab M5 — most important module)</em></h2>
+<p><strong>Capabilities:</strong> C2 AI Delegation · C4 Governance.<br />
+<strong>Duration:</strong> 75 minutes</p>
+<p><strong>Input:</strong> <code>WBS-LMS.md</code> (EX-02) + <code>RISK-LMS.md</code> (EX-04).</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Take <strong>at least 15 tasks</strong> from the WBS. For each task, fill in three decision columns:</li>
+<li><strong>Work group (five types):</strong> AI-do / Human-do / AI-review / Human-review / AI-should-not-do.</li>
+<li><strong>Autonomy level L0-L5:</strong> Observe / Draft / Recommend / Execute-bounded / Operate-workflow / Restricted.</li>
+<li><strong>Approval owner:</strong> AI self-closes / PM spot-checks / PM personally approves.</li>
+<li><strong>Apply the "leash" A vs. A+</strong> <em>(reminder: Leash is just two operating notches on the L0-L5 scale — </em><em>A ~ L3, A+ ~ L4</em><em> — not a separate framework)</em>: mark which tasks run at <strong>A</strong> (safe zone, AI produces a draft, does not self-release) and which must be <strong>A+</strong> (touches HR data / access control / attendance integration -&gt; human must approve before use). All <strong>A+ tasks -&gt; flagged BUILT, awaiting approval</strong>.</li>
+<li><strong>PM justifies:</strong> one line of reasoning for every task at L3 or above, and identifies at least one task <strong>intentionally kept at L1/L2</strong> despite AI "being able to do more" (because of risk or difficulty of verification).</li>
+</ol>
+<p><strong>Submission:</strong></p>
+<ul>
+<li><code>DELEGATION-MAP-LMS.md</code>: table with at least 15 tasks x (work group, L0-L5 level, approval owner, leash A/A+, justification).</li>
+<li>Telemetry.</li>
+</ul>
+<p><strong>Rubric (0-4):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 (Pass)</td>
+<td>At least 15 tasks with work group + L0-L5 + approval owner; justifications are reasonable</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A vs. A+ correctly distinguished; tasks touching data/access are all <strong>A+ awaiting approval</strong>; at least one task intentionally kept low despite AI capability</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Map is operationally usable; fail-closed gates for each hazard group; reusable for other projects</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prompt starter:</strong></p>
+<blockquote>
+<p><em>"For the following LMS project tasks, propose for each: (a) AI-do / Human-do / AI-review / Human-review / AI-should-not-do; (b) autonomy level L0-L5; (c) who should approve. Flag any task that touches HR data or access control (needs tight control). Do NOT raise the autonomy level for high-risk tasks on your own. Tasks: [...]"</em> -&gt; The PM then reviews and overrides AI suggestions based on their own judgment.</p>
+</blockquote>
+<hr />
+<h2>Rubric summary</h2>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>No submission or no real AI use</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Very rough, weak review, obvious defects</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Pass</strong> — usable result with real PM review and telemetry</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Strong — governance and reuse are visible</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Excellent — reusable pattern, clear ROI, teachable to others</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Exercise-to-assignment-to-capability map</h2>
+<table>
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Source assignment</th>
+<th>Week</th>
+<th>Main capabilities</th>
+<th>Required for graduation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EX-01</td>
+<td>T1 + T2</td>
+<td>W1</td>
+<td>C1, C2, C6</td>
+<td>--</td>
+</tr>
+<tr>
+<td>EX-02</td>
+<td>T3</td>
+<td>W2</td>
+<td>C1, C3</td>
+<td>--</td>
+</tr>
+<tr>
+<td>EX-03</td>
+<td>T4</td>
+<td>W2</td>
+<td>C1, C5</td>
+<td>--</td>
+</tr>
+<tr>
+<td>EX-04</td>
+<td>T5</td>
+<td>W2</td>
+<td>C3, C4</td>
+<td>Yes (T5)</td>
+</tr>
+<tr>
+<td>EX-05</td>
+<td>T7 + T10</td>
+<td>W4</td>
+<td>C5, C6</td>
+<td>Yes (T10)</td>
+</tr>
+<tr>
+<td>EX-06</td>
+<td>Lab M5</td>
+<td>W3</td>
+<td>C2, C4</td>
+<td>-- <em>(strongly recommended)</em></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>These six exercises cover <strong>6 of 10 assignments + Lab M5</strong> and form the SDLC backbone. Remaining tasks (T6 Test Strategy, T8 Meeting Summary, T9 Retrospective) are done on real projects in Phase 3, or can be added as common exercises using this same template.</p>
+</blockquote>
+<hr />
+<h2>Facilitator notes</h2>
+<ul>
+<li><strong>What to grade:</strong> do not grade "how well AI answered" — grade <strong>PM judgment</strong> (where the PM corrected AI, what decisions were drawn). The <code>PM-edit</code> column in telemetry is the most important piece of evidence.</li>
+<li><strong>Intentional traps in the case:</strong> the brief is vague (EX-01), tasks like migration/access control are easy to miss (EX-02), the 8-week target is tight (EX-03), AI-risks are often forgotten (EX-04), AI is tempted to fabricate numbers (EX-05). Ask learners whether they "caught" the trap.</li>
+<li><strong>Fail criterion — watch for "rubber-stamping":</strong> submitting AI output with <strong>no trace of human review</strong> (blindly signing off on AI diffs) -&gt; maximum 1 point, regardless of how polished the content looks. This is a <strong>more dangerous failure mode than understaffing</strong> — the entire programme must grade to root out this habit early.</li>
+<li><strong>Showcase:</strong> each week, 2-3 learners present their exercise + telemetry; the class challenges "where should the PM not have trusted AI."</li>
+<li><strong>Adapting for real projects:</strong> learners may replace the LMS case with their own project while keeping the same steps + rubric.</li>
+<li><strong>Pre-built brief set:</strong> instead of having 300 PMs all use the LMS case, use the <strong>six detailed project briefs (with specific requirements + tech stacks)</strong> in <code>Project Briefs</code> — assign groups by brief (PB-01 through PB-06), PMs name their files with the brief code (<code>REQ-PB01.md</code> ...). New cohorts -&gt; PB-03 (easiest); core cohorts -&gt; PB-06 (closest to AI topics).</li>
+</ul>
+<hr />
+<p><em>This workbook is the </em><em>PM track</em><em> in the multi-role Workbook set sharing the Common Core (Programme section 14). Other tracks: BA (<code>...-Workbook-BA-...</code>), SA (<code>...-Workbook-SA-...</code>), Dev (<code>...-Workbook-Dev-...</code>). PMs in regulated or domain-specific fields will have additional specialised exercises by group (outside the scope of this common training).</em></p>
+<blockquote>
+<p><strong>Glossary:</strong> see <code>docs/GLOSSARY.md</code> for the unified glossary with cross-domain mapping.</p>
+</blockquote>
+<hr />
+<h2>Appendix — Changelog</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0</td>
+<td>2026-06-29</td>
+<td>Core common workbook with five detailed exercises (EX-01 through EX-05) on a shared case study + facilitator notes.</td>
+</tr>
+<tr>
+<td>v1.1</td>
+<td>2026-06-30</td>
+<td>Added EX-06 Delegation Map (L0-L5 + Leash A/A+) for M5; telemetry adds RevenueOS discipline (real hours not token proxy + est -&gt; reconcile); EX-01 adds <strong>hard-stop reflex</strong> for contradictions; EX-04 adds <strong>autonomy level + fail-closed gate</strong> to mitigation; facilitator notes name <strong>rubber-stamping</strong> risk.</td>
+</tr>
+<tr>
+<td>v1.1.1</td>
+<td>2026-06-30</td>
+<td>EX-06 step 2: clarified that <strong>Leash A/A+ = two operating notches on the L0-L5 scale (A ~ L3, A+ ~ L4)</strong>, not a separate framework — aligned with Programme v1.2.2.</td>
+</tr>
+<tr>
+<td>v2.0</td>
+<td>2026-08-24</td>
+<td><strong>Exercise enhancements:</strong> EX-01 adds step 5 (stakeholder scope-creep simulation); EX-03 adds step 4 (mandatory compare-and-trade-off loop back to scope); EX-05 revised input data (deliberately incomplete to train hallucination detection) + adds step 4 (catch AI fabrications). Changelog moved to end of file. Glossary now points to <code>docs/GLOSSARY.md</code>.</td>
+</tr>
+</tbody>
+</table></body></html>

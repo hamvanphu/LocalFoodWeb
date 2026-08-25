@@ -1,0 +1,356 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PM-AI-Bootcamp-Capstone-Playbook-v1.0</title><style>
+body { font-family: Calibri, Arial, sans-serif; color: #1A2733; margin: 42px; line-height: 1.45; }
+h1,h2,h3 { font-family: Cambria, Georgia, serif; color: #12294D; }
+h1 { font-size: 26pt; margin-bottom: 8px; }
+h2 { font-size: 18pt; margin-top: 28px; }
+h3 { font-size: 14pt; margin-top: 20px; }
+p, li { font-size: 11pt; }
+blockquote { border-left: 4px solid #E07B29; margin: 16px 0; padding: 8px 16px; background: #FBECDB; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0 22px; }
+th { background: #12294D; color: white; text-align: left; }
+th, td { border: 1px solid #D9E1EA; padding: 8px 10px; font-size: 10.5pt; vertical-align: top; }
+code { background: #F4F8FD; padding: 1px 4px; border-radius: 3px; }
+pre { background: #F4F8FD; padding: 12px 16px; border-radius: 6px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+hr { border: none; border-top: 1px solid #D9E1EA; margin: 24px 0; }
+</style></head><body><h1>PM AI Bootcamp — Capstone Playbook: From Brief to Customer Zero v2.0</h1>
+<blockquote>
+<p><strong>When to read:</strong> immediately after a team receives one of the six project briefs and enters <strong>Phase 3 - Build your Customer Zero</strong>.<br />
+<strong>Problem solved by this file:</strong> "We got the brief. What do we do first, and in what order?"<br />
+<strong>Core principle:</strong> humans decide, AI executes; build the <strong>foundation before the surface</strong>, build a <strong>thin vertical slice before broad coverage</strong>, and log Dev Book + telemetry while the work is happening.</p>
+</blockquote>
+<hr />
+<h2>Rule zero — AI-generated does NOT mean done</h2>
+<p>This playbook lets Claude Code generate a large amount of output very quickly. That speed is useful, but it is also the trap.</p>
+<p><strong>Done</strong> does not mean:</p>
+<ul>
+<li>"AI returned a file"</li>
+<li>"the artifact looks polished"</li>
+<li>"the structure sounds plausible"</li>
+</ul>
+<p><strong>Done</strong> means:</p>
+<ol>
+<li>you can explain the step in your own words,</li>
+<li>you can point to at least one AI mistake, omission, or weak assumption and correct it,</li>
+<li>the relevant gate is truly passed.</li>
+</ol>
+<p>Every step below therefore has a <strong>Understanding Gate</strong>. If the gate fails, the step is not complete.</p>
+<hr />
+<h2>One-page map — 11 steps from brief to Customer Zero</h2>
+<pre><code>Brief (PB-0X)
+  -&gt;
+[0] Clarify scope
+  -&gt;
+[1] Detailed SW spec / SRS
+  -&gt;
+[2] Module map and layering
+  -&gt;
+[3] Architecture
+  -&gt;
+[4] WBS + rolling-wave plan
+  -&gt;
+[5] Estimation
+  -&gt;
+[6] Risk + governance + delegation map
+  -&gt;
+[7] Definition of Ready for the first vertical slice
+  -&gt;
+[8] Build the vertical slice
+  -&gt;
+[9] Test and gate
+  -&gt;
+[10] Traceability + telemetry + weekly report
+  -&gt;
+Viva
+</code></pre>
+<p>Suggested artifact names:</p>
+<ul>
+<li><code>SCOPE-PB0X.md</code></li>
+<li><code>SPEC-PB0X.md</code></li>
+<li><code>MODULEMAP-PB0X.md</code></li>
+<li><code>ARCH-PB0X.md</code></li>
+<li><code>WBS-PB0X.md</code></li>
+<li><code>EST-PB0X.md</code></li>
+<li><code>RISK-PB0X.md</code></li>
+<li><code>DELEGATION-MAP-PB0X.md</code></li>
+<li><code>DOR-PB0X.md</code></li>
+<li><code>DEVBOOK-PB0X.md</code></li>
+<li><code>RTM-PB0X.md</code></li>
+<li><code>WEEKLY-PB0X.md</code></li>
+</ul>
+<hr />
+<h2>Standard orchestration loop for every step</h2>
+<p>At every stage, use the same rhythm:</p>
+<p><code>Context -&gt; Plan -&gt; Delegate -&gt; Execute -&gt; Gate -&gt; Log -&gt; Iterate</code></p>
+<p>This playbook assumes Claude Code is acting as the orchestrator. The learner is responsible for:</p>
+<ul>
+<li>approving the plan,</li>
+<li>choosing the leash,</li>
+<li>keeping the gates honest,</li>
+<li>logging corrections and evidence.</li>
+</ul>
+<hr />
+<h2>[0] Receive the brief and clarify scope</h2>
+<p><strong>Goal:</strong> turn the brief into a defendable MVP boundary.</p>
+<p><strong>Inputs:</strong> project brief + clarification prompts from the brief.</p>
+<p><strong>Output:</strong> <code>SCOPE-PB0X.md</code></p>
+<p><strong>Done when:</strong> the team can name what is in scope, what is explicitly out of scope, which assumptions are carrying risk, and which architectural decisions depend on them.</p>
+<p><strong>Understanding Gate:</strong> explain one assumption the AI made that you rejected or rewrote.</p>
+<hr />
+<h2>[1] Detailed SW spec / SRS</h2>
+<p><strong>Goal:</strong> create a specification strong enough for design and testing.</p>
+<p><strong>Output:</strong> <code>SPEC-PB0X.md</code></p>
+<p>Include:</p>
+<ul>
+<li>functional requirements,</li>
+<li>user stories,</li>
+<li>acceptance criteria,</li>
+<li>role-based use cases,</li>
+<li>key NFRs.</li>
+</ul>
+<p><strong>Understanding Gate:</strong> walk through one story and say what would count as PASS and FAIL.</p>
+<hr />
+<h2>[2] Module map and layering</h2>
+<p><strong>Goal:</strong> separate foundation work from surface features.</p>
+<p><strong>Output:</strong> <code>MODULEMAP-PB0X.md</code></p>
+<p>The key decision is always:</p>
+<ul>
+<li>what is <strong>Layer 0 / hidden foundation</strong>,</li>
+<li>what is <strong>surface module</strong>,</li>
+<li>what is the first <strong>thin vertical slice</strong> that proves the path.</li>
+</ul>
+<p><strong>Understanding Gate:</strong> explain why one foundation piece must exist before a visible feature can work.</p>
+<hr />
+<h2>[3] Architecture</h2>
+<p><strong>Goal:</strong> design enough structure to begin real build work.</p>
+<p><strong>Output:</strong> <code>ARCH-PB0X.md</code></p>
+<p>Expected content:</p>
+<ul>
+<li>architecture principles,</li>
+<li>container / system view,</li>
+<li>data model,</li>
+<li>API contracts,</li>
+<li>technology choices,</li>
+<li>permission model,</li>
+<li>unresolved decisions.</li>
+</ul>
+<p><strong>Understanding Gate:</strong> justify one architecture choice and name one trade-off.</p>
+<hr />
+<h2>[4] WBS + rolling-wave plan</h2>
+<p><strong>Goal:</strong> break the build into work at the right level of detail.</p>
+<p><strong>Output:</strong> <code>WBS-PB0X.md</code></p>
+<p>Rules:</p>
+<ul>
+<li>near-term wave = task-level,</li>
+<li>next wave = feature-level,</li>
+<li>later waves = epic-level.</li>
+</ul>
+<p><strong>Understanding Gate:</strong> point out one commonly missed task that AI did not include at first.</p>
+<hr />
+<h2>[5] Estimation</h2>
+<p><strong>Goal:</strong> estimate based on assumptions, not on wishful thinking.</p>
+<p><strong>Output:</strong> <code>EST-PB0X.md</code></p>
+<p>Use:</p>
+<ul>
+<li>three-point estimation,</li>
+<li>explicit assumptions,</li>
+<li>risk-aware buffers,</li>
+<li>a realism check against the project timeline.</li>
+</ul>
+<p><strong>Understanding Gate:</strong> explain one estimate and the assumption behind it.</p>
+<hr />
+<h2>[6] Risk + governance + delegation map</h2>
+<p><strong>Goal:</strong> make risk ownership and AI boundaries explicit.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li><code>RISK-PB0X.md</code></li>
+<li><code>DELEGATION-MAP-PB0X.md</code></li>
+</ul>
+<p>Required elements:</p>
+<ul>
+<li>technical and schedule risks,</li>
+<li>AI-specific risks,</li>
+<li>owner and mitigation,</li>
+<li>L0-L5 assignment,</li>
+<li>leash A / A+,</li>
+<li>fail-closed gates.</li>
+</ul>
+<p><strong>Understanding Gate:</strong> explain why one task must be A+ instead of A.</p>
+<hr />
+<h2>[7] Definition of Ready for the first vertical slice</h2>
+<p><strong>Goal:</strong> prove the team is actually ready to build the first slice.</p>
+<p><strong>Output:</strong> <code>DOR-PB0X.md</code></p>
+<p>Check:</p>
+<ul>
+<li>spec clarity,</li>
+<li>data model,</li>
+<li>API contract,</li>
+<li>acceptance criteria,</li>
+<li>governance level,</li>
+<li>gates.</li>
+</ul>
+<p><strong>Understanding Gate:</strong> point to one DoR item that is still red and explain why build must wait.</p>
+<hr />
+<h2>[8] Build the vertical slice</h2>
+<p><strong>Goal:</strong> produce a working, runnable slice of the real system. <strong>This is graduation evidence number one.</strong></p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>working code / runnable slice,</li>
+<li><code>DEVBOOK-PB0X.md</code></li>
+</ul>
+<p>The Dev Book must record:</p>
+<ul>
+<li>where AI was wrong,</li>
+<li>what the learner corrected,</li>
+<li>which autonomy level was used,</li>
+<li>which gate blocked risk,</li>
+<li>where hard-stop happened.</li>
+</ul>
+<p><strong>Understanding Gate:</strong> after each meaningful build step, explain what changed and record at least one real AI correction. A Dev Book with zero AI corrections means rubber-stamping is likely and the step is not considered complete.</p>
+<h3>Two capstone tiers — choose by technical background</h3>
+<blockquote>
+<p>The program's goal is for PMs to <strong>orchestrate AI delivery</strong>, not to turn PMs into developers. Both tiers require <strong>end-to-end system understanding</strong>, <strong>authentic Dev Book entries</strong>, and the ability to <strong>demo a running flow</strong>. The difference is technical depth.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th><strong>Tier 1 — Full-stack</strong></th>
+<th><strong>Tier 2 — PM-stack</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Who</strong></td>
+<td>PM with technical background or prior coding experience</td>
+<td>Non-coder PM, pure management background</td>
+</tr>
+<tr>
+<td><strong>Code</strong></td>
+<td>Real running code (Next.js / React)</td>
+<td>Interactive prototype in the browser (HTML/CSS/JS or Next.js static) — click a button, navigate pages, display data</td>
+</tr>
+<tr>
+<td><strong>Backend</strong></td>
+<td>Real running API (NestJS / Spring Boot)</td>
+<td>API mock (json-server or mock endpoint). PM <strong>defines the correct API contract</strong> (endpoint, input, output, error codes)</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>Real PostgreSQL + migrations</td>
+<td>SQL schema written correctly (PM drives AI to generate it, reviews table structure, checks foreign-key constraints, tags sensitive fields) — no need to run actual migrations</td>
+</tr>
+<tr>
+<td><strong>Tests</strong></td>
+<td>Automated unit + integration tests pass</td>
+<td>PM writes <strong>test scenarios</strong> in text (Given/When/Then), AI generates test scripts, PM runs them and reads pass/fail results — no need to debug test code</td>
+</tr>
+<tr>
+<td><strong>Dev Book focus</strong></td>
+<td>Where <strong>AI generated wrong code</strong> (logic, security, performance)</td>
+<td>Where <strong>AI made design-level mistakes</strong> (wrong API contract fields, missing schema columns, UI flows that do not match acceptance criteria)</td>
+</tr>
+<tr>
+<td><strong>Demo</strong></td>
+<td>End-to-end flow running live on browser + DB</td>
+<td>End-to-end flow running on browser (prototype + mock data)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choosing a tier:</strong> learners self-select and the coach confirms at the start of Phase 3. <strong>Choosing Tier 2 carries no penalty</strong> — both tiers qualify for <strong>Certified</strong>. Tier 1 has an advantage when evaluating for Distinction/Champion (deeper evidence), but Tier 2 <strong>does not block graduation</strong>.</p>
+<blockquote>
+<p><strong>Why Tier 2 exists:</strong> PMs need to understand data models, API contracts, and test scenarios — that is essential architecture knowledge. But forcing a PM to debug NestJS runtime errors leads to either giving up or rubber-stamping code they do not understand — the opposite of what the program teaches. Tier 2 keeps the parts a PM <strong>must</strong> understand and removes the parts a PM <strong>does not need</strong> to do.</p>
+</blockquote>
+<hr />
+<h2>[9] Test and gate</h2>
+<p><strong>Goal:</strong> prove the slice works through gates, not vibes.</p>
+<p><strong>Expected evidence:</strong></p>
+<ul>
+<li>test results,</li>
+<li>negative cases,</li>
+<li>role / permission checks,</li>
+<li>gate outcomes.</li>
+</ul>
+<p><strong>Rule:</strong> if it cannot be verified, it does not pass.</p>
+<p><strong>Understanding Gate:</strong> show one failed or risky case that would have slipped through without the gate.</p>
+<hr />
+<h2>[10] Traceability + telemetry + weekly report</h2>
+<p><strong>Goal:</strong> make the slice explainable, measurable, and reviewable.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li><code>RTM-PB0X.md</code></li>
+<li>telemetry</li>
+<li><code>WEEKLY-PB0X.md</code></li>
+</ul>
+<p>Telemetry should include:</p>
+<ul>
+<li>real human hours,</li>
+<li>correction loops,</li>
+<li>rework,</li>
+<li>token estimate / reconciliation,</li>
+<li>quality or defect observations.</li>
+</ul>
+<p><strong>Understanding Gate:</strong> explain one KPI and where its source data comes from.</p>
+<hr />
+<h2>Viva preparation</h2>
+<p>The capstone is not complete until the learner can defend it live.</p>
+<p>Graduation still depends on the <strong>three hard gates</strong> (fail any one and the capstone does not pass):</p>
+<ol>
+<li><strong>Capability score</strong> across the six pillars meets the threshold (no pillar at zero).</li>
+<li><strong>Working system</strong> — live demo of the vertical slice.</li>
+<li><strong>Viva pass</strong> — answer tough questions: <em>why this architecture? where did AI fail and how did you fix it? if constraint X changes, what breaks?</em></li>
+</ol>
+<p><strong>Tier-specific viva questions:</strong></p>
+<ul>
+<li><strong>Tier 1:</strong> <em>"Show us the running system. Walk through one end-to-end flow. Why does the code handle edge case X this way? Where did AI generate wrong code and how did you debug it? If the DB schema changes, which APIs break?"</em></li>
+<li><strong>Tier 2:</strong> <em>"Show your API mock. Demonstrate one test scenario. Explain what would change in production. Why does this API need field X? If a new role is added, where does the schema change? Where did AI produce a wrong API contract and how did you fix it?"</em> — the coach tests <strong>systems thinking</strong>, not coding skill.</li>
+</ul>
+<p><strong>Portfolio for the viva:</strong> <code>SPEC</code>, <code>ARCH</code>, <code>WBS</code>, <code>RISK</code>, <code>DELEGATION-MAP</code>, <code>DOR</code>, <code>DEVBOOK</code>, <code>RTM</code>, telemetry, <code>WEEKLY</code> + working system (Tier 1: running code + passing tests; Tier 2: prototype + API contract + schema + test scenarios). The coach scores <strong>your judgment</strong>, not how polished the AI output looks.</p>
+<blockquote>
+<p><strong>What will the coach ask?</strong> Questions come straight from the <strong>Understanding Gates</strong> in each step: point to any line in any artifact and ask <em>"why?"</em> or <em>"where did AI get this wrong and how did you fix it?"</em>. A team that truly passed the gates along the way will answer naturally; a team with a stack of pretty files but no understanding will fail at the first question.</p>
+</blockquote>
+<hr />
+<h2>Common failure modes</h2>
+<ul>
+<li>letting AI generate many artifacts but not understanding any of them,</li>
+<li>skipping gates because the output "looks fine",</li>
+<li>building a wide feature set before a thin vertical slice,</li>
+<li>failing to record Dev Book evidence,</li>
+<li>estimating without assumptions,</li>
+<li>over-delegating high-risk tasks.</li>
+</ul>
+<p>The playbook exists to keep the capstone grounded in <strong>understanding, evidence, and real execution</strong>, not document volume.</p>
+<hr />
+<h2>Appendix — Glossary</h2>
+<blockquote>
+<p>For terminology lookup, see <strong><code>docs/GLOSSARY.md</code></strong> — the unified glossary for the entire program, with a column mapping to international industry terms.</p>
+<p><strong>Related documents:</strong> <em>Project Briefs</em> (6 briefs) · <em>Workbook Common</em> (EX-01 through EX-06) + role-specific Workbooks for BA/SA/Dev · <em>Orchestrator Guide</em> · <em>Program sections 7-10</em> (assignment, rubric, KPI) · <em>Operating Model</em> (L0-L5, Leash, governance).</p>
+</blockquote>
+<hr />
+<h2>Appendix — Changelog</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v2.0</td>
+<td>2026-08-24</td>
+<td><strong>Added 2-tier Capstone:</strong> step [8] now offers Tier 1 (full-stack, real running code) and Tier 2 (PM-stack: prototype + API mock + schema + test scenarios) for non-coder PMs. Viva updated with tier-specific questions. Inline glossary replaced with pointer to <code>docs/GLOSSARY.md</code>. Changelog moved to end.</td>
+</tr>
+<tr>
+<td>v1.1</td>
+<td>2026-07-09</td>
+<td>Added <strong>anti-rubber-stamp mechanism</strong>: "Rule zero — AI-generated does NOT mean done" callout at top + <strong>Understanding Gates</strong> at all 11 steps (each gate requires <em>explaining in your own words</em> + <em>catching at least one AI mistake</em>). Patches the risk of "generating fast but understanding nothing".</td>
+</tr>
+<tr>
+<td>v1.0</td>
+<td>2026-07-09</td>
+<td>Initial version: 11-step pipeline from brief to working system to viva; each step has goal, input, orchestration guidance, output, common traps, done criteria, with <strong>"What RevenueOS did"</strong> reference boxes pointing to real artifacts (PRD, Use-Case, Module Map, Architecture, Tech-Spec, Work Breakdown, DoR L4, RTM, SIT/UAT, Telemetry). Maps to the 6 Workbook drills EX-01 through EX-06.</td>
+</tr>
+</tbody>
+</table></body></html>

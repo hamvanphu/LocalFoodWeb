@@ -1,0 +1,169 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PM-AI-Bootcamp-OperatingModel-v1.0</title><style>
+body { font-family: Calibri, Arial, sans-serif; color: #1A2733; margin: 42px; line-height: 1.45; }
+h1,h2,h3 { font-family: Cambria, Georgia, serif; color: #12294D; }
+h1 { font-size: 26pt; margin-bottom: 8px; }
+h2 { font-size: 18pt; margin-top: 28px; }
+h3 { font-size: 14pt; margin-top: 20px; }
+p, li { font-size: 11pt; }
+blockquote { border-left: 4px solid #E07B29; margin: 16px 0; padding: 8px 16px; background: #FBECDB; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0 22px; }
+th { background: #12294D; color: white; text-align: left; }
+th, td { border: 1px solid #D9E1EA; padding: 8px 10px; font-size: 10.5pt; vertical-align: top; }
+code { background: #F4F8FD; padding: 1px 4px; border-radius: 3px; }
+pre { background: #F4F8FD; padding: 12px 16px; border-radius: 6px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+hr { border: none; border-top: 1px solid #D9E1EA; margin: 24px 0; }
+</style></head><body><h1>AI-Native PM — Operating Model (one-page handout)</h1>
+<blockquote>
+<p><strong>When to use:</strong> keep it beside your screen and open it every time you delegate work to AI. It answers one question: <em>"How far may AI go on this task, who removes the lock, and which gate blocks unsafe output?"</em><br />
+Source basis: PM-AI-Bootcamp Program v2.0 · FPT CASAN Bible §6 (delegation ladder) + §20.3 (anti-patterns).<br />
+Language rule: humans <strong>keep the goal and accountability</strong>, AI is <strong>delegated execution power</strong>.<br />
+<strong>Terminology:</strong> for the full unified glossary with industry-standard mapping, see <code>docs/GLOSSARY.md</code>.</p>
+</blockquote>
+<hr />
+<h2>1. AI delegation ladder — L0 to L5 <em>(comparable to SAE J3016 autonomy levels in automotive)</em></h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>What AI may do</th>
+<th>Who decides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L0</strong></td>
+<td>Observe</td>
+<td>Observe or summarize, <strong>without changing anything</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L1</strong></td>
+<td>Draft</td>
+<td>Produce a draft, <strong>100% human approval required</strong></td>
+<td>Human</td>
+</tr>
+<tr>
+<td><strong>L2</strong></td>
+<td>Recommend</td>
+<td>Propose options and reasoning</td>
+<td>Human</td>
+</tr>
+<tr>
+<td><strong>L3</strong></td>
+<td>Execute (bounded, low risk)</td>
+<td>Execute a low-risk task within clear boundaries</td>
+<td>AI runs, human <strong>spot-checks</strong></td>
+</tr>
+<tr>
+<td><strong>L4</strong></td>
+<td>Operate workflow</td>
+<td>Run a bounded workflow with barriers, audit, and exception handling</td>
+<td>AI closes the "green path", human approves <strong>exceptions / hazards</strong></td>
+</tr>
+<tr>
+<td><strong>L5</strong></td>
+<td>Restricted / high risk</td>
+<td>High autonomy in complex zones</td>
+<td><strong>Intentionally NOT granted</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assignment rule:</strong> read-only work can live safely at L0-L2. Anything that <strong>writes, changes systems, affects permissions, or touches sensitive data</strong> should stop at L3 at most, and hazard zones must move to controlled L4. Never jump to L5.</p>
+<hr />
+<h2>2. Autonomy leash — A and A+</h2>
+<blockquote>
+<p><strong>Leash A / A+ are not a new framework.</strong> They are the two everyday operating cuts of the L0-L5 ladder above.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Leash</th>
+<th>Approx. level</th>
+<th>Use when</th>
+<th>How far AI may go</th>
+<th>Can AI mark it done?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td><strong>≈ L3</strong></td>
+<td>Safe-zone work, <strong>no hazard</strong></td>
+<td>Code + test + verify up to a draft / dry-run PR</td>
+<td>✅ Only if the verification gate is green</td>
+</tr>
+<tr>
+<td><strong>A+</strong></td>
+<td><strong>≈ L4</strong></td>
+<td>Work that touches <strong>higher risk</strong>: security, roles, release, sensitive data</td>
+<td>Same as A <strong>plus</strong> mandatory real security gate and explicit hazard permission</td>
+<td>✅ Only if the security gate is green</td>
+</tr>
+<tr>
+<td><strong>(L5)</strong></td>
+<td>L5</td>
+<td>Very complex or very high-risk work</td>
+<td><strong>Not granted</strong></td>
+<td>❌ Always waits for a human</td>
+</tr>
+</tbody>
+</table>
+<h3>3 hard rules</h3>
+<ol>
+<li>AI <strong>does not self-push, self-merge, or self-release</strong>. Everything stops at a draft pending approval.</li>
+<li>AI <strong>does not touch secrets or credentials</strong> (<code>.env</code>, tokens, customer secrets, internal keys).</li>
+<li>While blocked by <strong>hard-stop</strong> or pending approval, AI <strong>must not mark the task as done</strong>.</li>
+</ol>
+<hr />
+<h2>3. Governance mechanisms</h2>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>Principle</th>
+<th>What the PM does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fail-closed gate</strong> <em>(standard security/safety engineering term)</em></td>
+<td>AI output is usable only when the automatic gate is <strong>green</strong>. <em>If it cannot be verified, it is blocked by default.</em></td>
+<td>Define the minimum gate for important artifacts: traceable, reviewable, evidence-backed. If proof is missing, it is not usable yet.</td>
+</tr>
+<tr>
+<td><strong>Built-flagged, waiting for approval</strong></td>
+<td>AI may finish the work, but it <strong>does not release it</strong>. High-risk work stops at <em>built and green, waiting for a human decision</em>.</td>
+<td>Separate <em>"AI finished building"</em> from <em>"approved for real use"</em>. Human owners explicitly approve hazard zones.</td>
+</tr>
+<tr>
+<td><strong>Hard-stop on contradiction</strong> <em>(standard safety engineering term)</em></td>
+<td>If the spec is contradictory or unclear, AI must <strong>stop and surface the issue</strong>, never guess silently.</td>
+<td>Treat <em>"AI stopped and asked"</em> as a <strong>good signal</strong>, not a failure. The PM resolves the conflict before reopening the path.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Traceability rule:</strong> every important requirement should be traceable across <strong>requirement ↔ work item ↔ test</strong>. If you touch the requirement, you review the traceability chain again.</p>
+<hr />
+<h2>4. Four questions before pressing "run"</h2>
+<ol>
+<li><strong>How much impact does this task have?</strong> Read-only, draft-only, or write access to a real system?</li>
+<li><strong>Which level should it be?</strong> L0-L5, and therefore leash A or A+?</li>
+<li><strong>Which fail-closed gate protects the output?</strong></li>
+<li><strong>Who must personally approve the hazard part before release?</strong></li>
+</ol>
+<blockquote>
+<p><strong>Red-line reminder:</strong> do not rubber-stamp <em>(standard audit/governance term)</em>. The program scores <strong>human judgment</strong>, not how smooth AI output looks.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>⚠️ <strong>Do not confuse Leash with Harness.</strong><br />
+<em>Leash / L0-L5</em> = <strong>autonomy</strong>: how far AI may run on its own.<br />
+<em>Harness</em> = the <strong>technical rig around the model</strong>: context, tools, verification, security, agent ops, orchestration.<br />
+Horse-and-cart analogy: <strong>Harness = the equipment</strong>, <strong>Leash = how far you allow the horse to move</strong>.</p>
+</blockquote>
+<hr />
+<p>For the full unified glossary with industry-standard mapping, see <code>docs/GLOSSARY.md</code>.</p>
+<hr />
+<p><em>PM-AI-Bootcamp v2.0 — Operating Model 1-page · 2026-08-24 · Handout for Phase 2 (M5 + M6).</em></p></body></html>

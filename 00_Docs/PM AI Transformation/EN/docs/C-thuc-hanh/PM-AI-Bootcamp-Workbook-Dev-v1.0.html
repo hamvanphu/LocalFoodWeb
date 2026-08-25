@@ -1,0 +1,166 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PM-AI-Bootcamp-Workbook-Dev-v1.0</title><style>
+body { font-family: Calibri, Arial, sans-serif; color: #1A2733; margin: 42px; line-height: 1.45; }
+h1,h2,h3 { font-family: Cambria, Georgia, serif; color: #12294D; }
+h1 { font-size: 26pt; margin-bottom: 8px; }
+h2 { font-size: 18pt; margin-top: 28px; }
+h3 { font-size: 14pt; margin-top: 20px; }
+p, li { font-size: 11pt; }
+blockquote { border-left: 4px solid #E07B29; margin: 16px 0; padding: 8px 16px; background: #FBECDB; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0 22px; }
+th { background: #12294D; color: white; text-align: left; }
+th, td { border: 1px solid #D9E1EA; padding: 8px 10px; font-size: 10.5pt; vertical-align: top; }
+code { background: #F4F8FD; padding: 1px 4px; border-radius: 3px; }
+pre { background: #F4F8FD; padding: 12px 16px; border-radius: 6px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+hr { border: none; border-top: 1px solid #D9E1EA; margin: 24px 0; }
+</style></head><body><h1>Dev AI Bootcamp — Workbook (Dev track) v2.0</h1>
+<blockquote>
+<p><strong>Companion to:</strong> Program and the common workbook<br />
+<strong>Role focus:</strong> Developer<br />
+<strong>Common core:</strong> same delegation, governance, telemetry, capstone, and viva rules. This file changes the practice artifacts toward working code.<br />
+<strong>Terminology:</strong> For unified terminology, see <code>docs/GLOSSARY.md</code>.</p>
+</blockquote>
+<hr />
+<h2>0. Shared case study</h2>
+<p>Use the LMS case or one project brief as the role-specific coding scenario.</p>
+<p>The developer objective is not "AI wrote code fast". The objective is "I can review, test, debug, and control AI-generated code responsibly."</p>
+<hr />
+<h2>Common rules</h2>
+<ul>
+<li>Treat AI-generated code like a PR from a fast but unreliable teammate.</li>
+<li>Every code exercise must include review evidence.</li>
+<li>Fake tests are a failure mode, not a pass.</li>
+<li>Telemetry and Dev Book logging are mandatory.</li>
+</ul>
+<hr />
+<h2>DEV-EX-01 — Generate code from spec + review AI code</h2>
+<p><strong>Goal:</strong> create code from a spec and prove human review happened.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>generated code sample</li>
+<li>review comments or corrected code</li>
+<li>telemetry</li>
+</ul>
+<p><strong>Pass bar:</strong> the learner catches at least one functional, structural, or safety issue in the AI-generated code.</p>
+<hr />
+<h2>DEV-EX-02 — Test generation + fake-test detection</h2>
+<p><strong>Goal:</strong> generate tests and prove they are not superficial.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>test suite</li>
+<li>at least one intentionally broken case</li>
+<li>explanation of why a fake-green test is unacceptable</li>
+<li>telemetry</li>
+</ul>
+<p><strong>Pass bar:</strong> the learner demonstrates that tests fail when they should fail.</p>
+<hr />
+<h2>DEV-EX-03 — Debug with AI</h2>
+<p><strong>Goal:</strong> use AI to accelerate debugging without losing human reasoning.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>reproduction steps</li>
+<li>root-cause note</li>
+<li>fix</li>
+<li>telemetry</li>
+</ul>
+<p><strong>Pass bar:</strong> the learner can explain the bug, not just present the patch.</p>
+<hr />
+<h2>DEV-EX-04 — Build a small harness / agent</h2>
+<p><strong>Goal:</strong> create a lightweight technical wrapper around a repeated task.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>small harness design</li>
+<li>gates / checks</li>
+<li>one controlled execution example</li>
+<li>telemetry</li>
+</ul>
+<p><strong>Pass bar:</strong> the learner shows where the harness stops and why.</p>
+<hr />
+<h2>DEV-EX-05 — Working feature or service with green tests</h2>
+<p><strong>Goal:</strong> create the Dev form of Customer Zero.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>working feature or service</li>
+<li>green test evidence</li>
+<li>Dev Book correction trail</li>
+<li>telemetry</li>
+</ul>
+<p><strong>Pass bar:</strong> the learner can demo the feature and explain at least one AI-generated mistake they corrected.</p>
+<hr />
+<h2>DEV-EX-06 — Delegation Map + CI / gate thinking</h2>
+<p><strong>Goal:</strong> decide which coding activities AI may do and where CI or human gates take over.</p>
+<p><strong>Outputs:</strong></p>
+<ul>
+<li>delegation map</li>
+<li>L0-L5 labels</li>
+<li>A / A+ split</li>
+<li>gate list</li>
+</ul>
+<p><strong>Pass bar:</strong> sensitive changes, release-like actions, and high-impact code are not delegated past safe boundaries.</p>
+<hr />
+<h2>Dev capability map</h2>
+<table>
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Capability emphasis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEV-EX-01</td>
+<td>Review discipline</td>
+</tr>
+<tr>
+<td>DEV-EX-02</td>
+<td>Test honesty</td>
+</tr>
+<tr>
+<td>DEV-EX-03</td>
+<td>Debug reasoning</td>
+</tr>
+<tr>
+<td>DEV-EX-04</td>
+<td>Safe automation</td>
+</tr>
+<tr>
+<td>DEV-EX-05</td>
+<td>Real build outcome</td>
+</tr>
+<tr>
+<td>DEV-EX-06</td>
+<td>CI and delegation control</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Facilitator notes</h2>
+<ul>
+<li>Fast code generation is not success by itself.</li>
+<li>Fake confidence from fake tests is one of the most dangerous dev-side failure modes.</li>
+<li>Review comments and fixes are stronger evidence than polished demo output.</li>
+<li>Telemetry is still part of the evaluation story.</li>
+</ul>
+<hr />
+<h2>Changelog</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0</td>
+<td>2026-07-02</td>
+<td>First Dev track workbook</td>
+</tr>
+<tr>
+<td>v2.0</td>
+<td>2026-08-25</td>
+<td>Header: shorten Program ref, add glossary pointer; move changelog to end</td>
+</tr>
+</tbody>
+</table></body></html>

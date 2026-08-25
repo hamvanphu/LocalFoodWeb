@@ -1,0 +1,122 @@
+{
+  "slug": "thua-thien-hue",
+  "code": "VN-TTH",
+  "name": "Thừa Thiên Huế",
+  "region": "Trung",
+  "centroid": [107.5065, 16.33288],
+  "summary": "Ẩm thực cố đô Huế đậm đà và cay nồng, chịu ảnh hưởng phong cách cung đình — nhiều món nhỏ tinh tế đi kèm nước chấm đặc trưng.",
+  "heroDishSlug": "bun-bo-hue",
+  "dishes": [
+    {
+      "slug": "bun-bo-hue",
+      "name": "Bún bò Huế",
+      "isHero": true,
+      "tasteTags": ["spicy", "savory", "noodle-soup", "street-food"],
+      "description": "Món bún nước đậm đà, cay nồng với nước dùng ninh từ xương bò và giò heo, dậy mùi sả và mắm ruốc, ăn cùng bún sợi to tròn — biểu tượng ẩm thực của cố đô, mạnh mẽ hơn hẳn phở Bắc.",
+      "keyIngredients": [
+        "Xương bò, giò heo, bắp bò",
+        "Bún sợi to tròn",
+        "Sả, mắm ruốc, ớt dầu điều",
+        "Chuối bắp, rau sống",
+        "Huyết heo (tuỳ chọn)"
+      ],
+      "prepOutline": [
+        "Ninh xương bò và giò heo cùng sả đập dập",
+        "Hoà mắm ruốc, lọc lấy nước trong cho vào nồi",
+        "Thắng dầu điều cho nước dùng lên màu đỏ đẹp",
+        "Trần bún, xếp bắp bò/giò heo/huyết lên trên",
+        "Chan nước dùng sôi, rắc hành ngò"
+      ],
+      "howToEat": "Ăn nóng, vắt chanh, thêm ớt sa tế hoặc mắm ruốc tuỳ khẩu vị cay; bóp giập chuối bắp và rau sống thả vào bát để tăng độ giòn the mát, cân bằng vị cay đậm của nước dùng.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Bun_Bo_Hue.jpg",
+          "attribution": "Flickr user \"avlxyz\", Wikimedia Commons",
+          "license": "CC BY-SA 2.0"
+        }
+      ]
+    },
+    {
+      "slug": "com-hen",
+      "name": "Cơm hến",
+      "isHero": false,
+      "tasteTags": ["spicy", "sour", "street-food"],
+      "description": "Cơm nguội trộn với hến xào, nước luộc hến, tóp mỡ, đậu phộng và rất nhiều rau sống — món ăn dân dã đặc trưng của xóm Cồn Hến, Huế, vị chua cay hài hoà.",
+      "keyIngredients": [
+        "Hến (thịt và nước luộc)",
+        "Cơm nguội",
+        "Tóp mỡ, đậu phộng rang",
+        "Rau sống, bắp chuối bào",
+        "Ớt sa tế, mắm ruốc"
+      ],
+      "prepOutline": [
+        "Luộc hến, giữ lại phần nước luộc trong",
+        "Xào thịt hến với gia vị cho thơm",
+        "Trộn cơm nguội với rau sống, tóp mỡ, đậu phộng",
+        "Chan nước hến nóng, thêm ớt sa tế và mắm ruốc"
+      ],
+      "howToEat": "Trộn đều tất cả nguyên liệu trước khi ăn, chan thêm nước hến nóng để cơm không bị khô; ăn cay theo đúng khẩu vị Huế thì mới trọn vị.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Com-hen-hue.jpg",
+          "attribution": "Trinhthunga09, Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "slug": "banh-khoai",
+      "name": "Bánh khoái",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "street-food"],
+      "description": "Bánh xèo phiên bản Huế — nhỏ, dày và giòn hơn bánh xèo Nam Bộ, nhân tôm thịt giá đỗ, ăn kèm nước lèo pha gan/đậu phộng đặc trưng thay vì nước mắm chua ngọt thông thường.",
+      "keyIngredients": [
+        "Bột gạo pha nghệ",
+        "Tôm, thịt ba chỉ, giá đỗ",
+        "Nước lèo Huế (gan heo, đậu phộng, mè)",
+        "Rau sống, khế chua, chuối chát"
+      ],
+      "prepOutline": [
+        "Pha bột gạo với nghệ cho lên màu vàng",
+        "Đổ bột vào khuôn nóng, cho tôm thịt giá đỗ vào",
+        "Gập đôi bánh khi rìa bánh giòn vàng",
+        "Pha nước lèo gan/đậu phộng đặc trưng riêng của Huế"
+      ],
+      "howToEat": "Cuốn cùng rau sống, khế chua, chuối chát rồi chấm ngập nước lèo Huế — vị béo bùi của nước lèo là điểm khác biệt lớn nhất so với bánh xèo miền Nam.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Banh_Khoai_%284265580561%29.jpg",
+          "attribution": "Charles Haynes (Hobart, Australia), Wikimedia Commons",
+          "license": "CC BY-SA 2.0"
+        }
+      ]
+    },
+    {
+      "slug": "banh-beo-nam-loc",
+      "name": "Bánh bèo, bánh nậm, bánh lọc",
+      "isHero": false,
+      "tasteTags": ["savory", "vegetarian-friendly", "street-food"],
+      "description": "Bộ ba bánh cung đình Huế thường ăn chung một mâm: bánh bèo hấp trong chén nhỏ rắc tôm cháy, bánh nậm gói lá dẹt nhân tôm thịt, bánh lọc trong veo bọc tôm thịt gói lá chuối.",
+      "keyIngredients": [
+        "Bột gạo (bánh bèo, bánh nậm), bột năng (bánh lọc)",
+        "Tôm cháy, thịt ba chỉ băm",
+        "Lá chuối/lá dong để gói",
+        "Nước mắm ớt pha loãng"
+      ],
+      "prepOutline": [
+        "Hấp bột gạo trong chén nhỏ (bánh bèo) hoặc lá gói (bánh nậm)",
+        "Nhân tôm cháy giã nhuyễn rắc lên bánh bèo",
+        "Bọc tôm thịt trong bột năng trong veo rồi hấp (bánh lọc)",
+        "Bày cả ba loại lên mâm/đĩa, ăn kèm nước mắm ớt"
+      ],
+      "howToEat": "Rưới nước mắm ớt pha loãng trực tiếp lên từng loại bánh, ăn từng miếng nhỏ — đúng kiểu 'ăn chơi' của ẩm thực cung đình Huế, không phải bữa chính no bụng.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Banh_beo.jpg",
+          "attribution": "Ron Diggity, Wikimedia Commons",
+          "license": "CC BY-SA 2.0"
+        }
+      ]
+    }
+  ]
+}

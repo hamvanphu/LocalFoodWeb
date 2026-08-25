@@ -1,0 +1,307 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PM-AI-Bootcamp-ProjectBriefs-v1.0</title><style>
+body { font-family: Calibri, Arial, sans-serif; color: #1A2733; margin: 42px; line-height: 1.45; }
+h1,h2,h3 { font-family: Cambria, Georgia, serif; color: #12294D; }
+h1 { font-size: 26pt; margin-bottom: 8px; }
+h2 { font-size: 18pt; margin-top: 28px; }
+h3 { font-size: 14pt; margin-top: 20px; }
+p, li { font-size: 11pt; }
+blockquote { border-left: 4px solid #E07B29; margin: 16px 0; padding: 8px 16px; background: #FBECDB; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0 22px; }
+th { background: #12294D; color: white; text-align: left; }
+th, td { border: 1px solid #D9E1EA; padding: 8px 10px; font-size: 10.5pt; vertical-align: top; }
+code { background: #F4F8FD; padding: 1px 4px; border-radius: 3px; }
+pre { background: #F4F8FD; padding: 12px 16px; border-radius: 6px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+hr { border: none; border-top: 1px solid #D9E1EA; margin: 24px 0; }
+</style></head><body><h1>PM AI Bootcamp — Project Brief Bank v2.0</h1>
+<blockquote>
+<p><strong>Purpose:</strong> instead of assigning the same LMS case to all 300 PMs, the bootcamp can split learners across <strong>six concrete project briefs</strong>. Each brief is specific enough for teams to run the workbook flow end-to-end: Requirement -&gt; WBS -&gt; Estimation -&gt; Risk -&gt; Weekly report -&gt; Delegation Map.</p>
+<p><strong>How to use:</strong> assign one brief per learner group and keep the same artifact pattern through the workbooks (<code>REQ-PB01.md</code>, <code>WBS-PB01.md</code>, <code>RISK-PB01.md</code>, and so on).</p>
+<p><strong>What matters most:</strong> instructors score <strong>PM judgment</strong>, not "how good AI sounded."</p>
+<p><strong>What to do after receiving a brief:</strong> follow the <strong>Capstone Playbook</strong> to move from brief -&gt; clarified scope -&gt; SW spec -&gt; architecture -&gt; working Customer Zero. The Playbook is the <strong>thread that strings the 6 drills EX-01 through EX-06</strong> into a single end-to-end flow.</p>
+<p><strong>Briefs are written to be easy to understand:</strong> familiar problems, compact MVP scope, mainstream technology. Each brief embeds <strong>1-2 "clarification traps"</strong> (intentionally vague or contradictory requirements) to train the <strong>hard-stop</strong> reflex in EX-01. In addition, each brief's scope is <strong>deliberately slightly too large</strong> for the team size and timeline — so EX-03 forces the PM to <strong>cut scope and write a trade-off</strong> (iteration loop).</p>
+<p><strong>Terminology:</strong> see <code>docs/GLOSSARY.md</code> — the unified glossary with a column mapping to international industry terms.</p>
+</blockquote>
+<hr />
+<h2>Brief index</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Project</th>
+<th>Domain</th>
+<th>Platform</th>
+<th>Difficulty</th>
+<th>Good fit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PB-01</strong></td>
+<td>Online storefront for a mid-sized shop</td>
+<td>E-commerce</td>
+<td>Web + backend + DB</td>
+<td>★★☆</td>
+<td>Web / full-stack teams</td>
+</tr>
+<tr>
+<td><strong>PB-02</strong></td>
+<td>Clinic appointment booking app</td>
+<td>Healthcare booking</td>
+<td>Mobile + API</td>
+<td>★★☆</td>
+<td>Mobile teams</td>
+</tr>
+<tr>
+<td><strong>PB-03</strong></td>
+<td>Internal warehouse management system</td>
+<td>Internal tool</td>
+<td>Web + DB</td>
+<td>★☆☆</td>
+<td>Newest groups, easiest case</td>
+</tr>
+<tr>
+<td><strong>PB-04</strong></td>
+<td>Sales reporting dashboard</td>
+<td>Data / BI</td>
+<td>Pipeline + dashboard</td>
+<td>★★☆</td>
+<td>Data teams</td>
+</tr>
+<tr>
+<td><strong>PB-05</strong></td>
+<td>Loyalty points mobile app</td>
+<td>Customer loyalty</td>
+<td>Mobile + backend</td>
+<td>★★☆</td>
+<td>Mobile / backend teams</td>
+</tr>
+<tr>
+<td><strong>PB-06</strong></td>
+<td>AI contract summary and extraction feature</td>
+<td>AI feature</td>
+<td>SaaS add-on</td>
+<td>★★★</td>
+<td>Core track, closest to the program theme</td>
+</tr>
+</tbody>
+</table>
+<p>Each brief includes:</p>
+<ul>
+<li>context,</li>
+<li>business goal,</li>
+<li>MVP scope,</li>
+<li>users and stakeholders,</li>
+<li>functional requirements,</li>
+<li>non-functional requirements,</li>
+<li>technology direction,</li>
+<li>team and timeline,</li>
+<li>constraints / sensitive data,</li>
+<li>clarification traps for EX-01,</li>
+<li>facilitator hints.</li>
+</ul>
+<hr />
+<h2>PB-01 — Online storefront for a mid-sized retail shop</h2>
+<p><strong>Context:</strong> a fashion store currently sells through Facebook, Zalo, and manual message handling. Orders and stock are error-prone because the process is semi-manual.</p>
+<p><strong>Business goal:</strong> increase online orders and reduce manual order handling.</p>
+<p><strong>MVP scope:</strong></p>
+<ul>
+<li>Product catalog with images, price, description, size, and color</li>
+<li>Search and filtering</li>
+<li>Cart and checkout</li>
+<li>Guest checkout</li>
+<li>Online payment plus COD</li>
+<li>Admin area for product and order management</li>
+<li>Email order confirmation</li>
+</ul>
+<p><strong>Out of scope:</strong> native mobile app, multi-language, advanced promotions, multi-branch support.</p>
+<p><strong>Suggested stack:</strong> Next.js + Node/NestJS or Spring Boot + PostgreSQL + local payment gateway + object storage + Docker + basic CI/CD.</p>
+<p><strong>Sensitive zone:</strong> payment and personal customer information.</p>
+<p><strong>Required clarification questions:</strong></p>
+<ul>
+<li>What happens when online payment fails or requires refund handling?</li>
+<li>When exactly is stock reduced: when the order is placed or when the order is confirmed?</li>
+</ul>
+<p><strong>Facilitator notes:</strong>
+- WBS commonly <strong>misses</strong>: payment gateway integration + callback/reconciliation handling, product seed data, admin panel, sandbox payment testing.
+- Delegation Map: payment integration and order status changes -&gt; <strong>A+ (approx L4)</strong>, human approver; product description generation / static UI -&gt; <strong>A (approx L3)</strong>.
+- <strong>EX-01 Stakeholder simulation:</strong> example scope-creep request for PB-01: <em>"We want coupon / discount codes in MVP for the launch sale."</em> The correct PM response: assess timeline impact + propose "adjust prices manually for launch, coupons move to phase 2."
+- <strong>EX-03 Trade-off:</strong> PB-01 scope (online payment + admin + stock management + dashboard) will almost certainly exceed the ~130 available person-days (4 people x 8 weeks minus meetings). The PM <strong>must cut</strong> — grade the quality of the cut + the diff between v1 and v2.
+- <strong>EX-05 Hallucination:</strong> week-3 data will not have "revenue", "conversion rate", or "page load speed". If AI fabricates these -&gt; PM must catch and replace with "N/A".</p>
+<hr />
+<h2>PB-02 — Clinic appointment booking app</h2>
+<p><strong>Context:</strong> a small clinic receives bookings by phone. Peak periods create line congestion and overlapping doctor schedules.</p>
+<p><strong>Business goal:</strong> reduce manual scheduling calls and appointment conflicts.</p>
+<p><strong>MVP scope:</strong></p>
+<ul>
+<li>View doctors and specialties</li>
+<li>View free time slots</li>
+<li>Book / cancel / reschedule</li>
+<li>Push and SMS reminders</li>
+<li>Reception dashboard for daily schedule</li>
+<li>Confirm patient arrival</li>
+</ul>
+<p><strong>Out of scope:</strong> full EMR, billing, telemedicine, insurance integration.</p>
+<p><strong>Suggested stack:</strong> Flutter or React Native + backend API + PostgreSQL + FCM + SMS/OTP provider + web dashboard for reception.</p>
+<p><strong>Sensitive zone:</strong> patient data, OTP, schedule correctness.</p>
+<p><strong>Required clarification questions:</strong></p>
+<ul>
+<li>Is booking instant, or does reception manually approve each booking?</li>
+<li>How many reminder messages are allowed, and what is the SMS budget rule?</li>
+</ul>
+<p><strong>Facilitator notes:</strong>
+- WBS commonly misses: booking slot concurrency handling, SMS/OTP integration and cost, testing on real devices.
+- Delegation Map: login/OTP, sending SMS to patients -&gt; <strong>A+ (approx L4)</strong>; generating static screens, notification text -&gt; <strong>A (approx L3)</strong>.
+- <strong>EX-01 Stakeholder simulation:</strong> example scope-creep request: <em>"The doctor wants to see the patient's medical history right in the app — it would be convenient during appointments."</em> PM should respond: medical records = out-of-scope for MVP + sensitive health data -&gt; phase 2, requires compliance assessment first.
+- <strong>EX-03 Trade-off:</strong> mobile app + backend + SMS/OTP + reception web dashboard -&gt; 5 people x 8 weeks is tight. PM should cut or simplify (e.g. drop SMS reminders, use push notifications only as a cheaper alternative).
+- <strong>EX-05 Hallucination:</strong> watch for AI fabricating "no-show rate" or "booking volume" when no operational data exists yet.</p>
+<hr />
+<h2>PB-03 — Internal warehouse management system</h2>
+<p><strong>Context:</strong> inventory is currently controlled by Excel. Real stock is hard to trust and manual corrections are frequent.</p>
+<p><strong>Business goal:</strong> maintain accurate stock levels and audit-friendly movement history.</p>
+<p><strong>MVP scope:</strong></p>
+<ul>
+<li>Product catalog</li>
+<li>Goods receipt</li>
+<li>Goods issue</li>
+<li>Current stock view</li>
+<li>Movement history</li>
+<li>Stock report by period</li>
+<li>Two roles: warehouse clerk and warehouse manager</li>
+</ul>
+<p><strong>Out of scope:</strong> multi-warehouse, barcode devices, accounting integration, demand forecast.</p>
+<p><strong>Suggested stack:</strong> React or Vue + Spring Boot or .NET + MySQL or PostgreSQL + Excel export.</p>
+<p><strong>Sensitive zone:</strong> permissions and manual stock correction.</p>
+<p><strong>Required clarification questions:</strong></p>
+<ul>
+<li>How are inventory adjustments handled when physical stock and recorded stock differ?</li>
+<li>Who is allowed to edit master product data?</li>
+</ul>
+<p><strong>Facilitator notes:</strong>
+- Easiest brief -&gt; good for teaching clean WBS and estimation. Common misses: permission screens, audit logs, stock adjustment workflow.
+- Delegation Map: permission changes and manual stock adjustments -&gt; <strong>A+ (approx L4)</strong>, human approver; CRUD catalog, read-only reports -&gt; <strong>A (approx L3)</strong> or lower.
+- <strong>EX-01 Stakeholder simulation:</strong> example scope-creep request: <em>"The warehouse wants barcode scanning from a phone."</em> PM should respond: barcode scanning = hardware scope + mobile app -&gt; out of scope for a 6-week MVP, log for phase 2.
+- <strong>EX-03 Trade-off:</strong> 3 people x 6 weeks — scope is compact but PMs often forget audit logs + permissions; if estimates exceed capacity -&gt; cut Excel export (use CSV instead).
+- <strong>EX-05 Hallucination:</strong> AI tends to fabricate "permission error rate" or "number of stock adjustments" when no data exists -&gt; PM must catch and mark N/A.</p>
+<hr />
+<h2>PB-04 — Sales reporting dashboard</h2>
+<p><strong>Context:</strong> leadership currently receives separate Excel reports from branches and cannot trust that the numbers reconcile.</p>
+<p><strong>Business goal:</strong> provide one daily decision dashboard with a single version of truth.</p>
+<p><strong>MVP scope:</strong></p>
+<ul>
+<li>Pull sales data from one API-based system and two Excel-based branches</li>
+<li>Clean and normalize the data</li>
+<li>Centralized storage</li>
+<li>Dashboard with time, branch, product-group, and comparison views</li>
+<li>Nightly refresh</li>
+<li>Error notification when a source fails</li>
+</ul>
+<p><strong>Out of scope:</strong> ML forecasting, real-time minute-level analytics, individual employee performance analytics.</p>
+<p><strong>Suggested stack:</strong> Python ETL or equivalent + warehouse / PostgreSQL + BI tool or dashboard web app + scheduler + run logs.</p>
+<p><strong>Sensitive zone:</strong> revenue data and source trustworthiness.</p>
+<p><strong>Required clarification questions:</strong></p>
+<ul>
+<li>The brief says sources are "already standardized", but the branch Excel templates are actually inconsistent. What is the true cleaning scope?</li>
+<li>If one branch is late, what should the dashboard show?</li>
+</ul>
+<p><strong>Facilitator notes:</strong>
+- This is the best brief for teaching <strong>EX-05 (anti-rubber-stamp and AI data fabrication)</strong>: require PM to attach a source to every KPI and flag "data missing".
+- WBS commonly misses: data cleaning / product code reconciliation across sources, error-source handling, total reconciliation step.
+- Delegation Map: pipeline writing to the executive data warehouse -&gt; <strong>A+ (approx L4)</strong> with a reconciliation gate; generating draft queries / charts -&gt; <strong>A (approx L3)</strong>.
+- <strong>EX-01 Stakeholder simulation:</strong> example scope-creep request: <em>"The boss wants a real-time dashboard refreshing every minute."</em> PM should respond: real-time requires streaming infrastructure, out of scope for an 8-week MVP — nightly batch before 7 AM already meets leadership decision needs.
+- <strong>EX-03 Trade-off:</strong> ETL + cleaning 3 sources + dashboard + reconciliation -&gt; 4 people x 8 weeks is tight. PM should cut: drop custom-built dashboard, use an off-the-shelf tool (Metabase / Superset) instead.
+- <strong>EX-05 Hallucination:</strong> the "anchor" brief for EX-05 — AI tends to fabricate "projected revenue" or interpolate numbers when source data is missing. PM must force the dashboard to show "N/A — source not submitted" instead of letting AI fill in.</p>
+<hr />
+<h2>PB-05 — Loyalty points mobile app</h2>
+<p><strong>Context:</strong> a retail chain wants a lightweight customer loyalty app so returning customers can collect and redeem points instead of using paper cards.</p>
+<p><strong>Business goal:</strong> improve repeat purchases and capture basic customer behavior.</p>
+<p><strong>MVP scope:</strong></p>
+<ul>
+<li>Registration / login</li>
+<li>View points balance</li>
+<li>Earn points from purchases</li>
+<li>Redeem points for simple rewards</li>
+<li>Notifications for point events</li>
+<li>Basic admin view for reward rules and manual adjustment</li>
+</ul>
+<p><strong>Out of scope:</strong> full CRM suite, deep segmentation, omnichannel analytics, complex coupon engines.</p>
+<p><strong>Suggested stack:</strong> Flutter or React Native + backend API + PostgreSQL + push notifications.</p>
+<p><strong>Sensitive zone:</strong> customer identity, reward abuse, manual point adjustment.</p>
+<p><strong>Required clarification questions:</strong></p>
+<ul>
+<li>How is purchase proof captured for adding points?</li>
+<li>Who is allowed to manually adjust customer balances?</li>
+</ul>
+<p><strong>Facilitator notes:</strong>
+- WBS commonly misses: duplicate scan prevention, cashier app/screen, point rule configuration, real-device QR testing.
+- Delegation Map: mass push notifications, point redemption (balance deduction), rule configuration -&gt; <strong>A+ (approx L4)</strong>, human approver; UI generation / draft notification content -&gt; <strong>A (approx L3)</strong>.
+- <strong>EX-01 Stakeholder simulation:</strong> example scope-creep request: <em>"Marketing wants combo-based point earning (buy 2 get 1 -&gt; bonus points)."</em> PM should respond: combo logic is complex, out of scope for MVP — phase 1 needs only a single rule (X points per Y currency spent).
+- <strong>EX-03 Trade-off:</strong> 5 people x 8 weeks but 2 apps (customer + cashier) + backend + push + OTP -&gt; tight. PM should cut: drop customer segmentation for push (send to all or manual select), or merge cashier screen into web instead of a separate app.
+- <strong>EX-05 Hallucination:</strong> AI tends to fabricate "redemption rate" or "customer return rate" when no operational data exists yet — PM must catch and mark N/A.</p>
+<hr />
+<h2>PB-06 — AI contract summary and extraction feature</h2>
+<p><strong>Context:</strong> account and legal teams spend too much time reading customer contracts and extracting key obligations by hand.</p>
+<p><strong>Business goal:</strong> shorten contract review time while keeping legal review quality intact.</p>
+<p><strong>MVP scope:</strong></p>
+<ul>
+<li>Upload a contract document</li>
+<li>Extract predefined fields (customer name, dates, commercial terms, obligations, exceptions)</li>
+<li>Generate a summary</li>
+<li>Highlight uncertain fields</li>
+<li>Keep a review screen for human correction</li>
+<li>Save reviewed output with audit trail</li>
+</ul>
+<p><strong>Out of scope:</strong> full autonomous legal approval, multilingual legal reasoning, broad enterprise repository integration.</p>
+<p><strong>Suggested stack:</strong> SaaS app extension or lightweight web app + OCR if needed + LLM pipeline + backend API + structured storage + audit log.</p>
+<p><strong>Sensitive zone:</strong> legal data, privacy, hallucination, AI overconfidence.</p>
+<p><strong>Required clarification questions:</strong></p>
+<ul>
+<li>May the contract be sent to an external model API, or must it stay inside a controlled environment?</li>
+<li>Which fields are mandatory, and how is confidence shown to the reviewer?</li>
+</ul>
+<p><strong>Facilitator notes (anchor brief for the program):</strong>
+- This brief forces the PM to apply <strong>the full CASAN/Leash philosophy</strong>: humans hold the decision, AI is the execution force; AI output passes through a <strong>fail-closed gate</strong> (traceable to source before use); watch for <strong>rubber-stamping</strong> (blindly approving AI results).
+- WBS commonly misses: extraction quality evaluation step, PDF scan/OCR handling, source citation display mechanism, data security testing.
+- Delegation Map (most critical for this brief):
+  - Sending contracts to an external model, saving results to the official record -&gt; <strong>A+ (approx L4)</strong> + security gate + human approver.
+  - AI generating a draft summary for human editing -&gt; <strong>A (approx L3)</strong>.
+  - <strong>Never</strong> let AI autonomously "confirm" a legal field without human review (this illustrates why <strong>L5 is never granted</strong>).
+- <strong>EX-01 Stakeholder simulation:</strong> example scope-creep request: <em>"The client wants AI to assess legal risk — 'is this contract safe?'."</em> PM should respond: legal advice = out of scope + serious liability risk -&gt; extraction only, <strong>no judgment</strong>.
+- <strong>EX-03 Trade-off:</strong> AI engineer + backend + frontend + OCR + RAG -&gt; 4 people x 8 weeks is tight. PM should cut: drop OCR support (only support text-based PDFs, not scanned documents) — saves approximately 2 weeks of effort.
+- <strong>EX-05 Hallucination:</strong> the "anchor" brief for hallucination detection — AI will fabricate penalty clauses or infer legal meaning from ambiguous passages. PM must enforce: field not found -&gt; "Not found — manual review required", <strong>never let AI fill in with guesses</strong>.</p>
+<hr />
+<h2>Rollout guidance for the 300 PM program</h2>
+<ul>
+<li>Use <strong>PB-03</strong> for new groups.</li>
+<li>Use <strong>PB-06</strong> for the strongest core groups.</li>
+<li>Mix briefs by team profile so different roles see different risk types.</li>
+<li>Keep artifact naming consistent by brief code.</li>
+<li>The same six briefs can be reused across PM / BA / SA / Dev tracks by changing the expected role-specific artifact.</li>
+</ul>
+<p>The brief bank exists to make the program concrete, comparable, and scalable without forcing all learners into a single domain scenario.</p>
+<hr />
+<p><strong>Terminology:</strong> for full definitions and international-standard mappings, see <code>docs/GLOSSARY.md</code>.</p>
+<hr />
+<h2>Appendix — Changelog</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0</td>
+<td>2026-06-30</td>
+<td>Initial set of 6 project briefs (PB-01 through PB-06) — detailed requirements + clear technology direction, mapped to EX-01 through EX-06.</td>
+</tr>
+<tr>
+<td>v2.0</td>
+<td>2026-08-24</td>
+<td>Added instructor notes for EX-01 stakeholder simulation, EX-03 trade-off, and EX-05 hallucination detection for every brief (PB-01 through PB-06). Added glossary pointer. Changelog moved to end.</td>
+</tr>
+</tbody>
+</table>
+<p><em>PM AI Bootcamp v2.0 — Project Brief Bank -- 2026-08-24 -- Use alongside Workbook Common v2.0.</em></p></body></html>

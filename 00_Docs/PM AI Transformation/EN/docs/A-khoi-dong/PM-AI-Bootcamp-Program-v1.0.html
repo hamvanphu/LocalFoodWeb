@@ -1,0 +1,591 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PM-AI-Bootcamp-Program-v1.0</title><style>
+body { font-family: Calibri, Arial, sans-serif; color: #1A2733; margin: 42px; line-height: 1.45; }
+h1,h2,h3 { font-family: Cambria, Georgia, serif; color: #12294D; }
+h1 { font-size: 26pt; margin-bottom: 8px; }
+h2 { font-size: 18pt; margin-top: 28px; }
+h3 { font-size: 14pt; margin-top: 20px; }
+p, li { font-size: 11pt; }
+blockquote { border-left: 4px solid #E07B29; margin: 16px 0; padding: 8px 16px; background: #FBECDB; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0 22px; }
+th { background: #12294D; color: white; text-align: left; }
+th, td { border: 1px solid #D9E1EA; padding: 8px 10px; font-size: 10.5pt; vertical-align: top; }
+code { background: #F4F8FD; padding: 1px 4px; border-radius: 3px; }
+pre { background: #F4F8FD; padding: 12px 16px; border-radius: 6px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+hr { border: none; border-top: 1px solid #D9E1EA; margin: 24px 0; }
+</style></head><body><h1>PM AI Bootcamp v2.0 — AI PM Transformation Program</h1>
+<blockquote>
+<p><strong>Audience:</strong> 200-300 Project Managers in FPT Automotive<br />
+<strong>Goal:</strong> Build a generation of <strong>AI-Native Project Managers</strong>, not simply PMs who can use ChatGPT.<br />
+<strong>Version:</strong> v2.0 · <strong>Date:</strong> 2026-08-25<br />
+<strong>Guiding philosophy:</strong> <em>Human-led, AI-first, Outcome-first.</em></p>
+</blockquote>
+<h3>Key terminology mapping</h3>
+<table>
+<thead>
+<tr>
+<th>Program term</th>
+<th>Industry equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CASAN</strong> (Curious-Augmented-Standard-Automated-Native)</td>
+<td>Comparable to Gartner's 5-level AI Maturity Model</td>
+</tr>
+<tr>
+<td><strong>Customer Zero</strong></td>
+<td>Dogfooding — using your own product before releasing it</td>
+</tr>
+<tr>
+<td><strong>Dev Book</strong></td>
+<td>Decision Log / ADR (Architecture Decision Records)</td>
+</tr>
+<tr>
+<td><strong>Nen / Compression</strong></td>
+<td>Productivity Ratio (traditional hours / real hours)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>0. One-minute summary</h2>
+<p><strong>In one line:</strong> move PMs from <em>work management</em> to <em>PM + AI orchestration</em> so they can direct AI to build, operate, and govern real delivery systems.</p>
+<h3>What participants learn</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th style="text-align: right;">Timing</th>
+<th>Core outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kick-off</strong></td>
+<td style="text-align: right;">1 hour (week 1)</td>
+<td>Understand <strong>CASAN</strong> <em>(comparable to Gartner's 5-level AI Maturity Model)</em> maturity, the L0-L5 delegation ladder, leash A/A+, and why real human hours matter more than token counts.</td>
+</tr>
+<tr>
+<td><strong>Exercises EX-01 to EX-06</strong></td>
+<td style="text-align: right;">Weeks 1-3 (self-paced)</td>
+<td>Complete 6 exercises across the SDLC: requirements, WBS, estimation, risk, reports, dashboards, delegation, and governance. Work independently with AI coding agent as coach.</td>
+</tr>
+<tr>
+<td><strong>Capstone - Build your Customer Zero</strong> <em>(= dogfooding)</em></td>
+<td style="text-align: right;">Weeks 4-5</td>
+<td>Direct AI to build a working vertical slice, keep a <strong>Dev Book</strong> <em>(= Decision Log / ADR)</em>, collect telemetry, and defend the result in viva. <em>No working system + no viva pass = no graduation.</em></td>
+</tr>
+<tr>
+<td><strong>Clinic</strong></td>
+<td style="text-align: right;">2 hours/week throughout</td>
+<td>Volunteer to present your work and learn from peers. The clinic is the presentation and learning session.</td>
+</tr>
+</tbody>
+</table>
+<h3>What participants bring</h3>
+<ul>
+<li>One real project to apply the training to, or one of the six sample project briefs.</li>
+<li>An AI coding agent account (e.g. Claude Code) and a safe environment for project materials. The AI agent serves as the <strong>"super orchestrator"</strong> used throughout every step -- see the <code>Orchestrator Guide</code>.</li>
+<li>Five weeks of blended effort on top of their real delivery work.</li>
+<li>Willingness to work hands-on, even if they are not coders today. <strong>No prior coding knowledge required.</strong></li>
+</ul>
+<h3>What participants leave with</h3>
+<ul>
+<li><strong>Capability:</strong> operate at <strong>CASAN Level 2 (Augmented)</strong>, with a selected core moving toward Levels 3-4. Able to <strong>direct AI to build + operate + govern + measure ROI</strong>, and <strong>not rubber-stamp</strong>.</li>
+<li><strong>Deliverables:</strong> a <strong>working Customer Zero</strong> system slice, a <strong>Dev Book</strong> (AI-wrong / PM-corrected), real telemetry, a before/after case study, an AI Workflow + Delegation Map, and an operational dashboard.</li>
+<li><strong>Certification:</strong> <em>AI-Native PM -- Certified</em> / <em>Distinction</em> (see <a href="#9-evaluation-and-certification">Evaluation and certification</a>).</li>
+</ul>
+<blockquote>
+<p><strong>Three hard graduation gates:</strong><br />
+1. Pass the six capability pillars.<br />
+2. Demonstrate a working system live.<br />
+3. Pass the viva defense.<br />
+Missing one gate means no graduation.</p>
+</blockquote>
+<hr />
+<h2>1. Program positioning</h2>
+<p>The program does <strong>not</strong> train:</p>
+<ul>
+<li>PMs who only know how to ask better chatbot questions.</li>
+<li>Prompt engineering in isolation.</li>
+<li>Old workflows with AI pasted on top.</li>
+</ul>
+<p>The program <strong>does</strong> train PMs who can:</p>
+<ul>
+<li>Run projects in an <strong>AI-first</strong> operating model.</li>
+<li>Lead a mixed <strong>human + AI workforce</strong>.</li>
+<li>Apply <strong>governance</strong>: human-in-the-loop, approval, audit, and safe delegation.</li>
+<li>Measure <strong>productivity and ROI</strong> with telemetry instead of gut feel.</li>
+<li>Avoid the most dangerous failure mode: <strong>rubber-stamping AI output</strong>.</li>
+</ul>
+<hr />
+<h2>2. Core philosophy</h2>
+<h3>2.1 Human-led, AI-first, Outcome-first</h3>
+<ul>
+<li><strong>Human-led:</strong> people decide, carry judgment, and own the result.</li>
+<li><strong>AI-first:</strong> AI drafts or executes first; humans review and steer the next step.</li>
+<li><strong>Outcome-first:</strong> delivery speed, quality, cost, and learning matter more than tool activity.</li>
+</ul>
+<h3>2.2 The deployable unit is <code>(PM + AI)</code></h3>
+<p>The program treats the PM and AI as a single operating pair:</p>
+<ul>
+<li>AI provides breadth, speed, and production force.</li>
+<li>The PM provides depth, judgment, risk control, and accountability.</li>
+<li>The goal is not to turn PMs into developers; it is to help PMs <strong>direct AI-native execution</strong> responsibly.</li>
+</ul>
+<hr />
+<h2>3. Capability model</h2>
+<h3>3.1 CASAN maturity</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Curious</td>
+<td>Ad hoc AI use, no workflow, no measurement</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Augmented</td>
+<td>AI strengthens the PM workflow with basic telemetry</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Standard</td>
+<td>AI-first delivery is standardized team-wide</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Automated</td>
+<td>Agents run bounded workflows with gates and audit</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Native</td>
+<td>AI-native delivery operates naturally at scale</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Target:</strong> move the broad cohort to <strong>Level 2</strong>, while building a core group that can reach <strong>Levels 3-4</strong>.</p>
+<h3>3.2 Delegation ladder</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>AI is allowed to...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0</td>
+<td>Observe</td>
+<td>Summarize or observe without changing anything</td>
+</tr>
+<tr>
+<td>L1</td>
+<td>Draft</td>
+<td>Produce drafts for full human review</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>Recommend</td>
+<td>Propose options and analysis</td>
+</tr>
+<tr>
+<td>L3</td>
+<td>Execute (bounded)</td>
+<td>Execute low-risk steps within tight boundaries</td>
+</tr>
+<tr>
+<td>L4</td>
+<td>Operate workflow</td>
+<td>Run a bounded workflow with gates and exception handling</td>
+</tr>
+<tr>
+<td>L5</td>
+<td>Restricted</td>
+<td>High-risk autonomy; intentionally not granted here</td>
+</tr>
+</tbody>
+</table>
+<h3>3.3 Six capability pillars</h3>
+<table>
+<thead>
+<tr>
+<th>Pillar</th>
+<th>What “meets the bar” means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI Literacy</strong></td>
+<td>Understand enough about LLMs, context, tools, and agents to use AI safely and effectively</td>
+</tr>
+<tr>
+<td><strong>AI Delegation</strong></td>
+<td>Distinguish what AI should do, what humans should do, and where review gates belong</td>
+</tr>
+<tr>
+<td><strong>Workflow Design</strong></td>
+<td>Redesign SDLC work into AI-first steps with clear checkpoints</td>
+</tr>
+<tr>
+<td><strong>Governance &amp; Risk</strong></td>
+<td>Control hallucination, security, IP, approval, and auditability</td>
+</tr>
+<tr>
+<td><strong>Telemetry &amp; Economics</strong></td>
+<td>Read dashboards, understand cost, and reason about ROI</td>
+</tr>
+<tr>
+<td><strong>Outcome Leadership</strong></td>
+<td>Lead the human + AI system toward delivery, quality, and margin outcomes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>4. Program structure (5 weeks)</h2>
+<h3>Kick-off (1 hour, week 1)</h3>
+<p>A single one-hour session focused on:</p>
+<ul>
+<li>Course overview and the future of software engineering and PM work.</li>
+<li>The shift from human-first to AI-first execution.</li>
+<li>CASAN self-positioning for both the PM and the project.</li>
+<li>Receive project brief and commit to "Customer Zero".</li>
+</ul>
+<p>After the kick-off, members work independently with their AI coding agent as coach.</p>
+<h3>Exercises (weeks 1-3, self-paced)</h3>
+<p>Six exercises (EX-01 to EX-06) covering the SDLC:</p>
+<ul>
+<li><strong>EX-01</strong> Requirements (write and review)</li>
+<li><strong>EX-02</strong> WBS</li>
+<li><strong>EX-03</strong> Estimation (3-point, with mandatory trade-off)</li>
+<li><strong>EX-04</strong> Risk Register</li>
+<li><strong>EX-05</strong> Weekly Report + Dashboard (catch AI fabricating numbers)</li>
+<li><strong>EX-06</strong> Delegation Map + Leash</li>
+</ul>
+<p>Members work at their own pace. Every week: <strong>2-hour clinic</strong> -- volunteer to present work and learn from peers.</p>
+<h3>Capstone (weeks 4-5)</h3>
+<p>Participants must build a <strong>working vertical slice</strong> and operate it as their own <strong>Customer Zero</strong>:</p>
+<ul>
+<li>A real end-to-end flow.</li>
+<li>A Dev Book capturing AI mistakes and human corrections.</li>
+<li>Real telemetry.</li>
+<li>A final viva defense.</li>
+</ul>
+<hr />
+<h2>5. Hands-on assignments</h2>
+<p>The program uses ten assignments on real project work:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Assignment</th>
+<th>Key requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>T1</strong></td>
+<td>AI-written requirements</td>
+<td>Includes <strong>stakeholder negotiation simulation</strong> (stakeholder demands scope additions)</td>
+</tr>
+<tr>
+<td><strong>T2</strong></td>
+<td>AI review of requirements</td>
+<td>Identify contradictions, gaps, and ambiguity; PM classifies real vs false findings</td>
+</tr>
+<tr>
+<td><strong>T3</strong></td>
+<td>AI-generated WBS</td>
+<td>Breakdown with levels and dependencies; PM adjusts</td>
+</tr>
+<tr>
+<td><strong>T4</strong></td>
+<td>AI-based estimation</td>
+<td>3-point estimation with <strong>trade-off iteration</strong> (re-scope when estimate exceeds target)</td>
+</tr>
+<tr>
+<td><strong>T5</strong></td>
+<td>AI-created risk register</td>
+<td>Likelihood x impact + mitigation for 10+ risks</td>
+</tr>
+<tr>
+<td><strong>T6</strong></td>
+<td>AI-assisted test strategy</td>
+<td>Coverage, test levels, quality risks</td>
+</tr>
+<tr>
+<td><strong>T7</strong></td>
+<td>AI-generated weekly report</td>
+<td>Includes <strong>hallucination detection step</strong> (verify AI-generated figures against source data)</td>
+</tr>
+<tr>
+<td><strong>T8</strong></td>
+<td>AI-generated meeting summary</td>
+<td>Action items with owners and deadlines</td>
+</tr>
+<tr>
+<td><strong>T9</strong></td>
+<td>AI-assisted retrospective</td>
+<td>Telemetry-based insights, not gut feel</td>
+</tr>
+<tr>
+<td><strong>T10</strong></td>
+<td>Minimum viable delivery dashboard</td>
+<td>5+ KPIs with formulas and data sources</td>
+</tr>
+</tbody>
+</table>
+<p>Every submission includes:</p>
+<ul>
+<li>the artifact,</li>
+<li>the prompt pattern or instruction used,</li>
+<li>telemetry,</li>
+<li>evidence of human review.</li>
+</ul>
+<h3>Passing the exercises</h3>
+<ul>
+<li>All <strong>6 exercises</strong> must score <strong>2 or higher</strong>.</li>
+<li>Risk and dashboard work are mandatory.</li>
+<li>Missing telemetry means the assignment is incomplete.</li>
+</ul>
+<hr />
+<h2>6. Governance principles</h2>
+<p>The program turns governance from slogans into mechanisms:</p>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fail-closed gate</strong></td>
+<td>If the output cannot be verified, it is blocked by default</td>
+</tr>
+<tr>
+<td><strong>Built-flagged, awaiting approval</strong></td>
+<td>AI may complete work, but high-risk release still requires explicit human approval</td>
+</tr>
+<tr>
+<td><strong>Hard-stop on conflict</strong></td>
+<td>If the spec is contradictory or ambiguous, AI must stop and surface the issue instead of guessing</td>
+</tr>
+</tbody>
+</table>
+<h3>Non-negotiable rules</h3>
+<ul>
+<li>AI does <strong>not</strong> self-merge or self-release.</li>
+<li>AI does <strong>not</strong> touch secrets or restricted materials.</li>
+<li>AI does <strong>not</strong> mark work as done while blocked by review or hard-stop conditions.</li>
+</ul>
+<hr />
+<h2>7. AI agent as the super orchestrator</h2>
+<p>The training uses an AI coding agent (e.g. Claude Code) as a <strong>super orchestrator</strong>, not just a chat interface. The PM directs the agent with goals, not keystrokes.</p>
+<p>Standard operating loop:</p>
+<p><code>Context -&gt; Plan -&gt; Delegate (Leash A/A+) -&gt; Execute -&gt; Gate (fail-closed) -&gt; Log (Dev Book + telemetry) -&gt; Repeat</code></p>
+<p>This matters because:</p>
+<ul>
+<li>one goal replaces ten micro-actions,</li>
+<li>the PM can stay focused on judgment instead of keystrokes,</li>
+<li>autonomy is always paired with explicit gates (Leash A/A+ as the guardrail),</li>
+<li>the Dev Book and telemetry become built-in evidence.</li>
+</ul>
+<blockquote>
+<p><strong>Introductory guide for participants:</strong> <code>Orchestrator Guide</code> -- 7 steps, 8 "control levers", quickstart, prompt patterns, and a checklist against rubber-stamping. <strong>Introduced at the kick-off, used throughout the entire 5 weeks.</strong></p>
+</blockquote>
+<hr />
+<h2>8. Capstone and Customer Zero</h2>
+<p>The capstone is the heart of the program.</p>
+<p>Participants must show:</p>
+<ol>
+<li><strong>A working system</strong> that runs live (a vertical slice, not a full application).</li>
+<li><strong>A Dev Book</strong> that clearly records where AI was wrong and how the PM corrected it.</li>
+<li><strong>Real telemetry</strong> including human hours, overrides, and token reconciliation.</li>
+<li><strong>An operating log</strong> describing what broke when the PM actually used the system.</li>
+</ol>
+<h3>Why this matters</h3>
+<p>Without this requirement, the program could accidentally reward polished AI-generated documents without real understanding. The Customer Zero model forces participants to build, run, observe, and correct.</p>
+<h3>Two-tier Capstone</h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>For whom</th>
+<th>What to deliver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1 -- Full-stack</strong></td>
+<td>PMs with a technical background</td>
+<td>Real running code -- a working vertical slice deployed locally or on a server</td>
+</tr>
+<tr>
+<td><strong>Tier 2 -- PM-stack</strong></td>
+<td>Non-coder PMs</td>
+<td>Prototype + API mock + SQL schema + test scenarios -- demonstrating the full build-operate-review loop without production code</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Both tiers require a real Dev Book and qualify for Certified.</strong> Details in the <code>Capstone Playbook</code>.</p>
+<hr />
+<h2>9. Evaluation and certification</h2>
+<h3>Deliverables</h3>
+<table>
+<thead>
+<tr>
+<th>Deliverable</th>
+<th style="text-align: right;">Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Running Customer Zero</td>
+<td style="text-align: right;">25%</td>
+</tr>
+<tr>
+<td>Dev Book</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr>
+<td>AI Workflow + Delegation Map</td>
+<td style="text-align: right;">15%</td>
+</tr>
+<tr>
+<td>AI Dashboard</td>
+<td style="text-align: right;">15%</td>
+</tr>
+<tr>
+<td>Before/After Case Study</td>
+<td style="text-align: right;">15%</td>
+</tr>
+<tr>
+<td>AI Transformation Plan</td>
+<td style="text-align: right;">5%</td>
+</tr>
+<tr>
+<td>Video Demo</td>
+<td style="text-align: right;">5%</td>
+</tr>
+</tbody>
+</table>
+<h3>Certification levels</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Certified</strong></td>
+<td>Meets all graduation gates</td>
+</tr>
+<tr>
+<td><strong>Distinction</strong></td>
+<td>Strong average score (mean &gt;= 3.5) plus clearly positive pilot ROI</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>10. KPI and telemetry</h2>
+<p>The program measures:</p>
+<ul>
+<li>AI adoption</li>
+<li>planning lead time</li>
+<li>estimation accuracy</li>
+<li>rework rate</li>
+<li>review time</li>
+<li>delivery quality</li>
+<li>project margin</li>
+<li><strong>Nen / Compression</strong> (traditional hours / real hours) -- the leverage metric for leadership</li>
+<li><strong>token efficiency</strong> (MD delivered / 1M tokens consumed)</li>
+</ul>
+<h3>Measurement rules</h3>
+<ul>
+<li>Use <strong>real human hours</strong>, not token counts as a proxy.</li>
+<li>Reconcile estimated token usage with actual usage.</li>
+<li>Log work outside the original plan so the efficiency story stays honest.</li>
+<li>Tie all numbers back to delivery outcomes and ROI.</li>
+</ul>
+<hr />
+<h2>11. Rollout roadmap</h2>
+<table>
+<thead>
+<tr>
+<th>Wave</th>
+<th style="text-align: right;">Scale</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wave 1</strong></td>
+<td style="text-align: right;">200-300 PMs</td>
+<td>Build foundation and move the broad cohort to Level 2</td>
+</tr>
+<tr>
+<td><strong>Wave 2</strong></td>
+<td style="text-align: right;">80 PMs</td>
+<td>Run real pilots and produce Customer Zero evidence</td>
+</tr>
+<tr>
+<td><strong>Wave 3</strong></td>
+<td style="text-align: right;">20 PMs</td>
+<td>Form the champion network</td>
+</tr>
+<tr>
+<td><strong>Wave 4</strong></td>
+<td style="text-align: right;">5 PMs</td>
+<td>Build program leaders for governance, KPI, and rollout</td>
+</tr>
+</tbody>
+</table>
+<p>The program is designed to scale through:</p>
+<ul>
+<li>a lean coaching model,</li>
+<li>AI as the default reviewer,</li>
+<li>peer mentoring,</li>
+<li>reusable prompts, templates, and playbooks.</li>
+</ul>
+<hr />
+<h2>12. Glossary</h2>
+<p>See <strong><code>docs/GLOSSARY.md</code></strong> for the unified glossary with industry-standard term mapping.</p>
+<hr />
+<h2>13. Scope note</h2>
+<p>This English file is the <strong>A-folder program overview</strong> prepared for immediate sharing alongside the translated deck and infographic. It preserves the structure and key operating concepts of the Vietnamese source while keeping the document concise for first-pass circulation.</p>
+<p><em>All percentage figures and budgets are indicative frames. Adjust based on actual W0 baseline measurements and project-specific conditions.</em></p>
+<hr />
+<h2>Appendix -- Changelog</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v2.0</td>
+<td>2026-08-25</td>
+<td>Removed rewards section (former section 9.4). Added terminology mapping (CASAN, Customer Zero, Dev Book, Nen/Compression with industry equivalents). Added 2-tier Capstone (Full-stack / PM-stack). Exercise enhancements: stakeholder simulation (T1), trade-off iteration (T4), hallucination detection (T7). Glossary centralized to <code>docs/GLOSSARY.md</code>. Orchestrator references made tool-agnostic. Certification levels simplified to Certified / Distinction. Changelog moved to end of file.</td>
+</tr>
+<tr>
+<td>v1.0</td>
+<td>2026-06-29</td>
+<td>Initial English translation of program overview covering all phases, assignments, governance, evaluation, KPI, and rollout roadmap.</td>
+</tr>
+</tbody>
+</table></body></html>

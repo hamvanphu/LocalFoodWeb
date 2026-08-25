@@ -1,0 +1,391 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PM-AI-Bootcamp-ClaudeCode-Orchestrator-Guide-v1.0</title><style>
+body { font-family: Calibri, Arial, sans-serif; color: #1A2733; margin: 42px; line-height: 1.45; }
+h1,h2,h3 { font-family: Cambria, Georgia, serif; color: #12294D; }
+h1 { font-size: 26pt; margin-bottom: 8px; }
+h2 { font-size: 18pt; margin-top: 28px; }
+h3 { font-size: 14pt; margin-top: 20px; }
+p, li { font-size: 11pt; }
+blockquote { border-left: 4px solid #E07B29; margin: 16px 0; padding: 8px 16px; background: #FBECDB; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0 22px; }
+th { background: #12294D; color: white; text-align: left; }
+th, td { border: 1px solid #D9E1EA; padding: 8px 10px; font-size: 10.5pt; vertical-align: top; }
+code { background: #F4F8FD; padding: 1px 4px; border-radius: 3px; }
+pre { background: #F4F8FD; padding: 12px 16px; border-radius: 6px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+hr { border: none; border-top: 1px solid #D9E1EA; margin: 24px 0; }
+</style></head><body><h1>AI Coding Agent — Super Orchestrator Guide</h1>
+<blockquote>
+<p><strong>Audience:</strong> all four bootcamp tracks (PM / BA / SA / Dev)<br />
+<strong>Companion to:</strong> <code>PM-AI-Bootcamp-Program-v1.0.md</code>, the four workbooks, and <code>PM-AI-Bootcamp-OperatingModel-v1.0.md</code><br />
+<strong>Core message:</strong> do not treat an AI coding agent as a question-answer chatbot. Use it as an <strong>orchestrator</strong> that can carry a whole step: read context, plan, call tools, run commands, self-check, and log. <strong>You</strong> remain the conductor, the judge, and the accountable owner.<br />
+<strong>Applies to:</strong> Claude Code, Codex, Cursor, or any equivalent AI coding agent — the orchestration principles are <strong>tool-agnostic</strong>; only the feature toggles differ between tools.<br />
+<strong>Terminology:</strong> for the full unified glossary with industry-standard mapping, see <code>docs/GLOSSARY.md</code>.<br />
+<strong>Date:</strong> 2026-08-24 · <strong>Version:</strong> v2.0</p>
+</blockquote>
+<hr />
+<h2>0. One-minute summary — what "orchestrator" means</h2>
+<p>A normal chatbot loop looks like this:</p>
+<ul>
+<li>you ask one question,</li>
+<li>it returns one paragraph,</li>
+<li>you do the rest outside the tool.</li>
+</ul>
+<p>An AI coding agent as orchestrator is different:</p>
+<ul>
+<li>you give it a <strong>multi-step goal</strong>,</li>
+<li>it breaks the work down,</li>
+<li>reads files,</li>
+<li>writes files,</li>
+<li>runs commands,</li>
+<li>calls external tools,</li>
+<li>can spawn subagents in parallel,</li>
+<li>self-checks the result,</li>
+<li>and reports back.</li>
+</ul>
+<p>You do <strong>not</strong> micromanage each command. You set the goal, set the rails, approve at gates, and catch wrong reasoning.</p>
+<blockquote>
+<p><strong>Analogy:</strong> you are the conductor, the AI coding agent is the orchestra plus a section coordinator. You do not play every instrument yourself; you direct timing, intent, and correction.</p>
+<p><strong>Tool-agnostic:</strong> this guide uses Claude Code as the running example, but the principles (seven-beat loop, Leash A/A+, fail-closed gate) apply to <strong>any AI coding agent</strong> — Codex, Cursor, Windsurf, etc. What changes between tools is how you toggle features (plan mode, subagent, hook); what stays the same is <strong>your orchestration mindset and governance</strong>.</p>
+</blockquote>
+<hr />
+<h2>1. Mindset shift: from "ask-answer" to "delegate-orchestrate"</h2>
+<table>
+<thead>
+<tr>
+<th>Old chatbot behavior</th>
+<th>AI coding agent as orchestrator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ask one question, copy the answer elsewhere</td>
+<td>Give one goal and let it work directly on the project</td>
+</tr>
+<tr>
+<td>You connect all the steps manually</td>
+<td>It plans and executes a multi-step flow</td>
+</tr>
+<tr>
+<td>The result lives only in chat</td>
+<td>The result becomes a <strong>real artifact</strong>: a file, code, tests, a dashboard</td>
+</tr>
+<tr>
+<td>You either trust it or not</td>
+<td>You add explicit <strong>gates</strong> and verify before use</td>
+</tr>
+<tr>
+<td>One thing at a time</td>
+<td>It can use <strong>parallel subagents</strong> on larger work</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule of thumb:</strong><br />
+<em>"Do not ask it to write a paragraph for me. Ask it to finish the whole step, then I inspect it."</em></p>
+<hr />
+<h2>2. Standard orchestrator loop — the seven-beat cycle</h2>
+<p>Use this loop for every type of work: requirement writing, architecture, coding, testing, reporting, and capstone execution.</p>
+<ol>
+<li><strong>Context</strong> — load the playground: project files, <code>CLAUDE.md</code>, current constraints, target artifacts.</li>
+<li><strong>Plan</strong> — ask the AI coding agent to present a step-by-step plan and wait for your approval.</li>
+<li><strong>Delegate</strong> — define the boundaries: what it may change, what it must not touch, which tasks are A vs A+.</li>
+<li><strong>Execute</strong> — let it run the step end-to-end.</li>
+<li><strong>Gate / Verify</strong> — tests, lint, traceability, security checks, human review. <em>If you cannot verify it, do not use it.</em></li>
+<li><strong>Log</strong> — write Dev Book notes and telemetry immediately.</li>
+<li><strong>Iterate</strong> — loop to the next step.</li>
+</ol>
+<blockquote>
+<p>This is the working muscle memory of the bootcamp:<br />
+<code>Context -&gt; Plan -&gt; Delegate -&gt; Execute -&gt; Gate -&gt; Log -&gt; Iterate</code></p>
+</blockquote>
+<hr />
+<h2>3. Eight controls to learn early</h2>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it is</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Context file</strong> (<code>CLAUDE.md</code> / <code>.codex</code> / equivalent)</td>
+<td>Project memory file</td>
+<td>Gives the agent stable context and rules</td>
+</tr>
+<tr>
+<td><strong>Plan mode</strong></td>
+<td>"Plan first, wait for approval" mode</td>
+<td>Makes large or risky work cheaper to correct early</td>
+</tr>
+<tr>
+<td><strong>Subagents / parallel work</strong></td>
+<td>Multiple helpers working at once</td>
+<td>Useful for reviews, multi-file analysis, parallel tasks</td>
+</tr>
+<tr>
+<td><strong>MCP tools</strong></td>
+<td>External tools, browsers, docs, APIs</td>
+<td>Lets the AI coding agent interact with real systems</td>
+</tr>
+<tr>
+<td><strong>Skills / slash commands</strong></td>
+<td>Pre-packaged workflows</td>
+<td>Good for standardized tasks</td>
+</tr>
+<tr>
+<td><strong>Hooks</strong></td>
+<td>Automatic commands after actions</td>
+<td>Useful for built-in rails like tests or lint</td>
+</tr>
+<tr>
+<td><strong>Memory</strong></td>
+<td>Cross-session preferences and decisions</td>
+<td>Helps the agent remember how your project works</td>
+</tr>
+<tr>
+<td><strong>Permission mode</strong></td>
+<td>How much it can do without asking</td>
+<td>This is where leash A / A+ becomes real</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-coder note:</strong> you do not need to memorize syntax. If you are stuck, ask the AI coding agent directly to explain the error or tell you how to turn on the right operating mode.</p>
+<hr />
+<h2>4. How the AI coding agent supports each workbook type</h2>
+<table>
+<thead>
+<tr>
+<th>Track / step</th>
+<th>AI coding agent does</th>
+<th>Human still decides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BA - requirements / user stories</strong></td>
+<td>Drafts requirements, finds contradictions, writes user stories and AC</td>
+<td>Which questions are real, which assumptions are unsafe, where to hard-stop</td>
+</tr>
+<tr>
+<td><strong>BA - prototype</strong></td>
+<td>Builds a clickable prototype or simple flow</td>
+<td>Whether it actually meets acceptance criteria</td>
+</tr>
+<tr>
+<td><strong>SA - architecture / ADR</strong></td>
+<td>Generates options, diagrams, contracts, data models</td>
+<td>Which trade-off to accept and why</td>
+</tr>
+<tr>
+<td><strong>SA - vertical slice</strong></td>
+<td>Builds a technical skeleton from the approved architecture</td>
+<td>Whether boundaries and NFRs are truly respected</td>
+</tr>
+<tr>
+<td><strong>Dev - code + tests</strong></td>
+<td>Writes code, generates tests, helps debug</td>
+<td>PR-level review, fake-test detection, correctness judgment</td>
+</tr>
+<tr>
+<td><strong>Dev - harness / agent</strong></td>
+<td>Builds a small agent or harness for repeated work</td>
+<td>Where gates belong and when autonomy is too high</td>
+</tr>
+<tr>
+<td><strong>PM - WBS / estimation / risk</strong></td>
+<td>Breaks down work, estimates, drafts risk lists</td>
+<td>What is missing, what must be cut, what is realistic for the real team</td>
+</tr>
+<tr>
+<td><strong>All tracks - reports / dashboards</strong></td>
+<td>Drafts summaries and KPI views from raw data</td>
+<td>Whether the numbers are sourced, honest, and decision-worthy</td>
+</tr>
+<tr>
+<td><strong>All tracks - delegation map</strong></td>
+<td>Suggests levels and safe zones</td>
+<td>The final autonomy level and hazard handling</td>
+</tr>
+</tbody>
+</table>
+<p>The pattern is constant: the AI coding agent handles the <strong>boxable</strong> part of the work. Humans keep the <strong>judgment</strong>.</p>
+<hr />
+<h2>5. Governance overlay — how to keep orchestration safe</h2>
+<p>The more powerful the orchestrator becomes, the tighter the rails must be.</p>
+<ul>
+<li><strong>Leash A by default:</strong> the AI coding agent may work up to a draft or bounded execution result, but not self-release.</li>
+<li><strong>Leash A+ for hazard work:</strong> if a task touches permissions, secrets, release, schema, or sensitive data, it must stop for explicit human approval.</li>
+<li><strong>Fail-closed gate:</strong> tests, verification, traceability, and security checks must pass before output becomes usable.</li>
+<li><strong>Hard-stop on contradiction:</strong> if the specification is unclear or conflicting, the AI coding agent must stop and ask.</li>
+<li><strong>Human-in-the-loop:</strong> important artifacts require a real person who has actually understood the output.</li>
+</ul>
+<blockquote>
+<p>Golden rule:<br />
+<em>The more steps AI can run autonomously, the tighter the gate must become.</em></p>
+</blockquote>
+<hr />
+<h2>6. Telemetry and Dev Book — log while you drive</h2>
+<p>Every serious orchestrator session should produce evidence.</p>
+<h3>Dev Book</h3>
+<p>Write down:</p>
+<ul>
+<li>where AI was wrong,</li>
+<li>what you changed,</li>
+<li>why you chose that delegation level,</li>
+<li>which gate blocked the issue,</li>
+<li>whether a hard-stop happened.</li>
+</ul>
+<p>This is <strong>more valuable than pretty plans</strong>, because it proves understanding.</p>
+<h3>Telemetry</h3>
+<p>Track at least:</p>
+<ul>
+<li>real human hours,</li>
+<li>number of AI override / edit moments,</li>
+<li>estimated token usage and later reconciliation,</li>
+<li>rework.</li>
+</ul>
+<blockquote>
+<p>A learner with 30 real AI corrections is not the same as a learner with zero corrections.<br />
+The second case is often hidden rubber-stamping.</p>
+</blockquote>
+<hr />
+<h2>7. First-day quickstart — ten steps</h2>
+<ol>
+<li>Open the project or choose one project brief (<code>PB-01</code> to <code>PB-06</code>).</li>
+<li>Read or create <code>CLAUDE.md</code>.</li>
+<li>State the <strong>goal</strong>, not a list of micro-actions.</li>
+<li>Turn on <strong>Plan mode</strong> for any non-trivial step.</li>
+<li>Review and edit the plan before execution.</li>
+<li>Let the AI coding agent execute the step.</li>
+<li>For any hazard action, force an <strong>A+ approval stop</strong>.</li>
+<li>Verify the result yourself: test, click, inspect, or reason through it.</li>
+<li>Record at least one AI mistake and your correction in the Dev Book.</li>
+<li>Log telemetry and loop forward.</li>
+</ol>
+<p>If a learner has completed this cycle once on real work, they have already started operating as an AI orchestrator rather than a chatbot user.</p>
+<hr />
+<h2>8. Prompt patterns for orchestration</h2>
+<ul>
+<li>
+<p><strong>End-to-end step delegation</strong><br />
+<em>"Goal: [X]. First present a step-by-step plan and wait for my approval. Once approved, execute directly on the project files. If any assumption is unclear, surface it instead of inventing it."</em></p>
+</li>
+<li>
+<p><strong>Plan-first control</strong><br />
+<em>"Do not execute yet. Show me the plan, the risks, and the places where I must decide."</em></p>
+</li>
+<li>
+<p><strong>Boundary setting / leash</strong><br />
+<em>"You may update code and run tests. You may not commit, push, change schema, or touch secrets without asking me."</em></p>
+</li>
+<li>
+<p><strong>Forced hard-stop</strong><br />
+<em>"If the specification is contradictory or underspecified, stop and list questions. Do not guess."</em></p>
+</li>
+<li>
+<p><strong>Verification gate</strong><br />
+<em>"After changes, run verification and report the result. If the gate is red, keep fixing until it is green."</em></p>
+</li>
+<li>
+<p><strong>Parallel work request</strong><br />
+<em>"This task is large. Split independent parts into parallel subagents, then reconcile the outputs for me."</em></p>
+</li>
+<li>
+<p><strong>Self-review pass</strong><br />
+<em>"Now switch roles and review your own output like a strict reviewer. Show defects, omissions, and unsafe assumptions."</em></p>
+</li>
+</ul>
+<hr />
+<h2>9. Common traps and how to avoid them</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Consequence</th>
+<th>Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copying AI output without reading it</td>
+<td>Hidden defects and fake progress</td>
+<td>Always verify and record at least one human correction</td>
+</tr>
+<tr>
+<td>Letting it run risky work without gates</td>
+<td>Security, data, or release accidents</td>
+<td>Use A+ and fail-closed gates</td>
+</tr>
+<tr>
+<td>Weak prompt with no context</td>
+<td>Guessing, drift, shallow output</td>
+<td>Good <code>CLAUDE.md</code> + clear goal + plan-first mode</td>
+</tr>
+<tr>
+<td>Trusting invented numbers</td>
+<td>Bad reports and false estimates</td>
+<td>Require explicit source grounding</td>
+</tr>
+<tr>
+<td>Micromanaging each command</td>
+<td>Wastes the point of orchestration</td>
+<td>Delegate the outcome, not the keystrokes</td>
+</tr>
+<tr>
+<td>Not logging Dev Book / telemetry</td>
+<td>No evidence of understanding</td>
+<td>Log during the loop, not at the end</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Hard boundary of the bootcamp:</strong><br />
+submitting AI-generated work without visible human review and correction is <strong>rubber-stamping</strong> and counts as failure, even if the output looks polished.</p>
+</blockquote>
+<hr />
+<h2>10. Pocket checklist</h2>
+<h3>Before delegation</h3>
+<ul>
+<li>[ ] Did I load the right context?</li>
+<li>[ ] Did I state a goal, not a keystroke list?</li>
+<li>[ ] Did I request a plan first?</li>
+<li>[ ] Did I define the A / A+ boundary?</li>
+</ul>
+<h3>While it is running</h3>
+<ul>
+<li>[ ] Does hazard work stop for my decision?</li>
+<li>[ ] Did contradictions trigger a hard-stop instead of silent guessing?</li>
+</ul>
+<h3>Before calling it done</h3>
+<ul>
+<li>[ ] Did I verify the result myself?</li>
+<li>[ ] Did I catch and correct at least one AI mistake?</li>
+<li>[ ] Did I log Dev Book and telemetry immediately?</li>
+</ul>
+<p>If these three blocks stay true, the learner is using the AI coding agent as a <strong>controlled super orchestrator</strong>, not as a glorified autocomplete engine.</p>
+<hr />
+<p><em>This guide is the entry layer. It works together with the </em><em>Program</em><em> (Section 5 Mindset, Section 8 Capstone), the four workbooks (track-specific exercises), and the </em><em>Operating Model</em><em> (L0-L5, Leash A/A+, 3 governance mechanisms). For terminology: see <code>docs/GLOSSARY.md</code>.</em></p>
+<hr />
+<h2>Changelog</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0</td>
+<td>2026-07-02</td>
+<td>Initial release</td>
+</tr>
+<tr>
+<td>v2.0</td>
+<td>2026-08-24</td>
+<td>Tool-agnostic rewrite (Claude Code -&gt; AI coding agent); added glossary pointer; added "Applies to" header; updated controls table for tool equivalence; aligned with Operating Model v2.0</td>
+</tr>
+</tbody>
+</table></body></html>

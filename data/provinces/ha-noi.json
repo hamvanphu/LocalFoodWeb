@@ -1,0 +1,118 @@
+{
+  "slug": "ha-noi",
+  "code": "VN-HN",
+  "name": "Hà Nội",
+  "region": "Bắc",
+  "centroid": [105.69874, 20.99932],
+  "summary": "Ẩm thực Hà Nội tinh tế và tiết chế — nước dùng trong, gia vị vừa đủ, để nguyên liệu tự nói lên vị ngon.",
+  "heroDishSlug": "pho-bo",
+  "dishes": [
+    {
+      "slug": "pho-bo",
+      "name": "Phở bò Hà Nội",
+      "isHero": true,
+      "tasteTags": ["savory", "noodle-soup", "street-food"],
+      "description": "Phở Hà Nội là hình mẫu chuẩn mực của món phở Việt Nam — nước dùng bò trong, thanh, ninh nhiều giờ, ăn cùng bánh phở dẹt và vài lát thịt bò mỏng. So với phở miền Nam, phở Hà Nội tiết chế hơn: ít rau thơm, không giá đỗ, để vị ngọt tự nhiên của nước dùng làm chủ đạo.",
+      "keyIngredients": [
+        "Xương bò, thịt bắp/nạm bò",
+        "Bánh phở (bánh tráng dẹt)",
+        "Gừng, hành nướng",
+        "Hoa hồi, quế, thảo quả",
+        "Nước mắm, hành lá, rau mùi"
+      ],
+      "prepOutline": [
+        "Nướng gừng và hành cho thơm rồi cho vào nồi nước xương",
+        "Ninh xương bò 6-8 tiếng, hớt bọt liên tục để nước trong",
+        "Nêm nước mắm, gia giảm hoa hồi/quế/thảo quả",
+        "Trần bánh phở, xếp thịt bò sống hoặc chín lên trên",
+        "Chan nước dùng đang sôi lên bát để thịt vừa chín tới"
+      ],
+      "howToEat": "Ăn nóng, thường vào buổi sáng. Vắt thêm chút chanh (hoặc quất), thêm ớt tươi; người Hà Nội hay nếm nước dùng trước khi nêm thêm giấm tỏi hoặc xì dầu, không trộn rau sống ồ ạt như phong cách miền Nam.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Beef_noodle_soup_%28Ph%E1%BB%9F_b%C3%B2%29_-_Pho_Hanoi_Authentic_2024-12-01.jpg",
+          "attribution": "Andy Li, Wikimedia Commons",
+          "license": "CC0"
+        }
+      ]
+    },
+    {
+      "slug": "bun-cha",
+      "name": "Bún chả",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "street-food"],
+      "description": "Chả thịt lợn (viên và miếng) nướng than hoa, ăn cùng bún và nước chấm chua ngọt pha đu đủ/cà rốt ngâm — món trưa kinh điển của Hà Nội, nổi tiếng toàn cầu.",
+      "keyIngredients": [
+        "Thịt ba chỉ và thịt vai xay",
+        "Bún lá/bún rối",
+        "Nước mắm, đường, giấm/chanh, tỏi ớt",
+        "Đu đủ xanh, cà rốt ngâm chua ngọt",
+        "Rau sống ăn kèm (xà lách, tía tô, kinh giới)"
+      ],
+      "prepOutline": [
+        "Ướp thịt với nước mắm, đường, hành tỏi băm",
+        "Nướng than hoa tới khi cháy cạnh thơm",
+        "Pha nước chấm chua ngọt, thả đu đủ/cà rốt ngâm vào",
+        "Thả chả nướng vào bát nước chấm ấm",
+        "Ăn kèm bún và rau sống"
+      ],
+      "howToEat": "Gắp bún và rau sống chấm trực tiếp vào bát nước chấm có chả, không chan nước chấm lên bún khô như một số nơi khác — giữ bún tơi và nước chấm đậm đà riêng.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Bun_cha_Hanoi.jpg",
+          "attribution": "Weetjesman, Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "slug": "cha-ca-la-vong",
+      "name": "Chả cá Lã Vọng",
+      "isHero": false,
+      "tasteTags": ["grilled", "herb-forward", "savory"],
+      "description": "Cá lăng ướp nghệ và mẻ, nướng/chao mỡ ngay trên bàn ăn cùng thì là và hành lá, dùng với bún và mắm tôm — món ăn gắn liền với phố Chả Cá của Hà Nội.",
+      "keyIngredients": [
+        "Cá lăng phi lê",
+        "Nghệ, mẻ, riềng",
+        "Thì là, hành lá",
+        "Bún, lạc rang, mắm tôm"
+      ],
+      "prepOutline": [
+        "Ướp cá với nghệ, mẻ, riềng vài giờ",
+        "Nướng sơ cá trên than",
+        "Chao lại cá cùng thì là, hành lá trong chảo mỡ nóng ngay tại bàn",
+        "Múc ra bát, ăn kèm bún, lạc rang, mắm tôm"
+      ],
+      "howToEat": "Ăn ngay khi thì là còn giòn, chấm kèm mắm tôm pha chanh ớt — đặc trưng không thể thiếu là mùi thì là quyện dầu mỡ nóng.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Ch%E1%BA%A3_c%C3%A1_L%C3%A3_V%E1%BB%8Dng.jpg",
+          "attribution": "Lionel Ng (Singapore), Wikimedia Commons",
+          "license": "CC BY-SA 2.0"
+        }
+      ]
+    },
+    {
+      "slug": "banh-cuon",
+      "name": "Bánh cuốn Thanh Trì",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food", "vegetarian-friendly"],
+      "description": "Bánh tráng bột gạo hấp mỏng, cuốn nhân thịt băm/mộc nhĩ, ăn cùng nước mắm pha loãng và chả lụa — món sáng thanh nhẹ, tinh tế của người Hà Nội.",
+      "keyIngredients": [
+        "Bột gạo pha loãng",
+        "Thịt lợn băm, mộc nhĩ",
+        "Hành phi",
+        "Nước mắm pha chua ngọt nhẹ",
+        "Chả lụa, giò"
+      ],
+      "prepOutline": [
+        "Tráng lớp bột gạo mỏng trên nồi hấp vải căng",
+        "Rắc nhân thịt/mộc nhĩ đã xào lên khi bánh vừa chín tới",
+        "Cuộn bánh lại, gỡ nhẹ ra đĩa",
+        "Rắc hành phi, ăn kèm chả lụa và nước mắm pha"
+      ],
+      "howToEat": "Ăn nguội hoặc hơi ấm, chấm nhẹ vào nước mắm pha loãng (không ngâm đẫm) để giữ vị thanh của bánh, có thể ăn kèm đậu rán nóng.",
+      "images": []
+    }
+  ]
+}

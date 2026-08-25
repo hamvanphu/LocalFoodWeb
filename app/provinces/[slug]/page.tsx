@@ -7,8 +7,13 @@ export function generateStaticParams() {
   return getAllProvinceSlugs().map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const province = getProvinceBySlug(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const province = getProvinceBySlug(slug);
   if (!province) return {};
   const hero = getHeroDish(province);
   return {

@@ -30,6 +30,14 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   bằng cách đợi rồi curl trực tiếp từng URL — 2/3 ảnh tự phục hồi sau ~15s,
   1 ảnh (`Banh_beo.jpg`) vẫn 429 dai hơn, cần theo dõi thêm khi mở app thật
   (không phải burst-test).
+- **`generateMetadata` dùng `params.slug` đồng bộ (sai)**: khi viết trang
+  `/provinces/[slug]`, hàm `generateStaticParams`/page component đã await
+  đúng `params` (Next.js 16 trả `params` dạng Promise), nhưng
+  `generateMetadata` lúc đầu lại đọc `params.slug` trực tiếp không await —
+  dev server báo lỗi runtime ngay khi mở trang tỉnh (`params is a Promise`).
+  Bắt được lỗi này khi đọc log `pnpm dev` sau lần chạy đầu, không phải khi
+  build (build vẫn qua vì lỗi chỉ nổ ở runtime dynamic API). Xử lý: sửa
+  `generateMetadata` thành `async` và `await params` giống page component.
 - **Basemap dùng style demo công khai của MapLibre** (`demotiles.maplibre.org`)
   vì chưa có MapTiler key — style này rất tối giản (chỉ có màu nước biển,
   không có địa hình/nhãn), không phản ánh chất lượng bản đồ thật. Cần thay

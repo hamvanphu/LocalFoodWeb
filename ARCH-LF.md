@@ -56,7 +56,8 @@ từng trường:
 
 | Field | Độ nhạy | Ghi chú |
 |---|---|---|
-| `Province.slug/code/name/region/centroid/summary` | Công khai | Không nhạy cảm |
+| `Province.slug/code/name/region/centroid` | Công khai | Không nhạy cảm, dữ liệu địa lý khách quan |
+| `Province.summary` | Công khai, **PM sửa (Cổng hiểu bước [3]): cần nguồn tham chiếu** | Là văn bản do AI biên soạn về văn hoá ẩm thực vùng miền — cùng rủi ro sai lệch/thiên kiến như `Dish.*`, không nên tách riêng. |
 | `Dish.*` (mô tả, nguyên liệu, cách làm, cách ăn) | Công khai | **Cần nguồn tham chiếu** (NFR content integrity) — trường `sourceRef` **CHƯA CÓ trong schema hiện tại, cần bổ sung** (xem mục "chưa chốt"). |
 | `DishImage.url/attribution/license` | Công khai | Bắt buộc điền đủ 3 trường, đã enforce bằng TypeScript interface. |
 | *(phase-2)* Wishlist (danh sách slug đã lưu) | **Dữ liệu người dùng, lưu client-side (localStorage), không gửi lên server** | Không có server nào thấy dữ liệu này → không phải lo NFR bảo mật server-side, nhưng vẫn là dữ liệu người dùng thật (đã ghi nhận rủi ro persistance ở SPEC/RISK). |
@@ -98,10 +99,11 @@ qua file trực tiếp ngoài UI) — đã đúng theo SPEC, không cần thiế
 
 ## ⚠️ Phần CHƯA CHỐT
 
-1. **`Dish.sourceRef` chưa có trong schema** — cần thêm field bắt buộc (vd
-   `sourceRef: { url: string; label: string }[]`) để enforce NFR content
-   integrity bằng TypeScript, không chỉ bằng lời hứa. Sẽ thêm ở WBS + áp
-   dụng ngay khi rà lại nội dung Hà Nội/Huế.
+1. **`sourceRef` chưa có trong schema — áp dụng cho CẢ `Province.summary`
+   LẪN `Dish.*`** (PM sửa ở Cổng hiểu bước [3], không chỉ riêng Dish) — cần
+   thêm field bắt buộc (vd `sourceRef: { url: string; label: string }[]`) ở
+   cả 2 cấp để enforce NFR content integrity bằng TypeScript, không chỉ bằng
+   lời hứa. Sẽ thêm ở WBS + áp dụng ngay khi rà lại nội dung Hà Nội/Huế.
 2. **Toolbar bản đồ tuỳ chỉnh cụ thể gồm những nút gì** — chưa thiết kế chi
    tiết (chỉ mới quyết định "phải có, không dùng control mặc định"), để chốt
    ở WBS/lúc build.
@@ -112,14 +114,15 @@ qua file trực tiếp ngoài UI) — đã đúng theo SPEC, không cần thiế
 
 ---
 
-## 🔒 Cổng hiểu — bước [3]
+## 🔒 Cổng hiểu — bước [3] — **ĐÃ ĐÓNG (2026-08-26)**
 
-Trước khi tao viết `WBS-LF.md` (bước [4]), mày cần:
+1. PM giải thích đầy đủ đánh đổi "không backend": được đơn giản
+   vận hành/tốc độ/chi phí 0/SEO tốt; mất khả năng đồng bộ đa thiết bị,
+   realtime, và sẽ cần refactor kiến trúc nếu sau này thêm review/comment/cá
+   nhân hoá.
+2. PM bắt đúng: `Province.summary` bị gắn "không nhạy cảm" sai — thực ra
+   cùng loại rủi ro nội dung AI biên soạn như `Dish.*`, cần nguồn tham
+   chiếu. Đã sửa bảng mục 3 và mục "chưa chốt" #1 để áp dụng `sourceRef` cho
+   cả 2 cấp.
 
-1. **Giải thích được vì sao chọn "không backend, data JSON tĩnh" thay vì có
-   backend thật — đánh đổi gì?** (gợi ý: được gì, mất gì so với có backend).
-2. **Tìm ≥1 trường dữ liệu tao chưa gắn độ nhạy hoặc gắn sai** trong bảng
-   mục 3 — hoặc xác nhận bảng đó ổn nếu mày kiểm kỹ rồi không thấy vấn đề gì
-   (khác với đồng ý cho có).
-
-Chưa qua cổng này thì bước [4] WBS chưa bắt đầu.
+Cổng đã đóng → bước [4] WBS được phép bắt đầu.

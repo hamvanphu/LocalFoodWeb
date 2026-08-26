@@ -21,6 +21,12 @@ export interface DishImage {
   license: string;
 }
 
+/** Nguồn tham chiếu chính thống cho nội dung do AI biên soạn (NFR content integrity, ARCH-LF.md §3). Bắt buộc tối thiểu 1 phần tử. */
+export interface SourceRef {
+  url: string;
+  label: string;
+}
+
 export interface Dish {
   slug: string;
   name: string;
@@ -32,6 +38,7 @@ export interface Dish {
   howToEat: string;
   season?: string;
   images: DishImage[];
+  sourceRefs: SourceRef[];
 }
 
 export interface Province {
@@ -41,6 +48,7 @@ export interface Province {
   region: Region;
   centroid: [number, number];
   summary: string;
+  summarySourceRefs: SourceRef[];
   heroDishSlug: string;
   dishes: Dish[];
 }

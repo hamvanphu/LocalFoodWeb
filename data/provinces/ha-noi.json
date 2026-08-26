@@ -5,6 +5,9 @@
   "region": "Bắc",
   "centroid": [105.69874, 20.99932],
   "summary": "Ẩm thực Hà Nội tinh tế và tiết chế — nước dùng trong, gia vị vừa đủ, để nguyên liệu tự nói lên vị ngon.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/Ph%E1%BB%9F", "label": "Wikipedia tiếng Việt — Phở (đối chiếu phong cách Bắc/Nam)" }
+  ],
   "heroDishSlug": "pho-bo",
   "dishes": [
     {
@@ -34,6 +37,9 @@
           "attribution": "Andy Li, Wikimedia Commons",
           "license": "CC0"
         }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Ph%E1%BB%9F", "label": "Wikipedia tiếng Việt — Phở" }
       ]
     },
     {
@@ -63,6 +69,9 @@
           "attribution": "Weetjesman, Wikimedia Commons",
           "license": "CC BY-SA 4.0"
         }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_ch%E1%BA%A3", "label": "Wikipedia tiếng Việt — Bún chả" }
       ]
     },
     {
@@ -90,6 +99,9 @@
           "attribution": "Lionel Ng (Singapore), Wikimedia Commons",
           "license": "CC BY-SA 2.0"
         }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Ch%E1%BA%A3_c%C3%A1_L%C3%A3_V%E1%BB%8Dng", "label": "Wikipedia tiếng Việt — Chả cá Lã Vọng" }
       ]
     },
     {
@@ -97,22 +109,24 @@
       "name": "Bánh cuốn Thanh Trì",
       "isHero": false,
       "tasteTags": ["savory", "street-food", "vegetarian-friendly"],
-      "description": "Bánh tráng bột gạo hấp mỏng, cuốn nhân thịt băm/mộc nhĩ, ăn cùng nước mắm pha loãng và chả lụa — món sáng thanh nhẹ, tinh tế của người Hà Nội.",
+      "description": "Khác với bánh cuốn nhân thịt phổ biến ở nhiều nơi, bánh cuốn Thanh Trì — làng Thanh Trì, Hà Nội — đặc trưng ở chỗ KHÔNG có nhân: bánh tráng mỏng như tờ giấy, xếp lớp trong thúng lót lá, ăn cùng chả lụa và nước mắm pha riêng. Đây là điểm dễ nhầm nếu chỉ biết bánh cuốn kiểu có nhân.",
       "keyIngredients": [
-        "Bột gạo pha loãng",
-        "Thịt lợn băm, mộc nhĩ",
+        "Bột gạo pha loãng (không pha nhân)",
         "Hành phi",
-        "Nước mắm pha chua ngọt nhẹ",
-        "Chả lụa, giò"
+        "Chả lụa/giò để ăn kèm",
+        "Nước mắm pha chua ngọt nhẹ"
       ],
       "prepOutline": [
-        "Tráng lớp bột gạo mỏng trên nồi hấp vải căng",
-        "Rắc nhân thịt/mộc nhĩ đã xào lên khi bánh vừa chín tới",
-        "Cuộn bánh lại, gỡ nhẹ ra đĩa",
+        "Tráng lớp bột gạo cực mỏng trên nồi hấp vải căng, không rắc nhân",
+        "Bóc từng lớp bánh mỏng như giấy khi bánh vừa chín tới",
+        "Xếp lớp bánh vào thúng có lót lá",
         "Rắc hành phi, ăn kèm chả lụa và nước mắm pha"
       ],
-      "howToEat": "Ăn nguội hoặc hơi ấm, chấm nhẹ vào nước mắm pha loãng (không ngâm đẫm) để giữ vị thanh của bánh, có thể ăn kèm đậu rán nóng.",
-      "images": []
+      "howToEat": "Ăn nguội hoặc hơi ấm, chấm nhẹ vào nước mắm pha loãng (không ngâm đẫm) để giữ vị thanh của bánh, thường ăn kèm chả lụa/giò cắt lát.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_cu%E1%BB%91n", "label": "Wikipedia tiếng Việt — Bánh cuốn (mục Bánh cuốn Thanh Trì)" }
+      ]
     }
   ]
 }

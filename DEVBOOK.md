@@ -58,6 +58,20 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   Bắt được lỗi này khi đọc log `pnpm dev` sau lần chạy đầu, không phải khi
   build (build vẫn qua vì lỗi chỉ nổ ở runtime dynamic API). Xử lý: sửa
   `generateMetadata` thành `async` và `await params` giống page component.
+- **`lib/provinces.ts` chỉ ép kiểu `as Province`, không validate thật**
+  (phát hiện khi làm W1-1): ARCH-LF.md từng ghi "TypeScript sẽ báo lỗi nếu
+  sai field" — SAI, vì `JSON.parse(...) as Province` bỏ qua kiểm tra hoàn
+  toàn, dữ liệu sai vẫn qua được build rồi vỡ ở runtime khó dò. Xử lý: thêm
+  `zod`, viết `lib/schema.ts` validate thật (bao gồm ràng buộc chéo
+  `heroDishSlug` phải trỏ đúng 1 dish có `isHero: true`), `lib/provinces.ts`
+  giờ `throw` lỗi rõ ràng (tên file + field sai) nếu data không đúng schema.
+- **Nội dung Bánh cuốn Thanh Trì sai lệch thật** (phát hiện khi làm W1-2,
+  đúng như NFR content integrity dự đoán): tao viết ban đầu là "cuốn nhân
+  thịt băm/mộc nhĩ", nhưng đối chiếu Wikipedia tiếng Việt xác nhận bánh cuốn
+  Thanh Trì đặc trưng là **KHÔNG nhân** — bánh tráng mỏng như giấy, ăn kèm
+  chả lụa riêng chứ không cuộn nhân bên trong. Đã sửa description/
+  keyIngredients/prepOutline cho đúng, thêm `sourceRefs` trỏ về bài
+  Wikipedia làm bằng chứng đối chiếu.
 - **Basemap dùng style demo công khai của MapLibre** (`demotiles.maplibre.org`)
   vì chưa có MapTiler key — style này rất tối giản (chỉ có màu nước biển,
   không có địa hình/nhãn), không phản ánh chất lượng bản đồ thật. Cần thay

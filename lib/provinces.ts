@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { provinceSchema } from "./schema";
 import type { Province } from "./types";
 
 const PROVINCES_DIR = path.join(process.cwd(), "data", "provinces");
@@ -16,7 +17,15 @@ function loadAll(): Province[] {
   cache = files
     .map((file) => {
       const raw = fs.readFileSync(path.join(PROVINCES_DIR, file), "utf8");
-      return JSON.parse(raw) as Province;
+      const parsed = provinceSchema.safeParse(JSON.parse(raw));
+      if (!parsed.success) {
+        throw new Error(
+          `data/provinces/${file} không đúng schema:\n${parsed.error.issues
+            .map((issue) => `  - ${issue.path.join(".")}: ${issue.message}`)
+            .join("\n")}`,
+        );
+      }
+      return parsed.data as Province;
     })
     .sort((a, b) => a.name.localeCompare(b.name, "vi"));
 

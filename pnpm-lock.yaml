@@ -29,6 +29,9 @@ importers:
       react-map-gl:
         specifier: ^8.1.2
         version: 8.1.2(maplibre-gl@6.5.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4

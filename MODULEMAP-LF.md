@@ -20,7 +20,8 @@ báo.
 | **Map data layer** (`lib/geo.ts`, GeoJSON, centroids) | Layer 0 | ✅ Đã có, ổn | Bản đồ là tính năng lõi của đề bài, mọi tỉnh mới đều cần centroid đúng. |
 | **Routing** (App Router: `/`, `/provinces/[slug]`) | Layer 0 | ✅ Đã có, ổn | Cấu trúc URL ảnh hưởng SEO + cách mở rộng sau này (vd `/dishes/[slug]` nếu cần). |
 | **Design system** (palette, typography, icon set, spacing, component gốc: Button/Card/Toolbar, motion primitives) | **Layer 0 — NÂNG TẦNG sau feedback PM** | ⚠️ Có palette/font cơ bản nhưng PM đánh giá "lỗi thời" — **chưa đạt**, cần làm lại nghiêm túc | Nếu để bề mặt (dish card, map toolbar, 404 page...) mỗi cái tự bịa style riêng thì không nhất quán và phải sửa lại nhiều lần. Phải chốt xong bộ này trước khi build thêm bề mặt mới. |
-| **Ảnh & fallback** (`ImageWithFallback`, xử lý lỗi tải ảnh runtime) | Layer 0 | ⚠️ Thiếu GAP-01 (chưa xử lý lỗi tải runtime) | Mọi dish card, mọi tỉnh đều dùng chung component này — sửa 1 lần, lợi toàn bộ. |
+| **Ảnh & fallback** — component `ImageWithFallback` | Layer 0 *(là 1 primitive của Design System, không phải module riêng)* | ✅ Khung component đã có | Là 1 phần của bộ component gốc trong Design System (giống Button/Card), không tách riêng. |
+| ~~Xử lý lỗi tải ảnh runtime (GAP-01)~~ **→ sửa tầng sau Cổng hiểu bước [2]** | **Bề mặt** *(PM bác đúng)* | ❌ Chưa làm | Chỉ ảnh hưởng UX cục bộ 1 component khi ảnh lỗi, không có module nào khác phải chờ nó — không nên đặt ngang hàng data schema/routing. Làm sau Design System, cùng đợt polish bề mặt. |
 | Bản đồ tương tác (bubble, hover popup, **toolbar/icon riêng** thay vì control mặc định MapLibre) | Bề mặt | ⚠️ Có chức năng cơ bản, chưa có toolbar/icon theo yêu cầu "wow" | Phụ thuộc Design System xong mới làm đẹp được, tránh làm 2 lần. |
 | Trang chi tiết tỉnh (dish card, recipe, cách ăn) | Bề mặt | ⚠️ Có chức năng, UI cơ bản (PM chê lỗi thời) | Cùng lý do — chờ Design System. |
 | Trang chủ (bản đồ + browse grid) | Bề mặt | ⚠️ Có chức năng, UI cơ bản | Cùng lý do. |
@@ -49,15 +50,14 @@ WBS bước [4]):
 
 ---
 
-## 🔒 Cổng hiểu — bước [2]
+## 🔒 Cổng hiểu — bước [2] — **ĐÃ ĐÓNG (2026-08-26)**
 
-Trước khi tao viết `ARCH-LF.md` (bước [3]), mày cần:
+1. PM giải thích đúng: Design System là móng bắt buộc, thiếu nó thì bề mặt
+   chỉ là "mảnh ghép rời rạc", sửa lại sau sẽ tốn công gấp bội.
+2. PM bác đúng: gộp "Ảnh & fallback" (cả component lẫn việc xử lý lỗi
+   runtime) vào Layer 0 làm loãng trọng tâm. Đã tách lại: component
+   `ImageWithFallback` là 1 primitive của Design System (đúng chỗ), nhưng
+   việc sửa GAP-01 (lỗi tải ảnh runtime) là việc bề mặt, không chặn module
+   nào khác — đã chuyển tầng.
 
-1. **Chỉ vào bảng module, nói: móng nào PHẢI xong trước, vì sao bề mặt
-   không "wow" được nếu thiếu nó** — theo cách hiểu của mày, không copy lại
-   bảng trên.
-2. **Bác ≥1 chỗ tao xếp sai tầng** (nếu có) — ví dụ: mày có nghĩ "Ảnh &
-   fallback" nên là bề mặt chứ không phải Layer 0? Hay có module nào tao xếp
-   Layer 0 nhưng thực ra chưa cần thiết ngay?
-
-Chưa qua cổng này thì bước [3] Architecture chưa bắt đầu.
+Cổng đã đóng → bước [3] Architecture được phép bắt đầu.

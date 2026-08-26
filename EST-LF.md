@@ -11,7 +11,7 @@
 | W1-3 Token Design System | Mở rộng file CSS đã có sẵn khung | 1h | 2h | 4h |
 | W1-4 Component gốc (Button/Toolbar/Badge) | 3 component đơn giản, không logic phức tạp | 1h | 2h | 3h |
 | W1-5 Map toolbar tuỳ chỉnh | Chưa từng làm loại UI này trong dự án — rủi ro học API MapLibre control tuỳ chỉnh | 1h | 3h | 5h |
-| W1-6 Framer Motion thật | Đã cài sẵn lib nhưng chưa dùng thật lần nào — rủi ro tinh chỉnh "cảm giác wow" mất nhiều vòng lặp | 1h | 3h | 5h |
+| W1-6 Framer Motion thật | **PM sửa (Cổng hiểu bước [5]): 1h lạc quan phi thực tế** — tinh chỉnh "cảm giác wow" (hover-tilt, stagger, transition popup) cần nhiều vòng thử-xem-sửa, không gói gọn 1h dù lib đã cài sẵn | 2h | 4h | 7h |
 | W1-7 Trang 404 | Nhỏ, dùng lại component đã có | 0.5h | 1h | 2h |
 | W1-8 Fix GAP-01 | Logic `onError` đơn giản trên `next/image` | 0.5h | 1h | 2h |
 | W1-9 Cổng hiểu con (PM review) | Thời gian PM tự đánh giá, không phải code | 0.5h | 1h | 2h |
@@ -23,11 +23,12 @@
 
 **Tổng W1-10 (6 tỉnh):** Lạc quan 12h · Khả dĩ 24h · Bi quan 42h.
 
-**Tổng toàn Wave 1** (cộng cột, W1-10 đã gộp):
-- Lạc quan: **23h**
-- Khả dĩ: **47h**
-- Bi quan: **86h**
-- **PERT = (Lạc quan + 4×Khả dĩ + Bi quan) / 6 ≈ (23 + 188 + 86) / 6 ≈ 49.5 giờ**
+**Tổng toàn Wave 1** (cộng cột, W1-10 đã gộp, **W1-6 đã sửa theo Cổng hiểu bước [5]**):
+- Lạc quan: ~~23h~~ **24h**
+- Khả dĩ: ~~47h~~ **48h**
+- Bi quan: ~~86h~~ **88h**
+- **PERT = (24 + 4×48 + 88) / 6 ≈ 50.7 giờ** (tăng so với 49.5h ban đầu —
+  càng củng cố rủi ro vượt mốc, không giảm)
 
 ## So với quỹ thời gian thật
 
@@ -67,19 +68,30 @@ gốc chỉ đòi hỏi kiến trúc chứng minh mở rộng được tới 63 
 buộc phải *có sẵn* đủ 63 (hay 8) tỉnh dữ liệu tại thời điểm nộp. Nhưng đây
 là quyết định của PM, không phải AI tự chốt.
 
+### Quyết định cuối (Cổng hiểu bước [5], 2026-08-26)
+
+**PM chốt Phương án A — giữ nguyên 8 tỉnh**, chấp nhận rủi ro PERT ~50.7h so
+với quỹ ~30-40h. Đây là quyết định có quyền làm (không sai), nhưng để không
+biến thành "cắm đầu làm rồi trễ hạn không biết", tao thêm **1 checkpoint bắt
+buộc** vào `RISK-LF.md` (bước [6]) làm cơ chế giảm thiểu cho chính rủi ro
+này:
+
+> **Checkpoint giữa chừng:** hết ngày thứ 5 (khoảng 2026-08-31), nếu W1-1
+> đến W1-9 (toàn bộ nền tảng + Cổng hiểu con "wow") **chưa xong**, tự động
+> chuyển sang Phương án B (dừng ở 5 tỉnh: Hà Nội, Huế, TP.HCM, Khánh Hòa,
+> Cần Thơ) mà không cần họp bàn lại — quyết định trước, không quyết định
+> giữa lúc gấp gáp.
+
 ---
 
-## 🔒 Cổng hiểu — bước [5]
+## 🔒 Cổng hiểu — bước [5] — **ĐÃ ĐÓNG (2026-08-26)**
 
-Trước khi tao viết `RISK-LF.md` + `DELEGATION-MAP-LF.md` (bước [6]), mày
-cần:
+1. PM giải thích đúng giả định đứng sau W1-10 (4h/tỉnh): kinh nghiệm từ 2
+   tỉnh trước + rủi ro nguồn ảnh thưa.
+2. PM bác đúng W1-6: 1h lạc quan phi thực tế cho việc tinh chỉnh "wow" —
+   đã sửa thành 2h/4h/7h, PERT tăng lên ~50.7h.
+3. PM chốt **Phương án A** (giữ 8 tỉnh) — đã thêm checkpoint ngày thứ 5
+   (2026-08-31) làm cơ chế giảm thiểu, tự động chuyển Phương án B nếu nền
+   tảng chưa xong đúng hạn, tránh quyết định vội lúc gấp.
 
-1. **Chỉ 1 estimate bất kỳ, nói giả định nào đứng sau con số đó.**
-2. **Bác ≥1 con số tao đưa ra mà mày thấy vô căn cứ**, buộc tao nêu lại
-   khoảng lạc quan/khả dĩ/bi quan cho rõ hơn (nếu mày thấy tất cả đều hợp lý
-   thì cũng phải nói rõ vì sao, không chỉ "ok").
-3. **Chốt phương án cắt scope A/B/C (hoặc đề xuất phương án khác của
-   mày)** — đây là quyết định bắt buộc phải có trước khi qua bước [6], vì
-   `RISK-LF.md` cần biết đang risk-manage cho scope nào.
-
-Chưa qua cổng này thì bước [6] Risk + Delegation Map chưa bắt đầu.
+Cổng đã đóng → bước [6] Risk + Delegation Map được phép bắt đầu.

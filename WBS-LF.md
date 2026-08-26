@@ -33,6 +33,23 @@ cho việc này). **Nhiều khả năng phải cắt scope** — đây chính x�
 huống EX-03 "estimate vượt mốc → quay lại cắt scope", sẽ xử lý formal ở
 bước [5] EST, không quyết định vội ở đây.
 
+## Wave 1 mở rộng — sau yêu cầu mới (2026-08-26): Review/Rating + Search + Filter mùa/lễ hội
+
+| # | Task | Output | Phụ thuộc | Ước lượng thô |
+|---|---|---|---|---|
+| W2-1 | **PM** tạo Supabase project, lấy URL + anon key | `.env.local` có `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY` | — | PM tự làm, ~10 phút |
+| W2-2 | Viết SQL schema + RLS policy cho `dish_reviews` (ARCH-LF.md D3) | file SQL, PM tự chạy trên Supabase dashboard | W2-1 | 1h |
+| W2-3 | Tích hợp Supabase client (`lib/supabase.ts`) | client đọc/ghi review | W2-2 | 0.5h |
+| W2-4 | UI gửi review: rating 5 sao + tên + comment, trong Sheet chi tiết món | Form component | W2-3 | 1.5h |
+| W2-5 | Hiển thị danh sách review đã có + rating trung bình cho mỗi món | List component | W2-3 | 1h |
+| W2-6 | Rào chắn spam tối thiểu (giới hạn ký tự, chặn gửi lặp nhanh qua localStorage flag) | Validate phía client | W2-4 | 0.5h |
+| W2-7 | Search — thanh tìm kiếm tên món/tỉnh, kết quả điều hướng nhanh (client-side, không cần backend) | Component search + kết quả dropdown | — | 1.5h |
+| W2-8 | Filter theo mùa/lễ hội — thêm field `festivalTags`/dùng lại `season` trong schema, UI filter chip | Cập nhật schema + data 2 tỉnh hiện có + UI filter | — | 1.5h (chưa tính điền data cho 6 tỉnh mới) |
+
+**Tổng Wave 1 mở rộng (khả dĩ):** ~7.5h AI-effort + ~10 phút PM setup.
+**Cộng dồn với Wave 1 gốc (EST-LF.md, đã ~48h khả dĩ):** tổng ước lượng giờ
+đã vượt xa quỹ 2 tuần ban đầu — xem cập nhật ở `EST-LF.md`.
+
 ## Wave 2 — mức feature (coarser, chưa bẻ task)
 
 - Phase-2: Wishlist (localStorage) — persistence decision còn treo, xem

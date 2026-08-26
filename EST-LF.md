@@ -84,6 +84,18 @@ này:
 
 ---
 
+## Cập nhật sau yêu cầu mới — Review/Rating + Search + Filter mùa (2026-08-26)
+
+Checkpoint 2026-08-31 (nền tảng W1-1→W1-9) đã đạt **đúng hạn, cùng ngày**
+(2026-08-26) — tín hiệu tốt, còn dư thời gian so với dự kiến. Tuy nhiên PM
+bổ sung 3 tính năng mới ngoài WBS gốc (`WBS-LF.md` mục "Wave 1 mở rộng"),
+cộng thêm ~7.5h effort AI + phụ thuộc PM tự tạo Supabase project (không tính
+được giờ AI). Tổng effort dự án hiện đã vượt xa mốc PERT ban đầu (~48h) —
+**không còn ý nghĩa giữ nguyên Phương án A (8 tỉnh) làm mặc định "miễn bàn"
+nữa**, cần PM theo dõi sát tiến độ thực tế thay vì tin vào ước lượng ban đầu
+đã lạc hậu. Không đề xuất cắt gì ngay — ghi nhận rủi ro, checkpoint tiếp
+theo (nếu cần) sẽ đặt ra khi các task W2-* triển khai xong.
+
 ## 🔒 Cổng hiểu — bước [5] — **ĐÃ ĐÓNG (2026-08-26)**
 
 1. PM giải thích đúng giả định đứng sau W1-10 (4h/tỉnh): kinh nghiệm từ 2

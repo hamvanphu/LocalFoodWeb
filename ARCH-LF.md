@@ -97,6 +97,44 @@ Không có hệ thống phân quyền runtime (không auth). "Phân quyền" duy
 ranh giới giữa Visitor (chỉ đọc, qua UI công khai) và Content Editor (ghi,
 qua file trực tiếp ngoài UI) — đã đúng theo SPEC, không cần thiết kế thêm.
 
+## D3 — Đảo ngược quyết định "không backend" (2026-08-26, sau yêu cầu Review/Rating công khai)
+
+PM yêu cầu review/rating/comment **hiện cho mọi người dùng khác thấy**, không
+chỉ người viết — bắt buộc có nơi lưu trữ dùng chung, localStorage (client-side
+only) không đáp ứng được. Quyết định D1 ("không backend") ở phần Nguyên tắc
+kiến trúc mục 1 **bị đảo ngược một phần**, chỉ áp dụng cho tính năng
+review/rating — toàn bộ nội dung món ăn/tỉnh (Province/Dish) **vẫn giữ
+nguyên** kiến trúc JSON tĩnh + SSG, không đổi.
+
+**Chọn Supabase** (Postgres managed, free tier) thay vì tự dựng backend:
+- Free tier đủ dùng cho quy mô traffic dự án học thuật, tránh vi phạm ràng
+  buộc "không dịch vụ trả phí" (SCOPE-LF.md).
+- Có sẵn client SDK cho Next.js, không cần viết API route riêng cho case đơn
+  giản (đọc/ghi trực tiếp từ client qua Supabase JS client + Row Level
+  Security policy).
+- PM cần tự đăng ký project (giống MapTiler) — AI không tự tạo tài khoản
+  dịch vụ ngoài thay PM được.
+
+**Bảng dữ liệu mới — `dish_reviews`:**
+| Cột | Kiểu | Ghi chú |
+|---|---|---|
+| `id` | uuid, PK | auto |
+| `province_slug` | text | join với `data/provinces/*.json` |
+| `dish_slug` | text | join với `dish.slug` trong tỉnh đó |
+| `author_name` | text | tự nhập, không xác thực (không có auth) |
+| `rating` | int 1-5 | bắt buộc |
+| `comment` | text | tối đa ~500 ký tự, có thể rỗng |
+| `created_at` | timestamptz | auto |
+| `status` | text (`visible` \| `hidden`) | mặc định `visible` — **không có kiểm duyệt trước khi đăng** (xem RISK R10), `hidden` dùng để PM tự ẩn thủ công qua Supabase dashboard nếu phát hiện spam |
+
+**Row Level Security (RLS) — bắt buộc, không tuỳ chọn:** bật RLS trên bảng
+`dish_reviews`, policy cho phép `INSERT` công khai (ẩn danh) nhưng **giới hạn
+field** (không cho ghi `status`, `id`, `created_at` — để DB tự sinh), và
+`SELECT` công khai chỉ với `status = 'visible'`. Không bật RLS = bất kỳ ai
+cầm anon key (vốn lộ công khai trong code client, đúng thiết kế của
+Supabase) có thể đọc/sửa/xoá toàn bộ bảng — đây là lỗi bảo mật nghiêm trọng
+nếu bỏ sót, không phải chi tiết vặt.
+
 ## ⚠️ Phần CHƯA CHỐT
 
 1. **`sourceRef` chưa có trong schema — áp dụng cho CẢ `Province.summary`

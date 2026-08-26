@@ -25,7 +25,7 @@ thực sự khác nhau về trách nhiệm, không phải 2 loại tài khoản 
 | US-05 | Là người dùng, tôi muốn xem danh sách tất cả tỉnh đã có trên site kể cả không dùng bản đồ, để có đường vào thay thế (không rành thao tác bản đồ, hoặc dùng bàn phím/trình đọc màn hình). | **Given** tôi ở trang chủ, **When** tôi cuộn xuống dưới bản đồ, **Then** thấy danh sách card mỗi tỉnh, bấm vào điều hướng đúng như bấm bản đồ. |
 | US-06 | Là người dùng, tôi muốn quay lại bản đồ từ trang chi tiết tỉnh, để tiếp tục khám phá tỉnh khác mà không cần bấm nút back trình duyệt. | **Given** tôi đang ở trang tỉnh, **When** tôi bấm link "Quay lại bản đồ", **Then** về `/` đúng, bản đồ tải lại bình thường. |
 | US-07 | Là người dùng dùng điện thoại, tôi muốn trang hiển thị tốt trên màn hình nhỏ, để dùng được khi đang di chuyển/du lịch thực tế. | **Given** viewport ≤ 400px, **When** tải trang chủ và trang tỉnh, **Then** không có tràn ngang (horizontal scroll), bản đồ và card đọc được, cỡ chữ không quá nhỏ. |
-| US-08 (negative) | Là người dùng, khi tôi vào URL `/provinces/{slug}` với slug không tồn tại, tôi muốn thấy trang 404 rõ ràng, không phải lỗi trắng trang hoặc crash. | **Given** slug không có trong `data/provinces/`, **When** tôi truy cập, **Then** Next.js trả trang not-found chuẩn, có đường quay lại trang chủ. |
+| US-08 (negative) | Là người dùng, khi tôi vào URL `/provinces/{slug}` với slug không tồn tại, tôi muốn thấy trang 404 rõ ràng, không phải lỗi trắng trang hoặc crash. | **Given** slug không có trong `data/provinces/`, **When** tôi truy cập, **Then** Next.js trả trang not-found chuẩn, có đường quay lại trang chủ. **PM test (Cổng hiểu bước [1]): PASS về mặt kỹ thuật (không crash) nhưng đang dùng trang 404 mặc định của Next.js — chưa có thiết kế riêng, coi là chưa đạt AC "rõ ràng" theo chuẩn UI của site → cần custom not-found page, đưa vào WBS.** |
 
 ### Đã biết là NEGATIVE CASE CHƯA XỬ LÝ — ghi nhận thẳng, không giấu
 
@@ -38,9 +38,22 @@ thực sự khác nhau về trách nhiệm, không phải 2 loại tài khoản 
 
 | # | Story |
 |---|---|
-| US-09 | Là người dùng, tôi muốn lưu món/tỉnh vào wishlist (localStorage), để quay lại xem sau. |
+| US-09 | Là người dùng, tôi muốn lưu món/tỉnh vào wishlist (localStorage), để quay lại xem sau. **⚠️ Open question (PM bắt ở Cổng hiểu bước [1]):** localStorage mất khi đổi thiết bị/xoá cache — chưa quyết định có chấp nhận rủi ro mất dữ liệu này cho v1, hay cần cơ chế nhẹ hơn (export/import JSON thủ công, hoặc share link chứa danh sách wishlist trong query string). Vì US-09 không thuộc MVP 2 tuần, quyết định này để lại cho `RISK-LF.md` (bước [6]) — ghi rõ owner + mitigation trước khi bắt tay code tính năng này, không quyết định vội ở đây. |
 | US-10 | Là người dùng, tôi muốn lọc bản đồ theo khẩu vị (cay/chua/hải sản...), để tìm món hợp gu nhanh hơn. |
 | US-11 | Là người dùng, tôi muốn làm quiz gợi ý món theo khẩu vị, để khám phá món mới. |
+
+## Feedback PM sau khi test walking skeleton (Cổng hiểu bước [1], 2026-08-26)
+
+- US-01/US-03 (bản đồ, điều hướng tỉnh): **PASS** về mặt chức năng.
+- US-08 (404): **PASS kỹ thuật, FAIL về UI** — trang mặc định, chưa custom.
+- **Nhận xét trực tiếp của PM: "UI chưa như kỳ vọng, thậm chí lỗi thời, cỡ
+  10 năm về trước"** — walking skeleton mới chỉ chứng minh pipeline (đúng
+  mục tiêu của Walking Skeleton theo Capstone Playbook: "chưa cần bento grid
+  đẹp"), nhưng PM đúng khi nhắc lại yêu cầu gốc: **"UI bắt mắt, màu sắc thời
+  thượng sinh động, bắt trend, UI tương tác sinh động"** — đây KHÔNG phải
+  polish tuỳ chọn, mà là yêu cầu gốc từ đề bài, phải lên rõ trong ARCH (bước
+  [3]) và có mặt trong WBS (bước [4]) ở mức ưu tiên cao, không bị đẩy xuống
+  cuối cùng.
 
 ## NFR (Non-functional requirements)
 
@@ -53,6 +66,7 @@ thực sự khác nhau về trách nhiệm, không phải 2 loại tài khoản 
 | **Accessibility cơ bản** | Ảnh có `alt` text (đã làm); tôn trọng `prefers-reduced-motion` (đã làm ở `globals.css`); chưa kiểm tra contrast WCAG AA cho text-over-photo — đưa vào WBS. |
 | **Mở rộng dữ liệu** | Thêm 1 tỉnh mới = thêm 1 file JSON, không sửa code (đã đạt qua schema `lib/types.ts` + `lib/provinces.ts`). |
 | **Không có auth** | Không lưu trữ dữ liệu cá nhân người dùng trong MVP → giảm bề mặt rủi ro bảo mật, không cần NFR về mã hoá/phân quyền cho giai đoạn này. |
+| **Chất lượng thiết kế UI ("wow")** | Không phải "trông ổn" — phải có: hệ màu ấm bắt trend đã chọn (chili/turmeric/herb/amber) áp dụng nhất quán, icon + toolbar tương tác trên bản đồ (không chỉ nút zoom mặc định của MapLibre), micro-interaction (hover, transition) chứ không phải trang tĩnh. Đo bằng: PM tự đánh giá "có thấy wow không" ở Cổng hiểu bước build UI — chủ quan nhưng là tiêu chí thật, ghi rõ để không bị lãng quên như lần trước. |
 
 ## Use-case × role
 
@@ -65,17 +79,15 @@ thực sự khác nhau về trách nhiệm, không phải 2 loại tài khoản 
 
 ---
 
-## 🔒 Cổng hiểu — bước [1]
+## 🔒 Cổng hiểu — bước [1] — **ĐÃ ĐÓNG (2026-08-26)**
 
-Trước khi tao viết `MODULEMAP-LF.md` (bước [2]), mày cần:
+1. PM đã test thật US-03 (PASS) và US-08 (PASS kỹ thuật, FAIL UI — 404 mặc
+   định).
+2. PM bắt được lỗ hổng thiết kế thật: **wishlist localStorage không bền
+   vững khi đổi thiết bị/xoá cache** — chưa có quyết định, đã đưa vào
+   `RISK-LF.md` (bước [6]) làm open question.
+3. PM bổ sung phản hồi trực tiếp: **UI hiện tại "lỗi thời, cỡ 10 năm về
+   trước"**, cần bắt mắt/wow hơn hẳn — đã ghi thành NFR chính thức ở trên,
+   không còn là ý kiến rời rạc.
 
-1. **Chọn 1 user story bất kỳ ở trên, đọc AC rồi tự nói: ca nào PASS, ca nào
-   FAIL** với code walking skeleton hiện tại (Hà Nội + Huế) — thử thật trên
-   `localhost:3000` nếu cần.
-2. **Bắt ≥1 chỗ AI viết thiếu** — gợi ý: bảng GAP-01/GAP-02 tao đã tự nhận,
-   nhưng có thể còn chỗ khác mày thấy thiếu mà tao chưa liệt kê (vd: story
-   nào chỉ có happy-path, NFR nào đo không được, use-case nào bỏ sót vai
-   trò...). Nếu mày đồng ý 100% với những gì tao tự nhận là chưa đủ — hãy
-   thử tìm thêm ít nhất 1 điểm khác.
-
-Chưa qua cổng này thì bước [2] Module Map chưa bắt đầu.
+Cổng đã đóng → bước [2] Module Map được phép bắt đầu.

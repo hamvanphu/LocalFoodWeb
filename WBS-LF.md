@@ -17,14 +17,17 @@
 | **W1-9** | **🔒 Cổng hiểu con — PM tự đánh giá "wow" trên Hà Nội + Huế** sau W1-3→W1-8, xong mới cho phép nhân rộng | Quyết định PASS/FAIL | W1-2, W1-5, W1-6, W1-7, W1-8 | Review, không phải build |
 | W1-10 | Data entry 6 tỉnh MVP còn lại (Hải Phòng, Quảng Nam, Khánh Hòa, TP.HCM, Cần Thơ, An Giang): research + viết mô tả/công thức/cách ăn + `sourceRef` + tìm ảnh Wikimedia | 6 file `data/provinces/*.json` | W1-1, W1-9 PASS | ~1 ngày/tỉnh × 6 |
 | W1-11 | QA pass toàn bộ 8 tỉnh: test 8 user story ở `SPEC-LF.md` thật (không chỉ đọc AC), test responsive 360px, kiểm tra ảnh vỡ, test 404 | Kết quả test ghi vào SIT/UAT sau (bước [9]) | W1-10 | 1 ngày |
+| **W1-11a** | **(PM bổ sung, Cổng hiểu bước [4])** Accessibility audit: contrast ratio cho text-over-photo, keyboard navigation cho toolbar bản đồ + card, `aria-label` cho icon toolbar không có text | Checklist A11y PASS/FAIL | W1-5, W1-6, W1-7 | 0.5 ngày |
+| **W1-11b** | **(PM bổ sung, Cổng hiểu bước [4])** Performance check bằng Lighthouse trên trang chủ + 1 trang tỉnh: đo LCP/FCP/bundle size, kiểm tra NFR "LCP < 2.5s" có đạt không (rủi ro: Framer Motion + nhiều ảnh làm chậm) | Báo cáo Lighthouse, xử lý nếu vượt ngưỡng | W1-10 | 0.5 ngày |
 | W1-12 | Hoàn thiện `RISK-LF.md`, `DELEGATION-MAP-LF.md`, `DOR-LF.md`, chuẩn bị hồ sơ viva (RTM, telemetry, Weekly Report) | Artefact bước [6]-[10] | Song song, chốt cuối | 1 ngày |
 
 **⚠️ Cảnh báo sớm (không đợi tới bước [5] mới nói):** cộng thô các task Wave 1
-đã ra khoảng 10-11 ngày công việc thực, trong khi hạn còn ~2 tuần lịch (10
-ngày làm việc nếu tính cả 2 cuối tuần thì nhỉnh hơn, nhưng PM không làm
-full-time 8 tiếng/ngày cho việc này). **Nhiều khả năng phải cắt scope** —
-đây chính xác là tình huống EX-03 "estimate vượt mốc → quay lại cắt scope",
-sẽ xử lý formal ở bước [5] EST, không quyết định vội ở đây.
+đã ra khoảng **11-12 ngày công việc thực** (sau khi thêm W1-11a/W1-11b theo
+Cổng hiểu bước [4]), trong khi hạn còn ~2 tuần lịch (10 ngày làm việc nếu
+tính cả 2 cuối tuần thì nhỉnh hơn, nhưng PM không làm full-time 8 tiếng/ngày
+cho việc này). **Nhiều khả năng phải cắt scope** — đây chính xác là tình
+huống EX-03 "estimate vượt mốc → quay lại cắt scope", sẽ xử lý formal ở
+bước [5] EST, không quyết định vội ở đây.
 
 ## Wave 2 — mức feature (coarser, chưa bẻ task)
 
@@ -55,14 +58,13 @@ sẽ xử lý formal ở bước [5] EST, không quyết định vội ở đây
 
 ---
 
-## 🔒 Cổng hiểu — bước [4]
+## 🔒 Cổng hiểu — bước [4] — **ĐÃ ĐÓNG (2026-08-26)**
 
-Trước khi tao viết `EST-LF.md` (bước [5]), mày cần:
+1. PM giải thích đúng W1-5: ra `MapToolbar.tsx`, phụ thuộc W1-3 (token) +
+   W1-4 (component gốc) — không có nền thì toolbar dễ lệch style.
+2. PM bắt được **2 việc sót thật**, cả 2 đều là NFR đã ghi ở `SPEC-LF.md`
+   nhưng chưa có task thực thi: **Accessibility audit** (contrast, keyboard
+   nav, aria-label) và **Performance check Lighthouse**. Đã thêm W1-11a,
+   W1-11b, cập nhật cảnh báo estimate lên 11-12 ngày.
 
-1. **Cầm 1 task Wave 1 bất kỳ, giải thích: xong nó ra cái gì, phụ thuộc
-   ai** — theo lời mày, không đọc lại bảng.
-2. **Bắt ≥1 việc hay sót** mà tao chưa đưa vào WBS — soi kỹ các mảng
-   thường bị bỏ: tích hợp/đối soát, kiểm thử, màn quản trị/log, hoặc bất kỳ
-   task ẩn nào khác mày nghĩ ra mà tao chưa liệt kê.
-
-Chưa qua cổng này thì bước [5] Estimation chưa bắt đầu.
+Cổng đã đóng → bước [5] Estimation được phép bắt đầu.

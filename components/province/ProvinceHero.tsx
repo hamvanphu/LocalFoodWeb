@@ -30,6 +30,19 @@ export default function ProvinceHero({ province, heroDish }: { province: Provinc
           {province.name}
         </h1>
         <p className="mt-3 max-w-2xl text-ink/70">{province.summary}</p>
+        {province.summarySourceRefs.length > 0 && (
+          <p className="mt-2 text-xs text-ink/40">
+            Nguồn tham chiếu:{" "}
+            {province.summarySourceRefs.map((ref, i) => (
+              <span key={ref.url}>
+                {i > 0 && ", "}
+                <a href={ref.url} target="_blank" rel="noreferrer" className="underline hover:text-ink/60">
+                  {ref.label}
+                </a>
+              </span>
+            ))}
+          </p>
+        )}
       </div>
     </section>
   );

@@ -1,11 +1,28 @@
+"use client";
+
+import { motion } from "motion/react";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
+import Badge from "@/components/ui/Badge";
 import type { Dish } from "@/lib/types";
 
-export default function DishCard({ dish, priority = false }: { dish: Dish; priority?: boolean }) {
+export default function DishCard({
+  dish,
+  priority = false,
+  index = 0,
+}: {
+  dish: Dish;
+  priority?: boolean;
+  index?: number;
+}) {
   return (
-    <article
+    <motion.article
       id={dish.slug}
-      className="scroll-mt-24 overflow-hidden rounded-2xl border border-black/5 bg-surface shadow-sm"
+      className="scroll-mt-24 overflow-hidden rounded-card border border-border bg-surface shadow-card"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
+      whileHover={{ y: -6, boxShadow: "var(--shadow-lifted)" }}
     >
       <ImageWithFallback
         slug={dish.slug}
@@ -20,19 +37,16 @@ export default function DishCard({ dish, priority = false }: { dish: Dish; prior
           <h3 className="font-display text-2xl font-semibold text-ink">
             {dish.name}
             {dish.isHero && (
-              <span className="ml-2 rounded-full bg-chili/10 px-2 py-0.5 text-xs font-medium text-chili align-middle">
+              <Badge tone="chili" className="ml-2 align-middle">
                 Món đặc trưng
-              </span>
+              </Badge>
             )}
           </h3>
           <div className="mt-2 flex flex-wrap gap-1.5">
             {dish.tasteTags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-surface-muted px-2 py-0.5 text-xs text-ink/60"
-              >
+              <Badge key={tag} tone="neutral">
                 {tag}
-              </span>
+              </Badge>
             ))}
           </div>
         </div>
@@ -68,7 +82,21 @@ export default function DishCard({ dish, priority = false }: { dish: Dish; prior
           </h4>
           <p className="mt-1 text-sm text-ink/80">{dish.howToEat}</p>
         </div>
+
+        {dish.sourceRefs.length > 0 && (
+          <p className="text-xs text-ink/40">
+            Nguồn tham chiếu:{" "}
+            {dish.sourceRefs.map((ref, i) => (
+              <span key={ref.url}>
+                {i > 0 && ", "}
+                <a href={ref.url} target="_blank" rel="noreferrer" className="underline hover:text-ink/60">
+                  {ref.label}
+                </a>
+              </span>
+            ))}
+          </p>
+        )}
       </div>
-    </article>
+    </motion.article>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Be_Vietnam_Pro, Lora } from "next/font/google";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import MotionProvider from "@/components/motion/MotionProvider";
 import "./globals.css";
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -29,9 +30,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${beVietnamPro.variable} ${lora.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <MotionProvider>
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+        </MotionProvider>
       </body>
     </html>
   );

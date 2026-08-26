@@ -1,13 +1,14 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "motion/react";
 import Map, {
   Source,
   Layer,
   Popup,
-  NavigationControl,
   type MapLayerMouseEvent,
+  type MapRef,
 } from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { FeatureCollection, Point } from "geojson";
@@ -19,6 +20,7 @@ import {
   VIETNAM_INITIAL_ZOOM,
   maptilerStyleUrl,
 } from "./mapStyle";
+import MapToolbar from "./MapToolbar";
 import type { ProvinceMapProperties } from "@/lib/geo";
 
 interface FoodMapProps {
@@ -30,6 +32,7 @@ const INTERACTIVE_LAYER_IDS = ["hero-bubbles", "province-pins"];
 
 export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
   const router = useRouter();
+  const mapRef = useRef<MapRef | null>(null);
   const [hovered, setHovered] = useState<{
     lng: number;
     lat: number;
@@ -58,22 +61,22 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
   }, []);
 
   return (
-    <Map
-      initialViewState={{
-        longitude: VIETNAM_CENTER[0],
-        latitude: VIETNAM_CENTER[1],
-        zoom: VIETNAM_INITIAL_ZOOM,
-      }}
-      mapStyle={styleUrl}
-      style={{ width: "100%", height: "100%" }}
-      interactiveLayerIds={INTERACTIVE_LAYER_IDS}
-      cursor={hovered ? "pointer" : "grab"}
-      onClick={handleClick}
-      onMouseMove={handleMove}
-      onMouseLeave={() => setHovered(null)}
-    >
-      <NavigationControl position="top-right" />
-
+    <div className="relative h-full w-full">
+      <Map
+        ref={mapRef}
+        initialViewState={{
+          longitude: VIETNAM_CENTER[0],
+          latitude: VIETNAM_CENTER[1],
+          zoom: VIETNAM_INITIAL_ZOOM,
+        }}
+        mapStyle={styleUrl}
+        style={{ width: "100%", height: "100%" }}
+        interactiveLayerIds={INTERACTIVE_LAYER_IDS}
+        cursor={hovered ? "pointer" : "grab"}
+        onClick={handleClick}
+        onMouseMove={handleMove}
+        onMouseLeave={() => setHovered(null)}
+      >
       <Source id="hero-bubbles" type="geojson" data={heroBubbles}>
         <Layer id="hero-bubbles" {...HERO_BUBBLE_LAYER} />
         <Layer id="hero-bubble-labels" {...HERO_BUBBLE_LABEL_LAYER} />
@@ -83,23 +86,45 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
         <Layer id="province-pins" {...PROVINCE_PIN_LAYER} />
       </Source>
 
-      {hovered && (
-        <Popup
-          longitude={hovered.lng}
-          latitude={hovered.lat}
-          closeButton={false}
-          closeOnClick={false}
-          offset={12}
-          anchor="bottom"
-        >
-          <div className="p-1 text-sm">
-            <p className="font-display font-semibold text-ink">{hovered.props.name}</p>
-            {hovered.props.heroDishName && (
-              <p className="text-ink/70">{hovered.props.heroDishName}</p>
-            )}
-          </div>
-        </Popup>
-      )}
-    </Map>
+      <AnimatePresence>
+        {hovered && (
+          <Popup
+            longitude={hovered.lng}
+            latitude={hovered.lat}
+            closeButton={false}
+            closeOnClick={false}
+            offset={12}
+            anchor="bottom"
+          >
+            <motion.div
+              className="p-1 text-sm"
+              initial={{ opacity: 0, scale: 0.85, y: 4 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.85 }}
+              transition={{ duration: 0.15, ease: "easeOut" }}
+            >
+              <p className="font-display font-semibold text-ink">{hovered.props.name}</p>
+              {hovered.props.heroDishName && (
+                <p className="text-ink/70">{hovered.props.heroDishName}</p>
+              )}
+            </motion.div>
+          </Popup>
+        )}
+      </AnimatePresence>
+      </Map>
+
+      <MapToolbar
+        className="absolute top-4 right-4"
+        onZoomIn={() => mapRef.current?.zoomIn({ duration: 200 })}
+        onZoomOut={() => mapRef.current?.zoomOut({ duration: 200 })}
+        onReset={() =>
+          mapRef.current?.flyTo({
+            center: VIETNAM_CENTER,
+            zoom: VIETNAM_INITIAL_ZOOM,
+            duration: 800,
+          })
+        }
+      />
+    </div>
   );
 }

@@ -42,7 +42,7 @@ export default async function ProvincePage({
           Món ăn đặc trưng
         </h2>
         {province.dishes.map((dish, index) => (
-          <DishCard key={dish.slug} dish={dish} priority={index === 0} />
+          <DishCard key={dish.slug} dish={dish} priority={index === 0} index={index} />
         ))}
       </section>
     </div>

@@ -4,26 +4,61 @@
   --background: #fff8f0;
   --foreground: #241c15;
 
+  /* Bảng màu chính — lấy từ nguyên liệu ẩm thực Việt (W1-3 Design System) */
   --color-chili: #d7263d;
+  --color-chili-dark: #a81b2e;
   --color-turmeric: #f2a93c;
+  --color-turmeric-dark: #d6890f;
   --color-herb: #6b8f47;
+  --color-herb-dark: #526d34;
   --color-amber: #b5732a;
+  --color-amber-dark: #8f5a1f;
   --color-ink: #241c15;
 
   --color-surface: #ffffff;
   --color-surface-muted: #fdf1e2;
+  --color-border: #ecdcc2;
+
+  /* Radius scale */
+  --radius-card: 1.25rem;
+  --radius-pill: 999px;
+  --radius-control: 0.75rem;
+
+  /* Shadow scale — hơi ngả màu ấm thay vì đen thuần, để hợp bảng màu */
+  --shadow-soft: 0 1px 2px rgba(36, 28, 21, 0.06), 0 1px 1px rgba(36, 28, 21, 0.04);
+  --shadow-card: 0 8px 24px -8px rgba(183, 87, 42, 0.18), 0 2px 6px rgba(36, 28, 21, 0.06);
+  --shadow-lifted: 0 20px 40px -12px rgba(183, 87, 42, 0.28), 0 4px 12px rgba(36, 28, 21, 0.08);
+
+  /* Typography scale */
+  --text-display-xl: 3rem;
+  --text-display-lg: 2.25rem;
+  --text-display-md: 1.5rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-chili: var(--color-chili);
+  --color-chili-dark: var(--color-chili-dark);
   --color-turmeric: var(--color-turmeric);
+  --color-turmeric-dark: var(--color-turmeric-dark);
   --color-herb: var(--color-herb);
+  --color-herb-dark: var(--color-herb-dark);
   --color-amber: var(--color-amber);
+  --color-amber-dark: var(--color-amber-dark);
   --color-ink: var(--color-ink);
   --color-surface: var(--color-surface);
   --color-surface-muted: var(--color-surface-muted);
+  --color-border: var(--color-border);
+
+  --radius-card: var(--radius-card);
+  --radius-pill: var(--radius-pill);
+  --radius-control: var(--radius-control);
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-card: var(--shadow-card);
+  --shadow-lifted: var(--shadow-lifted);
+
   --font-display: var(--font-lora);
   --font-sans: var(--font-be-vietnam-pro);
 }
@@ -32,6 +67,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), "Segoe UI", sans-serif;
+}
+
+/* Texture nhẹ cho nền — gợi cảm giác giấy/vải, tránh mảng màu phẳng "web 10 năm trước" */
+.bg-texture-warm {
+  background-image: radial-gradient(circle at 1px 1px, rgba(183, 87, 42, 0.08) 1px, transparent 0);
+  background-size: 22px 22px;
 }
 
 @media (prefers-reduced-motion: reduce) {

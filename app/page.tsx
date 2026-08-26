@@ -1,5 +1,5 @@
-import Link from "next/link";
 import FoodMapLoader from "@/components/map/FoodMapLoader";
+import ProvinceTeaserCard from "@/components/province/ProvinceTeaserCard";
 import { buildHeroBubbleFeatureCollection, buildProvincePinFeatureCollection } from "@/lib/geo";
 import { getAllProvinces, getHeroDish } from "@/lib/provinces";
 
@@ -10,7 +10,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <section className="mx-auto max-w-6xl px-6 pt-10 pb-6">
+      <section className="mx-auto max-w-6xl px-6 pt-10 pb-6 bg-texture-warm">
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">
           Bản đồ ẩm thực <span className="text-chili">Việt Nam</span>
         </h1>
@@ -22,7 +22,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6">
-        <div className="h-[70vh] min-h-[420px] w-full overflow-hidden rounded-2xl border border-black/5 shadow-sm">
+        <div className="h-[70vh] min-h-[420px] w-full overflow-hidden rounded-card border border-border shadow-card">
           <FoodMapLoader heroBubbles={heroBubbles} provincePins={provincePins} />
         </div>
       </section>
@@ -32,26 +32,14 @@ export default function HomePage() {
           Tỉnh thành đã có trên bản đồ
         </h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          {provinces.map((province) => {
-            const hero = getHeroDish(province);
-            return (
-              <Link
-                key={province.slug}
-                href={`/provinces/${province.slug}`}
-                className="rounded-xl border border-black/5 bg-surface p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <p className="text-xs uppercase tracking-wide text-amber">
-                  Miền {province.region}
-                </p>
-                <p className="mt-1 font-display text-lg font-semibold text-ink">
-                  {province.name}
-                </p>
-                <p className="mt-1 text-sm text-ink/70">
-                  Món tiêu biểu: {hero?.name}
-                </p>
-              </Link>
-            );
-          })}
+          {provinces.map((province, index) => (
+            <ProvinceTeaserCard
+              key={province.slug}
+              province={province}
+              hero={getHeroDish(province)}
+              index={index}
+            />
+          ))}
         </div>
       </section>
     </div>

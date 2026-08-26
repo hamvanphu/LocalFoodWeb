@@ -72,6 +72,14 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   chả lụa riêng chứ không cuộn nhân bên trong. Đã sửa description/
   keyIngredients/prepOutline cho đúng, thêm `sourceRefs` trỏ về bài
   Wikipedia làm bằng chứng đối chiếu.
+- **Playwright fullPage screenshot làm hiểu nhầm bug** (khi tự kiểm tra
+  W1-6): chụp `fullPage` trang tỉnh sau khi thêm `whileInView` cho DishCard
+  cho thấy chỉ 1/4 món hiện, khoảng trắng lớn phía dưới — tưởng là bug thật.
+  Kiểm tra lại bằng cuộn tay thật (mouse.wheel) thay vì chỉ resize-capture
+  toàn trang: cả 4 card đều render đúng, opacity đạt 1 khi thực sự cuộn tới.
+  Kết luận: đây là hạn chế của cách Playwright chụp `fullPage` (resize
+  viewport không replay lại IntersectionObserver đúng cách), không phải lỗi
+  code — ghi lại để không hoảng khi gặp lại kiểu False Positive này.
 - **Basemap dùng style demo công khai của MapLibre** (`demotiles.maplibre.org`)
   vì chưa có MapTiler key — style này rất tối giản (chỉ có màu nước biển,
   không có địa hình/nhãn), không phản ánh chất lượng bản đồ thật. Cần thay

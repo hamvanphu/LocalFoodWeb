@@ -7,6 +7,7 @@
 | Code UI/component (Design System, DishCard, map toolbar, motion) | L3 | **A** | Tự viết/sửa code, chạy `pnpm build`/`pnpm dev` để tự kiểm tra | Spot-check + Cổng hiểu ở mốc W1-9 (đánh giá "wow") |
 | Viết nội dung món ăn (mô tả, công thức, cách ăn) | L2-L3 | **A, kèm Content Gate riêng** | AI viết bản nháp + tự tìm `sourceRef` | **Bắt buộc** PM đọc + xác nhận nguồn trước khi coi 1 dish là "xong" (không phải chỉ đọc lướt) — đây là gate về nội dung, không phải về bảo mật, nên không gọi là A+ nhưng có sức nặng tương đương |
 | Tìm/gắn ảnh Wikimedia + attribution/license | L3 | **A** | Tự tìm, tự gắn | PM spot-check vài ảnh xem đúng món không, license đúng loại không |
+| **Kiểm thử/QA (W1-11, W1-11a, W1-11b: test AC, responsive, A11y, Lighthouse)** *(PM bổ sung — bảng gốc thiếu hẳn dòng này, không phải xếp sai tầng)* | L2-L3 | **A, kèm Content-style Gate bắt buộc** | AI tự chạy build/lint/Lighthouse, tự báo kết quả kỹ thuật | **AI không được tự tuyên bố "PASS" là xong** — PM phải tự tay test lại theo checklist AC/negative-case (giống kỷ luật đã làm ở Cổng hiểu bước [1]: US-03/US-08), đặc biệt các ca dễ "trông có vẻ pass nhưng thực ra vỡ" như responsive 360px |
 | Sửa/xoá file dữ liệu đã có (`data/provinces/*.json` hiện tại) | L3 | **A** | Tự sửa qua Edit tool | PM biết trước qua git diff/commit message, không cần duyệt từng dòng |
 | Đọc/ghi `.env.local`, xử lý API key | L4 | **A+** | AI đọc biến môi trường qua code, **KHÔNG tự điền giá trị key thật, KHÔNG in giá trị key ra output** | PM tự đăng ký + dán key, AI chỉ code phần đọc biến |
 | `git commit` (local, chưa có remote) | L3 | **A** | Tự commit sau mỗi bước hoàn thành, message rõ ràng | PM xem lịch sử qua `git log` khi cần |
@@ -15,14 +16,14 @@
 
 ---
 
-## 🔒 Cổng hiểu — bước [6]
+## 🔒 Cổng hiểu — bước [6] — **ĐÃ ĐÓNG (2026-08-26)**
 
-Trước khi tao viết `DOR-LF.md` (bước [7]), mày cần:
+1. PM giải thích đúng: `.env.local` chứa secret, để A thì rủi ro commit lộ
+   key hoặc AI tự điền giá trị sai mà PM không phát hiện ngay — đúng lý do
+   phải A+.
+2. PM chỉ ra bảng thiếu dòng QA/kiểm thử. Sau khi tao kiểm tra lại, đúng là
+   **thiếu hẳn**, không phải "xếp nhầm xuống A" — đã bổ sung dòng QA với gate
+   bắt buộc PM tự test lại, không tin AI tự báo "PASS". Tinh thần đề xuất của
+   PM (không để AI tự tuyên bố xong) được giữ nguyên dù cách gọi tên khác.
 
-1. **Giải thích vì sao "đọc/ghi `.env.local`" phải để A+ chứ không A** —
-   chuyện gì xảy ra nếu để A (AI tự thực thi không cần hỏi)?
-2. **Bắt ≥1 việc trong bảng mà mày nghĩ tao xếp nhầm xuống Leash A** trong
-   khi thực ra đụng dữ liệu nhạy/rủi ro cao hơn mức đó — hoặc xác nhận bảng
-   ổn nếu soi kỹ không thấy vấn đề.
-
-Chưa qua cổng này thì bước [7] Definition of Ready chưa bắt đầu.
+Cổng đã đóng → bước [7] Definition of Ready được phép bắt đầu.

@@ -17,11 +17,11 @@ chi tiết món ăn cho từng tỉnh trong 63 tỉnh thành (trước sáp nh�
 | 1 | MVP có bắt buộc đủ 63 tỉnh ngay, hay được phép ra mắt với tập con rồi mở rộng? | **Đã trả lời (phiên trước):** tập con 8 tỉnh trước, mở rộng dần — nhưng phiên trước KHÔNG ép mày xác nhận lại bằng Cổng hiểu, nay cần xác nhận lại. |
 | 2 | Ai là người dùng chính: khách du lịch nước ngoài, người Việt tò mò văn hoá vùng miền, hay người thực sự muốn nấu ăn theo công thức? | Giả định: cả 3, nhưng ưu tiên "khám phá + nấu thử" hơn là hướng dẫn du lịch chi tiết (lịch trình, giá vé...). |
 | 3 | Trang có cần đa ngôn ngữ (Anh/Việt) không, hay chỉ tiếng Việt cho MVP? | Giả định: chỉ tiếng Việt cho MVP, đa ngôn ngữ để phase sau. |
-| 4 | Nguồn nội dung món ăn (mô tả, công thức) là do AI biên soạn dựa trên research công khai, hay cần người có chuyên môn ẩm thực kiểm duyệt? | Giả định: AI research + biên soạn, PM (mày) kiểm duyệt tính chính xác trước khi công bố — đây chính là chỗ "Cổng hiểu" áp dụng, không phải rubber-stamp nội dung AI viết. |
+| 4 | Nguồn nội dung món ăn (mô tả, công thức) là do AI biên soạn dựa trên research công khai, hay cần người có chuyên môn ẩm thực kiểm duyệt? | **PM sửa lại (Cổng hiểu bước [0]):** AI có thể viết bản nháp, nhưng **bắt buộc đối chiếu với ít nhất 1 nguồn tham chiếu chính thống** (Wikipedia tiếng Việt, báo/trang ẩm thực uy tín, tài liệu du lịch chính thức...) cho mỗi món trước khi công bố — không chỉ dựa vào AI "nhớ" rồi PM duyệt qua loa. Rủi ro nếu bỏ qua: sai lệch văn hoá/công thức, biến site thành "copy-paste thiếu chuẩn mực". |
 | 5 | Ranh giới hành chính dùng bản đồ trước hay sau sáp nhập 2025? | **Đã chốt (đề bài):** trước sáp nhập, 63 tỉnh. |
 | 6 | Có cần tài khoản người dùng (đăng nhập, lưu wishlist theo tài khoản) cho MVP không? | Giả định: KHÔNG — wishlist (nếu làm) dùng localStorage ẩn danh, không backend auth. |
 | 7 | Ảnh món ăn: chấp nhận ảnh free-license thật (không phải ảnh AI-gen, không phải ảnh tự chụp) cho MVP? | **Đã chốt (phiên trước):** có, Wikimedia/Unsplash/Pexels, ghi attribution. |
-| 8 | Có ràng buộc thời gian/deadline nộp bài (viva) không? | **Chưa rõ — cần mày trả lời.** Ảnh hưởng trực tiếp tới việc có kịp làm đủ 63 tỉnh hay dừng ở MVP 8 tỉnh khi nộp bài. |
+| 8 | Có ràng buộc thời gian/deadline nộp bài (viva) không? | **Đã chốt (Cổng hiểu bước [0]): ~2 tuần kể từ 2026-08-26, tức hạn khoảng 2026-09-09.** Deadline gấp → tác động trực tiếp tới bước [5] Estimation: khả năng cao phải dừng ở MVP 8 tỉnh khi nộp, 55 tỉnh còn lại là roadmap sau nộp bài, không phải yêu cầu bắt buộc trước hạn. |
 | 9 | Site có cần responsive/mobile-first ngay từ MVP, hay desktop trước? | Giả định: responsive ngay từ đầu (mobile không được coi là "để sau") vì đối tượng dùng thực tế duyệt bằng điện thoại nhiều hơn desktop cho loại nội dung này. |
 | 10 | Có giới hạn ngân sách cho dịch vụ trả phí (MapTiler vượt free tier, hosting...) không? | Giả định: KHÔNG dùng dịch vụ trả phí — mọi lựa chọn (MapTiler free tier, Vercel free tier khi deploy) phải nằm trong free tier. |
 
@@ -46,23 +46,41 @@ chi tiết món ăn cho từng tỉnh trong 63 tỉnh thành (trước sáp nh�
   PM/AI biên soạn.
 - Ứng dụng di động riêng (chỉ web responsive).
 
-## Việc cần mày trả lời trước khi tao viết SPEC (câu hỏi 8 ở trên)
+## Ràng buộc deadline (chốt 2026-08-26)
 
-Có deadline/mốc thời gian cụ thể (ngày nộp bài, ngày viva) không? Nếu có,
-cho tao biết ngày — nó quyết định việc EST-LF.md (bước [5]) có khả thi làm
-đủ 63 tỉnh hay phải dừng ở MVP khi nộp.
+**Hạn nộp bài ~2 tuần, tức khoảng 2026-09-09.** Đây là ràng buộc cứng chi
+phối toàn bộ các bước tiếp theo:
+- Bước [5] Estimation phải tính effort thực tế cho 8 tỉnh MVP + polish UI +
+  test, so với quỹ thời gian 2 tuần — nếu vượt, cắt scope (ví dụ giảm số
+  tỉnh MVP hoặc giảm tính năng phase-2 như wishlist/quiz) chứ không cắt chất
+  lượng nền tảng (map, routing, data schema).
+- Các bước [0]-[7] (giấy tờ) cần làm **gọn, đúng trọng tâm**, không phình to
+  — mục tiêu là PM hiểu và phán xử được, không phải viết tài liệu dài cho
+  đẹp hồ sơ.
+- 55 tỉnh còn lại ngoài MVP là backlog sau khi nộp bài, không phải điều
+  kiện để qua bước nào trong 2 tuần này.
 
 ---
 
-## 🔒 Cổng hiểu — bước [0]
+## 🔒 Cổng hiểu — bước [0] — **ĐÃ ĐÓNG (2026-08-26)**
 
-Trước khi tao viết `SPEC-LF.md` (bước [1]), mày cần đóng cổng này **bằng
-lời của mày**, không phải chọn nút:
+PM đã trả lời bằng lời của mình (không phải chọn nút), cụ thể:
 
-1. **MVP này CỐ TÌNH bỏ cái gì, vì sao bỏ được?** (nhìn mục Out of scope ở
-   trên, giải thích lại theo cách hiểu của mày, không copy nguyên văn).
-2. **Chỉ ra ≥1 giả định ở bảng 10 câu hỏi mà mày KHÔNG đồng ý**, hoặc muốn
-   sửa lại cho đúng ý đồ thật của mày (nếu mày đồng ý hết với tất cả giả
-   định thì đó là dấu hiệu đáng ngờ — Coach sẽ hỏi lại, nên hãy soi kỹ).
+1. **MVP cố tình bỏ gì, vì sao bỏ được** — PM giải thích đúng tinh thần "làm
+   nhỏ nhưng chắc": bỏ đăng nhập/tài khoản (không cần quản lý người dùng ở
+   giai đoạn khám phá), bỏ đa ngôn ngữ (đối tượng chính là người Việt), bỏ
+   đặt tour/thương mại điện tử (trọng tâm là văn hoá ẩm thực, không phải
+   dịch vụ du lịch), bỏ nội dung do người dùng đóng góp (kiểm soát chất
+   lượng), bỏ app riêng (web responsive đã đủ).
+2. **Bắt lỗi AI thật** — giả định #4 (AI biên soạn + PM duyệt qua loa) bị PM
+   bác bỏ, yêu cầu sửa thành bắt buộc đối chiếu nguồn tham chiếu chính thống
+   cho từng món. Đã cập nhật vào bảng 10 câu hỏi ở trên.
+3. **Deadline** — chốt ~2 tuần (2026-09-09), đã ghi ở mục Ràng buộc deadline.
 
-Chưa qua cổng này thì bước [1] SPEC chưa được bắt đầu.
+**Hệ quả cho bước [1] SPEC:** mỗi dish entry trong SPEC/nội dung sau này
+phải có ít nhất 1 nguồn tham chiếu (không chỉ Wikimedia cho ảnh, mà cả cho
+nội dung mô tả/công thức) — áp dụng cho 8 tỉnh MVP, và cần rà soát lại 2
+tỉnh walking skeleton (Hà Nội, Huế) đã viết ở phiên trước vì lúc đó chưa có
+yêu cầu này.
+
+Cổng đã đóng → bước [1] SPEC được phép bắt đầu.

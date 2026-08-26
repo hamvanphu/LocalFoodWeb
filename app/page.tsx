@@ -1,5 +1,5 @@
 import FoodMapLoader from "@/components/map/FoodMapLoader";
-import HeroPhotoBackground from "@/components/HeroPhotoBackground";
+import HeroSection from "@/components/HeroSection";
 import ProvinceTeaserCard from "@/components/province/ProvinceTeaserCard";
 import { buildHeroBubbleFeatureCollection, buildProvincePinFeatureCollection } from "@/lib/geo";
 import { getAllProvinces, getHeroDish } from "@/lib/provinces";
@@ -13,23 +13,16 @@ export default function HomePage() {
     .map((province) => getHeroDish(province)?.images[0])
     .find((image) => Boolean(image));
 
+  const marqueeItems = provinces.flatMap((province) => {
+    const hero = getHeroDish(province);
+    return hero ? [`${province.name} · ${hero.name}`] : [];
+  });
+
   return (
     <div>
-      <section className="relative overflow-hidden">
-        {heroPhoto && <HeroPhotoBackground url={heroPhoto.url} />}
-        <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-10">
-          <h1 className="font-display text-4xl font-semibold text-ink sm:text-6xl">
-            Bản đồ ẩm thực <span className="text-chili">Việt Nam</span>
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-ink/70">
-            Khám phá món ăn đặc trưng của từng tỉnh thành — bấm vào một điểm trên
-            bản đồ để xem công thức, nguyên liệu và cách thưởng thức chuẩn vị địa
-            phương.
-          </p>
-        </div>
-      </section>
+      <HeroSection heroPhotoUrl={heroPhoto?.url} marqueeItems={marqueeItems} />
 
-      <section className="mx-auto max-w-6xl px-6">
+      <section id="map-section" className="mx-auto max-w-6xl px-6 pt-12">
         <div className="h-[70vh] min-h-[420px] w-full overflow-hidden rounded-card border border-border shadow-card">
           <FoodMapLoader heroBubbles={heroBubbles} provincePins={provincePins} />
         </div>

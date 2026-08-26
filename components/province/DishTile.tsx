@@ -18,19 +18,21 @@ export default function DishTile({
     <motion.button
       onClick={onSelect}
       className="group overflow-hidden rounded-card border border-border bg-surface text-left shadow-soft transition-shadow duration-200 hover:shadow-card"
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.06, ease: "easeOut" }}
+      initial={{ clipPath: "inset(100% 0 0 0)", opacity: 0 }}
+      animate={{ clipPath: "inset(0% 0 0 0)", opacity: 1 }}
+      transition={{ duration: 0.55, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -4 }}
       whileTap={{ scale: 0.98 }}
     >
-      <ImageWithFallback
-        slug={dish.slug}
-        name={dish.name}
-        images={dish.images}
-        className="aspect-[4/3] w-full"
-        priority={index === 0}
-      />
+      <div className="overflow-hidden">
+        <ImageWithFallback
+          slug={dish.slug}
+          name={dish.name}
+          images={dish.images}
+          className="aspect-[4/3] w-full transition-transform duration-500 ease-out group-hover:scale-110"
+          priority={index === 0}
+        />
+      </div>
       <div className="p-4">
         <p className="font-display text-base font-semibold text-ink">
           {dish.name}

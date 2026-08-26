@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import DishCard from "@/components/province/DishCard";
+import ProvinceDishExplorer from "@/components/province/ProvinceDishExplorer";
 import ProvinceHero from "@/components/province/ProvinceHero";
 import { getAllProvinceSlugs, getHeroDish, getProvinceBySlug } from "@/lib/provinces";
 
@@ -37,13 +37,11 @@ export default async function ProvincePage({
     <div>
       <ProvinceHero province={province} heroDish={heroDish} />
 
-      <section className="mx-auto max-w-4xl space-y-8 px-6 py-12">
-        <h2 className="font-display text-2xl font-semibold text-ink">
+      <section className="mx-auto max-w-5xl px-6 py-12">
+        <h2 className="mb-2 font-display text-2xl font-semibold text-ink">
           Món ăn đặc trưng
         </h2>
-        {province.dishes.map((dish, index) => (
-          <DishCard key={dish.slug} dish={dish} priority={index === 0} index={index} />
-        ))}
+        <ProvinceDishExplorer dishes={province.dishes} />
       </section>
     </div>
   );

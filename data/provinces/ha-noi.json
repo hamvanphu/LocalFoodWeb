@@ -3,10 +3,16 @@
   "code": "VN-HN",
   "name": "Hà Nội",
   "region": "Bắc",
-  "centroid": [105.69874, 20.99932],
+  "centroid": [
+    105.69874,
+    20.99932
+  ],
   "summary": "Ẩm thực Hà Nội tinh tế và tiết chế — nước dùng trong, gia vị vừa đủ, để nguyên liệu tự nói lên vị ngon.",
   "summarySourceRefs": [
-    { "url": "https://vi.wikipedia.org/wiki/Ph%E1%BB%9F", "label": "Wikipedia tiếng Việt — Phở (đối chiếu phong cách Bắc/Nam)" }
+    {
+      "url": "https://vi.wikipedia.org/wiki/Ph%E1%BB%9F",
+      "label": "Wikipedia tiếng Việt — Phở (đối chiếu phong cách Bắc/Nam)"
+    }
   ],
   "heroDishSlug": "pho-bo",
   "dishes": [
@@ -14,7 +20,11 @@
       "slug": "pho-bo",
       "name": "Phở bò Hà Nội",
       "isHero": true,
-      "tasteTags": ["savory", "noodle-soup", "street-food"],
+      "tasteTags": [
+        "savory",
+        "noodle-soup",
+        "street-food"
+      ],
       "description": "Phở Hà Nội là hình mẫu chuẩn mực của món phở Việt Nam — nước dùng bò trong, thanh, ninh nhiều giờ, ăn cùng bánh phở dẹt và vài lát thịt bò mỏng. So với phở miền Nam, phở Hà Nội tiết chế hơn: ít rau thơm, không giá đỗ, để vị ngọt tự nhiên của nước dùng làm chủ đạo.",
       "keyIngredients": [
         "Xương bò, thịt bắp/nạm bò",
@@ -39,14 +49,24 @@
         }
       ],
       "sourceRefs": [
-        { "url": "https://vi.wikipedia.org/wiki/Ph%E1%BB%9F", "label": "Wikipedia tiếng Việt — Phở" }
+        {
+          "url": "https://vi.wikipedia.org/wiki/Ph%E1%BB%9F",
+          "label": "Wikipedia tiếng Việt — Phở"
+        }
+      ],
+      "occasions": [
+        "Quanh năm"
       ]
     },
     {
       "slug": "bun-cha",
       "name": "Bún chả",
       "isHero": false,
-      "tasteTags": ["grilled", "savory", "street-food"],
+      "tasteTags": [
+        "grilled",
+        "savory",
+        "street-food"
+      ],
       "description": "Chả thịt lợn (viên và miếng) nướng than hoa, ăn cùng bún và nước chấm chua ngọt pha đu đủ/cà rốt ngâm — món trưa kinh điển của Hà Nội, nổi tiếng toàn cầu.",
       "keyIngredients": [
         "Thịt ba chỉ và thịt vai xay",
@@ -71,14 +91,24 @@
         }
       ],
       "sourceRefs": [
-        { "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_ch%E1%BA%A3", "label": "Wikipedia tiếng Việt — Bún chả" }
+        {
+          "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_ch%E1%BA%A3",
+          "label": "Wikipedia tiếng Việt — Bún chả"
+        }
+      ],
+      "occasions": [
+        "Quanh năm"
       ]
     },
     {
       "slug": "cha-ca-la-vong",
       "name": "Chả cá Lã Vọng",
       "isHero": false,
-      "tasteTags": ["grilled", "herb-forward", "savory"],
+      "tasteTags": [
+        "grilled",
+        "herb-forward",
+        "savory"
+      ],
       "description": "Cá lăng ướp nghệ và mẻ, nướng/chao mỡ ngay trên bàn ăn cùng thì là và hành lá, dùng với bún và mắm tôm — món ăn gắn liền với phố Chả Cá của Hà Nội.",
       "keyIngredients": [
         "Cá lăng phi lê",
@@ -101,14 +131,24 @@
         }
       ],
       "sourceRefs": [
-        { "url": "https://vi.wikipedia.org/wiki/Ch%E1%BA%A3_c%C3%A1_L%C3%A3_V%E1%BB%8Dng", "label": "Wikipedia tiếng Việt — Chả cá Lã Vọng" }
+        {
+          "url": "https://vi.wikipedia.org/wiki/Ch%E1%BA%A3_c%C3%A1_L%C3%A3_V%E1%BB%8Dng",
+          "label": "Wikipedia tiếng Việt — Chả cá Lã Vọng"
+        }
+      ],
+      "occasions": [
+        "Quanh năm"
       ]
     },
     {
       "slug": "banh-cuon",
       "name": "Bánh cuốn Thanh Trì",
       "isHero": false,
-      "tasteTags": ["savory", "street-food", "vegetarian-friendly"],
+      "tasteTags": [
+        "savory",
+        "street-food",
+        "vegetarian-friendly"
+      ],
       "description": "Khác với bánh cuốn nhân thịt phổ biến ở nhiều nơi, bánh cuốn Thanh Trì — làng Thanh Trì, Hà Nội — đặc trưng ở chỗ KHÔNG có nhân: bánh tráng mỏng như tờ giấy, xếp lớp trong thúng lót lá, ăn cùng chả lụa và nước mắm pha riêng. Đây là điểm dễ nhầm nếu chỉ biết bánh cuốn kiểu có nhân.",
       "keyIngredients": [
         "Bột gạo pha loãng (không pha nhân)",
@@ -125,7 +165,13 @@
       "howToEat": "Ăn nguội hoặc hơi ấm, chấm nhẹ vào nước mắm pha loãng (không ngâm đẫm) để giữ vị thanh của bánh, thường ăn kèm chả lụa/giò cắt lát.",
       "images": [],
       "sourceRefs": [
-        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_cu%E1%BB%91n", "label": "Wikipedia tiếng Việt — Bánh cuốn (mục Bánh cuốn Thanh Trì)" }
+        {
+          "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_cu%E1%BB%91n",
+          "label": "Wikipedia tiếng Việt — Bánh cuốn (mục Bánh cuốn Thanh Trì)"
+        }
+      ],
+      "occasions": [
+        "Quanh năm"
       ]
     }
   ]

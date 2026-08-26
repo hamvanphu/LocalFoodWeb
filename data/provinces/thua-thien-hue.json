@@ -3,10 +3,16 @@
   "code": "VN-TTH",
   "name": "Thừa Thiên Huế",
   "region": "Trung",
-  "centroid": [107.5065, 16.33288],
+  "centroid": [
+    107.5065,
+    16.33288
+  ],
   "summary": "Ẩm thực cố đô Huế đậm đà và cay nồng, chịu ảnh hưởng phong cách cung đình — nhiều món nhỏ tinh tế đi kèm nước chấm đặc trưng.",
   "summarySourceRefs": [
-    { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_b%C3%A8o", "label": "Wikipedia tiếng Việt — Bánh bèo (nguồn gốc Huế, ảnh hưởng cung đình)" }
+    {
+      "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_b%C3%A8o",
+      "label": "Wikipedia tiếng Việt — Bánh bèo (nguồn gốc Huế, ảnh hưởng cung đình)"
+    }
   ],
   "heroDishSlug": "bun-bo-hue",
   "dishes": [
@@ -14,7 +20,12 @@
       "slug": "bun-bo-hue",
       "name": "Bún bò Huế",
       "isHero": true,
-      "tasteTags": ["spicy", "savory", "noodle-soup", "street-food"],
+      "tasteTags": [
+        "spicy",
+        "savory",
+        "noodle-soup",
+        "street-food"
+      ],
       "description": "Món bún nước đậm đà, cay nồng với nước dùng ninh từ xương bò và giò heo, dậy mùi sả và mắm ruốc, ăn cùng bún sợi to tròn — biểu tượng ẩm thực của cố đô, mạnh mẽ hơn hẳn phở Bắc.",
       "keyIngredients": [
         "Xương bò, giò heo, bắp bò",
@@ -39,14 +50,24 @@
         }
       ],
       "sourceRefs": [
-        { "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_b%C3%B2_Hu%E1%BA%BF", "label": "Wikipedia tiếng Việt — Bún bò Huế" }
+        {
+          "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_b%C3%B2_Hu%E1%BA%BF",
+          "label": "Wikipedia tiếng Việt — Bún bò Huế"
+        }
+      ],
+      "occasions": [
+        "Quanh năm"
       ]
     },
     {
       "slug": "com-hen",
       "name": "Cơm hến",
       "isHero": false,
-      "tasteTags": ["spicy", "sour", "street-food"],
+      "tasteTags": [
+        "spicy",
+        "sour",
+        "street-food"
+      ],
       "description": "Cơm nguội trộn với hến xào, nước luộc hến, tóp mỡ, đậu phộng và rất nhiều rau sống — món ăn dân dã đặc trưng của xóm Cồn Hến, Huế, vị chua cay hài hoà.",
       "keyIngredients": [
         "Hến (thịt và nước luộc)",
@@ -70,14 +91,24 @@
         }
       ],
       "sourceRefs": [
-        { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_h%E1%BA%BFn", "label": "Wikipedia tiếng Việt — Cơm hến" }
+        {
+          "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_h%E1%BA%BFn",
+          "label": "Wikipedia tiếng Việt — Cơm hến"
+        }
+      ],
+      "occasions": [
+        "Quanh năm"
       ]
     },
     {
       "slug": "banh-khoai",
       "name": "Bánh khoái",
       "isHero": false,
-      "tasteTags": ["grilled", "savory", "street-food"],
+      "tasteTags": [
+        "grilled",
+        "savory",
+        "street-food"
+      ],
       "description": "Bánh xèo phiên bản Huế — nhỏ, dày và giòn hơn bánh xèo Nam Bộ, nhân tôm thịt giá đỗ, ăn kèm nước lèo pha gan/đậu phộng đặc trưng thay vì nước mắm chua ngọt thông thường.",
       "keyIngredients": [
         "Bột gạo pha nghệ",
@@ -100,14 +131,24 @@
         }
       ],
       "sourceRefs": [
-        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_kho%C3%A1i", "label": "Wikipedia tiếng Việt — Bánh khoái" }
+        {
+          "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_kho%C3%A1i",
+          "label": "Wikipedia tiếng Việt — Bánh khoái"
+        }
+      ],
+      "occasions": [
+        "Quanh năm"
       ]
     },
     {
       "slug": "banh-beo-nam-loc",
       "name": "Bánh bèo, bánh nậm, bánh lọc",
       "isHero": false,
-      "tasteTags": ["savory", "vegetarian-friendly", "street-food"],
+      "tasteTags": [
+        "savory",
+        "vegetarian-friendly",
+        "street-food"
+      ],
       "description": "Bộ ba bánh cung đình Huế thường ăn chung một mâm: bánh bèo hấp trong chén nhỏ rắc tôm cháy, bánh nậm gói lá dẹt nhân tôm thịt, bánh lọc trong veo bọc tôm thịt gói lá chuối.",
       "keyIngredients": [
         "Bột gạo (bánh bèo, bánh nậm), bột năng (bánh lọc)",
@@ -130,7 +171,13 @@
         }
       ],
       "sourceRefs": [
-        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_b%C3%A8o", "label": "Wikipedia tiếng Việt — Bánh bèo" }
+        {
+          "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_b%C3%A8o",
+          "label": "Wikipedia tiếng Việt — Bánh bèo"
+        }
+      ],
+      "occasions": [
+        "Quanh năm"
       ]
     }
   ]

@@ -15,6 +15,18 @@ export type TasteTag = (typeof TASTE_TAGS)[number];
 
 export type Region = "Bắc" | "Trung" | "Nam";
 
+export const OCCASIONS = [
+  "Quanh năm",
+  "Mùa xuân",
+  "Mùa hè",
+  "Mùa thu",
+  "Mùa đông",
+  "Tết Nguyên Đán",
+  "Tết Trung Thu",
+] as const;
+
+export type Occasion = (typeof OCCASIONS)[number];
+
 export interface DishImage {
   url: string;
   attribution: string;
@@ -36,9 +48,9 @@ export interface Dish {
   keyIngredients: string[];
   prepOutline: string[];
   howToEat: string;
-  season?: string;
   images: DishImage[];
   sourceRefs: SourceRef[];
+  occasions: Occasion[];
 }
 
 export interface Province {

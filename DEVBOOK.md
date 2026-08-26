@@ -90,6 +90,13 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   thiếu resilience nhất quán với phần còn lại của site. Xử lý: thêm
   `HeroPhotoBackground.tsx` (tự ẩn khi lỗi) và `onError` trong `Lightbox.tsx`
   (hiện thông báo thay vì hộp đen).
+- **Redesign explorer làm mất deep-link `#dish-slug`**: sau khi đổi trang
+  tỉnh sang `ProvinceDishExplorer` (grid + Sheet), link kiểu
+  `/provinces/ha-noi#bun-cha` không còn tự cuộn/mở gì cả vì Sheet mặc định
+  đóng và DishTile không có `id` anchor như DishCard cũ. Phát hiện lại khi
+  làm Search (kết quả tìm kiếm món ăn cần trỏ thẳng vào đúng món). Xử lý:
+  `ProvinceDishExplorer` đọc `window.location.hash` lúc mount, tự mở Sheet
+  đúng món nếu khớp slug.
 - **Basemap dùng style demo công khai của MapLibre** (`demotiles.maplibre.org`)
   vì chưa có MapTiler key — style này rất tối giản (chỉ có màu nước biển,
   không có địa hình/nhãn), không phản ánh chất lượng bản đồ thật. Cần thay

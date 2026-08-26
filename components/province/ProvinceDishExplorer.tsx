@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LayoutGrid, GalleryHorizontal } from "lucide-react";
 import DishTile from "./DishTile";
 import DishCard from "./DishCard";
@@ -18,6 +18,14 @@ export default function ProvinceDishExplorer({
 }) {
   const [mode, setMode] = useState<ViewMode>("overview");
   const [selected, setSelected] = useState<Dish | null>(null);
+
+  // Deep-link: /provinces/{slug}#{dish-slug} (dùng bởi kết quả tìm kiếm) tự mở panel chi tiết.
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+    const match = dishes.find((dish) => dish.slug === hash);
+    if (match) setSelected(match);
+  }, [dishes]);
 
   return (
     <div>

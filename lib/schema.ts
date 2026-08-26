@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { TASTE_TAGS } from "./types";
+import { OCCASIONS, TASTE_TAGS } from "./types";
 
 const sourceRefSchema = z.object({
   url: z.url(),
@@ -26,9 +26,9 @@ const dishSchema = z.object({
   keyIngredients: z.array(z.string().min(1)).min(1),
   prepOutline: z.array(z.string().min(1)).min(1),
   howToEat: z.string().min(1),
-  season: z.string().optional(),
   images: z.array(dishImageSchema),
   sourceRefs: sourceRefsSchema,
+  occasions: z.array(z.enum(OCCASIONS)).min(1),
 });
 
 export const provinceSchema = z

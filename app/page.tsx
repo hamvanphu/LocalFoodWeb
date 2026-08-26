@@ -1,6 +1,6 @@
 import FoodMapLoader from "@/components/map/FoodMapLoader";
 import HeroSection from "@/components/HeroSection";
-import ProvinceTeaserCard from "@/components/province/ProvinceTeaserCard";
+import ProvinceExplorerGrid from "@/components/province/ProvinceExplorerGrid";
 import { buildHeroBubbleFeatureCollection, buildProvincePinFeatureCollection } from "@/lib/geo";
 import { getAllProvinces, getHeroDish } from "@/lib/provinces";
 
@@ -35,15 +35,8 @@ export default function HomePage() {
         <p className="mt-1 text-sm text-ink/60">
           Chưa quen thao tác bản đồ? Bấm thẳng vào tỉnh mày muốn khám phá bên dưới.
         </p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          {provinces.map((province, index) => (
-            <ProvinceTeaserCard
-              key={province.slug}
-              province={province}
-              hero={getHeroDish(province)}
-              index={index}
-            />
-          ))}
+        <div className="mt-6">
+          <ProvinceExplorerGrid provinces={provinces} />
         </div>
       </section>
     </div>

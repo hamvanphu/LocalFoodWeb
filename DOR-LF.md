@@ -30,16 +30,14 @@ không cần chờ — **đủ điều kiện build**, không phải "giả vờ
 
 ---
 
-## 🔒 Cổng hiểu — bước [7]
+## 🔒 Cổng hiểu — bước [7] — **ĐÃ ĐÓNG (2026-08-26)**
 
-Trước khi tao bắt đầu **bước [8] BUILD** (code thật), mày cần:
+1. PM giải thích đúng thứ tự xuyên tầng: **schema → token → component gốc →
+   UI bề mặt → cổng kiểm (W1-9)** — đúng tinh thần móng trước bề mặt sau.
+2. PM đồng ý "build trước, verify key sau" với **điều kiện ràng buộc**:
+   **MapTiler key thật phải có trước W1-11 (QA pass toàn bộ)** — không phải
+   trước khi bắt đầu code, nhưng bắt buộc trước khi coi QA đạt, vì QA cần
+   test bản đồ chạy đúng khi nộp bài. Điều kiện này được ghi nhận là ràng
+   buộc cứng cho W1-11, không phải tuỳ chọn.
 
-1. **Nói lại lát cắt dọc lần này đi xuyên những tầng nào** — từ móng (schema
-   `sourceRef`, Design System token) → component gốc → bề mặt (toolbar bản
-   đồ, dish card, 404) — theo cách hiểu của mày.
-2. **Xác nhận mục FAIL (MapTiler key) có chấp nhận được không** — mày có
-   đồng ý cách xử lý "build trước, verify sau khi có key" hay muốn tao dừng
-   chờ mày đăng ký key trước?
-
-Chưa qua cổng này thì bước [8] BUILD (code) chưa được phép chạy — kể cả khi
-đã có sẵn dev server đang chạy nền.
+Cổng đã đóng → **bước [8] BUILD được phép bắt đầu.**

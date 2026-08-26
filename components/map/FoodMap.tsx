@@ -11,6 +11,7 @@ import Map, {
   type MapRef,
 } from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
+import { Hand } from "lucide-react";
 import type { FeatureCollection, Point } from "geojson";
 import {
   HERO_BUBBLE_LAYER,
@@ -38,6 +39,7 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
     lat: number;
     props: ProvinceMapProperties;
   } | null>(null);
+  const [interacted, setInteracted] = useState(false);
 
   const styleUrl = useMemo(() => maptilerStyleUrl(), []);
 
@@ -61,7 +63,11 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
   }, []);
 
   return (
-    <div className="relative h-full w-full">
+    <div
+      className="relative h-full w-full"
+      onPointerDownCapture={() => setInteracted(true)}
+      onWheelCapture={() => setInteracted(true)}
+    >
       <Map
         ref={mapRef}
         initialViewState={{
@@ -112,6 +118,20 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
         )}
       </AnimatePresence>
       </Map>
+
+      <AnimatePresence>
+        {!interacted && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            className="pointer-events-none absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-pill border border-white/40 bg-white/85 px-4 py-2 text-sm font-medium text-ink shadow-card backdrop-blur-md"
+          >
+            <Hand className="h-4 w-4 text-chili" />
+            Bấm vào một điểm để khám phá món ăn
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <MapToolbar
         className="absolute top-4 right-4"

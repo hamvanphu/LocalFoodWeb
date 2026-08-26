@@ -6,7 +6,7 @@ const TONE_CLASSES: Record<Tone, string> = {
   chili: "bg-chili/10 text-chili",
   turmeric: "bg-turmeric/15 text-amber-dark",
   herb: "bg-herb/10 text-herb-dark",
-  neutral: "bg-surface-muted text-ink/60",
+  neutral: "bg-surface-muted text-ink/80",
 };
 
 export default function Badge({

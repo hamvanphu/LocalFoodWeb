@@ -57,6 +57,7 @@ export default function ImageWithFallback({
   priority = false,
 }: ImageWithFallbackProps) {
   const [loadError, setLoadError] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const primary = images[0];
 
   if (!primary || loadError) {
@@ -71,14 +72,17 @@ export default function ImageWithFallback({
   }
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className={`relative overflow-hidden bg-surface-muted ${className}`}>
       <Image
         src={primary.url}
         alt={name}
         fill
         sizes={sizes}
         priority={priority}
-        className="object-cover"
+        className={`object-cover transition-all duration-700 ease-out ${
+          loaded ? "scale-100 opacity-100 blur-0" : "scale-105 opacity-0 blur-md"
+        }`}
+        onLoad={() => setLoaded(true)}
         onError={() => setLoadError(true)}
       />
       <span className="absolute bottom-1 right-2 rounded bg-black/50 px-2 py-0.5 text-[10px] text-white">

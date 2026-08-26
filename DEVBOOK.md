@@ -80,6 +80,16 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   Kết luận: đây là hạn chế của cách Playwright chụp `fullPage` (resize
   viewport không replay lại IntersectionObserver đúng cách), không phải lỗi
   code — ghi lại để không hoảng khi gặp lại kiểu False Positive này.
+- **Ảnh hero trang chủ + Lightbox ban đầu không có xử lý lỗi tải** (phát
+  hiện khi tự test sau đợt review UX/UI): dùng `next/image` trần không qua
+  `ImageWithFallback`, nên khi gặp lại đúng kiểu rate-limit Wikimedia đã biết
+  (GAP-01 tương tự nhưng ở 2 chỗ mới), ảnh hiện icon vỡ/hộp đen thay vì
+  fallback đẹp. Xác minh kỹ trước khi kết luận: `ProvinceHero` dùng cùng URL
+  vẫn load được cùng lúc — chứng tỏ không phải lỗi code logic mà là rate
+  limit thoáng qua tự gây ra khi test dồn dập, nhưng đúng là 2 component mới
+  thiếu resilience nhất quán với phần còn lại của site. Xử lý: thêm
+  `HeroPhotoBackground.tsx` (tự ẩn khi lỗi) và `onError` trong `Lightbox.tsx`
+  (hiện thông báo thay vì hộp đen).
 - **Basemap dùng style demo công khai của MapLibre** (`demotiles.maplibre.org`)
   vì chưa có MapTiler key — style này rất tối giản (chỉ có màu nước biển,
   không có địa hình/nhãn), không phản ánh chất lượng bản đồ thật. Cần thay

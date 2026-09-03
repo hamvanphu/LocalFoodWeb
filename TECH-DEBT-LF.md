@@ -19,6 +19,13 @@
 | 6 | ~~6 tỉnh MVP còn lại chưa có data~~ | **✅ XONG (2026-09-03)** — cả 8/8 tỉnh MVP đã có data, mỗi món đều có `sourceRefs` đối chiếu Wikipedia/nguồn uy tín, 27/32 món có ảnh thật (5 món không tìm được ảnh phù hợp, dùng fallback gradient trung thực) | — |
 | 7 | Trang `/browse` liệt kê toàn bộ tỉnh — chưa làm, giá trị tăng khi >8 tỉnh | `WBS-LF.md` Wave 2 | Phase-2 |
 
+## 🔴 Đã giải quyết ngay trong phiên này — PM cần biết
+
+- **Bản đồ không hiển thị gì** (PM báo cáo 2026-09-03): nguyên nhân là bug
+  thật của `maplibre-gl@6.5.0` (bản mới) — vector tile source không bao giờ
+  load xong. Đã hạ xuống `maplibre-gl@4.7.1` (ổn định), map chạy đúng ngay.
+  Chi tiết điều tra ở `DEVBOOK.md`.
+
 ## ✅ Đã giải quyết (giữ lại làm lịch sử, không xoá)
 
 - ~~Ảnh vỡ khi lỗi tải runtime (GAP-01)~~ — đã fix ở `ImageWithFallback`.

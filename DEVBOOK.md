@@ -107,6 +107,23 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   → route chạy đúng ngay. **Ghi nhớ cho việc thêm tỉnh sau này: phải restart
   dev server sau khi thêm file `data/provinces/*.json` mới**, không tự nhận
   qua hot-reload.
+- **[NGHIÊM TRỌNG] `maplibre-gl@6.5.0` không bao giờ load xong vector tile
+  source** (phát hiện khi PM báo "map không hiển thị luôn" sau khi dán
+  MapTiler key thật): style.json/sprite/tiles.json đều tải thành công (HTTP
+  200), nhưng source `maptiler_planet` (nguồn tile chính) kẹt mãi ở trạng
+  thái `isSourceLoaded: false`, không bao giờ bắn request `.pbf` tile thật
+  nào, khiến `map.on('load')` không bao giờ fire — bản đồ mãi mãi là canvas
+  trống. Tái hiện được cả ở `pnpm dev` lẫn `pnpm build && next start`
+  (không phải do React Strict Mode/HMR double-mount). Debug bằng cách gắn
+  listener `onStyleData/onSourceData/onData/onIdle` trực tiếp vào
+  `<Map>` để lần dấu — xác nhận vấn đề nằm ở chính base style, không phải 2
+  layer GeoJSON tự thêm (tắt hẳn `hero-bubbles`/`province-pins` vẫn lỗi y
+  hệt). **Xử lý:** hạ `maplibre-gl` từ `^6.5.0` xuống `4.7.1` (bản ổn định,
+  dùng rộng rãi) — map load đúng ngay, đủ 8 bubble hiện đúng vị trí, click
+  điều hướng đúng. Đây là bug thật của thư viện/môi trường (không phải lỗi
+  code của mình), nhưng phải tự dò bằng tay vì không có thông báo lỗi rõ
+  ràng nào từ MapLibre — ghi lại kỹ để nếu sau này nâng cấp maplibre-gl thì
+  test lại kỹ trước khi merge.
 - **Basemap dùng style demo công khai của MapLibre** (`demotiles.maplibre.org`)
   vì chưa có MapTiler key — style này rất tối giản (chỉ có màu nước biển,
   không có địa hình/nhãn), không phản ánh chất lượng bản đồ thật. Cần thay

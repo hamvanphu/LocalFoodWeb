@@ -42,7 +42,7 @@ export default function HomePage() {
               Tỉnh nổi bật
             </h2>
             <p className="mt-1 text-sm text-ink/60">
-              Chưa quen thao tác bản đồ? Bấm thẳng vào tỉnh mày muốn khám phá bên dưới.
+              Chưa quen thao tác bản đồ? Bấm thẳng vào tỉnh bạn muốn khám phá bên dưới.
             </p>
           </div>
           <Link

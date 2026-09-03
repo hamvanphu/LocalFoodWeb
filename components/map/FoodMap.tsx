@@ -3,25 +3,21 @@
 import { useCallback, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
-import Map, {
-  Source,
-  Layer,
-  Popup,
-  type MapLayerMouseEvent,
-  type MapRef,
-} from "react-map-gl/maplibre";
+import Map, { Marker, Popup, type MapRef, type ViewStateChangeEvent } from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { Hand } from "lucide-react";
 import type { FeatureCollection, Point } from "geojson";
 import {
-  HERO_BUBBLE_LAYER,
-  HERO_BUBBLE_LABEL_LAYER,
-  PROVINCE_PIN_LAYER,
   VIETNAM_CENTER,
   VIETNAM_INITIAL_ZOOM,
+  HERO_MARKER_SIZE,
+  PIN_MARKER_SIZE,
+  heroOpacityAtZoom,
+  pinOpacityAtZoom,
   maptilerStyleUrl,
 } from "./mapStyle";
 import MapToolbar from "./MapToolbar";
+import DishMarker from "./DishMarker";
 import type { ProvinceMapProperties } from "@/lib/geo";
 
 interface FoodMapProps {
@@ -29,11 +25,10 @@ interface FoodMapProps {
   provincePins: FeatureCollection<Point, ProvinceMapProperties>;
 }
 
-const INTERACTIVE_LAYER_IDS = ["hero-bubbles", "province-pins"];
-
 export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
   const router = useRouter();
   const mapRef = useRef<MapRef | null>(null);
+  const [zoom, setZoom] = useState(VIETNAM_INITIAL_ZOOM);
   const [hovered, setHovered] = useState<{
     lng: number;
     lat: number;
@@ -42,24 +37,16 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
   const [interacted, setInteracted] = useState(false);
 
   const styleUrl = useMemo(() => maptilerStyleUrl(), []);
+  const heroOpacity = heroOpacityAtZoom(zoom);
+  const pinOpacity = pinOpacityAtZoom(zoom);
 
-  const handleClick = useCallback(
-    (event: MapLayerMouseEvent) => {
-      const feature = event.features?.[0];
-      const slug = feature?.properties?.slug as string | undefined;
-      if (slug) router.push(`/provinces/${slug}`);
-    },
+  const goToProvince = useCallback(
+    (slug: string) => router.push(`/provinces/${slug}`),
     [router],
   );
 
-  const handleMove = useCallback((event: MapLayerMouseEvent) => {
-    const feature = event.features?.[0];
-    if (!feature || feature.geometry.type !== "Point") {
-      setHovered(null);
-      return;
-    }
-    const [lng, lat] = feature.geometry.coordinates as [number, number];
-    setHovered({ lng, lat, props: feature.properties as ProvinceMapProperties });
+  const handleMove = useCallback((e: ViewStateChangeEvent) => {
+    setZoom(e.viewState.zoom);
   }, []);
 
   return (
@@ -77,46 +64,81 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
         }}
         mapStyle={styleUrl}
         style={{ width: "100%", height: "100%" }}
-        interactiveLayerIds={INTERACTIVE_LAYER_IDS}
-        cursor={hovered ? "pointer" : "grab"}
-        onClick={handleClick}
-        onMouseMove={handleMove}
-        onMouseLeave={() => setHovered(null)}
+        onMove={handleMove}
       >
-      <Source id="hero-bubbles" type="geojson" data={heroBubbles}>
-        <Layer id="hero-bubbles" {...HERO_BUBBLE_LAYER} />
-        <Layer id="hero-bubble-labels" {...HERO_BUBBLE_LABEL_LAYER} />
-      </Source>
+        {heroOpacity > 0.01 &&
+          heroBubbles.features.map((f) => {
+            const [lng, lat] = f.geometry.coordinates;
+            const p = f.properties;
+            return (
+              <Marker key={`hero-${p.slug}`} longitude={lng} latitude={lat} anchor="center">
+                <div className="flex flex-col items-center gap-1">
+                  <DishMarker
+                    slug={p.slug}
+                    name={`${p.name} — ${p.heroDishName}`}
+                    imageUrl={p.heroDishImageUrl}
+                    size={HERO_MARKER_SIZE}
+                    opacity={heroOpacity}
+                    onClick={() => goToProvince(p.slug)}
+                    onMouseEnter={() => setHovered({ lng, lat, props: p })}
+                    onMouseLeave={() => setHovered(null)}
+                  />
+                  <span
+                    style={{ opacity: heroOpacity }}
+                    className="pointer-events-none whitespace-nowrap rounded-pill bg-surface/90 px-2 py-0.5 text-[11px] font-medium text-ink shadow-soft"
+                  >
+                    {p.heroDishName}
+                  </span>
+                </div>
+              </Marker>
+            );
+          })}
 
-      <Source id="province-pins" type="geojson" data={provincePins}>
-        <Layer id="province-pins" {...PROVINCE_PIN_LAYER} />
-      </Source>
+        {pinOpacity > 0.01 &&
+          provincePins.features.map((f) => {
+            const [lng, lat] = f.geometry.coordinates;
+            const p = f.properties;
+            return (
+              <Marker key={`pin-${p.slug}`} longitude={lng} latitude={lat} anchor="center">
+                <DishMarker
+                  slug={p.slug}
+                  name={`${p.name} — ${p.heroDishName}`}
+                  imageUrl={p.heroDishImageUrl}
+                  size={PIN_MARKER_SIZE}
+                  opacity={pinOpacity}
+                  onClick={() => goToProvince(p.slug)}
+                  onMouseEnter={() => setHovered({ lng, lat, props: p })}
+                  onMouseLeave={() => setHovered(null)}
+                />
+              </Marker>
+            );
+          })}
 
-      <AnimatePresence>
-        {hovered && (
-          <Popup
-            longitude={hovered.lng}
-            latitude={hovered.lat}
-            closeButton={false}
-            closeOnClick={false}
-            offset={12}
-            anchor="bottom"
-          >
-            <motion.div
-              className="p-1 text-sm"
-              initial={{ opacity: 0, scale: 0.85, y: 4 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.85 }}
-              transition={{ duration: 0.15, ease: "easeOut" }}
+        <AnimatePresence>
+          {hovered && (
+            <Popup
+              longitude={hovered.lng}
+              latitude={hovered.lat}
+              closeButton={false}
+              closeOnClick={false}
+              offset={12}
+              anchor="bottom"
             >
-              <p className="font-display font-semibold text-ink">{hovered.props.name}</p>
-              {hovered.props.heroDishName && (
-                <p className="text-ink/70">{hovered.props.heroDishName}</p>
-              )}
-            </motion.div>
-          </Popup>
-        )}
-      </AnimatePresence>
+              <motion.div
+                className="p-1 text-sm"
+                initial={{ opacity: 0, scale: 0.85, y: 4 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.85 }}
+                transition={{ duration: 0.15, ease: "easeOut" }}
+              >
+                <p className="font-display font-semibold text-ink">{hovered.props.name}</p>
+                {hovered.props.heroDishName && (
+                  <p className="text-ink/70">{hovered.props.heroDishName}</p>
+                )}
+              </motion.div>
+            </Popup>
+          )}
+        </AnimatePresence>
       </Map>
 
       <AnimatePresence>

@@ -12,7 +12,7 @@ export default function NotFound() {
         Không tìm thấy tỉnh này trên bản đồ
       </h1>
       <p className="mt-3 max-w-md text-ink/70">
-        Trang mày tìm không tồn tại — có thể tỉnh này chưa có dữ liệu, hoặc
+        Trang bạn tìm không tồn tại — có thể tỉnh này chưa có dữ liệu, hoặc
         đường dẫn bị gõ sai. Quay lại bản đồ để khám phá các tỉnh đã có nhé.
       </p>
       <Link href="/" className="mt-6">

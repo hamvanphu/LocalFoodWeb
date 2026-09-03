@@ -25,6 +25,20 @@
 | **W1-11b** | **(PM bổ sung, Cổng hiểu bước [4])** Performance check bằng Lighthouse trên trang chủ + 1 trang tỉnh: đo LCP/FCP/bundle size, kiểm tra NFR "LCP < 2.5s" có đạt không (rủi ro: Framer Motion + nhiều ảnh làm chậm) | Báo cáo Lighthouse, xử lý nếu vượt ngưỡng | W1-10 | 0.5 ngày |
 | W1-12 | Hoàn thiện `RISK-LF.md`, `DELEGATION-MAP-LF.md`, `DOR-LF.md`, chuẩn bị hồ sơ viva (RTM, telemetry, Weekly Report) | Artefact bước [6]-[10] | Song song, chốt cuối | 1 ngày |
 
+**2 điểm sau W1-11 → ĐÃ SỬA (2026-09-03):** (1) thay "mày" → "bạn" ở
+`app/not-found.tsx` + `app/page.tsx` (2 chỗ, đã grep toàn bộ `app`/`components`
+xác nhận sạch); (2) bản đồ đổi từ chấm tròn đơn sắc sang **marker ảnh món ăn
+thật** (component `DishMarker.tsx`, dùng `react-map-gl` `<Marker>` thay
+`<Source>/<Layer>` GL cũ) — món không có ảnh vẫn fallback gradient +
+icon, khớp `ImageWithFallback`. Build sạch, verify crossfade zoom + click
+điều hướng vẫn đúng.
+
+**W1-11 → PASS (2026-09-03).** PM test toàn bộ checklist `SIT-UAT-LF.md`,
+xác nhận đạt hết — kèm 2 điểm cần sửa (không phải fail chức năng, mà UX/nội
+dung): (1) trang 404 dùng từ "mày" — giọng văn nội bộ giữa PM-AI lọt vào
+copy hiển thị cho người dùng thật, phải sửa thân thiện hơn; (2) bubble bản
+đồ nên dùng ảnh món ăn thật thay vì chấm tròn đơn sắc.
+
 **⚠️ Cảnh báo sớm (không đợi tới bước [5] mới nói):** cộng thô các task Wave 1
 đã ra khoảng **11-12 ngày công việc thực** (sau khi thêm W1-11a/W1-11b theo
 Cổng hiểu bước [4]), trong khi hạn còn ~2 tuần lịch (10 ngày làm việc nếu

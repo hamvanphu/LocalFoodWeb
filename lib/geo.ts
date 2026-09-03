@@ -8,6 +8,7 @@ export interface ProvinceMapProperties {
   name: string;
   region: Province["region"];
   heroDishName: string;
+  heroDishImageUrl: string | null;
 }
 
 function toPointFeature(province: Province): Feature<Point, ProvinceMapProperties> {
@@ -20,6 +21,7 @@ function toPointFeature(province: Province): Feature<Point, ProvinceMapPropertie
       name: province.name,
       region: province.region,
       heroDishName: heroDish?.name ?? "",
+      heroDishImageUrl: heroDish?.images[0]?.url ?? null,
     },
   };
 }

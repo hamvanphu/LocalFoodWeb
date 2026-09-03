@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { UtensilsCrossed } from "lucide-react";
 import { placeholderGradientFor } from "@/lib/image-fallback";
 
@@ -43,17 +44,21 @@ export default function DishMarker({
         pointerEvents: opacity < 0.1 ? "none" : "auto",
         transition: "opacity 200ms ease-out, transform 150ms ease-out",
       }}
-      className={`group flex items-center justify-center rounded-full border-2 border-white shadow-lifted ${
+      className={`group relative flex items-center justify-center overflow-hidden rounded-full border-2 border-white shadow-lifted ${
         showPhoto ? "" : `bg-gradient-to-br ${placeholderGradientFor(slug)}`
       } hover:scale-110 focus-visible:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-chili`}
     >
       {showPhoto ? (
-        // Marker nhỏ, cố định kích thước — dùng <img> thuần thay next/image để tránh overhead tối ưu hoá không cần thiết cho ảnh tí hon.
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
+        // next/image dù marker nhỏ vẫn cần thiết: tránh tải nguyên ảnh gốc Wikimedia
+        // (thường vài MB) chỉ để hiện thumbnail ~50px — bài học từ Lighthouse audit
+        // W1-11b (14MB/16MB page weight do <img> thuần trước đó gây ra).
+        <Image
           src={imageUrl}
           alt=""
-          className="h-full w-full rounded-full object-cover"
+          fill
+          sizes={`${size}px`}
+          quality={60}
+          className="rounded-full object-cover"
           onError={() => setFailed(true)}
         />
       ) : (

@@ -41,7 +41,7 @@ export default function HomePage() {
             <h2 className="font-display text-2xl font-semibold text-ink">
               Tỉnh nổi bật
             </h2>
-            <p className="mt-1 text-sm text-ink/60">
+            <p className="mt-1 text-sm text-ink/70">
               Chưa quen thao tác bản đồ? Bấm thẳng vào tỉnh bạn muốn khám phá bên dưới.
             </p>
           </div>

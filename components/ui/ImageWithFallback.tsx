@@ -57,7 +57,11 @@ export default function ImageWithFallback({
   priority = false,
 }: ImageWithFallbackProps) {
   const [loadError, setLoadError] = useState(false);
-  const [loaded, setLoaded] = useState(false);
+  // Ảnh priority (khả năng cao là LCP) hiện ngay, không chờ hiệu ứng blur-up —
+  // opacity:0 lúc chờ khiến trình duyệt không tính là "đã paint", đẩy LCP trễ
+  // hẳn vài giây (phát hiện qua Lighthouse W1-11b). Chỉ ảnh không priority
+  // (dưới màn hình, ít quan trọng cho LCP) mới cần hiệu ứng mượt lúc tải.
+  const [loaded, setLoaded] = useState(priority);
   const primary = images[0];
 
   if (!primary || loadError) {

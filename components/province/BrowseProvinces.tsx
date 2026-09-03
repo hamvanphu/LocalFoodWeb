@@ -28,7 +28,7 @@ export default function BrowseProvinces({ provinces }: { provinces: Province[] }
   return (
     <div>
       <div className="mb-8 flex flex-wrap items-center gap-2">
-        <span className="flex items-center gap-1.5 text-sm font-medium text-ink/60">
+        <span className="flex items-center gap-1.5 text-sm font-medium text-ink/70">
           <CalendarDays className="h-4 w-4" />
           Lọc theo mùa/lễ hội:
         </span>
@@ -57,7 +57,7 @@ export default function BrowseProvinces({ provinces }: { provinces: Province[] }
             <section key={region}>
               <h2 className="mb-4 font-display text-xl font-semibold text-ink">
                 Miền {region}{" "}
-                <span className="text-sm font-normal text-ink/40">({items.length} tỉnh)</span>
+                <span className="text-sm font-normal text-ink/65">({items.length} tỉnh)</span>
               </h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 {items.map((province, index) => (

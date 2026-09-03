@@ -34,8 +34,8 @@ export default function SearchBar({ index }: { index: SearchEntry[] }) {
 
   return (
     <div className="relative w-full max-w-xs">
-      <div className="flex items-center gap-2 rounded-pill border border-border bg-surface px-3 py-1.5 shadow-soft focus-within:border-chili/40">
-        <Search className="h-4 w-4 shrink-0 text-ink/40" />
+      <div className="flex items-center gap-2 rounded-pill border border-border bg-surface px-3 py-1.5 shadow-soft focus-within:border-chili focus-within:ring-2 focus-within:ring-chili/30">
+        <Search className="h-4 w-4 shrink-0 text-ink/60" />
         <input
           ref={inputRef}
           value={query}
@@ -56,7 +56,7 @@ export default function SearchBar({ index }: { index: SearchEntry[] }) {
               setQuery("");
               inputRef.current?.focus();
             }}
-            className="shrink-0 text-ink/40 hover:text-ink"
+            className="shrink-0 text-ink/70 hover:text-ink"
           >
             <X className="h-3.5 w-3.5" />
           </button>
@@ -82,11 +82,11 @@ export default function SearchBar({ index }: { index: SearchEntry[] }) {
                   {entry.type === "province" ? (
                     <MapPin className="h-4 w-4 shrink-0 text-chili" />
                   ) : (
-                    <UtensilsCrossed className="h-4 w-4 shrink-0 text-amber" />
+                    <UtensilsCrossed className="h-4 w-4 shrink-0 text-amber-dark" />
                   )}
                   <span>
                     <span className="font-medium text-ink">{entry.label}</span>
-                    <span className="ml-1.5 text-ink/50">{entry.subtitle}</span>
+                    <span className="ml-1.5 text-ink/65">{entry.subtitle}</span>
                   </span>
                 </button>
               </li>

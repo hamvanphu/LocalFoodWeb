@@ -18,12 +18,12 @@ export default function ProvinceHero({ province, heroDish }: { province: Provinc
       <div className="mx-auto max-w-6xl px-6">
         <Link
           href="/"
-          className="mt-4 inline-flex items-center gap-1.5 text-sm text-ink/60 hover:text-ink"
+          className="mt-4 inline-flex items-center gap-1.5 text-sm text-ink/70 hover:text-ink"
         >
           <ArrowLeft className="h-4 w-4" />
           Quay lại bản đồ
         </Link>
-        <p className="mt-4 text-xs uppercase tracking-wide text-amber">
+        <p className="mt-4 text-xs uppercase tracking-wide text-amber-dark">
           Miền {province.region}
         </p>
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">
@@ -31,12 +31,12 @@ export default function ProvinceHero({ province, heroDish }: { province: Provinc
         </h1>
         <p className="mt-3 max-w-2xl text-ink/70">{province.summary}</p>
         {province.summarySourceRefs.length > 0 && (
-          <p className="mt-2 text-xs text-ink/40">
+          <p className="mt-2 text-xs text-ink/65">
             Nguồn tham chiếu:{" "}
             {province.summarySourceRefs.map((ref, i) => (
               <span key={ref.url}>
                 {i > 0 && ", "}
-                <a href={ref.url} target="_blank" rel="noreferrer" className="underline hover:text-ink/60">
+                <a href={ref.url} target="_blank" rel="noreferrer" className="underline hover:text-ink/80">
                   {ref.label}
                 </a>
               </span>

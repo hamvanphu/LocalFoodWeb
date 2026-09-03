@@ -97,7 +97,7 @@ export default function DishCard({
         </div>
 
         <div className="rounded-xl bg-turmeric/10 p-4">
-          <h4 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-amber">
+          <h4 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-amber-dark">
             <Utensils className="h-4 w-4" aria-hidden="true" />
             Cách ăn gợi ý
           </h4>
@@ -105,12 +105,12 @@ export default function DishCard({
         </div>
 
         {dish.sourceRefs.length > 0 && (
-          <p className="text-xs text-ink/40">
+          <p className="text-xs text-ink/65">
             Nguồn tham chiếu:{" "}
             {dish.sourceRefs.map((ref, i) => (
               <span key={ref.url}>
                 {i > 0 && ", "}
-                <a href={ref.url} target="_blank" rel="noreferrer" className="underline hover:text-ink/60">
+                <a href={ref.url} target="_blank" rel="noreferrer" className="underline hover:text-ink/80">
                   {ref.label}
                 </a>
               </span>

@@ -33,7 +33,7 @@ export default function ProvinceDishExplorer({
         <button
           onClick={() => setMode("overview")}
           className={`flex items-center gap-1.5 rounded-pill px-4 py-2 text-sm font-medium transition-colors ${
-            mode === "overview" ? "bg-chili text-white" : "text-ink/60 hover:text-ink"
+            mode === "overview" ? "bg-chili text-white" : "text-ink/70 hover:text-ink"
           }`}
         >
           <LayoutGrid className="h-4 w-4" />
@@ -42,7 +42,7 @@ export default function ProvinceDishExplorer({
         <button
           onClick={() => setMode("timeline")}
           className={`flex items-center gap-1.5 rounded-pill px-4 py-2 text-sm font-medium transition-colors ${
-            mode === "timeline" ? "bg-chili text-white" : "text-ink/60 hover:text-ink"
+            mode === "timeline" ? "bg-chili text-white" : "text-ink/70 hover:text-ink"
           }`}
         >
           <GalleryHorizontal className="h-4 w-4" />
@@ -74,7 +74,7 @@ export default function ProvinceDishExplorer({
       <Sheet open={selected !== null} onClose={() => setSelected(null)}>
         {selected && (
           <div>
-            <p className="px-6 pt-2 text-xs uppercase tracking-wide text-ink/40">
+            <p className="px-6 pt-2 text-xs uppercase tracking-wide text-ink/65">
               {provinceName} · Món ăn đặc trưng
             </p>
             <div className="p-6 pt-3">

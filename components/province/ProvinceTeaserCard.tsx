@@ -42,7 +42,7 @@ export default function ProvinceTeaserCard({
           />
         </div>
         <div className="p-4">
-          <p className="text-xs font-medium uppercase tracking-wide text-amber">
+          <p className="text-xs font-medium uppercase tracking-wide text-amber-dark">
             Miền {province.region}
           </p>
           <p className="mt-1 font-display text-lg font-semibold text-ink transition-colors group-hover:text-chili">

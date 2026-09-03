@@ -9,7 +9,7 @@ export default function SiteFooter() {
           <UtensilsCrossed className="h-5 w-5 text-chili" />
           Local Food
         </div>
-        <p className="max-w-md text-sm text-ink/60">
+        <p className="max-w-md text-sm text-ink/70">
           Dự án cá nhân giới thiệu ẩm thực địa phương Việt Nam. Ảnh món ăn
           dùng nguồn Wikimedia Commons theo giấy phép Creative Commons, ghi
           chú nguồn tại từng ảnh. Nội dung đối chiếu nguồn tham chiếu chính

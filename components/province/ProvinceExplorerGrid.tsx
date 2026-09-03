@@ -19,7 +19,7 @@ export default function ProvinceExplorerGrid({ provinces }: { provinces: Provinc
   return (
     <div>
       <div className="mb-6 flex flex-wrap items-center gap-2">
-        <span className="flex items-center gap-1.5 text-sm font-medium text-ink/60">
+        <span className="flex items-center gap-1.5 text-sm font-medium text-ink/70">
           <CalendarDays className="h-4 w-4" />
           Lọc theo mùa/lễ hội:
         </span>

@@ -35,6 +35,14 @@ bước [5] EST, không quyết định vội ở đây.
 
 ## Wave 1 mở rộng — sau yêu cầu mới (2026-08-26): Review/Rating + Search + Filter mùa/lễ hội
 
+**Cập nhật 2026-09-03 (PM quay lại sau nghỉ, chỉ còn 6 ngày tới hạn):**
+**W2-1 → W2-6 (Review/Rating, phụ thuộc Supabase) bị HOÃN sang phase-2**,
+chưa code dòng nào nên không mất công cắt. Ưu tiên dồn cho W1-10 (6 tỉnh
+còn lại) + W1-11/11a/11b (QA/A11y/Performance) + W1-12 (hồ sơ viva) —
+đúng phần lõi bắt buộc, không phải tính năng thêm. `ARCH-LF.md` D3 (quyết
+định thêm Supabase) giữ nguyên trong hồ sơ làm bằng chứng đã cân nhắc đúng
+quy trình, nhưng **không thực thi** trong bản nộp lần này.
+
 | # | Task | Output | Phụ thuộc | Ước lượng thô |
 |---|---|---|---|---|
 | W2-1 | **PM** tạo Supabase project, lấy URL + anon key | `.env.local` có `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY` | — | PM tự làm, ~10 phút |

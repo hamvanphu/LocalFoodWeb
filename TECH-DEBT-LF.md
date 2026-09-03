@@ -7,7 +7,7 @@
 | # | Việc | Trạng thái | Ảnh hưởng nếu chưa có | Cách lấy |
 |---|---|---|---|---|
 | 1 | **MapTiler API key** | ❌ Chưa có (`.env.local` đang rỗng) | Bản đồ chạy bằng style demo công khai của MapLibre — dễ bị rate-limit (429) khi tải nhiều, chất lượng nền bản đồ thấp hơn hẳn. Đã ghi ở `RISK-LF.md` R6, `DELEGATION-MAP-LF.md`. **Bắt buộc phải có trước W1-11 (QA pass cuối)** — điều kiện PM tự chốt ở Cổng hiểu bước [7]. | Đăng ký free tại https://cloud.maptiler.com/account/keys/ → copy key → dán vào `D:\01_Study\07_Local_Food\.env.local`, dòng `NEXT_PUBLIC_MAPTILER_KEY=...` → restart `pnpm dev` |
-| 2 | **Supabase URL + anon key** | ❌ Chưa có | Toàn bộ tính năng Review/Rating (yêu cầu 2026-08-26) **chưa code được** — đây là việc kế tiếp trong hàng đợi, đang tạm dừng chờ đúng mục này. | Đăng ký free tại https://supabase.com → New Project → đợi khởi tạo xong (~2 phút) → vào Project Settings → API → copy **Project URL** và **anon public key** → dán vào `.env.local`: `NEXT_PUBLIC_SUPABASE_URL=...` và `NEXT_PUBLIC_SUPABASE_ANON_KEY=...` |
+| 2 | ~~Supabase URL + anon key~~ | **HOÃN (2026-09-03)** — PM quyết định bỏ Review/Rating khỏi bản nộp, chỉ còn 6 ngày tới hạn. Không còn là mục chặn. | Review/Rating chuyển hẳn sang phase-2 (sau khi nộp bài) | Nếu sau này muốn làm lại: xem `ARCH-LF.md` D3 đã có sẵn thiết kế schema + RLS |
 
 ## 🟡 Đã biết, chưa xử lý (không chặn code, nhưng cần nhớ)
 

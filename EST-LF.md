@@ -84,6 +84,15 @@ này:
 
 ---
 
+## Cập nhật khi PM quay lại (2026-09-03) — còn 6 ngày tới hạn 2026-09-09
+
+Review/Rating (W2-1→W2-6) hoãn sang phase-2 — cắt bớt effort đáng kể so với
+lần cảnh báo trước. Việc còn lại tập trung vào lõi bắt buộc: W1-10 (6 tỉnh,
+~1 ngày/tỉnh theo ước lượng gốc = 6 ngày công việc thực) + W1-11/11a/11b
+(~2h) + W1-12 (~2h). **Sát nút nhưng khả thi nếu làm liên tục, không còn
+buffer cho phát sinh mới** — nếu có yêu cầu thêm nữa trong 6 ngày này, gần
+như chắc chắn phải cắt số tỉnh (quay lại Phương án B).
+
 ## Cập nhật sau yêu cầu mới — Review/Rating + Search + Filter mùa (2026-08-26)
 
 Checkpoint 2026-08-31 (nền tảng W1-1→W1-9) đã đạt **đúng hạn, cùng ngày**

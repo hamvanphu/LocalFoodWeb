@@ -1,0 +1,126 @@
+{
+  "slug": "ho-chi-minh",
+  "code": "VN-SG",
+  "name": "TP. Hồ Chí Minh",
+  "region": "Nam",
+  "centroid": [106.69534, 10.74067],
+  "summary": "TP. Hồ Chí Minh (Sài Gòn xưa) là trung tâm ẩm thực sôi động bậc nhất Nam Bộ, nơi hội tụ và biến tấu món ăn của nhiều vùng miền và cộng đồng người Hoa, người Khmer. Ẩm thực nơi đây thiên về vị ngọt, béo, dùng nhiều rau thơm và nước chấm pha chế công phu, đặc trưng bởi văn hóa ăn hàng, ăn đêm trên vỉa hè. Cơm tấm, bánh mì, hủ tiếu là những món ăn gắn liền với nhịp sống đô thị của thành phố.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_t%E1%BA%A5m", "label": "Cơm tấm – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "com-tam",
+  "dishes": [
+    {
+      "slug": "com-tam",
+      "name": "Cơm tấm",
+      "isHero": true,
+      "tasteTags": ["savory", "grilled", "street-food"],
+      "description": "Cơm tấm là món ăn biểu tượng của Sài Gòn, ra đời từ những hạt gạo vỡ (tấm) mà phu gạo quét lại sau mỗi ngày làm việc ở các nhà máy xay xát vào đầu thế kỷ 20. Từ món ăn bình dân của người lao động nghèo, cơm tấm dần trở thành đặc sản được yêu thích khắp thành phố, ăn được cả sáng, trưa, tối. Người Sài Gòn xem cơm tấm thân thuộc như người Hà Nội xem phở, có mặt từ quán vỉa hè bình dân đến nhà hàng sang trọng.",
+      "keyIngredients": ["Gạo tấm (gạo vỡ)", "Sườn heo nướng", "Bì heo", "Chả trứng hấp", "Trứng ốp la", "Đồ chua (cà rốt, củ cải)", "Nước mắm chua ngọt", "Mỡ hành"],
+      "prepOutline": [
+        "Vo và nấu gạo tấm bằng nồi đất hoặc nồi gang cho hạt cơm khô, tơi, thơm.",
+        "Ướp sườn heo với sả, tỏi, đường, nước mắm rồi nướng trên than hoa đến khi cháy cạnh, thơm phức.",
+        "Làm bì bằng thịt heo và da heo thái sợi trộn thính rang.",
+        "Hấp chả trứng cùng nấm mèo, miến cho chín mềm, thơm béo.",
+        "Pha nước mắm chua ngọt loãng, làm đồ chua từ cà rốt và củ cải ngâm giấm đường.",
+        "Xếp cơm ra đĩa cùng sườn, bì, chả trứng, trứng ốp la, dưa leo, đồ chua và rưới mỡ hành."
+      ],
+      "howToEat": "Cơm tấm được ăn bằng muỗng và nĩa thay vì đũa; nước mắm chua ngọt được rưới trực tiếp lên đĩa cơm chứ không chấm riêng, ăn kèm đồ chua và dưa leo để cân bằng vị béo của sườn nướng và mỡ hành.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/C%C6%A1m_t%E1%BA%A5m_s%C6%B0%E1%BB%9Dn_c%C3%A2y.JPG",
+          "attribution": "Tokeisan (Vietnamese Wikipedia), via Wikimedia Commons",
+          "license": "Public domain"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_t%E1%BA%A5m", "label": "Cơm tấm – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "hu-tieu-nam-vang",
+      "name": "Hủ tiếu Nam Vang",
+      "isHero": false,
+      "tasteTags": ["savory", "seafood", "noodle-soup", "street-food"],
+      "description": "Hủ tiếu Nam Vang có nguồn gốc từ Phnom Penh (Nam Vang) của người Khmer, được cộng đồng người Hoa - Khmer mang vào Sài Gòn và trở thành một trong những món hủ tiếu đặc trưng nhất của thành phố. Món ăn kết hợp giữa sợi hủ tiếu dai, nước lèo ninh từ xương heo, cùng lòng heo, tôm, mực, tạo nên hương vị đậm đà mang dấu ấn giao thoa văn hóa ẩm thực Khmer - Hoa - Việt.",
+      "keyIngredients": ["Sợi hủ tiếu dai (bột lọc)", "Xương heo", "Thịt bằm", "Lòng heo (gan, phèo)", "Tôm", "Mực", "Trứng cút", "Tỏi phi", "Hẹ, giá, rau thơm"],
+      "prepOutline": [
+        "Hầm xương heo nhiều giờ để lấy nước lèo trong, ngọt tự nhiên.",
+        "Trụng sợi hủ tiếu qua nước sôi cho vừa chín tới, dai mềm.",
+        "Sơ chế và luộc chín gan heo, tôm, thịt bằm, trứng cút.",
+        "Phi tỏi vàng thơm để rắc lên tô làm dậy mùi.",
+        "Xếp hủ tiếu vào tô cùng các loại topping rồi chan nước lèo nóng lên trên.",
+        "Rắc hành lá, hẹ, tiêu và tỏi phi, dọn kèm giá và rau thơm."
+      ],
+      "howToEat": "Hủ tiếu Nam Vang được ăn nóng ngay khi vừa chan nước lèo để sợi hủ tiếu không bị mềm nhũn; thực khách thường vắt thêm chanh, thêm ớt hoặc tương ớt và trộn đều với giá, hẹ trước khi thưởng thức; có thể chọn ăn khô (nước lèo để riêng) hoặc ăn nước tùy thích.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Hu_Tieu_Nam_Vang.jpg",
+          "attribution": "Dianne Flor Reyno, via Wikimedia Commons",
+          "license": "CC BY 2.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/H%E1%BB%A7_ti%E1%BA%BFu_Nam_Vang", "label": "Hủ tiếu Nam Vang – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-mi-sai-gon",
+      "name": "Bánh mì Sài Gòn",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh mì Sài Gòn bắt nguồn từ chiếc baguette Pháp du nhập vào Việt Nam thời thuộc địa thế kỷ 19, được người Sài Gòn cải biến thành ổ bánh ngắn hơn (khoảng 30-40cm), vỏ giòn, ruột rỗng để nhồi nhân. Hình thức bánh mì kẹp phổ biến ngày nay được cho là định hình rõ nét từ khoảng năm 1958, khi các tiệm bánh mì bắt đầu sáng tạo cách kẹp thịt, pate vào trong ổ bánh, tạo nên món ăn nhanh mang đậm bản sắc Việt.",
+      "keyIngredients": ["Bánh mì baguette Việt", "Pate gan", "Thịt heo quay/nướng", "Chả lụa", "Đồ chua (cà rốt, củ cải)", "Dưa leo", "Ngò rí, ớt", "Nước sốt (mayonnaise, xì dầu)"],
+      "prepOutline": [
+        "Nướng bánh mì cho vỏ giòn rụm, ruột xốp nhẹ.",
+        "Chuẩn bị pate gan, thịt heo quay hoặc nướng, chả lụa thái lát.",
+        "Làm đồ chua từ cà rốt và củ cải bào sợi ngâm giấm đường.",
+        "Xẻ dọc ổ bánh, phết đều pate và mayonnaise/sốt lên hai mặt bánh.",
+        "Xếp lần lượt thịt, chả, đồ chua, dưa leo, ngò rí và ớt vào giữa.",
+        "Rưới thêm nước sốt hoặc chút xì dầu tùy khẩu vị trước khi gói lại."
+      ],
+      "howToEat": "Bánh mì nên được ăn ngay sau khi làm để giữ độ giòn của vỏ bánh, thường dùng tay cầm trực tiếp, ăn nhanh gọn khi di chuyển hoặc trong bữa sáng, bữa xế trên vỉa hè Sài Gòn.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/B%C3%A1nh_m%C3%AC_%C4%91%E1%BA%B7c_tr%C6%B0ng_S%C3%A0ig%C3%B2n.JPG",
+          "attribution": "Namsaigon1, via Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_m%C3%AC_S%C3%A0i_G%C3%B2n", "label": "Bánh mì Sài Gòn – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-xeo-mien-nam",
+      "name": "Bánh xèo miền Nam",
+      "isHero": false,
+      "tasteTags": ["savory", "seafood", "herb-forward", "street-food"],
+      "description": "Bánh xèo là món bánh có nguồn gốc từ Việt Nam, tên gọi bắt nguồn từ âm thanh 'xèo xèo' phát ra khi đổ bột vào chảo nóng. Phiên bản miền Nam và miền Tây Nam Bộ nổi bật với lớp vỏ bánh giòn rụm pha bột nghệ vàng ươm, nhân tôm thịt đầy đặn kèm trứng, khác với bánh khoái miền Trung có lớp bột mỏng và ít giòn hơn. Đây là món ăn mang đậm bản sắc vùng sông nước, thường xuất hiện trong các bữa họp mặt gia đình, bạn bè.",
+      "keyIngredients": ["Bột gạo", "Bột nghệ", "Nước cốt dừa", "Tôm", "Thịt ba chỉ", "Giá đỗ", "Trứng", "Rau sống các loại (xà lách, diếp cá, tía tô)", "Nước mắm chua ngọt"],
+      "prepOutline": [
+        "Pha bột gạo với bột nghệ và nước cốt dừa cho lớp vỏ vàng, béo.",
+        "Xào sơ tôm, thịt ba chỉ thái mỏng cho săn lại.",
+        "Đổ một lớp bột mỏng vào chảo nóng, tráng đều rồi cho tôm, thịt, giá đỗ vào.",
+        "Đậy nắp hoặc để lửa vừa cho bánh chín giòn, cạnh bánh vàng ươm.",
+        "Gấp đôi bánh lại và lấy ra đĩa khi vỏ bánh vừa giòn tới.",
+        "Pha nước mắm chua ngọt và chuẩn bị đĩa rau sống ăn kèm."
+      ],
+      "howToEat": "Bánh xèo được cuốn cùng bánh tráng hoặc lá rau sống (xà lách, diếp cá, tía tô) rồi chấm ngập trong nước mắm chua ngọt pha tỏi ớt, ăn bằng tay khi bánh còn nóng giòn để cảm nhận trọn vẹn độ giòn của vỏ bánh.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/B%C3%A1nh_x%C3%A8o_with_n%C6%B0%E1%BB%9Bc_m%E1%BA%AFm.jpg",
+          "attribution": "Vivian D Nguyen, via Wikimedia Commons",
+          "license": "CC BY-SA 2.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_x%C3%A8o", "label": "Bánh xèo – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

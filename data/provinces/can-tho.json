@@ -1,0 +1,143 @@
+{
+  "slug": "can-tho",
+  "code": "VN-CT",
+  "name": "Cần Thơ",
+  "region": "Nam",
+  "centroid": [105.5285, 10.11558],
+  "summary": "Cần Thơ là trung tâm của Đồng bằng sông Cửu Long, nổi tiếng với chợ nổi Cái Răng và nền ẩm thực sông nước đậm chất miền Tây. Ẩm thực nơi đây xoay quanh nguồn thủy sản dồi dào, các loại mắm lên men lâu đời và thói quen ăn kèm rất nhiều rau thơm, khiến món ăn Cần Thơ vừa đậm đà vừa tươi mát.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/M%E1%BA%AFm_kho", "label": "Mắm kho – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "lau-mam",
+  "dishes": [
+    {
+      "slug": "lau-mam",
+      "name": "Lẩu mắm",
+      "isHero": true,
+      "tasteTags": ["savory", "seafood", "herb-forward"],
+      "description": "Lẩu mắm là món lẩu đặc trưng của miền Tây Nam Bộ, được nấu từ mắm cá lên men — thường là mắm cá sặc hoặc mắm cá linh — hòa cùng nước hầm xương heo ngọt thanh. Ở Cần Thơ và vùng Đồng bằng sông Cửu Long, món này gắn liền với văn hóa sông nước, nơi cá đồng và rau vườn luôn sẵn có quanh năm. Vị mắm đậm đà, hơi nồng đặc trưng được cân bằng bởi vị ngọt của nước hầm và vị tươi the của rất nhiều loại rau.",
+      "keyIngredients": [
+        "Mắm cá sặc hoặc mắm cá linh",
+        "Nước hầm xương heo",
+        "Cá lóc, cá basa hoặc cá kèo",
+        "Tôm, mực, thịt heo ba chỉ",
+        "Cà tím, đậu bắp",
+        "Sả, gừng, tỏi, ớt",
+        "Rau ăn kèm: bông súng, bông điên điển, kèo nèo, rau đắng, bắp chuối, rau muống"
+      ],
+      "prepOutline": [
+        "Mắm cá được nấu tan trong nước rồi lọc bỏ xương, lấy phần nước cốt đậm vị",
+        "Ninh nước hầm xương heo trong nhiều giờ để lấy vị ngọt tự nhiên rồi hòa với nước mắm đã lọc",
+        "Phi thơm sả, tỏi rồi nêm nếm lại nồi nước lẩu cho vừa ăn, thêm cà tím và đậu bắp",
+        "Chuẩn bị các loại hải sản, thịt và rất nhiều loại rau đặc trưng miền Tây để ăn kèm"
+      ],
+      "howToEat": "Nồi lẩu được đặt trên bếp giữ sôi liên tục; thực khách nhúng cá, tôm, mực, thịt và các loại rau vào nước lẩu đang sôi, ăn kèm bún tươi và chấm thêm nước mắm ớt hoặc chính nước lẩu.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/M%E1%BA%AFm_kho", "label": "Mắm kho (lẩu mắm) – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-xeo-can-tho",
+      "name": "Bánh xèo Cần Thơ",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food", "herb-forward"],
+      "description": "Bánh xèo là món bánh mặn phổ biến khắp Việt Nam, nhưng phiên bản miền Tây ở Cần Thơ có kích thước lớn, vỏ bánh giòn rụm nhờ bột gạo pha nghệ tươi và nước cốt dừa, còn nhân thường được biến tấu với đặc sản địa phương như ốc gạo. Bánh được cuốn cùng lá cải hoặc các loại rau đặc trưng của vùng, tạo nên hương vị béo bùi rất riêng của miền sông nước.",
+      "keyIngredients": [
+        "Bột gạo, bột nghệ tươi",
+        "Nước cốt dừa",
+        "Thịt heo, tôm",
+        "Giá đỗ, đậu xanh",
+        "Ốc gạo (biến thể đặc trưng Cần Thơ)",
+        "Rau sống, lá cải ăn kèm",
+        "Nước mắm chua ngọt"
+      ],
+      "prepOutline": [
+        "Ngâm gạo rồi xay cùng nghệ tươi, pha thêm nước cốt dừa để bột có màu vàng và vị béo",
+        "Đổ bột vào chảo nóng đã thoa dầu, tráng đều tay cho vỏ bánh mỏng và giòn",
+        "Cho nhân thịt, tôm, giá đỗ, đậu xanh (và ốc gạo nếu là biến thể địa phương) lên nửa mặt bánh",
+        "Gập đôi bánh lại, chiên đến khi vỏ giòn vàng rồi gắp ra đĩa"
+      ],
+      "howToEat": "Bánh xèo được ăn bằng tay, không dùng đũa: dùng lá cải hoặc bánh tráng cuốn một miếng bánh cùng rau sống, sau đó chấm ngập vào chén nước mắm chua ngọt pha theo kiểu miền Nam.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/B%C3%A1nh_x%C3%A8o_with_pork_sausage_and_shrimp_served_with_various_garnishes.jpg",
+          "attribution": "Ser Amantio di Nicolao / Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_x%C3%A8o", "label": "Bánh xèo – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "nem-nuong-cai-rang",
+      "name": "Nem nướng Cái Răng",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "herb-forward"],
+      "description": "Nem nướng Cái Răng là đặc sản gắn liền với khu chợ nổi Cái Răng của Cần Thơ, ra đời cách đây hơn nửa thế kỷ từ công thức của một người phụ nữ được dân trong vùng gọi là Tư Khem, sống bên bờ kênh Cái Răng. Khác với nem nướng Nha Trang, phiên bản Cần Thơ thường ăn kèm bánh hỏi Phong Điền mềm mịn cùng rất nhiều loại rau và trái cây chua chát đặc trưng miền Tây.",
+      "keyIngredients": [
+        "Thịt heo tươi quết nhuyễn cùng mỡ heo",
+        "Gia vị bí truyền (tỏi, tiêu, đường, nước mắm)",
+        "Bánh hỏi Phong Điền",
+        "Bánh tráng mỏng",
+        "Chuối chát, dưa leo, khế, dứa",
+        "Rau thơm các loại",
+        "Tương xay hoặc nước mắm chua cay để chấm"
+      ],
+      "prepOutline": [
+        "Thịt heo được quết nhuyễn cùng mỡ heo và gia vị bí truyền cho đến khi dẻo mịn",
+        "Vo thịt thành từng viên tròn nhỏ rồi xiên vào que tre",
+        "Nướng nem trên bếp than hồng cho đến khi viên nem vàng óng, dậy mùi thơm",
+        "Chuẩn bị bánh hỏi, bánh tráng, rau sống và nước chấm để dọn kèm"
+      ],
+      "howToEat": "Đặt viên nem nướng lên miếng bánh tráng cùng bánh hỏi, rau thơm, chuối chát, khế và dứa, cuốn lại rồi chấm vào chén tương xay đặc sệt hoặc nước mắm chua cay pha tỏi ớt.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/B%C3%A1nh_h%E1%BB%8Fi_nem_n%C6%B0%E1%BB%9Bng_%C4%83n_v%E1%BB%9Bi_b%C3%A1nh_tr%C3%A1ng_th%C3%A1ng_6_n%C4%83m_2018_%281%29.jpg",
+          "attribution": "Phương Huy / Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://chonoicantho.vn/am-thuc/nem-nuong-cai-rang/n903.html", "label": "Nem nướng Cái Răng – Chợ nổi Cần Thơ (cổng thông tin du lịch Cần Thơ)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "chuoi-nep-nuong",
+      "name": "Chuối nếp nướng",
+      "isHero": false,
+      "tasteTags": ["sweet", "street-food", "grilled"],
+      "description": "Chuối nếp nướng có gốc từ tỉnh Vĩnh Long lân cận rồi lan rộng khắp miền Tây, trong đó có Cần Thơ, trở thành món ăn vặt được yêu thích trên các con đường và cả ở chợ nổi. Chuối xiêm chín được bọc trong lớp nếp dẻo, gói lá chuối rồi nướng than cho đến khi lớp nếp bên ngoài xém giòn thơm, bên trong chuối chín mềm ngọt.",
+      "keyIngredients": [
+        "Chuối xiêm chín",
+        "Nếp (gạo nếp)",
+        "Nước cốt dừa",
+        "Đường, muối",
+        "Lá chuối để gói",
+        "Đậu phộng rang, mè rang"
+      ],
+      "prepOutline": [
+        "Chuối xiêm được lột vỏ, ướp với đường và muối khoảng 30 phút cho ngấm vị",
+        "Nếp được trộn cùng nước cốt dừa, đường, muối và một ít bột năng để tạo độ dẻo kết dính",
+        "Bọc từng trái chuối trong lớp nếp rồi gói ngoài bằng lá chuối",
+        "Nướng trên bếp than cho đến khi lớp lá xém thơm và nếp chín giòn nhẹ bên ngoài"
+      ],
+      "howToEat": "Chuối nếp nướng được bóc lá, cắt khúc hoặc để nguyên, rưới thêm nước cốt dừa béo ngậy và rắc đậu phộng, mè rang lên trên; có thể ăn nóng ngay khi vừa nướng xong.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Chu%E1%BB%91i_n%E1%BA%BFp_n%C6%B0%E1%BB%9Bng_v%E1%BB%9Bi_n%C6%B0%E1%BB%9Bc_c%E1%BB%91t_d%E1%BB%ABa.jpg",
+          "attribution": "Hồ Độc Hải / Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Chu%E1%BB%91i_n%E1%BA%BFp_n%C6%B0%E1%BB%9Bng", "label": "Chuối nếp nướng – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

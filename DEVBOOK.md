@@ -97,6 +97,16 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   làm Search (kết quả tìm kiếm món ăn cần trỏ thẳng vào đúng món). Xử lý:
   `ProvinceDishExplorer` đọc `window.location.hash` lúc mount, tự mở Sheet
   đúng món nếu khớp slug.
+- **`lib/provinces.ts` cache module-level trả dữ liệu cũ trong dev server**
+  (phát hiện khi thêm 6 tỉnh mới): sau khi thêm file JSON mới vào
+  `data/provinces/`, `pnpm dev` đang chạy sẵn từ trước **không tự thấy** file
+  mới — route `/provinces/an-giang` trả 404 dù file đã tồn tại trên đĩa,
+  parent do biến `cache` trong `lib/provinces.ts` chỉ đọc thư mục 1 lần rồi
+  giữ mãi trong bộ nhớ tiến trình Node, JSON đọc qua `fs` không nằm trong đồ
+  thị module mà webpack HMR theo dõi. Xác minh bằng cách restart `pnpm dev`
+  → route chạy đúng ngay. **Ghi nhớ cho việc thêm tỉnh sau này: phải restart
+  dev server sau khi thêm file `data/provinces/*.json` mới**, không tự nhận
+  qua hot-reload.
 - **Basemap dùng style demo công khai của MapLibre** (`demotiles.maplibre.org`)
   vì chưa có MapTiler key — style này rất tối giản (chỉ có màu nước biển,
   không có địa hình/nhãn), không phản ánh chất lượng bản đồ thật. Cần thay

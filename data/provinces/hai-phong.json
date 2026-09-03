@@ -1,0 +1,144 @@
+{
+  "slug": "hai-phong",
+  "code": "VN-HP",
+  "name": "Hải Phòng",
+  "region": "Bắc",
+  "centroid": [106.67351, 20.80007],
+  "summary": "Hải Phòng là thành phố cảng lớn nhất miền Bắc, nơi văn hóa ẩm thực mang đậm dấu ấn giao thoa giữa nếp sống miền biển, đồng bằng châu thổ sông Hồng và ảnh hưởng của thời Pháp thuộc. Ẩm thực đất Cảng nổi tiếng với vị thanh, không quá cay, quá mặn hay quá ngọt, đề cao độ tươi của nguyên liệu hải sản và nước mắm Cát Hải trứ danh. Bánh đa cua, nem cua bể, bánh mì cay và các món ốc là những cái tên gắn liền với hình ảnh Hải Phòng trong lòng thực khách khắp cả nước.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/%E1%BA%A8m_th%E1%BB%B1c_H%E1%BA%A3i_Ph%C3%B2ng", "label": "Ẩm thực Hải Phòng – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "banh-da-cua",
+  "dishes": [
+    {
+      "slug": "banh-da-cua",
+      "name": "Bánh đa cua",
+      "isHero": true,
+      "tasteTags": ["savory", "seafood", "noodle-soup", "herb-forward"],
+      "description": "Bánh đa cua là món ăn được xem là biểu tượng ẩm thực của Hải Phòng, hội tụ đầy đủ chất phác của vùng quê đồng bằng lẫn sự tinh tế của một đô thị cảng biển. Sợi bánh đa đỏ đặc trưng, dai và có màu nâu đỏ tự nhiên nhờ cách phơi truyền thống, nổi bật nhất là bánh đa được làm ở khu vực Dư Hàng Kênh. Nước dùng nấu từ xương ống, tôm khô, cà chua và me chua, hòa cùng gạch cua đồng béo ngậy tạo nên vị ngọt thanh, đậm đà rất riêng, khác hẳn phở hay bún của Hà Nội.",
+      "keyIngredients": [
+        "Bánh đa đỏ (bánh đa cua)",
+        "Cua đồng (chọn cua cái nhiều gạch)",
+        "Xương ống lợn",
+        "Tôm he khô",
+        "Cà chua, me chua",
+        "Rau muống, rau rút, rau nhút",
+        "Mắm tôm, chanh, ớt"
+      ],
+      "prepOutline": [
+        "Giã hoặc xay cua đồng, lọc lấy nước cua rồi đun sôi cho gạch cua kết thành từng mảng nổi lên trên",
+        "Ninh xương ống cùng tôm khô để lấy vị ngọt cho nước dùng",
+        "Phi hành, xào cà chua và me chua rồi hòa vào nồi nước dùng, nêm mắm muối cho vừa vị",
+        "Chần bánh đa đỏ và rau (rau muống, rau rút) qua nước sôi",
+        "Xếp bánh đa ra bát, cho rau, chả lá lốt hoặc chả cá nếu có, chan nước dùng và gạch cua lên trên"
+      ],
+      "howToEat": "Ăn nóng ngay khi vừa chan nước dùng, thường kèm rau sống, giá đỗ, chanh, ớt tươi và một chút mắm tôm hoặc mắm ớt để tăng vị đậm đà; nhiều quán còn ăn kèm chả lá lốt hoặc chả cá thu nướng.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/B%C3%A1nh_%C4%91a_cua_H%E1%BA%A3i_Ph%C3%B2ng_%2827.2_%281%29.jpg",
+          "attribution": "Phương Huy, Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_%C4%91a_cua", "label": "Bánh đa cua – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "nem-cua-be",
+      "name": "Nem cua bể",
+      "isHero": false,
+      "tasteTags": ["savory", "seafood", "street-food"],
+      "description": "Nem cua bể là món nem rán mang dấu ấn riêng của Hải Phòng, ra đời từ nguồn hải sản dồi dào của vùng biển Đồ Sơn, Cát Hải. Khác với nem rán hình trụ dài phổ biến ở nơi khác, nem cua bể được gói theo hình vuông đặc trưng, nhân gồm thịt cua bể tươi xé sợi hòa cùng tôm, thịt vai, miến, mộc nhĩ và giá đỗ, rán giòn rụm mà vẫn giữ được vị ngọt đậm của cua biển.",
+      "keyIngredients": [
+        "Bánh đa nem (bánh tráng gói nem)",
+        "Thịt cua bể",
+        "Tôm tươi",
+        "Thịt vai lợn",
+        "Miến dong, mộc nhĩ",
+        "Giá đỗ, hành lá",
+        "Trứng gà (làm chất kết dính)"
+      ],
+      "prepOutline": [
+        "Hấp hoặc luộc cua bể, gỡ lấy thịt và xé nhỏ bằng tay",
+        "Trộn thịt cua với tôm băm, thịt vai, miến ngâm mềm cắt khúc, mộc nhĩ thái sợi, giá đỗ và hành lá",
+        "Nêm gia vị và cho lòng đỏ trứng vào để nhân kết dính",
+        "Nhúng sơ bánh đa nem cho mềm, gói nhân thành hình vuông đặc trưng",
+        "Rán ngập dầu ở lửa vừa đến khi vỏ nem vàng giòn"
+      ],
+      "howToEat": "Nem cua bể ngon nhất khi ăn nóng trong khoảng 5-10 phút sau khi rán để vỏ còn giòn, thường ăn kèm bún tươi, rau sống và chấm nước mắm chua ngọt pha tỏi ớt.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Nem_cuaH%E1%BA%A3i_Ph%C3%B2ng_%28th%C3%A1ng_7_n%C4%83m_2018%29_%281%29.jpg",
+          "attribution": "Phương Huy, Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Nem_cua_b%E1%BB%83", "label": "Nem cua bể – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-mi-cay-hai-phong",
+      "name": "Bánh mì cay Hải Phòng",
+      "isHero": false,
+      "tasteTags": ["spicy", "savory", "street-food"],
+      "description": "Bánh mì cay, hay còn gọi là bánh mì que, ra đời từ những năm 1980 tại một cửa hàng nhỏ trong ngõ Khánh Lạp gần khu Hàng Kênh, Hải Phòng. Chiếc bánh chỉ dài hơn gang tay và to hơn ngón tay một chút, vỏ giòn rụm, bên trong phết pate béo ngậy và ăn kèm chí chương - loại tương ớt lên men gia truyền cay nồng đặc trưng, tạo nên món ăn vặt giá rẻ nhưng gây nghiện với nhiều thế hệ học sinh, sinh viên đất Cảng.",
+      "keyIngredients": [
+        "Bánh mì que (bánh mì que dài khoảng 20cm)",
+        "Pate gan lợn",
+        "Mỡ phần",
+        "Chí chương (tương ớt lên men từ ớt, cà chua, tỏi, muối)",
+        "Rau mùi"
+      ],
+      "prepOutline": [
+        "Làm pate từ gan, mỡ và thịt nạc lợn, hấp cách thủy khoảng 6 tiếng cho đến khi mềm béo, thơm",
+        "Ủ chí chương từ ớt tươi, cà chua, tỏi và muối theo công thức gia truyền cho lên men dậy vị",
+        "Nướng bánh mì que trong lò cho vỏ giòn",
+        "Xẻ dọc ổ bánh, phết đều pate và mỡ vào bên trong",
+        "Cho thêm rau mùi và chí chương theo khẩu vị"
+      ],
+      "howToEat": "Ăn nóng ngay khi bánh còn giòn, chấm hoặc rưới thêm chí chương cay tùy khẩu vị, thường nhâm nhi cùng trà đá hoặc trà nóng; người Hải Phòng hay mua một lúc nhiều chiếc vì bánh khá nhỏ.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/B%C3%A1nh_m%C3%AC_que.jpg",
+          "attribution": "Baoothersks, Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_m%C3%AC_cay", "label": "Bánh mì cay – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "oc-hai-phong",
+      "name": "Ốc Hải Phòng",
+      "isHero": false,
+      "tasteTags": ["seafood", "street-food", "sour", "spicy"],
+      "description": "Nhờ vị trí giáp biển và nguồn hải sản dồi dào từ vịnh Hạ Long, Cát Hải và các vùng cửa sông lân cận, ốc trở thành một biểu tượng ẩm thực đường phố của Hải Phòng. Ốc ở đây được phân loại tỉ mỉ thành nhiều loại như ốc mút, ốc đá, ốc hương, kết hợp cùng các loại hải sản tươi khác như ngao, ngán, hàu, chế biến theo nhiều cách khác nhau như luộc, xào me, xào dừa hay hấp sả, mang đến hương vị đa dạng nhưng vẫn giữ được vị ngọt tự nhiên của hải sản.",
+      "keyIngredients": [
+        "Các loại ốc biển (ốc mút, ốc đá, ốc hương...)",
+        "Ngao, ngán, hàu",
+        "Sả, gừng, lá chanh",
+        "Me chua, nước cốt dừa",
+        "Ớt, tỏi",
+        "Nước mắm Cát Hải"
+      ],
+      "prepOutline": [
+        "Ngâm ốc với nước vo gạo hoặc ớt để nhả sạch cát, bùn",
+        "Luộc ốc cùng sả, gừng và vài lá chanh để khử mùi tanh",
+        "Tùy món mà chế biến thêm: xào với nước cốt me chua, xào cùng nước cốt dừa béo, hoặc hấp sả",
+        "Pha nước chấm từ nước mắm Cát Hải, chanh, ớt, tỏi và gừng băm"
+      ],
+      "howToEat": "Ăn nóng ngay khi vừa chế biến xong, dùng tăm khêu ốc, chấm cùng nước mắm gừng ớt pha chua cay, thường được thưởng thức vào buổi tối tại các quán ốc vỉa hè cùng bạn bè.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://sunparadiseland.com/tin-tuc/oc-hai-phong-mon-ngon-duong-pho-khien-ai-cung-me-man-12572", "label": "Ốc Hải Phòng - món ngon đường phố khiến ai cũng mê mẩn" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

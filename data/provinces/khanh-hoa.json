@@ -1,0 +1,109 @@
+{
+  "slug": "khanh-hoa",
+  "code": "VN-KH",
+  "name": "Khánh Hòa",
+  "region": "Trung",
+  "centroid": [112.81769, 10.67742],
+  "summary": "Khánh Hòa là tỉnh duyên hải Nam Trung Bộ với thành phố biển Nha Trang làm trung tâm, nơi ẩm thực gắn liền với nguồn hải sản tươi và nghề cá lâu đời. Các món ăn đặc trưng như bún cá, nem nướng Ninh Hòa, bánh căn hay bánh canh chả cá đều lấy vị ngọt thanh của cá biển và sự tươi mới của rau sống làm cốt lõi, tạo nên phong cách ẩm thực nhẹ nhàng nhưng đậm đà rất riêng của vùng đất Trầm Hương.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/Nem_n%C6%B0%E1%BB%9Bng", "label": "Nem nướng – Wikipedia tiếng Việt" },
+    { "url": "https://mia.vn/cam-nang-du-lich/ngon-nuc-no-mon-bun-ca-nha-trang-788", "label": "Bún cá Nha Trang: Đặc sản níu chân du khách – MIA.vn" }
+  ],
+  "heroDishSlug": "bun-ca-nha-trang",
+  "dishes": [
+    {
+      "slug": "bun-ca-nha-trang",
+      "name": "Bún cá Nha Trang",
+      "isHero": true,
+      "tasteTags": ["noodle-soup", "seafood", "savory", "herb-forward"],
+      "description": "Bún cá Nha Trang là món ăn gắn liền với nghề biển của thành phố cảng Khánh Hòa — nước dùng được ninh từ xương cá tươi (thường là cá thu, cá cờ) cùng gia vị và thảo mộc cho ra vị ngọt thanh, trong veo, không hề tanh. Một tô bún cá đầy đủ có chả cá dai giòn tự làm, cá tươi hấp chín, đôi khi thêm trứng cá, lòng cá hoặc sứa biển giòn sần sật — biến thể này còn được gọi riêng là bún sứa. Đây là món ăn sáng hoặc ăn trưa phổ biến khắp Nha Trang, từ quán vỉa hè đến nhà hàng.",
+      "keyIngredients": ["Cá thu hoặc cá cờ tươi", "Chả cá tự quết", "Bún tươi", "Sứa biển (tùy quán)", "Cà chua, thơm (dứa)", "Rau sống, giá đỗ", "Hành, ngò, ớt, chanh"],
+      "prepOutline": [
+        "Ninh xương và đầu cá tươi cùng hành, gừng để lấy nước dùng ngọt thanh, không tanh",
+        "Quết thịt cá tươi thành chả cá, hấp hoặc chiên tới khi dai giòn",
+        "Luộc sơ cá nguyên miếng hoặc hấp chín, để riêng",
+        "Trụng bún tươi, xếp vào tô cùng chả cá, cá và sứa (nếu có)",
+        "Chan nước dùng nóng, thêm cà chua, thơm, rắc hành ngò"
+      ],
+      "howToEat": "Ăn nóng ngay khi vừa chan nước dùng, kèm rau sống, giá đỗ, vắt chanh và thêm ớt tươi hoặc sa tế theo khẩu vị; thường dùng làm bữa sáng hoặc bữa trưa nhẹ.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/B%C3%BAn_c%C3%A1_Nha_Trang.jpg", "attribution": "Harry Pham, via Wikimedia Commons", "license": "CC BY-SA 3.0" },
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Bun_cha_ca_nha_trang.jpg", "attribution": "Nguyen Thi Quynh Tram, via Wikimedia Commons", "license": "CC BY 3.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/ngon-nuc-no-mon-bun-ca-nha-trang-788", "label": "Bún cá Nha Trang: Đặc sản níu chân du khách – MIA.vn" },
+        { "url": "https://vinwonders.com/vi/wonderpedia/news/review-bun-ca-nha-trang/", "label": "Bún cá Nha Trang - Cách nấu & gợi ý quán ngon – VinWonders" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "nem-nuong-ninh-hoa",
+      "name": "Nem nướng Ninh Hòa",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "herb-forward", "street-food"],
+      "description": "Nem nướng Ninh Hòa là đặc sản của thị xã Ninh Hòa, Khánh Hòa, nổi tiếng khắp cả nước và từng được vinh danh kỷ lục ẩm thực châu Á. Thịt heo (thường lấy phần có 1/3 đến 1/2 mỡ) được giã hoặc xay nhuyễn cùng hành tím băm, tỏi, nước mắm, đường và tiêu cho tới khi dai quánh, sau đó vo thành từng viên hoặc que dài rồi nướng trên than hoa. Điểm khác biệt của nem Ninh Hòa là chỉ cuốn bánh tráng cùng rau sống chứ không ăn kèm bún hay bánh phở như một số vùng khác.",
+      "keyIngredients": ["Thịt heo nạc và mỡ (giã nhuyễn)", "Hành tím, tỏi băm", "Nước mắm, đường, tiêu", "Bánh tráng mỏng", "Xoài xanh, dưa leo, cà rốt, củ cải bào sợi", "Rau thơm (húng, tía tô)", "Nước chấm từ thịt băm, nếp và dầu điều"],
+      "prepOutline": [
+        "Giã hoặc xay thịt heo cùng gia vị tới khi thịt dai, quánh mịn",
+        "Vo thịt thành từng viên hoặc quấn quanh que tre",
+        "Nướng trên bếp than hoa tới khi chín vàng, dậy mùi thơm",
+        "Chuẩn bị rau sống, dưa góp và bánh tráng ăn kèm",
+        "Nấu nước chấm đặc trưng từ thịt băm, nếp và dầu điều lên màu vàng óng"
+      ],
+      "howToEat": "Cuốn nem nướng cùng bánh tráng, rau sống, xoài xanh và dưa góp thành cuốn nhỏ, chấm ngập vào chén nước chấm sánh vàng làm từ thịt băm và nếp trước khi ăn.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/M%E1%BA%B9t_nem_n%C6%B0%E1%BB%9Bng_Nha_Trang.jpg", "attribution": "Letruongan1122, via Wikimedia Commons", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Nem_n%C6%B0%E1%BB%9Bng", "label": "Nem nướng – Wikipedia tiếng Việt" },
+        { "url": "https://thanhnien.vn/nem-nuong-ninh-hoa-nhan-ky-luc-chau-a-moi-ve-am-thuc-185240107102734131.htm", "label": "Nem nướng Ninh Hòa nhận Kỷ lục châu Á mới về ẩm thực – Thanh Niên" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-can",
+      "name": "Bánh căn",
+      "isHero": false,
+      "tasteTags": ["street-food", "savory", "grilled"],
+      "description": "Bánh căn là món bánh gạo dân dã phổ biến khắp vùng duyên hải Nam Trung Bộ, trong đó có Khánh Hòa, vốn có nguồn gốc từ người Chăm rồi được người Việt tiếp biến. Khác với bánh khọt chiên dầu, bánh căn được đổ và nướng chín trong khuôn đất nung đặt trên bếp than, cho lớp vỏ hơi rỗ mặt, thoảng mùi khét nhẹ đặc trưng và đáy hơi giòn. Bánh thường được đổ theo cặp, ăn kèm trứng, chả cá hoặc mực tùy quán, chấm cùng nước mắm pha hoặc mắm nêm.",
+      "keyIngredients": ["Gạo ngâm xay nhuyễn", "Trứng (gà hoặc cút)", "Chả cá, mực hoặc tôm", "Mỡ hành, tóp mỡ", "Xoài xanh, khế, dưa leo bào", "Nước mắm pha hoặc mắm nêm", "Rau sống ăn kèm"],
+      "prepOutline": [
+        "Ngâm gạo khoảng 6 tiếng, trộn với cơm nguội rồi xay nhuyễn thành bột nước",
+        "Làm nóng khuôn đất nung nhiều lỗ tròn trên bếp than, quét dầu chống dính",
+        "Đổ bột vào khuôn, đập thêm trứng lên trên, đậy nắp cho tới khi mặt bánh rỗ và đáy vàng giòn",
+        "Gỡ bánh ra đĩa, rắc mỡ hành và tóp mỡ",
+        "Pha nước mắm chua ngọt hoặc mắm nêm để chấm kèm"
+      ],
+      "howToEat": "Bánh căn ăn nóng, chấm ngập từng cặp bánh vào chén nước mắm pha hoặc mắm nêm, ăn kèm xoài xanh, khế chua và dưa leo thái lát để cân bằng vị béo.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/B%C3%A1nh_c%C4%83n_1.jpg", "attribution": "Memberofc1, via Wikimedia Commons", "license": "CC BY-SA 3.0" },
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/B%C3%A1nh_c%C4%83n_in_phan_rang%2C_vietnam.jpg", "attribution": "Saigon Time, via Wikimedia Commons", "license": "CC0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_c%C4%83n", "label": "Bánh căn – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-canh-cha-ca-nha-trang",
+      "name": "Bánh canh chả cá Nha Trang",
+      "isHero": false,
+      "tasteTags": ["noodle-soup", "seafood", "savory"],
+      "description": "Bánh canh chả cá là món ăn quen thuộc của các tỉnh duyên hải miền Trung như Nha Trang, Quy Nhơn, Đà Nẵng, trong đó phiên bản Nha Trang nổi bật với chả cá làm từ cá thu tươi giã nhuyễn cùng hành, đường, nước mắm rồi đem hấp hoặc chiên vàng. Nước dùng được ninh từ xương, đầu và đuôi cá trong 20-30 phút để lấy vị ngọt tự nhiên, kết hợp cùng sợi bánh canh bột gạo hoặc bột lọc mềm dai tạo nên tô bánh canh đậm vị biển.",
+      "keyIngredients": ["Cá thu tươi", "Bột gạo hoặc bột lọc làm sợi bánh canh", "Trứng gà", "Hành tím, hành lá, rau răm", "Nước mắm, đường, hạt nêm", "Rau sống, bắp chuối bào", "Nước mắm Bình Định pha ớt"],
+      "prepOutline": [
+        "Làm sạch cá thu, lọc lấy thịt để riêng phần xương, đầu, đuôi",
+        "Ninh xương, đầu và đuôi cá khoảng 20-30 phút lấy nước dùng ngọt thanh",
+        "Xay nhuyễn thịt cá cùng hành, đường, nước mắm và gia vị",
+        "Hấp chả cá 10-15 phút rồi chiên vàng để dậy mùi thơm",
+        "Trụng sơ sợi bánh canh, xếp cùng chả cá vào tô rồi chan nước dùng nóng"
+      ],
+      "howToEat": "Dùng nóng ngay sau khi chan nước dùng, ăn kèm rau sống, bắp chuối bào và chấm thêm nước mắm Bình Định pha ớt để tăng vị đậm đà.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.dienmayxanh.com/vao-bep/2-cach-nau-banh-canh-cha-ca-nha-trang-quy-nhon-ngon-dung-vi-01323", "label": "2 cách nấu bánh canh chả cá Nha Trang, Quy Nhơn ngon đúng vị – Điện máy XANH" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

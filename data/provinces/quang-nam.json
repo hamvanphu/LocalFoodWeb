@@ -1,0 +1,144 @@
+{
+  "slug": "quang-nam",
+  "code": "VN-QNA",
+  "name": "Quảng Nam",
+  "region": "Trung",
+  "centroid": [107.95647, 15.59131],
+  "summary": "Quảng Nam là vùng đất hội tụ của ẩm thực miền Trung, nơi phố cổ Hội An từng là thương cảng sầm uất thế kỷ 17 giao thoa văn hóa Việt - Hoa - Nhật. Ẩm thực nơi đây mang vị đậm đà, ít nước, nhiều rau sống và nguyên liệu tại chỗ, tiêu biểu nhất là mì Quảng — món ăn mang chính tên của vùng đất này.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/M%C3%AC_Qu%E1%BA%A3ng", "label": "Mì Quảng – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "mi-quang",
+  "dishes": [
+    {
+      "slug": "mi-quang",
+      "name": "Mì Quảng",
+      "isHero": true,
+      "tasteTags": ["savory", "herb-forward", "noodle-soup", "street-food"],
+      "description": "Mì Quảng là món ăn mang chính tên quê hương Quảng Nam, khác hẳn phở hay bún ở chỗ nước dùng không phải thứ để chan ngập bát mà chỉ là một lớp nước nhân sánh, đậm đà rưới vừa xâm xấp sợi mì. Sợi mì được xay từ gạo, nhuộm vàng tự nhiên bằng nước hạt dành dành (có nơi thêm trứng), cắt bản to hơn sợi phở. Nước nhân ninh từ xương heo rồi nấu cùng tôm, thịt heo, có nơi dùng gà hoặc cá lóc, tạo vị ngọt đậm chứ không thanh trong như phở Bắc.",
+      "keyIngredients": [
+        "Sợi mì gạo nhuộm vàng bằng nước hạt dành dành",
+        "Nước nhân (nước lèo sánh) ninh từ xương heo",
+        "Tôm, thịt heo hoặc gà, có nơi dùng cá lóc",
+        "Trứng cút luộc",
+        "Rau sống chín loại: húng, xà lách, cải con, giá, rau răm, bắp chuối bào...",
+        "Bánh tráng nướng và đậu phộng rang giã dập"
+      ],
+      "prepOutline": [
+        "Ninh xương heo lấy nước ngọt, sau đó xào thơm tôm thịt với hành, nghệ, gia vị để làm nước nhân sánh, đậm màu vàng cam",
+        "Chần sợi mì gạo tươi qua nước sôi, để ráo rồi xếp vào tô",
+        "Xếp rau sống các loại phía dưới hoặc bên cạnh sợi mì",
+        "Múc nước nhân cùng tôm thịt rưới xâm xấp lên trên (không chan ngập như phở)",
+        "Rắc đậu phộng rang giã dập, thêm bánh tráng nướng bẻ nhỏ và trái ớt xanh"
+      ],
+      "howToEat": "Ăn kèm bánh tráng nướng bẻ giòn để xúc hoặc chan chung với sợi mì, trộn đều với rau sống trước khi ăn, vắt thêm chanh và cắn kèm ớt xanh Quảng Nam để dậy vị cay nồng đặc trưng.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Mi_Quang_Hoi_An_%282024%29.jpg",
+          "attribution": "Chainwit. / Wikimedia Commons",
+          "license": "CC BY 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/M%C3%AC_Qu%E1%BA%A3ng", "label": "Mì Quảng – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "cao-lau",
+      "name": "Cao lầu",
+      "isHero": false,
+      "tasteTags": ["savory", "herb-forward", "street-food"],
+      "description": "Cao lầu là món mì khô đặc sản chỉ nấu ngon đúng vị khi ở Hội An, tương truyền xuất hiện từ thế kỷ 17 khi thương nhân Trung Hoa và Nhật Bản còn tấp nập lui tới thương cảng này, nên mang dáng dấp giao thoa ẩm thực Hoa - Nhật rồi biến đổi theo khẩu vị người Việt. Sợi cao lầu có màu vàng đặc trưng nhờ trộn cùng tro của một loại cây địa phương (tro Cù Lao Chàm) rồi ngâm với nước giếng Bá Lễ nổi tiếng của Hội An, cho sợi dai giòn khác hẳn sợi mì thường. Món ăn gần như không chan nước, chỉ rưới chút nước xíu (nước tẩm ướp từ thịt xá xíu) đủ thấm đều.",
+      "keyIngredients": [
+        "Sợi cao lầu vàng làm từ gạo ngâm tro, hấp nhiều lớp",
+        "Thịt heo xá xíu thái lát",
+        "Tôm tươi",
+        "Da heo chiên giòn (tóp mỡ)",
+        "Rau sống Trà Quế: húng, giá, cải con",
+        "Nước tương và ớt"
+      ],
+      "prepOutline": [
+        "Ngâm gạo với tro tàu (tro từ cây địa phương) rồi xay thành bột, tráng và hấp thành sợi mì vàng, dai",
+        "Ướp và quay thịt heo thành xá xíu, giữ lại phần nước tẩm ướp làm nước xíu",
+        "Chiên giòn da heo cắt vuông nhỏ để rắc lên trên",
+        "Xếp sợi cao lầu, thêm xá xíu, tôm, da heo chiên giòn và rau sống Trà Quế",
+        "Rưới một lượng nhỏ nước xíu, không chan ngập như mì hay phở"
+      ],
+      "howToEat": "Trộn đều tất cả nguyên liệu trong tô trước khi ăn, thêm ớt và nước tương tùy khẩu vị; vì gần như không có nước nên ăn khô, nhai kỹ để cảm nhận độ dai giòn của sợi mì và da heo chiên.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Cao_Lau_Hoi_An.JPG",
+          "attribution": "Dragfyre / Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Cao_l%E1%BA%A7u", "label": "Cao lầu – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-mi-phuong",
+      "name": "Bánh mì Phượng",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food", "herb-forward"],
+      "description": "Bánh mì Phượng là tiệm bánh mì trên đường Phan Châu Trinh, Hội An, ra đời từ những năm 1990 từ một sạp nhỏ trong chợ trước khi chuyển về địa chỉ hiện tại. Điểm khác biệt là ổ bánh luôn được giữ nóng giòn vỏ ngoài, mềm ruột bên trong, còn nhân bên trong đa dạng với hơn 20 biến thể, từ kiểu truyền thống đến các loại nhân kiểu Âu như giăm bông phô mai. Quán từng được đầu bếp quá cố Anthony Bourdain khen là 'bánh mì ngon nhất thế giới', ví von là 'cả một bản giao hưởng trong một ổ bánh'.",
+      "keyIngredients": [
+        "Bánh mì baguette giòn vỏ, mềm ruột",
+        "Thịt heo nướng thái lát mỏng",
+        "Pate gan và chả lụa hoặc xúc xích",
+        "Rau thơm: ngò, húng",
+        "Dưa leo, đồ chua",
+        "Nước sốt đặc chế của quán"
+      ],
+      "prepOutline": [
+        "Nướng bánh mì baguette giữ nóng liên tục để vỏ luôn giòn khi phục vụ",
+        "Nướng thịt heo tẩm ướp thái lát mỏng trên bếp than",
+        "Phết pate gan và bơ lên hai mặt bánh đã xẻ",
+        "Xếp thịt nướng, chả lụa hoặc xúc xích, dưa leo, đồ chua và rau thơm",
+        "Rưới nước sốt đặc chế và tương ớt trước khi gói giao khách"
+      ],
+      "howToEat": "Ăn ngay khi còn nóng để cảm nhận vỏ bánh giòn rụm, thường phải xếp hàng 15-20 phút vào giờ cao điểm; có thể ăn tại chỗ hoặc mang đi, chấm thêm tương ớt nếu thích cay.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Banh_My_Phuong_Hoi_An_quay_banh.jpg",
+          "attribution": "DangTungDuong / Wikimedia Commons",
+          "license": "CC BY 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_m%C3%AC_Ph%C6%B0%E1%BB%A3ng", "label": "Bánh mì Phượng – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "com-ga-hoi-an",
+      "name": "Cơm gà Hội An",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food", "herb-forward"],
+      "description": "Cơm gà Hội An là món cơm gà mang phong cách riêng của phố cổ, tập trung nhiều nhất ở các con đường Phan Châu Trinh, Hoàng Diệu, Lê Lợi, khác hẳn cơm gà Tam Kỳ hay Đà Nẵng lân cận. Gạo được chọn kỹ, nấu cùng nước luộc gà và ít nghệ nên hạt cơm tơi, thơm, có màu vàng nhẹ chứ không đậm và dẻo như một số biến thể khác. Gà dùng phải là gà ta non, luộc vừa chín tới rồi xé sợi, ăn kèm hành tây thái mỏng, rau răm và nước mắm gừng chua ngọt.",
+      "keyIngredients": [
+        "Gạo nấu với nước luộc gà và chút nghệ",
+        "Gà ta luộc, xé sợi",
+        "Hành tây tím thái mỏng",
+        "Rau răm, ngò",
+        "Nước mắm gừng hoặc muối tiêu chanh",
+        "Đồ lòng gà (mề, gan) trộn rau răm ăn kèm"
+      ],
+      "prepOutline": [
+        "Luộc gà ta non vừa chín tới, giữ nước luộc lại để nấu cơm",
+        "Vo gạo rồi nấu cùng nước luộc gà pha chút nghệ cho cơm tơi, thơm, vàng nhẹ",
+        "Xé thịt gà thành sợi vừa ăn, trộn sơ với hành tây và rau răm",
+        "Pha nước mắm gừng hoặc chuẩn bị muối tiêu chanh để chấm",
+        "Bày cơm ra đĩa, xếp gà xé lên trên, ăn kèm đồ lòng gà trộn rau răm nếu có"
+      ],
+      "howToEat": "Ăn khi cơm còn nóng, trộn đều gà xé với hành tây và rau răm, chấm thêm muối tiêu chanh hoặc rưới nước mắm gừng tùy khẩu vị, có thể gọi thêm phần đồ lòng ăn kèm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://hoianheritage.net/vi/trao-doi-chuyen-nganh/chuyen-de-nghien-cuu-trao-doi/Com-ga-pho-Hoi-237.html", "label": "Cơm gà phố Hội – Trung tâm Quản lý Bảo tồn Di sản Văn hóa Hội An" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

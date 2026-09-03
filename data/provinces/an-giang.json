@@ -1,0 +1,125 @@
+{
+  "slug": "an-giang",
+  "code": "VN-AG",
+  "name": "An Giang",
+  "region": "Nam",
+  "centroid": [105.18049, 10.51333],
+  "summary": "An Giang là tỉnh đầu nguồn sông Cửu Long, nơi giao thoa văn hóa Việt – Khmer – Chăm tạo nên một nền ẩm thực phong phú và đặc sắc. Từ tô bún cá vàng ươm mang hơi thở Khmer, món gỏi sầu đâu đắng ngọt lạ miệng, đến bò bảy món trứ danh vùng Núi Sam và những hũ mắm Châu Đốc nức tiếng khắp miền Tây, ẩm thực An Giang phản ánh rõ nét đời sống sông nước và sự giao thoa văn hóa của vùng biên giới Tây Nam.",
+  "summarySourceRefs": [
+    {
+      "url": "https://mia.vn/cam-nang-du-lich/bun-ca-chau-doc-dac-san-tru-danh-cua-dat-an-giang-8263",
+      "label": "Bún cá Châu Đốc, đặc sản trứ danh của đất An Giang – MIA.vn"
+    }
+  ],
+  "heroDishSlug": "bun-ca-chau-doc",
+  "dishes": [
+    {
+      "slug": "bun-ca-chau-doc",
+      "name": "Bún cá Châu Đốc",
+      "isHero": true,
+      "tasteTags": ["noodle-soup", "savory", "herb-forward", "street-food"],
+      "description": "Bún cá Châu Đốc là món bún cá đặc trưng của vùng biên giới An Giang, mang đậm dấu ấn giao thoa ẩm thực Việt – Khmer. Món ăn theo chân cộng đồng người Khmer vào vùng đất Châu Đốc, được người Việt tiếp biến và gia giảm cho hợp khẩu vị bản địa, từ đó trở thành đặc sản không thể thiếu của An Giang. Điểm làm nên linh hồn của tô bún là nước dùng vàng óng từ nghệ tươi và cá lóc đồng, hòa quyện vị đậm đà của mắm ruốc, tạo nên hương vị vừa thanh vừa đậm rất riêng của miền Tây Nam Bộ.",
+      "keyIngredients": ["Cá lóc đồng", "Nghệ tươi", "Bún gạo", "Mắm ruốc", "Xương heo", "Bông điên điển hoặc bông súng", "Rau muống bào", "Trứng vịt lộn (tùy chọn)"],
+      "prepOutline": [
+        "Cá lóc làm sạch, luộc chín rồi gỡ lấy thịt, giữ lại phần nước luộc",
+        "Xương heo ninh cùng sả trong 30-45 phút để lấy nước ngọt làm nền cho nước dùng",
+        "Thịt cá ướp nghệ tươi rồi xào săn cho vàng thơm trước khi cho vào nồi nước dùng",
+        "Nêm nếm cùng mắm ruốc hòa tan, nghệ và nước cốt ngải bún để tạo màu và mùi đặc trưng",
+        "Trụng bún gạo, xếp cá xào nghệ lên trên rồi chan nước dùng nóng"
+      ],
+      "howToEat": "Bún cá Châu Đốc được ăn nóng, dùng kèm rau sống miền Tây như bông điên điển, bông súng, rau muống bào, giá và rau thơm; có thể thêm chả cá, heo quay hoặc trứng vịt lộn, vắt thêm chanh và ớt tươi cho dậy vị.",
+      "images": [],
+      "sourceRefs": [
+        {
+          "url": "https://mia.vn/cam-nang-du-lich/bun-ca-chau-doc-dac-san-tru-danh-cua-dat-an-giang-8263",
+          "label": "Bún cá Châu Đốc, đặc sản trứ danh của đất An Giang – MIA.vn"
+        }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "goi-sau-dau",
+      "name": "Gỏi sầu đâu",
+      "isHero": false,
+      "tasteTags": ["sour", "savory", "herb-forward"],
+      "description": "Gỏi sầu đâu là món ăn có nguồn gốc từ Campuchia, theo cộng đồng người Khmer du nhập vào vùng biên giới An Giang và trở thành đặc sản dân dã nơi đây, thường xuất hiện nhiều nhất vào mùa cây sầu đâu ra hoa từ tháng 11 đến tháng 3 âm lịch. Món gỏi dùng chính lá và bông của cây sầu đâu — một loại lá có vị đắng đặc trưng — trộn cùng khô cá sặc hoặc cá lóc, thịt ba chỉ, dưa leo, xoài sống bào sợi. Cái thú của món ăn nằm ở vị đắng nhẹ ban đầu của lá sầu đâu, càng nhai càng chuyển sang hậu ngọt thanh, hòa cùng vị mặn mòi của khô cá và chua ngọt của nước mắm me, tạo nên một tổng thể phức hợp rất đặc trưng của ẩm thực miền biên giới Tây Nam.",
+      "keyIngredients": ["Lá và bông sầu đâu", "Khô cá sặc hoặc khô cá lóc", "Thịt ba chỉ", "Dưa leo", "Xoài sống", "Nước mắm me", "Tỏi, ớt"],
+      "prepOutline": [
+        "Lá và bông sầu đâu trụng sơ qua nước sôi pha muối để giảm bớt vị đắng gắt",
+        "Khô cá nướng hoặc chiên chín rồi xé sợi nhỏ",
+        "Dưa leo, xoài sống, hành tím thái lát mỏng",
+        "Nấu nước mắm me sánh sệt làm nước trộn kiêm nước chấm",
+        "Trộn đều lá sầu đâu cùng khô cá, thịt ba chỉ, dưa leo, xoài với nước mắm me"
+      ],
+      "howToEat": "Gỏi sầu đâu thường được ăn kèm bánh tráng hoặc cuốn cùng các nguyên liệu, chấm với nước mắm me chua ngọt; nên nhai kỹ để cảm nhận trọn vẹn vị đắng chuyển ngọt đặc trưng của lá sầu đâu.",
+      "images": [],
+      "sourceRefs": [
+        {
+          "url": "https://vi.wikipedia.org/wiki/G%E1%BB%8Fi_s%E1%BA%A7u_%C4%91%C3%A2u",
+          "label": "Gỏi sầu đâu – Wikipedia tiếng Việt"
+        }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "bo-bay-mon-nui-sam",
+      "name": "Bò bảy món Núi Sam",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "herb-forward"],
+      "description": "Bò bảy món là món ăn trứ danh gắn liền với vùng Núi Sam, Châu Đốc, An Giang, ra đời từ đầu thế kỷ 20 và trở thành thương hiệu ẩm thực nổi tiếng khắp Nam Bộ. Đúng như tên gọi, thực khách được thưởng thức bảy món chế biến từ thịt bò trong một bữa ăn: bò nhúng giấm, chả đùm, bò cuốn lá lốt, bò lúc lắc, lòng bò nướng, bò tái chanh và cháo bò. Sự phong phú trong cách chế biến cùng độ tươi ngon của thịt bò địa phương đã giúp món ăn này trở thành niềm tự hào ẩm thực của vùng đất An Giang.",
+      "keyIngredients": ["Thịt bò (nhiều phần khác nhau)", "Bánh tráng", "Rau sống, khế chua, chuối chát", "Gừng già", "Nước mắm me"],
+      "prepOutline": [
+        "Chọn thịt bò tươi, chia theo từng phần phù hợp với mỗi món (nhúng giấm, nướng, tái...)",
+        "Chuẩn bị nước dùng chua nhẹ với giấm và thơm để nhúng thịt",
+        "Ướp và cuốn riêng từng món như chả đùm, bò cuốn lá lốt trước khi nướng hoặc hấp",
+        "Nấu cháo bò làm món kết thúc bữa ăn",
+        "Pha nước chấm me hoặc mắm nêm ăn kèm"
+      ],
+      "howToEat": "Thực khách cuốn từng món bò cùng bánh tráng, rau sống, khế chua, chuối chát và dưa leo, chấm cùng nước mắm me hoặc mắm nêm pha dứa; bữa ăn thường kết thúc bằng tô cháo bò nóng hổi.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/B%C3%B2_7_m%C3%B3n.jpg",
+          "attribution": "Incase, via Wikimedia Commons",
+          "license": "CC BY 2.0"
+        }
+      ],
+      "sourceRefs": [
+        {
+          "url": "https://vi.wikipedia.org/wiki/B%C3%B2_b%E1%BA%A3y_m%C3%B3n",
+          "label": "Bò bảy món – Wikipedia tiếng Việt"
+        }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "mam-chau-doc",
+      "name": "Mắm Châu Đốc",
+      "isHero": false,
+      "tasteTags": ["savory", "seafood", "sour"],
+      "description": "Mắm Châu Đốc là đặc sản lừng danh của An Giang, hình thành và phát triển gần một thế kỷ rưỡi qua nhờ vị trí thuận lợi cho nghề đánh bắt cá trên sông Hậu. Châu Đốc được mệnh danh là 'vương quốc mắm' của miền Tây với hàng trăm cơ sở sản xuất, cho ra đời hơn 20 loại mắm khác nhau như mắm cá linh, mắm cá lóc, mắm cá sặc, mắm thái, mắm ba khía. Mỗi cơ sở giữ một công thức pha chế gia truyền riêng, tạo nên sự đa dạng hương vị đặc trưng khó nơi nào sánh được, đặc biệt rộ nhất vào mùa nước nổi khi tôm cá dồi dào.",
+      "keyIngredients": ["Cá tươi (cá linh, cá lóc, cá sặc...)", "Muối hột", "Thính gạo rang", "Đường thốt nốt", "Đu đủ (dùng cho mắm thái)"],
+      "prepOutline": [
+        "Cá tươi được làm sạch rồi ướp muối trong khoảng 30 ngày để lên men",
+        "Sau khi rửa lại, cá được áo một lớp thính gạo rang thơm",
+        "Ủ tiếp từ 60-90 ngày cho mắm chín đều và dậy mùi đặc trưng",
+        "Rim mắm với đường thốt nốt để tạo độ sánh và vị ngọt hậu",
+        "Đóng hũ hoặc đóng gói thành phẩm theo từng loại mắm"
+      ],
+      "howToEat": "Mắm Châu Đốc có thể ăn sống kèm rau sống, chuối chát, khế để cảm nhận trọn vị mặn ngọt, hoặc chế biến thành các món như mắm kho, lẩu mắm, bún mắm; người mới ăn nên bắt đầu với các loại mắm dịu vị như mắm cá linh.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/M%E1%BA%AFm_c%C3%A1_l%C3%B3c.JPG",
+          "attribution": "Bùi Thụy Đào Nguyên, via Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "sourceRefs": [
+        {
+          "url": "https://mia.vn/cam-nang-du-lich/mam-chau-doc-dac-san-cau-ky-bac-nhat-cua-vung-dat-an-giang-8503",
+          "label": "Mắm Châu Đốc, đặc sản cầu kỳ bậc nhất của vùng đất An Giang – MIA.vn"
+        }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

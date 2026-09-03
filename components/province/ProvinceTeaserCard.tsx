@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
+import ImageWithFallback from "@/components/ui/ImageWithFallback";
 import type { Province, Dish, Region } from "@/lib/types";
 
 const REGION_ACCENT: Record<Region, string> = {
@@ -25,14 +26,22 @@ export default function ProvinceTeaserCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.45, delay: index * 0.06, ease: "easeOut" }}
-      whileHover={{ y: -4, x: 3 }}
+      whileHover={{ y: -4 }}
     >
       <Link
         href={`/provinces/${province.slug}`}
         className="group flex overflow-hidden rounded-card border border-border bg-surface shadow-soft transition-shadow duration-200 hover:shadow-card"
       >
         <span className={`w-1.5 shrink-0 ${REGION_ACCENT[province.region]}`} />
-        <div className="p-5">
+        <div className="h-28 w-28 shrink-0 overflow-hidden">
+          <ImageWithFallback
+            slug={province.slug}
+            name={hero?.name ?? province.name}
+            images={hero?.images ?? []}
+            className="h-full w-full transition-transform duration-500 ease-out group-hover:scale-110"
+          />
+        </div>
+        <div className="p-4">
           <p className="text-xs font-medium uppercase tracking-wide text-amber">
             Miền {province.region}
           </p>

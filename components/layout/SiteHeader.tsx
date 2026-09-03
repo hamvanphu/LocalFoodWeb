@@ -14,8 +14,10 @@ export default function SiteHeader() {
           Local Food
         </Link>
         <SearchBar index={index} />
-        <nav className="hidden shrink-0 text-sm text-ink/70 lg:block">
-          <span>63 tỉnh thành · món ăn địa phương</span>
+        <nav className="hidden shrink-0 items-center gap-4 text-sm lg:flex">
+          <Link href="/browse" className="text-ink/70 hover:text-chili">
+            Tất cả tỉnh
+          </Link>
         </nav>
       </div>
       <div className="h-[3px] w-full bg-gradient-to-r from-chili via-turmeric to-herb" />

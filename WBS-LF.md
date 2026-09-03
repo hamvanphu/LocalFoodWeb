@@ -58,6 +58,18 @@ quy trình, nhưng **không thực thi** trong bản nộp lần này.
 **Cộng dồn với Wave 1 gốc (EST-LF.md, đã ~48h khả dĩ):** tổng ước lượng giờ
 đã vượt xa quỹ 2 tuần ban đầu — xem cập nhật ở `EST-LF.md`.
 
+## Cập nhật 2026-09-03 (2) — PM báo 2 issue sau khi test bản đồ thật
+
+1. **Bản đồ không hiển thị** → fix nghiêm trọng (`maplibre-gl` 6.5.0 → 4.7.1),
+   xem `DEVBOOK.md`.
+2. **Danh sách tỉnh ở trang chủ gây confuse, không scale tới 63 tỉnh** → PM
+   chọn phương án: trang chủ chỉ hiện tỉnh nổi bật (dùng chung danh sách với
+   hero bubble bản đồ) + link "Xem tất cả" sang trang `/browse` mới (nhóm
+   theo vùng miền, có ảnh thumbnail, filter mùa/lễ hội). Đây là Wave 2 làm
+   sớm hơn dự kiến. Đã xong: `app/browse/page.tsx`,
+   `components/province/BrowseProvinces.tsx`, `ProvinceTeaserCard` thêm ảnh
+   thumbnail.
+
 ## Wave 2 — mức feature (coarser, chưa bẻ task)
 
 - Phase-2: Wishlist (localStorage) — persistence decision còn treo, xem

@@ -84,6 +84,20 @@ quy trình, nhưng **không thực thi** trong bản nộp lần này.
    `components/province/BrowseProvinces.tsx`, `ProvinceTeaserCard` thêm ảnh
    thumbnail.
 
+## Cập nhật 2026-09-05 — Mở rộng ra đủ 63 tỉnh (ngoài Phương án A ban đầu)
+
+PM quyết định mở rộng dữ liệu ra đủ 63 tỉnh **trước khi** làm W1-12 (hồ sơ
+viva), dù chỉ còn ~4 ngày tới hạn 2026-09-09 và `EST-LF.md` đã cảnh báo
+vượt mốc ngay ở Phương án A (8 tỉnh). Xử lý: dùng **7 agent nghiên cứu song
+song chạy nền**, mỗi agent phụ trách 1 lô ~6-10 tỉnh theo vùng địa lý (Đông
+Bắc, Tây Bắc, Đồng bằng sông Hồng, Bắc Trung Bộ, Nam Trung Bộ + Tây Nguyên,
+Đông Nam Bộ, Tây Nam Bộ) — mỗi tỉnh rút gọn còn **1 món hero + 2 món khác**
+(thay vì 3-4 như 8 tỉnh đầu) để kiểm soát khối lượng, vẫn giữ nguyên yêu
+cầu `sourceRef` đối chiếu Wikipedia + ảnh Wikimedia thật (không bịa URL).
+Không dừng lại hỏi Cổng hiểu cho từng tỉnh (không khả thi với 55 tỉnh) —
+PM sẽ spot-check ngẫu nhiên vài tỉnh sau khi xong, theo đúng tinh thần
+"phán xử có trọng điểm" thay vì đọc hết 100%.
+
 ## Wave 2 — mức feature (coarser, chưa bẻ task)
 
 - Phase-2: Wishlist (localStorage) — persistence decision còn treo, xem

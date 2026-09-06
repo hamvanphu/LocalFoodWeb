@@ -7,7 +7,7 @@
 | # | Việc | Trạng thái | Ảnh hưởng nếu chưa có | Cách lấy |
 |---|---|---|---|---|
 | 1 | ~~MapTiler API key~~ | **✅ ĐÃ CÓ (2026-09-03)** — PM đã dán key vào `.env.local`, dev server đã restart để nạp | — | — |
-| 2 | ~~Supabase URL + anon key~~ | **HOÃN (2026-09-03)** — PM quyết định bỏ Review/Rating khỏi bản nộp, chỉ còn 6 ngày tới hạn. Không còn là mục chặn. | Review/Rating chuyển hẳn sang phase-2 (sau khi nộp bài) | Nếu sau này muốn làm lại: xem `ARCH-LF.md` D3 đã có sẵn thiết kế schema + RLS |
+| 2 | ~~Supabase URL + anon key~~ | **✅ ĐÃ CÓ (2026-09-06)** — PM tạo project, chạy `supabase/schema.sql`, dán key vào `.env.local` + Vercel. Review/Rating (US-14) đã lên production | — | — |
 
 ## 🟡 Đã biết, chưa xử lý (không chặn code, nhưng cần nhớ)
 

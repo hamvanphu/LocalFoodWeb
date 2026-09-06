@@ -1,0 +1,95 @@
+{
+  "slug": "ca-mau",
+  "code": "VN-CM",
+  "name": "Cà Mau",
+  "region": "Nam",
+  "centroid": [105.03895, 9.0507],
+  "summary": "Cà Mau là mảnh đất địa đầu cực Nam Tổ quốc với hệ sinh thái rừng ngập mặn U Minh và bãi bồi ven biển rộng lớn, sản sinh ra những đặc sản trứ danh như ba khía Rạch Gốc, cua biển Năm Căn và các loại cá khô nước ngọt vùng U Minh Hạ.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/Ba_kh%C3%ADa", "label": "Ba khía – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "ba-khia-rach-goc",
+  "dishes": [
+    {
+      "slug": "ba-khia-rach-goc",
+      "name": "Ba khía Rạch Gốc",
+      "isHero": true,
+      "tasteTags": ["savory", "seafood", "sour"],
+      "description": "Ba khía là loài cua nhỏ thuộc họ còng, sống dưới gốc đước, mắm trong rừng ngập mặn, có ba vạch trên mai nên được gọi là \"ba khía\". Vùng Rạch Gốc (Cà Mau) được xem là nơi cho ba khía ngon nhất nhờ ba khía ăn trái mắm rụng nên thịt chắc, nhiều gạch son. Ba khía thường được muối để làm mắm ba khía — món ăn dân dã đặc trưng của cả vùng châu thổ Cửu Long.",
+      "keyIngredients": [
+        "Ba khía tươi (bắt vào mùa nước lên, tháng 8-10 âm lịch)",
+        "Muối hột",
+        "Tỏi, ớt, chanh",
+        "Đường, bột ngọt (tùy khẩu vị)"
+      ],
+      "prepOutline": [
+        "Ba khía sau khi bắt được rửa sạch bùn đất còn sống",
+        "Ướp ba khía với muối hột theo tỷ lệ vừa đủ mặn rồi đậy kín trong lu, khạp",
+        "Ủ muối từ vài ngày đến một tuần cho ba khía lên men vừa tới, thịt chắc và dậy mùi đặc trưng",
+        "Trước khi ăn, ba khía muối được trộn cùng tỏi, ớt, chanh và đường cho dậy vị"
+      ],
+      "howToEat": "Ba khía muối được tách mai, bẻ càng rồi ăn trực tiếp cùng cơm trắng hoặc cơm tấm; vị mặn đậm của ba khía được vắt thêm chanh, thêm tỏi ớt băm để dậy mùi thơm và giảm bớt độ gắt.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Mam_ba_khia_%28Vietnamese%29.jpg",
+          "attribution": "Memberofc1 / Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Ba_kh%C3%ADa", "label": "Ba khía – Wikipedia tiếng Việt" },
+        { "url": "https://vtcnews.vn/ba-khia-rach-goc-mon-dac-san-ca-mau-khong-the-bo-lo-ar760432.html", "label": "Ba khía Rạch Gốc - món đặc sản Cà Mau không thể bỏ lỡ – VTC News" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "cua-ca-mau",
+      "name": "Cua Cà Mau",
+      "isHero": false,
+      "tasteTags": ["seafood", "savory"],
+      "description": "Cua Cà Mau, đặc biệt là cua biển vùng Năm Căn - Ngọc Hiển, nổi tiếng khắp cả nước nhờ được nuôi tự nhiên trong môi trường rừng ngập mặn xen kẽ ao vuông nước lợ, cho thịt chắc, gạch nhiều và vị ngọt đậm đà hiếm nơi nào sánh được.",
+      "keyIngredients": [
+        "Cua biển gạch hoặc cua thịt Năm Căn",
+        "Muối tiêu chanh",
+        "Sả, ớt (khi hấp hoặc rang me)",
+        "Me chua (cho món cua rang me)"
+      ],
+      "prepOutline": [
+        "Chọn cua còn sống, khỏe, yếm chắc để đảm bảo nhiều thịt và gạch",
+        "Rửa sạch cua rồi hấp cách thủy cùng sả trong khoảng 15-20 phút cho chín đều",
+        "Với món rang me, cua được chiên sơ rồi xào cùng nước sốt me chua ngọt",
+        "Bày cua ra đĩa khi còn nóng để giữ vị ngọt của thịt"
+      ],
+      "howToEat": "Cua hấp được tách mai, ăn kèm muối tiêu chanh để giữ trọn vị ngọt tự nhiên của thịt và gạch cua; cua rang me được ăn kèm cơm nóng hoặc dùng tay bẻ càng chấm nước sốt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vietnamnet.vn/dac-san-ca-mau-dam-huong-vi-vung-dat-mui-khong-the-bo-lo-2107503.html", "label": "Đặc sản Cà Mau đậm hương vị vùng đất mũi – VietNamNet" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "kho-ca-boi-u-minh",
+      "name": "Khô cá sặc bổi U Minh",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Cá bổi (cá sặc bổi) sống trong vùng rừng tràm ngập nước U Minh Hạ, nơi có nhiều phù du và tảo làm thức ăn tự nhiên cho cá, tạo nên loại khô cá bổi thơm ngon nổi tiếng, đã được cấp chứng nhận bảo hộ nhãn hiệu. Khô cá bổi được chế biến chủ yếu vào mùa khô bằng phương pháp phơi nắng truyền thống.",
+      "keyIngredients": [
+        "Cá sặc bổi tươi (kích cỡ vừa bàn tay)",
+        "Muối hột",
+        "Nắng tự nhiên để phơi khô"
+      ],
+      "prepOutline": [
+        "Cá bổi được đánh bắt tươi từ vùng nước ngọt rừng U Minh Hạ",
+        "Làm sạch cá, ướp muối vừa đủ để thịt cá thấm đều",
+        "Phơi cá dưới nắng tự nhiên nhiều ngày liên tục cho đến khi khô săn",
+        "Bảo quản khô nơi khô ráo để giữ được hương vị đặc trưng lâu dài"
+      ],
+      "howToEat": "Khô cá bổi thường được nướng hoặc chiên sơ qua lửa cho dậy mùi thơm, xé nhỏ ăn cùng cơm nóng hoặc cháo trắng, chấm nước mắm me hoặc muối ớt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/thuong-thuc-kho-ca-sac-boi-u-minh-dam-da-huong-vi-mien-que-song-nuoc-9987", "label": "Khô cá sặc bổi U Minh – MIA.vn" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

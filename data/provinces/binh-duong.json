@@ -1,0 +1,93 @@
+{
+  "slug": "binh-duong",
+  "code": "VN-BDU",
+  "name": "Bình Dương",
+  "region": "Nam",
+  "centroid": [106.65625, 11.21811],
+  "summary": "Bình Dương là vùng đất vườn cây ăn trái trù phú ven sông Sài Gòn, nổi bật với các vườn măng cụt, sầu riêng Lái Thiêu hàng trăm năm tuổi. Ẩm thực địa phương pha trộn khéo léo giữa trái cây vườn nhà với thịt, cá theo phong cách Nam Bộ, tiêu biểu qua các món gỏi trái cây, bánh bèo bì và nem chua.",
+  "summarySourceRefs": [
+    { "url": "https://vietnamnet.vn/dac-san-binh-duong-ngon-tru-danh-va-mon-goi-ga-mang-cut-hot-trend-2146373.html", "label": "Đặc sản Bình Dương ngon trứ danh và món gỏi gà măng cụt hot trend (VietNamNet)" }
+  ],
+  "heroDishSlug": "goi-ga-mang-cut-lai-thieu",
+  "dishes": [
+    {
+      "slug": "goi-ga-mang-cut-lai-thieu",
+      "name": "Gỏi gà măng cụt Lái Thiêu",
+      "isHero": true,
+      "tasteTags": ["sour", "savory", "herb-forward"],
+      "description": "Gỏi gà măng cụt là món ăn gắn liền với vùng vườn măng cụt Lái Thiêu nổi tiếng của Bình Dương, nơi những cây măng cụt cổ thụ hàng trăm năm tuổi vẫn cho trái đều đặn mỗi mùa. Măng cụt còn xanh, cùi non được bào mỏng, trộn cùng thịt gà xé, tạo vị chua nhẹ, giòn thanh xen lẫn vị ngọt béo của thịt gà — một cách chế biến trái cây vườn nhà thành món gỏi rất đặc trưng của địa phương.",
+      "keyIngredients": [
+        "Măng cụt Lái Thiêu còn xanh (bào mỏng phần cùi non)",
+        "Thịt gà ta luộc xé sợi",
+        "Rau răm, húng quế",
+        "Hành phi, đậu phộng rang",
+        "Nước mắm chua ngọt pha tỏi ớt"
+      ],
+      "prepOutline": [
+        "Chọn măng cụt còn xanh vừa tới, gọt vỏ và bào mỏng phần cùi non ngâm nước muối loãng để không bị thâm",
+        "Luộc gà chín tới rồi xé sợi vừa ăn",
+        "Trộn đều măng cụt bào với gà xé, rau răm, húng quế",
+        "Rưới nước mắm chua ngọt lên, trộn đều rồi rắc hành phi và đậu phộng rang lên trên"
+      ],
+      "howToEat": "Gỏi được ăn ngay khi vừa trộn để giữ độ giòn của măng cụt, thường dùng kèm bánh phồng tôm hoặc bánh tráng để xúc, chấm thêm nước mắm chua ngọt nếu thích đậm vị hơn.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vietnamnet.vn/dac-san-binh-duong-ngon-tru-danh-va-mon-goi-ga-mang-cut-hot-trend-2146373.html", "label": "Đặc sản Bình Dương ngon trứ danh và món gỏi gà măng cụt hot trend (VietNamNet)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-beo-bi-binh-duong",
+      "name": "Bánh bèo bì Bình Dương",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh bèo bì là món ăn đã tồn tại hàng trăm năm ở Bình Dương, nổi tiếng nhất với phiên bản gắn liền với chợ Búng (An Thạnh, Thuận An). Khác với bánh bèo miền Trung dùng nước mắm chấm riêng, bánh bèo bì Bình Dương rưới trực tiếp nước mắm pha loãng lên bánh, ăn cùng bì (thịt heo và da heo thái sợi trộn thính) và mỡ hành, tạo nên hương vị vừa thanh vừa béo bùi.",
+      "keyIngredients": [
+        "Bột gạo, bột năng (làm bánh bèo)",
+        "Bì heo (da và thịt heo luộc thái sợi trộn thính)",
+        "Đậu xanh hấp chín tán nhuyễn",
+        "Mỡ hành",
+        "Dưa leo bào sợi",
+        "Nước mắm pha loãng ngọt thanh"
+      ],
+      "prepOutline": [
+        "Pha bột gạo với bột năng và nước, hấp thành từng chén bánh bèo mỏng",
+        "Luộc thịt heo và da heo, thái sợi mỏng rồi trộn với thính gạo và gia vị thành bì",
+        "Đậu xanh hấp chín, tán nhuyễn rắc lên mặt bánh cùng mỡ hành",
+        "Pha nước mắm loãng vị ngọt thanh đặc trưng, không quá đậm như nước chấm miền Trung"
+      ],
+      "howToEat": "Bánh bèo được xếp ra đĩa, rắc bì, đậu xanh, mỡ hành và dưa leo bào lên trên, sau đó rưới trực tiếp nước mắm pha loãng vào đĩa rồi dùng đũa hoặc muỗng ăn ngay, không chấm riêng.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://doanhnhan.baophapluat.vn/kham-pha-san-vat-mien-nam-viet-nam-ky-1-sau-rieng-lai-thieu-mang-cut-lai-thieu-bun-tom-chau-truc-banh-beo-bi-cho-bung-39810.html", "label": "Khám phá sản vật miền Nam: bánh bèo bì chợ Búng (Doanh nhân – Báo Pháp luật) — nguồn báo chí, chưa có bài Wikipedia riêng" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "nem-lai-thieu",
+      "name": "Nem Lái Thiêu",
+      "isHero": false,
+      "tasteTags": ["sour", "savory", "street-food"],
+      "description": "Nem Lái Thiêu là món nem chua đặc trưng của Bình Dương, được làm từ thịt heo tươi lên men tự nhiên nhờ thính gạo và lá vông hoặc lá chuối gói bên ngoài. Sau vài ngày ủ, nem chín tới có vị chua nhẹ, giòn dai, thường được dùng làm quà biếu hoặc món nhắm quen thuộc trong các bữa tiệc của người dân địa phương.",
+      "keyIngredients": [
+        "Thịt heo nạc tươi, bì heo thái sợi",
+        "Thính gạo rang",
+        "Tỏi, ớt, tiêu",
+        "Lá vông hoặc lá chuối để gói",
+        "Dây lạt buộc"
+      ],
+      "prepOutline": [
+        "Thịt heo tươi được quết hoặc xay nhuyễn, trộn cùng bì heo thái sợi",
+        "Ướp thịt với thính gạo, tỏi, tiêu và một ít đường muối cho vừa vị",
+        "Gói từng viên nem nhỏ trong lá vông hoặc lá chuối, bọc thêm lớp lá chuối bên ngoài",
+        "Ủ nem ở nhiệt độ thường trong khoảng 2-3 ngày cho đến khi nem lên men chua vừa ăn"
+      ],
+      "howToEat": "Nem Lái Thiêu được bóc lá ăn trực tiếp cùng tỏi, ớt hoặc tương ớt, thường dùng làm món nhắm hoặc ăn kèm bánh mì, rau sống.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://hanoidep.vn/dac-san-binh-duong/", "label": "Đặc sản Bình Dương: nem Lái Thiêu (Hanoidep.vn) — nguồn báo chí, chưa có bài Wikipedia riêng" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

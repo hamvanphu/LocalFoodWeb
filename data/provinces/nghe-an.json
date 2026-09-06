@@ -1,0 +1,72 @@
+{
+  "slug": "nghe-an",
+  "code": "VN-NA",
+  "name": "Nghệ An",
+  "region": "Trung",
+  "centroid": [104.94393, 19.23729],
+  "summary": "Nghệ An, quê hương xứ Nghệ, nổi bật với các món chế biến từ lươn đồng — cháo lươn và súp lươn Vinh đã được công nhận là di sản văn hóa phi vật thể quốc gia — cùng bánh mướt mềm mại, món ăn dân dã gắn bó với đời sống thường nhật của người dân nơi đây.",
+  "summarySourceRefs": [
+    { "url": "https://vtcnews.vn/bi-quyet-lam-mon-chao-luon-nghe-an-khong-phai-ai-cung-biet-ar768963.html", "label": "VTC News – Bí quyết làm cháo lươn Nghệ An" }
+  ],
+  "heroDishSlug": "chao-luon-vinh",
+  "dishes": [
+    {
+      "slug": "chao-luon-vinh",
+      "name": "Cháo lươn Vinh",
+      "isHero": true,
+      "tasteTags": ["savory", "spicy", "herb-forward"],
+      "description": "Cháo lươn Nghệ An, đặc biệt là ở thành phố Vinh, là món ăn dân dã trứ danh nấu từ lươn đồng và gạo. Gạo được ngâm kỹ, nấu qua đêm để hạt gạo nở đều mà không nát, cháo có màu vàng óng, sánh mịn, ăn cùng thịt lươn béo ngậy, thơm nồng mùi nghệ và hành phi. Tri thức chế biến các món từ lươn của người Nghệ An đã được công nhận là di sản văn hóa phi vật thể quốc gia.",
+      "keyIngredients": ["lươn đồng", "gạo tẻ pha ít gạo nếp", "nghệ tươi", "gừng", "hành tăm (hành củ nhỏ)", "rau răm, hành lá"],
+      "prepOutline": [
+        "Chọn lươn còn sống, thân thon, thịt chắc, làm sạch nhớt bằng tro hoặc muối",
+        "Luộc hoặc xào lươn với nghệ, gừng, hành tăm, rượu để khử tanh và lên màu vàng đẹp",
+        "Gỡ thịt lươn, xào lại với gia vị cho săn và thơm",
+        "Ninh gạo thành cháo sánh mịn, múc ra bát rồi rắc thịt lươn xào lên trên cùng hành răm"
+      ],
+      "howToEat": "Ăn nóng, có thể thêm ớt bột hoặc tiêu, ăn kèm bánh mướt hoặc quẩy để tăng độ giòn.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vtcnews.vn/bi-quyet-lam-mon-chao-luon-nghe-an-khong-phai-ai-cung-biet-ar768963.html", "label": "VTC News – Bí quyết làm cháo lươn Nghệ An" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "sup-luon-nghe-an",
+      "name": "Súp lươn Nghệ An",
+      "isHero": false,
+      "tasteTags": ["savory", "spicy"],
+      "description": "Súp lươn là món anh em của cháo lươn, dùng cùng nguyên liệu lươn đồng nhưng phần nước sánh đặc hơn nhờ bột năng hoặc bột đao, thường được ăn kèm bánh mì hoặc bánh mướt thay vì cơm hay cháo gạo.",
+      "keyIngredients": ["lươn đồng", "bột năng hoặc bột đao", "nghệ, gừng, hành tăm", "rau răm, hành lá", "ớt chưng"],
+      "prepOutline": [
+        "Sơ chế và xào thịt lươn với nghệ, gừng, hành tăm tương tự cách làm cháo lươn",
+        "Nấu nước dùng từ xương lươn, nêm gia vị rồi hòa bột năng để tạo độ sánh đặc trưng",
+        "Cho thịt lươn xào vào bát, chan nước súp sánh nóng lên trên"
+      ],
+      "howToEat": "Ăn kèm bánh mì nướng giòn hoặc bánh mướt, rắc thêm hành răm và ớt chưng tùy khẩu vị.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://baoxuan.vov.vn/doi-song/cach-lam-chao-va-sup-luon-nghe-an-cuc-ngon-tai-nha-post1259415.vov", "label": "VOV – Cách làm cháo và súp lươn Nghệ An" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-muot-nghe-an",
+      "name": "Bánh mướt Nghệ An",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh mướt là món bánh làm từ bột gạo tráng mỏng, hình dạng và cách làm gần giống bánh cuốn miền Bắc hay bánh ướt miền Nam nhưng nhỏ, dài bằng ngón tay, trắng mềm và không bị dính nhờ được phết một lớp dầu khi cuộn. Đây là món ăn gắn bó mật thiết với đời sống của người xứ Nghệ, thường ăn cùng cháo lươn hoặc súp lươn.",
+      "keyIngredients": ["bột gạo", "dầu ăn hoặc mỡ", "nước mắm chua cay", "rau răm, tỏi, ớt"],
+      "prepOutline": [
+        "Xay bột gạo mịn, pha loãng vừa phải",
+        "Tráng bột mỏng trên nồi hấp, cuộn lại thành từng cuốn nhỏ và phết dầu để không dính",
+        "Chuẩn bị nước chấm chua cay từ nước mắm, tỏi, ớt, rau răm băm nhỏ"
+      ],
+      "howToEat": "Chấm bánh mướt với nước mắm chua cay, hoặc ăn kèm cháo lươn, súp lươn, bò hầm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vnexpress.net/banh-muot-dac-san-it-nguoi-biet-khi-den-nghe-an-3880826.html", "label": "VnExpress – Bánh mướt, đặc sản ít người biết khi đến Nghệ An" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

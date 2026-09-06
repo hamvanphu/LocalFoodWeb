@@ -1,0 +1,74 @@
+{
+  "slug": "lai-chau",
+  "code": "VN-LC",
+  "name": "Lai Châu",
+  "region": "Bắc",
+  "centroid": [103.15, 22.39],
+  "summary": "Lai Châu là tỉnh biên giới cực Tây Bắc, nơi sinh sống của nhiều dân tộc như Thái, Dao, Mông với tập quán chăn nuôi thả rông và đánh bắt cá suối. Ẩm thực nơi đây đặc trưng bởi các món nướng và vùi tro mộc mạc như lợn cắp nách, cá bống vùi tro, lam nhọ, giữ trọn hương vị nguyên sơ của núi rừng.",
+  "summarySourceRefs": [
+    { "url": "https://www.ivivu.com/blog/2023/06/top-12-mon-an-dac-san-lai-chau-ngon-la-hut-thuc-khach/", "label": "Top 12 món ăn đặc sản Lai Châu ngon lạ, hút thực khách" }
+  ],
+  "heroDishSlug": "lon-cap-nach-lai-chau",
+  "dishes": [
+    {
+      "slug": "lon-cap-nach-lai-chau",
+      "name": "Lợn cắp nách",
+      "isHero": true,
+      "tasteTags": ["grilled", "savory"],
+      "description": "Lợn cắp nách là giống lợn bản địa nhỏ con của đồng bào các dân tộc thiểu số vùng cao Lai Châu, được thả rông tự nhiên trên nương rẫy nên lớn chậm và chỉ nặng khoảng 10-20kg khi xuất chuồng. Vì kích thước nhỏ, người dân thường cắp nách mang cả con ra chợ bán, từ đó có tên gọi đặc biệt này. Thịt lợn cắp nách chắc, nhiều nạc, ít mỡ và thơm tự nhiên nhờ vận động nhiều và ăn thức ăn tự nhiên trên rừng.",
+      "keyIngredients": ["lợn cắp nách nguyên con", "lá nhội, rau thơm rừng", "muối, ớt, mắc khén", "riềng, sả"],
+      "prepOutline": [
+        "Chọn lợn cắp nách nhỏ, làm sạch, thui hai lượt bằng rơm hoặc bã mía cho thơm da",
+        "Pha thịt thành từng phần để chế biến theo món (nướng, hấp, xào lòng)",
+        "Ướp thịt với muối, riềng, sả, mắc khén tùy món",
+        "Nướng hoặc hấp cho tới khi chín tới, giữ độ ngọt và mềm của thịt"
+      ],
+      "howToEat": "Thịt lợn cắp nách thường được nướng hoặc hấp rồi chấm cùng nậm chéo (nước chấm địa phương) với lá nhội, rau thơm và ớt tươi, ăn kèm xôi hoặc cơm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.ivivu.com/blog/2023/06/top-12-mon-an-dac-san-lai-chau-ngon-la-hut-thuc-khach/", "label": "Top 12 món ăn đặc sản Lai Châu ngon lạ, hút thực khách" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ca-bong-vui-tro",
+      "name": "Cá bống vùi tro",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "herb-forward"],
+      "description": "Cá bống vùi tro là món ăn dân dã của người dân Lai Châu, chế biến từ cá bống nhỏ đánh bắt trong các con suối trong vùng. Cá được tẩm ướp cùng ớt, tiêu, gừng, mắc khén, húng và sả cho ngấm gia vị, sau đó gói trong lá dong rồi vùi vào tro nóng cho tới khi chín. Cách chế biến vùi tro thay vì nướng trực tiếp giúp cá chín đều mà vẫn giữ được vị ngọt tự nhiên, dậy mùi thơm đặc trưng của gia vị núi rừng hòa cùng hương lá dong nướng.",
+      "keyIngredients": ["cá bống suối", "ớt, tiêu, gừng, mắc khén", "húng, sả", "lá dong gói"],
+      "prepOutline": [
+        "Làm sạch cá bống suối, để ráo",
+        "Ướp cá với ớt, tiêu, gừng, mắc khén, húng, sả khoảng 15-30 phút",
+        "Gói cá đã ướp vào lá dong, buộc chặt",
+        "Vùi gói cá vào tro nóng khoảng 30 phút, lật trở nhiều lần cho chín đều"
+      ],
+      "howToEat": "Cá bống vùi tro ăn nóng ngay sau khi bóc lá, thường dùng làm món nhắm hoặc ăn kèm cơm, xôi trong bữa cơm gia đình.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.ivivu.com/blog/2023/06/top-12-mon-an-dac-san-lai-chau-ngon-la-hut-thuc-khach/", "label": "Top 12 món ăn đặc sản Lai Châu ngon lạ, hút thực khách" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "lam-nho",
+      "name": "Lam nhọ",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "spicy"],
+      "description": "Lam nhọ là món ăn đặc trưng của người Thái Lai Châu, tên gọi trong tiếng Thái nghĩa là \"nướng\" (lam) và \"nhừ, mềm\" (nhọ). Thịt trâu hoặc bò tươi được nướng sơ trên than hoa rồi thái lát mỏng, trộn cùng lá bí, rau rừng và các loại gia vị đặc trưng, sau đó nướng lại trong ống tre cho tới khi mềm nhừ. Món ăn mang hương vị đậm đà, kết hợp giữa vị ngọt của thịt nướng và vị bùi của rau rừng.",
+      "keyIngredients": ["thịt trâu hoặc bò", "lá bí, rau rừng", "mắc khén, ớt, sả", "ống tre để nướng"],
+      "prepOutline": [
+        "Chọn thịt trâu hoặc bò tươi, nướng sơ qua trên than hoa",
+        "Thái thịt đã nướng thành lát mỏng",
+        "Trộn thịt với lá bí, rau rừng và gia vị mắc khén, ớt, sả",
+        "Cho hỗn hợp vào ống tre, nướng tiếp trên than cho tới khi thịt mềm nhừ"
+      ],
+      "howToEat": "Lam nhọ ăn nóng, thường dùng làm món nhắm rượu hoặc ăn kèm xôi nếp trong các dịp lễ, tiếp khách của người Thái.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.ivivu.com/blog/2023/06/top-12-mon-an-dac-san-lai-chau-ngon-la-hut-thuc-khach/", "label": "Top 12 món ăn đặc sản Lai Châu ngon lạ, hút thực khách" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

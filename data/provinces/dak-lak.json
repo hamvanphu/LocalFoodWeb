@@ -1,0 +1,76 @@
+{
+  "slug": "dak-lak",
+  "code": "VN-DL",
+  "name": "Đắk Lắk",
+  "region": "Trung",
+  "centroid": [108.20522, 12.82583],
+  "summary": "Đắk Lắk là thủ phủ cà phê và trung tâm văn hóa cồng chiêng Tây Nguyên, với thành phố Buôn Ma Thuột là đầu tàu ẩm thực. Món ăn nơi đây kết hợp giữa truyền thống của người Ê Đê, M'Nông bản địa (gà nướng, cơm lam) và các món phố thị đặc trưng như bún đỏ ra đời từ chợ đêm Buôn Ma Thuột.",
+  "summarySourceRefs": [
+    { "url": "https://vnexpress.net/dac-san-bun-do-buon-ma-thuot-o-ha-noi-4622811.html", "label": "Đặc sản bún đỏ Buôn Ma Thuột – VnExpress" }
+  ],
+  "heroDishSlug": "ga-nuong-com-lam-ban-don",
+  "dishes": [
+    {
+      "slug": "ga-nuong-com-lam-ban-don",
+      "name": "Gà nướng cơm lam Bản Đôn",
+      "isHero": true,
+      "tasteTags": ["grilled", "savory"],
+      "description": "Gà nướng cơm lam Bản Đôn bắt nguồn từ người Ê Đê ở Buôn Đôn — vùng đất nổi tiếng với nghề săn bắt và thuần dưỡng voi rừng. Gà thả vườn được nướng nguyên con trên than, ăn kèm cơm lam nướng trong ống tre, tạo nên bộ đôi món ăn biểu tượng của du lịch Đắk Lắk.",
+      "keyIngredients": ["gà thả vườn Buôn Đôn", "sả, mắc khén, tiêu rừng", "mật ong rừng", "gạo nếp, ống tre non", "muối ớt xanh"],
+      "prepOutline": [
+        "Ướp gà nguyên con với sả giã, muối ớt và mật ong rừng",
+        "Nướng gà trên than ở khoảng cách xa lửa để chín từ từ, đều màu",
+        "Cho gạo nếp ngâm cùng nước vào ống tre non, nút bằng lá chuối",
+        "Nướng ống cơm lam xoay đều tay đến khi tre cháy xém và cơm chín dẻo"
+      ],
+      "howToEat": "Xé gà nướng bằng tay, chấm muối ớt xanh hoặc muối tiêu chanh; chẻ ống cơm lam lấy phần cơm nếp thơm mùi tre, ăn cùng nhau trong một bữa.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/C%C6%A1m_lam_T%C3%A2y_Nguy%C3%AAn.jpg", "attribution": "Lam Nguyen, Wikimedia Commons (ảnh cơm lam Tây Nguyên minh họa chung, không chụp riêng tại Buôn Đôn)", "license": "CC BY 2.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/thuong-thuc-ga-nuong-ban-don-daklak-ben-bep-lua-6037", "label": "Thưởng thức Gà nướng Bản Đôn Đắk Lắk – Mia.vn (nguồn du lịch, không phải Wikipedia)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "bun-do-buon-ma-thuot",
+      "name": "Bún đỏ Buôn Ma Thuột",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food", "noodle-soup"],
+      "description": "Bún đỏ là món ăn đường phố đặc trưng chỉ có ở Buôn Ma Thuột, với sợi bún to tròn màu đỏ cam đặc trưng nhờ dầu điều hòa cùng cà chua. Nước dùng ngọt thanh nấu cùng riêu cua, ăn kèm chả viên, trứng cút và da heo chiên giòn.",
+      "keyIngredients": ["sợi bún cọng to", "dầu điều, cà chua", "riêu cua", "chả viên, trứng cút", "da heo chiên giòn", "rau sống"],
+      "prepOutline": [
+        "Nấu nước dùng từ xương và cà chua, thêm dầu điều tạo màu đỏ cam đặc trưng",
+        "Lọc riêu cua, thả vào nồi nước dùng cho nổi từng mảng",
+        "Trụng sợi bún cọng to qua nước sôi",
+        "Múc bún ra tô, chan nước dùng, thêm chả viên, trứng cút và da heo chiên"
+      ],
+      "howToEat": "Ăn nóng, trộn đều rau sống (giá, rau thơm) vào tô trước khi ăn, có thể thêm sa tế hoặc ớt tươi cho vị cay nồng.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vnexpress.net/dac-san-bun-do-buon-ma-thuot-o-ha-noi-4622811.html", "label": "Đặc sản bún đỏ Buôn Ma Thuột – VnExpress" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "goi-du-du-kien-vang",
+      "name": "Gỏi đu đủ kiến vàng",
+      "isHero": false,
+      "tasteTags": ["sour", "spicy", "vegetarian-friendly"],
+      "description": "Gỏi đu đủ kiến vàng là món ăn độc đáo của các dân tộc bản địa vùng Buôn Đôn, dùng kiến vàng hoặc kiến bay rừng — loại côn trùng có vị chua nhẹ, béo bùi — trộn cùng đu đủ xanh bào sợi, tạo nên vị chua – cay – ngọt – bùi lạ miệng, thường được giới thiệu tại các khu du lịch Bản Đôn.",
+      "keyIngredients": ["đu đủ xanh bào sợi", "kiến vàng/kiến bay rừng", "ớt, chanh", "rau thơm rừng", "bánh tráng nướng ăn kèm"],
+      "prepOutline": [
+        "Bào sợi đu đủ xanh, ngâm nước muối loãng rồi vắt ráo",
+        "Bắt và sơ chế kiến vàng hoặc kiến bay từ tổ kiến rừng",
+        "Trộn đu đủ với kiến, ớt, chanh và rau thơm cắt nhỏ",
+        "Nêm nếm lại cho vừa vị chua cay trước khi bày ra đĩa"
+      ],
+      "howToEat": "Ăn kèm bánh tráng nướng giòn để xúc gỏi, thường dùng như món khai vị hoặc món nhậu tại các điểm du lịch Buôn Đôn.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/goi-du-du-kien-lua-buon-ma-thuot-la-ma-ngon-5515", "label": "Gỏi đu đủ kiến lửa Buôn Ma Thuột – Mia.vn (nguồn du lịch, không phải Wikipedia)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

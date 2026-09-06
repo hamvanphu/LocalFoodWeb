@@ -1,0 +1,77 @@
+{
+  "slug": "bac-ninh",
+  "code": "VN-BN",
+  "name": "Bắc Ninh",
+  "region": "Bắc",
+  "centroid": [106.10462, 21.1101],
+  "summary": "Bắc Ninh - vùng đất Kinh Bắc ngàn năm văn hiến - nổi tiếng với những món ăn tinh tế gắn liền với lễ nghi cưới hỏi như bánh phu thê Đình Bảng, bên cạnh các đặc sản dân dã như nem Bùi và bánh tẻ làng Chờ được lưu truyền qua nhiều thế hệ làng nghề.",
+  "summarySourceRefs": [
+    { "url": "https://en.wikipedia.org/wiki/B%C3%A1nh_phu_th%C3%AA", "label": "Bánh phu thê – Wikipedia" }
+  ],
+  "heroDishSlug": "banh-phu-the",
+  "dishes": [
+    {
+      "slug": "banh-phu-the",
+      "name": "Bánh phu thê",
+      "isHero": true,
+      "tasteTags": ["sweet", "vegetarian-friendly"],
+      "description": "Bánh phu thê (còn gọi bánh xu xê) là đặc sản gần 1000 năm tuổi của làng Đình Bảng, thị xã Từ Sơn, Bắc Ninh, mang ý nghĩa biểu trưng cho tình nghĩa vợ chồng thủy chung. Bánh làm từ bột năng nhuộm màu vàng tự nhiên từ quả dành dành, nhân đậu xanh ngọt bùi, gói trong lớp lá dong hoặc lá chuối tạo hình vuông vắn.",
+      "keyIngredients": ["bột năng (bột đao)", "đậu xanh làm nhân", "dừa nạo", "quả dành dành tạo màu vàng", "lá dong hoặc lá chuối gói bánh"],
+      "prepOutline": [
+        "Ngâm và nấu nước quả dành dành lấy màu vàng tự nhiên",
+        "Nhào bột năng với nước dành dành, đường cho dẻo trong",
+        "Xào nhân đậu xanh với đường và dừa nạo cho tơi bùi",
+        "Gói bột và nhân trong lá dong thành hình vuông rồi hấp hoặc luộc chín"
+      ],
+      "howToEat": "Bóc lớp lá, bánh trong suốt ánh vàng được ăn nguội, thường xuất hiện trong tráp lễ ăn hỏi, đám cưới và làm quà biếu mang ý nghĩa cầu chúc hạnh phúc lứa đôi.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Phu_The_Cake.jpg", "attribution": "Khương Việt Hà, via Wikimedia Commons", "license": "Public domain" }
+      ],
+      "sourceRefs": [
+        { "url": "https://en.wikipedia.org/wiki/B%C3%A1nh_phu_th%C3%AA", "label": "Bánh phu thê – Wikipedia" },
+        { "url": "https://danviet.vn/cha-phai-banh-phu-the-o-bac-ninh-co-nem-bui-hon-mot-dac-san-la-mot-phan-van-hoa-kinh-bac-20250323102747351-d1217095.html", "label": "Bánh phu thê và văn hóa ẩm thực Kinh Bắc (Dân Việt)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "nem-bui",
+      "name": "Nem Bùi",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Nem Bùi (còn gọi nem thính) là đặc sản gần 100 năm tuổi của làng Bùi, xã Ninh Xá, huyện Thuận Thành, Bắc Ninh. Khác với nem chua lên men bằng thịt sống, nem Bùi dùng thính gạo rang xay mịn trộn cùng bì lợn và thịt để tạo vị bùi béo, thơm đặc trưng mà không cần ủ chua lâu ngày.",
+      "keyIngredients": ["thịt lợn (nạc mông)", "bì lợn thái sợi", "thính gạo rang xay mịn", "tỏi, lá đinh lăng hoặc lá sung, lá ổi"],
+      "prepOutline": [
+        "Chọn gạo ngon, ngâm nước khoảng 3 giờ rồi để ráo và rang vàng",
+        "Xay gạo rang thành thính mịn thơm",
+        "Trộn thịt luộc thái mỏng, bì lợn với thính và gia vị",
+        "Nắm nem thành nắm nhỏ, gói cùng lá ổi hoặc lá sung"
+      ],
+      "howToEat": "Nem Bùi ăn kèm lá sung hoặc lá đinh lăng, chấm tương ớt hoặc nước mắm chua ngọt, thường nhâm nhi cùng bia trong các buổi họp mặt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vnexpress.net/nem-bui-mon-dac-san-dan-da-o-bac-ninh-3341749.html", "label": "Nem Bùi - món đặc sản dân dã ở Bắc Ninh (VnExpress)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-te-lang-cho",
+      "name": "Bánh tẻ làng Chờ",
+      "isHero": false,
+      "tasteTags": ["savory", "vegetarian-friendly"],
+      "description": "Bánh tẻ làng Chờ là đặc sản của xã Yên Phong, tỉnh Bắc Ninh, được gói trong lá dong nhỏ bản, vỏ bánh mỏng nhưng nhiều nhân, dẻo vừa phải chứ không nát nhũn như bánh giò. Gạo làm bánh được chọn kỹ từ các giống gạo tẻ dẻo như Thái Bao hay 203, xay mịn theo bí quyết gia truyền của làng nghề.",
+      "keyIngredients": ["gạo tẻ dẻo (giống Thái Bao, 203)", "thịt lợn băm", "mộc nhĩ", "hành khô", "lá dong gói bánh"],
+      "prepOutline": [
+        "Ngâm gạo tẻ khoảng 5 giờ rồi xay thật mịn thành bột nước",
+        "Quấy bột trên bếp cho chín tới thành hỗn hợp sánh dẻo",
+        "Xào nhân thịt băm với mộc nhĩ, hành khô cho thơm",
+        "Gói bột và nhân trong lá dong nhỏ rồi hấp hoặc luộc chín"
+      ],
+      "howToEat": "Bánh tẻ ăn nóng, bóc lớp lá dong, chấm cùng nước mắm ớt hoặc ăn không để cảm nhận vị dẻo thơm của bột và nhân thịt mộc nhĩ.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vinwonders.com/vi/wonderpedia/news/banh-te-lang-cho-bac-ninh/", "label": "Bánh tẻ làng Chờ: đặc sản thơm ngon Bắc Ninh (VinWonders)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "thanh-hoa",
+  "code": "VN-TH",
+  "name": "Thanh Hóa",
+  "region": "Trung",
+  "centroid": [105.31651, 20.04736],
+  "summary": "Thanh Hóa là vùng đất chuyển tiếp giữa Bắc Bộ và Bắc Trung Bộ, có cả đồng bằng sông Mã, vùng biển Sầm Sơn lẫn vùng đất nhiễm mặn Nga Sơn, tạo nên một nền ẩm thực đa dạng: từ nem chua lên men trứ danh cả nước, gỏi cá nhệch cầu kỳ của vùng cửa biển, đến chả tôm nướng đậm vị biển Sầm Sơn.",
+  "summarySourceRefs": [
+    { "url": "https://vietnamnet.vn/dac-san-thanh-hoa-khong-phai-ai-cung-dam-thu-khach-sanh-an-khen-ngon-hon-tom-2450214.html", "label": "VietNamNet – Đặc sản Thanh Hóa" }
+  ],
+  "heroDishSlug": "nem-chua-thanh-hoa",
+  "dishes": [
+    {
+      "slug": "nem-chua-thanh-hoa",
+      "name": "Nem chua Thanh Hóa",
+      "isHero": true,
+      "tasteTags": ["sour", "savory", "street-food"],
+      "description": "Nem chua Thanh Hóa là món ăn lên men trứ danh, được xem như biểu tượng ẩm thực của xứ Thanh. Khác với nem chua ở nhiều địa phương khác, nem chua Thanh Hóa chua thanh dịu, ngọt nhẹ, chín tự nhiên nhờ quá trình lên men bằng lá chứ không qua nấu nướng hay dùng chất bảo quản. Nem được làm thành nhiều hình dạng: nem thỏi, nem vuông, nem cối, nem nướng, mỗi loại có kết cấu và cách thưởng thức riêng.",
+      "keyIngredients": ["thịt lợn nạc xay", "bì lợn thái sợi mỏng", "thính gạo rang", "tỏi", "ớt", "lá đinh lăng hoặc lá ổi", "lá chuối gói ngoài"],
+      "prepOutline": [
+        "Chọn thịt lợn nạc còn nóng, xay nhuyễn ngay để giữ độ kết dính tự nhiên",
+        "Trộn thịt với bì lợn thái sợi, thính gạo rang, tỏi, ớt, hạt tiêu và một chút đường, muối",
+        "Nắm nhân thành viên nhỏ, đặt lên lá đinh lăng hoặc lá ổi rồi gói trong lá chuối",
+        "Ủ nem ở nhiệt độ thường: mùa nóng 8–12 giờ, mùa lạnh 24–36 giờ cho tới khi nem chín tới, có vị chua nhẹ"
+      ],
+      "howToEat": "Bóc lá chuối, ăn trực tiếp kèm tương ớt hoặc tỏi tươi; nem nướng thì nướng trên than hoa cho thơm trước khi ăn kèm rau sống.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Nem_chua_Thanh_Hoa.jpg", "attribution": "Bogiasamson, Wikimedia Commons", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vietnamnet.vn/dac-san-thanh-hoa-khong-phai-ai-cung-dam-thu-khach-sanh-an-khen-ngon-hon-tom-2450214.html", "label": "VietNamNet – Đặc sản Thanh Hóa" },
+        { "url": "https://en.wikipedia.org/wiki/Nem_chua", "label": "Wikipedia (EN) – Nem chua" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    },
+    {
+      "slug": "goi-ca-nhech-nga-son",
+      "name": "Gỏi cá nhệch Nga Sơn",
+      "isHero": false,
+      "tasteTags": ["sour", "savory", "seafood", "herb-forward"],
+      "description": "Gỏi cá nhệch là đặc sản của vùng nước lợ Nga Sơn, chế biến từ cá nhệch — loài thuộc họ lươn nhưng thân dài, da trơn, sống ở cửa sông giáp biển. Món ăn vốn dân dã của ngư dân nhưng nhờ sự khéo léo trong chế biến đã trở thành đặc sản đãi khách quý, đòi hỏi người làm phải rất thạo nghề vì da cá rất trơn nhớt.",
+      "keyIngredients": ["cá nhệch tươi", "thính gạo rang", "lá chanh, lá sung, rau thơm các loại", "nước chấm chẻo (gan cá, xương cá giã nhuyễn)"],
+      "prepOutline": [
+        "Làm sạch nhớt cá bằng nước vôi loãng hoặc tro, sau đó lọc thịt cá bỏ xương",
+        "Thái cá thành lát mỏng, trộn đều với thính gạo rang cho thơm và se lại thịt",
+        "Giã xương và gan cá cùng gia vị để làm bát nước chấm chẻo đặc trưng",
+        "Bày cá gỏi ra đĩa cùng rổ rau sống, lá sung, lá chanh thái chỉ"
+      ],
+      "howToEat": "Cuốn miếng cá gỏi cùng rau sống, lá sung trong bánh đa hoặc lá chuối, chấm ngập vào bát chẻo đặc sánh rồi ăn ngay.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://nld.com.vn/thoi-su/goi-nhech-mon-ngon-tru-danh-o-xu-thanh-20210208223033965.htm", "label": "Người Lao Động – Gỏi nhệch, món ngon trứ danh xứ Thanh" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "cha-tom-thanh-hoa",
+      "name": "Chả tôm Thanh Hóa",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled", "seafood", "street-food"],
+      "description": "Chả tôm Thanh Hóa là món quà vặt gắn liền với thành phố Thanh Hóa và vùng biển Sầm Sơn, dùng tôm sông tươi có vị ngọt và thịt chắc. Lớp bánh phở bọc ngoài được nướng vàng giòn, bên trong là nhân tôm trộn thịt ba chỉ béo ngậy, tạo nên món ăn vừa lạ miệng vừa đậm đà.",
+      "keyIngredients": ["tôm sông tươi", "thịt ba chỉ", "bánh phở", "hành khô", "gấc (tạo màu)", "nước chấm chua ngọt"],
+      "prepOutline": [
+        "Giã tôm cùng thịt ba chỉ, trộn với hành khô phi thơm và gia vị",
+        "Trải bánh phở, đặt nhân tôm lên rồi cuốn lại thành từng cuộn nhỏ",
+        "Xiên que tre và nướng trên than hoa cho tới khi vỏ bánh phở vàng giòn thơm nức"
+      ],
+      "howToEat": "Ăn kèm rau sống, bánh cuốn, chấm với nước mắm chua ngọt pha theo công thức riêng của người Thanh Hóa.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://nongthonmoi.danviet.vn/cha-tom-thanh-hoa-dac-san-dan-da-mang-huong-vi-kho-quen-cua-xu-thanh-d28414.html", "label": "Dân Việt – Chả tôm Thanh Hóa" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

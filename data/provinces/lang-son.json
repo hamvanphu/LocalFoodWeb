@@ -1,0 +1,80 @@
+{
+  "slug": "lang-son",
+  "code": "VN-LS",
+  "name": "Lạng Sơn",
+  "region": "Bắc",
+  "centroid": [106.76, 21.85],
+  "summary": "Lạng Sơn là cửa ngõ giao thương với Trung Quốc, nơi hội tụ văn hóa ẩm thực của người Tày, Nùng với dấu ấn giao thoa rõ nét. Vịt quay lá mắc mật, khâu nhục hấp mềm và bánh cuốn trứng béo ngậy là những món ăn làm nên tên tuổi ẩm thực xứ Lạng.",
+  "summarySourceRefs": [
+    { "url": "https://baolangson.vn/khau-nhuc-lang-son-dac-sac-am-thuc-vung-bien-1528145.html", "label": "Khâu nhục Lạng Sơn – Đặc sắc ẩm thực vùng biên - Báo Lạng Sơn" }
+  ],
+  "heroDishSlug": "vit-quay-lang-son",
+  "dishes": [
+    {
+      "slug": "vit-quay-lang-son",
+      "name": "Vịt quay Lạng Sơn",
+      "isHero": true,
+      "tasteTags": ["savory", "sweet", "grilled"],
+      "description": "Vịt quay Lạng Sơn là món ăn nổi tiếng khắp vùng biên giới Đông Bắc, làm từ giống vịt Thất Khê nổi tiếng thịt mềm, xương nhỏ. Vịt được nhồi lá mắc mật - loại lá đặc trưng của vùng núi phía Bắc - rồi quay trên than hoa, trong lúc quay liên tục phết mật ong pha giấm để lớp da vàng óng, giòn tan. Vị thơm của mắc mật hòa quyện cùng vị ngọt của mật ong tạo nên hương vị đặc trưng không thể nhầm lẫn của vịt quay xứ Lạng.",
+      "keyIngredients": ["vịt Thất Khê", "lá và quả mắc mật", "mật ong", "giấm", "gừng, hành khô"],
+      "prepOutline": [
+        "Chọn vịt Thất Khê thịt chắc, làm sạch để ráo nước",
+        "Nhồi lá mắc mật cùng gia vị vào bụng vịt rồi khâu kín",
+        "Chần vịt qua nước sôi pha giấm, mật ong để da căng bóng",
+        "Quay vịt trên than hoa, xoay đều tay và phết mật ong liên tục",
+        "Quay tới khi da vàng giòn, thịt chín đều rồi chặt miếng"
+      ],
+      "howToEat": "Vịt quay chặt miếng vừa ăn, chấm cùng nước mắm pha hoặc xì dầu gừng tỏi, thường dùng kèm cơm hoặc bánh mì tại các quán vịt quay dọc phố cổ Kỳ Lừa.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://luhanhvietnam.com.vn/du-lich/thuong-thuc-dac-san-vit-quay-lang-son.html", "label": "Thưởng thức đặc sản vịt quay Lạng Sơn ngon nức tiếng" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "khau-nhuc-lang-son",
+      "name": "Khâu nhục",
+      "isHero": false,
+      "tasteTags": ["savory"],
+      "description": "Khâu nhục là món ăn truyền thống của người Tày, Nùng ở Lạng Sơn, có nguồn gốc du nhập từ cộng đồng người Hoa di cư tới vùng biên giới Đông Bắc rồi được bản địa hóa. Thịt ba chỉ được chần qua, quay vàng bì, thái miếng rồi ướp cùng khoai môn, ngũ vị hương và tương, xếp vào bát hấp cách thủy nhiều giờ cho tới khi mềm nhừ, béo ngậy mà không ngấy. Món ăn thường xuất hiện trong mâm cỗ ngày Tết và các dịp lễ trọng của người dân xứ Lạng.",
+      "keyIngredients": ["thịt ba chỉ", "khoai môn", "ngũ vị hương", "tương, dấm", "hành, tỏi, gừng"],
+      "prepOutline": [
+        "Luộc sơ thịt ba chỉ rồi quay vàng phần bì",
+        "Thái thịt thành miếng dày, ướp với ngũ vị hương và tương",
+        "Thái khoai môn miếng vừa, chiên sơ cho săn",
+        "Xếp thịt và khoai môn xen kẽ vào bát, úp ngược",
+        "Hấp cách thủy nhiều giờ tới khi thịt mềm nhừ"
+      ],
+      "howToEat": "Khi ăn, úp bát khâu nhục ra đĩa để lớp bì vàng nằm trên cùng, dùng nóng cùng cơm trắng, thường xuất hiện trong mâm cỗ Tết và cưới hỏi của người Lạng Sơn.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Thit_Khau_Nhuc_ANSa_Hanoi.jpg", "attribution": "Leduong5004864, Wikimedia Commons", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://baolangson.vn/khau-nhuc-lang-son-dac-sac-am-thuc-vung-bien-1528145.html", "label": "Khâu nhục Lạng Sơn – Đặc sắc ẩm thực vùng biên - Báo Lạng Sơn" },
+        { "url": "https://vnexpress.net/doi-song-cooking-khau-nhuc-lang-son-4702792.html", "label": "Cách làm món khâu nhục Lạng Sơn - VnExpress" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    },
+    {
+      "slug": "banh-cuon-trung-lang-son",
+      "name": "Bánh cuốn trứng Lạng Sơn",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh cuốn trứng là biến tấu riêng của người Lạng Sơn so với bánh cuốn truyền thống, khi nhân bánh không phải mộc nhĩ, thịt băm mà là trứng gà được đập trực tiếp lên lớp bột đang tráng trên nồi hấp. Lòng đỏ trứng chín tới, béo ngậy quyện cùng lớp bột gạo mỏng dẻo, ăn kèm bát nước chấm hoặc nước dùng xương hầm nóng hổi, tạo nên món điểm tâm sáng đặc trưng của xứ Lạng.",
+      "keyIngredients": ["bột gạo", "trứng gà", "hành phi", "chả lụa, thịt băm (tuỳ chọn)", "nước dùng xương hoặc nước mắm chua ngọt"],
+      "prepOutline": [
+        "Pha bột gạo với nước thành hỗn hợp mịn",
+        "Tráng một lớp bột mỏng trên nồi hấp có căng vải",
+        "Đập trứng gà lên trên lớp bột khi còn ướt, đậy vung hấp chín",
+        "Cuộn bánh nhẹ nhàng để giữ nguyên lòng đỏ, gắp ra đĩa",
+        "Chan nước dùng xương hoặc pha nước chấm ăn kèm"
+      ],
+      "howToEat": "Bánh cuốn trứng ăn nóng ngay sau khi tráng, có thể chan nước dùng xương ninh hoặc chấm nước mắm pha, rắc thêm hành phi và chả lụa tuỳ quán.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://luhanhvietnam.com.vn/du-lich/thuong-thuc-banh-cuon-trung-lang-son-noi-tieng.html", "label": "Thưởng thức đặc sản bánh cuốn trứng Lạng Sơn ăn một lần khó quên" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

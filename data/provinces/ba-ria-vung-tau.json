@@ -1,0 +1,108 @@
+{
+  "slug": "ba-ria-vung-tau",
+  "code": "VN-BRVT",
+  "name": "Bà Rịa - Vũng Tàu",
+  "region": "Nam",
+  "centroid": [107.25431, 10.51278],
+  "summary": "Bà Rịa - Vũng Tàu là tỉnh duyên hải Đông Nam Bộ nổi tiếng với các bãi biển và cảng cá lớn, nên ẩm thực nơi đây xoay quanh hải sản tươi sống đánh bắt mỗi ngày. Bánh khọt Vũng Tàu, các món gỏi cá và lẩu hải sản chua cay là những đại diện tiêu biểu cho phong cách ăn uống đậm chất biển của vùng đất này.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_kh%E1%BB%8Dt", "label": "Bánh khọt – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "banh-khot-vung-tau",
+  "dishes": [
+    {
+      "slug": "banh-khot-vung-tau",
+      "name": "Bánh khọt Vũng Tàu",
+      "isHero": true,
+      "tasteTags": ["street-food", "savory", "seafood"],
+      "description": "Bánh khọt là món bánh đặc trưng của Nam Bộ, và phiên bản Vũng Tàu được xem là chuẩn mực nhờ vị béo đậm đà hơn hẳn các nơi khác. Bột bánh làm từ bột gạo pha nước cốt dừa, đổ vào khuôn đất nung nhỏ đã tráng mỡ hành cho đến khi viền bánh giòn rụm còn phần giữa vẫn mềm, bên trên phủ một con tôm tươi. Người Vũng Tàu thường dùng nhiều mỡ hơn để bánh có vị béo ngậy đặc trưng của vùng biển.",
+      "keyIngredients": [
+        "Bột gạo",
+        "Nước cốt dừa",
+        "Tôm tươi",
+        "Mỡ heo, hành lá",
+        "Đậu xanh hấp chín",
+        "Rau sống ăn kèm (cải bẹ xanh, xà lách, rau thơm)",
+        "Nước mắm chua ngọt, đồ chua (cà rốt, đu đủ bào sợi)"
+      ],
+      "prepOutline": [
+        "Pha bột gạo với nước cốt dừa và một ít bột nghệ để tạo màu vàng nhẹ",
+        "Đổ mỡ hành vào từng khuôn đất nung nhỏ đã được nung nóng trên bếp than",
+        "Múc bột đổ vào khuôn, đậy nắp cho bánh chín viền giòn còn giữa mềm, đặt lên trên một con tôm và ít đậu xanh",
+        "Khi bánh chín vàng, dùng muỗng khéo léo tách bánh ra khỏi khuôn"
+      ],
+      "howToEat": "Dùng tay hoặc muỗng gắp bánh đặt lên lá cải bẹ xanh cùng rau thơm, cuốn lại rồi chấm ngập vào chén nước mắm chua ngọt có đồ chua; có thể ăn kèm đồ chua rắc trực tiếp lên bánh trước khi chấm.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/B%C3%A1nh_kh%E1%BB%8Dt_by_Nguyenhai314.jpg",
+          "attribution": "Nguyenhai314 / Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_kh%E1%BB%8Dt", "label": "Bánh khọt – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "lau-ca-duoi-vung-tau",
+      "name": "Lẩu cá đuối Vũng Tàu",
+      "isHero": false,
+      "tasteTags": ["sour", "seafood", "herb-forward"],
+      "description": "Lẩu cá đuối là món quen thuộc của người dân biển Vũng Tàu, tận dụng nguồn cá đuối tươi đánh bắt gần bờ. Thịt cá đuối gần như không có xương dăm mà chỉ có phần sụn mềm ở đầu và sống lưng, khi nấu chín cho vị ngọt tự nhiên, dai nhẹ mà không tanh nếu sơ chế đúng cách. Nước lẩu được nấu chua cay cùng măng chua, tạo vị đậm đà rất hợp với hải sản.",
+      "keyIngredients": [
+        "Cá đuối tươi",
+        "Măng chua",
+        "Cà chua, dứa (thơm)",
+        "Sả, ớt, me hoặc tắc để tạo vị chua",
+        "Rau ăn kèm: rau muống, bắp chuối, đậu bắp, rau nhút"
+      ],
+      "prepOutline": [
+        "Sơ chế cá đuối thật kỹ, chà xát muối và giấm hoặc gừng để khử nhớt và mùi tanh",
+        "Cắt cá thành từng miếng vừa ăn, ướp sơ với gia vị",
+        "Phi thơm sả, nấu nước lẩu chua cay cùng măng chua, cà chua và me",
+        "Khi nước lẩu sôi, thả cá đuối vào nấu chín tới, nêm nếm lại cho vừa vị chua cay"
+      ],
+      "howToEat": "Lẩu được giữ sôi trên bếp, ăn kèm bún tươi và các loại rau nhúng vào nước lẩu đang sôi, chấm cá cùng nước mắm nguyên chất dằm ớt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.ivivu.com/blog/2026/06/lau-ca-duoi-vung-tau-dac-san-tru-danh-chinh-phuc-moi-thuc-khach/", "label": "Lẩu cá đuối Vũng Tàu – đặc sản trứ danh (iVIVU)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "goi-ca-mai-vung-tau",
+      "name": "Gỏi cá mai Vũng Tàu",
+      "isHero": false,
+      "tasteTags": ["sour", "seafood", "herb-forward", "street-food"],
+      "description": "Gỏi cá mai là món ăn dân dã của ngư dân ven biển Bà Rịa - Vũng Tàu, dùng loại cá mai nhỏ, thân trong, thịt chắc và gần như không tanh. Cá được làm chín tái bằng nước cốt chanh hoặc giấm thay vì qua lửa, sau đó trộn cùng thính, đậu phộng rang và rau thơm, tạo nên món gỏi thanh mát, chua nhẹ rất đặc trưng của vùng biển này.",
+      "keyIngredients": [
+        "Cá mai tươi",
+        "Chanh hoặc giấm",
+        "Thính gạo rang",
+        "Đậu phộng rang giã dập",
+        "Khế chua, chuối chát",
+        "Rau thơm, hành phi",
+        "Nước mắm chua ngọt pha tỏi ớt"
+      ],
+      "prepOutline": [
+        "Cá mai được đánh vảy, bỏ đầu và ruột, rửa sạch để ráo",
+        "Ướp cá với nước cốt chanh hoặc giấm cho thịt cá chín tái và săn lại",
+        "Vắt ráo cá rồi trộn đều với thính gạo, đậu phộng rang, hành phi và rau thơm thái nhỏ",
+        "Chuẩn bị nước mắm chua ngọt pha tỏi ớt để chấm kèm"
+      ],
+      "howToEat": "Gỏi cá mai thường được cuốn cùng bánh tráng và rau sống, khế, chuối chát, chấm vào chén nước mắm chua ngọt đậm vị.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/G%E1%BB%8Fi_C%C3%A1_Tr%C3%ADch.jpg",
+          "attribution": "OlBoes / Wikimedia Commons (ảnh minh họa gỏi cá trích, một món gỏi cá sống Nam Bộ tương tự cách chế biến gỏi cá mai)",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://luhanhvietnam.com.vn/du-lich/goi-ca-mai-vung-tau-dac-san-noi-tieng.html", "label": "Gỏi cá mai Vũng Tàu – đặc sản nổi tiếng (Luhanhvietnam)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

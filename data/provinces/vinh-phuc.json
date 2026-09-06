@@ -1,0 +1,75 @@
+{
+  "slug": "vinh-phuc",
+  "code": "VN-VP",
+  "name": "Vĩnh Phúc",
+  "region": "Bắc",
+  "centroid": [105.55, 21.36],
+  "summary": "Vĩnh Phúc là vùng đất trung du nổi tiếng với cá thính Lập Thạch - món cá ủ chua thính gạo dân dã tốn cơm, cùng bánh hòn Hương Canh mộc mạc và gà đồi Lập Thạch chăn thả tự nhiên trên các sườn đồi. Ẩm thực nơi đây mang đậm dấu ấn của vùng bán sơn địa giao thoa giữa đồng bằng và trung du miền núi.",
+  "summarySourceRefs": [
+    { "url": "https://vietnamnet.vn/dac-san-ca-thinh-lap-thach-o-vinh-phuc-khach-kho-tinh-cung-khen-ngon-2330824.html", "label": "Đặc sản cá thính Lập Thạch ở Vĩnh Phúc (VietNamNet)" }
+  ],
+  "heroDishSlug": "ca-thinh-lap-thach",
+  "dishes": [
+    {
+      "slug": "ca-thinh-lap-thach",
+      "name": "Cá thính Lập Thạch",
+      "isHero": true,
+      "tasteTags": ["savory", "sour"],
+      "description": "Cá thính Lập Thạch ra đời từ tập quán ủ chua cá để bảo quản lâu dài của người dân huyện Lập Thạch, Vĩnh Phúc vào mùa cấy chiêm khi ao đầm cạn nước và cá đánh bắt được nhiều. Cá tươi được ướp muối rồi ủ cùng thính gạo rang trong chum sành nhiều tháng, tạo vị chua dịu, thơm bùi đặc trưng của thính. Món ăn được cấp văn bằng bảo hộ nhãn hiệu năm 2010 và lọt Top 100 đặc sản Việt Nam giai đoạn 2020-2021.",
+      "keyIngredients": ["cá nước ngọt (cá mương, cá rô, cá chép, cá mè...)", "thính gạo rang xay", "muối hạt", "chum sành ủ cá"],
+      "prepOutline": [
+        "Làm sạch cá, ướp muối cho ngấm và tiết bớt nước",
+        "Rang gạo vàng thơm rồi xay thành thính mịn",
+        "Trộn đều cá ướp muối với thính gạo",
+        "Xếp cá vào chum sành, nén chặt và ủ kín từ vài tuần đến vài tháng"
+      ],
+      "howToEat": "Cá thính thường được rán hoặc nướng sơ trước khi ăn để dậy mùi thính, dùng kèm cơm nóng và rau sống - vị chua bùi đậm đà khiến món ăn trở nên rất tốn cơm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vietnamnet.vn/dac-san-ca-thinh-lap-thach-o-vinh-phuc-khach-kho-tinh-cung-khen-ngon-2330824.html", "label": "Đặc sản cá thính Lập Thạch ở Vĩnh Phúc (VietNamNet)" },
+        { "url": "https://danviet.vn/ca-thinh-lap-thach-dac-san-que-dan-da-ma-cach-lam-ki-cong-vi-ngon-kho-cuong-20220814223716641-d1037357.html", "label": "Cá thính Lập Thạch: đặc sản quê dân dã (Dân Việt)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-hon",
+      "name": "Bánh hòn Hương Canh",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh hòn là món quà quê mộc mạc của vùng Hương Canh và Hợp Thịnh, thị xã Phúc Yên và huyện Tam Dương, Vĩnh Phúc, hình thành từ tập quán trân quý hạt gạo của cư dân vùng lúa nước. Bột gạo tẻ được nặn tròn như quả bóng bàn, bọc nhân thịt băm, hành hoa và mộc nhĩ bên trong, rồi hấp chín thành từng lớp trong chõ.",
+      "keyIngredients": ["gạo tẻ ngâm chua", "thịt lợn băm", "hành hoa, mộc nhĩ", "lạc giã nhỏ (tùy nơi)"],
+      "prepOutline": [
+        "Ngâm gạo tẻ khoảng 2 ngày, nghiền rồi ngâm tiếp 2 ngày, thay nước chua đều đặn",
+        "Trộn nhân thịt băm với hành hoa, mộc nhĩ và gia vị",
+        "Nặn bột thành từng hòn tròn nhỏ, cho nhân vào giữa rồi vo kín",
+        "Xếp bánh vào chõ hấp nhiều lớp cho đến khi bánh lên da non trong suốt"
+      ],
+      "howToEat": "Bánh hòn ăn nóng ngay sau khi hấp, chấm cùng nước mắm pha hoặc ăn kèm rau sống, là món quà sáng quen thuộc được bán tại các chợ quê Vĩnh Phúc.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vietnamnet.vn/banh-hon-huong-canh-thom-thao-qua-que-vinh-phuc-319098.html", "label": "Bánh hòn Hương Canh - thơm thảo quà quê Vĩnh Phúc (VietNamNet)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ga-doi-lap-thach",
+      "name": "Gà đồi Lập Thạch",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Gà đồi Lập Thạch là giống gà được người dân huyện Lập Thạch, Vĩnh Phúc chăn thả tự nhiên trên các sườn đồi, dưới tán cây ăn quả, tự kiếm ăn côn trùng và cỏ dại nên thịt săn chắc, da giòn, ít mỡ hơn gà nuôi công nghiệp. Kích thước gà đồi Vĩnh Phúc thường nhỏ hơn gà đồi các tỉnh miền núi phía Bắc khác nhưng bù lại thịt dai và đậm vị hơn.",
+      "keyIngredients": ["gà đồi thả vườn", "lá chanh, gừng, sả", "muối hạt, hạt tiêu"],
+      "prepOutline": [
+        "Nuôi gà thả tự nhiên trên đồi trong nhiều tháng để thịt săn chắc",
+        "Làm sạch gà, để nguyên con hoặc chặt miếng tùy món",
+        "Luộc, nướng hoặc quay tùy khẩu vị, giữ lửa vừa để da giòn không cháy",
+        "Chặt miếng vừa ăn, bày cùng lá chanh thái sợi"
+      ],
+      "howToEat": "Gà đồi thường được luộc chấm muối lá chanh hoặc nướng mật ong, là món đãi khách phổ biến trong các dịp họp mặt, cỗ bàn của người dân Vĩnh Phúc.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://eva.vn/di-dau-xem-gi/5-dac-san-chi-co-o-vinh-phuc-cuc-noi-tieng-co-mon-khong-phai-ai-cung-dam-an-c40a562872.html", "label": "5 đặc sản chỉ có ở Vĩnh Phúc (Eva.vn)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

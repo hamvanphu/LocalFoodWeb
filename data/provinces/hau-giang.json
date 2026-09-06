@@ -1,0 +1,91 @@
+{
+  "slug": "hau-giang",
+  "code": "VN-HG2",
+  "name": "Hậu Giang",
+  "region": "Nam",
+  "centroid": [105.62253, 9.78513],
+  "summary": "Hậu Giang là tỉnh trẻ của Đồng bằng sông Cửu Long, nổi tiếng với hai đặc sản mang chỉ dẫn địa lý: cá thát lát và khóm (dứa) Cầu Đúc, bên cạnh các món ăn dân dã đậm chất sông nước như bún gỏi già vùng Phụng Hiệp.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/Kh%C3%B3m_C%E1%BA%A7u_%C4%90%C3%BAc", "label": "Khóm Cầu Đúc – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "cha-ca-that-lat-hau-giang",
+  "dishes": [
+    {
+      "slug": "cha-ca-that-lat-hau-giang",
+      "name": "Chả cá thát lát Hậu Giang",
+      "isHero": true,
+      "tasteTags": ["savory", "seafood"],
+      "description": "Cá thát lát là loài cá nước ngọt thân dẹp, thịt dai ngọt và ít xương, được xem là \"món tiến vua\" từ thời xưa. Hậu Giang là một trong những vùng nuôi và chế biến cá thát lát nổi tiếng nhất miền Tây, với thịt cá quết nhuyễn cùng gia vị tạo nên món chả cá thát lát dai giòn đặc trưng, trở thành nguyên liệu chủ lực cho nhiều món ăn truyền thống.",
+      "keyIngredients": [
+        "Thịt cá thát lát tươi",
+        "Hành lá, tiêu, tỏi",
+        "Nước mắm, muối, đường",
+        "Lá hẹ hoặc thì là (khi nấu canh, lẩu)"
+      ],
+      "prepOutline": [
+        "Cá thát lát được lóc lấy thịt, nạo sạch phần thịt bám vào da",
+        "Quết nhuyễn thịt cá cùng hành lá, tiêu và gia vị cho đến khi thịt dai và kết dính",
+        "Vo thành từng viên hoặc ép dẹp thành miếng chả tùy món ăn",
+        "Chiên vàng, hấp hoặc dùng nấu canh, lẩu tùy theo cách chế biến"
+      ],
+      "howToEat": "Chả cá thát lát chiên vàng được ăn kèm rau sống và nước mắm chua ngọt hoặc tương ớt; cũng thường được viên thả vào các món canh, lẩu để tăng vị ngọt và độ dai giòn.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/C%C3%A1_th%C3%A1t_l%C3%A1t", "label": "Cá thát lát – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "khom-cau-duc",
+      "name": "Khóm Cầu Đúc",
+      "isHero": false,
+      "tasteTags": ["sweet", "sour"],
+      "description": "Khóm Cầu Đúc là giống dứa Queen được người dân xã Hỏa Tiến trồng từ những năm 1930 trên vùng đất nhiễm phèn mặn ven sông Cái Lớn, nay trở thành cây trồng chủ lực của Hậu Giang với chỉ dẫn địa lý riêng. Trái khóm có cuống ngắn, lõi nhỏ, thịt vàng đậm, ít xơ, vị ngọt thanh xen chua nhẹ và có thể để được 10-15 ngày mà không hư.",
+      "keyIngredients": [
+        "Khóm (dứa) Cầu Đúc chín",
+        "Muối ớt (khi ăn tươi)",
+        "Đường (khi làm mứt hoặc nước ép)"
+      ],
+      "prepOutline": [
+        "Chọn trái khóm chín vàng đều, mắt lồi và hố mắt hơi sâu đặc trưng của giống Cầu Đúc",
+        "Gọt vỏ, khoét bỏ mắt khóm rồi cắt miếng vừa ăn",
+        "Có thể chế biến thành mứt, nước ép, rượu khóm hoặc dùng làm nguyên liệu nấu ăn",
+        "Bảo quản nơi thoáng mát nếu chưa dùng ngay vì khóm có thể để được khá lâu"
+      ],
+      "howToEat": "Khóm Cầu Đúc thường được ăn tươi chấm muối ớt để cảm nhận trọn vị ngọt thanh xen chua nhẹ, hoặc dùng làm nước ép, mứt và các món ăn kèm khác.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Kh%C3%B3m_C%E1%BA%A7u_%C4%90%C3%BAc", "label": "Khóm Cầu Đúc – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "bun-goi-gia-phung-hiep",
+      "name": "Bún gỏi già Phụng Hiệp",
+      "isHero": false,
+      "tasteTags": ["sour", "sweet", "savory", "noodle-soup"],
+      "description": "Bún gỏi già (còn gọi là bún gỏi dà) là món ăn đặc sản của vùng Phụng Hiệp, Hậu Giang, ra đời từ sự kết hợp giữa bún mắm và gỏi cuốn, được người miền Tây biến tấu thành một món nước có vị chua của me, vị ngọt của nước hầm xương và vị đậm đà của mắm cá lóc hoặc cá linh.",
+      "keyIngredients": [
+        "Mắm cá lóc hoặc cá linh",
+        "Me chua",
+        "Xương heo hầm lấy nước dùng",
+        "Tôm tươi",
+        "Bún tươi",
+        "Bông chuối bào, rau muống bào",
+        "Rau thơm, giá đỗ"
+      ],
+      "prepOutline": [
+        "Nấu tan mắm cá trong nước rồi lọc lấy phần nước cốt đậm vị",
+        "Ninh xương heo lấy nước dùng ngọt rồi hòa cùng nước mắm đã lọc và me chua",
+        "Nêm nếm lại nồi nước dùng cho vừa vị chua ngọt mặn hài hòa",
+        "Trụng bún và chuẩn bị tôm, rau ăn kèm"
+      ],
+      "howToEat": "Bún được xếp ra tô cùng tôm, chan ngập nước dùng chua ngọt đậm mắm, ăn kèm bông chuối bào, rau muống bào và các loại rau thơm, có thể vắt thêm chanh, ớt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.vietfuntravel.com.vn/blog/dac-san-hau-giang-bun-goi-da.html", "label": "Đặc sản Hậu Giang - Bún gỏi dà – Viet Fun Travel" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

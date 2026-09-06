@@ -1,0 +1,77 @@
+{
+  "slug": "quang-binh",
+  "code": "VN-QB",
+  "name": "Quảng Bình",
+  "region": "Trung",
+  "centroid": [106.29035, 17.53331],
+  "summary": "Quảng Bình, vùng đất gió Lào cát trắng, có nền ẩm thực dân dã đậm chất miền Trung: bánh bột lọc dai mềm gói lá, cháo canh sợi bột dày ăn kèm ram giòn, và khoai deo — món quà quê ngọt bùi làm từ khoai lang trồng trên cồn cát Hải Ninh.",
+  "summarySourceRefs": [
+    { "url": "https://quangbinhtravel.vn/en/quang-binh-banh-loc-simple-but-unforgettable-flavor.html", "label": "Quang Binh Travel – Bánh lọc Quảng Bình" }
+  ],
+  "heroDishSlug": "banh-bot-loc-quang-binh",
+  "dishes": [
+    {
+      "slug": "banh-bot-loc-quang-binh",
+      "name": "Bánh bột lọc Quảng Bình",
+      "isHero": true,
+      "tasteTags": ["savory", "seafood", "street-food"],
+      "description": "Bánh bột lọc là món bánh dân dã đặc trưng của Quảng Bình, vỏ bánh làm từ bột sắn (bột lọc) tinh khiết, trong suốt và dai, nhân bên trong gồm tôm, thịt, mộc nhĩ. Bánh được gói cẩn thận trong lá chuối quê rồi hấp chín, mang hương vị mộc mạc nhưng khó quên.",
+      "keyIngredients": ["bột sắn (bột lọc)", "tôm", "thịt ba chỉ", "mộc nhĩ (nấm mèo)", "lá chuối gói bánh", "hành phi"],
+      "prepOutline": [
+        "Nhào bột sắn với nước sôi già cho tới khi bột dẻo, trong",
+        "Xào tôm, thịt ba chỉ, mộc nhĩ với hành phi và gia vị làm nhân",
+        "Vo bột thành từng viên nhỏ, bọc nhân vào giữa rồi gói trong lá chuối",
+        "Hấp bánh cho tới khi vỏ bột chuyển trong hẳn"
+      ],
+      "howToEat": "Bóc lá chuối, chấm bánh với nước mắm chua ngọt, rắc thêm hành phi và ăn nóng, đặc biệt ngon vào ngày trời lạnh.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/B%C3%A1nh_b%E1%BB%99t_l%E1%BB%8Dc.jpg", "attribution": "Charles Haynes, Wikimedia Commons", "license": "CC BY-SA 2.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://quangbinhtravel.vn/en/quang-binh-banh-loc-simple-but-unforgettable-flavor.html", "label": "Quang Binh Travel – Bánh lọc Quảng Bình" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "chao-canh-quang-binh",
+      "name": "Cháo canh Quảng Bình",
+      "isHero": false,
+      "tasteTags": ["savory", "noodle-soup", "seafood"],
+      "description": "Cháo canh (còn gọi là bánh canh Quảng Bình) tuy mang tên cháo nhưng thực chất gần giống phở hay bún hơn: sợi bánh làm từ bột gạo hoặc bột mì cán dày, ăn cùng nước dùng ninh từ xương ngọt thanh và các loại topping như cá lóc, cá thu, tôm hay thịt băm.",
+      "keyIngredients": ["bột gạo hoặc bột mì", "xương heo hoặc xương cá", "cá lóc, cá thu hoặc tôm", "ram Ba Đồn (chả giò chiên giòn)", "rau sống, ớt tươi"],
+      "prepOutline": [
+        "Nhào bột gạo hoặc bột mì, cán mỏng rồi cắt thành sợi dày bản",
+        "Ninh xương heo hoặc xương cá lấy nước dùng ngọt tự nhiên",
+        "Luộc hoặc áp chảo cá, tôm, thịt băm làm topping",
+        "Trụng sợi bánh canh, chan nước dùng nóng và bày topping lên trên"
+      ],
+      "howToEat": "Ăn nóng kèm ram Ba Đồn bẻ nhỏ thả vào bát để tăng độ giòn, thêm rau sống và ớt tươi tùy khẩu vị.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://ticotravel.com.vn/chao-canh-quang-binh/", "label": "Tico Travel – Cháo canh Quảng Bình" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "khoai-deo-quang-binh",
+      "name": "Khoai deo Quảng Bình",
+      "isHero": false,
+      "tasteTags": ["sweet", "street-food"],
+      "description": "Khoai deo là món quà quê đặc sản của vùng cồn cát trắng Hải Ninh (Quảng Ninh, Quảng Bình), làm từ khoai lang đỏ được nắng gió tự nhiên hong khô, cho vị ngọt bùi tự nhiên, dẻo dai như mạch nha nhưng không hề bở hay cứng.",
+      "keyIngredients": ["khoai lang đỏ (trồng trên cồn cát Hải Ninh)", "đường (tùy công thức)"],
+      "prepOutline": [
+        "Chọn củ khoai lang đỏ đều, không sâu, luộc hoặc hấp sơ cho chín tới",
+        "Bóc vỏ, thái lát hoặc để nguyên củ nhỏ",
+        "Phơi khoai dưới nắng và gió biển nhiều ngày cho tới khi khoai săn lại, dẻo và có màu cánh gián"
+      ],
+      "howToEat": "Nhâm nhi khoai deo cùng một tách trà nóng, thường dùng làm quà biếu khi rời Quảng Bình.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/%C4%90%E1%BA%B7c_S%E1%BA%A3n_Khoai_Deo_Qu%E1%BA%A3ng_B%C3%ACnh.jpg", "attribution": "Review Quang Binh, Wikimedia Commons", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://www.vietnamplus.vn/khoai-deo-mon-dac-san-dan-da-ma-doc-dao-cua-vung-dat-quang-binh-post912018.vnp", "label": "VietnamPlus (TTXVN) – Khoai deo Quảng Bình" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

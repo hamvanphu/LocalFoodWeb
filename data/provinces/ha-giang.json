@@ -1,0 +1,79 @@
+{
+  "slug": "ha-giang",
+  "code": "VN-HG",
+  "name": "Hà Giang",
+  "region": "Bắc",
+  "centroid": [104.98, 22.82],
+  "summary": "Hà Giang là vùng cao nguyên đá nơi sinh sống của đông đảo đồng bào Mông, nổi bật với ẩm thực gắn liền với khí hậu lạnh và địa hình hiểm trở. Cháo ấu tẩu, bánh làm từ hạt tam giác mạch và món chè nếp thắng dền là những đặc sản mang đậm dấu ấn văn hóa và điều kiện tự nhiên khắc nghiệt của cao nguyên đá.",
+  "summarySourceRefs": [
+    { "url": "https://dantocphattrien.vietnamnet.vn/chao-au-tau-dac-san-noi-tieng-cua-ha-giang-23945.html", "label": "Cháo ấu tẩu - đặc sản nổi tiếng của Hà Giang - Dân tộc và Phát triển (VietNamNet)" }
+  ],
+  "heroDishSlug": "chao-au-tau-ha-giang",
+  "dishes": [
+    {
+      "slug": "chao-au-tau-ha-giang",
+      "name": "Cháo ấu tẩu",
+      "isHero": true,
+      "tasteTags": ["savory"],
+      "description": "Cháo ấu tẩu là món ăn độc đáo bậc nhất của người Mông ở Hà Giang, chế biến từ củ ấu tẩu vốn có độc tính, mọc trên các triền đá cao nguyên. Củ được ngâm nước vo gạo qua đêm rồi ninh nhừ nhiều giờ cùng gạo tẻ, gạo nếp và chân giò lợn cho tới khi hết độc và sánh mịn. Món cháo có vị hơi đắng, béo ngậy, thường được ví như một bài thuốc dân gian giúp giải cảm, xua tan mệt mỏi trong tiết trời se lạnh vùng cao.",
+      "keyIngredients": ["củ ấu tẩu", "gạo tẻ, gạo nếp", "chân giò lợn", "trứng gà", "hành lá, rau mùi tàu", "tiêu, ớt"],
+      "prepOutline": [
+        "Ngâm củ ấu tẩu trong nước vo gạo qua đêm để giảm độc tính",
+        "Ninh củ ấu tẩu nhiều giờ cho tới khi mềm nhừ",
+        "Cho gạo và chân giò lợn vào ninh cùng tới khi cháo sánh mịn",
+        "Đập trứng gà vào cháo nóng, nêm gia vị vừa ăn",
+        "Rắc hành lá, rau mùi tàu, tiêu trước khi múc ra bát"
+      ],
+      "howToEat": "Cháo ăn nóng ngay khi múc ra bát, thường dùng vào buổi tối trên phố cổ Hà Giang, người bán rắc thêm tiêu và ớt để tăng vị ấm nóng, giúp giải cảm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://dantocphattrien.vietnamnet.vn/chao-au-tau-dac-san-noi-tieng-cua-ha-giang-23945.html", "label": "Cháo ấu tẩu - đặc sản nổi tiếng của Hà Giang - Dân tộc và Phát triển (VietNamNet)" },
+        { "url": "https://www.bachhoaxanh.com/kinh-nghiem-hay/chao-au-tau-dac-san-ha-giang-che-bien-tu-loai-cu-co-doc-tinh-1542704", "label": "Cháo ấu tẩu - Đặc sản Hà Giang chế biến từ loại củ có độc tính" }
+      ],
+      "occasions": ["Quanh năm", "Mùa đông"]
+    },
+    {
+      "slug": "banh-tam-giac-mach",
+      "name": "Bánh tam giác mạch",
+      "isHero": false,
+      "tasteTags": ["sweet", "vegetarian-friendly", "street-food"],
+      "description": "Bánh tam giác mạch được làm từ hạt của loài hoa tam giác mạch mọc phổ biến trên cao nguyên đá Đồng Văn, vốn là lương thực dự trữ của người dân địa phương bên cạnh ngô và gạo. Hạt được phơi khô, xay thành bột mịn, nhào với nước rồi đúc thành từng miếng tròn dẹt và hấp hoặc nướng chín trên bếp than. Bánh có vị bùi béo, hơi hăng đặc trưng của tam giác mạch, thường được bán nhiều nhất vào mùa hoa nở tháng 10-11.",
+      "keyIngredients": ["hạt tam giác mạch", "nước", "khuôn bánh truyền thống"],
+      "prepOutline": [
+        "Thu hoạch hạt tam giác mạch, phơi khô một tuần dưới nắng",
+        "Xay hạt khô thành bột mịn",
+        "Nhào bột với nước cho tới khi dẻo mịn",
+        "Đúc bột vào khuôn tròn rồi hấp hoặc nướng trên bếp than tới chín"
+      ],
+      "howToEat": "Bánh ăn nóng ngay khi vừa nướng, có thể ăn không hoặc chấm cùng chút mật ong, là món quà vặt phổ biến ở các phiên chợ và mùa hoa tam giác mạch tại cao nguyên đá.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/L%E1%BB%85_h%E1%BB%99i_%E1%BA%A9m_th%E1%BB%B1c_C%E1%BB%ADa_Vi%E1%BB%87t_th4n2023_%C4%91%E1%BA%B7c_s%E1%BA%A3n_T%C3%A2y_B%E1%BA%AFc%2C_b%C3%A1nh_tam_gi%C3%A1c_m%E1%BA%A1ch.jpg", "attribution": "Phương Huy, Wikimedia Commons", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://fptshop.com.vn/tin-tuc/dien-may/banh-tam-giac-mach-158476", "label": "Tìm hiểu về bánh tam giác mạch: Vị ngọt thiên nhiên của Hà Giang" }
+      ],
+      "occasions": ["Mùa thu"]
+    },
+    {
+      "slug": "thang-den-ha-giang",
+      "name": "Thắng dền",
+      "isHero": false,
+      "tasteTags": ["sweet", "street-food", "vegetarian-friendly"],
+      "description": "Thắng dền là món ăn chơi mùa đông quen thuộc ở phố cổ Hà Giang, hình dáng giống bánh trôi nhưng nhỏ hơn, làm từ bột nếp nhân đậu xanh hoặc để trống, luộc chín rồi thả trong bát nước đường gừng nóng. Vị ngọt ấm của nước đường hòa cùng vị cay nồng của gừng tươi giúp xua tan cái lạnh đặc trưng của cao nguyên đá, khác hẳn vị ngọt thanh của bánh trôi nước truyền thống.",
+      "keyIngredients": ["bột gạo nếp", "đậu xanh", "đường phên", "gừng tươi", "dừa nạo, vừng"],
+      "prepOutline": [
+        "Ngâm gạo nếp qua đêm rồi xay thành bột mịn, nhào dẻo",
+        "Nấu chín đậu xanh, trộn cùng dừa nạo và vừng làm nhân",
+        "Nặn bột thành viên nhỏ, có thể bọc nhân hoặc để trống",
+        "Luộc viên bột tới khi nổi lên mặt nước, vớt ra",
+        "Đun nước đường phên với gừng đập dập, thả viên bánh vào"
+      ],
+      "howToEat": "Thắng dền ăn nóng ngay sau khi múc ra bát, rắc thêm vừng và dừa nạo, là món ăn đêm được ưa chuộng ở chợ đêm Hà Giang vào mùa lạnh.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/thang-den-ha-giang-mon-an-choi-nuc-long-bao-thuc-khach-3456", "label": "Thắng dền Hà Giang - Món ăn chơi nức lòng bao thực khách" }
+      ],
+      "occasions": ["Mùa đông"]
+    }
+  ]
+}

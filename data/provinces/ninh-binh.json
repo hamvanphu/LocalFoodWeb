@@ -1,0 +1,78 @@
+{
+  "slug": "ninh-binh",
+  "code": "VN-NB",
+  "name": "Ninh Bình",
+  "region": "Bắc",
+  "centroid": [105.97, 20.25],
+  "summary": "Ninh Bình, vùng đất cố đô Hoa Lư với núi đá vôi trùng điệp, nổi danh với cơm cháy giòn rụm ăn kèm nước sốt dê hoặc bò, cùng thịt dê núi săn chắc nhờ đàn dê leo núi tự nhiên. Nem chua Yên Mạc mang gốc gác cung đình Huế cũng là một trong những món quà đặc trưng của vùng đất này.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/D%C3%AA_n%C3%BAi_Ninh_B%C3%ACnh", "label": "Dê núi Ninh Bình – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "com-chay-ninh-binh",
+  "dishes": [
+    {
+      "slug": "com-chay-ninh-binh",
+      "name": "Cơm cháy Ninh Bình",
+      "isHero": true,
+      "tasteTags": ["savory"],
+      "description": "Cơm cháy Ninh Bình ra đời từ công thức của ông Đinh Hoàng Thăng, người đã học nghề nấu ăn ở Hà Nội rồi về quê mở quán chuyên món cơm cháy, từ đó lan rộng thành đặc sản của cả vùng. Cơm được nấu từ gạo nếp hương hạt tròn, dàn mỏng trong nồi gang, phơi khô rồi chiên giòn tạo lớp vỏ vàng ruộm, xốp giòn đặc trưng. Năm 2012, cơm cháy Ninh Bình được vinh danh trong Top 50 đặc sản Việt Nam.",
+      "keyIngredients": ["gạo nếp hương", "thịt dê hoặc bò", "cà rốt, hành tây, nấm", "dầu ăn để chiên giòn", "nước sốt sánh"],
+      "prepOutline": [
+        "Nấu cơm nếp hương chín tới, dàn mỏng đều trong nồi gang",
+        "Nén chặt và để cơm khô tự nhiên trong vài ngày cho cứng",
+        "Chiên ngập dầu đến khi cơm vàng giòn đều",
+        "Chan nước sốt thịt dê hoặc bò xào cùng rau củ lên trên"
+      ],
+      "howToEat": "Cơm cháy ăn ngay khi còn nóng giòn, chan nước sốt sền sệt từ thịt dê hoặc bò xào rau củ để miếng cơm mềm dần mà vẫn giữ độ giòn ở viền ngoài.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/C%C6%A1m_ch%C3%A1y_Ninh_B%C3%ACnh.JPG", "attribution": "Nguyễn Thanh Quang, via Wikimedia Commons", "license": "CC BY-SA 3.0 / GFDL" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_ch%C3%A1y_Ninh_B%C3%ACnh", "label": "Cơm cháy Ninh Bình – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "thit-de-nui-ninh-binh",
+      "name": "Thịt dê núi Ninh Bình",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Thịt dê núi Ninh Bình nổi tiếng nhờ đàn dê được chăn thả tự do trên các dãy núi đá vôi, thường xuyên leo trèo và ăn nhiều loại lá thuốc, lá cây rừng nên thịt săn chắc, thơm và ít mỡ hơn dê nuôi nhốt. Món ăn này được cấp chứng nhận chỉ dẫn địa lý từ năm 2018 và nằm trong Top 50 đặc sản Việt Nam do Trung tâm Kỷ lục Việt Nam công nhận năm 2012.",
+      "keyIngredients": ["thịt dê núi", "lá mơ, riềng, sả", "tiết dê (cho món tái)", "rượu Kim Sơn (khi thưởng thức)"],
+      "prepOutline": [
+        "Chọn dê núi thả rông, làm sạch và sơ chế khử mùi bằng rượu gừng",
+        "Chế biến thành nhiều món: tái chanh, nướng, xào lăn, hấp",
+        "Với món tái, trộn thịt dê thái mỏng cùng lá mơ, riềng, tiết",
+        "Nướng hoặc xào nhanh trên lửa lớn để giữ độ ngọt của thịt"
+      ],
+      "howToEat": "Thịt dê thường ăn kèm lá mơ, chấm tương gừng, dùng cùng cơm cháy và nhấm nháp cùng rượu Kim Sơn - đây là món đãi khách phổ biến của người Ninh Bình.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Denui.JPG", "attribution": "Kien1980v, via Wikimedia Commons (ảnh đàn dê núi Ninh Bình, không phải món ăn đã chế biến)", "license": "Public domain" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/D%C3%AA_n%C3%BAi_Ninh_B%C3%ACnh", "label": "Dê núi Ninh Bình – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "nem-chua-yen-mac",
+      "name": "Nem chua Yên Mạc",
+      "isHero": false,
+      "tasteTags": ["sour", "savory"],
+      "description": "Nem chua Yên Mạc gắn với giai thoại bà Phạm Thị Thư, con gái quan Thượng thư triều Nguyễn Phạm Thận Duật, học được cách làm nem từ bếp cung đình Huế rồi truyền lại cho quê hương Yên Mạc, huyện Yên Mô, Ninh Bình. Nem lên men tự nhiên từ thịt lợn và bì, có vị chua thanh, giòn sần sật đặc trưng, khác với nem chua rán phổ biến ở nơi khác.",
+      "keyIngredients": ["thịt lợn nạc", "bì lợn thái sợi", "thính gạo rang", "tỏi, ớt, lá ổi hoặc lá đinh lăng"],
+      "prepOutline": [
+        "Chọn thịt lợn nạc tươi, giã hoặc xay nhuyễn",
+        "Trộn thịt với bì lợn thái sợi và thính gạo rang thơm",
+        "Nêm gia vị rồi nắm thành từng nem nhỏ",
+        "Gói nem trong lá ổi hoặc lá đinh lăng, ủ lên men tự nhiên vài ngày"
+      ],
+      "howToEat": "Nem chua ăn trực tiếp không cần chế biến thêm, chấm cùng tương ớt, thường dùng làm món nhắm hoặc quà biếu đặc sản khi rời Ninh Bình.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://visitninhbinh.com.vn/vi/nem-chua-yen-mac-voi-xuat-xu-cung-dinh-lam-say-dam-bao-thuc-khach-6334", "label": "Nem chua Yên Mạc với xuất xứ cung đình (Visit Ninh Bình)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

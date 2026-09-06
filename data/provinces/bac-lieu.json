@@ -1,0 +1,96 @@
+{
+  "slug": "bac-lieu",
+  "code": "VN-BL",
+  "name": "Bạc Liêu",
+  "region": "Nam",
+  "centroid": [105.48711, 9.31492],
+  "summary": "Bạc Liêu là vùng đất giao thoa văn hóa Kinh - Khmer - Hoa nổi tiếng với giai thoại \"Công tử Bạc Liêu\", sở hữu nền ẩm thực đậm dấu ấn cộng đồng người Hoa bên cạnh các món sông nước miền Tây. Đặc sản tiêu biểu nhất là bún bò cay và bánh tằm bì — hai món đã được vinh danh trong top ẩm thực tiêu biểu Việt Nam.",
+  "summarySourceRefs": [
+    { "url": "https://danviet.vn/am-thuc-bac-lieu-hai-mon-dac-san-nay-lot-top-am-thuc-tieu-bieu-viet-nam-20231112165329188.htm", "label": "Ẩm thực Bạc Liêu: hai món đặc sản lọt top ẩm thực tiêu biểu Việt Nam – Dân Việt" }
+  ],
+  "heroDishSlug": "bun-bo-cay-bac-lieu",
+  "dishes": [
+    {
+      "slug": "bun-bo-cay-bac-lieu",
+      "name": "Bún bò cay Bạc Liêu",
+      "isHero": true,
+      "tasteTags": ["spicy", "savory", "noodle-soup"],
+      "description": "Bún bò cay là món ăn đặc trưng chỉ có ở Bạc Liêu, khác hẳn các loại bún bò ở nơi khác nhờ vị cay nồng đặc biệt. Nước dùng được ninh từ xương bò, nêm sả và ớt hiểm nguyên trái để nguyên hạt thả thẳng vào tô, tạo vị cay xộc thẳng lên mũi nhưng vẫn giữ được vị ngọt thanh của nước hầm. Món này cùng bánh tằm bì đã được Hiệp hội Văn hóa ẩm thực Việt Nam công nhận là ẩm thực tiêu biểu năm 2023.",
+      "keyIngredients": [
+        "Xương bò và thịt bò (nạm, gân)",
+        "Bún tươi sợi nhỏ",
+        "Sả cây",
+        "Ớt hiểm nguyên trái (để nguyên hạt)",
+        "Muối, chanh",
+        "Hành lá, ngò gai"
+      ],
+      "prepOutline": [
+        "Ninh xương bò nhiều giờ cùng sả đập dập để lấy nước dùng ngọt trong",
+        "Thịt bò được luộc chín tới rồi thái lát vừa ăn",
+        "Phi thơm sả ớt rồi nêm lại nồi nước dùng cho vừa vị mặn ngọt",
+        "Thả nguyên trái ớt hiểm đã đập dập vào tô nước dùng đang sôi để lấy vị cay đặc trưng"
+      ],
+      "howToEat": "Bún tươi được trụng nóng, xếp thịt bò lên trên rồi chan ngập nước dùng cay nóng; thực khách vắt thêm chanh, ăn kèm rau sống và có thể dầm ớt hiểm trong tô để tăng độ cay tùy khẩu vị.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/bun-bo-cay-bac-lieu-15540", "label": "Bún bò cay Bạc Liêu – MIA.vn" },
+        { "url": "https://danviet.vn/am-thuc-bac-lieu-hai-mon-dac-san-nay-lot-top-am-thuc-tieu-bieu-viet-nam-20231112165329188.htm", "label": "Ẩm thực Bạc Liêu: hai món đặc sản lọt top ẩm thực tiêu biểu Việt Nam – Dân Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-tam-bi-bac-lieu",
+      "name": "Bánh tằm bì Bạc Liêu",
+      "isHero": false,
+      "tasteTags": ["savory", "sweet", "street-food"],
+      "description": "Bánh tằm bì có tên gọi từ hình dáng sợi bánh tròn mập, trắng ngà giống con tằm. Sợi bánh làm từ bột gạo hấp chín, ăn cùng bì (thịt heo và da heo thái sợi trộn thính), nước cốt dừa béo ngậy và nước mắm chua ngọt pha tỏi ớt, tạo nên hương vị vừa béo vừa đậm đà rất riêng của Bạc Liêu.",
+      "keyIngredients": [
+        "Bột gạo (làm sợi bánh tằm)",
+        "Bì heo (thịt và da heo thái sợi, thính gạo)",
+        "Nước cốt dừa",
+        "Nước mắm chua ngọt, tỏi ớt",
+        "Dưa leo, giá, rau thơm",
+        "Mỡ hành"
+      ],
+      "prepOutline": [
+        "Bột gạo được nhồi rồi se thành từng sợi tròn, hấp chín cho đến khi trong và dẻo",
+        "Thịt heo luộc thái sợi, trộn cùng da heo và thính gạo rang thơm để làm bì",
+        "Pha nước cốt dừa hơi sánh và nước mắm chua ngọt pha loãng vừa ăn",
+        "Bày sợi bánh tằm ra đĩa, xếp bì, dưa leo, giá lên trên"
+      ],
+      "howToEat": "Rưới nước cốt dừa và mỡ hành lên mặt bánh, chan thêm nước mắm chua ngọt, trộn đều tất cả trước khi ăn để sợi bánh thấm vị béo và chua ngọt hài hòa.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://danviet.vn/am-thuc-bac-lieu-hai-mon-dac-san-nay-lot-top-am-thuc-tieu-bieu-viet-nam-20231112165329188.htm", "label": "Ẩm thực Bạc Liêu: hai món đặc sản lọt top ẩm thực tiêu biểu Việt Nam – Dân Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-cu-cai-bac-lieu",
+      "name": "Bánh củ cải Bạc Liêu",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh củ cải là món ăn của cộng đồng người Hoa theo chân lưu dân đến Bạc Liêu rồi hòa vào văn hóa ẩm thực Nam Bộ, thường xuất hiện trong dịp giỗ chạp hay Tết Nguyên Đán của các gia đình người Hoa xưa. Vỏ bánh làm từ bột mì pha với củ cải trắng nghiền nhuyễn, nhìn giống chiếc há cảo lớn nhưng hương vị hoàn toàn khác biệt nhờ nhân tôm khô, thịt nạc và đậu xanh.",
+      "keyIngredients": [
+        "Bột mì trắng",
+        "Củ cải trắng nghiền nhuyễn",
+        "Tôm khô hoặc tép bạc",
+        "Thịt nạc heo",
+        "Đậu xanh cà vỏ",
+        "Nước mắm chua ngọt hoặc xì dầu"
+      ],
+      "prepOutline": [
+        "Củ cải trắng được nghiền nhuyễn rồi nhồi cùng bột mì tạo thành lớp vỏ bánh mềm dẻo",
+        "Xào nhân gồm tôm khô đập dập, thịt nạc băm và đậu xanh cho chín thơm",
+        "Gói nhân vào vỏ bánh, tạo hình giống chiếc há cảo lớn",
+        "Hấp chín bánh trong xửng cho đến khi vỏ bánh trong và mềm"
+      ],
+      "howToEat": "Bánh được ăn nóng ngay sau khi hấp, chấm cùng nước mắm chua ngọt pha ớt hoặc xì dầu, có thể rắc thêm hành phi cho thơm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.sggp.org.vn/banh-cu-cai-bac-lieu-post102500.html", "label": "Bánh củ cải Bạc Liêu – Báo Sài Gòn Giải Phóng" }
+      ],
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+    }
+  ]
+}

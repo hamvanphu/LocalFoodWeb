@@ -1,0 +1,99 @@
+{
+  "slug": "kien-giang",
+  "code": "VN-KG",
+  "name": "Kiên Giang",
+  "region": "Nam",
+  "centroid": [104.93987, 9.99995],
+  "summary": "Kiên Giang sở hữu cả vùng đồng bằng ven biển lẫn đảo ngọc Phú Quốc, tạo nên nền ẩm thực biển đảo phong phú với gỏi cá trích tươi ngon, bún cá đậm đà của thành phố Rạch Giá và nước mắm Phú Quốc trứ danh được công nhận di sản văn hóa phi vật thể quốc gia.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/N%C6%B0%E1%BB%9Bc_m%E1%BA%AFm_Ph%C3%BA_Qu%E1%BB%91c", "label": "Nước mắm Phú Quốc – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "goi-ca-trich-phu-quoc",
+  "dishes": [
+    {
+      "slug": "goi-ca-trich-phu-quoc",
+      "name": "Gỏi cá trích Phú Quốc",
+      "isHero": true,
+      "tasteTags": ["sour", "seafood", "herb-forward"],
+      "description": "Gỏi cá trích là đặc sản dân dã được yêu thích bậc nhất ở đảo Phú Quốc, Kiên Giang. Cá trích tươi được lóc phi lê mỏng, ngâm chanh cho tái và bớt tanh, sau đó trộn cùng hành tây, dừa nạo và đậu phộng rang, mang đến hương vị biển cả hài hòa giữa chua, béo và giòn.",
+      "keyIngredients": [
+        "Cá trích tươi",
+        "Nước cốt chanh",
+        "Hành tây, hành tím thái mỏng",
+        "Dừa nạo",
+        "Đậu phộng rang giã dập",
+        "Rau sống, bánh tráng, bún",
+        "Nước mắm tỏi ớt chua ngọt"
+      ],
+      "prepOutline": [
+        "Cá trích được đánh vảy, bỏ đầu và ruột, lóc lấy phi lê",
+        "Ngâm phi lê cá trong nước cốt chanh cho thịt cá săn lại và giảm mùi tanh",
+        "Trộn cá đã ngâm cùng hành tây, hành tím, dừa nạo, đậu phộng rang và gia vị",
+        "Pha nước mắm chua ngọt cùng tỏi, ớt băm để chấm kèm"
+      ],
+      "howToEat": "Gỏi cá trích được cuốn cùng bánh tráng, bún và rau sống, chấm vào chén nước mắm chua ngọt pha tỏi ớt để cảm nhận đầy đủ vị chua, béo, giòn.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/G%E1%BB%8Fi_c%C3%A1_tr%C3%ADch", "label": "Gỏi cá trích – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "bun-ca-kien-giang",
+      "name": "Bún cá Kiên Giang",
+      "isHero": false,
+      "tasteTags": ["savory", "seafood", "noodle-soup"],
+      "description": "Bún cá là món ăn quen thuộc và phổ biến ở thành phố Rạch Giá, Kiên Giang, nổi bật với thịt cá lóc (hoặc cá thu, cá nhồng) mềm thơm cùng tôm tươi, ăn kèm nước dùng trong ngọt cùng giá, bắp chuối bào và rất nhiều rau thơm đặc trưng miền Tây.",
+      "keyIngredients": [
+        "Cá lóc (hoặc cá thu, cá nhồng)",
+        "Tôm tươi",
+        "Xương heo hoặc xương cá hầm lấy nước dùng",
+        "Bún tươi",
+        "Giá đỗ, bắp chuối bào",
+        "Rau thơm, chanh, ớt, nước mắm"
+      ],
+      "prepOutline": [
+        "Cá được luộc hoặc hấp chín, gỡ lấy thịt để riêng, xương dùng hầm nước dùng",
+        "Ninh nước dùng từ xương cá hoặc xương heo cho ngọt trong",
+        "Tôm được luộc hoặc xào sơ cho chín tới",
+        "Trụng bún, giá đỗ rồi xếp cá, tôm lên trên, chan ngập nước dùng nóng"
+      ],
+      "howToEat": "Bún cá được ăn nóng, nêm thêm chanh, ớt và nước mắm, ăn kèm bắp chuối bào cùng rau thơm để cân bằng vị ngọt của nước dùng và cá.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vnexpress.net/bay-mon-ngon-nen-thu-khi-den-kien-giang-4539377.html", "label": "Bảy món ngon nên thử khi đến Kiên Giang – VnExpress" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "nuoc-mam-phu-quoc",
+      "name": "Nước mắm Phú Quốc",
+      "isHero": false,
+      "tasteTags": ["savory"],
+      "description": "Nước mắm Phú Quốc là loại nước mắm truyền thống nổi tiếng trong và ngoài nước, có lịch sử sản xuất hơn 200 năm tại đảo Phú Quốc, Kiên Giang. Nước mắm được làm hoàn toàn từ cá cơm ủ chượp cùng muối trong thùng gỗ lớn suốt 12-15 tháng, cho ra loại nước mắm có độ đạm cao, vị mặn đậm tự nhiên và hương thơm đặc trưng. Nghề làm nước mắm Phú Quốc đã được công nhận là di sản văn hóa phi vật thể quốc gia năm 2021.",
+      "keyIngredients": [
+        "Cá cơm (cá cơm sọc tiêu, cá cơm đỏ, cá cơm than)",
+        "Muối hạt (ít tạp chất)",
+        "Thùng gỗ lớn để ủ chượp"
+      ],
+      "prepOutline": [
+        "Cá cơm tươi được trộn ngay cùng muối theo tỷ lệ khoảng 3 cá : 1 muối ngay trên tàu đánh bắt",
+        "Ủ chượp hỗn hợp cá muối trong các thùng gỗ lớn, nén chặt bằng vật nặng",
+        "Ủ liên tục trong khoảng 12-15 tháng để cá lên men tự nhiên",
+        "Rút nước mắm nhĩ theo từng đợt từ thùng chượp, phân loại theo độ đạm"
+      ],
+      "howToEat": "Nước mắm Phú Quốc được dùng làm nước chấm nguyên chất hoặc pha cùng tỏi, ớt, chanh, đường để chấm các món hải sản, gỏi và nhiều món ăn khác của ẩm thực Việt.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Fish_sauce_factory%2C_Phu_Quoc.jpg",
+          "attribution": "Stefan (from Dresden, Germany) / Wikimedia Commons",
+          "license": "CC BY 2.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/N%C6%B0%E1%BB%9Bc_m%E1%BA%AFm_Ph%C3%BA_Qu%E1%BB%91c", "label": "Nước mắm Phú Quốc – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "bac-giang",
+  "code": "VN-BG",
+  "name": "Bắc Giang",
+  "region": "Bắc",
+  "centroid": [106.47918, 21.35843],
+  "summary": "Bắc Giang là vùng đất trung du nổi tiếng với nghề làm mì gạo truyền thống ở Lục Ngạn, giống gà đồi Yên Thế được chăn thả tự nhiên, và các làng nghề bánh đa lâu đời ven sông Thương. Ẩm thực nơi đây mộc mạc, đậm chất nông thôn Bắc Bộ nhưng vẫn có những sản vật đã thành thương hiệu quốc gia.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/G%C3%A0_%C4%91%E1%BB%93i_Y%C3%AAn_Th%E1%BA%BF", "label": "Gà đồi Yên Thế – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "mi-chu",
+  "dishes": [
+    {
+      "slug": "mi-chu",
+      "name": "Mì Chũ",
+      "isHero": true,
+      "tasteTags": ["noodle-soup", "savory", "street-food"],
+      "description": "Mì Chũ là loại mì gạo khô đặc sản của làng nghề Thủ Dương, xã Nam Dương, huyện Lục Ngạn, tỉnh Bắc Giang, đã có thương hiệu được bảo hộ độc quyền. Sợi mì làm từ gạo bao thai hồng trồng trên đất đồi Lục Ngạn, có màu trắng ngà tự nhiên, khi nấu chín vẫn dai giòn, không bở nát và mang hương thơm nhẹ đặc trưng của gạo.",
+      "keyIngredients": ["gạo bao thai hồng", "nước giếng làng Thủ Dương", "xương ống hầm làm nước dùng", "hành lá, rau mùi"],
+      "prepOutline": [
+        "Vo gạo, ngâm nước rồi xay thành bột nước mịn",
+        "Tráng bánh thành lớp mỏng trên nồi hơi, giống tráng bánh phở",
+        "Phơi bánh tráng trên phên nứa dưới nắng cho se mặt",
+        "Thái bánh thành sợi mì rồi phơi khô lần hai để bảo quản lâu",
+        "Khi ăn, chần mì khô qua nước sôi cho mềm trước khi chan nước dùng"
+      ],
+      "howToEat": "Mì Chũ khô được chần lại rồi chan nước dùng xương nóng hổi, ăn kèm hành lá, rau mùi như một bát phở hoặc mì nước; cũng có thể xào khô với thịt, rau cho món mì xào đậm đà.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://tuoitre.vn/mi-chu---dac-san-dat-bac-456687.htm", "label": "Mì Chũ - đặc sản đất Bắc (Tuổi Trẻ)" },
+        { "url": "https://vietnamnet.vn/mi-chu-dac-san-doc-quyen-cua-bac-giang-2341050.html", "label": "Mì Chũ - đặc sản độc quyền của Bắc Giang (VietNamNet)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ga-doi-yen-the",
+      "name": "Gà đồi Yên Thế",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Gà đồi Yên Thế là giống gà lai tạo địa phương (chủ yếu hai dòng Ri lai và Mía lai) được nuôi thả rông trên các sườn đồi huyện Yên Thế, Bắc Giang. Nhờ vận động nhiều và ăn thức ăn tự nhiên, thịt gà chắc, da giòn, vị ngọt đậm đà hơn hẳn gà nuôi công nghiệp; năm 2011 đây là sản phẩm chăn nuôi đầu tiên của Việt Nam được cấp chứng nhận nhãn hiệu độc quyền.",
+      "keyIngredients": ["gà đồi Yên Thế (giống Ri lai, Mía lai)", "lá chanh, gừng, sả", "muối, mắc khén hoặc hạt tiêu"],
+      "prepOutline": [
+        "Nuôi thả tự nhiên trên đồi từ 7-8 tháng để thịt chắc và thơm",
+        "Làm sạch gà, để nguyên con hoặc chặt miếng tùy món",
+        "Luộc, hấp lá chanh hoặc nướng than hoa tùy cách chế biến",
+        "Chặt miếng vừa ăn, bày cùng lá chanh thái chỉ"
+      ],
+      "howToEat": "Thường được luộc chấm muối lá chanh, hấp lá chanh hoặc nướng than hoa; ăn kèm cơm và rau sống trong các bữa cỗ hoặc dịp lễ Tết.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/G%C3%A0_%C4%91%E1%BB%93i_Y%C3%AAn_Th%E1%BA%BF", "label": "Gà đồi Yên Thế – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    },
+    {
+      "slug": "banh-da-ke",
+      "name": "Bánh đa Kế",
+      "isHero": false,
+      "tasteTags": ["street-food", "savory"],
+      "description": "Bánh đa Kế là bánh đa nướng đặc sản của làng Dĩnh Kế (nay thuộc thành phố Bắc Giang), có tuổi nghề truyền thống hơn 600 năm. Bánh làm từ bột gạo tráng mỏng, rắc vừng, lạc và một chút gấc để lên màu đỏ cam, sau đó phơi nắng rồi nướng phồng trên than hoa, cho vị bùi béo, giòn tan đặc trưng.",
+      "keyIngredients": ["gạo tẻ xay bột", "vừng", "lạc (đậu phộng)", "gấc tạo màu", "than hoa để nướng"],
+      "prepOutline": [
+        "Ngâm gạo rồi xay mịn thành bột nước",
+        "Trộn bột với vừng, lạc giã dập và thịt gấc",
+        "Tráng thành bánh mỏng trên nồi hơi rồi phơi trên phên nứa dưới nắng",
+        "Nướng phồng bánh trực tiếp trên than hoa cho tới khi giòn và dậy mùi thơm"
+      ],
+      "howToEat": "Bánh đa Kế thường được nướng giòn ăn chơi như một món quà vặt, hoặc bẻ miếng chấm cùng các món gỏi, nộm; là quà biếu quen thuộc mỗi dịp lễ Tết, cưới hỏi.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://luhanhvietnam.com.vn/du-lich/banh-da-ke-bac-giang-dac-san-dan-da.html", "label": "Bánh đa Kế Bắc Giang - đặc sản dân dã (Lữ hành Việt Nam)" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    }
+  ]
+}

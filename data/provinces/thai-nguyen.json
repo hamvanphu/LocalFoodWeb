@@ -1,0 +1,74 @@
+{
+  "slug": "thai-nguyen",
+  "code": "VN-TNG",
+  "name": "Thái Nguyên",
+  "region": "Bắc",
+  "centroid": [105.84, 21.59],
+  "summary": "Thái Nguyên được mệnh danh là 'đệ nhất danh trà' Việt Nam với chè Tân Cương nổi tiếng khắp cả nước, bên cạnh cơm lam Định Hóa mang hương vị núi rừng Việt Bắc và bánh chưng Bờ Đậu gói bằng nước suối tự nhiên. Vùng đất trung du này hòa quyện văn hóa của các dân tộc miền núi phía Bắc trong từng món ăn.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/Tr%C3%A0_T%C3%A2n_C%C6%B0%C6%A1ng", "label": "Trà Tân Cương – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "che-tan-cuong",
+  "dishes": [
+    {
+      "slug": "che-tan-cuong",
+      "name": "Chè Tân Cương",
+      "isHero": true,
+      "tasteTags": ["vegetarian-friendly"],
+      "description": "Chè Tân Cương là thương hiệu trà nổi tiếng nhất Việt Nam, trồng tại vùng đất ba xã Tân Cương, Phúc Xuân, Đại Phúc của thành phố Thái Nguyên, nơi có địa hình cao gần 1000m, khí hậu và thổ nhưỡng đặc biệt phù hợp cây chè. Nghề trồng chè nơi đây khởi nguồn từ khoảng năm 1920-1922 khi ông Đội Năm (Vũ Văn Thiệt) đưa giống chè về trồng. Trà thành phẩm có lá xoăn chặt, màu xanh đen ánh bạc, nước pha vàng sánh, vị chát dịu hậu ngọt và hương thơm đặc trưng.",
+      "keyIngredients": ["búp chè non một tôm hai lá", "nước suối hoặc nước mưa để pha trà", "ấm chén sành hoặc gốm"],
+      "prepOutline": [
+        "Hái búp chè non vào sáng sớm khi còn đọng sương",
+        "Diệt men bằng cách sao chè trên chảo nóng (sao suốt)",
+        "Vò chè tạo hình xoăn rồi sao khô nhiều lần cho đủ độ giòn",
+        "Sao hương lần cuối để dậy mùi thơm đặc trưng trước khi đóng gói"
+      ],
+      "howToEat": "Chè pha bằng nước sôi già trong ấm sành, rót ra chén nhỏ để thưởng thức từng ngụm, cảm nhận vị chát dịu rồi ngọt hậu nơi cổ họng - thường dùng để tiếp khách hoặc nhâm nhi trong các dịp gặp gỡ.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Tr%C3%A0_T%C3%A2n_C%C6%B0%C6%A1ng", "label": "Trà Tân Cương – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "com-lam-dinh-hoa",
+      "name": "Cơm lam Định Hóa",
+      "isHero": false,
+      "tasteTags": ["savory", "sweet"],
+      "description": "Cơm lam là món ăn truyền thống của đồng bào dân tộc miền núi phía Bắc, đặc biệt nổi tiếng ở huyện Định Hóa, Thái Nguyên - vùng an toàn khu (ATK) trong kháng chiến. Gạo nếp nương được cho vào ống nứa non cùng chút nước, bịt kín bằng lá chuối rồi nướng trên than hồng, tạo nên hạt cơm dẻo thơm quyện mùi nứa tươi đặc trưng.",
+      "keyIngredients": ["gạo nếp nương", "ống nứa non", "lá chuối bịt miệng ống", "nước suối sạch"],
+      "prepOutline": [
+        "Vo sạch gạo nếp nương, ngâm vài giờ cho mềm",
+        "Cho gạo và nước vào ống nứa non theo tỷ lệ vừa đủ",
+        "Bịt kín miệng ống bằng lá chuối tươi",
+        "Nướng ống trên than hồng, xoay đều tay đến khi cơm chín thơm"
+      ],
+      "howToEat": "Cơm lam chẻ bỏ lớp vỏ nứa cháy bên ngoài, ăn kèm muối vừng hoặc thịt nướng, thường được du khách thưởng thức khi tham quan vùng ATK Định Hóa.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_lam", "label": "Cơm lam – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-chung-bo-dau",
+      "name": "Bánh chưng Bờ Đậu",
+      "isHero": false,
+      "tasteTags": ["savory"],
+      "description": "Bánh chưng Bờ Đậu là đặc sản của làng nghề tại ngã ba Bờ Đậu, xã Cổ Lũng, huyện Phú Lương, Thái Nguyên, khởi nguồn từ quán nhỏ của bà Nguyễn Thị Xuân bán bánh tự gói dưới gốc cây gạo từ những năm 1960. Bánh dùng gạo nếp Thái Nguyên và nước từ mạch suối sau làng để luộc, giúp bánh giữ màu xanh tự nhiên và hương vị thơm đậm đặc trưng khó nơi nào sánh được.",
+      "keyIngredients": ["gạo nếp Thái Nguyên", "đậu xanh làm nhân", "thịt lợn ba chỉ", "lá dong", "nước mạch suối để luộc bánh"],
+      "prepOutline": [
+        "Vo sạch gạo nếp, ngâm cùng đãi đậu xanh",
+        "Ướp thịt ba chỉ với hạt tiêu, hành làm nhân",
+        "Gói bánh vuông vắn bằng lá dong theo khuôn truyền thống",
+        "Luộc bánh bằng nước mạch suối liên tục 8-10 tiếng cho chín đều"
+      ],
+      "howToEat": "Bánh chưng Bờ Đậu ăn kèm dưa hành hoặc chấm nước mắm, phổ biến quanh năm nhưng bán chạy nhất vào dịp Tết Nguyên Đán khi người dân khắp nơi đặt mua làm quà.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://khuyennong.thainguyen.gov.vn/tin-noi-bat/-/asset_publisher/9O6FRbLItG65/content/banh-chung-bo-au-san-vat-nuc-tieng-vung-at-thai-nguyen?inheritRedirect=true", "label": "Bánh chưng Bờ Đậu – sản vật nức tiếng vùng đất Thái Nguyên (Trung tâm Khuyến nông Thái Nguyên)" }
+      ],
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+    }
+  ]
+}

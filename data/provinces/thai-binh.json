@@ -1,0 +1,76 @@
+{
+  "slug": "thai-binh",
+  "code": "VN-TB",
+  "name": "Thái Bình",
+  "region": "Bắc",
+  "centroid": [106.34, 20.45],
+  "summary": "Thái Bình, vùng quê lúa ven biển đồng bằng sông Hồng, nổi tiếng với bánh cáy làng Nguyễn dẻo thơm từng được tiến vua, canh cá Quỳnh Côi đậm đà hương đồng quê, và gỏi nhệch dân dã của vùng nước lợ ven sông. Ẩm thực Thái Bình mộc mạc nhưng đậm đà, phản ánh đời sống gắn bó với đồng ruộng và sông nước.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_c%C3%A1y", "label": "Bánh cáy – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "banh-cay-lang-nguyen",
+  "dishes": [
+    {
+      "slug": "banh-cay-lang-nguyen",
+      "name": "Bánh cáy làng Nguyễn",
+      "isHero": true,
+      "tasteTags": ["sweet", "vegetarian-friendly"],
+      "description": "Bánh cáy làng Nguyễn, xã Nguyên Xá, huyện Đông Hưng, Thái Bình, theo truyền tụng do bà Nguyễn Thị Tần (1724-?) sáng tạo, ban đầu gọi là bánh ngũ vị rồi được vua Lê Hiển Tông đổi tên thành bánh cáy vì màu sắc giống trứng cáy (trứng cua rốc). Bánh kết hợp gạo nếp, mạch nha, lạc, vừng và mứt bí, tạo vị ngọt bùi, thơm nhẹ mùi gừng đặc trưng.",
+      "keyIngredients": ["gạo nếp cái hoa vàng", "mạch nha", "lạc, vừng rang", "mứt bí, gừng", "quả dành dành hoặc gấc tạo màu"],
+      "prepOutline": [
+        "Đồ xôi nếp, phơi khô rồi rang giòn từng phần riêng theo màu",
+        "Nấu mạch nha với đường cho sánh dẻo, thơm gừng",
+        "Trộn xôi rang cùng lạc, vừng, mứt bí vào mạch nha nóng",
+        "Ép hỗn hợp vào khuôn thành khối rồi cắt thành từng miếng nhỏ"
+      ],
+      "howToEat": "Bánh cáy ăn kèm trà nóng, thường được biếu tặng vào dịp Tết và lễ hội như một đặc sản mang đậm bản sắc quê lúa Thái Bình.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/B%C3%A1nh_c%C3%A1y.JPG", "attribution": "Nguyễn Thanh Quang, via Wikimedia Commons", "license": "CC BY-SA 4.0 / GFDL" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_c%C3%A1y", "label": "Bánh cáy – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+    },
+    {
+      "slug": "canh-ca-quynh-coi",
+      "name": "Canh cá Quỳnh Côi",
+      "isHero": false,
+      "tasteTags": ["savory", "noodle-soup"],
+      "description": "Canh cá Quỳnh Côi là đặc sản của thị trấn Quỳnh Côi, huyện Quỳnh Phụ, Thái Bình, kết hợp bánh đa sợi với cá rô đồng om kỹ trong nước dùng ngọt thanh. Khác với các món cá chiên giòn ở nơi khác, thịt cá ở đây được om nhừ trên lửa nhỏ để giữ độ dai ngọt, hòa quyện cùng nước dùng đậm đà nấu từ xương cá.",
+      "keyIngredients": ["cá rô đồng", "bánh đa sợi (bánh đa Thái Bình)", "cà chua, hành lá, thì là", "nước mắm, xương cá ninh lấy nước dùng"],
+      "prepOutline": [
+        "Làm sạch cá rô đồng, lọc lấy thịt và xương riêng",
+        "Ninh xương cá lấy nước dùng ngọt thanh",
+        "Om thịt cá cùng cà chua, gia vị trên lửa nhỏ cho thấm đều",
+        "Trần bánh đa sợi, chan nước dùng và thịt cá lên trên"
+      ],
+      "howToEat": "Canh cá Quỳnh Côi ăn nóng, rắc thêm hành lá, thì là, thường được người dân Thái Bình dùng làm bữa sáng quen thuộc hằng ngày.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vnexpress.net/doi-song-cooking-canh-ca-quynh-coi-4457244.html", "label": "Cách làm canh cá Quỳnh Côi chuẩn vị đặc sản Thái Bình (VnExpress)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "goi-nhech",
+      "name": "Gỏi nhệch",
+      "isHero": false,
+      "tasteTags": ["sour", "herb-forward"],
+      "description": "Gỏi nhệch là món ăn dân dã của vùng nước lợ ven sông Thái Bình, chế biến từ con nhệch - loài cá giống lươn sống ở cửa sông. Thịt nhệch làm sạch nhớt, thái lát mỏng trộn cùng thính gạo rang và nước chấm chẻo nấu từ xương nhệch giã nhỏ, tạo vị bùi béo, thơm đặc trưng khó lẫn với các loại gỏi cá khác.",
+      "keyIngredients": ["cá nhệch tươi", "thính gạo rang", "xương nhệch (nấu chẻo)", "lá sung, lá mơ, rau thơm ăn kèm"],
+      "prepOutline": [
+        "Làm sạch nhớt cá nhệch bằng nước vôi hoặc tro bếp",
+        "Lọc lấy thịt, thái lát mỏng rồi trộn với thính gạo rang",
+        "Giã xương nhệch nấu cùng gia vị thành nước chẻo sánh đặc",
+        "Bày gỏi cùng rổ rau sống và bát chẻo chấm"
+      ],
+      "howToEat": "Gỏi nhệch cuốn cùng lá sung, lá mơ và rau thơm, chấm nước chẻo đậm đà, là món nhắm được ưa chuộng khi ghé thăm vùng ven biển Thái Bình.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.vietnambooking.com/du-lich/blog-du-lich/dac-san-thai-binh.html", "label": "Top đặc sản Thái Bình (Vietnambooking)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

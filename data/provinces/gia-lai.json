@@ -1,0 +1,79 @@
+{
+  "slug": "gia-lai",
+  "code": "VN-GL",
+  "name": "Gia Lai",
+  "region": "Trung",
+  "centroid": [108.23932, 13.79894],
+  "summary": "Gia Lai là cao nguyên đất đỏ bazan ở Bắc Tây Nguyên, nơi giao thoa ẩm thực của người Kinh di cư và các dân tộc bản địa Jrai, Bahnar. Món ăn đặc trưng thường gắn với nguyên liệu núi rừng như thịt nướng, cơm lam, cùng phở khô — món ăn đã trở thành biểu tượng ẩm thực của phố núi Pleiku.",
+  "summarySourceRefs": [
+    { "url": "https://vnexpress.net/pho-hai-to-mon-an-dat-gia-tri-am-thuc-chau-a-4666534.html", "label": "Phở hai tô, món ăn đạt 'giá trị ẩm thực châu Á' – VnExpress" }
+  ],
+  "heroDishSlug": "pho-kho-gia-lai",
+  "dishes": [
+    {
+      "slug": "pho-kho-gia-lai",
+      "name": "Phở khô Gia Lai (phở hai tô)",
+      "isHero": true,
+      "tasteTags": ["savory", "noodle-soup", "street-food"],
+      "description": "Phở khô Gia Lai, còn gọi là 'phở hai tô' vì được dọn ra hai tô riêng biệt — một tô sợi phở khô trộn cùng thịt, một tô nước dùng trong. Món ăn đã được Tổ chức Kỷ lục châu Á công nhận đạt 'giá trị ẩm thực châu Á' năm 2012, và năm 2021 được chọn in trên bộ tem 'Ẩm thực Việt Nam' của Bộ Thông tin và Truyền thông.",
+      "keyIngredients": ["sợi phở khô (dai, nhỏ hơn phở thường)", "thịt bò nạm hoặc gà xé", "giá đỗ trụng", "hành phi, tương đen, tương ớt", "nước dùng xương hầm"],
+      "prepOutline": [
+        "Trụng sợi phở khô qua nước sôi rồi để ráo cho sợi dai, không bở",
+        "Trộn phở với mỡ hành, hành phi, một ít tương đen và tương ớt đặc trưng",
+        "Xếp thịt bò nạm hoặc gà xé, giá trụng lên trên tô phở khô",
+        "Múc riêng nước dùng xương hầm trong veo kèm hành ngò ra tô thứ hai"
+      ],
+      "howToEat": "Trộn đều tô phở khô với tương và rau trước, ăn xen kẽ với tô nước dùng nóng bên cạnh — húp nước dùng, gắp phở khô, chấm thêm tương ớt/tương đen tùy khẩu vị.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Ph%E1%BB%9F_kh%C3%B4_Gia_Lai_rau_s%E1%BB%91ng_%E1%BB%9F_T%C3%A2n_Ph%C3%BA_%287%29.jpg", "attribution": "Phương Huy, Wikimedia Commons", "license": "Public domain" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vnexpress.net/pho-hai-to-mon-an-dat-gia-tri-am-thuc-chau-a-4666534.html", "label": "Phở hai tô, món ăn đạt 'giá trị ẩm thực châu Á' – VnExpress" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "com-lam-ga-nuong",
+      "name": "Cơm lam gà nướng",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Cơm lam gà nướng là món ăn dân dã phổ biến khắp Tây Nguyên, trong đó có Gia Lai. Gạo nếp được cho vào ống tre non, nướng trên lửa than cho chín dẻo thơm mùi tre, ăn cùng gà thả vườn nướng ướp sả, mắc khén và mật ong rừng.",
+      "keyIngredients": ["gạo nếp", "ống tre/nứa non", "gà thả vườn", "sả, mắc khén, tiêu rừng", "muối ớt xanh"],
+      "prepOutline": [
+        "Vo gạo nếp, ngâm nước rồi cho vào ống tre cùng một ít nước, nút lại bằng lá chuối",
+        "Nướng ống tre trên than hồng, xoay đều đến khi có hơi nước và mùi thơm bốc ra",
+        "Ướp gà với sả, mắc khén, muối ớt và mật ong rừng",
+        "Nướng gà trên than ở lửa vừa, giữ khoảng cách để chín đều và da vàng giòn"
+      ],
+      "howToEat": "Chẻ ống tre lấy phần cơm lam dẻo thơm, xé gà nướng chấm muối ớt xanh hoặc muối tiêu chanh, ăn cùng nhau ngay khi còn nóng.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/C%C6%A1m_lam_T%C3%A2y_Nguy%C3%AAn.jpg", "attribution": "Lam Nguyen, Wikimedia Commons", "license": "CC BY 2.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_lam", "label": "Cơm lam – Wikipedia tiếng Việt" },
+        { "url": "https://tourtaynguyen.com.vn/ga-nuong-com-lam-dac-san-dan-da-cua-nui-rung-tay-nguyen/", "label": "Gà nướng, cơm lam – đặc sản Tây Nguyên" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "bo-mot-nang-muoi-kien-vang",
+      "name": "Bò một nắng muối kiến vàng",
+      "isHero": false,
+      "tasteTags": ["grilled", "spicy", "sour"],
+      "description": "Bò một nắng muối kiến vàng là đặc sản của huyện Krông Pa — vùng chăn nuôi bò lớn nhất Gia Lai, có nguồn gốc từ người Jrai bản địa. Thịt bò thái mỏng phơi đúng một nắng rồi nướng, chấm cùng muối kiến vàng giã từ tổ kiến vàng rừng, tạo vị chua – cay – mặn độc đáo không nơi nào có được.",
+      "keyIngredients": ["thịt bò (đùi, thăn)", "muối", "kiến vàng rừng", "ớt hiểm", "sả"],
+      "prepOutline": [
+        "Thái thịt bò thành lát mỏng như beefsteak, ướp sơ muối và sả",
+        "Phơi thịt đúng một nắng cho se mặt nhưng vẫn giữ độ mềm bên trong",
+        "Nướng thịt trên than hồng đến khi chín tới, dậy mùi thơm",
+        "Giã muối kiến vàng cùng ớt hiểm để làm nước chấm đặc trưng"
+      ],
+      "howToEat": "Xé thịt bò nướng thành sợi, chấm trực tiếp vào muối kiến vàng giã nhuyễn, thường dùng làm món nhậu hoặc quà biếu đặc sản Tây Nguyên.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://gialai.gov.vn/du-khach/dac-san-gia-lai/muoi-kien-vang-krong-pa.html", "label": "Muối kiến vàng Krông Pa – Cổng thông tin điện tử tỉnh Gia Lai" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

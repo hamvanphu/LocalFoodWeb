@@ -1,0 +1,77 @@
+{
+  "slug": "cao-bang",
+  "code": "VN-CB",
+  "name": "Cao Bằng",
+  "region": "Bắc",
+  "centroid": [106.25, 22.665],
+  "summary": "Cao Bằng là tỉnh biên giới địa đầu Đông Bắc, nơi cộng cư của người Tày, Nùng với nền ẩm thực đậm chất núi rừng, gắn liền với mắc mật, thịt vịt và các món chế biến từ bột gạo. Phở chua trộn khô, vịt quay bảy vị và bánh cuốn chan canh xương là những món ăn tiêu biểu làm nên bản sắc riêng của vùng đất non nước Cao Bằng.",
+  "summarySourceRefs": [
+    { "url": "https://baocaobang.vn/Huong-vi-pho-chua-Cao-Bang-38371.html", "label": "Hương vị phở chua Cao Bằng - Báo Cao Bằng điện tử" }
+  ],
+  "heroDishSlug": "pho-chua-cao-bang",
+  "dishes": [
+    {
+      "slug": "pho-chua-cao-bang",
+      "name": "Phở chua Cao Bằng",
+      "isHero": true,
+      "tasteTags": ["sour", "savory", "street-food"],
+      "description": "Phở chua là món ăn đặc trưng và lâu đời của Cao Bằng, khác hẳn phở nước quen thuộc vì đây là món phở trộn khô, ăn nguội. Bánh phở Cao Bằng dẻo và dai đặc trưng được trộn cùng thịt ba chỉ rán giòn, khoai tàu chiên (loại củ chỉ có ở Cao Bằng, Bắc Kạn), gan, dạ dày lợn, thịt vịt quay và rau thơm, sau đó rưới nước sốt chua ngọt lên trên. Món ăn thường xuất hiện vào mùa hè vì tính mát và thanh, được xem là niềm tự hào ẩm thực của người dân xứ Lạng núi.",
+      "keyIngredients": ["bánh phở Cao Bằng", "thịt ba chỉ rán", "khoai tàu chiên", "gan, dạ dày lợn", "thịt vịt quay", "nước sốt chua ngọt", "rau thơm, lạc rang"],
+      "prepOutline": [
+        "Trần bánh phở cho mềm rồi để ráo",
+        "Chiên giòn thịt ba chỉ, khoai tàu thái lát và gan, dạ dày lợn",
+        "Pha nước sốt chua ngọt từ giấm, đường và gia vị đặc trưng",
+        "Trộn bánh phở với các nguyên liệu đã chế biến, rưới nước sốt lên trên",
+        "Rắc lạc rang, rau thơm trước khi thưởng thức"
+      ],
+      "howToEat": "Phở chua ăn nguội, trộn đều tất cả nguyên liệu với nước sốt ngay trước khi ăn, thường dùng làm món khai vị hoặc quà chiều tại các quán vỉa hè thành phố Cao Bằng.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://baocaobang.vn/Huong-vi-pho-chua-Cao-Bang-38371.html", "label": "Hương vị phở chua Cao Bằng - Báo Cao Bằng điện tử" },
+        { "url": "https://suckhoedoisong.vn/pho-chua-trai-nghiem-am-thuc-vung-cao-169240829154236004.htm", "label": "Phở chua, trải nghiệm ẩm thực vùng cao - Sức khỏe & Đời sống" }
+      ],
+      "occasions": ["Quanh năm", "Mùa hè"]
+    },
+    {
+      "slug": "vit-quay-7-vi-cao-bang",
+      "name": "Vịt quay 7 vị Cao Bằng",
+      "isHero": false,
+      "tasteTags": ["savory", "sweet", "grilled"],
+      "description": "Vịt quay 7 vị là đặc sản trứ danh của Cao Bằng, chế biến từ vịt bầu nuôi thả tự nhiên, thịt chắc và ít mỡ. Vịt được nhồi lá mắc mật cùng bảy loại gia vị gồm gừng, tỏi, hành khô, hạt tiêu, mật ong, đậu phụ và quả mắc mật, sau đó quay trên than hoa và phết mật ong nhiều lần để lớp da vàng bóng, giòn rụm. Vị chua nhẹ của mắc mật hòa cùng vị ngọt của mật ong tạo nên hương vị đặc trưng không lẫn với vịt quay ở bất cứ vùng nào khác.",
+      "keyIngredients": ["vịt bầu Cao Bằng", "lá và quả mắc mật", "mật ong", "gừng, tỏi, hành khô", "hạt tiêu", "đậu phụ"],
+      "prepOutline": [
+        "Chọn vịt bầu khoảng 1,8-2kg, làm sạch, để ráo",
+        "Nhồi lá mắc mật cùng hỗn hợp bảy loại gia vị vào bụng vịt rồi khâu kín",
+        "Chần vịt qua giấm và mật ong để da căng và lên màu",
+        "Quay vịt trên than hoa, xoay đều và phết mật ong liên tục cho da giòn vàng",
+        "Chặt miếng vừa ăn, dùng nóng cùng nước chấm pha từ nước lòng vịt"
+      ],
+      "howToEat": "Vịt quay chặt miếng vừa ăn, chấm với nước mắm pha gừng hoặc nước lòng vịt chua ngọt, thường ăn kèm cơm hoặc dùng làm nhân bánh cuốn, phở chua.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://mytour.vn/vi/blog/bai-viet/vit-quay-7-vi-hoa-quyen-huong-vi-cuon-hut-long-nguoi.html", "label": "Món vịt quay 7 vị - Đặc sản Cao Bằng - Mytour" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    },
+    {
+      "slug": "banh-cuon-canh-cao-bang",
+      "name": "Bánh cuốn canh Cao Bằng",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh cuốn Cao Bằng là món ăn dân dã của người Tày, làm từ bột gạo địa phương xay mịn, tráng mỏng rồi cuộn với nhân thịt băm hoặc trứng gà. Điểm khác biệt lớn nhất so với bánh cuốn các vùng khác là người Cao Bằng không chấm nước mắm chua ngọt mà chan bánh cuốn với bát nước canh ninh từ xương lợn, thêm măng chua và ớt, tạo nên một món ăn sáng ấm nóng đặc trưng của vùng cao.",
+      "keyIngredients": ["bột gạo Cao Bằng", "thịt lợn băm hoặc trứng gà", "xương lợn ninh nước dùng", "măng chua", "rau mùi, húng, ớt"],
+      "prepOutline": [
+        "Ngâm và xay gạo thành bột nước mịn",
+        "Tráng bánh mỏng trên nồi hấp, cuộn cùng nhân thịt băm hoặc trứng",
+        "Ninh xương lợn lấy nước dùng trong, nêm vừa miệng",
+        "Cho bánh cuốn ra bát, chan ngập nước canh nóng cùng măng chua"
+      ],
+      "howToEat": "Bánh cuốn ăn nóng, chan cùng nước canh xương thay vì chấm nước mắm, rắc thêm rau mùi, húng và ớt tươi tùy khẩu vị, phổ biến làm món điểm tâm sáng ở thành phố Cao Bằng.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vtcnews.vn/doc-dao-mon-banh-cuon-chan-nuoc-canh-o-cao-bang-dac-san-dan-da-da-an-la-nho-mai-ar672976.html", "label": "Độc đáo món bánh cuốn chan nước canh ở Cao Bằng - VTC News" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

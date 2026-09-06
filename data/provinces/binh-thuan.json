@@ -1,0 +1,79 @@
+{
+  "slug": "binh-thuan",
+  "code": "VN-BT",
+  "name": "Bình Thuận",
+  "region": "Trung",
+  "centroid": [108.0473, 11.11887],
+  "summary": "Bình Thuận, trung tâm là thành phố biển Phan Thiết, sở hữu ngư trường lớn với nhiều loại hải sản tươi ngon, đặc biệt là mực. Ẩm thực nơi đây nổi bật với các món chế biến từ mực và cá biển tươi sống theo kiểu 'một nắng', cùng các món bánh mặn ăn vặt đường phố mang phong cách riêng của Phan Thiết.",
+  "summarySourceRefs": [
+    { "url": "https://danviet.vn/dac-san-binh-thuan-day-la-2-loai-ca-bien-ngon-muc-mot-nang-goi-ca-mai-nem-thu-ca-lang-khen-20250323000415097-d1217058.html", "label": "Đặc sản Bình Thuận – Dân Việt" }
+  ],
+  "heroDishSlug": "muc-mot-nang-phan-thiet",
+  "dishes": [
+    {
+      "slug": "muc-mot-nang-phan-thiet",
+      "name": "Mực một nắng Phan Thiết",
+      "isHero": true,
+      "tasteTags": ["seafood", "grilled", "savory"],
+      "description": "Mực một nắng là đặc sản gắn liền với thương hiệu Phan Thiết, làm từ mực tươi vừa đánh bắt, phơi đúng một nắng để mực còn giữ được độ ẩm, dẻo và ngọt tự nhiên chứ không khô cứng như mực khô thông thường. Đây là món quà biển được du khách mua về nhiều nhất khi đến Bình Thuận.",
+      "keyIngredients": ["mực tươi (mực ống, mực lá)", "muối biển", "tương ớt hoặc muối tôm", "hành lá phi mỡ"],
+      "prepOutline": [
+        "Chọn mực tươi vừa cập bến, làm sạch, mổ dọc thân",
+        "Ướp sơ với muối biển rồi phơi đúng một nắng cho ráo bề mặt, thịt còn dẻo",
+        "Nướng trên than hồng đến khi mực chín, dậy mùi thơm và hơi xém cạnh",
+        "Xé nhỏ mực nướng, phi mỡ hành rưới lên trên"
+      ],
+      "howToEat": "Xé sợi chấm cùng tương ớt hoặc muối tôm chua ngọt, thường dùng làm món nhậu hoặc quà biếu, có thể nướng lại trên bếp than trước khi ăn để dậy mùi.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Mucmotnang.jpg", "attribution": "johnlemon, Wikimedia Commons", "license": "CC BY-SA 2.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://danviet.vn/dac-san-binh-thuan-day-la-2-loai-ca-bien-ngon-muc-mot-nang-goi-ca-mai-nem-thu-ca-lang-khen-20250323000415097-d1217058.html", "label": "Đặc sản Bình Thuận – Dân Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "goi-ca-mai",
+      "name": "Gỏi cá mai",
+      "isHero": false,
+      "tasteTags": ["seafood", "sour", "herb-forward"],
+      "description": "Gỏi cá mai là món gỏi cá sống đặc trưng vùng biển Bình Thuận, dùng cá mai — loại cá nhỏ không vảy, ít tanh — trộn tái bằng chanh hoặc giấm cho thịt cá săn trắng. Điểm nhấn của món là nước chấm chua ngọt sánh đặc làm từ me chín và chuối sứ, khác hẳn nước mắm chấm gỏi thông thường.",
+      "keyIngredients": ["cá mai tươi", "chanh hoặc giấm", "me chua, chuối sứ chín", "đậu phộng rang giã nhuyễn", "rau sống, bánh tráng"],
+      "prepOutline": [
+        "Làm sạch cá mai, lọc bỏ xương, để ráo",
+        "Bóp cá với chanh hoặc giấm cho thịt săn lại và bớt tanh",
+        "Trộn cá với hành tây, ớt, rau thơm thái nhỏ",
+        "Pha nước chấm từ me chua, chuối sứ chín và đậu phộng rang giã nhuyễn"
+      ],
+      "howToEat": "Cuốn cá mai cùng bánh tráng, rau sống, chấm vào nước chấm me chuối sánh đặc, ăn kèm bánh tráng nướng giòn để tăng độ giòn.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://danviet.vn/dac-san-binh-thuan-day-la-2-loai-ca-bien-ngon-muc-mot-nang-goi-ca-mai-nem-thu-ca-lang-khen-20250323000415097-d1217058.html", "label": "Đặc sản Bình Thuận – Dân Việt" },
+        { "url": "https://toptravels.com.vn/news/goi-ca-mai-lagi-mon-dac-san-doc-dao-cua-vung-bien-binh-thuan", "label": "Gỏi cá mai Lagi – Toptravels (nguồn tham khảo, không phải Wikipedia)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-xeo-phan-thiet",
+      "name": "Bánh xèo Phan Thiết",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food", "grilled"],
+      "description": "Theo Wikipedia tiếng Việt, bánh xèo Phan Thiết là một biến thể riêng biệt của bánh xèo Việt Nam: bánh nhỏ chỉ bằng lòng chén, không cuốn bánh tráng và rau sống như miền Nam mà ăn trực tiếp cùng nước mắm chua ngọt. Con đường Tuyên Quang ở Phan Thiết nổi tiếng là 'phố bánh xèo' của thành phố.",
+      "keyIngredients": ["bột gạo pha nghệ", "tôm, mực hoặc thịt bằm", "giá đỗ", "nước mắm chua ngọt", "đu đủ bào (đồ chua)"],
+      "prepOutline": [
+        "Pha bột gạo với nghệ tươi cho lên màu vàng đặc trưng",
+        "Đổ bột vào chảo nhỏ nóng cùng nhân tôm, mực hoặc thịt bằm và giá đỗ",
+        "Chiên đến khi rìa bánh giòn vàng, gấp đôi bánh lại",
+        "Múc bánh nhỏ ra chén, chan trực tiếp nước mắm chua ngọt lên trên"
+      ],
+      "howToEat": "Khác với bánh xèo miền Nam, bánh xèo Phan Thiết ăn ngay trong chén nhỏ chan nước mắm, có thể ăn kèm đồ chua đu đủ mà không cần cuốn bánh tráng hay rau sống.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/B%C3%A1nh_x%C3%A8o_1.jpg", "attribution": "Kent Wang, Wikimedia Commons (ảnh minh họa bánh xèo, không chụp riêng tại Phan Thiết)", "license": "CC BY-SA 2.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_x%C3%A8o", "label": "Bánh xèo – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "tuyen-quang",
+  "code": "VN-TQ",
+  "name": "Tuyên Quang",
+  "region": "Bắc",
+  "centroid": [105.22, 21.99],
+  "summary": "Tuyên Quang nằm bên dòng sông Lô, sông Gâm, là nơi cộng cư của người Tày, Nùng với nền ẩm thực gắn liền với sông nước và bánh trái truyền thống. Bánh gai Chiêm Hóa, vịt bầu Minh Hương và cá lăng sông Lô là những sản vật tiêu biểu, kết tinh từ nguồn nguyên liệu bản địa và bàn tay khéo léo của người dân nơi đây.",
+  "summarySourceRefs": [
+    { "url": "https://baotuyenquang.com.vn/banh-gai-chiem-hoa-vao-mua-179493.html", "label": "Bánh gai Chiêm Hóa vào mùa - Báo Tuyên Quang" }
+  ],
+  "heroDishSlug": "banh-gai-chiem-hoa",
+  "dishes": [
+    {
+      "slug": "banh-gai-chiem-hoa",
+      "name": "Bánh gai Chiêm Hóa",
+      "isHero": true,
+      "tasteTags": ["sweet", "vegetarian-friendly"],
+      "description": "Bánh gai Chiêm Hóa là sản vật nổi tiếng của người Tày huyện Chiêm Hóa, Tuyên Quang, làm từ gạo nếp hoa vàng và lá gai phơi khô, tước gân, thái nhỏ, luộc rồi giã nhuyễn trộn vào bột làm vỏ bánh. Nhân bánh gồm đậu xanh, dừa tươi, mỡ lợn ướp đường tạo độ giòn béo mà không ngấy, gói ngoài bằng lá chuối khô thơm đặc trưng. Bánh thường được làm nhiều vào dịp Rằm tháng Bảy để dâng cúng tổ tiên, thể hiện lòng hiếu thảo của các gia đình người Tày, Nùng.",
+      "keyIngredients": ["gạo nếp hoa vàng", "lá gai", "đậu xanh, dừa tươi, mỡ lợn", "lá chuối khô gói bánh"],
+      "prepOutline": [
+        "Lá gai phơi khô, tước gân, thái nhỏ, luộc rồi vắt kiệt nước, xay nhuyễn",
+        "Trộn lá gai nhuyễn với bột nếp làm vỏ bánh",
+        "Làm nhân từ đậu xanh, dừa, mỡ lợn ướp đường",
+        "Gói bánh bằng lá chuối khô rồi hấp chín"
+      ],
+      "howToEat": "Bánh gai bóc bỏ lớp lá chuối, ăn nguội, thường được bày trên mâm cúng tổ tiên dịp Rằm tháng Bảy hoặc dùng làm quà biếu mang đậm hương vị quê hương.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/B%C3%A1nh_gai.jpg", "attribution": "Memberofc1, Wikimedia Commons (ảnh minh họa bánh gai nói chung, không phải ảnh chụp tại Chiêm Hóa)", "license": "CC BY-SA 3.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://baotuyenquang.com.vn/banh-gai-chiem-hoa-vao-mua-179493.html", "label": "Bánh gai Chiêm Hóa vào mùa - Báo Tuyên Quang" }
+      ],
+      "occasions": ["Quanh năm", "Mùa thu"]
+    },
+    {
+      "slug": "vit-bau-minh-huong",
+      "name": "Vịt bầu Minh Hương",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Vịt bầu Minh Hương, còn gọi là vịt suối, là giống vịt bản địa lâu đời của xã Minh Hương, huyện Hàm Yên, Tuyên Quang, được nuôi thả tự nhiên ở các khe suối nên thịt chắc, ngọt và ít mỡ. Năm 2016, nhãn hiệu \"Vịt bầu Minh Hương\" đã được Cục Sở hữu trí tuệ công nhận, trở thành niềm tự hào ẩm thực của vùng đất Hàm Yên. Vịt thường được luộc hoặc hấp cùng xôi nếp để giữ trọn vị ngọt tự nhiên của thịt.",
+      "keyIngredients": ["vịt bầu Minh Hương", "gạo nếp thơm", "sả, rau răm", "nước mắm, tỏi"],
+      "prepOutline": [
+        "Chọn vịt bầu Minh Hương khoảng 1,8-2,2kg, làm sạch",
+        "Nhồi sả, gia vị vào bụng vịt",
+        "Đặt vịt lên chõ xôi nếp, đồ chín cùng nhau khoảng 35-40 phút",
+        "Vịt chín thì chặt miếng vừa ăn, bày ra đĩa"
+      ],
+      "howToEat": "Vịt bầu Minh Hương ăn nóng ngay sau khi chặt, dùng kèm xôi nếp và chấm nước mắm gừng hoặc mắm rau răm.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/V%E1%BB%8Bt_b%E1%BA%A7u.jpg", "attribution": "Phương Huy, Wikimedia Commons (ảnh minh họa giống vịt bầu nói chung, không chụp tại Minh Hương)", "license": "Public Domain" }
+      ],
+      "sourceRefs": [
+        { "url": "https://dulichnahang.com/vit-bau-minh-huong-tuyen-quang-vi-sao-lai-noi-tieng-gia-ca-va-noi-ban-bid107.html", "label": "Vịt bầu Minh Hương Tuyên Quang vì sao lại nổi tiếng?" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ca-lang-song-lo",
+      "name": "Cá lăng sông Lô",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Cá lăng là loài cá da trơn có râu, sống ở tầng đáy sông Lô đoạn chảy qua Tuyên Quang, nơi nhiều phù sa bồi đắp giúp cá phát triển thịt chắc và thơm ngon. Đây là loài cá có giá trị kinh tế cao, giàu dinh dưỡng và được người dân địa phương chế biến thành nhiều món như nướng, om chuối đậu hay nấu canh chua, trở thành sản vật tiêu biểu gắn với dòng sông Lô hiền hòa.",
+      "keyIngredients": ["cá lăng sông Lô", "chuối xanh, đậu phụ (khi om)", "nghệ, mẻ, riềng", "rau thơm, thì là"],
+      "prepOutline": [
+        "Chọn cá lăng tươi, làm sạch, cắt khúc vừa ăn",
+        "Ướp cá với nghệ, riềng, gia vị cho ngấm",
+        "Om cùng chuối xanh, đậu phụ và mẻ hoặc đem nướng trên than hoa",
+        "Nêm nếm lại cho vừa vị, rắc thêm rau thơm, thì là trước khi dùng"
+      ],
+      "howToEat": "Cá lăng sông Lô ngon nhất khi ăn nóng, chấm cùng nước mắm gừng nếu nướng, hoặc dùng kèm bún, cơm khi chế biến thành món om, canh chua.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://thuysanvietnam.com.vn/tuyen-quang-cac-loai-ca-quy-hiem-tren-song-lo-song-gam/", "label": "Tuyên Quang: Các loài cá quý hiếm trên sông Lô, sông Gâm - Tạp chí Thủy sản Việt Nam" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

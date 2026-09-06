@@ -1,0 +1,77 @@
+{
+  "slug": "binh-dinh",
+  "code": "VN-BD",
+  "name": "Bình Định",
+  "region": "Trung",
+  "centroid": [108.94654, 14.12484],
+  "summary": "Bình Định, đất võ miền Trung, tự hào với bánh xèo tôm nhảy dùng tôm sống còn nhảy tanh tách, bún chả cá Quy Nhơn đậm vị biển, và nem chợ Huyện chua giòn — món quà không thể thiếu trong cưới hỏi, giỗ chạp của người dân nơi đây.",
+  "summarySourceRefs": [
+    { "url": "https://thanhnien.vn/ve-binh-dinh-dung-quen-lang-nem-cho-huyen-185856053.htm", "label": "Thanh Niên – Làng nem Chợ Huyện, Bình Định" }
+  ],
+  "heroDishSlug": "banh-xeo-tom-nhay-binh-dinh",
+  "dishes": [
+    {
+      "slug": "banh-xeo-tom-nhay-binh-dinh",
+      "name": "Bánh xèo tôm nhảy Bình Định",
+      "isHero": true,
+      "tasteTags": ["savory", "seafood", "street-food"],
+      "description": "Bánh xèo tôm nhảy là đặc sản nổi bật nhất của Bình Định, tên gọi xuất phát từ việc dùng tôm đất tươi sống, vẫn còn nhảy tanh tách trong thau khi vừa mua về để làm nhân. Khác với bánh xèo Nam Bộ cỡ lớn nhiều nhân, bánh xèo Bình Định nhỏ gọn, vỏ mỏng giòn rụm nhưng vẫn giữ được hương vị đậm đà đặc trưng vùng đất võ.",
+      "keyIngredients": ["bột gạo", "tôm đất tươi sống", "giá đỗ", "rau sống, xà lách, chuối chát", "nước mắm chua ngọt"],
+      "prepOutline": [
+        "Pha bột gạo với nước, có thể thêm bột nghệ tạo màu vàng nhẹ",
+        "Đun nóng khuôn, tráng một lớp bột mỏng rồi xếp tôm đất còn tươi lên trên",
+        "Thêm giá đỗ, đậy nắp cho bánh chín giòn đều hai mặt",
+        "Gỡ bánh ra đĩa khi vỏ bánh giòn vàng"
+      ],
+      "howToEat": "Cuốn bánh xèo cùng rau sống, xà lách, chuối chát trong bánh tráng, chấm nước mắm chua ngọt pha tỏi ớt.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/B%C3%A1nh_x%C3%A8o_1.jpg", "attribution": "Kent Wang, Wikimedia Commons", "license": "CC BY-SA 2.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vnexpress.net/thuong-thuc-banh-xeo-tom-nhay-binh-dinh-o-ha-noi-4683224.html", "label": "VnExpress – Bánh xèo tôm nhảy Bình Định" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "bun-cha-ca-quy-nhon",
+      "name": "Bún chả cá Quy Nhơn",
+      "isHero": false,
+      "tasteTags": ["savory", "seafood", "noodle-soup"],
+      "description": "Bún chả cá là món ăn đặc trưng của thành phố biển Quy Nhơn, tận dụng nguồn cá biển phong phú của miền Trung như cá thu, cá mối, cá cờ, cá rựa để làm chả cá. Nước dùng trong, ngọt thanh từ xương cá và cà chua, ăn cùng chả cá chiên hoặc hấp dai ngọt.",
+      "keyIngredients": ["chả cá (cá thu, cá mối hoặc cá rựa)", "xương cá làm nước dùng", "cà chua, thơm (dứa)", "bún tươi", "rau sống, hành lá"],
+      "prepOutline": [
+        "Quết cá tươi cùng gia vị cho nhuyễn dai, nặn thành miếng rồi chiên hoặc hấp chín",
+        "Ninh nước dùng từ xương và đầu cá, nêm với cà chua và thơm để tạo vị chua thanh nhẹ",
+        "Trụng bún tươi, xếp chả cá lên trên rồi chan nước dùng nóng"
+      ],
+      "howToEat": "Ăn kèm rau sống, giá đỗ, thêm mắm ruốc hoặc ớt tươi tùy khẩu vị.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/B%C3%BAn_ch%E1%BA%A3_c%C3%A1%2C_th%C3%A1ng_8_n%C4%83m_2018.JPG", "attribution": "Phương Huy, Wikimedia Commons", "license": "Public domain" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_ch%E1%BA%A3_c%C3%A1", "label": "Wikipedia tiếng Việt – Bún chả cá" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "nem-cho-huyen-binh-dinh",
+      "name": "Nem chợ Huyện Bình Định",
+      "isHero": false,
+      "tasteTags": ["sour", "savory", "street-food"],
+      "description": "Nem chợ Huyện có nguồn gốc từ làng Chợ Huyện, xã Phước Lộc, huyện Tuy Phước, Bình Định — nơi từng là chốn tụ họp của nhiều gia đình quyền quý xưa, dần hình thành nhu cầu ẩm thực tinh tế. Nem có vị chua ngọt hài hòa, hơi chát nhẹ đặc trưng từ lá ổi gói ngoài, là món không thể thiếu trong cưới hỏi, giỗ chạp và ngày Tết của người Bình Định.",
+      "keyIngredients": ["thịt lợn nạc", "bì lợn", "tỏi, ớt, tiêu", "lá ổi", "lá chuối gói ngoài"],
+      "prepOutline": [
+        "Xay thịt lợn nạc còn tươi cùng bì lợn thái sợi mỏng",
+        "Trộn thịt với tỏi, ớt, tiêu và gia vị cho vừa ăn",
+        "Nắm thành viên nhỏ, gói trong lá ổi rồi bọc thêm lớp lá chuối bên ngoài",
+        "Để lên men tự nhiên ở nhiệt độ phòng cho tới khi nem chua vừa tới"
+      ],
+      "howToEat": "Bóc lá, ăn trực tiếp kèm tương ớt hoặc tỏi tươi, thường dùng làm món nhắm hoặc quà biếu.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://thanhnien.vn/ve-binh-dinh-dung-quen-lang-nem-cho-huyen-185856053.htm", "label": "Thanh Niên – Làng nem Chợ Huyện, Bình Định" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    }
+  ]
+}

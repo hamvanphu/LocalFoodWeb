@@ -1,0 +1,74 @@
+{
+  "slug": "phu-tho",
+  "code": "VN-PT",
+  "name": "Phú Thọ",
+  "region": "Bắc",
+  "centroid": [105.15, 21.35],
+  "summary": "Phú Thọ - vùng Đất Tổ cội nguồn dân tộc - sở hữu nền ẩm thực dân dã mang đậm dấu ấn của người Mường và cư dân trung du, tiêu biểu là thịt chua Thanh Sơn lên men trong ống nứa và bánh tai gạo tẻ nhân thịt. Bên cạnh đó, những sản vật gắn với cây cọ như cọ ỏm cũng là nét ẩm thực đặc trưng khó tìm thấy ở nơi khác của vùng trung du Bắc Bộ.",
+  "summarySourceRefs": [
+    { "url": "https://vietnamhoinhap.vn/vi/thit-chua-thanh-son--dac-san-nuc-tieng-vung-dat-to-phu-tho-22382.htm", "label": "Thịt chua Thanh Sơn: Đặc sản nức tiếng vùng đất Tổ Phú Thọ" }
+  ],
+  "heroDishSlug": "thit-chua-thanh-son",
+  "dishes": [
+    {
+      "slug": "thit-chua-thanh-son",
+      "name": "Thịt chua Thanh Sơn",
+      "isHero": true,
+      "tasteTags": ["sour", "savory"],
+      "description": "Thịt chua Thanh Sơn là món ăn giản dị của người Mường ở huyện Thanh Sơn, Phú Thọ, ra đời từ nhu cầu bảo quản thịt được lâu trong điều kiện vùng cao xưa. Thịt ba chỉ và thịt vai được thái mỏng, ướp gia vị rồi trộn cùng thính gạo rang xay mịn, sau đó nén chặt trong ống nứa hoặc hộp và để lên men tự nhiên khoảng 3-5 ngày. Thành phẩm có vị chua dịu, bì giòn sần sật hòa cùng mùi thơm bùi của thính gạo rang, tạo nên đặc sản trứ danh của vùng đất Tổ.",
+      "keyIngredients": ["thịt ba chỉ, thịt vai (có bì)", "thính gạo rang xay mịn", "muối, hạt tiêu", "ống nứa hoặc hộp để ủ"],
+      "prepOutline": [
+        "Thịt rửa sạch, để ráo, thái lát mỏng vừa ăn",
+        "Ướp thịt với muối, hạt tiêu cho ngấm gia vị",
+        "Trộn đều thịt với thính gạo rang cho bám kín từng miếng",
+        "Nén chặt vào ống nứa hoặc hộp, ủ nơi thoáng mát 3-5 ngày cho lên men chua"
+      ],
+      "howToEat": "Thịt chua cuốn cùng lá sung, lá ổi non hoặc các loại lá chát khác, chấm tương ớt, thường ăn kèm bánh đa nướng và rất hợp khi dùng lạnh cùng bia vào mùa hè.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vietnamhoinhap.vn/vi/thit-chua-thanh-son--dac-san-nuc-tieng-vung-dat-to-phu-tho-22382.htm", "label": "Thịt chua Thanh Sơn: Đặc sản nức tiếng vùng đất Tổ Phú Thọ" }
+      ],
+      "occasions": ["Quanh năm", "Mùa hè"]
+    },
+    {
+      "slug": "banh-tai-phu-tho",
+      "name": "Bánh tai",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh tai, còn gọi là bánh hòn, là món quà sáng dân dã nổi tiếng của vùng thị xã Phú Thọ, làm từ bột gạo tẻ ngâm kỹ giã nhuyễn kết hợp nhân thịt lợn có chút mỡ, hành khô và tiêu. Người làm bánh nặn bột thành hình cong giống chiếc tai, bọc lấy phần nhân rồi đem hấp chín. Món bánh giản dị nhưng đòi hỏi sự khéo léo, tỉ mỉ trong từng công đoạn để lớp vỏ vừa dẻo dai vừa không bị rời khi hấp.",
+      "keyIngredients": ["gạo tẻ ngon", "thịt lợn có mỡ", "hành khô, hạt tiêu", "muối, mì chính"],
+      "prepOutline": [
+        "Vo gạo tẻ sạch, ngâm 3-4 tiếng rồi giã hoặc nghiền thành bột",
+        "Nắm bột thành từng quả, luộc sơ khoảng 20 phút rồi giã nhuyễn lại",
+        "Làm nhân từ thịt lợn giã nhỏ trộn hành khô, tiêu, muối",
+        "Nặn bột bọc nhân thành hình cong như tai, xếp vào nồi hấp khoảng 30 phút"
+      ],
+      "howToEat": "Bánh tai ăn nóng ngay khi vừa hấp xong, thường dùng làm bữa sáng, có thể chấm thêm nước mắm ớt tùy khẩu vị.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://dulichphutho.gov.vn/nghe-lam-banh-tai-truyen-thong-thi-xa-phu-tho.html", "label": "Nghề làm bánh tai truyền thống thị xã Phú Thọ - Cổng TTĐT du lịch Phú Thọ" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "co-om-phu-tho",
+      "name": "Cọ ỏm",
+      "isHero": false,
+      "tasteTags": ["vegetarian-friendly", "savory"],
+      "description": "Cọ ỏm là món ăn dân dã đặc trưng của vùng trung du Phú Thọ, chế biến từ quả cọ - loại cây gắn liền với cảnh quan Đất Tổ. Quả cọ được gọt bỏ lớp vỏ ngoài rồi \"ỏm\" (ngâm) trong nước nóng khoảng 80 độ C, giữ lửa liu riu tới khi lớp dầu cọ nổi lên mặt nước và quả chuyển từ màu xanh sẫm sang vàng óng. Cọ ỏm có vị bùi béo đặc trưng, hơi chát nhẹ chứ không ngọt hay thơm nồng, mang nét mộc mạc rất riêng của ẩm thực vùng đất Tổ.",
+      "keyIngredients": ["quả cọ", "nước", "muối"],
+      "prepOutline": [
+        "Chọn quả cọ nếp chín tới, cạo bỏ lớp phấn ngoài, rửa sạch",
+        "Đun nước cùng chút muối tới khi sôi lăn tăn (khoảng 80 độ C)",
+        "Thả quả cọ vào, giữ lửa nhỏ, đảo nhẹ cho ngập đều nước",
+        "Om tới khi lớp dầu cọ nổi lên mặt nước và quả chuyển màu vàng thì tắt bếp"
+      ],
+      "howToEat": "Cọ ỏm ăn trực tiếp khi còn ấm, bóc lấy phần thịt quả bùi béo, thường dùng làm món quà quê hoặc ăn cùng cơm như một món dân dã của người Phú Thọ.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://dulichphutho.gov.vn/co-om-mon-ngon-tu-mien-dat-to.html", "label": "Cọ ỏm - món ngon từ miền đất Tổ - Cổng TTĐT du lịch Phú Thọ" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "yen-bai",
+  "code": "VN-YB",
+  "name": "Yên Bái",
+  "region": "Bắc",
+  "centroid": [104.6, 21.85],
+  "summary": "Yên Bái nổi tiếng với cánh đồng Mường Lò - vựa lúa nếp lớn thứ hai vùng Tây Bắc, nơi sản sinh ra những món ăn từ nếp Tú Lệ đặc trưng của người Thái như xôi ngũ sắc và cốm. Bên cạnh đó, giống vịt bầu Lâm Thượng nuôi thả ở vùng núi Lục Yên cũng là sản vật quý, góp phần làm phong phú bức tranh ẩm thực của tỉnh miền núi này.",
+  "summarySourceRefs": [
+    { "url": "https://luhanhvietnam.com.vn/du-lich/dac-san-xoi-ngu-sac-yen-bai.html", "label": "Lên Mường Lò thưởng thức đặc sản xôi ngũ sắc Yên Bái" }
+  ],
+  "heroDishSlug": "xoi-ngu-sac-muong-lo",
+  "dishes": [
+    {
+      "slug": "xoi-ngu-sac-muong-lo",
+      "name": "Xôi ngũ sắc Mường Lò",
+      "isHero": true,
+      "tasteTags": ["sweet", "vegetarian-friendly"],
+      "description": "Xôi ngũ sắc là món ăn đặc trưng của người Thái vùng Mường Lò, Yên Bái, làm từ gạo nếp Tú Lệ dẻo thơm nhuộm bằng năm màu tự nhiên lấy từ lá cây rừng: trắng của gạo, đỏ từ lá cơm đỏ hoặc quả gấc, xanh từ vỏ bưởi và lá rừng, tím từ lá cơm đen, vàng từ nghệ. Năm sắc màu tượng trưng cho ngũ hành và ước vọng về sự hòa hợp, sung túc, khiến món xôi không chỉ ngon miệng mà còn mang đậm giá trị văn hóa tâm linh của người Thái.",
+      "keyIngredients": ["gạo nếp Tú Lệ", "lá cây rừng nhuộm màu (lá cơm đỏ, cơm đen)", "nghệ, vỏ bưởi", "lá dong"],
+      "prepOutline": [
+        "Rửa sạch các loại lá rừng, đun cùng nước suối tới khi ra màu",
+        "Ngâm gạo nếp riêng trong từng loại nước màu 6-12 giờ",
+        "Vớt gạo để ráo, đồ chín từng màu trong chõ tre trên lửa củi",
+        "Xếp xôi các màu lên mâm hoặc đĩa tạo thành ngũ sắc hài hòa"
+      ],
+      "howToEat": "Xôi ngũ sắc thường ăn cùng thịt nướng hoặc chấm muối vừng, xuất hiện trong dịp Tết, lễ hội và làm quà biếu du khách khi ghé Mường Lò.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/X%C3%B4i_ng%C5%A9_s%E1%BA%AFc.JPG", "attribution": "Khương Việt Hà, Wikimedia Commons", "license": "Public Domain" }
+      ],
+      "sourceRefs": [
+        { "url": "https://luhanhvietnam.com.vn/du-lich/dac-san-xoi-ngu-sac-yen-bai.html", "label": "Lên Mường Lò thưởng thức đặc sản xôi ngũ sắc Yên Bái" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán", "Mùa xuân"]
+    },
+    {
+      "slug": "com-tu-le",
+      "name": "Cốm Tú Lệ",
+      "isHero": false,
+      "tasteTags": ["sweet", "vegetarian-friendly"],
+      "description": "Cốm Tú Lệ được xem là tinh hoa ẩm thực của vùng đất Tú Lệ, huyện Văn Chấn, Yên Bái, làm từ nếp non gặt đúng lúc lúa còn ngậm sữa. Lúa được tuốt ngay trong ngày rồi rang trên chảo gang bằng lửa nhỏ, đảo liên tục cho chín đều, sau đó giã trong cối khoảng mười lượt cho tới khi đạt độ dẻo dai đặc trưng. Hạt cốm xanh non được gói trong lá chuối tươi giữ trọn hương thơm, là món quà đặc sản mà du khách nào lên Tú Lệ mùa lúa cũng muốn mang về.",
+      "keyIngredients": ["thóc nếp non Tú Lệ", "lá chuối tươi gói cốm", "chuối chín hoặc hồng chín (khi ăn kèm)"],
+      "prepOutline": [
+        "Gặt lúa nếp vào sáng sớm khi còn ướt sương, tuốt ngay trong ngày",
+        "Rang thóc trên chảo gang với lửa nhỏ, đảo đều tay",
+        "Để nguội rồi giã trong cối khoảng mười lượt tới khi cốm dẻo, sạch trấu",
+        "Gói cốm trong lá chuối tươi để giữ màu và hương thơm"
+      ],
+      "howToEat": "Cốm Tú Lệ ngon nhất khi ăn cùng chuối chín trứng cuốc hoặc hồng chín cây, ngoài ra còn được chế biến thành chè cốm, chả cốm hay chả tôm cốm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://tienphong.vn/dac-san-cua-dat-va-nguoi-yen-bai-ai-len-tu-le-thuong-com-thom-post1000430.tpo", "label": "Đặc sản của đất và người Yên Bái: Ai lên Tú Lệ thưởng cốm thơm - Tiền Phong" }
+      ],
+      "occasions": ["Mùa thu"]
+    },
+    {
+      "slug": "vit-bau-lam-thuong",
+      "name": "Vịt bầu Lâm Thượng",
+      "isHero": false,
+      "tasteTags": ["savory"],
+      "description": "Vịt bầu Lâm Thượng là giống vịt bản địa nuôi thả tự nhiên ở xã Lâm Thượng, huyện Lục Yên, Yên Bái, kiếm ăn từ rong rêu và tôm cá nhỏ trong các khe suối. Vịt nuôi khoảng 5-7 tháng, nặng chừng 1,6-2,2kg, cho thịt săn chắc, thơm và ít mỡ hơn hẳn vịt nuôi công nghiệp. Năm 2020, giống vịt này đã được Cục Sở hữu trí tuệ cấp chứng nhận, trở thành thương hiệu đặc sản của vùng đất Lục Yên.",
+      "keyIngredients": ["vịt bầu Lâm Thượng", "nước mẻ", "rau răm, gừng", "măng hoặc rau đắng (khi xào lòng)"],
+      "prepOutline": [
+        "Chọn vịt bầu Lâm Thượng khoảng 1,6-2,2kg, làm sạch kỹ để khử mùi hôi",
+        "Đun nước gần sôi rồi mới thả vịt vào luộc để thịt săn chắc",
+        "Luộc chín tới, vớt ra để nguội bớt rồi chặt miếng",
+        "Lòng, mề vịt có thể đem xào riêng với rau đắng hoặc măng"
+      ],
+      "howToEat": "Vịt bầu Lâm Thượng phổ biến nhất là luộc chấm nước mẻ pha rau răm, ngoài ra còn làm món mọc vịt gói lá hoặc lòng vịt xào rau đắng.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://dulichtaybac.vn/diem-den/yen-bai/dac-san-vit-bau-lam-thuong-huyen-luc-yen/", "label": "Đặc sản vịt bầu Lâm Thượng, huyện Lục Yên - Du lịch Tây Bắc" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

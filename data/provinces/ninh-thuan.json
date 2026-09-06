@@ -1,0 +1,77 @@
+{
+  "slug": "ninh-thuan",
+  "code": "VN-NT",
+  "name": "Ninh Thuận",
+  "region": "Trung",
+  "centroid": [108.86698, 11.70655],
+  "summary": "Ninh Thuận là vùng đất khô nóng đặc trưng của Nam Trung Bộ, nơi giao thoa văn hóa ẩm thực Chăm và Việt. Khí hậu bán khô hạn tạo điều kiện cho nghề chăn nuôi dê, cừu phát triển mạnh, trong khi các món bánh làm từ bột gạo như bánh căn, bánh xèo mang đậm dấu ấn ẩm thực Chăm truyền thống.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_c%C4%83n", "label": "Bánh căn – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "thit-de-ninh-thuan",
+  "dishes": [
+    {
+      "slug": "thit-de-ninh-thuan",
+      "name": "Thịt dê Ninh Thuận",
+      "isHero": true,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Nhờ khí hậu nắng nóng, ít mưa và những triền đồi cây bụi khô, dê cừu Ninh Thuận được chăn thả tự nhiên, ăn cỏ và lá cây bản địa nên thịt săn chắc, thơm và gần như không có mùi hôi đặc trưng của dê nuôi nhốt. Thịt dê Ninh Thuận được chế biến thành nhiều món như dê nướng, dê né, lẩu dê, tiết canh dê, trở thành đặc sản gắn liền với vùng đất này.",
+      "keyIngredients": ["thịt dê (đùi, ba chỉ)", "sả", "riềng", "mẻ/sa tế", "rau sống, chuối chát, khế", "bánh tráng"],
+      "prepOutline": [
+        "Chọn thịt dê tơ, lọc bỏ gân, thái miếng vừa ăn",
+        "Ướp thịt với sả, riềng, ngũ vị hương và sa tế trong khoảng 30 phút",
+        "Nướng trên than hoa hoặc nhúng lẩu cùng nước dùng sả, măng chua",
+        "Chuẩn bị mâm rau sống, chuối chát, khế chua và bánh tráng ăn kèm"
+      ],
+      "howToEat": "Cuốn thịt dê nướng cùng bánh tráng, rau sống, chuối chát, khế chua rồi chấm mắm nêm hoặc chao; nếu ăn lẩu thì nhúng thịt tái vừa chín tới, chấm cùng nước chấm chua cay.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vinpearl.com/vi/dac-san-ninh-thuan-khanh-hoa", "label": "Đặc sản Ninh Thuận: 19 món ngon không thể bỏ lỡ – Vinpearl" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-can-ninh-thuan",
+      "name": "Bánh căn Ninh Thuận",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food", "grilled"],
+      "description": "Bánh căn có nguồn gốc từ ẩm thực của người Chăm, sau đó được người Việt tiếp biến và trở thành món ăn đặc trưng của Ninh Thuận, Bình Thuận, Khánh Hòa. Bánh được đổ trong khuôn đất nung nhỏ đặt trên bếp than, khác với bánh khọt là chiên dầu, bánh căn được 'nướng' khô nên vỏ ngoài giòn, ruột mềm.",
+      "keyIngredients": ["bột gạo xay", "trứng", "tôm, mực hoặc thịt bằm", "mỡ heo", "nước mắm/mắm nêm pha", "xoài xanh bào sợi"],
+      "prepOutline": [
+        "Ngâm gạo khoảng 6 tiếng rồi xay nhuyễn cùng một ít cơm nguội cho bánh xốp",
+        "Đặt khuôn đất nung nhiều lỗ tròn lên bếp than, phết mỡ heo chống dính",
+        "Đổ bột vào khuôn, đập thêm trứng hoặc thêm tôm/mực lên trên, đậy nắp cho chín",
+        "Cạy bánh ra khi mặt trên se lại và đáy vàng giòn"
+      ],
+      "howToEat": "Ăn nóng ngay khi vừa ra khuôn, chan hoặc chấm nước mắm pha (có nơi dùng mắm nêm), ăn kèm xoài xanh bào sợi, rau sống và các loại chả, nem.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/B%C3%A1nh_c%C4%83n_in_phan_rang%2C_vietnam.jpg", "attribution": "Saigon Time, Wikimedia Commons", "license": "CC0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_c%C4%83n", "label": "Bánh căn – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-canh-cha-ca-phan-rang",
+      "name": "Bánh canh chả cá Phan Rang",
+      "isHero": false,
+      "tasteTags": ["savory", "noodle-soup", "street-food"],
+      "description": "Bánh canh chả cá là biến thể bánh canh đặc trưng của Phan Rang – Ninh Thuận, được Wikipedia tiếng Việt ghi nhận là một trong các phiên bản vùng miền của món bánh canh. Nước lèo được hầm từ cá biển và xương heo cho vị ngọt thanh, ăn cùng chả cá tự làm dai giòn.",
+      "keyIngredients": ["sợi bánh canh bột gạo", "chả cá thu/cá nhồng", "xương heo và cá làm nước lèo", "hành lá, tiêu", "ớt xanh"],
+      "prepOutline": [
+        "Quết chả cá từ cá tươi giã nhuyễn cùng gia vị, tạo hình viên hoặc miếng dẹt",
+        "Hấp hoặc chiên chả cá cho chín tới",
+        "Ninh nước lèo từ xương heo và đầu cá trong nhiều giờ",
+        "Trụng sợi bánh canh, chan nước lèo, xếp chả cá lên trên"
+      ],
+      "howToEat": "Dùng nóng, thêm ớt xanh Ninh Thuận cắt lát hoặc ớt bột, vắt chanh và rắc tiêu, thường ăn vào buổi sáng hoặc xế chiều.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_canh", "label": "Bánh canh – Wikipedia tiếng Việt" },
+        { "url": "https://www.ivivu.com/blog/2024/06/du-lich-ninh-thuan-thuong-thuc-mon-banh-canh-cha-ca-phan-rang-thom-ngon/", "label": "Du lịch Ninh Thuận thưởng thức bánh canh chả cá Phan Rang – Ivivu" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

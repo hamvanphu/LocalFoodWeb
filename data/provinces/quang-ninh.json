@@ -1,0 +1,78 @@
+{
+  "slug": "quang-ninh",
+  "code": "VN-QN",
+  "name": "Quảng Ninh",
+  "region": "Bắc",
+  "centroid": [107.29, 21.06],
+  "summary": "Quảng Ninh sở hữu vịnh Hạ Long kỳ vĩ cùng vùng biển đảo trù phú, nên ẩm thực nơi đây thiên về hải sản tươi sống và các đặc sản vùng biển đảo hiếm có. Chả mực giã tay Hạ Long, sá sùng Vân Đồn quý hiếm và gà đồi Tiên Yên là những món ăn làm nên thương hiệu ẩm thực đất mỏ.",
+  "summarySourceRefs": [
+    { "url": "https://baoquangninh.vn/cha-muc-dai-su-du-lich-am-thuc-cua-quang-ninh-3293249.html", "label": "Chả mực - đại sứ 'du lịch' ẩm thực của Quảng Ninh - Báo Quảng Ninh" }
+  ],
+  "heroDishSlug": "cha-muc-ha-long",
+  "dishes": [
+    {
+      "slug": "cha-muc-ha-long",
+      "name": "Chả mực Hạ Long",
+      "isHero": true,
+      "tasteTags": ["seafood", "savory", "street-food"],
+      "description": "Chả mực Hạ Long là đặc sản nổi danh nhất của Quảng Ninh, lọt top 50 đặc sản quà tặng Việt Nam. Mực tươi đánh bắt ngoài vùng biển Hạ Long, Vân Đồn được giã tay bằng chày trong cối đá cho tới khi dai quyện, trộn cùng mỡ khổ, hành, tiêu rồi nặn thành miếng và rán ngập dầu tới khi vàng giòn bên ngoài mà vẫn trắng ngọt, dai giòn bên trong. Điểm khác biệt cốt lõi là mực được giã tay thay vì xay máy, giúp giữ được độ dai tự nhiên đặc trưng không nơi nào sánh được.",
+      "keyIngredients": ["mực tươi Hạ Long", "mỡ khổ (mỡ phần)", "hành khô, thì là", "tiêu, nước mắm"],
+      "prepOutline": [
+        "Chọn mực tươi vừa đánh bắt, làm sạch, để ráo",
+        "Giã tay mực trong cối đá cùng mỡ khổ cho tới khi nhuyễn dai",
+        "Trộn hỗn hợp với hành khô băm, tiêu, nêm nước mắm",
+        "Nặn thành từng miếng tròn dẹt",
+        "Rán ngập dầu tới khi vàng giòn hai mặt"
+      ],
+      "howToEat": "Chả mực ăn nóng, chấm cùng tương ớt hoặc nước mắm chua ngọt, thường dùng kèm bánh cuốn, xôi trắng hoặc làm món nhậu, là món quà đặc sản không thể thiếu khi đến Hạ Long.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Ch%E1%BA%A3_m%E1%BB%B1c_H%E1%BA%A1_Long%2C_Qu%E1%BA%A3ng_Ninh%2C_Vi%E1%BB%87t_Nam.jpg", "attribution": "Quyentruongrohgf, Wikimedia Commons", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Ch%E1%BA%A3_m%E1%BB%B1c", "label": "Chả mực - Wikipedia tiếng Việt" },
+        { "url": "https://baoquangninh.vn/cha-muc-dai-su-du-lich-am-thuc-cua-quang-ninh-3293249.html", "label": "Chả mực - đại sứ 'du lịch' ẩm thực của Quảng Ninh - Báo Quảng Ninh" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "sa-sung-van-don",
+      "name": "Sá sùng Vân Đồn",
+      "isHero": false,
+      "tasteTags": ["seafood", "savory"],
+      "description": "Sá sùng, còn gọi là địa sâm hay sâu biển, là loài hải sản quý hiếm chỉ sống trong lớp cát ở vùng bãi triều Quan Lạn, Minh Châu thuộc huyện Vân Đồn. Việc khai thác sá sùng rất công phu, người dân phải đào cát dọc bãi triều lúc thủy triều xuống, một ngày chỉ bắt được lượng rất ít nên giá thành cao, được ví như 'vàng ròng' của biển. Sá sùng phơi khô có vị ngọt đậm tự nhiên, thường dùng để ninh nước dùng phở, bún vì có khả năng làm dậy vị ngọt thanh mà không cần bột ngọt.",
+      "keyIngredients": ["sá sùng tươi hoặc khô", "nước dùng phở, bún", "gia vị nêm nếm"],
+      "prepOutline": [
+        "Đào bắt sá sùng trong cát bãi triều lúc nước rút",
+        "Làm sạch ruột chứa cát của sá sùng",
+        "Phơi khô hoặc rang sơ trên chảo nóng cho dậy mùi thơm",
+        "Cho vào ninh cùng nước dùng xương hoặc rang giòn ăn trực tiếp"
+      ],
+      "howToEat": "Sá sùng khô thường được rang giòn nhâm nhi cùng bia rượu, hoặc ninh cùng xương để lấy vị ngọt tự nhiên cho nước dùng phở, bún hải sản Quảng Ninh.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://baoquangninh.vn/sa-sung-bau-vat-troi-ban-3276108.html", "label": "Sá sùng - Báu vật trời ban - Báo Quảng Ninh" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ga-doi-tien-yen",
+      "name": "Gà đồi Tiên Yên",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Gà Tiên Yên là giống gà bản địa quý của huyện Tiên Yên, Quảng Ninh, dễ nhận biết nhờ đặc điểm có râu, da và chân vàng óng. Gà được thả rông trên các sườn đồi, tự kiếm ăn côn trùng, giun dế nên thịt săn chắc, da giòn, lớp mỡ mỏng xen trong thớ thịt tạo vị béo thơm đặc trưng khi luộc hoặc hấp. Món ăn đã được xếp vào top 50 đặc sản quà tặng nổi tiếng Việt Nam và là sản phẩm OCOP chủ lực của Quảng Ninh.",
+      "keyIngredients": ["gà Tiên Yên", "lá chanh", "muối hạt, tiêu", "gừng, hành"],
+      "prepOutline": [
+        "Chọn gà Tiên Yên nuôi thả đồi, làm sạch",
+        "Luộc hoặc hấp gà nguyên con cùng gừng, hành cho thơm",
+        "Chặt miếng vừa ăn khi gà vừa chín tới, da còn giòn",
+        "Rắc lá chanh thái chỉ lên trên trước khi bày ra đĩa"
+      ],
+      "howToEat": "Gà Tiên Yên luộc chặt miếng chấm muối chanh ớt hoặc muối lá chanh, thường xuất hiện trong các bữa cỗ, tiệc quan trọng và là món quà đặc sản được nhiều du khách tìm mua.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://baoquangninh.vn/dac-san-ga-doi-tien-yen-2505675.html", "label": "Đặc sản gà đồi Tiên Yên - Báo Quảng Ninh" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

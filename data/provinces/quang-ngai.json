@@ -1,0 +1,73 @@
+{
+  "slug": "quang-ngai",
+  "code": "VN-QNG",
+  "name": "Quảng Ngãi",
+  "region": "Trung",
+  "centroid": [108.64801, 14.99339],
+  "summary": "Quảng Ngãi, xứ sở núi Ấn sông Trà, gắn liền với những đặc sản từ dòng sông Trà Khúc: don ngọt thanh nấu từ loài nhuyễn thể nhỏ, cá bống sông Trà kho tiêu đậm đà, cùng bánh xèo mực hải sản của vùng biển Sa Huỳnh.",
+  "summarySourceRefs": [
+    { "url": "https://vietnamtourism.gov.vn/post/59394", "label": "Cục Du lịch Quốc gia Việt Nam – Don Quảng Ngãi" }
+  ],
+  "heroDishSlug": "don-quang-ngai",
+  "dishes": [
+    {
+      "slug": "don-quang-ngai",
+      "name": "Don Quảng Ngãi",
+      "isHero": true,
+      "tasteTags": ["savory", "seafood", "street-food"],
+      "description": "Don vừa là tên món ăn vừa là tên loài nhuyễn thể nhỏ thuộc họ hến, vỏ mỏng màu vàng nhạt, sống ở vùng nước lợ các sông Trà Khúc và sông Vệ. Nước don ngọt thanh, trong veo, gần như không cần nêm nhiều gia vị vì vị ngọt đã có sẵn từ con don, ăn cùng bánh tráng bẻ vụn và rau sống tạo nên món quà quê dân dã của xứ Quảng Ngãi.",
+      "keyIngredients": ["con don (nhuyễn thể vùng nước lợ)", "bánh tráng nướng hoặc để sống", "hành, ớt xanh", "rau sống"],
+      "prepOutline": [
+        "Đãi sạch cát bám trên vỏ don",
+        "Luộc nhanh don trong nước sôi để chiết lấy nước ngọt, đây là phần \"hồn\" của món ăn",
+        "Tách lấy phần thịt don ra khỏi vỏ",
+        "Có thể nấu thịt don thành canh với rau cải, rau muống, hoặc xào với hành"
+      ],
+      "howToEat": "Múc nước don nóng ra bát, bẻ vụn bánh tráng thả vào, rắc hành và ớt xanh, ăn kèm rau sống.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Don_(m%C3%B3n_%C4%83n)", "label": "Wikipedia tiếng Việt – Don (món ăn)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ca-bong-song-tra-kho-tieu",
+      "name": "Cá bống sông Trà kho tiêu",
+      "isHero": false,
+      "tasteTags": ["savory", "spicy", "seafood"],
+      "description": "Cá bống sông Trà là loài cá nhỏ cỡ ngón tay nhưng thịt chắc và ngọt tự nhiên, sống trong dòng nước trong xanh của sông Trà Khúc. Cá được kho tiêu đậm đà, cay nồng, là một trong bốn đặc sản của Quảng Ngãi được Tổ chức Kỷ lục Việt Nam công nhận.",
+      "keyIngredients": ["cá bống sông Trà", "tiêu", "nước mắm", "đường, hành, ớt", "nước màu (nước hàng)"],
+      "prepOutline": [
+        "Đánh bắt cá bống vào mùa từ tháng 1 đến tháng 8 âm lịch khi cá bơi ngược dòng",
+        "Làm sạch cá, ướp với nước mắm, tiêu, đường và nước màu",
+        "Kho cá trên lửa nhỏ liu riu cho tới khi nước kho sánh lại, cá thấm đều gia vị"
+      ],
+      "howToEat": "Ăn kèm cơm trắng nóng, có thể để nguội và đóng hũ dùng dần hoặc làm quà biếu.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vnexpress.net/thoi-su/dac-san-ca-bong-song-tra-kho-tieu-cua-nguoi-quang-ngai-3602611.html", "label": "VnExpress – Cá bống sông Trà kho tiêu" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-xeo-muc-quang-ngai",
+      "name": "Bánh xèo mực Quảng Ngãi",
+      "isHero": false,
+      "tasteTags": ["savory", "seafood", "street-food"],
+      "description": "Bánh xèo Quảng Ngãi có kích thước nhỏ gọn trong lòng bàn tay, màu trắng ngà tự nhiên của bột gạo chứ không vàng rực như bánh xèo Nam Bộ, dùng ít dầu mỡ hơn. Phiên bản nhân mực tươi của vùng biển Sa Huỳnh mang vị ngọt biển đặc trưng, ăn cùng nước mắm Lý Sơn cay nồng.",
+      "keyIngredients": ["bột gạo", "mực tươi", "giá đỗ", "chuối chát, dưa leo, rau sống", "nước mắm Lý Sơn"],
+      "prepOutline": [
+        "Pha bột gạo loãng vừa phải, có thể thêm chút bột nghệ tạo màu nhẹ",
+        "Phi hành cho thơm, đổ mực tươi vào áp chảo trước",
+        "Đổ bột lên khuôn nhỏ khoảng 20cm, thêm giá đỗ, đậy nắp cho bánh chín đều",
+        "Gỡ bánh ra đĩa khi bánh vừa chín tới, còn mềm"
+      ],
+      "howToEat": "Ăn kèm chuối chát, dưa leo, rau sống, chấm nước mắm Lý Sơn pha tỏi ớt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://baoquangngai.vn/channel/2047/201908/thom-ngon-banh-xeo-vo-sa-huynh-2960551/", "label": "Báo Quảng Ngãi – Bánh xèo vỏ Sa Huỳnh" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

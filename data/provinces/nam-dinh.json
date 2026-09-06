@@ -1,0 +1,77 @@
+{
+  "slug": "nam-dinh",
+  "code": "VN-ND",
+  "name": "Nam Định",
+  "region": "Bắc",
+  "centroid": [106.16, 20.27],
+  "summary": "Nam Định được xem là một trong những cái nôi của phở Việt Nam, bắt nguồn từ hai làng Vân Cù và Giao Cù có nghề nấu phở trăm năm tuổi. Bên cạnh đó, thành Nam còn nổi tiếng với bánh gai bà Thi thơm dẻo và kẹo Sìu Châu giòn bùi - những món quà quê gắn bó nhiều thế hệ.",
+  "summarySourceRefs": [
+    { "url": "https://cand.com.vn/Ly-luan/di-san-pho-nam-dinh-i741397/", "label": "Di sản Phở Nam Định (Báo Công an Nhân dân)" }
+  ],
+  "heroDishSlug": "pho-nam-dinh",
+  "dishes": [
+    {
+      "slug": "pho-nam-dinh",
+      "name": "Phở Nam Định",
+      "isHero": true,
+      "tasteTags": ["savory", "noodle-soup"],
+      "description": "Phở Nam Định có lịch sử hơn 100 năm, bắt nguồn từ hai làng nghề Vân Cù và Giao Cù, nơi người dân từng làm thợ cho các tiệm cao lâu của Hoa kiều trước khi tách ra mở quán phở riêng. Bát phở Nam Định đặc trưng bởi nước dùng trong mà đậm đà, thơm nhẹ mùi gừng và nước mắm, bánh phở sợi to bản mềm dai, thịt bò tươi ngọt. Năm 2024, phở Nam Định cùng phở Hà Nội được công nhận là di sản văn hóa phi vật thể quốc gia.",
+      "keyIngredients": ["bánh phở sợi to bản", "xương bò ninh nước dùng", "thịt bò tái, chín", "gừng nướng, hành khô nướng", "nước mắm ngon, quế, hồi"],
+      "prepOutline": [
+        "Ninh xương bò nhiều giờ cùng gừng, hành nướng cho nước trong ngọt",
+        "Nêm nước dùng bằng nước mắm và ít quế hồi cho thơm nhẹ",
+        "Trần bánh phở sợi to bản rồi xếp vào bát",
+        "Xếp thịt bò tái hoặc chín lên trên, chan nước dùng nóng"
+      ],
+      "howToEat": "Phở ăn nóng ngay khi vừa chan nước dùng, thường dùng kèm quẩy, chanh, ớt tươi và ăn vào bữa sáng - nét đặc trưng của các quán phở Nam Định là quầy chế biến đặt ngay cửa để thực khách quan sát.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Pho_bo.jpg", "attribution": "Blue Lotus, via Wikimedia Commons (ảnh phở bò minh họa, không phải quán cụ thể tại Nam Định)", "license": "CC BY 2.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://cand.com.vn/Ly-luan/di-san-pho-nam-dinh-i741397/", "label": "Di sản Phở Nam Định (Báo Công an Nhân dân)" },
+        { "url": "https://tienphong.vn/net-dac-sac-cua-pho-nam-dinh-vua-tro-thanh-di-san-van-hoa-phi-vat-the-post1667747.tpo", "label": "Nét đặc sắc của phở Nam Định vừa trở thành di sản văn hóa phi vật thể (Tiền Phong)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-gai-ba-thi",
+      "name": "Bánh gai bà Thi",
+      "isHero": false,
+      "tasteTags": ["sweet", "vegetarian-friendly"],
+      "description": "Bánh gai bà Thi có nguồn gốc từ bánh gai Cầu Ốc ở Lộc Hạ, thành phố Nam Định, được bà Thi phát triển thành thương hiệu riêng từ năm 1978. Bánh làm từ bột nếp trộn lá gai giã nhuyễn, nhân đậu xanh quyện cùi dừa, hạt sen và mỡ lợn, gói trong lá chuối khô, được xem là một trong những món quà quê nổi tiếng của thành Nam.",
+      "keyIngredients": ["bột nếp", "lá gai giã nhuyễn", "đậu xanh, hạt sen làm nhân", "dừa nạo, mỡ lợn", "vừng rắc ngoài vỏ"],
+      "prepOutline": [
+        "Giã nhuyễn lá gai luộc chín, trộn đều với bột nếp dẻo mịn",
+        "Xào nhân đậu xanh với đường, dừa nạo, hạt sen và mỡ lợn",
+        "Gói bột và nhân trong lá chuối khô, rắc vừng ngoài vỏ",
+        "Hấp bánh chín rồi để nguội trước khi dùng"
+      ],
+      "howToEat": "Bánh gai bà Thi ăn nguội, bóc lớp lá chuối, thường được mua làm quà biếu khi đến Nam Định vì hương vị dẻo thơm đặc trưng của lá gai hòa cùng vị bùi ngọt của nhân.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://dacsannhamon.com/banh-gai-ba-thi/", "label": "Bánh gai Bà Thi đặc sản cổ truyền Nam Định" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "keo-sieu-chau",
+      "name": "Kẹo Sìu Châu",
+      "isHero": false,
+      "tasteTags": ["sweet"],
+      "description": "Kẹo Sìu Châu (còn gọi kẹo lạc Nam Định) là đặc sản truyền thống của thành phố Nam Định, được làm từ lạc rang giòn trộn cùng mạch nha kéo dẻo, ép mỏng và cắt thành từng thanh nhỏ vừa ăn. Tên gọi 'Sìu Châu' xuất phát từ cách gọi của người Hoa xưa, gắn liền với các thương hiệu kẹo lâu đời trên phố Hàng Sắt.",
+      "keyIngredients": ["lạc nhân rang chín", "mạch nha (đường kẹo mạch nha)", "vừng rang", "gừng tươi"],
+      "prepOutline": [
+        "Rang lạc chín giòn, xát bỏ vỏ lụa",
+        "Đun mạch nha với đường cho keo dẻo và thơm gừng",
+        "Trộn nhanh lạc rang và vừng vào mạch nha nóng",
+        "Cán mỏng hỗn hợp trên mặt phẳng rồi cắt thành thanh nhỏ khi còn ấm"
+      ],
+      "howToEat": "Kẹo Sìu Châu ăn giòn tan ngay, thường nhâm nhi cùng trà nóng hoặc mua làm quà biếu vì để được lâu mà vẫn giữ độ giòn thơm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vnexpress.net/keo-siu-chau-mon-qua-ngay-xuan-o-nam-dinh-4420362.html", "label": "Kẹo sìu châu - món quà ngày xuân ở Nam Định (VnExpress)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

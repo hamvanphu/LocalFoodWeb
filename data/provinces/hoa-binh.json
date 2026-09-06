@@ -1,0 +1,76 @@
+{
+  "slug": "hoa-binh",
+  "code": "VN-HB",
+  "name": "Hòa Bình",
+  "region": "Bắc",
+  "centroid": [105.34, 20.68],
+  "summary": "Hòa Bình là cái nôi văn hóa của người Mường với những bản làng nhà sàn giữa thung lũng đá vôi. Ẩm thực Mường Hòa Bình gắn liền với việc lên men, ủ chua để bảo quản thịt và cách nấu cơm trong ống tre, tạo nên những món ăn như thịt muối chua, cơm lam và thịt trâu nấu lá lồm mang hương vị chua nhẹ, đậm đà rất riêng.",
+  "summarySourceRefs": [
+    { "url": "https://pasgo.vn/blog/doc-dao-net-van-hoa-am-thuc-dan-toc-muong-o-hoa-binh-3817", "label": "Độc đáo nét văn hóa ẩm thực dân tộc Mường ở Hòa Bình" }
+  ],
+  "heroDishSlug": "thit-muoi-chua-hoa-binh",
+  "dishes": [
+    {
+      "slug": "thit-muoi-chua-hoa-binh",
+      "name": "Thịt lợn muối chua",
+      "isHero": true,
+      "tasteTags": ["sour", "savory"],
+      "description": "Thịt lợn muối chua là món ăn sáng tạo đặc trưng của người Mường ở Hòa Bình, thường xuất hiện trong các dịp lễ Tết, cưới hỏi hay khi đãi khách quý. Thịt lợn nuôi thả trên rừng được thái miếng, ướp cùng giềng giã nhỏ, muối, men lá rừng và rượu nếp cái, sau đó ủ cùng thính gạo rang trong chum khoảng 1-2 tuần cho lên men chua tự nhiên. Món ăn có màu vàng ươm của thính gạo bao quanh miếng thịt, hòa quyện vị mặn và chua nhẹ rất đặc trưng.",
+      "keyIngredients": ["thịt lợn bản (ba chỉ, vai)", "thính gạo rang giã nhỏ", "giềng, muối, men lá rừng", "rượu nếp cái"],
+      "prepOutline": [
+        "Thái thịt lợn thành miếng vừa ăn, ướp với giềng giã, muối, men lá và rượu nếp",
+        "Trộn thịt đã ướp với thính gạo rang cho bám đều",
+        "Xếp thịt vào chum hoặc ống, lót lá chuối, nén chặt",
+        "Ủ trên gác bếp hoặc nơi khô ráo khoảng 1-2 tuần cho lên men chua"
+      ],
+      "howToEat": "Thịt chua ăn kèm các loại lá rừng như lá sung, lá mơ, đinh lăng cuốn cùng, chấm tương ớt, thường dùng làm món khai vị hoặc nhắm rượu.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.ivivu.com/blog/2022/12/du-lich-hoa-binh-thuong-thuc-mon-dac-san-thit-muoi-chua/", "label": "Du lịch Hòa Bình: Thưởng thức món đặc sản thịt muối chua" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    },
+    {
+      "slug": "com-lam-hoa-binh",
+      "name": "Cơm lam xứ Mường",
+      "isHero": false,
+      "tasteTags": ["sweet", "vegetarian-friendly"],
+      "description": "Cơm lam là món ăn gắn liền với đời sống người Mường Hòa Bình, ra đời từ tập quán mang gạo lên nương, vào rừng làm rẫy rồi chặt ống tre nấu cơm ăn ngay tại chỗ. Gạo nếp nương thơm dẻo được ngâm cùng nước suối rồi cho vào ống tre non, nướng trên than hồi lâu tới khi chín thơm. Câu ca \"ăn cơm lam, ở nhà sàn\" phần nào cho thấy món ăn này đã trở thành nét văn hóa đặc trưng không thể thiếu của người Mường xứ Hòa Bình.",
+      "keyIngredients": ["gạo nếp nương", "ống tre non", "nước suối", "lá chuối để bịt ống"],
+      "prepOutline": [
+        "Vo sạch gạo nếp nương, ngâm khoảng 2 giờ cùng chút muối",
+        "Cho gạo và nước suối vào ống tre non, bịt kín miệng ống bằng lá chuối",
+        "Dựng các ống quanh đống lửa than, xoay đều tay khi nướng",
+        "Kiểm tra bằng cách bấm nhẹ ống, nướng tới khi cơm chín dẻo thơm"
+      ],
+      "howToEat": "Cơm lam để nguội bớt rồi tách bỏ lớp cháy bên ngoài, giữ lại lớp màng tre mỏng bên trong, ăn kèm thịt nướng, muối vừng hoặc chấm cùng thức chấm cay của người Mường.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/C%C6%A1m_lam_T%C3%A2y_Nguy%C3%AAn.jpg", "attribution": "Lam Nguyen, Wikimedia Commons (ảnh minh họa cơm lam Tây Nguyên, mang tính đại diện món ăn, không chụp tại Hòa Bình)", "license": "CC BY 2.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://www.vietravel.com/vn/am-thuc-kham-pha/com-lam-hoa-binh-v7448.aspx", "label": "Cơm lam Hòa Bình" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "thit-trau-nau-la-lom",
+      "name": "Thịt trâu nấu lá lồm",
+      "isHero": false,
+      "tasteTags": ["sour", "savory"],
+      "description": "Thịt trâu nấu lá lồm là đặc sản dân dã nổi tiếng của người Mường Hòa Bình, kết hợp vị ngọt mềm của thịt trâu tươi với vị chua thanh dịu của lá lồm - một loại lá rừng mọc phổ biến ở vùng núi Hòa Bình. Thịt trâu được hầm nhừ cùng chút tấm gạo và lá lồm cho tới khi nước sánh lại, tạo nên món ăn đậm đà, ấm bụng, rất thích hợp trong những ngày se lạnh vùng cao.",
+      "keyIngredients": ["thịt trâu (bắp hoặc thăn)", "lá lồm tươi", "tấm gạo", "gia vị, ớt"],
+      "prepOutline": [
+        "Chọn thịt trâu tươi đỏ, thớ săn chắc, thái miếng vừa ăn",
+        "Chọn lá lồm xanh đậm, rửa sạch, thái nhỏ",
+        "Hầm thịt trâu cùng chút tấm gạo cho tới khi gần nhừ",
+        "Cho lá lồm vào nấu cùng, nêm gia vị vừa ăn, không xào quá lâu để tránh đắng"
+      ],
+      "howToEat": "Món ăn ngon nhất khi dùng nóng, ăn kèm cơm trắng hoặc bún, thường xuất hiện trong bữa cơm hàng ngày và các dịp tụ họp của người Mường.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.ivivu.com/blog/2022/12/thit-trau-nau-la-lom-dac-san-nhat-dinh-phai-thu-khi-du-lich-hoa-binh/", "label": "Thịt trâu nấu lá lồm - Đặc sản nhất định phải thử khi du lịch Hòa Bình" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

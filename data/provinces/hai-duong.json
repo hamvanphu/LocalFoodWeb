@@ -1,0 +1,80 @@
+{
+  "slug": "hai-duong",
+  "code": "VN-HD",
+  "name": "Hải Dương",
+  "region": "Bắc",
+  "centroid": [106.31, 20.94],
+  "summary": "Hải Dương được biết đến là quê hương của bánh đậu xanh - thức quà tao nhã thường dùng cùng trà, cùng với vải thiều Thanh Hà trứ danh và bánh gai Ninh Giang dẻo thơm lâu đời. Ba đặc sản này gắn liền với các làng nghề truyền thống, phản ánh nếp sống tinh tế của vùng đất xứ Đông xưa.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_%C4%91%E1%BA%ADu_xanh", "label": "Bánh đậu xanh – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "banh-dau-xanh",
+  "dishes": [
+    {
+      "slug": "banh-dau-xanh",
+      "name": "Bánh đậu xanh",
+      "isHero": true,
+      "tasteTags": ["sweet", "vegetarian-friendly"],
+      "description": "Bánh đậu xanh là đặc sản truyền thống nổi tiếng nhất của Hải Dương, làm từ bột đậu xanh giã nhuyễn trộn cùng đường và mỡ (hoặc dầu thực vật), ép thành từng khối vuông nhỏ. Bánh có vị ngọt bùi, tan nhẹ trong miệng, thường được gói trong giấy hoặc hộp giấy mỏng in hình đặc trưng của các thương hiệu lâu đời tại thành phố Hải Dương.",
+      "keyIngredients": ["đậu xanh xay mịn", "đường kính", "mỡ lợn hoặc dầu thực vật", "tinh dầu hoa bưởi"],
+      "prepOutline": [
+        "Đậu xanh xát vỏ, hấp chín rồi giã hoặc xay thật nhuyễn",
+        "Sên bột đậu với đường và mỡ trên chảo nóng cho quyện dẻo",
+        "Ướp thêm chút tinh dầu hoa bưởi cho thơm",
+        "Ép bột vào khuôn gỗ nhỏ, cắt thành từng miếng vuông rồi gói giấy"
+      ],
+      "howToEat": "Bánh đậu xanh thường được nhấm nháp cùng trà xanh hoặc trà mạn nóng, để miếng bánh tan dần trong miệng hòa quyện với vị chát nhẹ của trà; đây cũng là món quà biếu phổ biến của du khách khi ghé Hải Dương.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/B%C3%A1nh_%C4%91%E1%BA%ADu_xanh.jpg", "attribution": "Hoangkid, via Wikimedia Commons", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_%C4%91%E1%BA%ADu_xanh", "label": "Bánh đậu xanh – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "vai-thieu-thanh-ha",
+      "name": "Vải thiều Thanh Hà",
+      "isHero": false,
+      "tasteTags": ["sweet"],
+      "description": "Vải thiều Thanh Hà bắt nguồn từ cây vải tổ do cụ Hoàng Văn Cơm (1848-1923) chiết ghép từ hạt giống mang về từ Trung Quốc vào cuối thế kỷ 19, hiện vẫn còn ở xã Thanh Sơn, huyện Thanh Hà, Hải Dương. Quả vải nhỏ, vỏ đỏ sần, hạt gần như tiêu biến, cùi dày trắng trong và có vị ngọt đậm, thơm đặc trưng hiếm giống vải nào sánh được.",
+      "keyIngredients": ["giống vải thiều Thanh Hà", "đất phù sa ven sông"],
+      "prepOutline": [
+        "Chăm sóc cây vải theo kỹ thuật gia truyền qua nhiều thế hệ",
+        "Thu hoạch quả khi vỏ chuyển đỏ đều vào đầu tháng 6",
+        "Đóng gói vải tươi để tiêu thụ trong ngày hoặc vận chuyển đi xa",
+        "Phần vải dư có thể sấy khô để bảo quản lâu dài"
+      ],
+      "howToEat": "Vải thiều Thanh Hà ngon nhất khi ăn tươi ngay sau thu hoạch, ngoài ra còn được chế biến thành vải sấy khô hoặc nước ép để dùng quanh năm.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Qu%E1%BA%A3_v%E1%BA%A3i_thi%E1%BB%81u_Thanh_H%C3%A0_ch%C3%ADn.jpeg", "attribution": "Khaivuhd, via Wikimedia Commons", "license": "CC BY-SA 3.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/V%E1%BA%A3i_thi%E1%BB%81u", "label": "Vải thiều – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Mùa hè"]
+    },
+    {
+      "slug": "banh-gai-ninh-giang",
+      "name": "Bánh gai Ninh Giang",
+      "isHero": false,
+      "tasteTags": ["sweet", "vegetarian-friendly"],
+      "description": "Bánh gai Ninh Giang là nghề truyền thống hơn 700 năm của thị trấn Ninh Giang, Hải Dương, với lớp vỏ bánh màu đen bóng làm từ bột nếp trộn lá gai giã nhuyễn, bọc nhân đậu xanh, dừa và mỡ lợn. Bánh được gói vuông vắn trong lá chuối khô, khi bóc ra tỏa mùi thơm đặc trưng của lá gai hòa quyện vị béo bùi của nhân.",
+      "keyIngredients": ["bột nếp", "lá gai giã nhuyễn", "đậu xanh làm nhân", "dừa nạo, mỡ lợn", "lá chuối khô gói bánh"],
+      "prepOutline": [
+        "Giã nhuyễn lá gai đã luộc chín rồi trộn với bột nếp",
+        "Nhào bột dẻo mịn, để bột nghỉ cho dai",
+        "Xào nhân đậu xanh với dừa, mỡ lợn và đường cho bùi béo",
+        "Gói bánh trong lá chuối khô rồi hấp chín"
+      ],
+      "howToEat": "Bánh gai ăn nguội, bóc bỏ lớp lá chuối, thường dùng làm quà biếu hoặc tráng miệng, được nhiều thực khách coi là một trong những đặc sản bánh gai ngon nhất Việt Nam.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/B%C3%A1nh_gai.jpg", "attribution": "Memberofc1, via Wikimedia Commons (ảnh minh họa bánh gai nói chung)", "license": "CC BY-SA 3.0 / GFDL" }
+      ],
+      "sourceRefs": [
+        { "url": "https://scov.gov.vn/ban-sac-van-hoa/gioi-thieu-ban-sac-van-hoa/lang-nghe-banh-gai-ninh-giang.html", "label": "Làng nghề bánh gai Ninh Giang (Cục Văn hóa cơ sở)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

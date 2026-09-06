@@ -1,0 +1,74 @@
+{
+  "slug": "dien-bien",
+  "code": "VN-DB",
+  "name": "Điện Biên",
+  "region": "Bắc",
+  "centroid": [103.02, 21.62],
+  "summary": "Điện Biên là vùng đất của người Thái đen ở Tây Bắc, nổi tiếng với gạo Điện Biên dẻo thơm và gia vị mắc khén đặc trưng núi rừng. Ẩm thực nơi đây thiên về các món nướng đậm đà cùng những sản vật tự nhiên như hoa ban, rêu đá lấy từ suối, phản ánh lối sống gắn bó với thiên nhiên của đồng bào các dân tộc thiểu số.",
+  "summarySourceRefs": [
+    { "url": "https://fptshop.com.vn/tin-tuc/dien-may/dac-san-dien-bien-165787", "label": "Danh sách 13 đặc sản Điện Biên ấn tượng nhất" }
+  ],
+  "heroDishSlug": "ga-nuong-mac-khen-dien-bien",
+  "dishes": [
+    {
+      "slug": "ga-nuong-mac-khen-dien-bien",
+      "name": "Gà nướng mắc khén Điện Biên",
+      "isHero": true,
+      "tasteTags": ["grilled", "savory", "spicy"],
+      "description": "Gà nướng mắc khén là món ăn tiêu biểu của người Thái ở Điện Biên, dùng gà bản thả đồi tẩm ướp cùng mắc khén - loại hạt tiêu rừng đặc trưng của vùng núi Tây Bắc. Gà được nướng trên than hoa với lửa vừa, khi thịt săn lại thì phết thêm lớp mắc khén lên da để dậy mùi thơm đặc trưng. Món ăn kết hợp vị ngọt tự nhiên của thịt gà với hương thơm nồng ấm của mắc khén, tạo nên dấu ấn khó quên cho thực khách.",
+      "keyIngredients": ["gà bản thả đồi", "mắc khén", "muối, ớt", "than hoa để nướng"],
+      "prepOutline": [
+        "Chọn gà bản chắc thịt, làm sạch, mổ phanh",
+        "Ướp gà với mắc khén giã nhỏ, muối, ớt cho ngấm đều",
+        "Nướng trên than hoa với lửa vừa, trở đều tay",
+        "Khi thịt săn lại, phết thêm mắc khén lên da cho tới khi chín vàng thơm"
+      ],
+      "howToEat": "Gà nướng ăn nóng, chấm cùng chẩm chéo hoặc muối chanh ớt, thường dùng kèm xôi nếp nương hoặc cơm lam và rau rừng.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://fptshop.com.vn/tin-tuc/dien-may/dac-san-dien-bien-165787", "label": "Danh sách 13 đặc sản Điện Biên ấn tượng nhất" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "nom-hoa-ban",
+      "name": "Nộm hoa ban",
+      "isHero": false,
+      "tasteTags": ["sour", "sweet", "savory", "herb-forward"],
+      "description": "Nộm hoa ban là món ăn dân dã đặc trưng chỉ có ở Điện Biên, nơi hoa ban nở trắng núi rừng vào mùa xuân. Cánh hoa ban tươi được trộn cùng măng đắng và cá suối nướng, tạo nên hương vị chua chua, ngọt ngọt, mằn mặn hòa quyện đầy đặc trưng núi rừng Tây Bắc. Đây là món ăn thể hiện sự khéo léo tận dụng sản vật tự nhiên của người Thái Điện Biên.",
+      "keyIngredients": ["hoa ban tươi", "măng đắng", "cá suối nướng", "chanh, ớt, rau thơm"],
+      "prepOutline": [
+        "Hái hoa ban tươi, nhặt bỏ nhụy, rửa sạch rồi chần sơ",
+        "Măng đắng luộc chín, thái nhỏ",
+        "Cá suối nướng chín, gỡ lấy thịt",
+        "Trộn đều hoa ban, măng, cá cùng gia vị chua cay cho ngấm"
+      ],
+      "howToEat": "Nộm hoa ban ăn ngay khi vừa trộn để giữ độ giòn của hoa và măng, thường dùng làm món khai vị trong mâm cỗ của người Thái.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://eva.vn/di-dau-xem-gi/6-dac-san-chi-co-o-dien-bien-cuc-hap-dan-nhieu-mon-phai-den-tan-day-moi-duoc-an-c40a570170.html", "label": "6 đặc sản chỉ có ở Điện Biên cực hấp dẫn" }
+      ],
+      "occasions": ["Mùa xuân"]
+    },
+    {
+      "slug": "reu-da-nuong-dien-bien",
+      "name": "Rêu đá nướng Điện Biên",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "herb-forward"],
+      "description": "Rêu đá là loại rêu xanh mọc bám trên các tảng đá dưới lòng suối Điện Biên, thường được người Thái thu hái từ tháng 9 đến tháng 5. Rêu được vò sạch bằng chính nước suối, trộn cùng mắc khén, tỏi, ớt, sả, gừng và các loại rau thơm rồi gói trong lá dong đem nướng trên than hoa. Đây là món ăn độc đáo vừa lạ miệng vừa được cho là tốt cho sức khỏe, tiêu biểu cho lối ẩm thực gắn với sông suối của đồng bào vùng cao.",
+      "keyIngredients": ["rêu đá suối", "mắc khén", "tỏi, ớt, sả, gừng", "lá dong gói"],
+      "prepOutline": [
+        "Vớt rêu đá tươi từ suối, vò sạch nhiều lần bằng nước suối",
+        "Trộn rêu với mắc khén, tỏi, ớt, sả, gừng băm nhỏ và rau thơm",
+        "Gói hỗn hợp rêu vào lá dong, buộc chặt bằng lạt",
+        "Vùi hoặc nướng trên than hoa cho tới khi dậy mùi thơm"
+      ],
+      "howToEat": "Rêu nướng ăn nóng ngay khi vừa lấy ra khỏi than, có thể dùng kèm cơm hoặc như món nhắm rượu trong bữa cơm của người Thái.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://eva.vn/di-dau-xem-gi/6-dac-san-chi-co-o-dien-bien-cuc-hap-dan-nhieu-mon-phai-den-tan-day-moi-duoc-an-c40a570170.html", "label": "6 đặc sản chỉ có ở Điện Biên cực hấp dẫn" }
+      ],
+      "occasions": ["Mùa thu", "Mùa đông", "Mùa xuân"]
+    }
+  ]
+}

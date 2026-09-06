@@ -1,0 +1,105 @@
+{
+  "slug": "tay-ninh",
+  "code": "VN-TNI",
+  "name": "Tây Ninh",
+  "region": "Nam",
+  "centroid": [106.15972, 11.40565],
+  "summary": "Tây Ninh là vùng đất không giáp biển nhưng lại sản sinh ra muối tôm trứ danh khắp cả nước, cùng với đó là thị xã Trảng Bàng nổi tiếng với nghề làm bánh tráng phơi sương và bánh canh gia truyền. Ẩm thực Tây Ninh mang đậm dấu ấn của vùng đất khô cằn nắng gió, tận dụng khéo léo nguyên liệu nhập từ nơi khác để tạo ra những đặc sản không đâu có được.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_tr%C3%A1ng_ph%C6%A1i_s%C6%B0%C6%A1ng", "label": "Bánh tráng phơi sương – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "banh-trang-phoi-suong-trang-bang",
+  "dishes": [
+    {
+      "slug": "banh-trang-phoi-suong-trang-bang",
+      "name": "Bánh tráng phơi sương Trảng Bàng",
+      "isHero": true,
+      "tasteTags": ["savory", "herb-forward", "street-food"],
+      "description": "Bánh tráng phơi sương là đặc sản trứ danh của thị xã Trảng Bàng, Tây Ninh, ra đời một cách tình cờ khi bánh tráng phơi quên ngoài trời qua đêm bị thấm sương trở nên mềm dẻo. Bánh được làm từ gạo mới, ngon, không pha trộn, nướng trên bếp than trấu cho nổi những hạt bong bóng nhỏ rồi đem phơi sương vào sáng sớm đúng thời điểm để bánh vừa mềm, dẻo mà không bị nhão.",
+      "keyIngredients": [
+        "Gạo mới, chất lượng cao (không pha trộn)",
+        "Muối (thay vì đường như bánh tráng thường)",
+        "Thịt heo luộc (thường là thịt đùi)",
+        "Rau sống các loại, đặc biệt là lá cóc, lá tía tô, rau má, diếp cá",
+        "Nước mắm chua ngọt pha theo công thức riêng"
+      ],
+      "prepOutline": [
+        "Gạo mới được xay thành bột, tráng thành từng lớp bánh mỏng",
+        "Nướng bánh trên bếp than sử dụng vỏ đậu phộng làm nhiên liệu cho đến khi bánh nổi bong bóng nhỏ, có màu trắng đục",
+        "Phơi bánh vào lúc sáng sớm khi có sương để bánh thấm hơi ẩm, trở nên mềm dẻo",
+        "Canh đúng thời gian phơi sương, nếu để quá lâu bánh sẽ bị nhão ướt"
+      ],
+      "howToEat": "Bánh tráng phơi sương được cuốn cùng thịt heo luộc thái mỏng và rất nhiều loại rau sống, chấm vào chén nước mắm chua ngọt hoặc mắm nêm pha theo kiểu Trảng Bàng.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Handmade_rice_paper_wrappers_drying_on_bamboo_mats.jpg",
+          "attribution": "Wanderingspoon / Wikimedia Commons (ảnh minh họa bánh tráng phơi trên nia tre, không chụp riêng công đoạn phơi sương)",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_tr%C3%A1ng_ph%C6%A1i_s%C6%B0%C6%A1ng", "label": "Bánh tráng phơi sương – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "muoi-tom-tay-ninh",
+      "name": "Muối tôm Tây Ninh",
+      "isHero": false,
+      "tasteTags": ["spicy", "savory"],
+      "description": "Muối tôm là đặc sản kỳ lạ và tự hào của Tây Ninh — một tỉnh không giáp biển, thiếu cả muối lẫn tôm nhưng lại tạo ra loại gia vị nức tiếng trong và ngoài nước. Muối hột được nhập từ Đồng bằng sông Cửu Long, tôm khô từ Cà Mau hoặc Bà Rịa - Vũng Tàu, kết hợp cùng ớt trồng tại chỗ, giã và sấy theo công thức riêng cho ra những hạt muối màu gạch đỏ, thơm cay đặc trưng.",
+      "keyIngredients": [
+        "Muối hột (nhập từ Đồng bằng sông Cửu Long)",
+        "Tôm khô (từ Cà Mau, Bà Rịa - Vũng Tàu)",
+        "Ớt tươi trồng tại Tây Ninh",
+        "Tỏi, sả",
+        "Bột ngọt, đường"
+      ],
+      "prepOutline": [
+        "Muối hột, tôm khô và ớt được xay hoặc giã nhuyễn theo tỷ lệ riêng",
+        "Trộn đều hỗn hợp cùng tỏi, sả băm và gia vị",
+        "Phơi hỗn hợp dưới nắng khoảng vài giờ để thấm nắng gió",
+        "Sấy khô ở nhiệt độ 80-90 độ C trong nhiều giờ rồi khử trùng để bảo quản lâu"
+      ],
+      "howToEat": "Muối tôm dùng để chấm các loại trái cây chua như cóc, xoài, ổi, hoặc trộn cùng bánh tráng thành món bánh tráng trộn, bánh tráng muối tôm ăn vặt phổ biến khắp Việt Nam.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Mu%E1%BB%91i_t%C3%B4m", "label": "Muối tôm – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-canh-trang-bang",
+      "name": "Bánh canh Trảng Bàng",
+      "isHero": false,
+      "tasteTags": ["savory", "noodle-soup", "street-food"],
+      "description": "Bánh canh Trảng Bàng là niềm tự hào ẩm thực của Tây Ninh, có nguồn gốc từ đầu thế kỷ 20 và tương truyền từng được tiến cống vào cung dưới thời nhà Nguyễn. Sợi bánh canh làm từ bột gạo trắng, mềm mịn và dai, nấu cùng nước lèo ngọt trong được ninh từ xương heo và nước giếng khoan đặc trưng của vùng Trảng Bàng, ăn cùng thịt heo luộc lọc xương.",
+      "keyIngredients": [
+        "Bột gạo trắng (làm sợi bánh canh)",
+        "Xương heo, thịt heo (đùi hoặc giò)",
+        "Nước giếng khoan (tạo vị ngọt thanh đặc trưng)",
+        "Hành lá, hành phi",
+        "Rau sống, giá đỗ ăn kèm",
+        "Nước mắm nguyên chất và chanh, ớt"
+      ],
+      "prepOutline": [
+        "Bột gạo được nhào và cán thành sợi bánh canh mềm dẻo",
+        "Ninh xương heo trong nhiều giờ để lấy nước lèo ngọt trong",
+        "Luộc thịt heo chín tới rồi lọc bỏ xương, thái lát mỏng",
+        "Trụng sợi bánh canh chín rồi chan nước lèo nóng, xếp thịt heo lên trên"
+      ],
+      "howToEat": "Bánh canh được ăn nóng ngay khi vừa chan nước lèo, rắc thêm hành lá, hành phi, vắt chanh, thêm ớt và nước mắm nguyên chất tùy khẩu vị.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/B%C3%A1nh_canh_t%E1%BA%A1i_Ng%C3%A3_B%E1%BA%A3y.JPG",
+          "attribution": "Tonbi ko / Wikimedia Commons (ảnh minh họa bánh canh chụp tại Ngã Bảy, không phải tại Trảng Bàng)",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/banh-canh-trang-bang-niem-tu-hao-cua-am-thuc-tay-ninh-8786", "label": "Bánh canh Trảng Bàng, niềm tự hào của ẩm thực Tây Ninh (Mia.vn) — nguồn báo chí, chưa có bài Wikipedia riêng" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

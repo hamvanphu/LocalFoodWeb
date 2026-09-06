@@ -1,0 +1,78 @@
+{
+  "slug": "son-la",
+  "code": "VN-SL",
+  "name": "Sơn La",
+  "region": "Bắc",
+  "centroid": [103.9, 21.15],
+  "summary": "Sơn La là trung tâm văn hóa của người Thái đen ở Tây Bắc, với ẩm thực nổi bật nhờ kỹ thuật gác bếp, hun khói bảo quản thịt trâu bò và cách chế biến cá suối tinh tế qua món pa pỉnh tộp. Gia vị mắc khén và chẩm chéo là linh hồn của hầu hết các món ăn, tạo nên hương vị cay nồng, đậm đà đặc trưng khó lẫn với vùng miền khác.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/Th%E1%BB%8Bt_g%C3%A1c_b%E1%BA%BFp", "label": "Thịt gác bếp – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "thit-trau-gac-bep-son-la",
+  "dishes": [
+    {
+      "slug": "thit-trau-gac-bep-son-la",
+      "name": "Thịt trâu gác bếp",
+      "isHero": true,
+      "tasteTags": ["grilled", "savory", "spicy"],
+      "description": "Thịt trâu gác bếp là đặc sản lâu đời của các dân tộc vùng Tây Bắc, trong đó Sơn La là một trong những nơi sản xuất nổi tiếng nhất. Thịt trâu, bò chăn thả tự nhiên trên núi được lọc lấy phần thăn không gân, thái miếng dài rồi tẩm ướp cùng ớt, gừng và đặc biệt là mắc khén - loại hạt tiêu rừng của đồng bào vùng cao. Sau khi ướp, thịt được treo hun trên gác bếp bằng khói củi từ núi đá trong nhiều ngày, giúp bảo quản được cả tháng mà không cần chất bảo quản.",
+      "keyIngredients": ["thịt trâu hoặc bò (thăn vai)", "mắc khén", "ớt, gừng", "khói củi để hun"],
+      "prepOutline": [
+        "Lọc thịt trâu phần thăn không gân, thái miếng dài khoảng 20x5cm",
+        "Ướp thịt với mắc khén, ớt, gừng giã nhỏ cho ngấm đều",
+        "Xiên hoặc treo thịt lên gác bếp",
+        "Hun bằng khói củi liên tục nhiều ngày cho tới khi thịt khô săn"
+      ],
+      "howToEat": "Thịt trâu gác bếp thường được nướng hoặc hơ lại trên than cho mềm, xé nhỏ theo thớ rồi chấm chẩm chéo, dùng làm món nhắm rượu hoặc quà biếu đặc sản.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Th%E1%BB%8Bt_tr%C3%A2u_g%C3%A1c_b%E1%BA%BFp_Lam_S%C6%A1n_Food.jpg", "attribution": "Cabokho, Wikimedia Commons", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Th%E1%BB%8Bt_g%C3%A1c_b%E1%BA%BFp", "label": "Thịt gác bếp – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "nam-pia",
+      "name": "Nậm pịa",
+      "isHero": false,
+      "tasteTags": ["savory", "spicy", "herb-forward"],
+      "description": "Nậm pịa là món ăn độc đáo của người Thái Sơn La, chế biến từ chất dịch sền sệt trong ruột non của trâu, bò kết hợp cùng nội tạng như dạ dày, lòng, tim, gan, phổi của các loài ăn cỏ. Món ăn có vị đắng nhẹ ban đầu nhưng để lại hậu ngọt nơi cổ họng, cùng vị cay nồng đặc trưng của mắc khén. Nậm pịa vốn được xem là món ăn thử thách bản lĩnh của thực khách khi lần đầu thưởng thức ẩm thực Tây Bắc.",
+      "keyIngredients": ["nậm pịa (dịch ruột non bò/trâu)", "lòng, dạ dày, tim, gan, phổi", "mắc khén, ớt", "rau thơm rừng"],
+      "prepOutline": [
+        "Lấy dịch nậm pịa từ ruột non bò hoặc trâu, lọc sạch",
+        "Sơ chế và luộc chín các loại nội tạng, thái nhỏ",
+        "Đun nậm pịa cùng nội tạng và gia vị mắc khén, ớt cho sánh lại",
+        "Nêm nếm vừa vị, đun tới khi hỗn hợp sền sệt"
+      ],
+      "howToEat": "Nậm pịa thường dùng làm nước chấm cho các món thịt, lòng nướng hoặc luộc, ăn kèm rau thơm; theo quan niệm dân gian còn giúp giải rượu.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/N%E1%BA%ADm_p%E1%BB%8Ba", "label": "Nặm pịa – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "pa-pinh-top-son-la",
+      "name": "Pa pỉnh tộp",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "spicy", "herb-forward"],
+      "description": "Pa pỉnh tộp - trong tiếng Thái nghĩa là \"cá nướng gập\" - là món ăn cổ truyền và tinh hoa ẩm thực của người Thái Sơn La, thường được chuẩn bị công phu để đãi khách quý. Cá suối tươi (chép, trôi, trắm) được mổ dọc sống lưng thay vì mổ bụng để dễ gập, nhồi đầy các loại gia vị như gừng, sả, mắc khén, hạt dổi rồi kẹp que nướng trên than hoa. Món ăn hội tụ đủ vị chua, cay, mặn, ngọt, đắng hài hòa, thể hiện sự tinh tế trong cách phối gia vị của người Thái vùng Tây Bắc.",
+      "keyIngredients": ["cá suối (chép, trôi, trắm)", "mắc khén, hạt dổi", "gừng, sả, rau thơm", "nghệ, bột gạo"],
+      "prepOutline": [
+        "Chọn cá suối tươi, mổ dọc sống lưng, làm sạch",
+        "Nhồi gia vị gừng, sả, mắc khén, hạt dổi, rau thơm vào bụng cá",
+        "Gập cá lại, kẹp que tre để giữ form khi nướng",
+        "Nướng trên than hoa cho tới khi cá chín thơm, thịt săn chắc"
+      ],
+      "howToEat": "Pa pỉnh tộp ngon nhất khi ăn nóng cùng xôi nếp, chấm chẩm chéo và nhâm nhi cùng rượu ngô theo phong tục người Thái.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Khu_%E1%BA%A9m_th%E1%BB%B1c_B%E1%BA%BFn_Ngh%C3%A9_ng13th8n2023_%28c%C3%A1_n%C6%B0%E1%BB%9Bng_T%C3%A2y_B%E1%BA%AFc_Pa_t%E1%BB%89nh_t%E1%BB%99p%29_%287%29.jpg", "attribution": "Phương Huy, Wikimedia Commons (ảnh chụp tại một khu ẩm thực TP.HCM, mang tính minh họa món ăn)", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://thanhpho.sonla.gov.vn/du-lich/pa-pinh-top-tinh-hoa-am-thuc-dong-bao-thai-son-la-576816", "label": "Pa Pỉnh Tộp - Tinh hoa ẩm thực đồng bào Thái Sơn La (Cổng TTĐT TP Sơn La)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "hung-yen",
+  "code": "VN-HY",
+  "name": "Hưng Yên",
+  "region": "Bắc",
+  "centroid": [106.05, 20.85],
+  "summary": "Hưng Yên gắn liền với nhãn lồng Phố Hiến - loại quả từng được tiến vua và ca ngợi qua thơ văn của Lê Quý Đôn, cùng tương Bần lên men thủ công trứ danh và gà Đông Tảo với đôi chân đặc biệt. Đây là vùng đất trù phú bên bờ sông Hồng, nơi các sản vật nông nghiệp trở thành niềm tự hào ẩm thực địa phương.",
+  "summarySourceRefs": [
+    { "url": "https://vietnamnet.vn/huyen-thoai-tien-vua-nay-vuon-ra-the-gioi-665541.html", "label": "Nhãn lồng Hưng Yên: Huyền thoại tiến vua nay vươn ra thế giới (VietNamNet)" }
+  ],
+  "heroDishSlug": "nhan-long-hung-yen",
+  "dishes": [
+    {
+      "slug": "nhan-long-hung-yen",
+      "name": "Nhãn lồng Hưng Yên",
+      "isHero": true,
+      "tasteTags": ["sweet"],
+      "description": "Nhãn lồng Hưng Yên là giống nhãn quý trồng tại vùng Phố Hiến xưa, từng được người dân rước cờ, chiêng trống mang tiến vua nên có tên gọi 'nhãn tiến'. Cây nhãn tổ hơn 400 năm tuổi hiện vẫn còn tại chùa Hiến, thành phố Hưng Yên. Quả nhãn lồng cùi dày, giòn, hạt nhỏ và vị ngọt thanh đặc trưng mà nhà bác học Lê Quý Đôn từng ví như hương vị 'nước thánh trên trời'.",
+      "keyIngredients": ["giống nhãn lồng (nhãn đường phèn)", "đất phù sa ven sông Hồng"],
+      "prepOutline": [
+        "Chăm sóc vườn nhãn theo kinh nghiệm truyền thống nhiều đời",
+        "Thu hoạch quả vào đầu thu khi vỏ chuyển màu vàng nâu sáng",
+        "Bảo quản nhãn tươi nơi thoáng mát để giữ độ giòn ngọt",
+        "Phần quả dư có thể sấy long nhãn để dùng dần"
+      ],
+      "howToEat": "Nhãn lồng ăn tươi ngay khi vừa hái là ngon nhất, ngoài ra còn được sấy thành long nhãn dùng nấu chè hoặc ngâm làm trà giải nhiệt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vietnamnet.vn/huyen-thoai-tien-vua-nay-vuon-ra-the-gioi-665541.html", "label": "Nhãn lồng Hưng Yên: Huyền thoại tiến vua nay vươn ra thế giới (VietNamNet)" },
+        { "url": "https://scov.gov.vn/ban-sac-van-hoa/huong-vi-que-nha/nhan-long-hung-yen.html", "label": "Nhãn lồng Hưng Yên (Cục Văn hóa cơ sở)" }
+      ],
+      "occasions": ["Mùa thu"]
+    },
+    {
+      "slug": "tuong-ban",
+      "name": "Tương Bần",
+      "isHero": false,
+      "tasteTags": ["savory", "vegetarian-friendly"],
+      "description": "Tương Bần là loại nước chấm lên men truyền thống của làng Bần Yên Nhân, thị xã Mỹ Hào, Hưng Yên, nổi tiếng từ cuối thế kỷ 19. Tương được làm từ đậu tương, xôi nếp lên men mốc và muối, ủ trong chum sành phơi nắng nhiều tháng để cho ra vị mặn ngọt hài hòa, màu nâu sánh đặc trưng, đi vào câu ca dao 'anh đi anh nhớ quê nhà, nhớ canh rau muống nhớ cà dầm tương'.",
+      "keyIngredients": ["đậu tương", "xôi nếp lên mốc", "muối trắng", "chum sành ủ tương"],
+      "prepOutline": [
+        "Rang đậu tương rồi ngâm nước khoảng 7 ngày cho lên men tự nhiên",
+        "Đồ xôi nếp, ủ mốc vàng hoa cau",
+        "Trộn nước đậu tương với mốc nếp và muối theo tỷ lệ gia truyền",
+        "Ủ hỗn hợp trong chum sành phơi nắng từ 2-6 tháng, khuấy đều mỗi ngày"
+      ],
+      "howToEat": "Tương Bần dùng để chấm rau luộc, cà pháo, thịt luộc hoặc làm gia vị nêm nếm các món kho, món xào mang hương vị đặc trưng của ẩm thực đồng bằng Bắc Bộ.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/T%C6%B0%C6%A1ng_B%E1%BA%A7n", "label": "Tương Bần – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ga-dong-tao",
+      "name": "Gà Đông Tảo",
+      "isHero": false,
+      "tasteTags": ["savory"],
+      "description": "Gà Đông Tảo là giống gà quý hiếm có nguồn gốc từ xã Đông Tảo, huyện Khoái Châu, Hưng Yên, đặc trưng bởi đôi chân to, sần sùi vảy như chân voi thu nhỏ. Xưa kia giống gà này được nuôi để tiến vua và dùng trong các dịp lễ trọng, nay trở thành đặc sản cao cấp với thịt chắc, da giòn và ít mỡ.",
+      "keyIngredients": ["gà Đông Tảo nguyên con", "lá chanh, gừng", "thuốc bắc (khi hầm)", "muối, hạt tiêu"],
+      "prepOutline": [
+        "Nuôi gà thả vườn tự nhiên từ 12-18 tháng cho chân to, thịt chắc",
+        "Làm sạch gà, có thể luộc, quay hoặc hầm thuốc bắc",
+        "Nếu luộc, giữ lửa liu riu để da gà giòn không nứt",
+        "Chặt miếng vừa ăn, bày cùng lá chanh thái sợi"
+      ],
+      "howToEat": "Gà Đông Tảo thường được chế biến thành món da chân gà hấp, gà hầm thuốc bắc hoặc gà luộc chấm muối lá chanh, phổ biến trong các bữa tiệc và dịp lễ Tết vì giá trị và độ hiếm của giống gà.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/G%C3%A0_%C4%90%C3%B4ng_T%E1%BA%A3o", "label": "Gà Đông Tảo – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+    }
+  ]
+}

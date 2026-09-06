@@ -1,0 +1,101 @@
+{
+  "slug": "tra-vinh",
+  "code": "VN-TV",
+  "name": "Trà Vinh",
+  "region": "Nam",
+  "centroid": [106.298904, 9.813946],
+  "summary": "Trà Vinh là tỉnh ven biển thuộc đồng bằng sông Cửu Long, nơi cộng đồng người Khmer chiếm khoảng 1/3 dân số và để lại dấu ấn đậm nét trong văn hóa ẩm thực địa phương. Ẩm thực Trà Vinh là sự giao thoa giữa phong vị Kinh - Khmer - Hoa, tiêu biểu là bún nước lèo đậm vị mắm bò hóc, bánh tét Trà Cuôn của làng nghề trăm năm và những đặc sản hiếm có như đuông chà là.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/Tr%C3%A0_Vinh_(t%E1%BB%89nh)", "label": "Trà Vinh (tỉnh) – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "bun-nuoc-leo-tra-vinh",
+  "dishes": [
+    {
+      "slug": "bun-nuoc-leo-tra-vinh",
+      "name": "Bún nước lèo Trà Vinh",
+      "isHero": true,
+      "tasteTags": ["savory", "seafood", "herb-forward", "noodle-soup"],
+      "description": "Bún nước lèo là món ăn có nguồn gốc từ cộng đồng người Khmer, phổ biến khắp các tỉnh Tây Nam Bộ nhưng mỗi nơi lại có bản sắc riêng. Ở Trà Vinh, nước lèo được nấu từ mắm bò hóc theo kiểu Khmer truyền thống nên có vị mặn đậm và hương đặc trưng hơn so với phiên bản thiên về vị ngọt của Sóc Trăng, thường ăn kèm cá lóc, tôm, thịt heo quay và chả giò. Món này đã được vinh danh trong nhóm 100 món ăn đặc sản tiêu biểu Việt Nam, phản ánh sự giao thoa ẩm thực Khmer - Việt - Hoa lâu đời trên vùng đất này.",
+      "keyIngredients": [
+        "Mắm bò hóc (mắm cá đồng theo kiểu Khmer)",
+        "Bún tươi sợi to",
+        "Cá lóc luộc gỡ thịt",
+        "Tôm, thịt heo quay",
+        "Chả giò, huyết heo",
+        "Bông chuối bào, rau ghém, giá",
+        "Sả, ớt, chanh"
+      ],
+      "prepOutline": [
+        "Nấu mắm bò hóc với nước rồi lọc bỏ xác để lấy phần nước cốt đậm vị",
+        "Cho sả đập dập vào nồi nước lèo, nêm nếm cho vừa ăn",
+        "Luộc cá lóc, gỡ lấy thịt; chuẩn bị tôm, thịt heo quay, chả giò ăn kèm",
+        "Trụng bún nóng, xếp cá, tôm, heo quay lên trên rồi chan ngập nước lèo"
+      ],
+      "howToEat": "Bún nước lèo được ăn nóng cùng đĩa rau sống, bông chuối bào và giá, vắt thêm chanh và dầm ớt tùy khẩu vị để cân bằng vị mặn đậm đà của nước lèo.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Bun_nuoc_leo_SocTrang.jpg",
+          "attribution": "Ảnh minh họa món bún nước lèo (phiên bản Sóc Trăng, không phải ảnh chụp tại Trà Vinh) – Ngohaison1201, Wikimedia Commons",
+          "license": "CC BY 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_n%C6%B0%E1%BB%9Bc_l%C3%A8o", "label": "Bún nước lèo – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-tet-tra-cuon",
+      "name": "Bánh tét Trà Cuôn",
+      "isHero": false,
+      "tasteTags": ["savory", "sweet"],
+      "description": "Bánh tét Trà Cuôn xuất phát từ ấp Trà Cuôn, xã Kim Hòa, huyện Cầu Ngang, do một phụ nữ Khmer tên Thạch Thị Lết sáng tạo ra cách nay khoảng 80 năm để mưu sinh, sau đó lan rộng thành đặc sản nổi tiếng của cả vùng đồng bằng sông Cửu Long. Điểm khác biệt của bánh tét Trà Cuôn nằm ở phần mỡ heo được thái miếng dài, ướp muối đường hành lá cho vào cùng nếp và đậu xanh, một số nơi còn thêm trứng muối và tôm khô, tạo vị béo bùi rất riêng. Khu vực Trà Cuôn dọc quốc lộ 53 còn hình thành hẳn một \"chợ bánh tét\" độc đáo, thu hút du khách ghé mua làm quà.",
+      "keyIngredients": [
+        "Nếp dẻo",
+        "Đậu xanh cà vỏ",
+        "Mỡ heo thái miếng dài",
+        "Trứng muối, tôm khô (tùy nơi)",
+        "Lá chuối gói bánh",
+        "Muối, đường, hành lá"
+      ],
+      "prepOutline": [
+        "Vo nếp, ngâm mềm rồi để ráo, trộn cùng chút muối và nước cốt lá dứa hoặc lá cẩm tạo màu",
+        "Đậu xanh hấp chín, tán nhuyễn làm nhân",
+        "Ướp mỡ heo với muối, đường, hành lá; có thể thêm trứng muối, tôm khô vào nhân",
+        "Gói nếp, nhân đậu xanh và mỡ heo vào lá chuối thành đòn dài rồi buộc chặt",
+        "Luộc bánh nhiều giờ trong nước sôi cho đến khi nếp chín dẻo"
+      ],
+      "howToEat": "Bánh tét Trà Cuôn thường được cắt khoanh tròn, ăn kèm dưa món hoặc củ kiệu chua ngọt; có thể ăn nguội hoặc chiên sơ lại cho vỏ nếp hơi giòn trước khi dùng.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://travinh.baovinhlong.vn/xa-hoi/dac-san-banh-tet-tra-cuon-24469.html", "label": "Đặc sản bánh tét Trà Cuôn – Báo Trà Vinh" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    },
+    {
+      "slug": "duong-cha-la-tra-vinh",
+      "name": "Đuông chà là Trà Vinh",
+      "isHero": false,
+      "tasteTags": ["savory"],
+      "description": "Đuông chà là là ấu trùng của một loài kiến dương sinh sống trong thân cây chà là, được xem là đặc sản quý hiếm và đắt giá bậc nhất của Trà Vinh - vùng đất được xem là trung tâm của loại đuông này. Khác với đuông dừa phổ biến ở Bến Tre với ruột màu sậm, đuông chà là có thân trắng muốt, mỗi cây chà là bị đuông ăn thường chỉ cho ra một con duy nhất nên rất khan hiếm. Người dân phải quan sát ngọn chà là héo úa để phát hiện cây có đuông rồi mới chặt lấy.",
+      "keyIngredients": [
+        "Đuông chà là tươi sống",
+        "Nước mắm nguyên chất",
+        "Muối, tiêu, ớt",
+        "Rau sống ăn kèm"
+      ],
+      "prepOutline": [
+        "Quan sát các cây chà là có ngọn héo để xác định cây có đuông bên trong",
+        "Chặt cây, tách lấy phần lõi non chứa đuông",
+        "Rửa sạch đuông bằng nước muối loãng",
+        "Chế biến bằng cách nướng, chiên bơ, hấp hoặc ăn sống chấm nước mắm tùy khẩu vị"
+      ],
+      "howToEat": "Đuông chà là thường được chấm với nước mắm nguyên chất pha chút tiêu ớt, ăn kèm rau sống; một số thực khách sành ăn chọn thưởng thức khi còn sống để cảm nhận vị béo tự nhiên.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/%C4%90u%C3%B4ng_ch%C3%A0_l%C3%A0", "label": "Đuông chà là – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

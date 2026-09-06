@@ -1,0 +1,107 @@
+{
+  "slug": "soc-trang",
+  "code": "VN-ST",
+  "name": "Sóc Trăng",
+  "region": "Nam",
+  "centroid": [105.92214, 9.56019],
+  "summary": "Sóc Trăng là nơi giao thoa của ba cộng đồng Kinh - Khmer - Hoa, tạo nên nền ẩm thực đặc sắc bậc nhất Đồng bằng sông Cửu Long với bún nước lèo mang hồn cốt văn hóa Khmer, bánh pía ngọt béo gốc Hoa và bánh cống giòn rụm của người Khmer địa phương.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_n%C6%B0%E1%BB%9Bc_l%C3%A8o", "label": "Bún nước lèo – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "bun-nuoc-leo-soc-trang",
+  "dishes": [
+    {
+      "slug": "bun-nuoc-leo-soc-trang",
+      "name": "Bún nước lèo Sóc Trăng",
+      "isHero": true,
+      "tasteTags": ["savory", "seafood", "herb-forward", "noodle-soup"],
+      "description": "Bún nước lèo là món ăn mang đậm dấu ấn văn hóa Khmer, được xem là tinh hoa ẩm thực của Sóc Trăng, nơi có đông đảo cộng đồng người Khmer sinh sống. Nước lèo được nấu từ mắm cá lóc hoặc cá sặc hòa cùng nước dừa tươi, nêm ngải bún tạo mùi thơm đặc trưng, phiên bản Sóc Trăng thiên về vị ngọt kiểu Hoa và không dùng nước chấm muối ớt như ở Trà Vinh.",
+      "keyIngredients": [
+        "Mắm cá lóc hoặc cá sặc",
+        "Nước dừa tươi",
+        "Ngải bún",
+        "Cá lóc, tôm tươi",
+        "Thịt heo quay",
+        "Bún tươi",
+        "Giá, hẹ, bắp chuối bào, rau muống bào"
+      ],
+      "prepOutline": [
+        "Nấu tan mắm cá trong nước, lọc kỹ để lấy phần nước cốt trong",
+        "Hòa nước cốt mắm với nước dừa tươi và ngải bún đập dập để dậy mùi thơm đặc trưng",
+        "Luộc cá lóc và tôm chín tới, gỡ thịt cá để riêng",
+        "Chan nước lèo vào tô bún đã xếp sẵn cá, tôm và thịt heo quay"
+      ],
+      "howToEat": "Bún nước lèo được ăn nóng cùng rất nhiều rau như giá, hẹ, bắp chuối bào, có thể vắt thêm chanh và ớt tươi để tăng vị đậm đà.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Bun_nuoc_leo_SocTrang.jpg",
+          "attribution": "Ngohaison1201 / Wikimedia Commons",
+          "license": "CC BY 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_n%C6%B0%E1%BB%9Bc_l%C3%A8o", "label": "Bún nước lèo – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-pia-soc-trang",
+      "name": "Bánh pía Sóc Trăng",
+      "isHero": false,
+      "tasteTags": ["sweet"],
+      "description": "Bánh pía có nguồn gốc từ vùng Triều Châu (Trung Quốc), theo chân người Hoa di cư đến Sóc Trăng và trở thành đặc sản trứ danh của tỉnh. Bánh gồm nhiều lớp vỏ bột mỏng bao lấy nhân đậu xanh, sầu riêng và trứng muối, khi bóc ra từng lớp vỏ mỏng tróc ra tạo cảm giác đặc trưng không lẫn vào đâu được.",
+      "keyIngredients": [
+        "Bột mì, mỡ heo (làm vỏ bánh nhiều lớp)",
+        "Đậu xanh cà nhuyễn",
+        "Sầu riêng",
+        "Trứng muối",
+        "Đường"
+      ],
+      "prepOutline": [
+        "Nhồi bột mì cùng mỡ heo thành hai loại bột dầu và bột nước riêng biệt",
+        "Cán mỏng và gấp xen kẽ hai loại bột nhiều lần để tạo độ nhiều lớp cho vỏ bánh",
+        "Sên nhân đậu xanh cùng sầu riêng và đặt trứng muối vào giữa",
+        "Bọc nhân trong lớp vỏ nhiều lớp rồi nướng đến khi vỏ bánh chín vàng"
+      ],
+      "howToEat": "Bánh pía được ăn trực tiếp cùng trà nóng; khi bóc bánh, các lớp vỏ mỏng tróc ra từng lớp, hòa cùng vị béo bùi của đậu xanh, thơm nồng của sầu riêng và vị mặn nhẹ của trứng muối.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/B%C3%A1nh_p%C3%ADa_l%C3%A0_m%E1%BB%99t_trong_nh%E1%BB%AFng_%C4%91%E1%BA%B7c_s%E1%BA%A3n_c%E1%BB%A7a_S%C3%B3c_Tr%C4%83ng.jpg",
+          "attribution": "Tribaochi / Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_p%C3%ADa", "label": "Bánh pía – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm", "Tết Trung Thu"]
+    },
+    {
+      "slug": "banh-cong-soc-trang",
+      "name": "Bánh cống Sóc Trăng",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh cống là đặc sản của cộng đồng người Khmer ở Sóc Trăng, tên gọi bắt nguồn từ chiếc khuôn kim loại hình trụ giống ống cống dùng để đổ bánh. Bánh có màu sậm hơn các loại bánh tương tự ở nơi khác, nhân đậu xanh nguyên hạt trộn cùng thịt heo băm và khoai mì, phía trên gắn một con tôm nguyên con.",
+      "keyIngredients": [
+        "Bột gạo, bột đậu nành",
+        "Đậu xanh nguyên hạt",
+        "Thịt heo băm",
+        "Khoai mì (sắn) bào",
+        "Tôm tươi nguyên con",
+        "Dầu ăn để chiên"
+      ],
+      "prepOutline": [
+        "Pha bột gạo cùng bột đậu nành và các gia vị cho hỗn hợp bột sánh vừa phải",
+        "Trộn nhân gồm thịt heo băm, khoai mì bào và đậu xanh nguyên hạt",
+        "Múc bột vào khuôn hình ống, cho nhân vào giữa và đặt một con tôm lên trên",
+        "Nhúng khuôn vào chảo dầu nóng, chiên đến khi bánh vàng giòn rồi lấy ra khỏi khuôn"
+      ],
+      "howToEat": "Bánh cống được ăn kèm rau sống như cải xanh, rau răm, xà lách và dứa cá (mắm cá muối chua), chấm cùng nước mắm chua ngọt pha tỏi ớt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_c%E1%BB%91ng", "label": "Bánh cống – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

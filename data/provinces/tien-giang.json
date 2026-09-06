@@ -1,0 +1,100 @@
+{
+  "slug": "tien-giang",
+  "code": "VN-TG",
+  "name": "Tiền Giang",
+  "region": "Nam",
+  "centroid": [106.31241, 10.39717],
+  "summary": "Tiền Giang là cửa ngõ Đồng bằng sông Cửu Long, nổi danh với hủ tiếu Mỹ Tho trứ danh khắp cả nước cùng những đặc sản mang đậm dấu ấn vùng Gò Công như mắm tôm chà tiến vua và bánh giá chợ Giồng giòn rụm.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/H%E1%BB%A7_ti%E1%BA%BFu_M%E1%BB%B9_Tho", "label": "Hủ tiếu Mỹ Tho – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "hu-tieu-my-tho",
+  "dishes": [
+    {
+      "slug": "hu-tieu-my-tho",
+      "name": "Hủ tiếu Mỹ Tho",
+      "isHero": true,
+      "tasteTags": ["savory", "noodle-soup"],
+      "description": "Hủ tiếu Mỹ Tho xuất hiện từ những năm 1960, lan rộng khắp thành phố Mỹ Tho đến Gò Công, Cái Bè, Cai Lậy và đã được chứng nhận \"Thương hiệu vàng phù hợp tiêu chuẩn Việt Nam - WTO\". Sợi bánh làm từ gạo Gò Cát (xã Mỹ Phong) có màu trắng trong, dai giòn hơn hẳn các loại hủ tiếu khác, kết hợp cùng nước dùng ngọt thanh từ tủy xương, khô mực và củ cải trắng.",
+      "keyIngredients": [
+        "Bánh hủ tiếu khô làm từ gạo Gò Cát",
+        "Xương ống heo (lấy tủy)",
+        "Khô mực, tôm khô",
+        "Củ cải trắng",
+        "Thịt heo, lòng heo, tôm tươi",
+        "Giá đỗ, hẹ, hành phi"
+      ],
+      "prepOutline": [
+        "Bánh hủ tiếu khô được trụng riêng trong nước sôi vì sợi có mùi chua nhẹ đặc trưng",
+        "Hầm xương ống cùng khô mực, tôm khô và củ cải trắng nhiều giờ để lấy nước dùng ngọt đậm",
+        "Luộc chín thịt, lòng heo và tôm tươi rồi thái vừa ăn",
+        "Xếp sợi hủ tiếu đã trụng ra tô, thêm topping rồi chan nước dùng nóng"
+      ],
+      "howToEat": "Hủ tiếu được ăn kèm giá sống, hẹ, hành phi, nêm thêm chanh, ớt, tiêu và nước tương; có thể ăn kiểu nước hoặc kiểu khô với nước dùng để riêng ra chén.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Hu_tieu_My_Tho.jpg",
+          "attribution": "Trung geo / Wikimedia Commons",
+          "license": "CC0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/H%E1%BB%A7_ti%E1%BA%BFu_M%E1%BB%B9_Tho", "label": "Hủ tiếu Mỹ Tho – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "mam-tom-cha-go-cong",
+      "name": "Mắm tôm chà Gò Công",
+      "isHero": false,
+      "tasteTags": ["savory", "spicy"],
+      "description": "Mắm tôm chà Gò Công là đặc sản có lịch sử hơn 200 năm, tương truyền từng được Thái hậu Từ Dụ mang theo về triều đình Huế để tiến vua. Mắm được làm từ tôm đất tươi giã nhuyễn rồi chà qua rây lấy phần thịt mịn, lên men cùng gia vị tạo vị mặn ngọt đậm đà, màu đỏ gạch đặc trưng.",
+      "keyIngredients": [
+        "Tôm đất tươi",
+        "Muối",
+        "Đường, rượu trắng",
+        "Ớt, tỏi",
+        "Nước mắm ngon"
+      ],
+      "prepOutline": [
+        "Tôm đất tươi được rửa sạch, giã hoặc xay nhuyễn",
+        "Chà hỗn hợp tôm qua rây mịn để loại bỏ vỏ và chân, chỉ giữ lại phần thịt sánh mịn",
+        "Trộn phần thịt tôm với muối, đường, rượu và gia vị rồi phơi nắng cho lên men",
+        "Ủ mắm trong hũ kín đến khi dậy mùi thơm và có màu đỏ gạch đặc trưng"
+      ],
+      "howToEat": "Mắm tôm chà thường được ăn cùng cơm trắng, dùng làm nước chấm cho thịt luộc cuốn bánh tráng, hoặc chấm cùng các loại trái cây đặc sản vùng Cái Bè.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/mam-tom-cha-go-cong-diem-to-net-dac-sac-cho-nen-am-thuc-tien-giang-5255", "label": "Mắm tôm chà Gò Công – MIA.vn" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-gia-cho-giong",
+      "name": "Bánh giá chợ Giồng",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh giá (còn gọi là bánh vá) là đặc sản gắn liền với chợ Giồng ở Gò Công Tây, Tiền Giang. Bánh được chiên bằng chiếc vá (muôi) lớn, phần bột phủ bên ngoài giá đỗ, tôm và gan heo, khi chiên chín có màu vàng ươm hấp dẫn.",
+      "keyIngredients": [
+        "Bột gạo pha bột năng",
+        "Giá đỗ",
+        "Tôm tươi",
+        "Gan heo",
+        "Rau sống ăn kèm",
+        "Nước mắm chua ngọt, tỏi ớt"
+      ],
+      "prepOutline": [
+        "Pha bột gạo cùng bột năng và nước cho hỗn hợp bột sánh vừa phải",
+        "Xếp giá đỗ vào chiếc vá, múc bột phủ lên trên rồi đặt tôm và gan heo lên mặt bánh",
+        "Nhúng cả vá vào chảo dầu đang sôi, chiên đến khi bánh tróc khỏi vá và vàng giòn",
+        "Vớt bánh ra để ráo dầu trước khi bày ra đĩa"
+      ],
+      "howToEat": "Bánh giá được ăn nóng cùng rau sống, chấm ngập trong nước mắm chua ngọt pha tỏi ớt để cảm nhận vị giòn của vỏ bánh hòa cùng vị ngọt của tôm và giá đỗ.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://thegioitiepthi.danviet.vn/banh-gia-cho-giong-20220725152314532-d14337.html", "label": "Bánh giá Chợ Giồng – Thế giới tiếp thị (Dân Việt)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

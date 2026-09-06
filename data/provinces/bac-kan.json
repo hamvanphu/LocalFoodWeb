@@ -1,0 +1,74 @@
+{
+  "slug": "bac-kan",
+  "code": "VN-BK",
+  "name": "Bắc Kạn",
+  "region": "Bắc",
+  "centroid": [105.82501, 22.26256],
+  "summary": "Bắc Kạn là tỉnh miền núi với đông đảo cư dân Tày sinh sống quanh hồ Ba Bể, nên ẩm thực gắn liền với cá nước ngọt, gạo nếp và các loại bánh lá truyền thống. Cá nướng Pác Ngòi, bánh gio mật mía và miến dong làm thủ công là những sản vật tiêu biểu nhất của vùng đất này.",
+  "summarySourceRefs": [
+    { "url": "https://dulichvietnam.com.vn/ca-nuong-pac-ngoi.html", "label": "Cá nướng Pác Ngòi: hương vị núi rừng nơi hồ Ba Bể" }
+  ],
+  "heroDishSlug": "ca-nuong-ba-be",
+  "dishes": [
+    {
+      "slug": "ca-nuong-ba-be",
+      "name": "Cá nướng Pác Ngòi (Ba Bể)",
+      "isHero": true,
+      "tasteTags": ["grilled", "savory"],
+      "description": "Cá nướng Pác Ngòi là món ăn đặc trưng của người Tày ở bản Pác Ngòi, xã Nam Mẫu, huyện Ba Bể, chế biến từ cá đánh bắt trực tiếp trong hồ Ba Bể. Cá được tẩm ướp rồi nướng trên than hoa cho tới khi da săn vàng, thịt ngọt và không tanh, ăn được cả thịt lẫn xương với đầu cá nhỏ.",
+      "keyIngredients": ["cá hồ Ba Bể (cá nhỏ)", "nghệ", "muối, tiêu, ớt", "than hoa để nướng"],
+      "prepOutline": [
+        "Chọn cá tươi vừa đánh bắt trong hồ, làm sạch",
+        "Ướp cá với nghệ, muối, tiêu, ớt cho ngấm và săn da",
+        "Xiên hoặc kẹp cá, nướng trên than hoa, trở đều tay",
+        "Nướng tới khi da vàng giòn, thịt chín đều mà không bị cháy nứt"
+      ],
+      "howToEat": "Cá nướng ăn nóng ngay tại chỗ, chấm muối ớt hoặc chẩm chéo, thường dùng kèm cơm hoặc xôi khi thưởng ngoạn hồ Ba Bể.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://dulichvietnam.com.vn/ca-nuong-pac-ngoi.html", "label": "Cá nướng Pác Ngòi: hương vị núi rừng nơi hồ Ba Bể" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-gio-mat-mia",
+      "name": "Bánh gio mật mía",
+      "isHero": false,
+      "tasteTags": ["sweet", "vegetarian-friendly"],
+      "description": "Bánh gio (còn gọi bánh tro) là món bánh truyền thống của đồng bào Tày ở Bắc Kạn, làm từ gạo nếp ngâm nước tro của một số loại cây rừng rồi gói lá chít, luộc chín. Bánh có màu vàng óng, dẻo mịn, vị thanh mát, ăn cùng mật mía tạo nên vị ngọt bùi hài hòa.",
+      "keyIngredients": ["gạo nếp", "nước tro (từ tro cây rừng đốt lấy nước ngâm)", "lá chít gói bánh", "mật mía"],
+      "prepOutline": [
+        "Đốt các loại cây rừng lấy tro, lọc lấy nước tro trong",
+        "Ngâm gạo nếp trong nước tro nhiều giờ cho ngấm màu và vị",
+        "Gói gạo đã ngâm vào lá chít thành từng đòn nhỏ",
+        "Luộc bánh nhiều giờ tới khi gạo chín trong, dẻo mịn"
+      ],
+      "howToEat": "Bóc lớp lá chít, cắt bánh thành khoanh mỏng rồi rưới đều mật mía lên trên, ăn nguội như món quà vặt hoặc tráng miệng.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/banh-gio-mat-mia-17691", "label": "Bánh gio mật mía, hương vị dân dã vùng đất Bắc Kạn" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    },
+    {
+      "slug": "mien-dong-bac-kan",
+      "name": "Miến dong Bắc Kạn",
+      "isHero": false,
+      "tasteTags": ["noodle-soup", "savory", "vegetarian-friendly"],
+      "description": "Miến dong Bắc Kạn được làm thủ công từ củ dong riềng trồng trên vùng núi cao trên 1.000m như đèo Áng Toòng, nổi tiếng vì sợi miến dai, giòn, nấu lâu không bị nát và giữ được màu sắc tự nhiên không cần dùng chất tẩy. Đây là một trong những sản phẩm OCOP tiêu biểu của tỉnh, được nhiều nơi trong cả nước ưa chuộng làm quà biếu dịp Tết.",
+      "keyIngredients": ["củ dong riềng", "nước sạch", "xương hoặc lòng gà để nấu nước dùng khi ăn miến nước"],
+      "prepOutline": [
+        "Thu hoạch củ dong riềng, rửa sạch, nghiền lấy tinh bột",
+        "Lọc và lắng bột nhiều lần để bột dong tinh khiết, trắng tự nhiên",
+        "Tráng bột thành lá miến mỏng rồi thái sợi",
+        "Phơi khô sợi miến dưới nắng tự nhiên để bảo quản lâu"
+      ],
+      "howToEat": "Miến dong được ngâm nở rồi nấu canh, nấu miến gà, miến lòng hoặc xào, giữ được độ dai giòn ngay cả khi để nguội.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://eva.vn/di-dau-xem-gi/6-dac-san-bac-kan-ai-cung-mua-ve-lam-qua-nhieu-mon-co-the-ban-chua-tung-duoc-nem-thu-bao-gio-c40a561381.html", "label": "6 đặc sản Bắc Kạn ai cũng mua về làm quà" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    }
+  ]
+}

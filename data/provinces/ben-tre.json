@@ -1,0 +1,97 @@
+{
+  "slug": "ben-tre",
+  "code": "VN-BTR",
+  "name": "Bến Tre",
+  "region": "Nam",
+  "centroid": [106.46718, 10.1206],
+  "summary": "Bến Tre được mệnh danh là \"xứ dừa\" của Việt Nam với những rặng dừa trải dài khắp các cù lao, và hầu như mọi món đặc sản của tỉnh đều gắn liền với trái dừa — từ kẹo dừa nổi tiếng khắp thế giới, đến những món ăn dân dã như đuông dừa và cơm dừa.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/K%E1%BA%B9o_d%E1%BB%ABa", "label": "Kẹo dừa – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "keo-dua-ben-tre",
+  "dishes": [
+    {
+      "slug": "keo-dua-ben-tre",
+      "name": "Kẹo dừa Bến Tre",
+      "isHero": true,
+      "tasteTags": ["sweet"],
+      "description": "Kẹo dừa là đặc sản nổi tiếng nhất của Bến Tre, trước đây còn được gọi là kẹo Mỏ Cày, được sản xuất quy mô lớn đầu tiên tại thị xã Bến Tre từ năm 1970. Kẹo có vị béo ngậy đặc trưng của nước cốt dừa hòa cùng vị ngọt thanh của mạch nha, có thể biến tấu thêm sầu riêng, lá dứa, sô-cô-la hoặc đậu phộng.",
+      "keyIngredients": [
+        "Cơm dừa (nước cốt dừa)",
+        "Đường",
+        "Mạch nha",
+        "Sầu riêng, lá dứa hoặc đậu phộng (tùy loại)",
+        "Bánh tráng bột gạo để gói kẹo"
+      ],
+      "prepOutline": [
+        "Ép cơm dừa nạo lấy nước cốt dừa béo",
+        "Đun nước cốt dừa cùng mạch nha và đường trên lửa liu riu, khuấy liên tục cho hỗn hợp sánh đặc và chuyển màu",
+        "Đổ hỗn hợp còn nóng ra khuôn đã thoa dầu, để nguội và cắt thành từng viên nhỏ",
+        "Gói từng viên kẹo trong lớp bánh tráng bột gạo mỏng trước khi đóng gói"
+      ],
+      "howToEat": "Kẹo được bóc lớp bánh tráng bao ngoài rồi ăn trực tiếp; thường dùng làm quà biếu hoặc nhâm nhi cùng trà nóng.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Ben_Tre_Cocoa-coconut_candy_%281%29.jpg",
+          "attribution": "Fumikas Sagisavas / Wikimedia Commons",
+          "license": "CC0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/K%E1%BA%B9o_d%E1%BB%ABa", "label": "Kẹo dừa – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "duong-dua-ben-tre",
+      "name": "Đuông dừa Bến Tre",
+      "isHero": false,
+      "tasteTags": ["savory"],
+      "description": "Đuông dừa là ấu trùng của một loài kiến vương sống trong thân cây dừa, được xem là món ăn độc đáo và cao cấp bậc nhất của xứ dừa Bến Tre. Trước đây nông dân coi đuông là loài gây hại cho cây dừa, chỉ dùng cho gà ăn, nhưng nay đuông dừa trở thành đặc sản đắt giá nhờ vị béo ngậy đặc trưng, được ví như \"kem sống\" hòa quyện mùi thơm của cơm dừa.",
+      "keyIngredients": [
+        "Đuông dừa sống (ấu trùng kiến vương)",
+        "Nước mắm nguyên chất, chanh, ớt",
+        "Rau sống ăn kèm",
+        "Gia vị nướng hoặc chiên tùy cách chế biến"
+      ],
+      "prepOutline": [
+        "Đuông dừa được bắt từ thân cây dừa mục hoặc đọt dừa non",
+        "Rửa sạch, có thể ăn sống (bỏ phần đầu) chấm nước mắm hoặc đem nướng, chiên giòn",
+        "Khi nướng, đuông được xiên que rồi nướng trên than hồng cho đến khi vàng đều",
+        "Khi chiên, đuông được nhúng qua bột rồi chiên ngập dầu cho giòn lớp ngoài"
+      ],
+      "howToEat": "Đuông dừa nướng hoặc chiên được chấm cùng nước mắm chua cay, ăn kèm rau sống; món ăn sống chấm trực tiếp với nước mắm nguyên chất và ớt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/%C4%90u%C3%B4ng_d%E1%BB%ABa", "label": "Đuông dừa – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "com-dua-ben-tre",
+      "name": "Cơm dừa Bến Tre",
+      "isHero": false,
+      "tasteTags": ["savory", "sweet"],
+      "description": "Cơm dừa (cơm nấu trong trái dừa hoặc cơm trộn nước cốt dừa) là món ăn dân dã nhưng đậm chất xứ dừa Bến Tre. Gạo được nấu cùng nước cốt dừa béo ngậy, khi chín dậy mùi thơm dừa đặc trưng, thường ăn kèm các món mặn đậm đà như tép rang hoặc thịt kho để cân bằng vị béo.",
+      "keyIngredients": [
+        "Gạo",
+        "Nước cốt dừa",
+        "Trái dừa tươi (để nấu cơm trong trái, nếu có)",
+        "Tép rang hoặc thịt kho ăn kèm",
+        "Muối, đường"
+      ],
+      "prepOutline": [
+        "Vo gạo sạch rồi ngâm cùng nước cốt dừa pha loãng với ít muối, đường",
+        "Nấu cơm như bình thường, có thể hấp cách thủy trong trái dừa đã khoét rỗng để giữ mùi thơm",
+        "Đảo đều cơm khi vừa chín tới để nước cốt dừa thấm đều hạt gạo",
+        "Chuẩn bị món mặn ăn kèm như tép rang hoặc thịt kho"
+      ],
+      "howToEat": "Cơm dừa được ăn nóng ngay khi vừa chín, dùng kèm tép rang hoặc thịt kho tàu để tạo vị mặn ngọt hài hòa với vị béo của dừa.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.bachhoaxanh.com/kinh-nghiem-hay/tong-hop-10-mon-an-dac-san-noi-tieng-xu-dua-ben-tre-ban-nhat-dinh-phai-thu-1364446", "label": "Tổng hợp đặc sản nổi tiếng xứ dừa Bến Tre – Bách Hóa Xanh" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

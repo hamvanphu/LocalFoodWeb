@@ -1,0 +1,73 @@
+{
+  "slug": "ha-tinh",
+  "code": "VN-HT",
+  "name": "Hà Tĩnh",
+  "region": "Trung",
+  "centroid": [105.73338, 18.29143],
+  "summary": "Ẩm thực Hà Tĩnh giản dị nhưng đậm đà, tiêu biểu là kẹo cu đơ ngọt bùi từ mật mía và lạc, món quà quê gắn với câu chuyện dân gian độc đáo, bên cạnh các món hải sản vùng biển như gỏi cá đục và các loại bánh dân dã như ram bánh mướt.",
+  "summarySourceRefs": [
+    { "url": "https://baohatinh.vn/am-thuc-ha-tinh-dam-da-phong-vi-que-huong-post237989.html", "label": "Báo Hà Tĩnh – Ẩm thực Hà Tĩnh đậm đà phong vị quê hương" }
+  ],
+  "heroDishSlug": "keo-cu-do",
+  "dishes": [
+    {
+      "slug": "keo-cu-do",
+      "name": "Kẹo Cu Đơ",
+      "isHero": true,
+      "tasteTags": ["sweet", "savory"],
+      "description": "Kẹo cu đơ là đặc sản nổi tiếng nhất của Hà Tĩnh, kết hợp mật mía, đường, mạch nha, gừng và lạc rang được nấu trên lửa nhỏ, khuấy đều tay rồi ép giữa hai miếng bánh tráng nướng. Tên gọi \"cu đơ\" bắt nguồn từ một câu chuyện dân gian về ông Cu Hai ở Hương Sơn, khi lính Pháp gọi ông là \"Hai\" rồi phiên thành \"Deux\" (đọc là \"đơ\") trong tiếng Pháp.",
+      "keyIngredients": ["mật mía", "đường", "mạch nha", "gừng tươi", "lạc (đậu phộng)", "bánh tráng (bánh đa) nướng"],
+      "prepOutline": [
+        "Nấu mật mía, đường, mạch nha và gừng trên lửa nhỏ, khuấy liên tục cho hỗn hợp sánh lại",
+        "Rang lạc chín thơm, giòn rồi trộn đều vào hỗn hợp mật đang sôi",
+        "Múc phần nhân còn nóng đặt lên một miếng bánh tráng, ép miếng bánh tráng thứ hai lên trên",
+        "Để nguội cho kẹo đông cứng lại rồi cắt hoặc bẻ thành từng miếng"
+      ],
+      "howToEat": "Bẻ từng miếng kẹo, ăn kèm chén trà xanh nóng để cân bằng vị ngọt và tăng hương thơm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/K%E1%BA%B9o_Cu_%C4%90%C6%A1", "label": "Wikipedia tiếng Việt – Kẹo Cu Đơ" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    },
+    {
+      "slug": "goi-ca-duc-thach-hai",
+      "name": "Gỏi cá đục Thạch Hải",
+      "isHero": false,
+      "tasteTags": ["sour", "seafood", "herb-forward"],
+      "description": "Gỏi cá đục là món ăn đặc trưng của vùng biển Thạch Hải, Hà Tĩnh, chế biến từ cá đục tươi đánh bắt trong ngày. Món ăn có vị chua nhẹ từ chanh, hòa cùng vị ngọt tự nhiên của cá và độ giòn của thính, từng lọt vào top 100 món ăn đặc sản Việt Nam năm 2021.",
+      "keyIngredients": ["cá đục tươi", "thính gạo rang", "chanh hoặc khế chua", "rau thơm, lá sung", "lạc rang giã dập"],
+      "prepOutline": [
+        "Làm sạch cá đục, phi lê lấy phần thịt trắng, để ráo nước",
+        "Vắt chanh hoặc trộn khế chua để cá tái đi mà vẫn giữ độ ngọt tươi",
+        "Trộn cá với thính gạo rang, lạc rang giã dập cho thơm bùi",
+        "Pha nước chấm từ nước mắm, tỏi, ớt để ăn kèm"
+      ],
+      "howToEat": "Cuốn cá gỏi cùng rau thơm, lá sung trong bánh tráng, chấm nước mắm chua cay.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/nhung-mon-dac-san-ha-tinh-12392", "label": "MIA.vn – Những món đặc sản Hà Tĩnh" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ram-banh-muot-ha-tinh",
+      "name": "Ram bánh mướt Hà Tĩnh",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Ram bánh mướt là sự kết hợp giữa hai loại bánh: ram (nem rán/chả giò chiên giòn) và bánh mướt mềm mại, tạo nên món ăn vừa giòn vừa dai đặc trưng của người Hà Tĩnh, thường xuất hiện trong bữa sáng hoặc các dịp họp mặt gia đình.",
+      "keyIngredients": ["bánh mướt (bột gạo tráng mỏng)", "bánh tráng cuốn nhân (ram)", "thịt băm, miến, mộc nhĩ", "nước mắm chua ngọt", "rau sống"],
+      "prepOutline": [
+        "Làm nhân ram từ thịt băm, miến, mộc nhĩ, cà rốt, cuốn trong bánh tráng rồi chiên giòn",
+        "Tráng bánh mướt từ bột gạo, cuộn lại từng cuốn nhỏ mềm mại",
+        "Bày ram giòn và bánh mướt mềm cùng đĩa, ăn kèm rau sống và nước mắm chua ngọt"
+      ],
+      "howToEat": "Xé nhỏ ram, cuốn cùng bánh mướt và rau sống, chấm nước mắm chua ngọt pha tỏi ớt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://baohatinh.vn/am-thuc-ha-tinh-dam-da-phong-vi-que-huong-post237989.html", "label": "Báo Hà Tĩnh – Ẩm thực Hà Tĩnh đậm đà phong vị quê hương" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

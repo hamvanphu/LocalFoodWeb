@@ -1,0 +1,93 @@
+{
+  "slug": "dong-thap",
+  "code": "VN-DT",
+  "name": "Đồng Tháp",
+  "region": "Nam",
+  "centroid": [105.60602, 10.56553],
+  "summary": "Đồng Tháp được mệnh danh là \"xứ sở sen hồng\", nơi mùa nước nổi hàng năm mang lại nguồn sản vật đồng quê phong phú. Ẩm thực nơi đây nổi bật với hủ tiếu Sa Đéc trứ danh, các món từ chuột đồng mùa nước nổi và nem Lai Vung lên men chua ngọt đặc trưng.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/H%E1%BB%A7_ti%E1%BA%BFu", "label": "Hủ tiếu – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "hu-tieu-sa-dec",
+  "dishes": [
+    {
+      "slug": "hu-tieu-sa-dec",
+      "name": "Hủ tiếu Sa Đéc",
+      "isHero": true,
+      "tasteTags": ["savory", "noodle-soup"],
+      "description": "Hủ tiếu Sa Đéc là đặc sản trứ danh của thành phố Sa Đéc, tỉnh Đồng Tháp, nổi bật nhờ sợi hủ tiếu làm từ bột gạo địa phương với nguồn nước có độ pH đặc biệt, cho sợi bánh dai mềm, trắng trong tự nhiên mà không cần chất tẩy trắng. Nước dùng được hầm từ xương heo trong nhiều giờ, ngọt thanh tự nhiên mà không cần dùng bột ngọt.",
+      "keyIngredients": [
+        "Bánh hủ tiếu tươi làm từ gạo Sa Đéc",
+        "Xương heo hầm lấy nước dùng",
+        "Thịt heo, lòng heo (gan, tim, phèo)",
+        "Tôm khô, mực khô (tạo vị ngọt cho nước dùng)",
+        "Giá đỗ, hẹ, cần tây",
+        "Hành phi, chanh, ớt"
+      ],
+      "prepOutline": [
+        "Gạo địa phương được ngâm, xay bột rồi tráng thành từng lá bánh mỏng, cắt sợi phơi se lại",
+        "Hầm xương heo nhiều giờ cùng tôm khô, mực khô để lấy nước dùng ngọt trong",
+        "Trụng sơ sợi hủ tiếu và giá đỗ trong nước sôi rồi cho vào tô",
+        "Xếp thịt, lòng heo lên trên, chan ngập nước dùng nóng, rắc hành phi"
+      ],
+      "howToEat": "Hủ tiếu được ăn nóng ngay khi vừa chan nước dùng, nêm thêm chanh, ớt và nước mắm hoặc tương ớt tùy khẩu vị, ăn kèm giá sống và hẹ tươi.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/H%E1%BB%A7_ti%E1%BA%BFu", "label": "Hủ tiếu (mục Hủ tiếu Sa Đéc) – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "chuot-dong-quay-lu-cao-lanh",
+      "name": "Chuột đồng quay lu Cao Lãnh",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Chuột đồng quay lu là món ăn đặc trưng của vùng Cao Lãnh, Đồng Tháp, thường xuất hiện nhiều nhất vào mùa nước nổi khi chuột đồng béo và nhiều thịt nhất. Chuột được sơ chế sạch, tẩm ướp gia vị rồi treo trong lu đất quay đều tay trên lửa than cho đến khi chín vàng đều, da giòn rụm.",
+      "keyIngredients": [
+        "Chuột đồng (bắt vào mùa nước nổi)",
+        "Sả, tỏi, ngũ vị hương",
+        "Muối, đường, nước mắm",
+        "Rau răm, chuối chát, dưa leo ăn kèm",
+        "Muối tiêu chanh"
+      ],
+      "prepOutline": [
+        "Chuột đồng được làm sạch lông và nội tạng, rửa kỹ với muối và rượu để khử mùi",
+        "Ướp chuột với sả, tỏi băm, ngũ vị hương và các gia vị trong khoảng 30 phút",
+        "Móc từng con chuột vào móc treo trong lu đất đã đốt than nóng bên dưới",
+        "Quay đều lu liên tục cho đến khi da chuột vàng giòn và thịt chín đều bên trong"
+      ],
+      "howToEat": "Chuột đồng quay lu được chặt miếng vừa ăn, dùng kèm muối tiêu chanh, rau răm, chuối chát và dưa leo để cân bằng vị béo giòn của da và thịt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://intour.vn/mon-ngon-mien-nam/nhung-mon-an-dac-san-ngon-tai-dong-thap-1581.html", "label": "Những món ăn đặc sản phải thử khi đến Đồng Tháp – Intour.vn" }
+      ],
+      "occasions": ["Mùa thu"]
+    },
+    {
+      "slug": "nem-lai-vung",
+      "name": "Nem Lai Vung",
+      "isHero": false,
+      "tasteTags": ["sour", "savory", "street-food"],
+      "description": "Nem Lai Vung là đặc sản trứ danh của huyện Lai Vung, Đồng Tháp, tương truyền do bà Tư Măn ở ấp Tân Khánh sáng tạo ra để dùng trong các dịp cưới hỏi rồi được người dân lưu truyền, phát triển thành nghề bán ở chợ. Nem có lớp thịt màu hồng nhạt, gói cùng lá vông, điểm thêm tiêu và tỏi trắng, kết hợp hài hòa bốn vị mặn, ngọt, chua, cay. Nghề làm nem Lai Vung đã được công nhận là di sản văn hóa phi vật thể quốc gia.",
+      "keyIngredients": [
+        "Thịt heo nạc",
+        "Bì heo (da heo)",
+        "Lá vông (gói nem)",
+        "Tỏi, tiêu, ớt",
+        "Đường, muối (lên men chua tự nhiên)"
+      ],
+      "prepOutline": [
+        "Thịt nạc heo được quết nhuyễn cùng bì heo thái sợi và gia vị",
+        "Trộn đều hỗn hợp thịt với đường, muối để tạo vị chua lên men tự nhiên",
+        "Gói từng phần nhân nhỏ trong lá vông, điểm thêm lát tỏi và hạt tiêu",
+        "Ủ nem ở nhiệt độ thường từ 2-3 ngày cho đến khi nem chua vừa tới, thịt chuyển màu hồng"
+      ],
+      "howToEat": "Nem Lai Vung được bóc lớp lá gói, ăn trực tiếp hoặc chấm cùng tương ớt, tương đen; thường được dùng làm món khai vị hoặc nhắm rượu trong các bữa tiệc.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.ivivu.com/blog/2022/12/nem-lai-vung-dac-san-tru-danh-cua-dong-thap-nhat-dinh-phai-thu/", "label": "Nem Lai Vung - Đặc sản trứ danh của Đồng Tháp – iVIVU.com" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

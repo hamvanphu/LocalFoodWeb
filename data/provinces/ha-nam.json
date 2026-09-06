@@ -1,0 +1,78 @@
+{
+  "slug": "ha-nam",
+  "code": "VN-HNM",
+  "name": "Hà Nam",
+  "region": "Bắc",
+  "centroid": [105.91, 20.54],
+  "summary": "Hà Nam là vùng đất cửa ngõ phía nam Hà Nội, nổi tiếng với món cá kho niêu đất trứ danh của làng Vũ Đại trong văn Nam Cao, cùng chuối ngự Đại Hoàng từng được chọn tiến vua và các món quà sáng dân dã như bánh cuốn Phủ Lý. Ẩm thực nơi đây mang đậm chất đồng bằng Bắc Bộ, chắt chiu từ sản vật ven sông Châu, sông Đáy.",
+  "summarySourceRefs": [
+    { "url": "https://hanam.gov.vn/Pages/ca-kho-lang-vu-dai-do-lua-vu-tet.aspx", "label": "Cá kho Làng Vũ Đại đỏ lửa vụ Tết (Cổng TTĐT tỉnh Hà Nam)" }
+  ],
+  "heroDishSlug": "ca-kho-lang-vu-dai",
+  "dishes": [
+    {
+      "slug": "ca-kho-lang-vu-dai",
+      "name": "Cá kho làng Vũ Đại",
+      "isHero": true,
+      "tasteTags": ["savory"],
+      "description": "Cá kho làng Vũ Đại là đặc sản của làng Nhân Hậu (Đại Hoàng xưa), xã Hòa Hậu, huyện Lý Nhân, Hà Nam - ngôi làng gắn liền với những trang văn của nhà văn Nam Cao. Món cá được kho trong niêu đất suốt nhiều giờ liền trên bếp củi, cho ra vị đậm đà, xương mềm rục mà thịt vẫn săn chắc, thơm mùi riềng, gừng đặc trưng.",
+      "keyIngredients": ["cá trắm đen (hoặc cá trắm cỏ)", "riềng, gừng thái lát", "nước cốt chanh hoặc quả chay, quả dọc", "nước hàng, nước mắm ngon", "niêu đất và vung lá chuối"],
+      "prepOutline": [
+        "Chọn cá trắm đen tươi, làm sạch, cắt khúc dày",
+        "Xếp riềng, gừng lót đáy niêu đất rồi xếp cá lên trên",
+        "Ướp cá với nước mắm, nước hàng, gia vị trong vài giờ",
+        "Kho cá trên bếp củi liu riu từ 10-12 tiếng cho đến khi cạn nước, xương mềm nhừ"
+      ],
+      "howToEat": "Cá kho được ăn nóng cùng cơm trắng, đặc biệt phổ biến trong mâm cỗ Tết của các gia đình Hà Nam và được đặt làm quà biếu đi khắp cả nước vào dịp cuối năm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://hanam.gov.vn/Pages/ca-kho-lang-vu-dai-do-lua-vu-tet.aspx", "label": "Cá kho Làng Vũ Đại đỏ lửa vụ Tết (Cổng TTĐT tỉnh Hà Nam)" },
+        { "url": "https://www.ivivu.com/blog/2023/01/ca-kho-lang-vu-dai-mon-ngon-dan-da-lau-doi-o-lang-chi-pheo/", "label": "Cá kho làng Vũ Đại, món ngon dân dã lâu đời (iVIVU)" }
+      ],
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+    },
+    {
+      "slug": "chuoi-ngu-dai-hoang",
+      "name": "Chuối ngự Đại Hoàng",
+      "isHero": false,
+      "tasteTags": ["sweet"],
+      "description": "Chuối ngự Đại Hoàng là giống chuối quả nhỏ, thơm đặc biệt, trồng ở làng Đại Hoàng (nay là Nhân Hậu), xã Hòa Hậu, huyện Lý Nhân, Hà Nam - nơi từng được vua Trần chọn làm sản vật tiến vua nên có tên gọi này. Quả chín vỏ vàng óng, ruột vàng ngọt đậm, mùi thơm dịu, khác hẳn các giống chuối tiêu thông thường.",
+      "keyIngredients": ["giống chuối ngự trắng, chuối ngự trâu hoặc chuối ngự mít", "đất phù sa ven sông Châu Giang"],
+      "prepOutline": [
+        "Trồng chuối trên đất bãi phù sa ven sông, chăm sóc theo kinh nghiệm gia truyền",
+        "Chọn buồng chuối già, cắt hạ buồng khi quả bắt đầu mẩy",
+        "Ủ chuối chín tự nhiên trong vài ngày cho vỏ lên màu vàng đều",
+        "Bảo quản nơi thoáng mát để giữ hương thơm trước khi dùng"
+      ],
+      "howToEat": "Chuối ngự ăn trực tiếp khi chín tới, thường được bày lên mâm ngũ quả và làm quà biếu cao cấp vào dịp Tết vì vị ngọt thanh và mùi thơm đặc trưng.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Chuối_Ngự_Đại_Hoàng.jpg", "attribution": "Goodmorninghpvn, via Wikimedia Commons", "license": "CC BY-SA 3.0 / GFDL" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Chu%E1%BB%91i_ng%E1%BB%B1_%C4%90%E1%BA%A1i_Ho%C3%A0ng", "label": "Chuối ngự Đại Hoàng – Wikipedia tiếng Việt" },
+        { "url": "https://vnexpress.net/thoi-su/chuoi-ngu-dai-hoang-dac-san-ha-nam-3999966.html", "label": "Chuối ngự Đại Hoàng đặc sản Hà Nam (VnExpress)" }
+      ],
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+    },
+    {
+      "slug": "banh-cuon-phu-ly",
+      "name": "Bánh cuốn Phủ Lý",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh cuốn Phủ Lý là món quà sáng nổi tiếng của thành phố Phủ Lý, Hà Nam, khác biệt ở lớp vỏ bánh tráng hai lượt từ bột gạo tám xoan mỏng tang mà dai. Bánh thường được ăn kèm chả nướng than hoa và chả quế, tạo nên hương vị đậm đà rất riêng so với bánh cuốn Thanh Trì hay bánh cuốn trứng Hà Nội.",
+      "keyIngredients": ["bột gạo tám xoan", "mộc nhĩ, hành khô", "chả nướng hoặc chả quế", "nước mắm pha chua ngọt", "rau thơm ăn kèm"],
+      "prepOutline": [
+        "Ngâm và xay gạo tám xoan thành bột nước mịn",
+        "Tráng bánh hai lớp mỏng trên nồi hơi cho bánh trong, dai",
+        "Cuộn bánh với nhân mộc nhĩ, hành phi thơm",
+        "Bày bánh cùng chả nướng, chan nước mắm chua ngọt"
+      ],
+      "howToEat": "Bánh cuốn ăn nóng ngay khi vừa tráng, chấm cùng nước mắm chua ngọt và ăn kèm chả nướng, thường dùng làm bữa sáng phổ biến của người dân Phủ Lý.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vnexpress.net/bua-sang-o-phu-ly-voi-banh-da-ca-ro-va-banh-cuon-4459499.html", "label": "Bữa sáng ở Phủ Lý với bánh đa cá rô và bánh cuốn (VnExpress)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

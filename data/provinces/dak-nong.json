@@ -1,0 +1,77 @@
+{
+  "slug": "dak-nong",
+  "code": "VN-DNO",
+  "name": "Đắk Nông",
+  "region": "Trung",
+  "centroid": [107.68669, 12.22917],
+  "summary": "Đắk Nông là tỉnh Tây Nguyên tách ra từ Đắk Lắk năm 2004, nơi cư trú lâu đời của người M'Nông và Mạ. Ẩm thực bản địa gắn bó mật thiết với núi rừng và sông suối, tiêu biểu là các món nấu trong ống tre như canh thụt, cơm lam, cùng cá lăng nướng từ dòng Sêrêpốk.",
+  "summarySourceRefs": [
+    { "url": "https://nhandan.vn/mon-canh-thut-nam-moi-cua-nguoi-mnong-post814021.html", "label": "Món canh thụt nấm mối của người M'nông – Báo Nhân Dân" }
+  ],
+  "heroDishSlug": "canh-thut",
+  "dishes": [
+    {
+      "slug": "canh-thut",
+      "name": "Canh thụt",
+      "isHero": true,
+      "tasteTags": ["savory", "herb-forward"],
+      "description": "Canh thụt là món ăn cổ truyền của người M'Nông và Mạ ở Đắk Nông, tên gọi bắt nguồn từ cách chế biến: nguyên liệu được cho vào ống tre rồi dùng đũa 'thụt' (dộng, khuấy) liên tục trong lúc nấu để các thành phần hòa quyện và nhuyễn mịn. Món thường được dùng để tiếp đãi khách quý trong lễ hội, cưới hỏi.",
+      "keyIngredients": ["lá bép (lá nhíp)", "đọt mây rừng", "cà đắng", "cá suối hoặc thịt/sườn heo", "ống tre non"],
+      "prepOutline": [
+        "Sơ chế lá bép, đọt mây bào mỏng và cà đắng thái lát",
+        "Cho cá suối hoặc thịt cùng rau rừng vào ống tre với ít nước",
+        "Đặt ống lên bếp lửa, vừa nấu vừa dùng đũa thụt đều tay cho nguyên liệu nhuyễn quyện",
+        "Nêm nếm gia vị và thụt tiếp đến khi canh sánh lại là hoàn tất"
+      ],
+      "howToEat": "Đổ canh thụt ra bát, ăn cùng cơm lam hoặc cơm trắng ngay khi còn nóng, thường dùng làm món chính trong mâm cỗ đãi khách của người M'Nông, Mạ.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://nhandan.vn/mon-canh-thut-nam-moi-cua-nguoi-mnong-post814021.html", "label": "Món canh thụt nấm mối của người M'nông – Báo Nhân Dân" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "com-lam-dak-nong",
+      "name": "Cơm lam Đắk Nông",
+      "isHero": false,
+      "tasteTags": ["savory"],
+      "description": "Cơm lam là món ăn biểu tượng của đồng bào M'Nông, Mạ ở Đắk Nông, gạo nếp được nấu chín trong ống tre/nứa để giữ trọn vị dẻo thơm tự nhiên. Theo cổng thông tin du lịch tỉnh, cơm lam thường được dùng cùng thịt nướng và muối ớt trong các dịp lễ hội, cưới hỏi của cộng đồng.",
+      "keyIngredients": ["gạo nếp", "ống tre/nứa non", "nước suối", "muối ớt", "thịt nướng ăn kèm"],
+      "prepOutline": [
+        "Vo sạch gạo nếp, ngâm nước rồi cho vào ống tre cùng lượng nước vừa đủ",
+        "Nút miệng ống bằng lá chuối hoặc lá dong",
+        "Nướng ống trên than hồng, xoay đều tay đến khi vỏ tre cháy xém",
+        "Chẻ bỏ lớp vỏ ngoài, giữ lại lớp lụa mỏng bọc cơm"
+      ],
+      "howToEat": "Ăn khi cơm lam còn nóng, chấm muối ớt hoặc ăn kèm thịt nướng, xé lớp lụa tre mỏng bao quanh trước khi thưởng thức.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/C%C6%A1m_lam_T%C3%A2y_Nguy%C3%AAn.jpg", "attribution": "Lam Nguyen, Wikimedia Commons", "license": "CC BY 2.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_lam", "label": "Cơm lam – Wikipedia tiếng Việt" },
+        { "url": "https://dulich.daknong.gov.vn/vi/blog/details/dac-san-dak-nong-46", "label": "Đặc sản Đắk Nông – Cổng thông tin du lịch tỉnh Đắk Nông" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ca-lang-nuong-than-hong",
+      "name": "Cá lăng nướng than hồng sông Sêrêpốk",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "seafood"],
+      "description": "Cá lăng đánh bắt từ dòng Sêrêpốk chảy qua Đắk Nông có thịt chắc, ít xương dăm, khi nướng than cho vị ngọt đậm đà. Món này đã được vinh danh trong danh sách Top 100 món ăn đặc sản Việt Nam giai đoạn 2020–2021 theo cổng thông tin du lịch tỉnh Đắk Nông.",
+      "keyIngredients": ["cá lăng sông Sêrêpốk", "lá chuối hoặc lá rừng để gói", "sả, ớt xanh", "gạo nếp (ăn kèm)", "gia vị chấm từ sả, ớt, rau rừng"],
+      "prepOutline": [
+        "Làm sạch cá lăng, để nguyên con hoặc cắt khúc lớn",
+        "Ướp sơ với muối, sả đập dập",
+        "Gói cá trong lá chuối hoặc lá rừng rồi vùi/nướng trên than hồng",
+        "Trở đều tay đến khi cá chín thơm, lớp lá hơi cháy xém"
+      ],
+      "howToEat": "Bóc lớp lá gói, gỡ thịt cá chấm cùng nước chấm sả ớt hoặc muối tiêu chanh, ăn cùng cơm lam hoặc xôi nếp.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://dulich.daknong.gov.vn/vi/blog/details/dac-san-dak-nong-46", "label": "Đặc sản Đắk Nông – Cổng thông tin du lịch tỉnh Đắk Nông" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

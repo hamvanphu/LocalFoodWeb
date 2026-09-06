@@ -1,0 +1,76 @@
+{
+  "slug": "da-nang",
+  "code": "VN-DN",
+  "name": "Đà Nẵng",
+  "region": "Trung",
+  "centroid": [109.75771, 16.23695],
+  "summary": "Đà Nẵng không chỉ nổi tiếng với mì Quảng mà còn có bánh tráng cuốn thịt heo — món ăn giản dị từ ba nguyên liệu chính nhưng tạo nên hương vị khiến du khách nhớ mãi — cùng mít trộn dân dã và gỏi cá Nam Ô của làng chài dưới chân đèo Hải Vân.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/Th%E1%BB%83_lo%E1%BA%A1i:%E1%BA%A8m_th%E1%BB%B1c_%C4%90%C3%A0_N%E1%BA%B5ng", "label": "Wikipedia tiếng Việt – Thể loại: Ẩm thực Đà Nẵng" }
+  ],
+  "heroDishSlug": "banh-trang-cuon-thit-heo-da-nang",
+  "dishes": [
+    {
+      "slug": "banh-trang-cuon-thit-heo-da-nang",
+      "name": "Bánh tráng cuốn thịt heo Đà Nẵng",
+      "isHero": true,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh tráng cuốn thịt heo là đặc sản gắn liền riêng với Đà Nẵng, gồm những nguyên liệu tưởng chừng đơn giản — bánh tráng, thịt heo, rau sống — nhưng khi kết hợp lại tạo nên hương vị hài hòa khó quên. Thịt ba chỉ luộc được thái lát mỏng, cuộn cùng bánh tráng dẻo dai, bún tươi và rất nhiều loại rau sống đặc trưng Đà Nẵng.",
+      "keyIngredients": ["thịt ba chỉ luộc", "bánh tráng", "bún tươi", "rau sống, xà lách, húng quế, diếp cá", "mắm nêm hoặc nước mắm chua ngọt"],
+      "prepOutline": [
+        "Luộc thịt ba chỉ chín tới, để nguội rồi thái lát mỏng vừa nạc vừa mỡ",
+        "Trải bánh tráng, xếp bún tươi, thịt và các loại rau sống lên trên",
+        "Cuộn chặt tay thành cuốn vừa ăn",
+        "Pha mắm nêm hoặc nước mắm chua ngọt đậm đà kiểu miền Trung"
+      ],
+      "howToEat": "Chấm cuốn bánh tráng vào bát mắm nêm pha thơm (dứa) và tỏi ớt, ăn ngay khi bánh tráng còn dẻo.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/B%C3%A1nh_tr%C3%A1ng_cu%E1%BB%91n_th%E1%BB%8Bt_heo.jpg", "attribution": "Lê Huỳnh Bộ, Wikimedia Commons", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://danangfantasticity.com/en/am-thuc-dia-phuong/banh-trang-cuon-thit-heo", "label": "Đà Nẵng Fantasticity (Cổng du lịch Đà Nẵng) – Bánh tráng cuốn thịt heo" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "mit-tron-da-nang",
+      "name": "Mít trộn Đà Nẵng",
+      "isHero": false,
+      "tasteTags": ["savory", "herb-forward", "street-food"],
+      "description": "Mít trộn là món ăn vặt dân dã gắn liền với tuổi thơ của nhiều thế hệ người Đà Nẵng, ra đời từ cuối thế kỷ 19 khi người dân vùng Đà Nẵng – Quảng Nam tận dụng mít non trong vườn nhà. Mít non luộc chín tới, xé sợi, trộn cùng lạc rang, hành phi, nước mắm và rau răm, có thể thêm da heo, tôm hoặc nhộng tằm tùy quán.",
+      "keyIngredients": ["mít non", "lạc rang giã dập", "hành phi", "rau răm, húng lủi", "da heo hoặc tôm (tùy chọn)", "nước mắm pha"],
+      "prepOutline": [
+        "Luộc mít non cho chín mềm nhưng không nhũn, giữ được sợi",
+        "Xé mít thành từng sợi nhỏ",
+        "Trộn mít với lạc rang, hành phi, rau răm và nước mắm pha",
+        "Thêm da heo chiên giòn hoặc tôm tùy khẩu vị"
+      ],
+      "howToEat": "Ăn kèm bánh tráng nướng giòn bẻ nhỏ để xúc, thường dùng làm món ăn chơi buổi chiều.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vinwonders.com/vi/wonderpedia/news/mit-tron-da-nang-mon-an-choi-doc-dao/", "label": "VinWonders – Mít trộn Đà Nẵng" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "goi-ca-nam-o-da-nang",
+      "name": "Gỏi cá Nam Ô",
+      "isHero": false,
+      "tasteTags": ["sour", "seafood", "herb-forward"],
+      "description": "Gỏi cá Nam Ô là tinh hoa ẩm thực của làng chài Nam Ô, nằm ở cửa sông Cu Đê dưới chân đèo Hải Vân, cách trung tâm Đà Nẵng khoảng 10km. Cá dùng để làm gỏi thường là cá trích tươi đánh bắt sớm nên thịt rất ngọt, ít tanh, kết hợp cùng riềng, mè và đậu phộng rang tạo hương vị đậm đà đặc trưng.",
+      "keyIngredients": ["cá trích tươi (hoặc cá cơm)", "riềng, tỏi, gừng giã nhuyễn", "mè rang", "đậu phộng rang", "bánh tráng, rau sống, chuối chát, khế"],
+      "prepOutline": [
+        "Chọn cá trích tươi đánh bắt sớm trong ngày, lọc lấy phần thịt không xương",
+        "Ướp cá với riềng, tỏi, gừng giã nhuyễn cùng một ít nước cốt chanh",
+        "Trộn cá đã ướp với mè rang và đậu phộng rang giã dập",
+        "Chuẩn bị nước chấm đặc từ xương cá giã nhuyễn nấu cùng gia vị"
+      ],
+      "howToEat": "Cuốn cá gỏi cùng bánh tráng, rau sống, chuối chát và khế chua, chấm nước chấm đặc sánh.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://danangfantasticity.com/en/am-thuc-dia-phuong/goi-ca-nam-o-da-nang", "label": "Đà Nẵng Fantasticity (Cổng du lịch Đà Nẵng) – Gỏi cá Nam Ô" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

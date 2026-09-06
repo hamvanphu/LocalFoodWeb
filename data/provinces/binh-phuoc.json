@@ -1,0 +1,103 @@
+{
+  "slug": "binh-phuoc",
+  "code": "VN-BP",
+  "name": "Bình Phước",
+  "region": "Nam",
+  "centroid": [106.90661, 11.75677],
+  "summary": "Bình Phước là thủ phủ hạt điều của Việt Nam với gần 175.000 héc-ta trồng điều, đồng thời là nơi sinh sống của nhiều cộng đồng dân tộc thiểu số như Xtiêng với nền ẩm thực rừng núi độc đáo. Bên cạnh hạt điều rang trứ danh, các món gà nướng và canh nấu trong ống lồ ô của người bản địa là những nét ẩm thực đặc trưng của vùng đất đỏ bazan này.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/%C4%90i%E1%BB%81u", "label": "Điều (cây điều, hạt điều) – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "hat-dieu-binh-phuoc",
+  "dishes": [
+    {
+      "slug": "hat-dieu-binh-phuoc",
+      "name": "Hạt điều rang Bình Phước",
+      "isHero": true,
+      "tasteTags": ["savory", "vegetarian-friendly"],
+      "description": "Hạt điều là đặc sản làm nên thương hiệu của Bình Phước — tỉnh có diện tích trồng điều lớn nhất cả nước với khoảng 175.000 héc-ta, được xem là 'thủ phủ hạt điều' của Việt Nam. Hạt điều Bình Phước chính hiệu thường đạt loại A, kích cỡ khoảng 240 hạt/pound (W240), nhân to, béo, thơm và đậm vị hơn hẳn điều nhập từ Campuchia, được giới chuyên gia quốc tế xem là loại hạt cao cấp.",
+      "keyIngredients": [
+        "Hạt điều tươi vừa thu hoạch",
+        "Muối hạt",
+        "Dầu ăn hoặc bơ (tùy cách chế biến)",
+        "Lá chanh, sả (một số công thức tẩm gia vị)"
+      ],
+      "prepOutline": [
+        "Hạt điều tươi được tách vỏ cứng bên ngoài, lấy nhân",
+        "Nhân điều được rang sơ hoặc sấy để loại bỏ dầu vỏ gây ngứa còn sót lại",
+        "Rang hoặc sấy nhân điều ở nhiệt độ vừa phải cho đến khi vàng giòn đều",
+        "Trộn muối hoặc gia vị khi hạt còn nóng để gia vị bám đều vào nhân điều"
+      ],
+      "howToEat": "Hạt điều rang muối được dùng làm món ăn vặt, nhắm rượu hoặc đãi khách; ăn trực tiếp khi hạt còn giòn thơm, thường kèm trà nóng.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Roasted_Cashew_Nuts_%2852746470588%29.jpg",
+          "attribution": "Choo Yut Shing / Wikimedia Commons (ảnh minh họa hạt điều rang, không chụp tại Bình Phước)",
+          "license": "CC BY 2.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/%C4%90i%E1%BB%81u", "label": "Điều (cây điều, hạt điều Bình Phước) – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ga-nuong-dat-set-binh-phuoc",
+      "name": "Gà nướng Bình Phước",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory"],
+      "description": "Gà nướng là món đặc sản quen thuộc của Bình Phước, dùng gà thả vườn ướp cùng các loại gia vị và lá rừng đặc trưng rồi nướng trên than hồng cho đến khi da vàng giòn, thịt bên trong vẫn ngọt mềm. Một số nơi còn bọc gà trong đất sét trước khi nướng để giữ trọn vị ngọt và độ ẩm của thịt, tạo nên hương vị mộc mạc rất riêng của vùng đất đỏ bazan.",
+      "keyIngredients": [
+        "Gà thả vườn (gà ta)",
+        "Sả, lá chanh, lá rừng",
+        "Muối ớt, mật ong",
+        "Đất sét sạch (cho biến thể nướng đất sét)"
+      ],
+      "prepOutline": [
+        "Gà làm sạch, để nguyên con hoặc chặt miếng lớn",
+        "Ướp gà với sả, lá chanh, muối, mật ong và gia vị trong ít nhất 30 phút",
+        "Với biến thể nướng đất sét: bọc gà đã ướp trong lớp đất sét sạch rồi vùi vào than hồng cho đến khi đất khô cứng",
+        "Nướng gà trên bếp than, trở đều tay cho da vàng giòn mà không cháy khét"
+      ],
+      "howToEat": "Gà nướng được chặt miếng vừa ăn, chấm muối ớt chanh hoặc muối tiêu chanh, ăn kèm rau sống và cơm lam hoặc xôi nếp.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/D%C4%A9a_g%C3%A0_n%C6%B0%E1%BB%9Bng_%E1%BB%9F_ch%E1%BB%A3_B%C3%ACnh_Long_ng22th1n2024_%283%29.jpg",
+          "attribution": "Phương Huy / Wikimedia Commons (ảnh chụp tại chợ Bình Long, Bình Phước)",
+          "license": "CC0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vietnamnet.vn/dac-san-binh-phuoc-thom-ngon-doc-la-thu-hut-du-khach-gan-xa-2161605.html", "label": "Đặc sản Bình Phước thơm ngon, độc lạ (VietNamNet)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "canh-thut-la-nhip",
+      "name": "Canh thụt lá nhíp",
+      "isHero": false,
+      "tasteTags": ["herb-forward", "savory"],
+      "description": "Canh thụt là món ăn truyền thống độc đáo của người Xtiêng ở Bình Phước, thường được nấu trong dịp lễ đặc biệt. Các loại rau rừng như lá nhíp, đọt mây, măng rừng, cà pháo được nấu cùng cá, cua, tôm hoặc ốc suối, tất cả cho vào ống lồ ô rồi dùng chày thụt (giã) liên tục trong lúc nấu cho các nguyên liệu quyện nhuyễn thành một hỗn hợp sánh đặc, đậm vị núi rừng.",
+      "keyIngredients": [
+        "Lá nhíp (đọt nhíp)",
+        "Đọt mây, măng rừng",
+        "Cà pháo",
+        "Cá, cua, tôm hoặc ốc suối",
+        "Ống lồ ô (ống tre để nấu)",
+        "Muối, ớt rừng"
+      ],
+      "prepOutline": [
+        "Sơ chế các loại rau rừng và cá, cua hoặc ốc suối cho sạch",
+        "Cho toàn bộ nguyên liệu vào ống lồ ô cùng một ít nước và muối",
+        "Đặt ống lên bếp lửa, vừa nấu vừa dùng chày thụt liên tục vào ống để các nguyên liệu quyện nhuyễn vào nhau",
+        "Nấu đến khi hỗn hợp sánh đặc và dậy mùi thơm đặc trưng của rau rừng"
+      ],
+      "howToEat": "Canh thụt được múc ra, ăn cùng cơm hoặc cơm lam, thường xuất hiện trong các dịp lễ hội hoặc đãi khách quý của người Xtiêng.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://baophapluat.vn/canh-thut-mon-am-thuc-doc-dao-cua-dong-bao-dan-toc-thieu-so-tinh-binh-phuoc-post487195.html", "label": "Canh thụt - món ẩm thực độc đáo của đồng bào dân tộc thiểu số Bình Phước (Báo Pháp luật Việt Nam)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

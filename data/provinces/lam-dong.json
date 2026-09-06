@@ -1,0 +1,76 @@
+{
+  "slug": "lam-dong",
+  "code": "VN-LD",
+  "name": "Lâm Đồng",
+  "region": "Trung",
+  "centroid": [108.09387, 11.75199],
+  "summary": "Lâm Đồng, với trung tâm là thành phố Đà Lạt khí hậu ôn đới mát mẻ quanh năm, là nơi hiếm hoi ở Việt Nam trồng được atiso và nhiều loại rau xứ lạnh. Ẩm thực Đà Lạt kết hợp nguyên liệu bản địa (lá é, atiso) với văn hóa ẩm thực đường phố về đêm sôi động, tạo nên bản sắc riêng trong vùng Tây Nguyên.",
+  "summarySourceRefs": [
+    { "url": "https://vi.wikipedia.org/wiki/Atis%C3%B4", "label": "Atisô – Wikipedia tiếng Việt" }
+  ],
+  "heroDishSlug": "lau-ga-la-e-da-lat",
+  "dishes": [
+    {
+      "slug": "lau-ga-la-e-da-lat",
+      "name": "Lẩu gà lá é Đà Lạt",
+      "isHero": true,
+      "tasteTags": ["savory", "herb-forward", "spicy"],
+      "description": "Lẩu gà lá é là món lẩu đặc trưng của Đà Lạt, dùng lá é — một loại rau thơm bản địa có vị cay nồng, hơi hắc đặc trưng — nấu cùng nước dùng gà chua nhẹ. Đây là món ăn được xem là 'phải thử' khi đến Đà Lạt nhờ hương vị lạ miệng, ấm nóng phù hợp với khí hậu se lạnh của thành phố.",
+      "keyIngredients": ["gà ta", "lá é", "măng chua", "nấm", "sả, ớt xanh", "bún hoặc mì ăn kèm"],
+      "prepOutline": [
+        "Chặt gà thành miếng vừa ăn, chần sơ qua nước sôi",
+        "Nấu nước dùng từ xương gà cùng sả, măng chua cho có vị chua thanh",
+        "Thả thịt gà, nấm vào nồi nước dùng đun sôi",
+        "Cho lá é vào sau cùng, đun thêm vài phút để dậy mùi mà không mất hương thơm"
+      ],
+      "howToEat": "Ăn nóng dạng lẩu, nhúng kèm rau nấm, chấm thịt gà với muối ớt xanh, dùng chung với bún hoặc mì tươi, hợp nhất khi thưởng thức trong tiết trời se lạnh của Đà Lạt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.vietnamairlines.com/cn/vi/plan-book/travel/travel-guide/lau-ga-la-e-da-lat", "label": "Lẩu gà lá é Đà Lạt – Vietnam Airlines Travel Guide" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-trang-nuong-da-lat",
+      "name": "Bánh tráng nướng Đà Lạt",
+      "isHero": false,
+      "tasteTags": ["street-food", "savory", "grilled"],
+      "description": "Bánh tráng nướng được ví như 'pizza Việt Nam', đặc biệt phổ biến ở Đà Lạt nơi món ăn này gắn liền với văn hóa đi bộ chợ đêm. Bánh tráng được nướng trên bếp than, phết nhân trứng, thịt băm, tôm khô, hành lá tạo lớp vỏ giòn rụm thơm mùi khói.",
+      "keyIngredients": ["bánh tráng mỏng", "trứng gà hoặc cút", "thịt băm, tôm khô", "hành lá, hành phi", "tương ớt, mỡ hành"],
+      "prepOutline": [
+        "Đặt bánh tráng lên vỉ, nướng trên than hồng cho hơi giòn",
+        "Phết đều trứng đánh tan lên mặt bánh",
+        "Rắc thịt băm, tôm khô, hành lá lên trên",
+        "Nướng tiếp đến khi trứng chín, bánh giòn đều rồi phết tương ớt và mỡ hành"
+      ],
+      "howToEat": "Ăn ngay khi còn nóng giòn, có thể gấp đôi bánh lại như bánh mì kẹp, thường mua ăn khi dạo chợ đêm hoặc các con dốc ở Đà Lạt vào buổi tối.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://en.wikipedia.org/wiki/B%C3%A1nh_tr%C3%A1ng_n%C6%B0%E1%BB%9Bng", "label": "Bánh tráng nướng – Wikipedia (tiếng Anh)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "atiso-da-lat",
+      "name": "Atiso Đà Lạt",
+      "isHero": false,
+      "tasteTags": ["savory", "vegetarian-friendly"],
+      "description": "Atiso được người Pháp du nhập vào Việt Nam đầu thế kỷ 20 và trồng nhiều nhất ở Đà Lạt nhờ khí hậu mát lạnh quanh năm. Từ atiso, người Đà Lạt chế biến thành trà atiso, canh/lẩu hầm với giò heo hoặc xương, tận dụng phần đế hoa và lá bắc để lấy vị ngọt thanh, mát dịu đặc trưng.",
+      "keyIngredients": ["bông atiso Đà Lạt", "giò heo hoặc xương ống", "táo tàu, hạt sen (tùy công thức)", "muối, tiêu"],
+      "prepOutline": [
+        "Chọn bông atiso tươi, cắt bỏ phần gai cứng, rửa sạch",
+        "Hầm xương hoặc giò heo lấy nước ngọt trong nhiều giờ",
+        "Cho atiso vào hầm cùng đến khi cánh hoa mềm, thấm vị ngọt của nước hầm",
+        "Nêm nếm lại gia vị vừa ăn trước khi tắt bếp"
+      ],
+      "howToEat": "Dùng nóng như món canh/lẩu trong bữa cơm, gắp từng cánh atiso chấm muối tiêu, ăn kèm giò heo hầm mềm; phần trà atiso khô thì hãm nước sôi uống như trà thảo mộc.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Artichoke_in_Dalat%2C_Vietnam.jpg", "attribution": "Jackeven, Wikimedia Commons", "license": "CC BY-SA 3.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Atis%C3%B4", "label": "Atisô – Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

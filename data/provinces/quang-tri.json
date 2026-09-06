@@ -1,0 +1,76 @@
+{
+  "slug": "quang-tri",
+  "code": "VN-QT",
+  "name": "Quảng Trị",
+  "region": "Trung",
+  "centroid": [106.92758, 16.74795],
+  "summary": "Quảng Trị có nền ẩm thực gắn với sông nước và làng nghề lâu đời: cháo bột cá lóc sợi bột dai phải ăn bằng đũa, bánh ướt Phương Lang từ làng nghề gần trăm năm tuổi, và biến thể cháo cá vạt giường của vùng Hải Lăng — tất cả đều mang vị cay nồng đặc trưng của miền Trung nắng gió.",
+  "summarySourceRefs": [
+    { "url": "https://ipa.quangtri.gov.vn/vi/xuc-tien-du-lich/thong-tin-du-lich/dac-san-banh-uot-phuong-lang-32.html", "label": "Cổng TTĐT Xúc tiến Đầu tư Quảng Trị – Bánh ướt Phương Lang" }
+  ],
+  "heroDishSlug": "chao-bot-ca-loc-quang-tri",
+  "dishes": [
+    {
+      "slug": "chao-bot-ca-loc-quang-tri",
+      "name": "Cháo bột cá lóc Quảng Trị",
+      "isHero": true,
+      "tasteTags": ["savory", "spicy", "noodle-soup", "seafood"],
+      "description": "Cháo bột cá lóc là đặc sản độc đáo của Quảng Trị, dù gọi là \"cháo\" nhưng không nấu từ gạo mà từ bột gạo nhồi cán thành sợi dày, khi nấu chín vẫn giữ độ dai mềm vừa phải chứ không nhũn như cháo thông thường. Nước dùng ninh từ đầu, xương, đuôi cá lóc, nêm củ nén, lá nén, ớt và tiêu Vĩnh Linh cay nồng.",
+      "keyIngredients": ["bột gạo (cán sợi)", "cá lóc (cá quả)", "củ nén, lá nén", "ớt, tiêu Vĩnh Linh", "hành lá, rau thơm"],
+      "prepOutline": [
+        "Ngâm gạo, xay thành bột rồi nhồi kỹ, cán mỏng và cắt thành sợi bột dày bản",
+        "Luộc cá lóc nguyên con, gỡ lấy thịt, ướp với muối, tiêu, hành, nước mắm",
+        "Ninh nước dùng từ đầu, xương, đuôi cá cho ngọt tự nhiên, nêm củ nén và ớt",
+        "Trụng sợi bột chín tới, chan nước dùng và bày thịt cá lóc lên trên"
+      ],
+      "howToEat": "Người Quảng Trị ăn món này bằng đũa để gắp sợi bột dai, còn phần nước dùng đặc sánh thì múc bằng thìa.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://ngoisao.vnexpress.net/chao-bot-ca-loc-quang-tri-an-phai-dung-dua-duoc-xuat-khau-sang-my-4959357.html", "label": "VnExpress – Cháo bột cá lóc Quảng Trị" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-uot-phuong-lang",
+      "name": "Bánh ướt Phương Lang",
+      "isHero": false,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Bánh ướt Phương Lang là đặc sản của làng Phương Lang (xã Hải Ba, huyện Hải Lăng), nơi có nghề làm bánh ướt truyền thống gần trăm năm tuổi. Nhờ dùng gạo ngon của vùng Quảng Trị, lớp bánh tráng hấp mỏng, mềm và dẻo dai hơn hẳn các loại bánh ướt nơi khác.",
+      "keyIngredients": ["gạo ngâm xay mịn", "nước mắm chua ngọt", "hành phi, rau sống", "thịt luộc hoặc chả (tùy nơi phục vụ)"],
+      "prepOutline": [
+        "Gạo được vo sạch, ngâm qua đêm rồi xay thành bột nước mịn",
+        "Tráng bột mỏng trên nồi hơi sôi, hấp chín thành từng lớp bánh mềm",
+        "Cuộn hoặc xếp bánh thành từng lớp, rắc hành phi lên trên",
+        "Pha nước chấm chua ngọt từ nước mắm, tỏi, ớt, đường"
+      ],
+      "howToEat": "Ăn kèm thịt luộc hoặc chả, chấm nước mắm chua ngọt và rau sống.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28b%C3%A1nh_%C6%B0%E1%BB%9Bt_Ph%C6%B0%C6%A1ng_Lang%29_%281%29.jpg", "attribution": "Phương Huy, Wikimedia Commons", "license": "CC BY-SA 4.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://ipa.quangtri.gov.vn/vi/xuc-tien-du-lich/thong-tin-du-lich/dac-san-banh-uot-phuong-lang-32.html", "label": "Cổng TTĐT Xúc tiến Đầu tư Quảng Trị – Bánh ướt Phương Lang" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "chao-ca-vat-giuong-hai-lang",
+      "name": "Cháo cá vạt giường Hải Lăng",
+      "isHero": false,
+      "tasteTags": ["savory", "herb-forward", "seafood"],
+      "description": "Cháo cá vạt giường là biến thể địa phương của món cháo bột cá lóc, đặc trưng của vùng Hải Lăng, Quảng Trị. Tên gọi \"vạt giường\" xuất phát từ hình dáng sợi bột được cán và cắt bản to giống các thanh vạt giường tre truyền thống. Món có thể biến tấu thêm vịt, riêu cua, tôm hoặc cua tùy mùa.",
+      "keyIngredients": ["sợi bột gạo cán bản to", "cá lóc (hoặc vịt, cua, tôm)", "củ nén", "hành, tiêu, nước mắm"],
+      "prepOutline": [
+        "Ngâm gạo, xay bột, ép và cán tay thành từng tấm mỏng rồi cắt sợi bản to",
+        "Luộc nguyên con cá lóc, gỡ xương lấy thịt, ướp muối, tiêu, hành, nước mắm",
+        "Nấu nước dùng từ xương cá và củ nén cho thơm ngọt",
+        "Kết hợp sợi bột, thịt cá đã ướp và nước dùng trong một tô lớn, rắc hành phi"
+      ],
+      "howToEat": "Dùng chung theo kiểu mâm cộng đồng, vừa ăn vừa cảm nhận hương thơm củ nén và hành đặc trưng của món.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Ch%C3%A1o_c%C3%A1_V%E1%BA%A1t_gi%C6%B0%E1%BB%9Dng_H%E1%BA%A3i_L%C4%83ng", "label": "Wikipedia tiếng Việt – Cháo cá Vạt giường Hải Lăng" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "vinh-long",
+  "code": "VN-VL",
+  "name": "Vĩnh Long",
+  "region": "Nam",
+  "centroid": [105.9722, 10.2397],
+  "summary": "Vĩnh Long là tỉnh nằm giữa hai nhánh sông Tiền và sông Hậu, được mệnh danh là vùng đất của những cù lao trù phú trong lòng đồng bằng sông Cửu Long. Ẩm thực nơi đây gắn liền với sản vật sông nước và miệt vườn, tiêu biểu là cá lóc nướng trui dân dã, cá cháy Trà Ôn - đặc sản quý theo mùa của sông Hậu, và bánh xèo hến độc đáo của vùng Cù Lao Dài.",
+  "summarySourceRefs": [
+    { "url": "https://vinhlongtourist.vn/vi/detailnews/?t=ca-loc-nuong-trui-dac-san-vinh-long-niu-chan-du-khach&id=news_11186", "label": "Cá lóc nướng trui – đặc sản Vĩnh Long níu chân du khách – Cổng thông tin du lịch Vĩnh Long" }
+  ],
+  "heroDishSlug": "ca-loc-nuong-trui",
+  "dishes": [
+    {
+      "slug": "ca-loc-nuong-trui",
+      "name": "Cá lóc nướng trui",
+      "isHero": true,
+      "tasteTags": ["savory", "grilled", "seafood"],
+      "description": "Cá lóc nướng trui là món ăn dân dã gắn liền với công cuộc khai phá vùng đất phương Nam, nay trở thành đặc sản được quảng bá rộng rãi tại các điểm du lịch sinh thái miệt vườn Vĩnh Long. Cá lóc đồng vừa bắt lên được giữ nguyên con, không đánh vảy, không làm ruột, xiên que tre từ miệng đến đuôi rồi cắm xuống đất, phủ rơm khô đốt cho đến khi cá chín. Cách nướng mộc mạc này giữ được vị ngọt tự nhiên và mùi thơm đặc trưng của cá đồng, khi ăn chỉ cần cạo bỏ lớp vảy cháy để lộ ra thịt cá trắng thơm bên trong.",
+      "keyIngredients": [
+        "Cá lóc đồng còn sống",
+        "Rơm khô (hoặc than hồng)",
+        "Bún tươi, bánh tráng",
+        "Rau sống, rau thơm các loại",
+        "Nước mắm me hoặc mắm nêm"
+      ],
+      "prepOutline": [
+        "Cá lóc bắt lên rửa sạch nhớt, giữ nguyên con không đánh vảy, không mổ bụng",
+        "Xiên một que tre dài từ miệng xuyên đến đuôi cá",
+        "Cắm que xuống đất, phủ rơm khô kín cá rồi châm lửa đốt cho đến khi cá chín đều",
+        "Cạo bỏ lớp vảy cháy đen bên ngoài để lộ phần thịt cá trắng thơm"
+      ],
+      "howToEat": "Cá lóc nướng trui được gỡ thịt cuốn cùng bánh tráng, bún, rau sống rồi chấm nước mắm me hoặc mắm nêm pha chua ngọt, ăn ngay khi còn nóng để cảm nhận trọn vị thơm của cá đồng.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/C%C3%A1_l%C3%B3c_n%C6%B0%E1%BB%9Bng_trui.JPG",
+          "attribution": "Memberofc1, Wikimedia Commons",
+          "license": "CC BY-SA 3.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/C%C3%A1_l%C3%B3c_n%C6%B0%E1%BB%9Bng_trui", "label": "Cá lóc nướng trui – Wikipedia tiếng Việt" },
+        { "url": "https://vinhlongtourist.vn/vi/detailnews/?t=ca-loc-nuong-trui-dac-san-vinh-long-niu-chan-du-khach&id=news_11186", "label": "Cá lóc nướng trui – đặc sản Vĩnh Long níu chân du khách – Cổng thông tin du lịch Vĩnh Long" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ca-chay-tra-on",
+      "name": "Cá cháy Trà Ôn",
+      "isHero": false,
+      "tasteTags": ["savory", "seafood"],
+      "description": "Cá cháy là loài cá nước lợ quý hiếm từng được ghi chép trong sử sách xưa với tên gọi \"thiều ngư\", chỉ xuất hiện theo mùa duy nhất trong năm là trước và sau Tết Nguyên Đán, khi có gió chướng thổi về vùng sông Hậu đoạn qua Trà Ôn. Cá có thân dẹp, vảy ánh bạc, xương khá nhiều nhưng thịt trắng, béo nhẹ và thơm đặc trưng mà ít loài cá nước lợ nào có được. Do môi trường sông nước thay đổi, sản lượng cá cháy Trà Ôn ngày càng khan hiếm, khiến giá bán khá cao và trở thành món quà quý mỗi dịp Tết đến.",
+      "keyIngredients": [
+        "Cá cháy tươi",
+        "Mía tươi (lót nồi khi kho)",
+        "Me hoặc xoài xanh bào sợi",
+        "Thì là, cà chua",
+        "Nước mắm, đường, tiêu"
+      ],
+      "prepOutline": [
+        "Làm sạch cá cháy, cắt khúc vừa ăn",
+        "Xếp mía tươi chẻ lát ở đáy nồi rồi xếp cá lên trên để kho rim lửa nhỏ cho xương mềm",
+        "Hoặc nấu canh chua với me, cà chua, thì là",
+        "Có thể lóc thịt cá mỏng nhúng vào nước lẩu đang sôi cùng xoài xanh bào sợi"
+      ],
+      "howToEat": "Cá cháy kho rim ăn nóng cùng cơm trắng, hoặc dùng làm lẩu chua nhúng kèm rau sống và bún; vì xương khá nhiều nên thực khách thường ăn chậm rãi để thưởng trọn vị béo thơm của cá.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://thvl.vn/song-khoe/am-thuc/ca-chay-tra-on/", "label": "Cá cháy Trà Ôn – Đài Phát thanh - Truyền hình Vĩnh Long (THVL)" }
+      ],
+      "occasions": ["Tết Nguyên Đán"]
+    },
+    {
+      "slug": "banh-xeo-hen-cu-lao-dai",
+      "name": "Bánh xèo hến Cù Lao Dài",
+      "isHero": false,
+      "tasteTags": ["savory", "seafood", "street-food"],
+      "description": "Bánh xèo hến là đặc sản riêng có của vùng Cù Lao Dài, huyện Vũng Liêm, được Tổ chức Kỷ lục Việt Nam (VietKings) đưa vào danh sách 100 món ăn đặc sản Việt Nam giai đoạn 2021-2022. Khác với bánh xèo tôm thịt thông thường, nhân bánh nơi đây dùng thịt hến sông tươi xào cùng tôm, đậu xanh và củ sắn bào sợi, vỏ bánh pha nước cốt dừa béo và một bí quyết địa phương là thêm nước cốt rau ngò để bánh giòn mà không dính chảo dù không cần nhiều dầu mỡ. Món ăn thường được cuốn cùng lá cách, cát lồi và các loại rau rừng đặc trưng của vùng cù lao sông nước.",
+      "keyIngredients": [
+        "Hến sông tươi",
+        "Tôm",
+        "Bột gạo pha nước cốt dừa",
+        "Đậu xanh, củ sắn (củ đậu) bào sợi",
+        "Lá cách, cát lồi, rau rừng",
+        "Nước mắm chua ngọt tỏi ớt"
+      ],
+      "prepOutline": [
+        "Hến sông luộc lấy thịt, xào sơ cùng tôm cho thấm gia vị",
+        "Pha bột gạo với nước cốt dừa và nước cốt rau ngò để tạo độ giòn cho vỏ bánh",
+        "Xào nhân hến, tôm cùng đậu xanh và củ sắn bào sợi",
+        "Đổ bột vào chảo nóng đã thoa mỡ heo, cho nhân vào, đậy nắp chờ vỏ bánh giòn vàng"
+      ],
+      "howToEat": "Bánh xèo hến ăn nóng ngay khi vừa ra chảo, cuốn cùng lá cách, cát lồi và rau rừng địa phương rồi chấm nước mắm chua ngọt pha tỏi ớt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://kyluc.vn/tin-tuc/bep-vang/vietkings-cong-bo-top-100-mon-an-dac-san-viet-nam-2021-2022-p-120-banh-xeo-hen-cu-lao-dai-tinh-vinh-long", "label": "VietKings công bố Top 100 món ăn đặc sản Việt Nam – Bánh xèo hến Cù lao Dài" },
+        { "url": "https://vinhlongtourist.vn/vi/detailnews/?t=binh-di-con-hen-song-que-dam-da-banh-xeo-hen-xu-cu-lao-dai&id=news_11371", "label": "Bình dị con hến sông quê, đậm đà bánh xèo hến xứ cù lao Dài – Cổng thông tin du lịch Vĩnh Long" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

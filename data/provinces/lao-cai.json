@@ -1,0 +1,77 @@
+{
+  "slug": "lao-cai",
+  "code": "VN-LC",
+  "name": "Lào Cai",
+  "region": "Bắc",
+  "centroid": [104.15, 22.48],
+  "summary": "Lào Cai là tỉnh vùng cao Tây Bắc giáp Trung Quốc, nơi có Sa Pa khí hậu ôn đới và chợ phiên Bắc Hà rực rỡ sắc màu của người Mông, Dao. Ẩm thực nơi đây mang đậm dấu ấn núi rừng với thắng cố ngựa nấu trong chảo lớn, cá hồi nuôi tại suối lạnh Sa Pa và thịt lợn bản thả rông béo thơm.",
+  "summarySourceRefs": [
+    { "url": "https://baolaocai.vn/thit-lon-cap-nach-dac-san-kho-quen-cua-lao-cai-post387318.html", "label": "Thịt lợn cắp nách, đặc sản khó quên của Lào Cai - Báo Lào Cai" }
+  ],
+  "heroDishSlug": "thang-co-bac-ha",
+  "dishes": [
+    {
+      "slug": "thang-co-bac-ha",
+      "name": "Thắng cố Bắc Hà",
+      "isHero": true,
+      "tasteTags": ["savory", "street-food"],
+      "description": "Thắng cố là món ăn truyền thống của người Mông, ra đời cách đây khoảng 200 năm khi cộng đồng Mông định cư tại vùng Bắc Hà, Lào Cai, sau lan rộng sang các dân tộc Dao, Tày, Kinh trong vùng. Món ăn được nấu từ thịt và toàn bộ nội tạng ngựa (hoặc trâu, bò, lợn ở phiên bản hiện đại) trong một chảo lớn, dùng chính mỡ con vật để xào săn rồi đổ nước ninh nhừ, nêm thảo quả, quế, sả nướng giã nhỏ. Thắng cố Bắc Hà nổi tiếng nhất cả nước, thường được nấu và bán ngay tại phiên chợ, chảo luôn giữ trên bếp lửa suốt buổi chợ.",
+      "keyIngredients": ["thịt và nội tạng ngựa (hoặc trâu, bò)", "thảo quả", "quế", "sả nướng", "muối, địa điền"],
+      "prepOutline": [
+        "Sơ chế sạch thịt và toàn bộ nội tạng, cắt miếng vừa ăn",
+        "Xào săn thịt bằng chính mỡ của con vật trên chảo gang lớn",
+        "Đổ nước, đun sôi rồi vớt bọt liên tục để nước trong, ngọt",
+        "Cho thảo quả, quế, sả nướng giã nhỏ vào ninh cùng",
+        "Ninh nhừ nhiều giờ, giữ chảo trên bếp than suốt buổi bán"
+      ],
+      "howToEat": "Thắng cố múc ra bát ăn nóng ngay tại chợ phiên, thường nhâm nhi cùng rượu ngô Bắc Hà và ăn kèm bánh ngô, là dịp giao lưu cộng đồng của bà con vùng cao mỗi phiên chợ.",
+      "images": [
+        { "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Th%E1%BA%AFng_c%E1%BB%91_ch%E1%BB%A3_B%E1%BA%AFc_H%C3%A0.jpg", "attribution": "Maria Hsu (Flickr), qua Wikimedia Commons", "license": "CC BY 2.0" }
+      ],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/Th%E1%BA%AFng_c%E1%BB%91", "label": "Thắng cố - Wikipedia tiếng Việt" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ca-hoi-sa-pa",
+      "name": "Cá hồi Sa Pa",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Cá hồi Sa Pa là mô hình nuôi cá hồi vân (cá hồi ráng) đầu tiên và nổi tiếng nhất Việt Nam, tận dụng nguồn nước suối lạnh quanh năm 15-16 độ C tại các khu vực như Thác Bạc, Tả Van, Bản Khoang. Nhờ điều kiện khí hậu gần giống châu Âu, cá hồi Sa Pa phát triển chậm nhưng thịt chắc, màu hồng cam tự nhiên đẹp mắt, vị ngọt thanh và ít mỡ hơn cá hồi nhập khẩu. Sản phẩm này góp phần tạo sinh kế cho đồng bào dân tộc thiểu số vùng cao và trở thành thương hiệu du lịch ẩm thực của Sa Pa.",
+      "keyIngredients": ["cá hồi vân nuôi tại Sa Pa", "gừng, sả", "rau cải mèo hoặc rau thơm địa phương", "gia vị nướng hoặc lẩu"],
+      "prepOutline": [
+        "Chọn cá hồi tươi vừa thu hoạch từ bể nuôi nước suối lạnh",
+        "Làm sạch, lọc phi lê hoặc cắt khúc tùy món chế biến",
+        "Ướp cá cùng gừng, sả nếu nướng hoặc chuẩn bị nước lẩu chua cay",
+        "Nướng trên than hoa hoặc nhúng lẩu cùng rau địa phương"
+      ],
+      "howToEat": "Cá hồi Sa Pa thường được chế biến thành gỏi, nướng giấy bạc, lẩu cá hồi măng chua hoặc phi lê áp chảo, dùng nóng kèm rau cải mèo và các loại rau rừng đặc trưng của Sa Pa.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://laocaitourism.vn/vi/detailnews/?t=ca-hoi-sa-pa-dac-san-lao-cai&id=news_723", "label": "Cá hồi Sa Pa - đặc sản Lào Cai - Cổng thông tin du lịch Lào Cai" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "thit-lon-cap-nach",
+      "name": "Thịt lợn cắp nách",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Lợn cắp nách là giống lợn bản địa của đồng bào vùng cao Lào Cai, lai giữa lợn rừng và lợn Mường, được thả rông tự kiếm ăn nên khi trưởng thành cũng chỉ nặng dưới 20kg, đủ nhỏ để người dân có thể cắp vào nách mang đi chợ bán - đây cũng là nguồn gốc tên gọi. Thịt lợn cắp nách nạc nhiều, bì mỏng giòn, thớ thịt chắc và thơm tự nhiên nhờ chế độ nuôi thả hoàn toàn tự nhiên trên các sườn núi.",
+      "keyIngredients": ["thịt lợn cắp nách", "lá mắc mật hoặc riềng, sả", "muối hạt, tiêu rừng", "rau cải mèo ăn kèm"],
+      "prepOutline": [
+        "Chọn lợn cắp nách nhỏ, làm sạch, để nguyên miếng lớn hoặc pha lóc",
+        "Ướp thịt với riềng, sả, mắc mật hoặc chỉ muối hạt để giữ vị tự nhiên",
+        "Nướng trên than hoa hoặc hấp/luộc tùy món",
+        "Thái miếng vừa ăn khi thịt chín tới, còn giữ độ ngọt"
+      ],
+      "howToEat": "Thịt lợn cắp nách thường được hấp, nướng hoặc quay để giữ vị ngọt tự nhiên, chấm cùng muối tiêu chanh hoặc lá nhội giã, phổ biến trong các bữa cỗ và nhà hàng đặc sản ở Sa Pa, Bắc Hà.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://baolaocai.vn/thit-lon-cap-nach-dac-san-kho-quen-cua-lao-cai-post387318.html", "label": "Thịt lợn cắp nách, đặc sản khó quên của Lào Cai - Báo Lào Cai" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "slug": "long-an",
+  "code": "VN-LA",
+  "name": "Long An",
+  "region": "Nam",
+  "centroid": [106.16888, 10.73112],
+  "summary": "Long An là cửa ngõ giữa Đông Nam Bộ và Đồng bằng sông Cửu Long, nơi những cánh đồng lúa và kênh rạch trù phú nuôi dưỡng một nền ẩm thực đậm chất sông nước miền Tây. Lạp xưởng tươi Cần Đước, cá lóc nướng trui và các món canh chua, lẩu mắm là những món ăn gắn bó lâu đời với đời sống người dân nơi đây.",
+  "summarySourceRefs": [
+    { "url": "https://hutchankhongxanh.com/lap-xuong-tuoi-can-duoc-long-an/", "label": "Lạp xưởng tươi Cần Đước Long An (Hút Chân Không Xanh) — nguồn báo chí, chưa có bài Wikipedia riêng" }
+  ],
+  "heroDishSlug": "lap-xuong-tuoi-can-duoc",
+  "dishes": [
+    {
+      "slug": "lap-xuong-tuoi-can-duoc",
+      "name": "Lạp xưởng tươi Cần Đước",
+      "isHero": true,
+      "tasteTags": ["savory", "sweet"],
+      "description": "Lạp xưởng tươi Cần Đước là đặc sản gắn liền với vùng Rạch Kiến, huyện Cần Đước, Long An, có lịch sử hơn 300 năm bắt nguồn từ một gia đình người Hoa làm nghề mổ heo lập nghiệp tại đây. Khác với lạp xưởng khô phơi nắng lâu ngày, lạp xưởng tươi Cần Đước có vị chua ngọt đặc trưng, bề mặt còn hơi ẩm, điểm những hạt mỡ đỏ hồng như hạt lựu, không cần phơi khô hoàn toàn nên giữ được độ mềm và vị ngọt tự nhiên của thịt.",
+      "keyIngredients": [
+        "Thịt heo nạc vai tươi",
+        "Mỡ heo thái hạt lựu",
+        "Ruột heo non làm vỏ bọc",
+        "Đường, muối, rượu trắng, ngũ vị hương",
+        "Tiêu hạt"
+      ],
+      "prepOutline": [
+        "Thịt heo và mỡ được thái hoặc xay nhỏ, mỡ thái hạt lựu để tạo độ béo giòn khi ăn",
+        "Trộn thịt và mỡ với đường, muối, rượu trắng và ngũ vị hương theo tỷ lệ gia truyền",
+        "Nhồi hỗn hợp vào ruột heo non đã làm sạch, thắt thành từng khúc vừa ăn",
+        "Phơi lạp xưởng trong nắng nhẹ một thời gian ngắn (không phơi khô kiệt như lạp xưởng thường) rồi treo nơi thoáng mát"
+      ],
+      "howToEat": "Lạp xưởng tươi được chiên, nướng hoặc chưng cách thủy đến khi chín vàng, cắt lát xiên chéo, ăn kèm dưa chua, rau sống và cơm nóng hoặc bánh mì.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://hutchankhongxanh.com/lap-xuong-tuoi-can-duoc-long-an/", "label": "Lạp xưởng tươi Cần Đước Long An (Hút Chân Không Xanh) — nguồn báo chí, chưa có bài Wikipedia riêng" }
+      ],
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+    },
+    {
+      "slug": "ca-loc-nuong-trui-long-an",
+      "name": "Cá lóc nướng trui Long An",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory", "street-food"],
+      "description": "Cá lóc nướng trui là món ăn dân dã, mộc mạc bậc nhất của người dân Long An và cả vùng Tây Nam Bộ, được xem là dễ chế biến nhất mà vẫn giữ trọn vị ngọt tự nhiên của cá đồng. Cá lóc vừa bắt lên còn tươi, không cần đánh vảy hay làm ruột, được xiên que từ đầu đến đuôi rồi vùi trong đống rơm đốt cho đến khi cháy xém lớp vảy ngoài, thịt bên trong chín thơm ngọt.",
+      "keyIngredients": [
+        "Cá lóc đồng tươi (còn sống hoặc vừa bắt)",
+        "Rơm khô để nướng",
+        "Bún tươi, bánh tráng",
+        "Rau sống các loại mọc dại (rau đắng, húng, diếp cá...)",
+        "Nước mắm me hoặc muối ớt chấm kèm"
+      ],
+      "prepOutline": [
+        "Rửa sơ cá lóc còn sống, không đánh vảy, không mổ bụng",
+        "Xiên một que tre dài từ miệng đến đuôi cá để giữ cá thẳng khi nướng",
+        "Cắm que cá xuống đất, phủ rơm khô lên trên rồi châm lửa đốt cho đến khi rơm cháy hết và cá chín",
+        "Cạo bỏ lớp vảy cháy xém bên ngoài, giữ lại phần thịt cá bên trong"
+      ],
+      "howToEat": "Cá lóc nướng trui được gỡ thịt, cuốn cùng bánh tráng nhúng nước, bún tươi và rau sống, chấm vào chén mắm me hoặc muối ớt chanh.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Grilled_snakeheads.jpg",
+          "attribution": "Baoothersks / Wikimedia Commons",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://bazantravel.com/ca-loc-nuong-trui-long-an/", "label": "Cá lóc nướng trui Long An (Bazan Travel) — nguồn báo chí, chưa có bài Wikipedia riêng" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "lau-mam-long-an",
+      "name": "Lẩu mắm Long An",
+      "isHero": false,
+      "tasteTags": ["savory", "spicy", "herb-forward"],
+      "description": "Lẩu mắm là món ăn dân dã nhưng chứa đựng nét văn hóa ẩm thực truyền thống lâu đời của người dân Long An, vùng đất giáp ranh giữa Đông Nam Bộ và Đồng bằng sông Cửu Long. Nước lẩu được nấu từ mắm cá linh hoặc mắm cá sặc hòa cùng nước hầm xương, dậy mùi thơm nồng đặc trưng, vị cay của ớt và vị ngọt của hải sản, thịt heo hòa quyện tạo nên món lẩu đậm đà khó quên.",
+      "keyIngredients": [
+        "Mắm cá linh hoặc mắm cá sặc",
+        "Nước hầm xương heo",
+        "Cá lóc, tôm, mực, thịt heo ba chỉ",
+        "Cà tím, đậu bắp",
+        "Sả, tỏi, ớt",
+        "Rau ăn kèm: bông súng, bông điên điển, rau đắng, rau muống"
+      ],
+      "prepOutline": [
+        "Nấu tan mắm cá trong nước rồi lọc bỏ xương, lấy phần nước cốt mắm đậm vị",
+        "Ninh nước hầm xương heo rồi hòa cùng nước mắm đã lọc",
+        "Phi thơm sả, tỏi rồi nêm nếm lại nồi nước lẩu, thêm cà tím và đậu bắp",
+        "Chuẩn bị hải sản, thịt và các loại rau đặc trưng miền Tây để nhúng lẩu"
+      ],
+      "howToEat": "Nồi lẩu được giữ sôi trên bếp, thực khách nhúng cá, tôm, mực, thịt và rau vào nước lẩu đang sôi, ăn kèm bún tươi và chấm thêm nước mắm ớt.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.ivivu.com/blog/2023/05/top-9-dac-san-long-an-mang-huong-vi-mien-que-ngon-tru-danh/", "label": "Top đặc sản Long An: lẩu mắm (iVIVU) — nguồn báo chí, chưa có bài Wikipedia riêng" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

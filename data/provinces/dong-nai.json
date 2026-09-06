@@ -1,0 +1,99 @@
+{
+  "slug": "dong-nai",
+  "code": "VN-DNA",
+  "name": "Đồng Nai",
+  "region": "Nam",
+  "centroid": [107.18228, 11.05735],
+  "summary": "Đồng Nai nằm bên dòng sông Đồng Nai và nổi tiếng với làng bưởi Tân Triều trăm năm tuổi, tạo nên một nền ẩm thực kết hợp giữa thủy sản nước ngọt và trái cây đặc sản. Gỏi cá Biên Hòa, các món chế biến từ bưởi và những đặc sản của vùng Long Khánh làm nên bản sắc ẩm thực đa dạng của tỉnh.",
+  "summarySourceRefs": [
+    { "url": "https://moit.gov.vn/tu-hao-hang-viet-nam/buoi-tan-trieu-san-vat-nuc-tieng-cua-vung-dat-dong-nai.html", "label": "Bưởi Tân Triều – sản vật nức tiếng của vùng đất Đồng Nai (Bộ Công Thương)" }
+  ],
+  "heroDishSlug": "goi-ca-bien-hoa",
+  "dishes": [
+    {
+      "slug": "goi-ca-bien-hoa",
+      "name": "Gỏi cá Biên Hòa",
+      "isHero": true,
+      "tasteTags": ["sour", "savory", "herb-forward"],
+      "description": "Gỏi cá Biên Hòa là đặc sản lâu đời của thành phố Biên Hòa, tận dụng nguồn cá lóc đồng tươi ngon đánh bắt từ sông Đồng Nai. Cá được lóc da, lọc bỏ xương, thái lát mỏng, ướp cùng muối, tiêu, đường, chanh, ớt rồi trộn với rất nhiều loại rau thơm và nước sốt chua ngọt, tạo nên món gỏi tươi mát, đậm đà rất riêng của vùng đất ven sông này.",
+      "keyIngredients": [
+        "Cá lóc đồng tươi (đánh bắt từ sông Đồng Nai)",
+        "Muối, tiêu, đường, chanh, ớt để ướp",
+        "Rau thơm: đinh lăng, húng quế, ngò gai, tía tô, diếp cá",
+        "Đậu phộng rang, bánh tráng",
+        "Nước mắm chua ngọt pha sốt đặc"
+      ],
+      "prepOutline": [
+        "Cá lóc được làm sạch, lóc bỏ da và xương, thái lát mỏng",
+        "Ướp cá thái lát với muối, tiêu, đường, chanh và ớt cho thịt cá se lại và bớt tanh",
+        "Chuẩn bị các loại rau thơm rửa sạch, để ráo",
+        "Pha nước sốt chua ngọt đậm đà để chấm kèm"
+      ],
+      "howToEat": "Dùng bánh tráng hoặc lá rau cuốn miếng cá đã ướp cùng các loại rau thơm, cuộn chặt lại rồi chấm ngập vào chén nước sốt chua ngọt, có thể rắc thêm đậu phộng rang lên trên.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vietgiaitri.com/goi-ca-bien-hoa-mon-dac-san-ngon-tuyet-cua-dong-nai-20211108i6142826/", "label": "Gỏi cá Biên Hòa – món đặc sản của Đồng Nai (Việt Giải Trí) — nguồn báo chí, chưa có bài Wikipedia riêng" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "goi-buoi-tan-trieu",
+      "name": "Gỏi bưởi Tân Triều",
+      "isHero": false,
+      "tasteTags": ["sour", "sweet", "vegetarian-friendly", "herb-forward"],
+      "description": "Gỏi bưởi là món ăn tận dụng đặc sản bưởi Tân Triều — giống bưởi vỏ xanh, mỏng, vị ngọt thanh không đắng của vùng Tân Triều, Vĩnh Cửu, Đồng Nai. Múi bưởi được tách tơi ra rồi trộn cùng tôm, thịt hoặc chỉ đơn giản với rau thơm và nước mắm chua ngọt, tạo nên món gỏi thanh mát, chua ngọt hài hòa, thường xuất hiện trong các bữa cơm gia đình và tại khu du lịch làng bưởi.",
+      "keyIngredients": [
+        "Bưởi Tân Triều (tách múi, tơi thịt)",
+        "Tôm luộc hoặc thịt ba chỉ luộc",
+        "Cà rốt bào sợi",
+        "Rau răm, húng quế",
+        "Đậu phộng rang",
+        "Nước mắm chua ngọt pha tỏi ớt"
+      ],
+      "prepOutline": [
+        "Bưởi được bóc vỏ, tách múi rồi tách nhẹ từng tép tơi ra, bỏ bớt vị the",
+        "Tôm và thịt ba chỉ luộc chín, thái miếng hoặc xé nhỏ",
+        "Trộn bưởi cùng tôm, thịt, cà rốt bào và rau thơm",
+        "Rưới nước mắm chua ngọt lên và trộn đều nhẹ tay để múi bưởi không bị nát"
+      ],
+      "howToEat": "Gỏi bưởi được ăn kèm bánh phồng tôm chiên giòn để xúc, rắc thêm đậu phộng rang lên trên trước khi thưởng thức.",
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/G%E1%BB%8Fi_b%C6%B0%E1%BB%9Fi.jpg",
+          "attribution": "Andrea Nguyen / Wikimedia Commons",
+          "license": "CC BY 2.0"
+        }
+      ],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/lang-buoi-tan-trieu-nuc-tieng-dong-nai-14216", "label": "Làng bưởi Tân Triều với đặc sản nức tiếng Đồng Nai (Mia.vn) — nguồn báo chí, chưa có bài Wikipedia riêng" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ga-hap-buoi-tan-trieu",
+      "name": "Gà hấp bưởi Tân Triều",
+      "isHero": false,
+      "tasteTags": ["savory", "herb-forward"],
+      "description": "Gà hấp bưởi là món ăn sáng tạo của người dân vùng Tân Triều nhằm tận dụng lá và vỏ bưởi thơm đặc trưng của địa phương. Gà ta được hấp cùng lá bưởi hoặc vỏ bưởi bào mỏng, giúp thịt gà thấm mùi thơm the dịu rất riêng, khác hẳn với gà hấp lá chanh hay hấp muối thông thường.",
+      "keyIngredients": [
+        "Gà ta",
+        "Lá bưởi hoặc vỏ bưởi Tân Triều bào mỏng",
+        "Sả, gừng",
+        "Muối, hạt nêm",
+        "Rau răm ăn kèm"
+      ],
+      "prepOutline": [
+        "Gà làm sạch, để nguyên con hoặc chặt miếng lớn, xát muối và gừng cho bớt mùi",
+        "Lót lá bưởi hoặc vỏ bưởi bào mỏng dưới đáy nồi hấp và phủ lên gà",
+        "Hấp cách thủy gà cùng sả đập dập cho đến khi thịt chín mềm và thấm mùi thơm của bưởi",
+        "Chặt gà thành miếng vừa ăn sau khi hấp chín"
+      ],
+      "howToEat": "Gà hấp bưởi được chặt miếng, ăn kèm rau răm và chấm muối tiêu chanh hoặc muối ớt, thường dùng trong các bữa tiệc gia đình.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://mia.vn/cam-nang-du-lich/dac-san-dong-nai-12294", "label": "Top món đặc sản Đồng Nai: gà hấp bưởi Tân Triều (Mia.vn) — nguồn báo chí, chưa có bài Wikipedia riêng" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

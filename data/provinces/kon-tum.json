@@ -1,0 +1,74 @@
+{
+  "slug": "kon-tum",
+  "code": "VN-KT",
+  "name": "Kon Tum",
+  "region": "Trung",
+  "centroid": [107.87438, 14.64907],
+  "summary": "Kon Tum là tỉnh cực Bắc Tây Nguyên, nơi sinh sống của nhiều dân tộc Bahnar, Xơ Đăng, Giẻ Triêng với nền ẩm thực gắn liền rừng núi. Ẩm thực Kon Tum nổi bật với các món ăn nhiều rau lá rừng, thịt heo bản địa và các đặc sản mới phát triển ở vùng khí hậu mát mẻ Măng Đen như cá tầm.",
+  "summarySourceRefs": [
+    { "url": "https://dantocphattrien.vietnamnet.vn/dac-san-goi-la-kon-tum-65711.html", "label": "Đặc sản gỏi lá Kon Tum – Dân tộc và Phát triển (VietNamNet)" }
+  ],
+  "heroDishSlug": "goi-la-kon-tum",
+  "dishes": [
+    {
+      "slug": "goi-la-kon-tum",
+      "name": "Gỏi lá Kon Tum",
+      "isHero": true,
+      "tasteTags": ["herb-forward", "savory", "vegetarian-friendly"],
+      "description": "Gỏi lá là món ăn đặc trưng và được xem là 'quốc hồn' ẩm thực Kon Tum, quy tụ từ 30 đến hơn 60 loại lá khác nhau như lá lộc vừng, lá sung, lá ổi, lá xoài non, chùm ruột, đinh lăng... cuộn cùng thịt heo, tôm và bì heo, chấm với nước chấm lên men đặc biệt nấu từ gạo nếp và tôm khô.",
+      "keyIngredients": ["30-60 loại lá rừng (lộc vừng, sung, ổi, đinh lăng...)", "thịt ba chỉ luộc", "tôm", "bì heo trộn thính", "nước chấm lên men từ gạo nếp, tôm khô, thịt băm"],
+      "prepOutline": [
+        "Rửa sạch và bày biện nhiều loại lá theo từng khay lớn",
+        "Luộc thịt ba chỉ thái mỏng, hấp hoặc luộc tôm",
+        "Trộn bì heo với thính gạo rang cho thơm giòn",
+        "Nấu nước chấm sền sệt lên men từ gạo nếp, tôm khô và thịt băm, nêm vừa ăn"
+      ],
+      "howToEat": "Chọn vài loại lá cuốn thành phễu, cho thịt, tôm, bì heo vào giữa, chấm ngập nước chấm lên men rồi ăn trọn miếng, nên đổi nhiều loại lá khác nhau trong một bữa để cảm nhận đủ vị chát – chua – bùi – cay.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://dantocphattrien.vietnamnet.vn/dac-san-goi-la-kon-tum-65711.html", "label": "Đặc sản gỏi lá Kon Tum – Dân tộc và Phát triển (VietNamNet)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "heo-mang-den-nuong",
+      "name": "Heo Măng Đen nướng",
+      "isHero": false,
+      "tasteTags": ["grilled", "savory"],
+      "description": "Heo Măng Đen là giống heo bản địa được người dân tộc thiểu số ở vùng cao nguyên Măng Đen (huyện Kon Plông) nuôi thả rông tự nhiên, ăn rau củ và côn trùng rừng nên thịt săn chắc, ít mỡ và có vị ngọt tự nhiên, khác hẳn heo nuôi công nghiệp.",
+      "keyIngredients": ["thịt heo Măng Đen (heo sọc dưa)", "mắc khén", "tiêu rừng", "sả, ớt", "lá é hoặc lá rừng"],
+      "prepOutline": [
+        "Chọn heo nhỏ nuôi thả rông, làm sạch, để nguyên miếng lớn hoặc thái miếng vừa",
+        "Ướp thịt với mắc khén, tiêu rừng, sả và ớt giã nhuyễn",
+        "Nướng trên than củi ở lửa liu riu, trở đều tay đến khi da giòn vàng",
+        "Chặt miếng vừa ăn khi thịt vừa chín tới"
+      ],
+      "howToEat": "Ăn nóng ngay khi vừa nướng xong, chấm muối tiêu rừng hoặc muối é, thường dùng kèm rượu cần trong các bữa tiệc cộng đồng.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://khamphamangden.vn/mon-ngon-mang-den/", "label": "Top 10 món ăn ngon ở Măng Đen (nguồn tham khảo du lịch, không phải Wikipedia)" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "ca-tam-mang-den",
+      "name": "Cá tầm Măng Đen",
+      "isHero": false,
+      "tasteTags": ["savory", "grilled"],
+      "description": "Nhờ khí hậu mát lạnh quanh năm giống Đà Lạt, vùng Măng Đen phát triển nghề nuôi cá tầm nước lạnh trong những năm gần đây, trở thành một đặc sản mới nổi thu hút du khách. Cá tầm được chế biến thành các món nướng, lẩu hoặc hấp, thịt chắc, ít xương dăm và giàu dinh dưỡng.",
+      "keyIngredients": ["cá tầm nuôi Măng Đen", "sả, nghệ", "măng chua (nếu nấu lẩu)", "rau rừng ăn kèm", "muối ớt xanh"],
+      "prepOutline": [
+        "Làm sạch cá tầm, cắt khúc vừa ăn",
+        "Ướp cá với sả, nghệ hoặc gia vị nướng đặc trưng",
+        "Nướng trên than hoa hoặc nấu lẩu chua cùng măng và rau rừng",
+        "Giữ lửa vừa để thịt cá chín đều mà không bị khô"
+      ],
+      "howToEat": "Ăn nóng, chấm muối ớt xanh nếu nướng, hoặc nhúng lẩu cùng rau rừng và bún nếu chế biến kiểu lẩu chua.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://khamphamangden.vn/mon-ngon-mang-den/", "label": "Top 10 món ăn ngon ở Măng Đen (nguồn tham khảo du lịch, không phải Wikipedia)" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

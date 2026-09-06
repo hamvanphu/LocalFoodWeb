@@ -1,0 +1,77 @@
+{
+  "slug": "phu-yen",
+  "code": "VN-PY",
+  "name": "Phú Yên",
+  "region": "Trung",
+  "centroid": [109.05566, 13.17039],
+  "summary": "Phú Yên là xứ biển Nam Trung Bộ nổi tiếng với nghề câu cá ngừ đại dương lớn nhất cả nước (Vũng Rô, Đông Tác) và các đầm phá nước lợ như Ô Loan, Cù Mông cho hải sản đặc trưng. Ẩm thực Phú Yên thiên về vị thanh, ít cay, tận dụng tối đa nguyên liệu biển tươi sống, tiêu biểu là mắt cá ngừ đại dương, sò huyết Ô Loan và bánh canh hẹ.",
+  "summarySourceRefs": [
+    { "url": "https://www.greensm.com/vn-vi/news/dac-san-phu-yen", "label": "Đặc sản Phú Yên – Top 15 món không thể bỏ lỡ khi đến xứ Nẫu (Green SM)" }
+  ],
+  "heroDishSlug": "mat-ca-ngu-dai-duong",
+  "dishes": [
+    {
+      "slug": "mat-ca-ngu-dai-duong",
+      "name": "Mắt cá ngừ đại dương",
+      "isHero": true,
+      "tasteTags": ["savory", "seafood"],
+      "description": "Mắt cá ngừ đại dương là món ăn gắn liền với nghề câu cá ngừ đại dương của ngư dân Phú Yên — nơi có sản lượng cá ngừ lớn nhất cả nước. Mỗi con cá ngừ nặng hàng chục ký chỉ cho một cặp mắt to bằng nắm tay, vị béo bùi đặc trưng, được xem là phần tinh túy và bổ dưỡng nhất của con cá nên trở thành đặc sản hiếm và đắt giá.",
+      "keyIngredients": ["mắt cá ngừ đại dương", "thuốc bắc (táo tàu, kỷ tử, hạt sen)", "gừng", "hành lá", "tiêu"],
+      "prepOutline": [
+        "Sơ chế mắt cá ngừ, khử tanh bằng rượu gừng rồi rửa sạch nhớt",
+        "Xếp mắt cá vào thố cùng thuốc bắc (táo tàu, kỷ tử, hạt sen), gừng và gia vị",
+        "Chưng cách thủy nhiều giờ ở lửa nhỏ cho mắt cá mềm, nước dùng ngọt thanh",
+        "Nêm lại vừa ăn, rắc hành lá và tiêu trước khi dùng"
+      ],
+      "howToEat": "Dùng nóng ngay khi vừa chưng xong, múc riêng từng chén nhỏ như một món tiềm bồi bổ, ăn kèm bánh mì hoặc cơm trắng, húp cả phần nước dùng ngọt béo tiết ra từ mắt cá.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://www.greensm.com/vn-vi/news/dac-san-phu-yen", "label": "Đặc sản Phú Yên – Green SM" },
+        { "url": "https://ohdidi.vn/blog/am-thuc/an-gi-o-phu-yen-thuong-thuc-21-mon-ngon-xu-nau-gay-thuong-nho", "label": "Top 21 món ngon đặc sản Phú Yên – Ohdidi" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "banh-canh-he",
+      "name": "Bánh canh hẹ",
+      "isHero": false,
+      "tasteTags": ["savory", "noodle-soup", "street-food"],
+      "description": "Bánh canh hẹ là món ăn sáng phổ biến khắp Phú Yên, khác biệt với bánh canh các vùng khác nhờ vị the nồng của hẹ tươi thái nhỏ rắc lên trên. Nước lèo được ninh từ xương và cá tươi (thường là cá thu, cá cờ), sợi bánh canh làm từ bột gạo dẻo mềm, ăn cùng chả cá chiên và hấp.",
+      "keyIngredients": ["sợi bánh canh bột gạo", "chả cá chiên", "chả cá hấp", "hẹ tươi", "xương/cá làm nước lèo", "tiêu, ớt"],
+      "prepOutline": [
+        "Ninh nước lèo từ xương heo và đầu cá trong nhiều giờ cho ngọt trong",
+        "Luộc sợi bánh canh bột gạo tươi vừa chín tới",
+        "Chiên vàng một phần chả cá, phần còn lại hấp chín để giữ độ dai mềm",
+        "Trụng bánh canh, chan nước lèo nóng, xếp chả cá lên trên và rắc hẹ thái nhỏ"
+      ],
+      "howToEat": "Ăn nóng ngay khi múc ra tô, vắt thêm chanh, thêm ớt xay hoặc ớt tươi để dậy vị, trộn đều hẹ vào nước lèo trước khi húp.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_canh", "label": "Bánh canh – Wikipedia tiếng Việt" },
+        { "url": "https://www.greensm.com/vn-vi/news/dac-san-phu-yen", "label": "Đặc sản Phú Yên – Green SM" }
+      ],
+      "occasions": ["Quanh năm"]
+    },
+    {
+      "slug": "so-huyet-dam-o-loan",
+      "name": "Sò huyết đầm Ô Loan",
+      "isHero": false,
+      "tasteTags": ["savory", "seafood"],
+      "description": "Đầm Ô Loan (huyện Tuy An) là vùng nước lợ nổi tiếng của Phú Yên, cho ra loại sò huyết thịt dày, ngọt béo đậm đà nhờ môi trường sinh thái đặc thù. Sò huyết Ô Loan đã được Cục Sở hữu trí tuệ cấp chứng nhận chỉ dẫn địa lý vào năm 2018, khẳng định thương hiệu đặc sản vùng miền.",
+      "keyIngredients": ["sò huyết Ô Loan", "sả", "gừng", "muối tiêu chanh", "rau răm"],
+      "prepOutline": [
+        "Ngâm sò huyết trong nước vo gạo pha ớt để nhả sạch cát",
+        "Hấp hoặc luộc sơ với sả đập dập đến khi sò vừa hé miệng",
+        "Có thể nướng trên than hoa với mỡ hành cho dậy mùi thơm",
+        "Chuẩn bị muối tiêu chanh hoặc mắm gừng để chấm"
+      ],
+      "howToEat": "Ăn khi còn nóng, tách vỏ bằng tay, chấm với muối tiêu chanh hoặc mắm gừng, thường dùng làm món nhậu kèm rau răm.",
+      "images": [],
+      "sourceRefs": [
+        { "url": "https://moit.gov.vn/tin-tuc/xuc-tien-thuong-mai/so-huyet-o-loan-dac-san-cua-vung-bien-phu-yen.html", "label": "Sò huyết Ô Loan – đặc sản của vùng biển Phú Yên (Bộ Công Thương)" },
+        { "url": "https://vinwonders.com/vi/wonderpedia/news/so-huyet-dam-o-loan/", "label": "Sò huyết đầm Ô Loan – VinWonders" }
+      ],
+      "occasions": ["Quanh năm"]
+    }
+  ]
+}

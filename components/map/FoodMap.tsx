@@ -8,12 +8,11 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { Hand } from "lucide-react";
 import type { FeatureCollection, Point } from "geojson";
 import {
-  VIETNAM_CENTER,
+  VIETNAM_BOUNDS,
+  VIETNAM_FIT_PADDING,
   VIETNAM_INITIAL_ZOOM,
-  HERO_MARKER_SIZE,
-  PIN_MARKER_SIZE,
-  heroOpacityAtZoom,
-  pinOpacityAtZoom,
+  markerSizeAtZoom,
+  showLabelAtZoom,
   maptilerStyleUrl,
 } from "./mapStyle";
 import MapToolbar from "./MapToolbar";
@@ -21,11 +20,10 @@ import DishMarker from "./DishMarker";
 import type { ProvinceMapProperties } from "@/lib/geo";
 
 interface FoodMapProps {
-  heroBubbles: FeatureCollection<Point, ProvinceMapProperties>;
-  provincePins: FeatureCollection<Point, ProvinceMapProperties>;
+  provinces: FeatureCollection<Point, ProvinceMapProperties>;
 }
 
-export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
+export default function FoodMap({ provinces }: FoodMapProps) {
   const router = useRouter();
   const mapRef = useRef<MapRef | null>(null);
   const [zoom, setZoom] = useState(VIETNAM_INITIAL_ZOOM);
@@ -37,8 +35,16 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
   const [interacted, setInteracted] = useState(false);
 
   const styleUrl = useMemo(() => maptilerStyleUrl(), []);
-  const heroOpacity = heroOpacityAtZoom(zoom);
-  const pinOpacity = pinOpacityAtZoom(zoom);
+
+  // Tỉnh nổi bật vẽ sau cùng để nằm trên khi marker chồng nhau (vd vùng đồng bằng
+  // sông Hồng có nhiều tỉnh sát nhau); z-index bên dưới xử lý phần còn lại.
+  const ordered = useMemo(
+    () =>
+      [...provinces.features].sort(
+        (a, b) => Number(a.properties.isHeroBubble) - Number(b.properties.isHeroBubble),
+      ),
+    [provinces],
+  );
 
   const goToProvince = useCallback(
     (slug: string) => router.push(`/provinces/${slug}`),
@@ -47,6 +53,13 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
 
   const handleMove = useCallback((e: ViewStateChangeEvent) => {
     setZoom(e.viewState.zoom);
+  }, []);
+
+  // fitBounds tự chọn zoom theo kích thước khung, nên phải đọc lại zoom thật lúc load
+  // thay vì tin vào VIETNAM_INITIAL_ZOOM — nếu không, marker sẽ vẽ sai kích thước ban đầu.
+  const handleLoad = useCallback(() => {
+    const map = mapRef.current;
+    if (map) setZoom(map.getZoom());
   }, []);
 
   return (
@@ -58,61 +71,50 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
       <Map
         ref={mapRef}
         initialViewState={{
-          longitude: VIETNAM_CENTER[0],
-          latitude: VIETNAM_CENTER[1],
-          zoom: VIETNAM_INITIAL_ZOOM,
+          bounds: VIETNAM_BOUNDS,
+          fitBoundsOptions: { padding: VIETNAM_FIT_PADDING },
         }}
         mapStyle={styleUrl}
         style={{ width: "100%", height: "100%" }}
         onMove={handleMove}
+        onLoad={handleLoad}
       >
-        {heroOpacity > 0.01 &&
-          heroBubbles.features.map((f) => {
-            const [lng, lat] = f.geometry.coordinates;
-            const p = f.properties;
-            return (
-              <Marker key={`hero-${p.slug}`} longitude={lng} latitude={lat} anchor="center">
-                <div className="flex flex-col items-center gap-1">
-                  <DishMarker
-                    slug={p.slug}
-                    name={`${p.name} — ${p.heroDishName}`}
-                    imageUrl={p.heroDishImageUrl}
-                    size={HERO_MARKER_SIZE}
-                    opacity={heroOpacity}
-                    onClick={() => goToProvince(p.slug)}
-                    onMouseEnter={() => setHovered({ lng, lat, props: p })}
-                    onMouseLeave={() => setHovered(null)}
-                  />
-                  <span
-                    style={{ opacity: heroOpacity }}
-                    className="pointer-events-none whitespace-nowrap rounded-pill bg-surface/90 px-2 py-0.5 text-[11px] font-medium text-ink shadow-soft"
-                  >
-                    {p.heroDishName}
-                  </span>
-                </div>
-              </Marker>
-            );
-          })}
+        {ordered.map((f) => {
+          const [lng, lat] = f.geometry.coordinates;
+          const p = f.properties;
+          const isHero = p.isHeroBubble;
+          const size = markerSizeAtZoom(zoom, isHero);
+          const showLabel = showLabelAtZoom(zoom, isHero) && Boolean(p.heroDishName);
+          const isHovered = hovered?.props.slug === p.slug;
 
-        {pinOpacity > 0.01 &&
-          provincePins.features.map((f) => {
-            const [lng, lat] = f.geometry.coordinates;
-            const p = f.properties;
-            return (
-              <Marker key={`pin-${p.slug}`} longitude={lng} latitude={lat} anchor="center">
+          return (
+            <Marker
+              key={p.slug}
+              longitude={lng}
+              latitude={lat}
+              anchor="center"
+              style={{ zIndex: isHovered ? 3 : isHero ? 2 : 1 }}
+            >
+              <div className="flex flex-col items-center gap-1">
                 <DishMarker
                   slug={p.slug}
                   name={`${p.name} — ${p.heroDishName}`}
                   imageUrl={p.heroDishImageUrl}
-                  size={PIN_MARKER_SIZE}
-                  opacity={pinOpacity}
+                  size={size}
+                  opacity={1}
                   onClick={() => goToProvince(p.slug)}
                   onMouseEnter={() => setHovered({ lng, lat, props: p })}
                   onMouseLeave={() => setHovered(null)}
                 />
-              </Marker>
-            );
-          })}
+                {showLabel && (
+                  <span className="pointer-events-none whitespace-nowrap rounded-pill bg-surface/90 px-2 py-0.5 text-[11px] font-medium text-ink shadow-soft">
+                    {p.heroDishName}
+                  </span>
+                )}
+              </div>
+            </Marker>
+          );
+        })}
 
         <AnimatePresence>
           {hovered && (
@@ -160,9 +162,8 @@ export default function FoodMap({ heroBubbles, provincePins }: FoodMapProps) {
         onZoomIn={() => mapRef.current?.zoomIn({ duration: 200 })}
         onZoomOut={() => mapRef.current?.zoomOut({ duration: 200 })}
         onReset={() =>
-          mapRef.current?.flyTo({
-            center: VIETNAM_CENTER,
-            zoom: VIETNAM_INITIAL_ZOOM,
+          mapRef.current?.fitBounds(VIETNAM_BOUNDS, {
+            padding: VIETNAM_FIT_PADDING,
             duration: 800,
           })
         }

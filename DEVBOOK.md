@@ -128,3 +128,38 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   vì chưa có MapTiler key — style này rất tối giản (chỉ có màu nước biển,
   không có địa hình/nhãn), không phản ánh chất lượng bản đồ thật. Cần thay
   bằng MapTiler style URL ngay khi có `NEXT_PUBLIC_MAPTILER_KEY`.
+- **[NGHIÊM TRỌNG — dữ liệu] Centroid Khánh Hòa và Đà Nẵng nằm giữa Biển Đông**
+  (phát hiện khi mở rộng bản đồ ra đủ 63 tỉnh, PM yêu cầu 2026-09-06): file
+  `data/geo/centroids.json` được sinh bằng cách lấy centroid hình học của
+  polygon hành chính, mà polygon Khánh Hòa **bao gồm huyện đảo Trường Sa** và
+  polygon Đà Nẵng **bao gồm huyện đảo Hoàng Sa** — nên centroid bị kéo hẳn ra
+  ngoài khơi: Khánh Hòa `[112.818, 10.677]` (giữa quần đảo Trường Sa, cách Nha
+  Trang ~450km), Đà Nẵng `[109.758, 16.237]` (vùng Hoàng Sa). Marker của 2 tỉnh
+  này nổi giữa biển thay vì trên đất liền. **Đáng chú ý: Khánh Hòa nằm trong 8
+  tỉnh MVP gốc** — nghĩa là lỗi đã tồn tại suốt từ walking skeleton, qua cả
+  W1-11 QA (PM duyệt PASS) mà không ai phát hiện, chỉ lộ ra khi bản đồ đủ 63
+  tỉnh làm marker ngoài biển trở nên bất thường rõ rệt. **Xử lý:** sửa
+  `centroid` trong 2 file tỉnh về phần đất liền (Khánh Hòa `[109.15, 12.3]`,
+  Đà Nẵng `[108.22, 16.06]`); giữ nguyên `centroids.json` vì nó là dữ liệu
+  dẫn xuất từ geojson. **Bài học:** không tin centroid hình học cho đơn vị
+  hành chính có quần đảo — phải mắt thường soi lại trên bản đồ thật.
+- **Khung nhìn mặc định cắt mất mũi Cà Mau** (cùng đợt): `initialViewState`
+  hard-code `center [107.5, 16.5] + zoom 5` chỉ vừa khung ở một tỉ lệ viewport
+  nhất định; với khung bản đồ cao `70vh` trên màn 900px thì phần cực Nam bị
+  đẩy ra ngoài, người dùng không thấy các tỉnh ĐBSCL nếu không tự kéo. **Xử
+  lý:** đổi sang `fitBounds(VIETNAM_BOUNDS)` với padding — tự co giãn theo
+  kích thước thật của khung nên không phụ thuộc chiều cao viewport; nút
+  "Về toàn cảnh" cũng đổi sang `fitBounds` cho khớp. Vì `fitBounds` tự chọn
+  zoom, phải đọc lại zoom thật trong `onLoad` (`map.getZoom()`) thay vì tin
+  hằng số `VIETNAM_INITIAL_ZOOM`, nếu không marker vẽ sai kích thước ban đầu.
+- **Bản đồ 2 tầng zoom (hero bubble ẩn/hiện theo zoom) thực chất giấu mất 55
+  tỉnh**: thiết kế cũ chỉ hiện 8 bubble curated ở zoom thấp, tầng pin 63 tỉnh
+  chỉ bật từ zoom ≥7 — nhưng ở zoom 7 khung nhìn chỉ còn vài tỉnh, nên tầng
+  pin gần như vô dụng để duyệt cả nước; người dùng không có mức zoom nào thấy
+  được toàn bộ 63 tỉnh. **Xử lý:** bỏ crossfade 2 tầng, hiện cả 63 tỉnh ở mọi
+  mức zoom, phân cấp thị giác chuyển sang **kích thước marker nội suy theo
+  zoom** (tỉnh nổi bật 36→60px, tỉnh thường 18→44px) + z-index cho tỉnh nổi
+  bật nằm trên khi chồng nhau. Đánh đổi đã biết và chấp nhận: cụm tỉnh đồng
+  bằng sông Hồng vẫn chồng marker ở zoom thấp — người dùng zoom vào là tách
+  ra, đổi lại không tỉnh nào bị giấu hoàn toàn. Đã cập nhật US-01/US-02 trong
+  `SPEC-LF.md` cho khớp hành vi thật.

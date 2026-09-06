@@ -4,12 +4,11 @@ import FoodMapLoader from "@/components/map/FoodMapLoader";
 import HeroSection from "@/components/HeroSection";
 import ProvinceExplorerGrid from "@/components/province/ProvinceExplorerGrid";
 import heroBubbles from "@/data/hero-bubbles.json";
-import { buildHeroBubbleFeatureCollection, buildProvincePinFeatureCollection } from "@/lib/geo";
+import { buildProvinceMapFeatureCollection } from "@/lib/geo";
 import { getAllProvinces, getHeroDish } from "@/lib/provinces";
 
 export default function HomePage() {
-  const heroBubbleFeatures = buildHeroBubbleFeatureCollection();
-  const provincePins = buildProvincePinFeatureCollection();
+  const provinceFeatures = buildProvinceMapFeatureCollection();
   const provinces = getAllProvinces();
 
   // Trang chủ chỉ hiện tỉnh nổi bật (danh sách curated dùng chung với bubble bản đồ),
@@ -31,7 +30,7 @@ export default function HomePage() {
 
       <section id="map-section" className="mx-auto max-w-6xl px-6 pt-12">
         <div className="h-[70vh] min-h-[420px] w-full overflow-hidden rounded-card border border-border shadow-card">
-          <FoodMapLoader heroBubbles={heroBubbleFeatures} provincePins={provincePins} />
+          <FoodMapLoader provinces={provinceFeatures} />
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 import type { Feature, FeatureCollection, Point } from "geojson";
 import heroBubbles from "@/data/hero-bubbles.json";
-import { getAllProvinces, getHeroDish, getProvinceBySlug } from "./provinces";
+import { getAllProvinces, getHeroDish } from "./provinces";
 import type { Province } from "./types";
 
 export interface ProvinceMapProperties {
@@ -9,9 +9,14 @@ export interface ProvinceMapProperties {
   region: Province["region"];
   heroDishName: string;
   heroDishImageUrl: string | null;
+  /** Tỉnh trong danh sách curated — vẽ marker to hơn để giữ phân cấp thị giác. */
+  isHeroBubble: boolean;
 }
 
-function toPointFeature(province: Province): Feature<Point, ProvinceMapProperties> {
+function toPointFeature(
+  province: Province,
+  isHeroBubble: boolean,
+): Feature<Point, ProvinceMapProperties> {
   const heroDish = getHeroDish(province);
   return {
     type: "Feature",
@@ -22,30 +27,24 @@ function toPointFeature(province: Province): Feature<Point, ProvinceMapPropertie
       region: province.region,
       heroDishName: heroDish?.name ?? "",
       heroDishImageUrl: heroDish?.images[0]?.url ?? null,
+      isHeroBubble,
     },
   };
 }
 
-/** Layer A — hand-curated hero bubbles, visible at low zoom. */
-export function buildHeroBubbleFeatureCollection(): FeatureCollection<
+/**
+ * Toàn bộ tỉnh có dữ liệu, mỗi tỉnh 1 điểm. Không còn tách 2 FeatureCollection theo
+ * tầng zoom nữa — bản đồ hiện tất cả và phân cấp bằng kích thước marker (xem `mapStyle.ts`).
+ */
+export function buildProvinceMapFeatureCollection(): FeatureCollection<
   Point,
   ProvinceMapProperties
 > {
-  const features = heroBubbles.provinceSlugs
-    .map((slug) => getProvinceBySlug(slug))
-    .filter((province): province is Province => Boolean(province))
-    .map(toPointFeature);
-
-  return { type: "FeatureCollection", features };
-}
-
-/** Layer B — every province with data, visible from mid zoom onward. */
-export function buildProvincePinFeatureCollection(): FeatureCollection<
-  Point,
-  ProvinceMapProperties
-> {
+  const heroSlugs = new Set(heroBubbles.provinceSlugs);
   return {
     type: "FeatureCollection",
-    features: getAllProvinces().map(toPointFeature),
+    features: getAllProvinces().map((province) =>
+      toPointFeature(province, heroSlugs.has(province.slug)),
+    ),
   };
 }

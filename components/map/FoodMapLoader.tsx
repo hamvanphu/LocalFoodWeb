@@ -14,8 +14,7 @@ const FoodMap = dynamic(() => import("./FoodMap"), {
 });
 
 interface FoodMapLoaderProps {
-  heroBubbles: FeatureCollection<Point, ProvinceMapProperties>;
-  provincePins: FeatureCollection<Point, ProvinceMapProperties>;
+  provinces: FeatureCollection<Point, ProvinceMapProperties>;
 }
 
 export default function FoodMapLoader(props: FoodMapLoaderProps) {

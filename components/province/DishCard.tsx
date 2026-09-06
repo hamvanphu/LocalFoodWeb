@@ -6,14 +6,18 @@ import { Carrot, ListOrdered, Utensils, ZoomIn } from "lucide-react";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
 import Lightbox from "@/components/ui/Lightbox";
 import Badge from "@/components/ui/Badge";
+import DishReviews from "@/components/review/DishReviews";
 import type { Dish } from "@/lib/types";
 
 export default function DishCard({
   dish,
+  provinceSlug,
   priority = false,
   index = 0,
 }: {
   dish: Dish;
+  /** Cần cho khối đánh giá — cặp (province_slug, dish_slug) là khoá của review. */
+  provinceSlug: string;
   priority?: boolean;
   index?: number;
 }) {
@@ -117,6 +121,12 @@ export default function DishCard({
             ))}
           </p>
         )}
+
+        <DishReviews
+          provinceSlug={provinceSlug}
+          dishSlug={dish.slug}
+          dishName={dish.name}
+        />
       </div>
 
       <Lightbox

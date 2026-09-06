@@ -12,9 +12,11 @@ type ViewMode = "overview" | "timeline";
 export default function ProvinceDishExplorer({
   dishes,
   provinceName,
+  provinceSlug,
 }: {
   dishes: Dish[];
   provinceName: string;
+  provinceSlug: string;
 }) {
   const [mode, setMode] = useState<ViewMode>("overview");
   const [selected, setSelected] = useState<Dish | null>(null);
@@ -65,7 +67,7 @@ export default function ProvinceDishExplorer({
         <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4">
           {dishes.map((dish, index) => (
             <div key={dish.slug} className="w-[85vw] max-w-md shrink-0 snap-center">
-              <DishCard dish={dish} priority={index === 0} index={index} />
+              <DishCard dish={dish} provinceSlug={provinceSlug} priority={index === 0} index={index} />
             </div>
           ))}
         </div>
@@ -78,7 +80,7 @@ export default function ProvinceDishExplorer({
               {provinceName} · Món ăn đặc trưng
             </p>
             <div className="p-6 pt-3">
-              <DishCard dish={selected} priority index={0} />
+              <DishCard dish={selected} provinceSlug={provinceSlug} priority index={0} />
             </div>
           </div>
         )}

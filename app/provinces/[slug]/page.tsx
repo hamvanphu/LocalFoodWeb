@@ -41,7 +41,11 @@ export default async function ProvincePage({
         <h2 className="mb-2 font-display text-2xl font-semibold text-ink">
           Món ăn đặc trưng
         </h2>
-        <ProvinceDishExplorer dishes={province.dishes} provinceName={province.name} />
+        <ProvinceDishExplorer
+          dishes={province.dishes}
+          provinceName={province.name}
+          provinceSlug={province.slug}
+        />
       </section>
     </div>
   );

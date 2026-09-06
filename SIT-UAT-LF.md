@@ -75,3 +75,52 @@
 Sau khi tick xong bảng trên:
 1. Nói lại **có bao nhiêu mục FAIL**, mục nào — nếu có FAIL thật, báo ngay, đừng tự sửa qua loa cho qua.
 2. Nếu tất cả PASS: xác nhận rõ ràng "W1-11 PASS" để tao ghi vào `WBS-LF.md` và chuyển sang W1-11a (Accessibility audit).
+
+---
+
+## US-14 — Đánh giá & bình luận món ăn *(bổ sung 2026-09-06)*
+
+> Bối cảnh: tính năng dùng Supabase (ARCH D3). **Rủi ro R11 (RLS)** phải được xác
+> nhận trước khi coi là xong — mục 0 dưới đây là bắt buộc, không phải tuỳ chọn.
+
+### 0. Cổng bảo mật — RLS *(làm trước, fail thì dừng, không test tiếp)*
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 0.1 | Supabase → SQL Editor chạy `select relrowsecurity from pg_class where relname='dish_reviews';` | Trả về `true` | ☐ |
+| 0.2 | Chạy `select policyname, cmd from pg_policies where tablename='dish_reviews';` | Đúng **2 dòng**: 1 `SELECT`, 1 `INSERT`. Không có UPDATE/DELETE | ☐ |
+
+*(Đã kiểm bằng script 2026-09-06: gửi review hợp lệ → 201; `status=hidden` → 401;
+`rating=99` → 401; comment 600 ký tự → 401; DELETE cả bảng → 401; UPDATE → 401.)*
+
+### 1. Luồng chính
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 1.1 | Mở 1 trang tỉnh, bấm vào 1 món để mở panel chi tiết, cuộn xuống cuối | Thấy khối **"Đánh giá món này"** | ☐ |
+| 1.2 | Món chưa ai đánh giá | Hiện "Chưa có đánh giá nào cho món này — bạn là người đầu tiên nhé!", **không phải vùng trắng** | ☐ |
+| 1.3 | Chọn 4 sao, nhập tên, nhập cảm nhận, bấm **Gửi đánh giá** | Hiện "Cảm ơn bạn đã đánh giá!" và review **xuất hiện ngay trong danh sách, không cần tải lại trang** | ☐ |
+| 1.4 | Sau khi có ≥1 đánh giá, nhìn lên tiêu đề khối | Hiện số sao trung bình + "(N đánh giá)" | ☐ |
+| 1.5 | **Mở cùng món đó trên thiết bị/trình duyệt khác** | Vẫn thấy đánh giá vừa gửi → chứng minh dữ liệu dùng chung, không phải localStorage | ☐ |
+
+### 2. Trường hợp lỗi *(phần dễ bị bỏ qua nhất)*
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 2.1 | Không chọn sao, bấm Gửi | Chặn, báo "Hãy chọn số sao từ 1 đến 5." | ☐ |
+| 2.2 | Chọn sao nhưng bỏ trống tên, bấm Gửi | Chặn, báo "Hãy nhập tên của bạn." | ☐ |
+| 2.3 | Gửi 1 đánh giá rồi gửi tiếp ngay cho **cùng món** | Chặn, báo đợi một chút (rào chắn spam tối thiểu, RISK R10) | ☐ |
+| 2.4 | Thử dán > 500 ký tự vào ô cảm nhận | Ô input tự chặn ở 500 (`maxLength`); bộ đếm hiện `500/500` | ☐ |
+
+### 3. Không làm hỏng phần còn lại
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 3.1 | Xem lại toàn trang tỉnh | Tên món, mô tả, nguyên liệu, cách làm, cách ăn, nguồn tham chiếu **vẫn render như cũ** — nội dung món vẫn tĩnh (SSG) | ☐ |
+| 3.2 | *(nếu muốn thử)* Đổi `NEXT_PUBLIC_SUPABASE_URL` thành giá trị sai rồi tải lại | Trang món **vẫn xem bình thường**, chỉ khối đánh giá báo lỗi — Supabase chết không kéo sập cả trang | ☐ |
+
+### 4. Việc dọn dẹp
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 4.1 | Supabase → Table Editor → `dish_reviews`, xoá các dòng có `province_slug = '__test__'` và các review kiểm thử | Bảng sạch trước khi nộp bài. **Lưu ý:** phải xoá từ dashboard vì anon key **không có quyền DELETE** — đó là RLS đang làm đúng việc | ☐ |

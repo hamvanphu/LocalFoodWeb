@@ -206,3 +206,69 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   tồn tại** — nhiều khả năng chặn theo vùng, không phải AI bịa domain. **Nếu chỉ nhìn
   báo cáo lỗi đầu tiên rồi đi sửa hết 22 link thì đã thay nhầm 19 nguồn đang tốt** —
   phải xác minh lại bằng công cụ khác (curl + UA thật, tra DNS) trước khi kết luận.
+
+---
+
+# Phần B — Quyết định uỷ quyền, cổng fail-closed, hard-stop
+
+> **Bổ sung 2026-09-06.** Phần A ở trên ghi *AI sai → PM sửa*. Nhưng `§8.3` của
+> `PM-AI-Bootcamp-Program-v1.0.md` yêu cầu Dev Book còn phải ghi **3 vế nữa**:
+> quyết định delegate **mức L mấy & vì sao**, **cổng nào fail-closed**, và **hard-stop**
+> nào gặp phải. Ba vế đó trước giờ nằm rải rác ở `DELEGATION-MAP-LF.md` và commit
+> message — gom lại đây cho đúng yêu cầu bằng chứng.
+
+## B1. Quyết định uỷ quyền — mức L và lý do thật
+
+| Việc | Mức | Vì sao mức đó, chứ không cao/thấp hơn |
+|---|---|---|
+| Viết code UI, component, motion | **L3 / Leash A** | Sai thì thấy ngay bằng mắt và sửa rẻ. Không đáng bắt PM duyệt từng dòng — PM không đọc code được, duyệt cũng chỉ là hình thức (chính là rubber-stamping). |
+| Viết nội dung món ăn | **L2-L3 + Content Gate** | Không để L3 thuần vì **sai nội dung không lộ ra bằng build hay test** — phải người biết ẩm thực đọc mới thấy. Thực tế đã bắt được lỗi thật: bánh cuốn Thanh Trì mô tả sai. |
+| Kiểm thử/QA | **L2-L3 + gate bắt buộc PM tự test** | **PM bổ sung dòng này ở Cổng hiểu bước [6]** — bảng gốc thiếu hẳn. Lý do: nếu để AI tự báo "PASS" thì cổng chất lượng thành vô nghĩa. |
+| Đọc/ghi `.env.local`, API key | **L4 / Leash A+** | Chạm secret. AI đọc biến qua code nhưng **không tự điền giá trị, không in key ra output**. Đã giữ đúng suốt dự án — kiểm lịch sử git không có key nào bị commit. |
+| `git commit` (local) | **L3 / A** | Rẻ, đảo ngược được, PM xem lại qua `git log`. |
+| **`git push` / deploy** | **L4 / A+** | Hành động **ra ngoài**, người khác thấy được, khó thu hồi. |
+| Tạo Supabase project, lấy key | **L4 / A+** | AI **không tự đăng ký dịch vụ ngoài** thay PM. Giữ đúng: PM tự tạo, tự dán key. |
+| Viết + chạy RLS policy | **L4 / A+** | Sai policy = lộ/mất toàn bộ dữ liệu. AI viết SQL, **PM tự chạy** trên dashboard. Giữ đúng: PM chạy cả `schema.sql` lẫn `migration-02`. |
+| Cắt scope (Phương án A→B) | **L2 — người quyết** | PM chốt rõ: chữ "tự động" trong `EST-LF.md` nghĩa là *không cần bàn lại từ đầu*, **không phải** AI tự quyết. |
+
+### Thay đổi uỷ quyền trong quá trình làm
+
+- **2026-09-06 — cấp quyền `git push` và deploy.** Trước đó `DELEGATION-MAP-LF.md`
+  ghi *"A+ — CHƯA CẤP hành động, chỉ chuẩn bị"*. PM ra lệnh rõ ràng từng lần
+  (*"nhớ push code lên git nhé"*, *"Cài Vercel CLI để tao deploy"*), đúng điều kiện
+  đã ghi sẵn là "PM ra lệnh rõ ràng từng lần". **Quyền này là theo lệnh, không phải
+  cấp vĩnh viễn** — mỗi lần deploy vẫn cần PM nói.
+- **RLS thì không nới.** Dù có thể gọi API Supabase, AI vẫn đưa SQL cho PM tự chạy,
+  đúng A+. Đây là chỗ dễ tặc lưỡi "chạy hộ cho nhanh" nhất, và đã không làm.
+
+## B2. Cổng fail-closed — cổng nào chặn, và đã chặn thật chưa
+
+*Fail-closed = không đạt thì **dừng**, không phải ghi chú rồi đi tiếp.*
+
+| Cổng | Fail-closed? | Đã chặn thật lần nào chưa |
+|---|---|---|
+| **Cổng hiểu bước [0]→[7]** | ✅ Có | Chặn thật **1 lần lớn**: AI nhảy thẳng vào code, bỏ qua [0]-[7]. PM bắt → **quay lại làm đúng thứ tự từ đầu**, không cho đi tiếp. |
+| **W1-9 "UI wow"** | ✅ Có | Chặn thật **2 lần**: FAIL → W1-9b → vẫn FAIL → W1-9c mới qua. |
+| **zod validate dữ liệu tỉnh** | ✅ Có, tự động | Build **fail hẳn** nếu thiếu `sourceRef` hoặc `heroDishSlug` không khớp. Không có đường vòng. |
+| **RLS trước khi coi US-14 xong** (R11) | ✅ Có | Không chỉ chạy migration rồi tin — **tự tấn công DB** để xác nhận: DELETE/UPDATE/lách kiểm duyệt đều 401. |
+| **A11y (axe-core)** | ⚠️ Nửa | Có chạy và sửa hết 5 lỗi, nhưng **không nối vào build** — chạy tay. Lần sau sót thì không ai chặn. |
+| **Performance (LCP)** | ❌ Không | **Đã FAIL và vẫn cho đi tiếp** — quyết định có ý thức, ghi thành R12: bản đồ là tính năng lõi, không bỏ để lấy điểm đẹp. Ghi rõ đây là cổng **fail-open có chủ đích**, không phải quên. |
+| **Kiểm nội dung (R2)** | ❌ Không | Chỉ có `sourceRef` bắt buộc — mà OP-11 chứng minh là chưa đủ (3 link 404 vẫn lọt). Spot-check mới ở mức đọc lướt. |
+
+**Điều trung thực nhất rút ra:** trong 7 cổng thì **4 fail-closed thật**, 1 nửa vời,
+**2 fail-open** — và cả 2 cái fail-open đều là cổng về **chất lượng nội dung/trải
+nghiệm**, không phải về kỹ thuật. Đúng chỗ khó tự động hoá nhất.
+
+## B3. Hard-stop — chỗ buộc phải dừng chờ người
+
+| Hard-stop | Chặn cái gì | Phân xử |
+|---|---|---|
+| **Không có MapTiler key** (2026-08-26 → 09-03) | Bản đồ chỉ chạy style demo, không verify được giao diện thật | Không dừng cả dự án. Build tiếp với style demo, **ghi điều kiện cứng: key phải có trước W1-11**. Đã đáp ứng đúng hạn. |
+| **Không có Supabase key** (2026-08-26 → 09-06) | Toàn bộ tính năng Review/Rating | PM chủ động **hoãn hẳn tính năng** (2026-09-03) để dồn lực cho dữ liệu + QA, thay vì để nó chặn tiến độ. Mở lại khi có thời gian. |
+| **AI không tự đăng ký dịch vụ ngoài** | MapTiler, Supabase, Vercel, GitHub | Luật cứng, không nới lần nào. AI chuẩn bị sẵn mọi thứ (SQL, config, lệnh) rồi **dừng chờ PM**. |
+| **Vercel Deployment Protection** (2026-09-06) | Người ngoài không xem được site | AI **không tự tắt** — thử qua API bị `Not authorized`, và CLI không có lệnh. Dừng, đưa PM đường dẫn chính xác để tự tắt. |
+| **Migration DB chưa chạy** (2026-09-06) | US-15 sẽ lỗi toàn bộ nếu deploy trước | AI **cố ý không deploy**, kiểm `kind` chưa tồn tại → dừng, chờ PM chạy SQL. Deploy sau khi xác nhận cột đã có. |
+| **Giới hạn phiên làm việc** (2026-09-06) | 1 agent research 10 tỉnh Tây Nam Bộ chết giữa chừng | Không bỏ qua. Chia lại thành lô nhỏ hơn, chạy lại phần thiếu, đối chiếu đủ 63/63 file trước khi đi tiếp. |
+
+**Điểm chung:** không hard-stop nào bị "lách". Chỗ dễ lách nhất là RLS và deploy —
+đều có đường kỹ thuật để AI tự làm, và đều đã dừng đúng.

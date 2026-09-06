@@ -122,55 +122,86 @@ sự cố thật **cao hơn 18**. Đây là nợ ghi chép, không phải số l
 
 ---
 
-## 5. ⬜ Giờ người thật + Nén — PM phải tự điền
+## 5. ✅ Giờ người thật + Nén — **PM đã điền 2026-09-06**
 
-**AI không điền phần này.** Lý do: giờ ngồi máy là thứ chỉ PM biết; suy từ commit
-timestamp hay từ token đều là **bịa số** theo đúng định nghĩa của Playbook.
+> **Nguồn số:** PM tự ước tính, trả lời trực tiếp cho từng phiên. **Không** suy từ
+> commit timestamp, **không** suy từ token. AI chỉ cung cấp mốc thời gian và khối
+> lượng việc từng phiên để PM đối chiếu trí nhớ.
 
 ### 5.1 Giờ ngồi máy thật
 
-Giờ thật phải nằm **giữa cận dưới và cận trên** ở mục 1. Cột "việc đã làm" ghi kèm
-để PM đối chiếu trí nhớ — nhìn khối lượng việc dễ nhớ lại hơn nhìn con số trống.
-
-| Phiên | 🟡 Cận dưới | 🟡 Cận trên | Việc đã làm trong phiên | ⬜ Giờ thật (PM điền) |
+| Phiên | 🟡 Cận dưới (git) | 🟡 Cận trên (git) | ✅ PM ước tính | Việc đã làm |
 |---|---|---|---|---|
-| 2026-08-25 | 0h07 | 0h07 | Scaffold Next.js từ số không, bản đồ + 2 tỉnh chạy end-to-end. *(Cả 2 cận đều vô nghĩa ở đây — toàn bộ việc nằm **trước** commit đầu)* | ______ h |
-| 2026-08-26 | 2h43 | 2h43 | Viết 8 artefact bước [0]→[7] + đóng 8 Cổng hiểu + build W1-1→W1-9c + 2 vòng redesign UI + Search/Filter | ______ h |
-| 2026-09-03 | 1h11 | 2h12 | 6 tỉnh MVP còn lại, debug bug MapLibre "map trắng", trang `/browse`, SIT-UAT, A11y audit, Lighthouse | ______ h |
-| 2026-09-05 | — | — | Chỉ chốt quyết định mở rộng 63 tỉnh | ______ h |
-| 2026-09-06 | 1h43 | 11h31 | Mở rộng 55 tỉnh, refactor bản đồ + sửa 2 centroid, RTM/Telemetry/Weekly, deploy Vercel, US-14 Review/Rating + Supabase | ______ h |
-| **Tổng** | **5h44** | **16h33** | | **______ h** ← mẫu số tính Nén |
+| 2026-08-25 | 0h07 | 0h07 | *(gộp bên dưới)* | Walking skeleton từ số không |
+| 2026-08-26 | 2h43 | 2h43 | **3–4h** | 8 artefact bước [0]→[7], 8 Cổng hiểu, W1-1→W1-9c, 2 vòng redesign UI, Search/Filter |
+| 2026-09-03 | 1h11 | 2h12 | *(gộp bên dưới)* | 6 tỉnh MVP, debug bug map trắng, `/browse`, SIT-UAT, A11y, Lighthouse |
+| 2026-09-05 | — | — | *(gộp bên dưới)* | Chốt quyết định mở rộng 63 tỉnh |
+| 2026-09-06 | 1h43 | 11h31 | **4–6h** | 55 tỉnh, refactor bản đồ + sửa 2 centroid, RTM/Telemetry/Weekly, deploy Vercel, US-14 Review/Rating |
+| *(25/08 + 03/09 + 05/09 gộp)* | | | **>9h** | — |
+| **TỔNG** | **5h44** | **16h33** | **≈ 16–22h** | |
 
-> **Gợi ý cách nhớ:** với phiên 06/09, mốc rõ nhất là bạn bắt đầu buổi sáng trước
-> 08:28 và commit cuối lúc 19:59, ở giữa có nghỉ trưa dài (khoảng trống 12:33→18:46).
-> Ước lượng số giờ **thực sự ngồi trước máy** trong 2 quãng đó.
+**Đối chiếu với proxy từ git:** con số thật (**16–22h**) nằm gọn trong khoảng
+[5h44 – 16h33] mà git đoán được, nhưng **lệch hẳn về phía trên**, thậm chí vượt cận
+trên. Điều này xác nhận nhận định ở mục 1: **cả hai proxy đều thấp hơn thực tế**, vì
+không đếm được thời gian đọc/nghĩ/phán xử không sinh ra commit. Nếu lúc nãy cứ lấy
+đại một proxy làm mẫu số thì Nén đã bị **thổi phồng lên 1,5–4 lần**.
 
-### 5.2 Baseline "giờ truyền thống" (nếu làm không có AI)
+### 5.2 Baseline "giờ truyền thống"
 
-⬜ **PM chốt con số này**, AI chỉ cung cấp khối lượng thật để PM có căn cứ:
+✅ **PM chốt: 600 giờ** (tự làm một mình, không AI hỗ trợ).
+
+Khối lượng thật dùng làm căn cứ:
 
 - Research + viết nội dung có kiểm nguồn cho **197 món / 63 tỉnh** (mô tả, nguyên
-  liệu, các bước, cách ăn, ≥1 nguồn/món, tìm ảnh Wikimedia)
+  liệu, các bước làm, cách ăn, ≥1 nguồn/món, tìm ảnh Wikimedia có giấy phép)
 - **~33 component** React/TypeScript + bản đồ tương tác MapLibre
 - **19 artefact governance** (SCOPE → RTM → Telemetry → Weekly)
 - QA thủ công 8 story + audit A11y + audit Performance
-- **Deploy production** (Vercel) + **tính năng Review/Rating** có backend Supabase, RLS và kiểm chứng bảo mật
+- Deploy production + tính năng Review/Rating có backend, RLS và kiểm chứng bảo mật
+- Bao gồm cả thời gian **học công nghệ mới từ đầu** (MapLibre, Next.js 16, Supabase RLS)
 
-> Tham chiếu nội bộ: `EST-LF.md` ước lượng PERT **50,7h** — nhưng đó là ước lượng
-> **có AI hỗ trợ** và chỉ cho **8 tỉnh**, không phải baseline truyền thống cho 63 tỉnh.
-> Đừng dùng nhầm số này làm tử số.
+> ⚠️ **Đừng nhầm với PERT 50,7h trong `EST-LF.md`.** Con số đó là ước lượng **có AI
+> hỗ trợ** và chỉ cho **8 tỉnh** — không phải baseline truyền thống cho 63 tỉnh.
 
-**Giờ truyền thống ước tính:** ______ h
-
-### 5.3 Công thức
+### 5.3 Nén (Productivity Ratio)
 
 ```
-Nén (Productivity Ratio) = Giờ truyền thống (5.2) ÷ Giờ ngồi máy thật (5.1)
+Nén = Giờ truyền thống ÷ Giờ ngồi máy thật = 600h ÷ (16–22h)
 ```
 
-**Nén = ______ ÷ ______ = ______ ×**
+| Kịch bản | Giờ thật | **Nén** |
+|---|---|---|
+| Đọc thấp nhất mỗi khoảng | 16h | **37,5×** |
+| Giữa khoảng | 19h | **31,6×** |
+| Đọc cao nhất | 22h | **27,3×** |
 
-### 5.4 ⬜ Token
+### ➡️ **Nén ≈ 27–37 lần** (khoảng giữa: **~32×**)
+
+**Ghi khoảng, không ghi một con số**, vì đầu vào vốn là khoảng ước tính. Ghi
+"31,6×" như thể đo được tới số lẻ sẽ là chính xác giả tạo.
+
+### 5.4 ⚠️ Chỉ số Nén này KHÔNG đo cái gì — cần nói rõ ở viva
+
+Nén ~32× là con số rất lớn, và sẽ bị hỏi lại. Những giới hạn phải tự nêu trước:
+
+1. **Không đo chất lượng.** 600h giả định làm ra sản phẩm *tương đương*, nhưng
+   `RTM-LF.md` cho thấy chưa tương đương: 2 tính năng chưa có test, 1 test lỗi thời,
+   LCP không đạt NFR.
+2. **Không trừ chi phí sửa lỗi AI.** 18 sự cố trong DEVBOOK đều tốn giờ người để
+   phát hiện và sửa — chúng nằm *trong* 16–22h, nhưng nếu AI ít sai hơn thì số giờ
+   đó còn thấp nữa. Nén đo *kết quả ròng*, không đo mức độ trơn tru.
+3. **Baseline 600h là ước tính, không phải đo.** Không ai thực sự làm lại dự án này
+   bằng tay để so. Đây là điểm yếu nhất của phép tính — và đúng ra phải vậy, vì
+   baseline truyền thống về bản chất là phản-thực (counterfactual).
+4. **Rủi ro nội dung chưa được kiểm hết.** R2 (hallucination) còn mở: 197 món phần
+   lớn nguồn không phải Wikipedia, PM chưa spot-check xong. Nếu spot-check phát hiện
+   sai nhiều, phần "sản lượng" trong tử số sẽ phải chiết khấu.
+
+**Cách phát biểu an toàn ở viva:** *"Nén khoảng 27–37 lần về **thời gian tạo ra sản
+phẩm**, với baseline là ước tính của tôi chứ không phải số đo, và chưa chiết khấu
+phần chất lượng còn thiếu đã ghi rõ trong RTM."*
+
+### 5.5 ⬜ Token — vẫn để trống
 
 | Chỉ số | Giá trị |
 |---|---|
@@ -178,9 +209,9 @@ Nén (Productivity Ratio) = Giờ truyền thống (5.2) ÷ Giờ ngồi máy th
 | Token thật (reconcile) | ⬜ ______ |
 | MD/1M-token | ⬜ ______ |
 
-**AI không có số này.** Phiên làm việc chạy qua Claude Code; nếu PM cần con số
-thật thì lấy từ trang usage của tài khoản, không suy đoán. Theo Playbook, token
-**không được dùng thay cho giờ người** khi tính Nén — chỉ là chỉ số phụ về chi phí.
+**AI không có số này.** Nếu cần, PM lấy từ trang usage của tài khoản Claude, không
+suy đoán. Theo Playbook, token **không được dùng thay giờ người** khi tính Nén —
+chỉ là chỉ số phụ về chi phí.
 
 ---
 
@@ -188,8 +219,9 @@ thật thì lấy từ trang usage của tài khoản, không suy đoán. Theo P
 
 **PM cần làm trước khi coi bước này đóng:**
 
-1. **Điền mục 5.1 và 5.2**, tính ra Nén. Chưa điền thì telemetry **chưa hoàn thành**
-   — bảng đo được ở mục 1-4 không thay thế được giờ người thật.
+1. ✅ **Đã điền mục 5.1/5.2 (2026-09-06)** → Nén ≈ **27–37 lần**. Việc còn lại: đọc
+   mục **5.4** và tự thấy thoải mái khi bảo vệ con số đó — nếu thấy 600h là quá cao
+   so với cảm nhận thật, hãy sửa lại, vì đó là ước tính của PM chứ không phải số đo.
 2. **Bác ≥1 số** nếu thấy nghi. Gợi ý những số dễ bị hiểu sai nhất, tự AI nêu ra:
    - **Khoảng "5h44 – 16h33"** ở mục 1 — cả 2 đầu đều là **proxy sai**: cận dưới loại
      nhầm giờ làm việc thật, cận trên gộp nhầm giờ nghỉ. Đừng lấy đầu nào làm mẫu số.

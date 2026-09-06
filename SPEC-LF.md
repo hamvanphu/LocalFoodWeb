@@ -34,6 +34,31 @@ thực sự khác nhau về trách nhiệm, không phải 2 loại tài khoản 
 | GAP-01 | Ảnh Wikimedia tải lỗi lúc runtime (đã gặp thật: lỗi 429 khi test dồn dập ở walking skeleton) | `ImageWithFallback` chỉ xử lý trường hợp **không có ảnh trong data** (`images: []`), KHÔNG xử lý trường hợp có ảnh nhưng ảnh đó tải lỗi lúc runtime (`next/image onError`) | Người dùng thấy icon ảnh vỡ dù data có vẻ "có ảnh" — cần thêm client-side `onError` fallback sang placeholder. Đưa vào WBS bước [4] như 1 task riêng, không phải bỏ qua. |
 | GAP-02 | Style bản đồ demo (`demotiles.maplibre.org`) bị rate-limit khi tải nhiều lần liên tục | Chưa có xử lý khi `mapStyle` fetch lỗi — MapLibre sẽ hiện bản đồ trống/lỗi im lặng | Chấp nhận rủi ro thấp cho MVP vì sẽ thay bằng MapTiler key thật; nhưng nếu tới hạn nộp bài vẫn chưa có key thật, cần fallback UI báo "bản đồ đang tải chậm, thử lại" thay vì im lặng trống trơn. |
 
+### Bổ sung 2026-09-06 — story cho tính năng đã/đang build mà trước đó thiếu AC
+
+> **Vì sao có mục này:** khi lập `RTM-LF.md` (bước [10]) phát hiện **GAP-T2** — W2-7
+> (Search) và W2-8 (Filter mùa/lễ hội) đi thẳng từ yêu cầu miệng vào WBS rồi build,
+> **không có user story, không có AC, nên không có test case**. Bổ sung ở đây để đóng
+> lỗ hổng truy vết, và để US-14 (Review/Rating) **không lặp lại lỗi đó** — story viết
+> **trước** khi code.
+
+| # | Story | Acceptance Criteria (Given/When/Then) |
+|---|---|---|
+| US-12 | Là người dùng, tôi muốn tìm nhanh món ăn hoặc tỉnh theo tên, để tới thẳng nội dung mình cần mà không phải rà bản đồ. | **Given** tôi gõ vào ô tìm kiếm, **When** tôi nhập **không dấu** (vd `pho`, `bun bo`), **Then** kết quả vẫn khớp món/tỉnh có dấu tương ứng; **And** bấm vào 1 kết quả thì tới đúng `/provinces/{slug}` và **mở đúng món** đó; **And** không có kết quả thì hiện thông báo rỗng, không phải danh sách trắng. |
+| US-13 | Là người dùng, tôi muốn lọc tỉnh/món theo mùa hoặc dịp lễ, để tìm món hợp thời điểm trong năm. | **Given** tôi ở trang chủ hoặc `/browse`, **When** tôi chọn 1 chip dịp (vd "Tết Nguyên Đán"), **Then** chỉ còn hiện tỉnh có ít nhất 1 món gắn dịp đó; **And** bỏ chọn thì danh sách trở lại đầy đủ; **And** chip đang chọn phải phân biệt được bằng thị giác, không chỉ bằng màu (yêu cầu A11y). |
+| **US-14** | **Là người xem, tôi muốn chấm sao và để lại bình luận cho món ăn, và thấy đánh giá của người khác, để cùng đóng góp cảm nhận thay vì chỉ đọc một chiều.** | **Given** tôi đang xem 1 món, **When** tôi chọn số sao (1-5), nhập tên và bình luận rồi gửi, **Then** đánh giá của tôi hiện ra ngay trong danh sách mà không cần tải lại trang; **And** người dùng khác mở cùng món đó trên **thiết bị khác cũng thấy** đánh giá đó (yêu cầu lưu trữ dùng chung — lý do đảo quyết định "không backend", xem `ARCH-LF.md` D3). **Given** tôi bỏ trống sao hoặc tên, **When** tôi bấm gửi, **Then** bị chặn kèm thông báo rõ, không gửi bản ghi rỗng. **Given** bình luận dài quá 500 ký tự, **When** tôi gửi, **Then** bị chặn ở cả client **lẫn** database (`check` constraint), không chỉ dựa vào client. **Given** món chưa có đánh giá nào, **When** tôi mở, **Then** hiện trạng thái rỗng mời đánh giá, không phải vùng trắng. **Given** Supabase lỗi/không kết nối được, **When** trang tải, **Then** phần nội dung món **vẫn hiển thị bình thường**, chỉ khu vực đánh giá báo lỗi — không làm hỏng cả trang. |
+
+**Ràng buộc bắt buộc của US-14 (không phải nice-to-have):**
+
+1. **RLS phải bật đúng trước khi tính năng được coi là xong** (`RISK-LF.md` R11).
+   Không bật = ai cầm anon key cũng xoá sạch được bảng. Có cách tự kiểm trong
+   `supabase/schema.sql` mục 4.
+2. **Không có kiểm duyệt trước khi đăng** — rủi ro đã chấp nhận công khai
+   (`RISK-LF.md` R10). Rào chắn tối thiểu: giới hạn độ dài, chặn gửi lặp nhanh phía
+   client, PM tự ẩn thủ công qua dashboard.
+3. **Nội dung món ăn vẫn phải render tĩnh (SSG)** — chỉ khối đánh giá là động.
+   Supabase chết thì trang vẫn phải xem được.
+
 ### Backlog phase-2 (ngoài 2 tuần, không phải MVP)
 
 | # | Story |

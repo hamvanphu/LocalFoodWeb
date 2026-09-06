@@ -23,12 +23,13 @@
 | **US-07** Responsive di động | W1-3, W1-9c | `app/globals.css` (token), toàn bộ component dùng Tailwind responsive | `SIT-UAT-LF.md` §US-07 | ✅ Build + test PASS |
 | **US-08** 404 khi slug không tồn tại | W1-7 | `app/not-found.tsx` | `SIT-UAT-LF.md` §US-08 | ✅ Build + test PASS (đã custom, không còn trang mặc định Next.js) |
 
-### Bổ sung 2026-09-06 — US-12, US-13, US-14
+### Bổ sung 2026-09-06 — US-12 → US-15
 
 | Story | Task (WBS) | Code (file thật) | Test (SIT-UAT) | Trạng thái |
 |---|---|---|---|---|
 | **US-12** Tìm kiếm không dấu | W2-7 | `components/search/SearchBar.tsx`, `lib/searchIndex.ts` | ❌ **vẫn chưa có test case** | ⚠️ Đã có story (viết bù), **chưa có test** — GAP-T2 mới đóng được một nửa |
 | **US-13** Lọc theo mùa/lễ hội | W2-8 | `lib/types.ts` (`OCCASIONS`), `ProvinceExplorerGrid.tsx`, `BrowseProvinces.tsx` | ❌ **vẫn chưa có test case** | ⚠️ Như trên |
+| **US-15** Báo nội dung sai | *(phát sinh từ quyết định R2)* | `lib/reviews.ts` (`ReviewKind`), `components/review/DishReviews.tsx`, `supabase/migration-02-content-report.sql` | `SIT-UAT-LF.md` §US-15 | ✅ **Story viết trước code**, test đầy đủ cả luồng lỗi + kiểm ở tầng DB |
 | **US-14** Đánh giá & bình luận món | D3 (ARCH) | `lib/reviews.ts`, `components/review/DishReviews.tsx`, `StarRating.tsx`, `supabase/schema.sql`, gắn trong `DishCard.tsx` | `SIT-UAT-LF.md` §US-14 (gồm **cổng RLS bắt buộc** ở mục 0) | ✅ **Story viết trước code**, có test đầy đủ cả luồng lỗi. RLS kiểm chứng bằng cách tự tấn công DB |
 
 **Kết luận phần 1: 8/8 story MVP đã build và có test case.** Không có story "mồ côi"
@@ -96,8 +97,9 @@ từng được kiểm chứng chính thức**.
 >
 > **Bài học đã áp dụng ngay:** US-14 (Review/Rating) làm **ngược lại** — story và AC
 > viết **trước** khi code, test case viết cùng lúc với tính năng, gồm cả các luồng
-> lỗi (thiếu sao, thiếu tên, comment quá dài, Supabase chết). Đó là lý do US-14 là
-> dòng duy nhất trong RTM không có cảnh báo nào.
+> lỗi (thiếu sao, thiếu tên, comment quá dài, Supabase chết). US-15 (Báo nội dung sai)
+> làm y hệt. Đó là lý do US-14 và US-15 là **hai dòng duy nhất** trong RTM không mang
+> cảnh báo nào — bằng chứng bài học được áp dụng thật, không chỉ nhận lỗi cho có.
 
 ### GAP-T3 — NFR "UI wow" không có test case khách quan
 

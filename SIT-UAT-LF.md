@@ -124,3 +124,25 @@ Sau khi tick xong bảng trên:
 | # | Bước làm | Kỳ vọng | PASS/FAIL |
 |---|---|---|---|
 | 4.1 | Supabase → Table Editor → `dish_reviews`, xoá các dòng có `province_slug = '__test__'` và các review kiểm thử | Bảng sạch trước khi nộp bài. **Lưu ý:** phải xoá từ dashboard vì anon key **không có quyền DELETE** — đó là RLS đang làm đúng việc | ☐ |
+
+---
+
+## US-15 — Báo nội dung sai *(bổ sung 2026-09-06)*
+
+> Điều kiện: đã chạy `supabase/migration-02-content-report.sql`.
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 1 | Mở 1 món, cuộn tới khối đánh giá | Thấy **2 nút chế độ**: "Đánh giá món" và "Báo nội dung sai" | ☐ |
+| 2 | Bấm **Báo nội dung sai** | Phần chấm sao **biến mất** (báo lỗi không phải chấm điểm món); có dòng giải thích báo lỗi gửi riêng tới quản trị | ☐ |
+| 3 | Nhập tên, để mô tả 3 ký tự, bấm Gửi | Chặn: "Hãy mô tả chỗ sai (ít nhất 10 ký tự)…" | ☐ |
+| 4 | Nhập mô tả đủ dài, bấm **Gửi báo lỗi** | Hiện "Đã gửi tới người quản trị…" | ☐ |
+| 5 | Nhìn danh sách đánh giá bên dưới | Báo lỗi vừa gửi **KHÔNG xuất hiện** ở đó | ☐ |
+| 6 | Bấm lại **Đánh giá món** | Phần chấm sao hiện lại, gửi đánh giá bình thường | ☐ |
+| 7 | Vừa chấm sao xong, chuyển ngay sang báo lỗi cùng món | **Không bị chặn** bởi cooldown — 2 hành động tính riêng | ☐ |
+| 8 | Supabase → SQL Editor, chạy câu 4.3 trong file migration | Thấy đúng báo lỗi vừa gửi | ☐ |
+
+*(Đã kiểm tự động trên production 2026-09-06: sao ẩn đúng, chặn mô tả ngắn đúng, gửi
+thành công, báo lỗi không lọt ra danh sách công khai, chuyển chế độ hoạt động. Ở tầng
+database: `content_report` thiếu mô tả → 401, mô tả 5 ký tự → 401, `review` thiếu sao
+→ 401, `kind` giả mạo → 401, và đọc công khai lọc `kind=content_report` trả về rỗng.)*

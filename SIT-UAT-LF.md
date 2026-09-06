@@ -5,26 +5,53 @@
 
 ---
 
-## US-01 — Bản đồ hiện bubble ngay khi vào trang
+> ### ⚠️ US-01, US-02, US-03 đã được VIẾT LẠI ngày 2026-09-06
+>
+> Bản cũ mô tả *"8 chấm đỏ"*, *"chấm vàng nhỏ"*, *"chấm đỏ biến mất dần"* — **không
+> còn đúng** sau 2 thay đổi: marker đổi sang **ảnh món ăn thật** (2026-09-03) và **bỏ
+> hẳn cơ chế ẩn/hiện 2 tầng** (2026-09-06). Chi tiết ở `RTM-LF.md` GAP-T1.
+>
+> **Dấu PASS cũ của 3 mục này không còn giá trị** — cần PM test lại từ đầu.
+
+## US-01 — Bản đồ hiện đủ 63 tỉnh ngay khi vào trang
 
 | # | Bước làm | Kỳ vọng | PASS/FAIL |
 |---|---|---|---|
-| 1 | Mở `http://localhost:3000`, cuộn xuống khối bản đồ | Thấy **8 chấm đỏ** rải khắp Việt Nam (Bắc→Nam), không cần zoom tay | ☐ |
-| 2 | Nhìn kỹ từng chấm | Mỗi chấm có nhãn tên món bên dưới (vd "Phở bò Hà Nội") | ☐ |
+| 1 | Mở trang chủ, cuộn xuống khối bản đồ, **không zoom tay** | Thấy marker rải khắp Việt Nam. Marker là **ảnh món ăn tròn** (món nào chưa có ảnh thì là nền gradient + icon dao dĩa), **không phải chấm màu đơn sắc** | ☐ |
+| 2 | **Đếm nhanh hai đầu đất nước** | Thấy marker ở **cực Bắc (Hà Giang/Cao Bằng)** và **cực Nam (Cà Mau)** — cả hai **nằm trọn trong khung**, không bị cắt | ☐ |
+| 3 | So sánh kích thước marker | Có **2 cỡ rõ rệt**: tỉnh nổi bật to hơn hẳn tỉnh thường (≈36px so với ≈18px) | ☐ |
+| 4 | Nhìn nhãn tên món ở mức zoom mặc định | **Chưa có nhãn nào** — đúng thiết kế, tránh chữ chồng chữ khi nhìn toàn quốc | ☐ |
 
-## US-02 — Zoom hiện thêm pin tỉnh
+## US-01b — 🌏 Marker nằm đúng vị trí địa lý *(mục MỚI, sinh ra từ rủi ro R13)*
+
+> **Vì sao có mục này:** marker Khánh Hòa từng nằm giữa quần đảo Trường Sa suốt 12
+> ngày, **lọt qua zod + build + một vòng QA đã đánh PASS**, vì checklist cũ không có
+> bước nào bắt nhìn vị trí. Xem `OPERATING-LOG-LF.md` OP-06.
 
 | # | Bước làm | Kỳ vọng | PASS/FAIL |
 |---|---|---|---|
-| 1 | Bấm nút **+** trên toolbar bản đồ liên tục ~5-6 lần | Chấm đỏ to biến mất dần, thay bằng **chấm vàng nhỏ** (pin tỉnh) | ☐ |
-| 2 | Bấm nút **compass** (icon la bàn) trên toolbar | Bản đồ bay về đúng vị trí/zoom ban đầu (toàn cảnh Việt Nam) | ☐ |
+| 1 | Ở zoom toàn quốc, **rà mắt vùng Biển Đông** | **Không marker nào nằm giữa biển** — mọi marker phải nằm trên đất liền hoặc sát bờ | ☐ |
+| 2 | Kiểm riêng **Khánh Hòa** (Nha Trang) và **Đà Nẵng** | Cả hai nằm đúng dải ven biển miền Trung, **không trôi ra khơi** | ☐ |
+| 3 | Kiểm vài tỉnh có đảo: **Kiên Giang, Bà Rịa-Vũng Tàu, Quảng Ngãi** | Nằm đúng phần đất liền, không bị đảo kéo lệch ra | ☐ |
 
-## US-03 — Bấm bubble/pin vào đúng trang tỉnh
+## US-02 — Zoom vào: marker to dần, nhãn hiện thêm, **không tỉnh nào biến mất**
 
 | # | Bước làm | Kỳ vọng | PASS/FAIL |
 |---|---|---|---|
-| 1 | Bấm vào chấm đỏ ở khu vực Hà Nội | Chuyển sang `/provinces/ha-noi`, thấy tên món, mô tả, nguyên liệu, cách làm, cách ăn | ☐ |
+| 1 | Bấm nút **+** trên toolbar **1 lần** | Marker **to lên**, vẫn **đủ 63 tỉnh**, chưa có nhãn | ☐ |
+| 2 | Bấm **+** thêm lần nữa (tổng 2 lần) | Bắt đầu hiện nhãn tên món, nhưng **chỉ ở các tỉnh nổi bật** (≈8 nhãn) | ☐ |
+| 3 | Bấm **+** thêm lần nữa (tổng 3 lần) | **Mọi tỉnh đều có nhãn** tên món bên dưới | ☐ |
+| 4 | **Điểm quan trọng nhất:** trong suốt quá trình zoom | **Không marker nào biến mất hay bị thay thế** — phân cấp bằng **kích thước**, không bằng ẩn/hiện *(khác hẳn thiết kế cũ)* | ☐ |
+| 5 | Bấm nút **la bàn** trên toolbar | Bản đồ bay về toàn cảnh Việt Nam, marker nhỏ lại, nhãn biến mất | ☐ |
+
+## US-03 — Bấm marker vào đúng trang tỉnh
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 1 | Bấm vào marker khu vực **Hà Nội** | Chuyển sang `/provinces/ha-noi`, thấy tên món, mô tả, nguyên liệu, cách làm, cách ăn | ☐ |
 | 2 | Lặp lại với **1 tỉnh miền Trung** (vd Quảng Nam) và **1 tỉnh miền Nam** (vd Cần Thơ) | Cả 2 đều vào đúng trang, đủ nội dung | ☐ |
+| 3 | Thử **1 tỉnh mới thêm** ngoài 8 tỉnh MVP gốc (vd Cao Bằng, Trà Vinh, Kon Tum) | Vào đúng trang, đủ nội dung — chứng minh 55 tỉnh mới cũng hoạt động | ☐ |
+| 4 | Rê chuột lên 1 marker (không bấm) | Hiện popup tên tỉnh + tên món chủ đạo | ☐ |
 
 ## US-04 — Ảnh thật hoặc placeholder, không vỡ layout
 

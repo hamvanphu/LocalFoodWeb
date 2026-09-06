@@ -49,10 +49,10 @@ Cấp 2 đã đạt nhưng còn 4 chỗ mỏng — chính là 4 điểm yếu qu
 |---|---|---|---|---|
 | G1 | **Cổng a11y chạy tay**, không nối vào build | Lần sau sót thì không ai chặn | Thêm script `pnpm check:a11y`, chạy trong CI | 1-2h |
 | G2 | **Không có cổng kiểm link nguồn còn sống** | 3 link 404 nằm im, zod vẫn PASS (OP-11) | Script kiểm link định kỳ, cảnh báo link chết | 1h |
-| G3 | **Không có cổng kiểm tính đúng đắn địa lý** | Marker giữa Biển Đông sống 12 ngày (OP-06, R13) | Thêm assert: mọi centroid phải nằm trong bbox đất liền VN | 30ph |
+| ~~G3~~ | ~~Không có cổng kiểm tính đúng đắn địa lý~~ | Marker giữa Biển Đông sống 12 ngày (OP-06, R13) | ✅ **XONG 2026-09-06** — `pnpm check:geo`, đã chứng minh bắt được lỗi cũ | — |
 | G4 | **Không có thông báo khi có báo nội dung sai** | US-15 chạy rồi nhưng PM phải tự chạy SQL mới thấy | Supabase Database Webhook → email/Slack | 1h |
 
-**Tổng: ~4 giờ.** Cả 4 đều biến một việc "nhớ thì làm" thành **cổng tự động**, đúng
+**Tổng còn lại: ~3 giờ** (G3 đã xong). Cả 4 đều biến một việc "nhớ thì làm" thành **cổng tự động**, đúng
 tinh thần Cấp 2: *AI gắn vào quy trình*, không phụ thuộc trí nhớ người.
 
 ---
@@ -114,11 +114,13 @@ hơn**. Đúng thứ tự phải là: **chuẩn hoá cổng (Cấp 3) trước, 
 
 | Ưu tiên | Việc | Vì sao trước |
 |---|---|---|
-| 1 | G3 — assert centroid trong bbox VN | Rẻ nhất (30ph), chặn đúng loại lỗi từng lọt qua mọi cổng |
-| 2 | G2 — script kiểm link nguồn | Link rot là rủi ro dài hạn, càng nhiều dữ liệu càng nặng |
-| 3 | G4 — thông báo khi có báo nội dung sai | Không có nó thì US-15 chỉ là kênh một chiều |
-| 4 | G1 — a11y vào CI | Đang PASS nên chưa gấp, nhưng dễ trôi khi thêm trang mới |
-| 5 | Template đề bài cho agent | Bước đầu tiên của Cấp 3, và tái dùng được cho dự án khác |
+| 1 | G2 — script kiểm link nguồn | Link rot là rủi ro dài hạn, càng nhiều dữ liệu càng nặng. Làm theo mẫu `check-geo.mjs` |
+| 2 | G4 — thông báo khi có báo nội dung sai | Không có nó thì US-15 chỉ là kênh một chiều |
+| 3 | G1 — a11y vào CI | Đang PASS nên chưa gấp, nhưng dễ trôi khi thêm trang mới |
+| 4 | Template đề bài cho agent | Bước đầu tiên của Cấp 3, và tái dùng được cho dự án khác |
+
+> **G3 đã cho thấy mẫu để làm 3 cái còn lại:** một script Node độc lập, exit code 1 khi
+> fail, chạy được bằng `pnpm check:*`. Rẻ, không phụ thuộc framework, nối vào CI được ngay.
 
 ---
 

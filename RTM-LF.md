@@ -14,8 +14,8 @@
 
 | Story | Task (WBS) | Code (file thật) | Test (SIT-UAT) | Trạng thái |
 |---|---|---|---|---|
-| **US-01** Bản đồ hiện marker ngay khi vào trang | W1-5, W1-9c, (2026-09-06: refactor 63 tỉnh) | `app/page.tsx`, `components/map/FoodMap.tsx`, `FoodMapLoader.tsx`, `mapStyle.ts`, `DishMarker.tsx`, `lib/geo.ts` | `SIT-UAT-LF.md` §US-01 | ✅ Build + test PASS (W1-11). **AC đã đổi 2026-09-06** — xem GAP-T1 |
-| **US-02** Zoom hiện thêm tỉnh | W1-5, (2026-09-06: refactor) | `components/map/mapStyle.ts` (`markerSizeAtZoom`, `showLabelAtZoom`), `FoodMap.tsx` | `SIT-UAT-LF.md` §US-02 | ⚠️ Build OK, **test LỖI THỜI** — xem **GAP-T1** |
+| **US-01** Bản đồ hiện marker ngay khi vào trang | W1-5, W1-9c, (2026-09-06: refactor 63 tỉnh) | `app/page.tsx`, `components/map/FoodMap.tsx`, `FoodMapLoader.tsx`, `mapStyle.ts`, `DishMarker.tsx`, `lib/geo.ts` | `SIT-UAT-LF.md` §US-01 + §US-01b | ✅ Test **đã viết lại** 2026-09-06 cho khớp sản phẩm; thêm US-01b kiểm địa lý + cổng `pnpm check:geo`. Chờ PM test lại |
+| **US-02** Zoom hiện thêm tỉnh | W1-5, (2026-09-06: refactor) | `components/map/mapStyle.ts` (`markerSizeAtZoom`, `showLabelAtZoom`), `FoodMap.tsx` | `SIT-UAT-LF.md` §US-02 | ✅ Test **đã viết lại** 2026-09-06 (AI chạy thử 10/10 PASS). Chờ PM test lại |
 | **US-03** Bấm marker → đúng trang tỉnh | W1-1, W1-5 | `FoodMap.tsx` (`goToProvince`), `app/provinces/[slug]/page.tsx` (`generateStaticParams`) | `SIT-UAT-LF.md` §US-03 | ✅ Build + test PASS |
 | **US-04** Ảnh thật hoặc placeholder, không vỡ layout | W1-8 (GAP-01) | `components/ui/ImageWithFallback.tsx`, `DishMarker.tsx`, `lib/image-fallback.ts`, `components/ui/Lightbox.tsx` | `SIT-UAT-LF.md` §US-04 + §GAP-01 | ✅ Build + test PASS. Dữ liệu thật: **75/197 món có ảnh, 122 dùng fallback** |
 | **US-05** Danh sách tỉnh thay thế bản đồ | W1-4, (bổ sung 2026-09-03: `/browse`) | `components/province/ProvinceExplorerGrid.tsx`, `BrowseProvinces.tsx`, `app/browse/page.tsx`, `ProvinceTeaserCard.tsx` | `SIT-UAT-LF.md` §US-05 | ✅ Build + test PASS |
@@ -70,9 +70,22 @@ Cả hai vế đều **không còn đúng**:
 được thay đổi mà checklist **không được cập nhật lại**. Nghĩa là dấu "PASS" của
 W1-11 với US-02 đang chứng nhận cho một hành vi không còn tồn tại.
 
-**→ Việc cần làm:** cập nhật `SIT-UAT-LF.md` §US-02 theo AC mới của US-01/US-02
-(đã sửa trong `SPEC-LF.md` ngày 2026-09-06), rồi **PM test lại US-02** trước viva.
-Chưa test lại thì US-02 phải coi là **chưa được kiểm chứng**, không phải PASS.
+**→ Cập nhật 2026-09-06 — ĐÃ XỬ LÝ, và rộng hơn dự kiến:**
+
+Khi bắt tay sửa thì phát hiện **không chỉ US-02 lỗi thời** — cả **US-01 và US-03** cũng
+mô tả *"8 chấm đỏ"* / *"chấm vàng"*. GAP-T1 ban đầu ghi thiếu 2 mục.
+
+Đã làm:
+- **Viết lại US-01, US-02, US-03** theo hành vi thật, có số liệu đo được (63 marker,
+  nhãn hiện từ lần bấm + thứ 2 cho tỉnh nổi bật, thứ 3 cho mọi tỉnh).
+- **Thêm US-01b** — mục kiểm **tính đúng đắn địa lý** mà checklist cũ thiếu hoàn toàn,
+  chính là khoảng trống đã để lọt OP-06.
+- **Thêm cổng tự động `pnpm check:geo`** — đã chứng minh bắt được đúng lỗi cũ: đặt lại
+  toạ độ Khánh Hòa cũ thì script fail với exit code 1.
+- Chạy thử toàn bộ checklist mới bằng trình duyệt: **10/10 bước PASS**.
+
+**Vẫn cần PM tự test lại** — AI chạy thử chỉ chứng minh checklist *khớp sản phẩm*,
+không thay được việc PM tự tay kiểm (đúng kỷ luật đã chốt ở Cổng hiểu bước [6]).
 
 ### GAP-T2 — W2-7 (Search) và W2-8 (Filter mùa/lễ hội): có task, có code, **không có story, không có test**
 

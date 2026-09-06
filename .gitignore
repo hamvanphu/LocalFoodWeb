@@ -32,6 +32,9 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# .env.example chi chua TEN bien, khong chua gia tri - can commit de nguoi khac biet
+# phai khai bao gi khi deploy. Da kiem tra: khong co secret nao trong file nay.
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +42,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
+.env*
+# Vercel CLI tu them 2 dong tren khi chay `vercel link`, dat SAU nen de len
+# quy tac `!.env.example` o phia tren. Lap lai exception o cuoi file de giu
+# .env.example duoc commit (file nay chi co TEN bien, khong co gia tri).
+!.env.example

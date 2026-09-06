@@ -1,36 +1,160 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Local Food — Bản đồ ẩm thực 63 tỉnh thành Việt Nam
 
-## Getting Started
+Website giới thiệu món ăn đặc trưng của **cả 63 tỉnh thành Việt Nam** (theo địa giới
+trước sáp nhập 2025), với bản đồ tương tác, công thức sơ lược và gợi ý cách thưởng thức.
 
-First, run the development server:
+> Dự án Capstone của **PM AI Bootcamp** — làm theo đường ray 11 bước của
+> `Capstone Playbook`, mỗi bước có **Cổng hiểu** (PM phải giải thích lại được và bắt
+> ≥1 lỗi của AI trước khi đi tiếp). Toàn bộ hồ sơ quản trị nằm trong repo, xem mục
+> [Hồ sơ dự án](#hồ-sơ-dự-án).
+
+---
+
+## Sản phẩm có gì
+
+- **Bản đồ tương tác** (MapLibre GL + MapTiler): cả 63 tỉnh hiện đồng thời, marker là
+  **ảnh món ăn thật** chứ không phải chấm màu. Tỉnh nổi bật vẽ to hơn để dẫn mắt;
+  marker to dần và hiện thêm nhãn tên món khi zoom vào.
+- **63 trang tỉnh** (sinh tĩnh): mỗi tỉnh có 1 món chủ đạo + 2 món khác, kèm mô tả,
+  nguyên liệu chính, các bước làm sơ lược, cách ăn và **nguồn tham chiếu**.
+- **Tìm kiếm** không dấu (gõ `pho` ra `phở`), điều hướng thẳng tới đúng món.
+- **Lọc theo mùa / lễ hội** (Tết Nguyên Đán, Trung Thu, bốn mùa).
+- **Trang `/browse`** liệt kê toàn bộ tỉnh, nhóm theo miền Bắc / Trung / Nam.
+
+### Số liệu nội dung
+
+| Chỉ số | Giá trị |
+|---|---|
+| Tỉnh thành | 63 / 63 |
+| Món ăn | 197 |
+| Nguồn tham chiếu (`sourceRef`) | 222 |
+| Món thiếu nguồn | 0 *(zod chặn ngay lúc build)* |
+| Món có ảnh Wikimedia thật | 75 (38%) |
+| Món dùng ảnh dự phòng (gradient) | 122 (62%) |
+
+> **Về ảnh:** dự án **không bịa URL ảnh**. Món nào không tìm được ảnh thật trên
+> Wikimedia Commons thì dùng placeholder gradient có chủ đích, không phải ô ảnh vỡ.
+> Đây là lý do tỷ lệ có ảnh chỉ 38% — các món vùng núi phía Bắc và Tây Nguyên hầu như
+> không có ảnh trên Commons.
+
+---
+
+## Công nghệ
+
+| Thành phần | Lựa chọn | Lý do |
+|---|---|---|
+| Framework | Next.js 16 (App Router) + React 19 + TypeScript | Sinh tĩnh toàn bộ, SEO tốt |
+| Bản đồ | MapLibre GL JS `4.7.1` + `react-map-gl` | Mã nguồn mở, không khoá vendor |
+| Basemap | MapTiler (free tier) | Có bản đồ nền tiếng Việt chất lượng |
+| Giao diện | Tailwind CSS v4 | — |
+| Chuyển động | Framer Motion (`motion/react`) | Tôn trọng `prefers-reduced-motion` |
+| Kiểm tra dữ liệu | **zod** | Validate thật 63 file JSON lúc build, không chỉ ép kiểu TypeScript |
+| Lưu trữ nội dung | File JSON tĩnh, không backend | Xem `ARCH-LF.md` |
+
+> ⚠️ **MapLibre bị ghim ở `4.7.1` có lý do.** Bản `6.5.0` có lỗi khiến vector tile
+> source không bao giờ load xong → bản đồ trắng hoàn toàn. Chi tiết điều tra nằm
+> trong `DEVBOOK.md`. **Đừng nâng cấp mà không test lại kỹ.**
+
+---
+
+## Chạy tại máy
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+cp .env.example .env.local      # rồi điền MapTiler key
+pnpm dev                        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Biến môi trường
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Biến | Bắt buộc | Lấy ở đâu |
+|---|---|---|
+| `NEXT_PUBLIC_MAPTILER_KEY` | Không (có fallback) | https://cloud.maptiler.com/account/keys/ |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Không có key thì bản đồ vẫn chạy bằng style demo công khai của MapLibre, chỉ kém đẹp hơn.
 
-## Learn More
+> 🔒 **Lưu ý bảo mật:** biến có tiền tố `NEXT_PUBLIC_` **luôn bị nhúng vào bundle
+> phía client** — bất kỳ ai mở DevTools trên site đã deploy đều đọc được. Đây là bản
+> chất của thư viện bản đồ chạy phía trình duyệt, không tránh được. Vì vậy **phải bật
+> domain restriction** cho key trong MapTiler dashboard, giới hạn đúng domain deploy.
 
-To learn more about Next.js, take a look at the following resources:
+### Lệnh khác
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm build        # build production — cũng là lúc zod validate toàn bộ 63 file dữ liệu
+pnpm start        # chạy bản production
+pnpm lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> ⚠️ **Gotcha khi thêm tỉnh mới:** `lib/provinces.ts` cache dữ liệu ở cấp module, nên
+> thêm file `data/provinces/*.json` mới mà dev server đang chạy thì **route mới sẽ 404**.
+> Phải **restart dev server**. Đã ghi trong `DEVBOOK.md`.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Cấu trúc
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/                     # App Router: /, /browse, /provinces/[slug], not-found
+components/
+  map/                   # FoodMap, DishMarker, MapToolbar, mapStyle
+  province/              # ProvinceHero, DishCard, DishTile, ProvinceDishExplorer
+  ui/                    # Button, Badge, Sheet, Lightbox, ImageWithFallback
+  search/                # SearchBar (tìm kiếm không dấu)
+data/
+  provinces/*.json       # 63 file, mỗi tỉnh 1 file — thêm tỉnh = thêm file, không sửa code
+  geo/                   # ranh giới + centroid 63 tỉnh
+  hero-bubbles.json      # danh sách tỉnh nổi bật (marker to + mục "Tỉnh nổi bật")
+lib/
+  types.ts  schema.ts    # kiểu dữ liệu + zod schema
+  provinces.ts  geo.ts   # đọc/validate dữ liệu, dựng GeoJSON cho bản đồ
+```
+
+### Thêm một tỉnh mới
+
+1. Tạo `data/provinces/{slug}.json` theo `lib/schema.ts` (mỗi món **bắt buộc ≥1
+   `sourceRef`**, đúng 1 món có `isHero: true` khớp `heroDishSlug`).
+2. Chạy `pnpm build` — zod sẽ báo rõ file nào sai field nào nếu có.
+3. Restart dev server (xem gotcha ở trên).
+
+---
+
+## Hồ sơ dự án
+
+Đây là dự án bootcamp nên **hồ sơ quản trị là một phần của sản phẩm**, không phải phụ lục:
+
+| Bước | Artefact | Nội dung |
+|---|---|---|
+| [0] | `SCOPE-LF.md` | Phạm vi, giả định, cái gì **không** làm |
+| [1] | `SPEC-LF.md` | User story + tiêu chí chấp nhận + NFR |
+| [2] | `MODULEMAP-LF.md` | Phân tầng module |
+| [3] | `ARCH-LF.md` | Kiến trúc, mô hình dữ liệu, các quyết định (D1-D3) |
+| [4] | `WBS-LF.md` | Chia việc |
+| [5] | `EST-LF.md` | Ước lượng PERT |
+| [6] | `RISK-LF.md` · `DELEGATION-MAP-LF.md` | 13 rủi ro (có nhóm rủi ro AI-sinh) + mức uỷ quyền cho AI |
+| [7] | `DOR-LF.md` | Definition of Ready |
+| [9] | `SIT-UAT-LF.md` · `PERFORMANCE-LF.md` | QA checklist + kết quả đo hiệu năng |
+| [10] | `RTM-LF.md` · `TELEMETRY-LF.md` · `WEEKLY-LF.md` | Truy vết yêu cầu, telemetry, báo cáo tuần |
+| — | **`DEVBOOK.md`** | **Nhật ký lỗi AI và cách PM sửa** — 17 sự cố có thật |
+| — | `TECH-DEBT-LF.md` | Nợ kỹ thuật đang theo dõi |
+
+**Điểm đáng đọc nhất:** `DEVBOOK.md` (lỗi AI thật, gồm cả lỗi nghiêm trọng như centroid
+2 tỉnh nằm giữa Biển Đông suốt nhiều tuần) và `RTM-LF.md` mục 3 (các lỗ hổng truy vết
+mà chính RTM phát hiện ra, không giấu).
+
+---
+
+## Giới hạn đã biết
+
+Ghi thẳng, không giấu — chi tiết trong `RISK-LF.md` và `RTM-LF.md`:
+
+- **LCP trang chủ chưa đạt NFR < 2.5s.** Nguyên nhân là MapLibre GL JS tự thân nặng
+  (~700KB-1MB script). Bản đồ là tính năng lõi nên chấp nhận đánh đổi thay vì bỏ đi
+  để lấy điểm đẹp. Rủi ro R12, đo đạc trong `PERFORMANCE-LF.md`.
+- **Chất lượng nguồn không đồng đều.** zod chỉ đảm bảo *có* `sourceRef`, không đảm bảo
+  nguồn *uy tín*. Nhiều tỉnh miền núi/Tây Nguyên chỉ có nguồn báo chí hoặc cổng du lịch
+  địa phương, không có Wikipedia. Rủi ro R2 vẫn mở.
+- **Search và bộ lọc mùa/lễ hội chưa có user story và test case** — build từ yêu cầu
+  miệng, chưa quay lại viết AC. Xem `RTM-LF.md` GAP-T2.
+- **Chưa có tính năng đánh giá/bình luận** — đã thiết kế sẵn (`ARCH-LF.md` D3) nhưng
+  hoãn sang phase-2.

@@ -35,7 +35,7 @@ từng được kiểm chứng** — chi tiết mục 4.
 | QA (SIT/UAT) | 8 story | ✅ 8/8 PASS | ⚠️ 1 test lỗi thời, thực chất 7 đáng tin |
 | Accessibility | Audit | ✅ **0 vi phạm** axe-core | Sau khi sửa 4 lỗi contrast + 1 lỗi focus |
 | Performance | Đạt NFR | ⚠️ **Không đạt** LCP < 2.5s | Rủi ro R12 đã chấp nhận công khai, không giấu |
-| Đưa code lên remote | — | ✅ github.com/hamvanphu/LocalFoodWeb | 44 commit, public |
+| Đưa code lên remote | — | ✅ github.com/hamvanphu/LocalFoodWeb | 48 commit, public |
 | **Deploy production** | *(không có trong WBS)* | ✅ **Vercel, ai cũng xem được** | Tự động deploy lại mỗi lần push |
 | **US-14 Review/Rating** | *(đã hoãn 03/09)* | ✅ **Đã lên production** | Supabase + RLS đã kiểm chứng bằng cách tự tấn công DB |
 
@@ -54,14 +54,14 @@ từng được kiểm chứng** — chi tiết mục 4.
    `sourceRef` cho `Province.summary` ở ARCH, thiếu A11y/Performance ở WBS, ước
    lượng W1-6 phi thực tế ở EST, gộp sai GAP-01 ở MODULEMAP).
 2. **2 lần đánh FAIL và bắt làm lại** yêu cầu "UI wow" thay vì tặc lưỡi cho qua.
-3. **Ghi nhận lỗi AI trung thực:** 18 sự cố phân loại trong DEVBOOK (21 mục), gồm cả
+3. **Ghi nhận lỗi AI trung thực:** 19 sự cố phân loại trong DEVBOOK (23 mục), gồm cả
    lỗi nghiêm trọng tự phát hiện — và telemetry **tự thừa nhận** DEVBOOK còn ghi thiếu.
-5. **US-14 làm đúng quy trình sau khi RTM chỉ ra sai:** story + AC viết **trước** khi
-   code, nên là dòng duy nhất trong RTM không mang cảnh báo nào — đối lập trực tiếp
-   với Search/Filter (GAP-T2). Bằng chứng bài học được áp dụng thật.
-6. **Bảo mật đóng bằng bằng chứng:** R11 (RLS) không chỉ "đã chạy migration" mà được
+4. **US-14 và US-15 làm đúng quy trình sau khi RTM chỉ ra sai:** story + AC viết **trước** khi
+   code, nên là **hai dòng duy nhất** trong RTM không mang cảnh báo nào — đối lập
+   trực tiếp với Search/Filter (GAP-T2). Bằng chứng bài học được áp dụng thật.
+5. **Bảo mật đóng bằng bằng chứng:** R11 (RLS) không chỉ "đã chạy migration" mà được
    xác nhận bằng cách tự tấn công database thật — DELETE/UPDATE/lách kiểm duyệt đều 401.
-4. **Không giấu điểm yếu:** LCP không đạt NFR được ghi thẳng vào `PERFORMANCE-LF.md`
+6. **Không giấu điểm yếu:** LCP không đạt NFR được ghi thẳng vào `PERFORMANCE-LF.md`
    + `RISK-LF.md` R12 thay vì im lặng.
 
 ---
@@ -107,7 +107,7 @@ chí chấp nhận → không có test case → 2 tính năng đang chạy trên
 | **Q2** | Có test lại US-02 sau khi sửa checklist không? | (a) Sửa checklist + test lại (khuyến nghị — rẻ, ~15 phút); (b) Ghi nhận là chưa kiểm chứng | Trước viva |
 | ~~Q3~~ | ~~Điền giờ người thật~~ | ✅ **XONG 2026-09-06** — PM đã ước tính từng phiên: tổng **16–22h**, baseline không-AI **600h** → **Nén ≈ 27–37 lần**. Giới hạn của chỉ số ghi ở `TELEMETRY-LF.md` mục 5.4 | — |
 | **Q4** | `hero-bubbles.json` vẫn chỉ 8 tỉnh — giữ hay mở rộng? | Ảnh hưởng: tỉnh nào vẽ marker to trên bản đồ + mục "Tỉnh nổi bật" trang chủ | Tuỳ chọn |
-| **Q5** | Spot-check nội dung ngẫu nhiên vài tỉnh | Rủi ro **R2 (hallucination)** vẫn mở. Zod chỉ đảm bảo *có* nguồn, không đảm bảo nội dung *đúng*. Nhiều tỉnh miền núi/Tây Nguyên chỉ có nguồn báo/du lịch, không có Wikipedia | Trước viva |
+| ~~Q5~~ | ~~Spot-check nội dung~~ | ✅ **XONG 2026-09-06** — PM đọc lướt 15/197 món (mẫu ngẫu nhiên từ 21 tỉnh rủi ro cao), 0 sai rõ ràng, **0 món đối chiếu chi tiết**. Ghi đúng mức đó. PM chốt chuyển mitigation sang phát hiện khi vận hành → đã build US-15. Chi tiết `SPOTCHECK-LF.md` | — |
 
 ---
 
@@ -116,7 +116,7 @@ chí chấp nhận → không có test case → 2 tính năng đang chạy trên
 | # | Rủi ro | Trạng thái hôm nay |
 |---|---|---|
 | R1 | Vượt deadline | 🟢 **Đã hạ** — vượt phạm vi cam kết (63 > 8 tỉnh), còn 3 ngày cho việc còn lại |
-| R2 | Hallucination nội dung ẩm thực | 🔴 **Còn mở, mức cao nhất hiện tại** — 197 món, phần lớn nguồn không phải Wikipedia. Mitigation duy nhất là PM spot-check (Q5) |
+| R2 | Hallucination nội dung ẩm thực | 🟡 **Còn mở nhưng đã có kênh xử lý** — đo được: **63% món không có nguồn Wikipedia**, 21/63 tỉnh cả 3 món đều không. Đã kiểm 213 link (3 link 404, đã thay). PM spot-check mức đọc lướt. Mitigation chuyển sang US-15 (kênh báo nội dung sai) — **nhưng chưa khép kín**: chưa có thông báo tự động, và site mới có ít người dùng |
 | R3 | Rubber-stamping | 🟢 **Đã kiểm soát tốt** — 8/8 cổng hiểu có phản biện, 2 lần FAIL thật |
 | R4 | Ảnh Wikimedia thưa | 🟡 **Đã xảy ra đúng dự đoán, có fallback** — 122/197 món dùng gradient |
 | R5 | Ảnh lỗi runtime | 🟡 **Tái xuất trên production** (502 khi cache Vercel lạnh) nhưng fallback hoạt động đúng — người xem thấy gradient, không thấy ảnh vỡ |
@@ -157,7 +157,7 @@ chí chấp nhận → không có test case → 2 tính năng đang chạy trên
 | RISK | `RISK-LF.md` | ✅ 13 rủi ro, R11 đã đóng có bằng chứng |
 | DELEGATION-MAP | `DELEGATION-MAP-LF.md` | ✅ |
 | DOR | `DOR-LF.md` | ✅ |
-| DEVBOOK | `DEVBOOK.md` | ✅ 18 sự cố phân loại / 21 mục (tự thừa nhận còn ghi thiếu) |
+| DEVBOOK | `DEVBOOK.md` | ✅ 19 sự cố phân loại / 23 mục (tự thừa nhận còn ghi thiếu) |
 | SIT/UAT | `SIT-UAT-LF.md` | ⚠️ cần sửa US-02; đã thêm §US-14 kèm cổng RLS |
 | PERFORMANCE | `PERFORMANCE-LF.md` | ✅ |
 | TECH-DEBT | `TECH-DEBT-LF.md` | ✅ |

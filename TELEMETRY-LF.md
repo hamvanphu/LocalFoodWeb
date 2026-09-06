@@ -50,7 +50,7 @@ phải lý do hình thức) mà mục 5 phải do PM điền.
 | Cổng hiểu đã đóng (bước [0]→[7]) | **8/8** | 8 commit `"dong Cong hieu"` |
 | Cổng hiểu PM có phản hồi thực chất (sửa/bác/bổ sung), **không** rubber-stamp | **8/8** | Nội dung từng commit — xem bảng dưới |
 | Lần gate bị PM đánh **FAIL** buộc làm lại | **2** | W1-9 → W1-9b, W1-9b → W1-9c |
-| Sự cố ghi trong DEVBOOK | **21** | đếm mục bullet cấp 1 (1 mục là ghi chú hạn chế, không tính là lỗi) |
+| Sự cố ghi trong DEVBOOK | **23** | đếm mục bullet cấp 1 (1 mục là ghi chú hạn chế, không tính là lỗi) |
 | Dòng DEVBOOK | 190+ | `wc -l DEVBOOK.md` |
 
 ### PM đã bác/sửa gì ở từng Cổng hiểu (✅ trích commit message thật)
@@ -81,17 +81,17 @@ biện thật, 5 lần bắt được lỗi/thiếu sót AI ngay tại cổng. �
 | **AI sai nội dung (hallucination)** | 1 | Bánh cuốn Thanh Trì mô tả sai (có nhân — thực tế không nhân) |
 | **AI sai thiết kế** | 3 | Bản đồ 2 tầng giấu mất 55 tỉnh; khung nhìn cắt mũi Cà Mau; hiệu ứng blur-up áp nhầm cho ảnh `priority` gây LCP trễ |
 | **AI sai khi tự kiểm** | 1 | Playwright `fullPage` screenshot làm hiểu nhầm là có bug |
-| **Lỗi dữ liệu nguồn** | 2 | GeoJSON 65 feature thay vì 63; **centroid Khánh Hòa/Đà Nẵng nằm giữa Biển Đông** |
+| **Lỗi dữ liệu nguồn** | 3 | GeoJSON 65 feature thay vì 63; **centroid Khánh Hòa/Đà Nẵng nằm giữa Biển Đông**; **3 link nguồn 404 nằm im mà zod không bắt được** |
 | **Lỗi môi trường/thư viện** | 5 | `maplibre-gl@6.5.0` không load tile (**PM báo**); pnpm virtual store lệch; Wikimedia 429; cache module-level trả dữ liệu cũ; **502 ảnh Wikimedia trên production khi cache Vercel còn lạnh** |
 
-Tổng: **18 sự cố** được phân loại ở trên, nằm trong **21 mục** DEVBOOK (3 mục còn lại là ghi chú hạn chế/bối cảnh, không phải lỗi).
+Tổng: **19 sự cố** được phân loại ở trên, nằm trong **23 mục** DEVBOOK (4 mục còn lại là ghi chú hạn chế/bối cảnh, không phải lỗi).
 
 **⚠️ Điểm trung thực cần nói ở viva:** DEVBOOK **chưa ghi đủ** mọi lần PM bắt lỗi.
 Ví dụ 2 việc PM phản hồi trực tiếp ngày 2026-09-03 — *giọng văn "mày" lọt vào copy
 người dùng* và *bubble chấm đỏ thay vì ảnh món ăn* — chỉ nằm trong commit
 `dd0eede`, **không có mục riêng trong DEVBOOK**. Tương tự, 2 lần W1-9 FAIL vì
 "UI lỗi thời / chưa wow" cũng không có mục DEVBOOK. Nếu tính cả các lần này, số
-sự cố thật **cao hơn 18**. Đây là nợ ghi chép, không phải số liệu để làm đẹp.
+sự cố thật **cao hơn 19**. Đây là nợ ghi chép, không phải số liệu để làm đẹp.
 
 ---
 
@@ -104,9 +104,9 @@ sự cố thật **cao hơn 18**. Đây là nợ ghi chép, không phải số l
 | `sourceRef` | 222 | script đếm |
 | Món có ảnh thật | 75 (38%) | đếm `images.length > 0` |
 | Dòng JSON dữ liệu tỉnh (riêng 55 tỉnh thêm ngày 06/09) | 4.563 | `git show --stat 36c3e4c` |
-| File trong repo (đã track) | 215 | `git ls-tree -r origin/master \| wc -l` |
+| File trong repo (đã track) | 217 | `git ls-tree -r origin/master \| wc -l` |
 | Route sinh tĩnh | 68 (63 tỉnh + 5) | output `pnpm build` |
-| Commit | 43 | `git log --oneline \| wc -l` |
+| Commit | 48 | `git log --oneline \| wc -l` |
 | Artefact governance | 19 file `.md` | `ls *.md` |
 
 ### Kết quả cổng chất lượng (✅ đo bằng công cụ, không phải tự đánh giá)
@@ -187,7 +187,7 @@ Nén ~32× là con số rất lớn, và sẽ bị hỏi lại. Những giới h
 1. **Không đo chất lượng.** 600h giả định làm ra sản phẩm *tương đương*, nhưng
    `RTM-LF.md` cho thấy chưa tương đương: 2 tính năng chưa có test, 1 test lỗi thời,
    LCP không đạt NFR.
-2. **Không trừ chi phí sửa lỗi AI.** 18 sự cố trong DEVBOOK đều tốn giờ người để
+2. **Không trừ chi phí sửa lỗi AI.** 19 sự cố trong DEVBOOK đều tốn giờ người để
    phát hiện và sửa — chúng nằm *trong* 16–22h, nhưng nếu AI ít sai hơn thì số giờ
    đó còn thấp nữa. Nén đo *kết quả ròng*, không đo mức độ trơn tru.
 3. **Baseline 600h là ước tính, không phải đo.** Không ai thực sự làm lại dự án này
@@ -225,7 +225,7 @@ chỉ là chỉ số phụ về chi phí.
 2. **Bác ≥1 số** nếu thấy nghi. Gợi ý những số dễ bị hiểu sai nhất, tự AI nêu ra:
    - **Khoảng "5h44 – 16h33"** ở mục 1 — cả 2 đầu đều là **proxy sai**: cận dưới loại
      nhầm giờ làm việc thật, cận trên gộp nhầm giờ nghỉ. Đừng lấy đầu nào làm mẫu số.
-   - **"18 sự cố"** — mục 3 đã tự thừa nhận con số này **thiếu**, ít nhất 4 lần PM
+   - **"19 sự cố"** — mục 3 đã tự thừa nhận con số này **thiếu**, ít nhất 4 lần PM
      bắt lỗi không được ghi thành mục riêng trong DEVBOOK.
    - **"8/8 story PASS"** — thực chất chỉ **7 đáng tin**, vì test US-02 đã lỗi thời
      (`RTM-LF.md` GAP-T1).

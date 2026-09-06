@@ -1,0 +1,171 @@
+{
+  "note": "Nguồn số cho dashboard /telemetry. Mọi con số ở đây phải TRUY ĐƯỢC về git/file/output lệnh, trừ nhóm 'pmEstimated' vốn do PM tự khai. Xem TELEMETRY-LF.md.",
+  "updatedAt": "2026-09-06",
+  "sessions": [
+    {
+      "date": "2026-08-25",
+      "commits": 3,
+      "gitLowerBoundH": 0.12,
+      "gitUpperBoundH": 0.12,
+      "pmEstimatedH": null,
+      "grouped": true,
+      "work": "Dựng walking skeleton từ số không: scaffold Next.js, bản đồ, 2 tỉnh chạy end-to-end"
+    },
+    {
+      "date": "2026-08-26",
+      "commits": 24,
+      "gitLowerBoundH": 2.72,
+      "gitUpperBoundH": 2.72,
+      "pmEstimatedH": 3.5,
+      "grouped": false,
+      "work": "8 artefact bước [0]→[7], đóng 8 Cổng hiểu, build W1-1→W1-9c, 2 vòng redesign UI, Search/Filter"
+    },
+    {
+      "date": "2026-09-03",
+      "commits": 7,
+      "gitLowerBoundH": 1.18,
+      "gitUpperBoundH": 2.2,
+      "pmEstimatedH": null,
+      "grouped": true,
+      "work": "6 tỉnh MVP, debug bug map trắng, trang /browse, SIT-UAT, A11y audit, Lighthouse"
+    },
+    {
+      "date": "2026-09-05",
+      "commits": 1,
+      "gitLowerBoundH": 0,
+      "gitUpperBoundH": 0,
+      "pmEstimatedH": null,
+      "grouped": true,
+      "work": "Chốt quyết định mở rộng ra đủ 63 tỉnh"
+    },
+    {
+      "date": "2026-09-06",
+      "commits": 8,
+      "gitLowerBoundH": 1.72,
+      "gitUpperBoundH": 11.52,
+      "pmEstimatedH": 5,
+      "grouped": false,
+      "work": "55 tỉnh, refactor bản đồ + sửa 2 centroid, RTM/Telemetry/Weekly, deploy Vercel, US-14 + US-15"
+    }
+  ],
+  "groupedEstimateH": 9,
+  "groupedNote": "PM ước tính gộp cho 3 phiên 25/08 + 03/09 + 05/09 (trả lời: 'trên 9 giờ')",
+  "baselineNoAiH": 600,
+  "baselineNote": "PM tự chốt. Là ước lượng phản-thực (counterfactual), không ai thực sự làm lại bằng tay để đo.",
+  "estimate": {
+    "pertH": 50.7,
+    "scope": "Chỉ cho 8 tỉnh, và đã giả định CÓ AI hỗ trợ",
+    "warning": "KHÔNG dùng số này làm baseline truyền thống — đây là est của chính dự án này, dùng để đối chiếu est→reconcile"
+  },
+  "delivered": {
+    "provincesPlanned": 8,
+    "provincesActual": 63,
+    "dishes": 197,
+    "sourceRefs": 222,
+    "dishesWithImage": 75,
+    "staticRoutes": 68,
+    "commits": 48,
+    "trackedFiles": 217,
+    "artefacts": 20
+  },
+  "incidents": [
+    {
+      "group": "AI sai quy trình",
+      "count": 1,
+      "example": "Bỏ qua toàn bộ bước [0]-[7], nhảy thẳng vào code — PM bắt"
+    },
+    {
+      "group": "AI sai code/logic",
+      "count": 5,
+      "example": "generateMetadata không await params; as Province không validate thật; mất deep-link sau redesign"
+    },
+    {
+      "group": "AI sai nội dung",
+      "count": 1,
+      "example": "Bánh cuốn Thanh Trì mô tả sai (có nhân — thực tế không nhân)"
+    },
+    {
+      "group": "AI sai thiết kế",
+      "count": 3,
+      "example": "Bản đồ 2 tầng giấu mất 55 tỉnh; khung nhìn cắt mũi Cà Mau; blur-up làm trễ LCP"
+    },
+    {
+      "group": "AI sai khi tự kiểm",
+      "count": 1,
+      "example": "Playwright fullPage screenshot làm hiểu nhầm là có bug"
+    },
+    {
+      "group": "Lỗi dữ liệu nguồn",
+      "count": 3,
+      "example": "Centroid Khánh Hòa/Đà Nẵng nằm giữa Biển Đông; 3 link nguồn 404"
+    },
+    {
+      "group": "Lỗi môi trường/thư viện",
+      "count": 5,
+      "example": "maplibre-gl@6.5.0 không load tile; Wikimedia 429/502; cache module-level"
+    }
+  ],
+  "incidentsNote": "19 sự cố phân loại, nằm trong 23 mục DEVBOOK (4 mục còn lại là ghi chú hạn chế/bối cảnh, không phải lỗi). Con số này CÒN THIẾU: ít nhất 4 lần PM bắt lỗi chỉ nằm trong commit message, chưa được ghi thành mục riêng.",
+  "gates": [
+    {
+      "name": "Cổng hiểu đã đóng (bước [0]→[7])",
+      "value": "8/8",
+      "status": "pass",
+      "how": "8 commit 'đóng Cổng hiểu'"
+    },
+    {
+      "name": "Cổng hiểu PM phản biện thực chất",
+      "value": "8/8",
+      "status": "pass",
+      "how": "5 lần bắt lỗi/thiếu sót AI ngay tại cổng"
+    },
+    {
+      "name": "Gate bị PM đánh FAIL, buộc làm lại",
+      "value": "2",
+      "status": "pass",
+      "how": "W1-9 → W1-9b → W1-9c (yêu cầu UI 'wow')"
+    },
+    {
+      "name": "Build + typecheck",
+      "value": "PASS",
+      "status": "pass",
+      "how": "pnpm build, 0 lỗi TypeScript"
+    },
+    {
+      "name": "Zod validate 63 file dữ liệu",
+      "value": "PASS",
+      "status": "pass",
+      "how": "provinceSchema.safeParse lúc build"
+    },
+    {
+      "name": "Accessibility (axe-core)",
+      "value": "0 vi phạm",
+      "status": "pass",
+      "how": "4 trang, sau khi sửa 4 lỗi contrast + 1 lỗi focus"
+    },
+    {
+      "name": "RLS bảo mật review",
+      "value": "PASS",
+      "status": "pass",
+      "how": "Tự tấn công DB: DELETE/UPDATE/lách kiểm duyệt đều 401"
+    },
+    {
+      "name": "Performance — LCP < 2.5s",
+      "value": "KHÔNG ĐẠT",
+      "status": "fail",
+      "how": "MapLibre GL nặng ~700KB-1MB. Rủi ro R12 chấp nhận công khai"
+    },
+    {
+      "name": "SIT/UAT story MVP",
+      "value": "8/8 PASS",
+      "status": "warn",
+      "how": "Nhưng test US-02 đã lỗi thời → thực chất 7 đáng tin (RTM GAP-T1)"
+    },
+    {
+      "name": "Spot-check nội dung (R2)",
+      "value": "15/197 đọc lướt",
+      "status": "warn",
+      "how": "0 món đối chiếu chi tiết với nguồn. Không tuyên bố 'đã kiểm chứng'"
+    }
+  ]
+}

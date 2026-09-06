@@ -22,9 +22,13 @@ trong `WBS-LF.md`, trước khi nhân rộng ra 6 tỉnh còn lại.
 | Mức Leash đã gán chưa? | ✅ PASS | `DELEGATION-MAP-LF.md` đã gán đủ cho từng loại việc trong Wave 1. |
 | Cổng kiểm là gì? | ✅ PASS | W1-9 (Cổng hiểu con "wow") trước khi nhân rộng; W1-11/11a/11b (QA/A11y/Performance) sau khi nhân rộng — PM tự test, không tin AI tự báo PASS (đã chốt ở Cổng hiểu bước [6]). |
 | Ràng buộc thời gian rõ chưa? | ✅ PASS | Checkpoint 2026-08-31 (`EST-LF.md`) — nếu trễ, tự động cắt sang Phương án B. |
-| **MapTiler key thật đã có chưa?** | ❌ **FAIL — chưa có** | PM chưa đăng ký. **Không chặn** phần lớn W1-1→W1-9 (Design System, schema, 404, GAP-01 không cần map thật), nhưng **có chặn một phần của W1-5** (test toolbar bản đồ với style thật) — chấp nhận build W1-5 với style demo trước, verify lại với style thật khi PM có key, không dừng cả lát cắt vì 1 dependency phụ. |
+| **MapTiler key thật đã có chưa?** | ✅ **PASS (đóng 2026-09-03)** — *trước đó FAIL* | Lúc lập DoR (2026-08-26) PM chưa đăng ký → đánh FAIL. **Không chặn** phần lớn W1-1→W1-9, nhưng **có chặn một phần W1-5** (test toolbar với style thật) — đã chấp nhận build với style demo trước, verify lại sau. **Điều kiện PM đặt ra ở Cổng hiểu bước [7] ("key phải có trước W1-11") đã được đáp ứng đúng hạn:** key dán vào `.env.local` ngày 2026-09-03, trước khi chạy QA W1-11 cùng ngày. Bản đồ hiện dùng style MapTiler thật, không còn demo style. |
 
-**Kết luận DoR:** 7/8 mục PASS, 1 mục FAIL (MapTiler key) nhưng có phạm vi
+> **Cập nhật 2026-09-06 (bước [10]):** DoR giờ đạt **8/8 PASS** — mục MapTiler key
+> đã đóng đúng điều kiện PM đặt ra. Giữ nguyên phần kết luận gốc bên dưới làm lịch
+> sử quyết định, không xoá.
+
+**Kết luận DoR (nguyên văn lúc lập 2026-08-26):** 7/8 mục PASS, 1 mục FAIL (MapTiler key) nhưng có phạm vi
 ảnh hưởng giới hạn (chỉ 1 phần của 1 task/9 task) và có phương án đi tiếp mà
 không cần chờ — **đủ điều kiện build**, không phải "giả vờ đủ điều kiện".
 

@@ -6,7 +6,7 @@
   "centroid": [106.92758, 16.74795],
   "summary": "Quảng Trị có nền ẩm thực gắn với sông nước và làng nghề lâu đời: cháo bột cá lóc sợi bột dai phải ăn bằng đũa, bánh ướt Phương Lang từ làng nghề gần trăm năm tuổi, và biến thể cháo cá vạt giường của vùng Hải Lăng — tất cả đều mang vị cay nồng đặc trưng của miền Trung nắng gió.",
   "summarySourceRefs": [
-    { "url": "https://ipa.quangtri.gov.vn/vi/xuc-tien-du-lich/thong-tin-du-lich/dac-san-banh-uot-phuong-lang-32.html", "label": "Cổng TTĐT Xúc tiến Đầu tư Quảng Trị – Bánh ướt Phương Lang" }
+    { "url": "https://tuoitre.vn/thuong-banh-uot-phuong-lang-chao-vat-giuong-quang-tri-20240301215005552.htm", "label": "Thương bánh ướt Phương Lang, cháo vạt giường Quảng Trị – Tuổi Trẻ" }
   ],
   "heroDishSlug": "chao-bot-ca-loc-quang-tri",
   "dishes": [
@@ -48,7 +48,8 @@
         { "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28b%C3%A1nh_%C6%B0%E1%BB%9Bt_Ph%C6%B0%C6%A1ng_Lang%29_%281%29.jpg", "attribution": "Phương Huy, Wikimedia Commons", "license": "CC BY-SA 4.0" }
       ],
       "sourceRefs": [
-        { "url": "https://ipa.quangtri.gov.vn/vi/xuc-tien-du-lich/thong-tin-du-lich/dac-san-banh-uot-phuong-lang-32.html", "label": "Cổng TTĐT Xúc tiến Đầu tư Quảng Trị – Bánh ướt Phương Lang" }
+        { "url": "https://tuoitre.vn/thuong-banh-uot-phuong-lang-chao-vat-giuong-quang-tri-20240301215005552.htm", "label": "Thương bánh ướt Phương Lang, cháo vạt giường Quảng Trị – Tuổi Trẻ" },
+        { "url": "https://thanhnien.vn/banh-uot-phuong-lang-185452010.htm", "label": "Bánh ướt Phương Lang – Thanh Niên" }
       ],
       "occasions": ["Quanh năm"]
     },

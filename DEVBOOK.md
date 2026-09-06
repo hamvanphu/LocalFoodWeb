@@ -182,3 +182,27 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   trên production, đo tỉ lệ lặp lại qua nhiều lần chạy trước khi kết luận là bug code
   — ở đây 3 lần chạy cho 3 kết quả khác nhau, nếu chỉ chạy 1 lần rồi kết luận sẽ đi
   sửa nhầm chỗ (`quality`, kích thước ảnh) mà không chạm tới nguyên nhân thật.
+- **3 link nguồn đã chết (404) nằm im trong dữ liệu — zod không bắt được** (phát hiện
+  khi spot-check R2, 2026-09-06): kiểm tự động toàn bộ **213 URL duy nhất** trong
+  `data/provinces/*.json` thì 191 OK, 22 có vấn đề. Sau khi thử lại bằng User-Agent
+  trình duyệt để loại nhiễu, còn **3 link chết thật**: `sunparadiseland.com` (Ốc Hải
+  Phòng), `ipa.quangtri.gov.vn` (Bánh ướt Phương Lang) và
+  `khuyennong.thainguyen.gov.vn` (Bánh chưng Bờ Đậu) — đáng chú ý **2 trong 3 là cổng
+  thông tin của chính quyền tỉnh**, tức nguồn tưởng là bền nhất lại chết. **Điểm cốt
+  lõi:** `provinceSchema` ép mỗi món phải có `sourceRef` và `pnpm build` luôn PASS,
+  nhưng schema **chỉ kiểm có URL, không kiểm URL còn sống** — đây là khoảng trống thật
+  giữa "validate PASS" và "nội dung có thể tra lại được", đúng bản chất rủi ro R2.
+  **Xử lý:** thay cả 3 bằng nguồn đã verify còn sống và **chất lượng cao hơn** (Tuổi
+  Trẻ + Thanh Niên cho Quảng Trị, Báo Thái Nguyên cho Thái Nguyên) — tình cờ nâng cấp
+  từ site du lịch/cổng tỉnh lên báo chính thống. **Bài học:** cần kiểm link định kỳ,
+  không coi `sourceRef` là xong vĩnh viễn; link mục (link rot) là rủi ro dài hạn của
+  mọi hồ sơ dựa trên nguồn web.
+- **19 link còn lại KHÔNG phải lỗi — suýt sửa nhầm**: trong 22 link "có vấn đề" ban
+  đầu, 19 link thực ra vẫn sống, chỉ bị chặn khi gọi bằng script: `vietnamnet.vn`
+  (7 link, chặn request tự động), `vinpearl.com` (403), `hanam.gov.vn` và
+  `laocaitourism.vn` (chứng chỉ SSL hết hạn — lỗi của site, nội dung vẫn còn),
+  `dulichnahang.com` (502 tạm thời, thử lại thì 200). Hai domain `tourtaynguyen.com.vn`
+  và `thanhpho.sonla.gov.vn` không phân giải được từ máy này nhưng **DNS xác nhận có
+  tồn tại** — nhiều khả năng chặn theo vùng, không phải AI bịa domain. **Nếu chỉ nhìn
+  báo cáo lỗi đầu tiên rồi đi sửa hết 22 link thì đã thay nhầm 19 nguồn đang tốt** —
+  phải xác minh lại bằng công cụ khác (curl + UA thật, tra DNS) trước khi kết luận.

@@ -169,3 +169,44 @@ và nói thẳng ở viva — đó là **ước lượng có phương pháp**, t
 2. Nếu **không tìm thấy lỗi nào**, hãy tự hỏi: mẫu này đã đủ khó chưa? 5/63 tỉnh và
    15/197 món là **7,6%** — đó là mẫu nhỏ, không phải bằng chứng toàn site. Nói đúng
    phạm vi đã kiểm khi trình bày, đừng khái quát quá.
+
+---
+
+## 5. ✅ Kết quả — PM ghi nhận 2026-09-06
+
+**Mức độ đã kiểm: đọc lướt 15 món, không thấy chi tiết nào bất thường. Chưa đối
+chiếu từng chi tiết với nguồn.**
+
+Ghi đúng như vậy, **không nâng thành "đã spot-check kỹ, 0 lỗi"** — vì cổng hiểu của
+bước này yêu cầu nói được ít nhất 1 chi tiết cụ thể đã tự kiểm chứng, và điều đó chưa
+xảy ra. Ghi quá lên chính là **R3 (rubber-stamping)** — rủi ro mà PM đã bắt AI mắc ở
+ngay đầu dự án.
+
+| Chỉ số | Kết quả |
+|---|---|
+| Số món đã đọc lướt | 15 / 197 (7,6%) |
+| Số món đã đối chiếu chi tiết với nguồn | **0** |
+| ❌ Sai rõ ràng phát hiện được | 0 |
+
+**Giá trị thật của kết quả này:** đủ để nói *"đọc qua không thấy gì bất thường"*,
+**không đủ** để nói *"nội dung đã được kiểm chứng"*. Ở viva nên phát biểu đúng mức đó.
+
+### Quyết định của PM về R2
+
+> *"Nếu có sai thì phần review sẽ có người vào comment, lúc ấy ghi nhận và update."*
+
+Chuyển hướng mitigation từ **kiểm trước khi nộp** sang **phát hiện sau khi vận hành**
+(crowdsourcing). Đây là lựa chọn hợp lý cho dự án học thuật có deadline, **với điều
+kiện** phải thừa nhận 3 giới hạn:
+
+1. **Cần có người dùng thật.** Site vừa deploy 2026-09-06, chưa ai biết tới. Đám đông
+   để crowdsource hiện tại bằng 0 → mitigation này **chưa hoạt động vào lúc nộp bài**.
+2. **Cần kênh báo lỗi phù hợp.** Form đánh giá là để chấm sao món ăn, không phải để
+   báo "nguyên liệu này sai". → **Đã xử lý:** bổ sung US-15 (nút *Báo nội dung sai*).
+3. **Cần cơ chế để PM biết có báo lỗi.** Không có thông báo thì báo lỗi nằm im trong
+   database. → Hiện PM phải chủ động xem Supabase dashboard; ghi rõ là hạn chế.
+
+**Phát biểu trung thực ở viva:** *"Tôi spot-check ở mức đọc lướt trên mẫu 15/197 món
+chọn ngẫu nhiên từ nhóm rủi ro cao nhất, không phát hiện sai rõ ràng. Tôi không tuyên
+bố nội dung đã được kiểm chứng đầy đủ — thay vào đó tôi mở kênh cho người đọc báo nội
+dung sai, và chấp nhận đây là mitigation vận hành chứ chưa phải bảo đảm trước khi nộp."*

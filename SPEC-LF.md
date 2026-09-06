@@ -48,6 +48,20 @@ thực sự khác nhau về trách nhiệm, không phải 2 loại tài khoản 
 | US-13 | Là người dùng, tôi muốn lọc tỉnh/món theo mùa hoặc dịp lễ, để tìm món hợp thời điểm trong năm. | **Given** tôi ở trang chủ hoặc `/browse`, **When** tôi chọn 1 chip dịp (vd "Tết Nguyên Đán"), **Then** chỉ còn hiện tỉnh có ít nhất 1 món gắn dịp đó; **And** bỏ chọn thì danh sách trở lại đầy đủ; **And** chip đang chọn phải phân biệt được bằng thị giác, không chỉ bằng màu (yêu cầu A11y). |
 | **US-14** | **Là người xem, tôi muốn chấm sao và để lại bình luận cho món ăn, và thấy đánh giá của người khác, để cùng đóng góp cảm nhận thay vì chỉ đọc một chiều.** | **Given** tôi đang xem 1 món, **When** tôi chọn số sao (1-5), nhập tên và bình luận rồi gửi, **Then** đánh giá của tôi hiện ra ngay trong danh sách mà không cần tải lại trang; **And** người dùng khác mở cùng món đó trên **thiết bị khác cũng thấy** đánh giá đó (yêu cầu lưu trữ dùng chung — lý do đảo quyết định "không backend", xem `ARCH-LF.md` D3). **Given** tôi bỏ trống sao hoặc tên, **When** tôi bấm gửi, **Then** bị chặn kèm thông báo rõ, không gửi bản ghi rỗng. **Given** bình luận dài quá 500 ký tự, **When** tôi gửi, **Then** bị chặn ở cả client **lẫn** database (`check` constraint), không chỉ dựa vào client. **Given** món chưa có đánh giá nào, **When** tôi mở, **Then** hiện trạng thái rỗng mời đánh giá, không phải vùng trắng. **Given** Supabase lỗi/không kết nối được, **When** trang tải, **Then** phần nội dung món **vẫn hiển thị bình thường**, chỉ khu vực đánh giá báo lỗi — không làm hỏng cả trang. |
 
+### Bổ sung 2026-09-06 — US-15 (sau khi PM chốt hướng xử lý R2)
+
+| # | Story | Acceptance Criteria (Given/When/Then) |
+|---|---|---|
+| **US-15** | Là người đọc phát hiện thông tin sai về món ăn, tôi muốn báo cho người quản trị, để nội dung được sửa — thay vì phải im lặng hoặc chấm sao thấp cho một món mà thực ra tôi không chê. | **Given** tôi đang xem 1 món, **When** tôi chuyển sang chế độ *Báo nội dung sai*, **Then** form đổi sang hỏi *sai ở chỗ nào* và **không bắt buộc chấm sao** (vì đây không phải đánh giá món ăn). **Given** tôi bỏ trống phần mô tả, **When** gửi, **Then** bị chặn — báo lỗi rỗng thì vô dụng. **Given** tôi gửi thành công, **When** form đóng, **Then** hiện xác nhận đã gửi tới người quản trị; **And** báo lỗi này **không hiện công khai** trong danh sách đánh giá, để không làm rối người đọc khác và không thành kênh spam hiển thị. **Given** tôi mở lại trang, **When** xem danh sách đánh giá, **Then** chỉ thấy đánh giá món ăn, không thấy báo lỗi của ai. |
+
+**Vì sao tách khỏi US-14:** đánh giá món ăn và báo nội dung sai là hai ý định khác
+nhau. Gộp chung khiến người muốn báo lỗi buộc phải chấm sao thấp — làm hỏng luôn
+điểm trung bình của món, và người quản trị không phân biệt được "món dở" với "bài
+viết sai".
+
+**Giới hạn đã biết:** PM chỉ thấy báo lỗi khi chủ động mở Supabase dashboard — chưa
+có thông báo tự động. Ghi rõ ở `RISK-LF.md` R2, không giả vờ là đã khép kín.
+
 **Ràng buộc bắt buộc của US-14 (không phải nice-to-have):**
 
 1. **RLS phải bật đúng trước khi tính năng được coi là xong** (`RISK-LF.md` R11).

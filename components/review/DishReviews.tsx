@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { MessageSquare, AlertCircle, Loader2, Send } from "lucide-react";
+import { MessageSquare, AlertCircle, Loader2, Send, Star, Flag } from "lucide-react";
 import StarRating from "./StarRating";
 import {
   fetchReviews,
@@ -14,6 +14,7 @@ import {
   REVIEW_MAX_COMMENT,
   REVIEW_MAX_NAME,
   type DishReview,
+  type ReviewKind,
 } from "@/lib/reviews";
 
 interface DishReviewsProps {
@@ -24,7 +25,9 @@ interface DishReviewsProps {
 
 /** Chặn gửi lặp liên tiếp — rào chắn tối thiểu cho RISK R10 (không có pre-moderation). */
 const COOLDOWN_MS = 30_000;
-const cooldownKey = (p: string, d: string) => `lf-review-sent:${p}:${d}`;
+// Tách theo `kind`: vừa chấm sao xong mà phát hiện nội dung sai thì vẫn báo được ngay,
+// không bị chặn oan bởi cooldown của hành động khác.
+const cooldownKey = (p: string, d: string, k: ReviewKind) => `lf-review-sent:${k}:${p}:${d}`;
 
 export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishReviewsProps) {
   const enabled = isReviewEnabled();
@@ -33,12 +36,15 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState(false);
 
+  const [kind, setKind] = useState<ReviewKind>("review");
   const [rating, setRating] = useState(0);
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   const [sending, setSending] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
-  const [justSent, setJustSent] = useState(false);
+  const [justSent, setJustSent] = useState<ReviewKind | null>(null);
+
+  const isReport = kind === "content_report";
 
   const load = useCallback(async () => {
     if (!enabled) {
@@ -63,7 +69,14 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
     e.preventDefault();
     setFormError(null);
 
-    const input = { provinceSlug, dishSlug, authorName: name, rating, comment };
+    const input = {
+      provinceSlug,
+      dishSlug,
+      authorName: name,
+      rating: isReport ? null : rating,
+      comment,
+      kind,
+    };
     const invalid = validateReview(input);
     if (invalid) {
       setFormError(invalid);
@@ -73,9 +86,13 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
     // localStorage có thể ném lỗi (chế độ riêng tư, chặn site data) — không để
     // việc kiểm tra chống spam làm hỏng hẳn chức năng gửi.
     try {
-      const last = window.localStorage.getItem(cooldownKey(provinceSlug, dishSlug));
+      const last = window.localStorage.getItem(cooldownKey(provinceSlug, dishSlug, kind));
       if (last && Date.now() - Number(last) < COOLDOWN_MS) {
-        setFormError("Bạn vừa gửi đánh giá cho món này. Đợi một chút rồi thử lại nhé.");
+        setFormError(
+          isReport
+            ? "Bạn vừa báo lỗi cho món này. Đợi một chút rồi thử lại nhé."
+            : "Bạn vừa gửi đánh giá cho món này. Đợi một chút rồi thử lại nhé.",
+        );
         return;
       }
     } catch {
@@ -85,14 +102,16 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
     setSending(true);
     try {
       const saved = await submitReview(input);
-      setReviews((prev) => [saved, ...prev]);
+      // Báo nội dung sai trả về null (không đọc lại được, đúng thiết kế) —
+      // chỉ thêm vào danh sách khi đó là đánh giá thật.
+      if (saved) setReviews((prev) => [saved, ...prev]);
       setRating(0);
       setName("");
       setComment("");
-      setJustSent(true);
-      setTimeout(() => setJustSent(false), 4000);
+      setJustSent(kind);
+      setTimeout(() => setJustSent(null), 5000);
       try {
-        window.localStorage.setItem(cooldownKey(provinceSlug, dishSlug), String(Date.now()));
+        window.localStorage.setItem(cooldownKey(provinceSlug, dishSlug, kind), String(Date.now()));
       } catch {
         /* bỏ qua */
       }
@@ -128,14 +147,49 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
       </div>
 
       <form onSubmit={handleSubmit} className="mt-4 rounded-card bg-surface-muted p-4">
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="text-sm font-medium text-ink">Bạn thấy món này thế nào?</span>
-          <StarRating
-            value={rating}
-            onChange={setRating}
-            label={`Chấm điểm cho ${dishName}`}
-          />
+        {/* Tách "chấm sao món ăn" khỏi "báo nội dung sai": người muốn báo bài viết
+            sai không nên bị buộc chấm sao thấp, làm hỏng điểm của chính món ăn. */}
+        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Loại phản hồi">
+          {([
+            { k: "review" as const, icon: Star, text: "Đánh giá món" },
+            { k: "content_report" as const, icon: Flag, text: "Báo nội dung sai" },
+          ]).map(({ k, icon: Icon, text }) => (
+            <button
+              key={k}
+              type="button"
+              role="tab"
+              aria-selected={kind === k}
+              onClick={() => {
+                setKind(k);
+                setFormError(null);
+              }}
+              className={`flex items-center gap-1.5 rounded-pill px-3 py-1.5 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-chili ${
+                kind === k
+                  ? "bg-chili text-white shadow-soft"
+                  : "bg-surface text-ink/75 hover:text-ink"
+              }`}
+            >
+              <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+              {text}
+            </button>
+          ))}
         </div>
+
+        {isReport ? (
+          <p className="mt-3 text-sm text-ink/75">
+            Thấy thông tin chưa đúng về <strong className="text-ink">{dishName}</strong>?
+            Mô tả giúp chỗ sai — báo lỗi gửi riêng tới người quản trị, không hiện công khai.
+          </p>
+        ) : (
+          <div className="mt-3 flex flex-wrap items-center gap-3">
+            <span className="text-sm font-medium text-ink">Bạn thấy món này thế nào?</span>
+            <StarRating
+              value={rating}
+              onChange={setRating}
+              label={`Chấm điểm cho ${dishName}`}
+            />
+          </div>
+        )}
 
         <div className="mt-3 grid gap-3 sm:grid-cols-[minmax(0,14rem)_1fr]">
           <label className="block">
@@ -150,13 +204,17 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
             />
           </label>
           <label className="block">
-            <span className="sr-only">Bình luận</span>
+            <span className="sr-only">{isReport ? "Mô tả chỗ sai" : "Bình luận"}</span>
             <input
               type="text"
               value={comment}
               onChange={(e) => setComment(e.target.value)}
               maxLength={REVIEW_MAX_COMMENT}
-              placeholder="Cảm nhận của bạn (không bắt buộc)"
+              placeholder={
+                isReport
+                  ? "Sai ở chỗ nào? (bắt buộc)"
+                  : "Cảm nhận của bạn (không bắt buộc)"
+              }
               className="w-full rounded-control border border-border bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink/50 focus:border-chili focus:ring-2 focus:ring-chili/30 focus:outline-none"
             />
           </label>
@@ -176,7 +234,7 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
             ) : (
               <Send className="h-4 w-4" aria-hidden="true" />
             )}
-            {sending ? "Đang gửi…" : "Gửi đánh giá"}
+            {sending ? "Đang gửi…" : isReport ? "Gửi báo lỗi" : "Gửi đánh giá"}
           </button>
         </div>
 
@@ -189,7 +247,9 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
         )}
         {justSent && (
           <p role="status" className="mt-3 text-sm text-herb-dark">
-            Cảm ơn bạn đã đánh giá!
+            {justSent === "content_report"
+              ? "Đã gửi tới người quản trị. Cảm ơn bạn đã giúp nội dung chính xác hơn!"
+              : "Cảm ơn bạn đã đánh giá!"}
           </p>
         )}
       </form>
@@ -219,7 +279,9 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
                   className="rounded-card border border-border bg-surface p-3"
                 >
                   <div className="flex flex-wrap items-center gap-2">
-                    <StarRating value={r.rating} readOnly size={14} />
+                    {/* Danh sách chỉ chứa kind='review' (RLS lọc sẵn) nên rating
+                        luôn có; vẫn phòng null để type an toàn. */}
+                    {r.rating !== null && <StarRating value={r.rating} readOnly size={14} />}
                     <span className="text-sm font-medium text-ink">{r.author_name}</span>
                     <span className="text-xs text-ink/65">{relativeTime(r.created_at)}</span>
                   </div>

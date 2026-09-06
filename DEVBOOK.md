@@ -163,3 +163,22 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   bằng sông Hồng vẫn chồng marker ở zoom thấp — người dùng zoom vào là tách
   ra, đổi lại không tỉnh nào bị giấu hoàn toàn. Đã cập nhật US-01/US-02 trong
   `SPEC-LF.md` cho khớp hành vi thật.
+- **Ảnh Wikimedia trả 502 qua `_next/image` lúc cache Vercel còn lạnh** (phát hiện
+  khi kiểm thử production sau deploy, 2026-09-06): quét 6 trang trên site thật thấy
+  **11 lỗi 502** ở đường tối ưu ảnh `/_next/image`, tất cả đều là ảnh nguồn từ
+  `upload.wikimedia.org`. Nhưng số lỗi **dao động giữa các lần chạy** (2 → 0 → 11 → 0),
+  đó là manh mối quan trọng: không phải bug tất định. Loại trừ 2 giả thuyết sai bằng
+  đo đạc: (a) *"do ảnh quá nặng"* — sai, `Nem_chua_Thanh_Hoa.jpg` chỉ 12KB mà vẫn
+  502, dù `Banh_beo.jpg` nặng tới 3MB; (b) *"do `quality={60}` không hợp lệ trong
+  Next.js 16"* — gọi tay `_next/image?q=60` đúng là trả **400**, nhưng đó chỉ xảy ra
+  khi tự ghép URL: trình duyệt thật luôn nhận `q=75` hợp lệ, và lần quét cuối ghi
+  nhận **35/35 ảnh thành công**. Nguyên nhân thật: Wikimedia **chặn/giới hạn tần suất**
+  khi Vercel fetch dồn dập nhiều ảnh gốc cùng lúc từ một dải IP — xác nhận được bằng
+  `curl` không gửi `User-Agent` thì Wikimedia trả thẳng **403**. Sau khi Vercel cache
+  ảnh xong thì ổn định hoàn toàn. **Không sửa code:** đây đúng là rủi ro **R5** đã
+  lường trước và đã có `onError` fallback sang placeholder gradient (GAP-01), nên
+  layout không vỡ kể cả lúc 502 — người xem đầu tiên của một ảnh chưa cache có thể
+  thấy gradient thay vì ảnh, sau đó thì bình thường. **Bài học:** khi thấy lỗi mạng
+  trên production, đo tỉ lệ lặp lại qua nhiều lần chạy trước khi kết luận là bug code
+  — ở đây 3 lần chạy cho 3 kết quả khác nhau, nếu chỉ chạy 1 lần rồi kết luận sẽ đi
+  sửa nhầm chỗ (`quality`, kích thước ảnh) mà không chạm tới nguyên nhân thật.

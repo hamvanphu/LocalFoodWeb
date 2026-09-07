@@ -38,11 +38,11 @@
 | Accessibility (axe-core) | ✅ 0 vi phạm |
 | RLS bảo mật đánh giá | ✅ Kiểm bằng cách tự tấn công DB |
 | SIT/UAT story MVP | ✅ 8/8 (test lỗi thời đã viết lại) |
-| **Hiệu năng LCP < 2,5s** | ❌ **KHÔNG ĐẠT** — R12, chấp nhận có ý thức |
+| **Hiệu năng LCP < 2,5s** | ❌ **KHÔNG ĐẠT** (6,20s) — R12. Đo lại với 63 tỉnh 07/09: tốt hơn mức 8,8s hồi 8 tỉnh |
 
-## Knowledge Health: 6/7 đạt
+## Knowledge Health: 7/7 đạt
 
-c1 91,7% · c2 100% · **c3 82,6% (không đạt)** · c4 7,9% · c5 92% · c6 100% · c7 100%
+c1 91,7% · c2 100% · c3 87% · c4 7,9% · c5 92% · c6 100% · c7 100%
 
 ## Hồ sơ đi kèm (25 artefact)
 
@@ -59,9 +59,8 @@ Report: `reports/build-report.html` · `reports/hoi-thoai-pm-ai.html`
 
 | # | Việc | Ảnh hưởng |
 |---|---|---|
-| 1 | **LCP chưa đạt NFR** | Thư viện bản đồ nặng ~1MB. Chấp nhận: bản đồ là tính năng lõi. Số liệu lại đo hồi 8 tỉnh — **cần đo lại với 63 marker** |
+| 1 | **LCP chưa đạt NFR** (6,20s / 2,5s) | Thư viện bản đồ nặng ~1MB. Chấp nhận có ý thức: bản đồ là tính năng lõi. Đã đo lại với 63 tỉnh — khoảng cách tới ngưỡng thu hẹp từ ~6,3s còn ~3,7s |
 | 2 | **Nội dung chưa kiểm hết (R2)** | 63% món không có nguồn Wikipedia. PM đọc lướt 15/197, **0 món đối chiếu chi tiết**. Mitigation là kênh báo lỗi của người đọc — nhưng site còn ít người dùng |
-| 3 | **c3 Freshness 82,6%** | `PERFORMANCE-LF.md` lỗi thời (mục 1) |
 | 4 | **Cổng a11y chạy tay** | Chưa nối vào build |
 | 5 | **Không thông báo khi có báo lỗi nội dung** | PM phải tự chạy SQL mới thấy |
 | 6 | **Video demo chưa quay** | Đã có kịch bản `VIDEO-SCRIPT-LF.md` |

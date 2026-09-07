@@ -205,8 +205,8 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--rule); font
   <div class="sechead"><h2>Knowledge Health — 7 KPI</h2><p class="tiny">Bấm vào từng thẻ để xem cách đo</p></div>
   <div class="kbar">
     <button class="fbtn" data-f="all" aria-pressed="true">Tất cả · 7</button>
-    <button class="fbtn" data-f="pass" aria-pressed="false">Đạt · 6</button>
-    <button class="fbtn" data-f="fail" aria-pressed="false">Không đạt · 1</button>
+    <button class="fbtn" data-f="pass" aria-pressed="false">Đạt · 7</button>
+    <button class="fbtn" data-f="fail" aria-pressed="false">Không đạt · 0</button>
   </div>
   <div class="kpis" id="kpis"></div>
   <div class="note" style="margin-top:14px">
@@ -262,7 +262,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--rule); font
 <section>
   <div class="sechead"><h2>Còn tồn — nói trước khi bị hỏi</h2></div>
   <div class="grid2">
-    <div class="card"><h3>Hiệu năng chưa đạt</h3><p class="small muted" style="margin-top:6px">LCP trang chủ vượt ngưỡng 2,5s do thư viện bản đồ nặng ~1MB. Chấp nhận đánh đổi có ý thức: bản đồ là tính năng lõi. Số liệu lại đo hồi mới 8 tỉnh, nay 63 marker nên <strong>cần đo lại</strong>.</p></div>
+    <div class="card"><h3>Hiệu năng chưa đạt</h3><p class="small muted" style="margin-top:6px">LCP trang chủ <strong>6,20s</strong> so với ngưỡng 2,5s, do thư viện bản đồ nặng ~1MB. Đã đo lại với đủ 63 tỉnh: <strong>tốt hơn</strong> mức 8,8s hồi 8 tỉnh, payload giảm 19% dù dữ liệu gấp 8 lần. Vẫn chấp nhận đánh đổi — bản đồ là tính năng lõi. Trang không có bản đồ đạt 80/100.</p></div>
     <div class="card"><h3>Nội dung chưa kiểm hết</h3><p class="small muted" style="margin-top:6px">63% món không có nguồn Wikipedia. PM mới đọc lướt 15/197 món, <strong>0 món đối chiếu chi tiết</strong>. Không tuyên bố “đã kiểm chứng” — thay vào đó mở kênh cho người đọc báo nội dung sai.</p></div>
     <div class="card"><h3>Cổng a11y chạy tay</h3><p class="small muted" style="margin-top:6px">Audit sạch nhưng chưa nối vào build. Đáng nói hơn: khi viết test cho bộ lọc đã tìm ra 2 lỗi accessibility mà <strong>công cụ tự động không bắt được</strong> — tín hiệu chỉ dựa vào màu, và thiếu trạng thái cho trình đọc màn hình.</p></div>
     <div class="card"><h3>Quy trình mới có một người dùng</h3><p class="small muted" style="margin-top:6px">Có đủ bản đồ uỷ quyền và cổng kiểm soát, nhưng <strong>chưa ai khác từng dùng chúng</strong>. Vì vậy tự định vị ở mức Augmented, không nhận mức Standard.</p></div>
@@ -279,7 +279,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--rule); font
 const KPI=[
  {id:"c1",n:"Traceability Coverage",v:91.7,t:80,d:"≥",s:"pass",how:"11/12 story có đủ chuỗi yêu cầu → code → test, đọc từ ma trận truy vết. Story còn lại là “responsive”, vốn trải khắp mọi component nên không có file code riêng."},
  {id:"c2",n:"Change Coupling",v:100,t:70,d:"≥",s:"pass",how:"19/19 commit có đụng code đều cập nhật tài liệu trong cùng commit đó. Đo bằng cách đối chiếu danh sách file của từng commit."},
- {id:"c3",n:"Freshness",v:82.6,t:85,d:"≥",s:"fail",how:"19/23 artefact còn khớp thực tế. Chỉ số này đã bắt được lỗi thật ngay lần đo đầu: bản đồ module vẫn ghi “trang 404 chưa có”, “design system chưa đạt”, “6 tỉnh chưa làm” — trong khi tất cả đã xong từ lâu. Đã sửa. Còn tồn: báo cáo hiệu năng đo hồi 8 tỉnh."},
+ {id:"c3",n:"Freshness",v:87,t:85,d:"≥",s:"pass",how:"20/23 artefact còn khớp thực tế. Chỉ số này bắt được HAI lỗi thật: bản đồ module vẫn ghi “trang 404 chưa có”, “design system chưa đạt” trong khi đã xong từ lâu; và báo cáo hiệu năng đo hồi mới 8 tỉnh. Cả hai đã xử lý — đo lại hiệu năng cho kết quả trái dự đoán: TỐT HƠN dù dữ liệu gấp 8 lần."},
  {id:"c4",n:"Orphan Rate",v:7.9,t:15,d:"≤",s:"pass",how:"3/38 module không được nhắc trong bất kỳ tài liệu nào. Yêu cầu mồ côi: 0, sau khi bổ sung story và test cho tìm kiếm và bộ lọc."},
  {id:"c5",n:"Review Evidence",v:92,t:90,d:"≥",s:"pass",how:"23/25 artefact có dấu vết con người can thiệp — PM bắt lỗi, bác bỏ giả định, hoặc đóng cổng hiểu. Hai file thiếu dấu vết là file cấu hình cho AI, không phải tài liệu quản trị."},
  {id:"c6",n:"Decision Coverage",v:100,t:75,d:"≥",s:"pass",how:"13/13 quyết định kiến trúc và vùng rủi ro cao đều có bản ghi quyết định — từ việc chọn không dùng backend, đảo ngược quyết định đó để làm tính năng đánh giá, tới việc hạ phiên bản thư viện bản đồ vì lỗi."},
@@ -291,7 +291,7 @@ const GATES=[
  ["Gate bị PM đánh FAIL, buộc làm lại","2 lần","pass"],["Build và kiểm kiểu","PASS","pass"],
  ["Kiểm dữ liệu 63 tỉnh theo schema","PASS","pass"],["Accessibility (công cụ tự động)","0 vi phạm","pass"],
  ["Bảo mật dữ liệu đánh giá","PASS","pass"],["Kiểm thử story MVP","8/8","warn"],
- ["Spot-check nội dung","15/197 đọc lướt","warn"],["Hiệu năng LCP < 2,5s","KHÔNG ĐẠT","fail"]
+ ["Spot-check nội dung","15/197 đọc lướt","warn"],["Hiệu năng LCP < 2,5s","6,20s","fail"]
 ];
 const LOC=[["Dữ liệu tỉnh (JSON)",5717,63],["React / TypeScript",2602,35],["Logic, thư viện",601,10],["Cấu hình",521,5],["Script kiểm tra",263,5],["SQL",200,2],["CSS",87,1]];
 

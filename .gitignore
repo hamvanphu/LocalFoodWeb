@@ -49,3 +49,4 @@ next-env.d.ts
 # quy tac `!.env.example` o phia tren. Lap lai exception o cuoi file de giu
 # .env.example duoc commit (file nay chi co TEN bien, khong co gia tri).
 !.env.example
+.lh/

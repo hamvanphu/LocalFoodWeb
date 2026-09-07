@@ -1,6 +1,6 @@
 {
   "note": "Nguồn số cho dashboard /telemetry. Mọi con số ở đây phải TRUY ĐƯỢC về git/file/output lệnh, trừ nhóm 'pmEstimated' vốn do PM tự khai. Xem TELEMETRY-LF.md.",
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-09-07",
   "sessions": [
     {
       "date": "2026-08-25",
@@ -151,9 +151,9 @@
     },
     {
       "name": "Performance — LCP < 2.5s",
-      "value": "KHÔNG ĐẠT",
+      "value": "6,20s / 2,5s",
       "status": "fail",
-      "how": "MapLibre GL nặng ~700KB-1MB. Rủi ro R12 chấp nhận công khai"
+      "how": "Đo lại 2026-09-07 với 63 tỉnh, trung vị 3 lần: LCP 6,20s (trước 8,8s hồi 8 tỉnh). Vẫn không đạt vì MapLibre GL nặng — R12 chấp nhận có ý thức. Trang không có bản đồ đạt 80/100."
     },
     {
       "name": "SIT/UAT story MVP",
@@ -241,7 +241,7 @@
     "routes": 69
   },
   "knowledgeHealth": {
-    "note": "7 Knowledge Health KPI theo yêu cầu. Đo ngày 2026-09-07. Mỗi chỉ số đo bằng script trên repo thật, không tự chấm.",
+    "note": "7 Knowledge Health KPI theo yêu cầu. Đo ngày 2026-09-07, cập nhật c3 sau khi đo lại hiệu năng. Mỗi chỉ số đo bằng script trên repo thật, không tự chấm.",
     "measuredAt": "2026-09-07",
     "kpis": [
       {
@@ -267,12 +267,12 @@
       {
         "id": "c3",
         "name": "Freshness",
-        "value": 82.6,
+        "value": 87,
         "unit": "%",
         "target": 85,
         "dir": "gte",
-        "status": "fail",
-        "how": "19/23 artefact còn khớp thực tế (đã loại AGENTS.md và CLAUDE.md — file cấu hình AI, không phải artefact quản trị). KPI này đã BẮT ĐƯỢC LỖI THẬT: MODULEMAP-LF.md lỗi thời nghiêm trọng (ghi 404 'chưa có', design system 'chưa đạt', 6 tỉnh 'chưa làm') — đã sửa. Còn tồn: PERFORMANCE-LF.md đo Lighthouse hồi 8 tỉnh, nay bản đồ render 63 marker nên số cũ có thể không còn đúng."
+        "status": "pass",
+        "how": "20/23 artefact còn khớp thực tế (đã loại AGENTS.md, CLAUDE.md — file cấu hình AI). KPI này đã bắt được 2 lỗi thật: MODULEMAP-LF.md lỗi thời nghiêm trọng (đã sửa), và PERFORMANCE-LF.md đo hồi 8 tỉnh trong khi bản đồ nay render 63 marker — đã đo lại ngày 2026-09-07, kết quả trái dự đoán: hiệu năng TỐT HƠN dù dữ liệu gấp 8 lần."
       },
       {
         "id": "c4",

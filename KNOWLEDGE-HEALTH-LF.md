@@ -11,7 +11,7 @@
 |---|---|---|---|
 | c1 Traceability Coverage | **91,7%** | ≥ 80% | ✅ |
 | c2 Change Coupling | **100%** | ≥ 70% | ✅ |
-| **c3 Freshness** | **82,6%** | ≥ 85% | ❌ |
+| c3 Freshness | **87%** | ≥ 85% | ✅ *(đã đạt sau khi đo lại hiệu năng)* |
 | c4 Orphan Rate | **7,9%** | ≤ 15% | ✅ |
 | c5 Review Evidence | **92%** | ≥ 90% | ✅ |
 | c6 Decision Coverage | **100%** | ≥ 75% | ✅ |
@@ -37,8 +37,9 @@ Cột "Hiện trạng" vẫn ghi:
 Và thiếu hẳn 3 module phát sinh: `review/`, `telemetry/`, `search/`. **Đã sửa** — thêm
 mục "Cập nhật hiện trạng 2026-09-07" và xếp tầng cho các module mới.
 
-**Còn tồn (lý do c3 vẫn 82,6%):** `PERFORMANCE-LF.md` đo Lighthouse hồi còn **8 tỉnh**,
-nay bản đồ render **63 marker** nên số cũ có thể không còn đúng. Cần đo lại.
+**Đã xử lý nốt (2026-09-07):** `PERFORMANCE-LF.md` đo Lighthouse hồi **8 tỉnh** — đã **đo lại với 63 tỉnh**, trung vị 3 lần. Kết quả **trái dự đoán**: hiệu năng tốt hơn (LCP 8,8s → 6,20s, payload −19%) dù dữ liệu gấp 8 lần. c3 lên **87%**, đạt target.
+
+> **Đây là vòng đời đầy đủ của một KPI:** đo → phát hiện tài liệu lỗi thời → sửa → đo lại → chỉ số đạt. Không phải con số trang trí.
 
 ## Cách đo — để ai cũng chạy lại được
 
@@ -57,7 +58,7 @@ nay bản đồ render **63 marker** nên số cũ có thể không còn đúng.
 **1. c3 dùng timestamp là chưa đủ.** Cách đo ban đầu cho 72% và phạt oan `SCOPE-LF.md`,
 `EST-LF.md`, `ARCH-LF.md` — những artefact **đóng băng có chủ đích** (quyết định tại
 thời điểm, giữ làm lịch sử). Kiểm nội dung thì `ARCH` hoàn toàn đúng: đã có Supabase,
-không còn mô tả bản đồ 2 tầng. Nên con số cuối là **82,6%** sau khi loại 2 file cấu hình
+không còn mô tả bản đồ 2 tầng. Con số ở lần đo đầu là **82,6%** sau khi loại 2 file cấu hình
 AI (`AGENTS.md`, `CLAUDE.md`) khỏi mẫu — **không** loại các artefact đóng băng, vì như
 thế là tự bào chữa.
 

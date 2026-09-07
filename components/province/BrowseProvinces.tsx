@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, Check } from "lucide-react";
 import ProvinceTeaserCard from "./ProvinceTeaserCard";
 import { OCCASIONS } from "@/lib/types";
 import type { Occasion, Province, Region } from "@/lib/types";
@@ -32,19 +32,26 @@ export default function BrowseProvinces({ provinces }: { provinces: Province[] }
           <CalendarDays className="h-4 w-4" />
           Lọc theo mùa/lễ hội:
         </span>
-        {OCCASIONS.map((occasion) => (
-          <button
-            key={occasion}
-            onClick={() => setActive(active === occasion ? null : occasion)}
-            className={`rounded-pill border px-3 py-1 text-sm font-medium transition-colors ${
-              active === occasion
-                ? "border-chili bg-chili text-white"
-                : "border-border bg-surface text-ink/70 hover:border-chili/40 hover:text-chili"
-            }`}
-          >
-            {occasion}
-          </button>
-        ))}
+        {OCCASIONS.map((occasion) => {
+          const on = active === occasion;
+          return (
+            <button
+              key={occasion}
+              aria-pressed={on}
+              onClick={() => setActive(on ? null : occasion)}
+              className={`flex items-center gap-1 rounded-pill border px-3 py-1 text-sm font-medium transition-colors ${
+                on
+                  ? "border-chili bg-chili text-white"
+                  : "border-border bg-surface text-ink/70 hover:border-chili/40 hover:text-chili"
+              }`}
+            >
+              {/* Xem chú thích ở ProvinceExplorerGrid: dấu ✓ là tín hiệu không dựa
+                  vào màu (WCAG 1.4.1), aria-pressed cho trình đọc màn hình. */}
+              {on && <Check className="h-3.5 w-3.5" aria-hidden="true" />}
+              {occasion}
+            </button>
+          );
+        })}
       </div>
 
       {grouped.length === 0 ? (

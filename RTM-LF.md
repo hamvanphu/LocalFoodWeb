@@ -27,8 +27,8 @@
 
 | Story | Task (WBS) | Code (file thật) | Test (SIT-UAT) | Trạng thái |
 |---|---|---|---|---|
-| **US-12** Tìm kiếm không dấu | W2-7 | `components/search/SearchBar.tsx`, `lib/searchIndex.ts` | ❌ **vẫn chưa có test case** | ⚠️ Đã có story (viết bù), **chưa có test** — GAP-T2 mới đóng được một nửa |
-| **US-13** Lọc theo mùa/lễ hội | W2-8 | `lib/types.ts` (`OCCASIONS`), `ProvinceExplorerGrid.tsx`, `BrowseProvinces.tsx` | ❌ **vẫn chưa có test case** | ⚠️ Như trên |
+| **US-12** Tìm kiếm không dấu | W2-7 | `components/search/SearchBar.tsx`, `lib/searchIndex.ts` | `SIT-UAT-LF.md` §US-12 | ✅ **GAP-T2 đã đóng hẳn** 2026-09-07 — có story + test. Viết test **tìm ra 1 bug thật** (thiếu trạng thái rỗng), đã sửa |
+| **US-13** Lọc theo mùa/lễ hội | W2-8 | `lib/types.ts` (`OCCASIONS`), `ProvinceExplorerGrid.tsx`, `BrowseProvinces.tsx` | `SIT-UAT-LF.md` §US-13 | ✅ **GAP-T2 đã đóng hẳn** 2026-09-07 — viết test **tìm ra 2 lỗi a11y** mà axe-core không bắt được, đã sửa |
 | **US-15** Báo nội dung sai | *(phát sinh từ quyết định R2)* | `lib/reviews.ts` (`ReviewKind`), `components/review/DishReviews.tsx`, `supabase/migration-02-content-report.sql` | `SIT-UAT-LF.md` §US-15 | ✅ **Story viết trước code**, test đầy đủ cả luồng lỗi + kiểm ở tầng DB |
 | **US-14** Đánh giá & bình luận món | D3 (ARCH) | `lib/reviews.ts`, `components/review/DishReviews.tsx`, `StarRating.tsx`, `supabase/schema.sql`, gắn trong `DishCard.tsx` | `SIT-UAT-LF.md` §US-14 (gồm **cổng RLS bắt buộc** ở mục 0) | ✅ **Story viết trước code**, có test đầy đủ cả luồng lỗi. RLS kiểm chứng bằng cách tự tấn công DB |
 
@@ -103,10 +103,19 @@ từng được kiểm chứng chính thức**.
 **→ Việc cần làm:** bổ sung US-12 (Search) và US-13 (Filter mùa/lễ hội) vào
 `SPEC-LF.md` kèm AC, thêm test case tương ứng vào `SIT-UAT-LF.md`, rồi PM test.
 
-> **Cập nhật 2026-09-06 — đóng được một nửa:** đã viết US-12 và US-13 kèm AC vào
-> `SPEC-LF.md`. **Nhưng test case thì chưa** — nên 2 tính năng này vẫn *chưa được
-> kiểm chứng chính thức*, chỉ là giờ đã có tiêu chí để kiểm. Ghi rõ ở đây thay vì
-> đánh dấu "đã xong" cho gọn mắt.
+> **Cập nhật 2026-09-07 — ĐÃ ĐÓNG HẲN.** Đã viết test case cho cả US-12 và US-13 vào
+> `SIT-UAT-LF.md`, AI chạy thử 8/8 bước PASS. **GAP-T2 khép lại.**
+>
+> **Và việc viết test đã trả công ngay — tìm ra 3 lỗi thật mà "code chạy được" che mất:**
+>
+> | Lỗi | Vì sao không ai thấy trước đó |
+> |---|---|
+> | Search không có trạng thái rỗng — gõ sai thì dropdown **không hiện gì** | Không có AC nào nói phải báo "không tìm thấy", nên không ai kiểm |
+> | Chip lọc phân biệt **chỉ bằng màu** (vi phạm WCAG 1.4.1) | **axe-core báo 0 vi phạm** — công cụ tự động không bắt được |
+> | Chip lọc thiếu `aria-pressed` | Như trên |
+>
+> Đây là bằng chứng cụ thể cho luận điểm của chính GAP-T2: **không có AC thì không có
+> gì để test, và không test thì lỗi cứ nằm đó dù build xanh và audit sạch.**
 >
 > **Bài học đã áp dụng ngay:** US-14 (Review/Rating) làm **ngược lại** — story và AC
 > viết **trước** khi code, test case viết cùng lúc với tính năng, gồm cả các luồng
@@ -162,10 +171,10 @@ PM cần spot-check ngẫu nhiên trước viva, không coi "build PASS" là "n�
 | Hạng mục | Số lượng |
 |---|---|
 | Story MVP đã build | 8/8 |
-| Story MVP có test case | 8/8 (nhưng **1 lỗi thời** → thực chất 7 đáng tin) |
+| Story MVP có test case | **8/8 đáng tin** (test lỗi thời đã viết lại) |
 | Story "mồ côi" (chưa build) | 0 |
-| **Task đã build nhưng không có story/test** | **2** (W2-7, W2-8) |
-| **Test case lỗi thời cần viết lại** | **1** (US-02) |
+| ~~Task đã build nhưng không có story/test~~ | **0** — GAP-T2 đã đóng 2026-09-07 |
+| ~~Test case lỗi thời~~ | **0** — US-01/02/03 đã viết lại 2026-09-06, thêm US-01b |
 | NFR không có test khách quan | 1 (UI "wow" — chấp nhận, ghi rõ) |
 | Story phase-2 chưa build (đúng kế hoạch) | 4 |
 

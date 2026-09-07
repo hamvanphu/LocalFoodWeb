@@ -173,3 +173,40 @@ Sau khi tick xong bảng trên:
 thành công, báo lỗi không lọt ra danh sách công khai, chuyển chế độ hoạt động. Ở tầng
 database: `content_report` thiếu mô tả → 401, mô tả 5 ký tự → 401, `review` thiếu sao
 → 401, `kind` giả mạo → 401, và đọc công khai lọc `kind=content_report` trả về rỗng.)*
+
+---
+
+## US-12 — Tìm kiếm không dấu *(bổ sung 2026-09-07, đóng GAP-T2)*
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 1 | Gõ **`pho`** (không dấu) vào ô tìm kiếm trên đầu trang | Ra kết quả có dấu: "Phở chua Cao Bằng", "Phở khô Gia Lai"… | ☐ |
+| 2 | Gõ **`bun bo`** (không dấu, có khoảng trắng) | Ra "Bún bò Huế", "Bún bò cay Bạc Liêu" | ☐ |
+| 3 | Gõ **`ha noi`** | Ra tỉnh Hà Nội (kết quả loại tỉnh có icon ghim, món có icon dao dĩa) | ☐ |
+| 4 | Gõ chuỗi vô nghĩa, vd **`zzzznothing`** | Hiện **thông báo "Không tìm thấy…"**, **không phải** dropdown trống hay không hiện gì | ☐ |
+| 5 | Xoá hết chữ trong ô | Dropdown biến mất, **không** hiện thông báo "không tìm thấy" *(chưa gõ gì thì chưa có gì để báo)* | ☐ |
+| 6 | Gõ `bun bo` rồi **bấm vào 1 kết quả món** | Tới đúng `/provinces/{tỉnh}#{món}` **và panel chi tiết món tự mở sẵn**, không phải chỉ tới trang tỉnh | ☐ |
+
+> **Bug tìm ra khi viết test này:** trước 2026-09-07, gõ chuỗi không khớp thì dropdown
+> **không hiện gì cả** — người dùng không biết là mình gõ sai hay ô tìm kiếm hỏng. Đã
+> sửa (`SearchBar.tsx`). Đây là lý do cụ thể vì sao "có code" chưa đủ, phải có AC + test.
+
+## US-13 — Lọc theo mùa/lễ hội *(bổ sung 2026-09-07, đóng GAP-T2)*
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 1 | Vào `/browse`, đếm số tỉnh đang hiện | 63 tỉnh, nhóm theo miền Bắc/Trung/Nam | ☐ |
+| 2 | Bấm chip **"Tết Nguyên Đán"** | Số tỉnh **giảm rõ rệt** (≈17), chỉ còn tỉnh có món gắn dịp đó | ☐ |
+| 3 | Nhìn chip đang chọn | Có **dấu ✓** bên cạnh chữ — phân biệt được **không chỉ bằng màu** (WCAG 1.4.1, cho người mù màu) | ☐ |
+| 4 | Bấm lại chính chip đó | Bỏ lọc, quay lại đủ 63 tỉnh, dấu ✓ biến mất | ☐ |
+| 5 | Thử ở **trang chủ** (mục "Tỉnh nổi bật") | Chip hoạt động tương tự. Nếu không tỉnh nổi bật nào khớp → hiện *"Chưa có tỉnh nào gắn dịp…"*, **không phải vùng trắng** | ☐ |
+| 6 | *(nếu dùng trình đọc màn hình)* Tab tới chip | Đọc được trạng thái bật/tắt (`aria-pressed`) | ☐ |
+
+> **Hai vấn đề a11y tìm ra khi viết test này:** chip đang chọn trước đó chỉ khác nhau
+> **bằng màu** (vi phạm WCAG 1.4.1) và **thiếu `aria-pressed`** nên trình đọc màn hình
+> không biết chip nào đang bật. **Đáng chú ý: axe-core đã chạy và báo 0 vi phạm** — công
+> cụ tự động không bắt được loại này. Đã sửa ở cả `ProvinceExplorerGrid` và
+> `BrowseProvinces`.
+
+*(AI đã chạy thử toàn bộ 2 checklist trên bằng trình duyệt: **8/8 bước PASS**. Việc này
+chỉ chứng minh checklist khớp sản phẩm — **không thay được PM tự test**.)*

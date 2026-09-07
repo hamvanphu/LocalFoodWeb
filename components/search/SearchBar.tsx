@@ -64,6 +64,23 @@ export default function SearchBar({ index }: { index: SearchEntry[] }) {
       </div>
 
       <AnimatePresence>
+        {/* Gõ mà không ra kết quả thì phải nói rõ là "không tìm thấy" — nếu chỉ ẩn
+            dropdown đi, người dùng không biết là mình gõ sai hay ô tìm kiếm hỏng.
+            AC của US-12. Vẫn ẩn khi ô còn rỗng (chưa gõ gì thì chưa có gì để báo). */}
+        {open && query.trim().length > 0 && results.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.15 }}
+            role="status"
+            className="absolute left-0 right-0 top-full z-30 mt-2 rounded-control border border-border bg-surface px-3.5 py-3 text-sm text-ink/75 shadow-lifted"
+          >
+            Không tìm thấy món ăn hay tỉnh nào khớp{" "}
+            <span className="font-medium text-ink">“{query.trim()}”</span>.
+          </motion.div>
+        )}
+
         {open && results.length > 0 && (
           <motion.ul
             initial={{ opacity: 0, y: -6 }}

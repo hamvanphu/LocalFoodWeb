@@ -15,9 +15,10 @@ khai** và có cả tính năng Review/Rating mà trước đó đã bị hoãn.
 
 **Link sản phẩm:** https://local-food-hamvanphus-projects.vercel.app
 
-**Điều cần PM biết ngay:** không phải mọi dấu "PASS" đều còn đáng tin. Việc lập RTM
-hôm nay phát hiện **1 test case đã lỗi thời** và **2 tính năng đang chạy mà chưa
-từng được kiểm chứng** — chi tiết mục 4.
+**Điều cần PM biết ngay:** RTM ban đầu phát hiện 1 test lỗi thời + 2 tính năng chưa
+kiểm chứng. **Cả hai đã xử lý xong** — và quá trình xử lý còn lộ thêm: thực ra có **3**
+test lỗi thời (không phải 1), và việc viết test cho Search/Filter **tìm ra 3 lỗi thật**
+mà build xanh + audit sạch đều không thấy. Chi tiết mục 4.
 
 ---
 
@@ -32,7 +33,7 @@ từng được kiểm chứng** — chi tiết mục 4.
 | Dữ liệu tỉnh | 8 tỉnh (Phương án A) | ✅ **63 tỉnh** (+688%) | 197 món, 222 `sourceRef`, 0 món thiếu nguồn |
 | Ảnh món ăn | — | 75/197 có ảnh thật (38%) | 122 món dùng fallback gradient — đúng đường US-04, không phải lỗi |
 | Bản đồ tương tác | Bubble + pin 2 tầng | ✅ Đổi sang **63 marker hiện đồng thời** | Thiết kế cũ giấu mất 55 tỉnh — xem mục 4 |
-| QA (SIT/UAT) | 8 story | ✅ 8/8 PASS | ⚠️ 1 test lỗi thời, thực chất 7 đáng tin |
+| QA (SIT/UAT) | 8 story | ✅ **8/8 đáng tin** + thêm US-01b, US-12, US-13, US-14, US-15 | Test lỗi thời đã viết lại; GAP-T2 đã đóng |
 | Accessibility | Audit | ✅ **0 vi phạm** axe-core | Sau khi sửa 4 lỗi contrast + 1 lỗi focus |
 | Performance | Đạt NFR | ⚠️ **Không đạt** LCP < 2.5s | Rủi ro R12 đã chấp nhận công khai, không giấu |
 | Đưa code lên remote | — | ✅ github.com/hamvanphu/LocalFoodWeb | 48 commit, public |
@@ -103,8 +104,8 @@ chí chấp nhận → không có test case → 2 tính năng đang chạy trên
 
 | # | Quyết định | Lựa chọn | Hạn |
 |---|---|---|---|
-| **Q1** | Xử lý GAP-T2 (Search/Filter thiếu story+test) thế nào? | (a) Bổ sung US-12/US-13 + test + PM test lại — tốn ~1h nhưng hồ sơ kín; (b) Giữ nguyên, mang vào viva như phát hiện có chủ đích của chính RTM | Trước viva |
-| **Q2** | Có test lại US-02 sau khi sửa checklist không? | (a) Sửa checklist + test lại (khuyến nghị — rẻ, ~15 phút); (b) Ghi nhận là chưa kiểm chứng | Trước viva |
+| ~~Q1~~ | ~~Xử lý GAP-T2~~ | ✅ **XONG 2026-09-07** — chọn phương án (a). Viết test cho US-12/US-13, và **việc viết test tìm ra 3 lỗi thật** (search thiếu trạng thái rỗng; chip lọc phân biệt chỉ bằng màu; chip thiếu `aria-pressed`) — 2 lỗi sau **axe-core không bắt được**. Đã sửa hết | — |
+| ~~Q2~~ | ~~Test lại US-02~~ | ✅ **XONG 2026-09-06** — phát hiện **cả US-01 và US-03 cũng lỗi thời**, không chỉ US-02. Viết lại cả 3 + thêm US-01b (kiểm địa lý) + cổng `pnpm check:geo`. **PM vẫn cần tự test lại** | PM test |
 | ~~Q3~~ | ~~Điền giờ người thật~~ | ✅ **XONG 2026-09-06** — PM đã ước tính từng phiên: tổng **16–22h**, baseline không-AI **600h** → **Nén ≈ 27–37 lần**. Giới hạn của chỉ số ghi ở `TELEMETRY-LF.md` mục 5.4 | — |
 | **Q4** | `hero-bubbles.json` vẫn chỉ 8 tỉnh — giữ hay mở rộng? | Ảnh hưởng: tỉnh nào vẽ marker to trên bản đồ + mục "Tỉnh nổi bật" trang chủ | Tuỳ chọn |
 | ~~Q5~~ | ~~Spot-check nội dung~~ | ✅ **XONG 2026-09-06** — PM đọc lướt 15/197 món (mẫu ngẫu nhiên từ 21 tỉnh rủi ro cao), 0 sai rõ ràng, **0 món đối chiếu chi tiết**. Ghi đúng mức đó. PM chốt chuyển mitigation sang phát hiện khi vận hành → đã build US-15. Chi tiết `SPOTCHECK-LF.md` | — |
@@ -136,8 +137,9 @@ chí chấp nhận → không có test case → 2 tính năng đang chạy trên
 |---|---|---|
 | ✅ Xong | ~~PM điền giờ thật vào `TELEMETRY-LF.md`~~ — đã xong, Nén ≈ 27–37× | — |
 | 🔴 Cao | PM spot-check nội dung 3-5 tỉnh ngẫu nhiên (Q5) — R2 đang là rủi ro lớn nhất | 30-45 phút |
-| 🟡 Vừa | Sửa `SIT-UAT-LF.md` §US-02 + test lại (Q2) | 15 phút |
-| 🟡 Vừa | Quyết Q1 (Search/Filter) | 5 phút quyết, ~1h nếu chọn (a) |
+| ✅ Xong | ~~Sửa checklist US-02 (Q2)~~ + ~~test Search/Filter (Q1)~~ — đã xong, tìm ra 4 lỗi thật | — |
+| 🔴 Cao | **PM tự test lại** theo checklist mới: US-01, US-01b, US-02, US-03, US-12, US-13 | 20 phút |
+| 🔴 Cao | Quay video theo `VIDEO-SCRIPT-LF.md` | 30-40 phút |
 | 🟢 Thấp | Diễn tập viva: mở 1 dòng RTM bất kỳ, truy story → code → test | 20 phút |
 
 ---
@@ -158,7 +160,7 @@ chí chấp nhận → không có test case → 2 tính năng đang chạy trên
 | DELEGATION-MAP | `DELEGATION-MAP-LF.md` | ✅ |
 | DOR | `DOR-LF.md` | ✅ |
 | DEVBOOK | `DEVBOOK.md` | ✅ 19 sự cố phân loại / 23 mục (tự thừa nhận còn ghi thiếu) |
-| SIT/UAT | `SIT-UAT-LF.md` | ⚠️ cần sửa US-02; đã thêm §US-14 kèm cổng RLS |
+| SIT/UAT | `SIT-UAT-LF.md` | ✅ US-01/02/03 viết lại, thêm US-01b/12/13/14/15 |
 | PERFORMANCE | `PERFORMANCE-LF.md` | ✅ |
 | TECH-DEBT | `TECH-DEBT-LF.md` | ✅ |
 | **RTM** | `RTM-LF.md` | ✅ **mới** |

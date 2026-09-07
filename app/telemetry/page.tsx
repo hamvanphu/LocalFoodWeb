@@ -44,6 +44,8 @@ export default function TelemetryPage() {
   const gsum = gateSummary();
   const d = telemetryData.delivered;
   const tk = telemetryData.tokens;
+  const kh = telemetryData.knowledgeHealth;
+  const cb = telemetryData.codebase;
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-10">
@@ -243,11 +245,100 @@ export default function TelemetryPage() {
         <div className="mt-4 flex gap-2 rounded-card bg-surface-muted p-4 text-sm text-ink/80">
           <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-dark" aria-hidden="true" />
           <p>
-            <strong className="text-ink">{tk.cacheHitRate}% lượng token là cache read</strong>{" "}
-            — bối cảnh được đọc lại ở mỗi lượt, không phải nội dung mới. {tk.caveat}
+            <strong className="text-ink">{tk.cacheHitRate}% lượng token là cache read.</strong>{" "}
+            {tk.caveat}
           </p>
         </div>
         <p className="mt-3 text-sm text-ink/70">{tk.estimateNote}</p>
+      </section>
+
+      {/* --- Knowledge Health KPI --- */}
+      <section className="mt-10">
+        <h2 className="font-display text-xl font-semibold text-ink">
+          Knowledge Health — 7 KPI kho kiến thức
+        </h2>
+        <p className="mt-2 max-w-3xl text-sm text-ink/75">
+          AI chỉ tốt bằng kho kiến thức nó đọc được. Bảy chỉ số này đo{" "}
+          <strong className="text-ink">harness có khoẻ không</strong> — đo ngày{" "}
+          {kh.measuredAt}, mỗi chỉ số bằng script chạy trên repo thật.
+        </p>
+
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          {kh.kpis.map((k) => {
+            const pass = k.status === "pass";
+            return (
+              <div
+                key={k.id}
+                className={`rounded-card border-l-4 bg-surface p-4 shadow-soft ${
+                  pass ? "border-l-herb-dark border border-border" : "border-l-chili border border-chili/30"
+                }`}
+              >
+                <div className="flex flex-wrap items-start justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="rounded bg-ink/85 px-1.5 py-0.5 font-mono text-xs text-white">
+                      {k.id}
+                    </span>
+                    <span className="font-medium text-ink">{k.name}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className={`font-display text-xl font-semibold ${pass ? "text-herb-dark" : "text-chili-dark"}`}>
+                      {k.value}{k.unit}
+                    </span>
+                    {pass ? (
+                      <CheckCircle2 className="h-4 w-4 text-herb-dark" aria-hidden="true" />
+                    ) : (
+                      <XCircle className="h-4 w-4 text-chili-dark" aria-hidden="true" />
+                    )}
+                    <span className="sr-only">{pass ? "Đạt" : "Không đạt"}</span>
+                  </div>
+                </div>
+                <p className="mt-1 text-xs text-ink/65">
+                  Target: {k.dir === "gte" ? "≥" : "≤"} {k.target}{k.unit}
+                </p>
+                <p className="mt-2 text-sm text-ink/80">{k.how}</p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-4 flex gap-2 rounded-card bg-surface-muted p-4 text-sm text-ink/80">
+          <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-dark" aria-hidden="true" />
+          <p><strong className="text-ink">Thiên lệch đã biết của c7:</strong> {kh.caveat}</p>
+        </div>
+      </section>
+
+      {/* --- Quy mô mã nguồn & tài liệu --- */}
+      <section className="mt-10">
+        <h2 className="font-display text-xl font-semibold text-ink">Quy mô mã nguồn &amp; tài liệu</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <Stat label="Dòng code" value={cb.totalCodeLines.toLocaleString("vi-VN")} sub="tsx + ts + mjs + sql + css" />
+          <Stat label="Dòng dữ liệu tỉnh" value={(5717).toLocaleString("vi-VN")} sub="63 file JSON" />
+          <Stat label="Tài liệu dự án" value={`${cb.docPagesA4} trang`} sub={`${cb.docWords.toLocaleString("vi-VN")} từ · 25 file .md`} />
+          <Stat label="Component / Route" value={`${cb.components} / ${cb.routes}`} sub="React component / route sinh tĩnh" />
+        </div>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full min-w-[34rem] border-collapse text-sm">
+            <thead>
+              <tr className="border-b border-border text-left text-ink/70">
+                <th className="py-2 pr-4 font-medium">Loại</th>
+                <th className="py-2 pr-4 font-medium">Dòng</th>
+                <th className="py-2 pr-4 font-medium">File</th>
+                <th className="py-2 font-medium">Ghi chú</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cb.loc.map((l) => (
+                <tr key={l.kind} className="border-b border-border/60">
+                  <td className="py-2 pr-4 text-ink/85">{l.kind}</td>
+                  <td className="py-2 pr-4 text-ink/85">{l.lines ? l.lines.toLocaleString("vi-VN") : "—"}</td>
+                  <td className="py-2 pr-4 text-ink/70">{l.files}</td>
+                  <td className="py-2 text-xs text-ink/65">{l.note ?? ""}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 text-sm text-ink/70">{cb.note}</p>
       </section>
 
       {/* --- Sản lượng --- */}

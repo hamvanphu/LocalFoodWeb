@@ -1,0 +1,341 @@
+<title>Hồ sơ dựng Local Food</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --paper:#F5F6F4; --card:#FFFFFF; --sunk:#ECEEEA;
+  --ink:#101820; --ink-2:#41505C; --ink-3:#6B7A85;
+  --rule:#DDE1DC;
+  --accent:#0E7C6B; --accent-soft:#DCEDE8;
+  --pass:#1F7A4C; --warn:#A66300; --fail:#B03A2E;
+  --pass-bg:#E6F1EA; --warn-bg:#F8EFDC; --fail-bg:#F7E6E2;
+  --shadow:0 1px 2px rgba(16,24,32,.05), 0 6px 20px rgba(16,24,32,.06);
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme:dark){
+    --paper:#0E1418; --card:#161E24; --sunk:#1B252C;
+    --ink:#E8ECEA; --ink-2:#A8B5BD; --ink-3:#7C8B95;
+    --rule:#26323A;
+    --accent:#3DBFA6; --accent-soft:#12312C;
+    --pass:#54C08A; --warn:#D9A441; --fail:#E0705C;
+    --pass-bg:#14291F; --warn-bg:#2C2415; --fail-bg:#2C1A17;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1418; --card:#161E24; --sunk:#1B252C;
+  --ink:#E8ECEA; --ink-2:#A8B5BD; --ink-3:#7C8B95;
+  --rule:#26323A;
+  --accent:#3DBFA6; --accent-soft:#12312C;
+  --pass:#54C08A; --warn:#D9A441; --fail:#E0705C;
+  --pass-bg:#14291F; --warn-bg:#2C2415; --fail-bg:#2C1A17;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:40px 24px 80px}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif; text-wrap:balance; margin:0}
+h1{font-size:clamp(30px,4.5vw,46px); font-weight:700; letter-spacing:-.02em; line-height:1.1}
+h2{font-size:22px; font-weight:700; letter-spacing:-.01em}
+h3{font-size:16px; font-weight:600}
+p{margin:0}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--accent);
+}
+.muted{color:var(--ink-2)}
+.small{font-size:13px}
+.tiny{font-size:12px; color:var(--ink-3)}
+
+header{border-bottom:2px solid var(--ink); padding-bottom:22px; margin-bottom:12px}
+.hgrid{display:flex; flex-wrap:wrap; gap:20px; align-items:flex-end; justify-content:space-between}
+.lede{max-width:62ch; margin-top:12px; color:var(--ink-2)}
+.links{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+.chip{
+  display:inline-flex; align-items:center; gap:6px; text-decoration:none;
+  border:1px solid var(--rule); background:var(--card); color:var(--ink);
+  padding:5px 11px; border-radius:999px; font-size:13px; font-weight:500;
+}
+.chip:hover{border-color:var(--accent); color:var(--accent)}
+
+section{margin-top:44px}
+.sechead{display:flex; flex-wrap:wrap; align-items:baseline; gap:12px; margin-bottom:16px}
+
+.kfig{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:10px; overflow:hidden}
+.kfig>div{background:var(--card); padding:16px 18px}
+.kfig .n{font-family:"Bricolage Grotesque",sans-serif; font-size:28px; font-weight:700; line-height:1.1; letter-spacing:-.02em}
+.kfig .l{font-size:12.5px; color:var(--ink-2); margin-top:3px}
+.kfig .s{font-size:11.5px; color:var(--ink-3); margin-top:5px}
+
+/* Timeline */
+.tl{position:relative; padding-left:26px}
+.tl::before{content:""; position:absolute; left:7px; top:8px; bottom:8px; width:2px; background:var(--rule)}
+.tlrow{position:relative; display:grid; grid-template-columns:104px 1fr; gap:16px; padding:11px 0; align-items:baseline}
+.tlrow::before{content:""; position:absolute; left:-23px; top:19px; width:10px; height:10px; border-radius:50%; background:var(--accent); outline:3px solid var(--paper)}
+.tlrow+.tlrow{border-top:1px solid var(--rule)}
+.tldate{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--ink-2)}
+.tlc{font-size:12px; color:var(--ink-3); display:block}
+
+/* KPI */
+.kbar{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; align-items:center}
+.fbtn{
+  font:inherit; font-size:13px; font-weight:500; cursor:pointer;
+  border:1px solid var(--rule); background:var(--card); color:var(--ink-2);
+  padding:5px 12px; border-radius:999px;
+}
+.fbtn[aria-pressed="true"]{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+.fbtn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+.kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:12px}
+.kpi{
+  border:1px solid var(--rule); border-left:4px solid var(--pass);
+  background:var(--card); border-radius:8px; padding:14px 16px; box-shadow:var(--shadow);
+}
+.kpi.fail{border-left-color:var(--fail)}
+.kpi summary{list-style:none; cursor:pointer; display:flex; gap:10px; align-items:baseline; justify-content:space-between}
+.kpi summary::-webkit-details-marker{display:none}
+.kpi summary:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px}
+.kid{font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:600; background:var(--ink); color:var(--paper); padding:2px 6px; border-radius:4px}
+.kname{font-weight:600}
+.kval{font-family:"Bricolage Grotesque",sans-serif; font-size:21px; font-weight:700; color:var(--pass); white-space:nowrap}
+.kpi.fail .kval{color:var(--fail)}
+.ktar{font-size:11.5px; color:var(--ink-3); margin-top:2px}
+.khow{font-size:13.5px; color:var(--ink-2); margin-top:10px; padding-top:10px; border-top:1px dashed var(--rule)}
+.khint{font-size:11px; color:var(--ink-3); margin-top:6px}
+
+/* Bars */
+.bars{display:flex; flex-direction:column; gap:9px}
+.brow{display:grid; grid-template-columns:190px 1fr 34px; gap:12px; align-items:center; font-size:13.5px}
+.btrack{height:9px; background:var(--sunk); border-radius:999px; overflow:hidden}
+.bfill{height:100%; background:var(--accent); border-radius:999px}
+.bnum{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--ink-2); text-align:right}
+
+/* Gates */
+.gates{display:flex; flex-direction:column; gap:7px}
+.gate{display:flex; gap:11px; align-items:flex-start; background:var(--card); border:1px solid var(--rule); border-radius:8px; padding:11px 14px}
+.dot{width:9px; height:9px; border-radius:50%; flex:none; margin-top:7px}
+.gv{margin-left:auto; font-family:"IBM Plex Mono",monospace; font-size:12.5px; font-weight:600; padding:2px 9px; border-radius:5px; white-space:nowrap}
+
+/* Table */
+.tblwrap{overflow-x:auto; border:1px solid var(--rule); border-radius:8px; background:var(--card)}
+table{border-collapse:collapse; width:100%; min-width:460px; font-size:13.5px}
+th,td{text-align:left; padding:9px 14px; border-bottom:1px solid var(--rule)}
+th{font-size:11.5px; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-3); font-weight:600}
+tbody tr:last-child td{border-bottom:none}
+td.num{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; text-align:right}
+
+/* Calc */
+.calc{background:var(--card); border:1px solid var(--rule); border-radius:10px; padding:18px; box-shadow:var(--shadow)}
+.crow{display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin-bottom:12px}
+.crow label{font-size:13.5px; color:var(--ink-2); display:flex; align-items:center; gap:9px}
+input[type=number]{
+  font:inherit; font-family:"IBM Plex Mono",monospace; width:88px; padding:5px 9px;
+  border:1px solid var(--rule); border-radius:6px; background:var(--paper); color:var(--ink);
+}
+input[type=number]:focus-visible{outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent)}
+.cout{display:flex; flex-wrap:wrap; gap:26px; align-items:baseline; padding-top:14px; border-top:1px solid var(--rule)}
+.cbig{font-family:"Bricolage Grotesque",sans-serif; font-size:34px; font-weight:700; color:var(--accent); letter-spacing:-.02em}
+
+.note{background:var(--sunk); border-left:3px solid var(--warn); border-radius:0 8px 8px 0; padding:13px 16px; font-size:13.5px; color:var(--ink-2)}
+.note strong{color:var(--ink)}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:12px}
+.card{background:var(--card); border:1px solid var(--rule); border-radius:8px; padding:15px 17px}
+footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--rule); font-size:12.5px; color:var(--ink-3)}
+
+@media (prefers-reduced-motion:no-preference){
+  .bfill{transition:width .5s ease}
+}
+@media (max-width:560px){
+  .tlrow{grid-template-columns:1fr; gap:2px}
+  .brow{grid-template-columns:120px 1fr 32px}
+}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="hgrid">
+    <div>
+      <p class="eyebrow">Capstone · PM AI Bootcamp</p>
+      <h1>Hồ sơ dựng Local Food</h1>
+    </div>
+    <p class="mono small muted">Cập nhật 07·09·2026</p>
+  </div>
+  <p class="lede">Bản đồ ẩm thực 63 tỉnh Việt Nam, dựng bằng Human&nbsp;+&nbsp;AI trong 5 phiên làm việc trải 13 ngày. Báo cáo này đo <strong>quá trình</strong>, không quảng cáo sản phẩm — gồm cả những cổng chất lượng không đạt.</p>
+  <div class="links">
+    <a class="chip" href="https://local-food-hamvanphus-projects.vercel.app" target="_blank" rel="noopener">Sản phẩm đang chạy ↗</a>
+    <a class="chip" href="https://github.com/hamvanphu/LocalFoodWeb" target="_blank" rel="noopener">Mã nguồn ↗</a>
+    <a class="chip" href="https://local-food-hamvanphus-projects.vercel.app/telemetry" target="_blank" rel="noopener">Dashboard telemetry ↗</a>
+  </div>
+</header>
+
+<section>
+  <div class="kfig">
+    <div><div class="n mono">63<span style="font-size:16px;color:var(--ink-3)">/63</span></div><div class="l">Tỉnh thành</div><div class="s">Kế hoạch ban đầu: 8</div></div>
+    <div><div class="n mono">197</div><div class="l">Món ăn</div><div class="s">222 nguồn tham chiếu</div></div>
+    <div><div class="n mono">3.753</div><div class="l">Dòng code</div><div class="s">+5.717 dòng dữ liệu</div></div>
+    <div><div class="n mono">87</div><div class="l">Trang tài liệu</div><div class="s">25 artefact · 43.370 từ</div></div>
+    <div><div class="n mono">17h30</div><div class="l">Giờ người thật</div><div class="s">PERT ước lượng 50,7h</div></div>
+    <div><div class="n mono">19</div><div class="l">Sự cố AI đã ghi</div><div class="s">PM bắt và sửa</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Nhịp làm việc</h2><p class="tiny">48 commit · 5 phiên · 13 ngày</p></div>
+  <div class="tl">
+    <div class="tlrow"><div class="tldate">25·08<span class="tlc">3 commit</span></div><div>Dựng walking skeleton từ số không — scaffold Next.js, bản đồ, 2 tỉnh chạy end-to-end. <strong>AI bỏ qua toàn bộ bước [0]→[7] của quy trình; PM bắt được và bắt làm lại từ đầu.</strong></div></div>
+    <div class="tlrow"><div class="tldate">26·08<span class="tlc">24 commit</span></div><div>Viết 8 artefact bước [0]→[7], đóng 8 Cổng hiểu, build W1-1→W1-9c. Hai vòng redesign UI vì PM đánh FAIL.</div></div>
+    <div class="tlrow"><div class="tldate">03·09<span class="tlc">7 commit</span></div><div>6 tỉnh MVP còn lại, truy bug “bản đồ trắng” (lỗi thư viện MapLibre 6.5.0), trang duyệt tỉnh, QA, audit accessibility và hiệu năng.</div></div>
+    <div class="tlrow"><div class="tldate">05·09<span class="tlc">1 commit</span></div><div>Chốt quyết định mở rộng phạm vi từ 8 lên đủ 63 tỉnh.</div></div>
+    <div class="tlrow"><div class="tldate">06·09<span class="tlc">8 commit</span></div><div>55 tỉnh mới qua 7 agent chạy song song, refactor bản đồ, sửa 2 toạ độ sai, deploy production, tính năng đánh giá &amp; báo nội dung sai.</div></div>
+    <div class="tlrow"><div class="tldate">07·09<span class="tlc">5 commit</span></div><div>Đóng lỗ hổng truy vết cuối, đo 7 KPI kho kiến thức, báo cáo này.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Knowledge Health — 7 KPI</h2><p class="tiny">Bấm vào từng thẻ để xem cách đo</p></div>
+  <div class="kbar">
+    <button class="fbtn" data-f="all" aria-pressed="true">Tất cả · 7</button>
+    <button class="fbtn" data-f="pass" aria-pressed="false">Đạt · 6</button>
+    <button class="fbtn" data-f="fail" aria-pressed="false">Không đạt · 1</button>
+  </div>
+  <div class="kpis" id="kpis"></div>
+  <div class="note" style="margin-top:14px">
+    <strong>Thiên lệch đã biết của c7:</strong> AI tự chọn 6 chức năng và tự liệt kê tham chiếu; máy chỉ kiểm file và anchor <em>có tồn tại</em>, không kiểm nội dung có thực sự liên quan. Đúng quy trình thì PM phải tự đối chiếu. Đọc con số 100% là <em>“không có tham chiếu bịa”</em>, không phải <em>“truy xuất hoàn hảo”</em>.
+  </div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Sự cố AI theo nhóm</h2><p class="tiny">19 sự cố phân loại trong 23 mục nhật ký</p></div>
+  <div class="bars" id="bars"></div>
+  <p class="small muted" style="margin-top:12px">Con số này <strong>còn thiếu</strong>: ít nhất 4 lần PM bắt lỗi chỉ nằm trong commit message, chưa được ghi thành mục riêng. Nhóm đắt nhất không phải lỗi cú pháp — build tự bắt — mà là <em>lỗi thiết kế</em>: bản đồ 2 tầng zoom chạy đúng đặc tả, nhưng đặc tả sai nên giấu mất 55/63 tỉnh.</p>
+</section>
+
+<section>
+  <div class="sechead"><h2>Cổng chất lượng</h2><p class="tiny">7 đạt · 2 cần lưu ý · 1 không đạt</p></div>
+  <div class="gates" id="gates"></div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Nén — thử đổi số</h2></div>
+  <div class="calc">
+    <div class="crow">
+      <label>Giờ người thật <input type="number" id="h" value="17.5" min="0.5" step="0.5"></label>
+      <label>Baseline không AI <input type="number" id="b" value="600" min="1" step="10"></label>
+    </div>
+    <div class="cout">
+      <div><p class="tiny">Nén</p><p class="cbig mono" id="ratio">34.3×</p></div>
+      <p class="small muted" style="max-width:46ch">Baseline 600h là <strong>ước lượng phản-thực</strong> của PM — không ai thực sự làm lại bằng tay để đo. Nén <strong>không đo chất lượng</strong> và không trừ chi phí sửa 19 sự cố AI.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead"><h2>Quy mô mã nguồn &amp; tài liệu</h2></div>
+  <div class="tblwrap">
+    <table>
+      <thead><tr><th>Loại</th><th style="text-align:right">Dòng</th><th style="text-align:right">File</th></tr></thead>
+      <tbody id="loc"></tbody>
+    </table>
+  </div>
+  <p class="tiny" style="margin-top:10px">Chỉ tính file đã đưa vào quản lý phiên bản. Không tính thư viện ngoài, không tính giáo trình bootcamp đi kèm repo.</p>
+</section>
+
+<section>
+  <div class="sechead"><h2>Token</h2></div>
+  <div class="grid2">
+    <div class="card"><p class="tiny">Tính giá đầy đủ</p><p class="n mono" style="font-family:'Bricolage Grotesque';font-size:26px;font-weight:700">14,5M</p><p class="small muted" style="margin-top:4px">Con số phản ánh khối lượng thật, trong đó 2,2M là output AI viết ra.</p></div>
+    <div class="card"><p class="tiny">Tổng thô</p><p class="n mono" style="font-family:'Bricolage Grotesque';font-size:26px;font-weight:700">913M</p><p class="small muted" style="margin-top:4px"><strong>98,7% là cache read</strong> — bối cảnh đọc lại mỗi lượt. Trích riêng con số này sẽ gây hiểu sai.</p></div>
+  </div>
+  <p class="small muted" style="margin-top:12px">Đo từ transcript phiên trên đĩa, nơi mỗi lượt trả lời có bản ghi <span class="mono">usage</span> thật — không phải ước lượng. Không có bước “est”: chưa ai ước lượng token trước khi bắt đầu, vì kế hoạch lúc đó là 8 tỉnh.</p>
+</section>
+
+<section>
+  <div class="sechead"><h2>Còn tồn — nói trước khi bị hỏi</h2></div>
+  <div class="grid2">
+    <div class="card"><h3>Hiệu năng chưa đạt</h3><p class="small muted" style="margin-top:6px">LCP trang chủ vượt ngưỡng 2,5s do thư viện bản đồ nặng ~1MB. Chấp nhận đánh đổi có ý thức: bản đồ là tính năng lõi. Số liệu lại đo hồi mới 8 tỉnh, nay 63 marker nên <strong>cần đo lại</strong>.</p></div>
+    <div class="card"><h3>Nội dung chưa kiểm hết</h3><p class="small muted" style="margin-top:6px">63% món không có nguồn Wikipedia. PM mới đọc lướt 15/197 món, <strong>0 món đối chiếu chi tiết</strong>. Không tuyên bố “đã kiểm chứng” — thay vào đó mở kênh cho người đọc báo nội dung sai.</p></div>
+    <div class="card"><h3>Cổng a11y chạy tay</h3><p class="small muted" style="margin-top:6px">Audit sạch nhưng chưa nối vào build. Đáng nói hơn: khi viết test cho bộ lọc đã tìm ra 2 lỗi accessibility mà <strong>công cụ tự động không bắt được</strong> — tín hiệu chỉ dựa vào màu, và thiếu trạng thái cho trình đọc màn hình.</p></div>
+    <div class="card"><h3>Quy trình mới có một người dùng</h3><p class="small muted" style="margin-top:6px">Có đủ bản đồ uỷ quyền và cổng kiểm soát, nhưng <strong>chưa ai khác từng dùng chúng</strong>. Vì vậy tự định vị ở mức Augmented, không nhận mức Standard.</p></div>
+  </div>
+</section>
+
+<footer>
+  Dữ liệu trong báo cáo trích từ <span class="mono">git log</span>, transcript phiên làm việc, và script đo chạy trên chính repo — trừ giờ người thật và baseline không-AI, vốn do PM tự khai vì không công cụ nào đo thay được.
+</footer>
+
+</div>
+
+<script>
+const KPI=[
+ {id:"c1",n:"Traceability Coverage",v:91.7,t:80,d:"≥",s:"pass",how:"11/12 story có đủ chuỗi yêu cầu → code → test, đọc từ ma trận truy vết. Story còn lại là “responsive”, vốn trải khắp mọi component nên không có file code riêng."},
+ {id:"c2",n:"Change Coupling",v:100,t:70,d:"≥",s:"pass",how:"19/19 commit có đụng code đều cập nhật tài liệu trong cùng commit đó. Đo bằng cách đối chiếu danh sách file của từng commit."},
+ {id:"c3",n:"Freshness",v:82.6,t:85,d:"≥",s:"fail",how:"19/23 artefact còn khớp thực tế. Chỉ số này đã bắt được lỗi thật ngay lần đo đầu: bản đồ module vẫn ghi “trang 404 chưa có”, “design system chưa đạt”, “6 tỉnh chưa làm” — trong khi tất cả đã xong từ lâu. Đã sửa. Còn tồn: báo cáo hiệu năng đo hồi 8 tỉnh."},
+ {id:"c4",n:"Orphan Rate",v:7.9,t:15,d:"≤",s:"pass",how:"3/38 module không được nhắc trong bất kỳ tài liệu nào. Yêu cầu mồ côi: 0, sau khi bổ sung story và test cho tìm kiếm và bộ lọc."},
+ {id:"c5",n:"Review Evidence",v:92,t:90,d:"≥",s:"pass",how:"23/25 artefact có dấu vết con người can thiệp — PM bắt lỗi, bác bỏ giả định, hoặc đóng cổng hiểu. Hai file thiếu dấu vết là file cấu hình cho AI, không phải tài liệu quản trị."},
+ {id:"c6",n:"Decision Coverage",v:100,t:75,d:"≥",s:"pass",how:"13/13 quyết định kiến trúc và vùng rủi ro cao đều có bản ghi quyết định — từ việc chọn không dùng backend, đảo ngược quyết định đó để làm tính năng đánh giá, tới việc hạ phiên bản thư viện bản đồ vì lỗi."},
+ {id:"c7",n:"Retrieval Quality",v:100,t:70,d:"≥",s:"pass",how:"Spot-check 6 chức năng bằng đúng prompt mẫu — liệt kê spec, code, test, bản ghi quyết định — rồi kiểm bằng máy: 38/38 tham chiếu có file tồn tại và anchor khớp."}
+];
+const INC=[["AI sai code/logic",5],["Lỗi môi trường/thư viện",5],["AI sai thiết kế",3],["Lỗi dữ liệu nguồn",3],["AI sai quy trình",1],["AI sai nội dung",1],["AI sai khi tự kiểm",1]];
+const GATES=[
+ ["Cổng hiểu đã đóng","8/8","pass"],["Cổng hiểu có phản biện thực chất","8/8","pass"],
+ ["Gate bị PM đánh FAIL, buộc làm lại","2 lần","pass"],["Build và kiểm kiểu","PASS","pass"],
+ ["Kiểm dữ liệu 63 tỉnh theo schema","PASS","pass"],["Accessibility (công cụ tự động)","0 vi phạm","pass"],
+ ["Bảo mật dữ liệu đánh giá","PASS","pass"],["Kiểm thử story MVP","8/8","warn"],
+ ["Spot-check nội dung","15/197 đọc lướt","warn"],["Hiệu năng LCP < 2,5s","KHÔNG ĐẠT","fail"]
+];
+const LOC=[["Dữ liệu tỉnh (JSON)",5717,63],["React / TypeScript",2602,35],["Logic, thư viện",601,10],["Cấu hình",521,5],["Script kiểm tra",263,5],["SQL",200,2],["CSS",87,1]];
+
+const C={pass:["var(--pass)","var(--pass-bg)"],warn:["var(--warn)","var(--warn-bg)"],fail:["var(--fail)","var(--fail-bg)"]};
+
+document.getElementById("kpis").innerHTML=KPI.map(k=>`
+<details class="kpi ${k.s}" data-s="${k.s}">
+  <summary>
+    <span style="display:flex;gap:9px;align-items:baseline;flex-wrap:wrap">
+      <span class="kid">${k.id}</span><span class="kname">${k.n}</span>
+    </span>
+    <span style="text-align:right">
+      <span class="kval mono">${k.v}%</span>
+      <span class="ktar" style="display:block">Target ${k.d} ${k.t}%</span>
+    </span>
+  </summary>
+  <p class="khow">${k.how}</p>
+</details>`).join("");
+document.querySelectorAll(".kpi").forEach(d=>{
+  const h=document.createElement("p");h.className="khint";h.textContent="Bấm để thu gọn";
+  d.addEventListener("toggle",()=>{},{once:true});
+});
+
+const mx=Math.max(...INC.map(i=>i[1]));
+document.getElementById("bars").innerHTML=INC.map(([g,c])=>`
+<div class="brow"><span>${g}</span><span class="btrack"><span class="bfill" style="width:${c/mx*100}%"></span></span><span class="bnum">${c}</span></div>`).join("");
+
+document.getElementById("gates").innerHTML=GATES.map(([n,v,s])=>`
+<div class="gate"><span class="dot" style="background:${C[s][0]}"></span><span>${n}</span>
+<span class="gv" style="color:${C[s][0]};background:${C[s][1]}">${v}</span></div>`).join("");
+
+document.getElementById("loc").innerHTML=LOC.map(([k,l,f])=>`
+<tr><td>${k}</td><td class="num">${l.toLocaleString("vi-VN")}</td><td class="num">${f}</td></tr>`).join("")
++`<tr><td><strong>Tổng</strong></td><td class="num"><strong>${LOC.reduce((a,b)=>a+b[1],0).toLocaleString("vi-VN")}</strong></td><td class="num"><strong>${LOC.reduce((a,b)=>a+b[2],0)}</strong></td></tr>`;
+
+const hi=document.getElementById("h"),bi=document.getElementById("b"),ro=document.getElementById("ratio");
+const calc=()=>{const h=+hi.value,b=+bi.value;ro.textContent=(h>0&&b>0)?(b/h).toFixed(1)+"×":"—";};
+hi.oninput=bi.oninput=calc;calc();
+
+document.querySelectorAll(".fbtn").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".fbtn").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  const f=b.dataset.f;
+  document.querySelectorAll(".kpi").forEach(k=>{
+    k.style.display=(f==="all"||k.dataset.s===f)?"":"none";
+  });
+});
+</script>

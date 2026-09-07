@@ -180,7 +180,141 @@
     "billableFull": 14501566,
     "cacheHitRate": 98.7,
     "mdPerMillionBillable": 0.151,
-    "caveat": "98,7% là cache read — bối cảnh đọc lại mỗi lượt, không phải nội dung mới. Trích con số 913M mà bỏ ngữ cảnh là gây hiểu sai; con số phản ánh khối lượng thật là ~14,5M tính giá đầy đủ.",
+    "caveat": "Đó là bối cảnh được đọc lại ở mỗi lượt, không phải nội dung mới. Trích con số 913M mà bỏ ngữ cảnh sẽ gây hiểu sai — con số phản ánh đúng khối lượng làm việc là khoảng 14,5M tính giá đầy đủ, trong đó 2,2M là output AI thực sự viết ra.",
     "estimateNote": "Không có bước 'est' — không ai ước lượng token trước khi bắt đầu. Chỉ có reconcile (số thật)."
+  },
+  "codebase": {
+    "note": "Đo bằng `git ls-files` (chỉ file đã track). KHÔNG tính node_modules và KHÔNG tính 00_Docs (giáo trình bootcamp, không phải sản phẩm của dự án).",
+    "loc": [
+      {
+        "kind": "Artefact quản trị (.md)",
+        "lines": 8979,
+        "files": 49,
+        "note": "gồm cả 00_Docs"
+      },
+      {
+        "kind": "Artefact của DỰ ÁN (.md ở gốc)",
+        "lines": null,
+        "files": 25,
+        "note": "43.370 từ ≈ 87 trang A4"
+      },
+      {
+        "kind": "Dữ liệu tỉnh (.json)",
+        "lines": 5717,
+        "files": 63
+      },
+      {
+        "kind": "React/TypeScript (.tsx)",
+        "lines": 2602,
+        "files": 35
+      },
+      {
+        "kind": "Logic/thư viện (.ts)",
+        "lines": 601,
+        "files": 10
+      },
+      {
+        "kind": "Cấu hình (.json)",
+        "lines": 521,
+        "files": 5
+      },
+      {
+        "kind": "Script kiểm tra (.mjs)",
+        "lines": 263,
+        "files": 5
+      },
+      {
+        "kind": "SQL (Supabase)",
+        "lines": 200,
+        "files": 2
+      },
+      {
+        "kind": "CSS",
+        "lines": 87,
+        "files": 1
+      }
+    ],
+    "totalCodeLines": 3753,
+    "docWords": 43370,
+    "docPagesA4": 87,
+    "components": 29,
+    "routes": 69
+  },
+  "knowledgeHealth": {
+    "note": "7 Knowledge Health KPI theo yêu cầu. Đo ngày 2026-09-07. Mỗi chỉ số đo bằng script trên repo thật, không tự chấm.",
+    "measuredAt": "2026-09-07",
+    "kpis": [
+      {
+        "id": "c1",
+        "name": "Traceability Coverage",
+        "value": 91.7,
+        "unit": "%",
+        "target": 80,
+        "dir": "gte",
+        "status": "pass",
+        "how": "11/12 story MVP có đủ requirement → code → test (đọc từ bảng RTM). US-07 (responsive) không có file code riêng vì là cross-cutting qua Tailwind."
+      },
+      {
+        "id": "c2",
+        "name": "Change Coupling",
+        "value": 100,
+        "unit": "%",
+        "target": 70,
+        "dir": "gte",
+        "status": "pass",
+        "how": "19/19 commit có đụng code đều cập nhật tài liệu trong CÙNG commit. Đo bằng git log --name-only."
+      },
+      {
+        "id": "c3",
+        "name": "Freshness",
+        "value": 82.6,
+        "unit": "%",
+        "target": 85,
+        "dir": "gte",
+        "status": "fail",
+        "how": "19/23 artefact còn khớp thực tế (đã loại AGENTS.md và CLAUDE.md — file cấu hình AI, không phải artefact quản trị). KPI này đã BẮT ĐƯỢC LỖI THẬT: MODULEMAP-LF.md lỗi thời nghiêm trọng (ghi 404 'chưa có', design system 'chưa đạt', 6 tỉnh 'chưa làm') — đã sửa. Còn tồn: PERFORMANCE-LF.md đo Lighthouse hồi 8 tỉnh, nay bản đồ render 63 marker nên số cũ có thể không còn đúng."
+      },
+      {
+        "id": "c4",
+        "name": "Orphan Rate",
+        "value": 7.9,
+        "unit": "%",
+        "target": 15,
+        "dir": "lte",
+        "status": "pass",
+        "how": "3/38 module không được nhắc trong bất kỳ artefact nào (SiteFooter, MotionProvider, CompressionCalculator). Requirement mồ côi: 0 sau khi đóng GAP-T2."
+      },
+      {
+        "id": "c5",
+        "name": "Review Evidence",
+        "value": 92,
+        "unit": "%",
+        "target": 90,
+        "dir": "gte",
+        "status": "pass",
+        "how": "23/25 artefact có dấu vết con người (PM bắt/bác/sửa/duyệt, hoặc Cổng hiểu). 2 file thiếu là AGENTS.md và CLAUDE.md — file cấu hình cho AI."
+      },
+      {
+        "id": "c6",
+        "name": "Decision Coverage",
+        "value": 100,
+        "unit": "%",
+        "target": 75,
+        "dir": "gte",
+        "status": "pass",
+        "how": "13/13 quyết định kiến trúc / vùng rủi ro cao đều có decision record (ARCH D1-D3, RISK R1-R13, DEVBOOK phần B, TECH-DEBT)."
+      },
+      {
+        "id": "c7",
+        "name": "Retrieval Quality",
+        "value": 100,
+        "unit": "%",
+        "target": 70,
+        "dir": "gte",
+        "status": "pass",
+        "how": "Spot-check 6 chức năng bằng đúng prompt mẫu (liệt kê spec/code/test/decision record), rồi verify bằng máy: 38/38 tham chiếu có file tồn tại và anchor khớp."
+      }
+    ],
+    "caveat": "c7 có thiên lệch đã biết: AI tự chọn 6 chức năng và tự liệt kê tham chiếu, máy chỉ verify file/anchor CÓ TỒN TẠI — không verify nội dung có thực sự liên quan. Đúng quy trình thì PM phải tự đối chiếu kết quả với thực tế (như prompt mẫu ghi). Con số 100% nên đọc là 'không có tham chiếu bịa', không phải 'chất lượng truy xuất hoàn hảo'."
   }
 }

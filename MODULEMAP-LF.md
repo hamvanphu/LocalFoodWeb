@@ -29,6 +29,42 @@ báo.
 | Nội dung 6 tỉnh MVP còn lại (data entry) | Bề mặt (nội dung) | ❌ Chưa làm | Nên làm **sau** khi Design System + component bề mặt (DishCard, ProvinceHero...) đã đẹp, để không phải tô lại 8 tỉnh 2 lần. |
 | Wishlist / filter khẩu vị / quiz | Bề mặt (phase-2) | ❌ Ngoài MVP | Ngoài phạm vi 2 tuần theo SCOPE. |
 
+## 🔄 Cập nhật hiện trạng — 2026-09-07
+
+> **Vì sao có mục này:** đo KPI **c3 Freshness** (Knowledge Health) phát hiện bảng module
+> ở trên **đã lỗi thời nghiêm trọng** — cột "Hiện trạng" vẫn mô tả tình trạng ngày
+> 2026-08-26. Giữ nguyên bảng gốc làm lịch sử quyết định phân tầng (phần đó vẫn đúng),
+> nhưng hiện trạng phải cập nhật lại đây.
+
+| Module | Hiện trạng ghi ở bảng trên | **Thực tế 2026-09-07** |
+|---|---|---|
+| Design system | ⚠️ "chưa đạt, cần làm lại nghiêm túc" | ✅ **Xong** — W1-9c PASS sau 2 vòng redesign |
+| Ảnh & fallback (GAP-01) | ❌ "Chưa làm" | ✅ **Xong** từ W1-8; đã chứng minh giá trị trên production (OP-10) |
+| Bản đồ tương tác | ⚠️ "chưa có toolbar theo yêu cầu wow" | ✅ **Xong** — `MapToolbar`, marker ảnh món ăn, 63 tỉnh hiện đồng thời |
+| Trang chi tiết tỉnh | ⚠️ "UI cơ bản, PM chê lỗi thời" | ✅ **Xong** — `ProvinceDishExplorer` 2 chế độ + Sheet |
+| Trang chủ | ⚠️ "UI cơ bản" | ✅ **Xong** — hero kinetic, bản đồ, tỉnh nổi bật |
+| Trang 404 tuỳ chỉnh | ❌ "Chưa có, dùng mặc định Next.js" | ✅ **Xong** |
+| Nội dung tỉnh | ❌ "Chưa làm 6 tỉnh MVP" | ✅ **63/63 tỉnh**, 197 món |
+| Filter khẩu vị/mùa | ❌ "Ngoài MVP (phase-2)" | ✅ **Đã làm** — filter mùa/lễ hội (US-13). *Filter theo khẩu vị vẫn chưa* |
+| Wishlist, quiz | ❌ "Ngoài MVP" | ❌ **Vẫn chưa** — đúng kế hoạch, phase-2 |
+
+### Module PHÁT SINH sau bảng gốc — chưa từng được xếp tầng
+
+| Module | Tầng | Vì sao | Trạng thái |
+|---|---|---|---|
+| **Tìm kiếm** (`components/search/SearchBar.tsx`, `lib/searchIndex.ts`) | Bề mặt | Đọc qua data loader Layer 0, không module nào phụ thuộc ngược lại | ✅ Xong (US-12) |
+| **Đánh giá & báo lỗi nội dung** (`components/review/`, `lib/reviews.ts`, `supabase/`) | **Layer 0 mở rộng** — thêm **nguồn dữ liệu thứ hai** | Đây là lần đầu dự án có backend. Quyết định D3 trong `ARCH-LF.md` đảo một phần nguyên tắc "không backend". RLS là điều kiện bắt buộc (R11) | ✅ Xong (US-14, US-15) |
+| **Dashboard telemetry** (`app/telemetry/`, `lib/telemetry.ts`, `data/telemetry.json`) | Bề mặt (nội bộ) | Không phục vụ người dùng cuối, phục vụ quản trị dự án. Đọc dữ liệu tĩnh riêng | ✅ Xong |
+| **Cổng kiểm địa lý** (`scripts/check-geo.mjs`) | Layer 0 — **cổng chất lượng** | Chặn loại lỗi từng lọt qua mọi cổng khác (R13/OP-06) | ✅ Xong |
+
+**Nhận xét về phân tầng:** nguyên tắc xếp tầng ở bảng gốc **vẫn đúng** sau khi mở rộng
+— data schema/loader, map data, routing vẫn là Layer 0 và không phải sửa lại khi đi từ
+8 lên 63 tỉnh. Điều đó xác nhận quyết định "móng trước, bề mặt sau" ở bước [2] là đúng.
+Bổ sung duy nhất là **Supabase trở thành nguồn dữ liệu thứ hai ở Layer 0**, có kiểm
+soát riêng (RLS) vì nó ghi được từ phía client.
+
+---
+
 ## Scope MVP (nhắc lại, khớp SCOPE-LF.md)
 
 8 tỉnh: Hà Nội, Hải Phòng, Thừa Thiên Huế, Quảng Nam, Khánh Hòa, TP.HCM, Cần

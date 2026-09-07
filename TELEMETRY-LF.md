@@ -201,19 +201,67 @@ Nén ~32× là con số rất lớn, và sẽ bị hỏi lại. Những giới h
 phẩm**, với baseline là ước tính của tôi chứ không phải số đo, và chưa chiết khấu
 phần chất lượng còn thiếu đã ghi rõ trong RTM."*
 
-### 5.5 ⬜ Token — vẫn để trống
+### 5.5 ✅ Token — **đo được từ transcript**, không phải ước lượng
 
-| Chỉ số | Giá trị |
+**Nguồn:** file transcript của phiên nằm trên đĩa
+(`~/.claude/projects/…/54b73208-….jsonl`, 39,7MB, 6.032 dòng, 2.092 lượt trả lời của
+AI). Claude Code ghi `usage` thật vào từng lượt, nên đây là **số đo**, không phải suy đoán.
+
+Phiên này chạy từ **2026-08-25 13:52** đến **2026-09-07 13:40** — khớp đúng vòng đời dự án.
+
+| Loại token | Số lượng |
 |---|---|
-| Token ước tính (est) | ⬜ ______ |
-| Token thật (reconcile) | ⬜ ______ |
-| MD/1M-token | ⬜ ______ |
+| Input mới (không lấy từ cache) | 4.174 |
+| **Output** (AI sinh ra) | **2.204.563** |
+| Cache write (tạo cache) | 12.292.829 |
+| Cache read (dùng lại cache) | 898.544.605 |
+| **Tổng thô** | **913.046.171 (~913M)** |
+| **Tính giá đầy đủ** *(không gồm cache read)* | **14.501.566 (~14,5M)** |
 
-**AI không có số này.** Nếu cần, PM lấy từ trang usage của tài khoản Claude, không
-suy đoán. Theo Playbook, token **không được dùng thay giờ người** khi tính Nén —
-chỉ là chỉ số phụ về chi phí.
+#### ⚠️ Đừng trích con số 913M mà bỏ ngữ cảnh
 
----
+**98,7% lượng token là cache read** — tức phần bối cảnh được **đọc lại** ở mỗi lượt, chứ
+không phải nội dung mới. Trong một phiên dài 13 ngày, toàn bộ lịch sử hội thoại được gửi
+lại mỗi lượt; cache khiến phần đó rẻ hơn nhiều lần so với input thường.
+
+→ Nói *"dự án tiêu 913 triệu token"* là **đúng số nhưng gây hiểu sai**. Con số phản ánh
+đúng khối lượng làm việc là **~14,5M token tính giá đầy đủ**, trong đó **2,2M là output**
+— phần AI thực sự viết ra.
+
+**Tỷ lệ cache hit 98,7% cũng là một chỉ số vận hành tốt:** bối cảnh được tái sử dụng gần
+như triệt để thay vì gửi lại từ đầu.
+
+#### MD / 1M-token
+
+Giờ thật **17,5h** = **2,19 man-day** (quy ước 8h/ngày).
+
+| Cách tính | Kết quả |
+|---|---|
+| Theo token thô (913M) | **0,0024 MD / 1M token** |
+| Theo token tính giá (14,5M) | **0,151 MD / 1M token** |
+| Nghịch đảo, dễ hình dung hơn | **1 man-day ≈ 6,6M token tính giá** |
+
+**Nên dùng con số theo token tính giá (0,151)** khi so sánh, vì cache read không phản ánh
+khối lượng công việc.
+
+#### est → reconcile: chỉ có reconcile
+
+Playbook yêu cầu ghi token dạng *est → reconcile*. Trung thực mà nói: **dự án này không
+có bước "est"** — không ai ước lượng token trước khi bắt đầu, vì lúc đó chưa hình dung
+được quy mô (kế hoạch ban đầu là 8 tỉnh, thực tế thành 63). Chỉ có phần **reconcile** =
+số thật đo được ở trên.
+
+*Bài học cho lần sau: nên ước lượng token ngay từ bước [5] Estimation cùng với PERT giờ
+người, để có cả hai vế mà đối chiếu.*
+
+#### Hai giới hạn của số này
+
+1. **Token của subagent có thể chưa tách bạch.** Quét transcript không thấy trường
+   `subagent_tokens` riêng. Trong 2.092 lượt có 1.372 lượt dùng Sonnet và 715 lượt dùng
+   Opus — nhiều khả năng các agent research (chạy Sonnet) đã được tính gộp vào đây, nhưng
+   **chưa xác nhận chắc chắn**.
+2. **Đây là token của phiên, không phải hoá đơn.** Số thật để đối soát chi phí nằm ở
+   trang usage của tài khoản. Nếu cần con số tài chính, lấy từ đó.
 
 ## 🔒 Cổng hiểu — bước [10] (Telemetry)
 

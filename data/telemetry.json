@@ -167,5 +167,20 @@
       "status": "warn",
       "how": "0 món đối chiếu chi tiết với nguồn. Không tuyên bố 'đã kiểm chứng'"
     }
-  ]
+  ],
+  "tokens": {
+    "source": "Đo từ transcript phiên (~/.claude/projects/…/54b73208-….jsonl, 39,7MB, 2.092 lượt AI trả lời). Claude Code ghi usage thật vào từng lượt — đây là SỐ ĐO, không phải ước lượng.",
+    "sessionStart": "2026-08-25T13:52Z",
+    "sessionEnd": "2026-09-07T13:40Z",
+    "inputNew": 4174,
+    "output": 2204563,
+    "cacheWrite": 12292829,
+    "cacheRead": 898544605,
+    "totalRaw": 913046171,
+    "billableFull": 14501566,
+    "cacheHitRate": 98.7,
+    "mdPerMillionBillable": 0.151,
+    "caveat": "98,7% là cache read — bối cảnh đọc lại mỗi lượt, không phải nội dung mới. Trích con số 913M mà bỏ ngữ cảnh là gây hiểu sai; con số phản ánh khối lượng thật là ~14,5M tính giá đầy đủ.",
+    "estimateNote": "Không có bước 'est' — không ai ước lượng token trước khi bắt đầu. Chỉ có reconcile (số thật)."
+  }
 }

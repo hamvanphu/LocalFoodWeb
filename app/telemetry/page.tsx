@@ -43,6 +43,7 @@ export default function TelemetryPage() {
   const gates = telemetryData.gates as TelemetryGate[];
   const gsum = gateSummary();
   const d = telemetryData.delivered;
+  const tk = telemetryData.tokens;
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-10">
@@ -210,6 +211,43 @@ export default function TelemetryPage() {
           Cổng không đạt và cần lưu ý được hiển thị ngang hàng với cổng đạt — dashboard
           này để phán xử, không phải để trưng bày.
         </p>
+      </section>
+
+      {/* --- Token --- */}
+      <section className="mt-10">
+        <h2 className="font-display text-xl font-semibold text-ink">
+          Token — đo từ transcript, không phải ước lượng
+        </h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <Stat
+            label="Tính giá đầy đủ"
+            value={`${(tk.billableFull / 1e6).toFixed(1)}M`}
+            sub="Con số phản ánh khối lượng thật"
+          />
+          <Stat
+            label="Output (AI viết ra)"
+            value={`${(tk.output / 1e6).toFixed(1)}M`}
+            sub="Phần AI thực sự sinh ra"
+          />
+          <Stat
+            label="Tổng thô"
+            value={`${(tk.totalRaw / 1e6).toFixed(0)}M`}
+            sub="Gồm cả cache read — xem cảnh báo dưới"
+          />
+          <Stat
+            label="MD / 1M token"
+            value={String(tk.mdPerMillionBillable)}
+            sub="Theo token tính giá; 1 man-day ≈ 6,6M"
+          />
+        </div>
+        <div className="mt-4 flex gap-2 rounded-card bg-surface-muted p-4 text-sm text-ink/80">
+          <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-dark" aria-hidden="true" />
+          <p>
+            <strong className="text-ink">{tk.cacheHitRate}% lượng token là cache read</strong>{" "}
+            — bối cảnh được đọc lại ở mỗi lượt, không phải nội dung mới. {tk.caveat}
+          </p>
+        </div>
+        <p className="mt-3 text-sm text-ink/70">{tk.estimateNote}</p>
       </section>
 
       {/* --- Sản lượng --- */}

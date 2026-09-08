@@ -279,3 +279,27 @@ không phải lỗi nội dung, mà là **thiếu sót về nghĩa vụ thể hi
 Không schema, không test, không KPI nào bắt được — vì **chưa ai đặt ra yêu cầu đó**.
 Nó chỉ xuất hiện khi PM nhìn bản đồ với câu hỏi *"bản đồ này đã đúng chưa"* thay vì
 *"bản đồ này có chạy không"*.
+
+---
+
+### OP-13 · Băng chữ chạy quá nhanh, không đọc kịp *(2026-09-08)*
+
+**PM thấy gì:** *"dòng chữ chạy chạy có vẻ nhanh quá, tempo chậm lại thôi cho người ta
+còn nhìn thấy chữ gì"*.
+
+**Thực tế — lại là hệ quả của việc mở rộng 8 → 63 tỉnh:** `Marquee` đặt cứng
+`duration: 28` giây cho **toàn bộ** băng chữ, bất kể có bao nhiêu mục. Hồi 8 tỉnh thì
+băng ngắn nên 28 giây là vừa mắt. Khi lên 63 tỉnh, băng dài **39.241px** mà vẫn 28 giây
+→ **701 px/giây**, chữ lướt qua nhanh gấp gần 9 lần.
+
+**Xử lý:** thời lượng tỉ lệ theo số mục (4 giây/mục) → 252 giây, tức **78 px/giây**.
+Thêm **dừng khi rê chuột** để người đọc kịp nhìn một tên cụ thể.
+
+**Một quyết định kỹ thuật kèm theo:** phải **bỏ Framer Motion, chuyển sang CSS
+animation** cho băng chữ này. Lý do: `animation-play-state: paused` chỉ tác dụng với CSS
+animation; nếu giữ Framer thì "dừng" hoá ra là **nhảy về đầu băng** — đã viết thử và
+thấy đúng như vậy trước khi đổi. Đổi luôn thành component tĩnh, bớt một client component.
+
+**Bài học:** hằng số thời gian tính theo *toàn bộ danh sách* là bẫy khi dữ liệu scale.
+Cùng loại với lỗi khung nhìn cắt mũi Cà Mau (OP-07) — đều là **hằng số hợp lý ở quy mô
+cũ, sai ở quy mô mới**. Đáng rà lại xem còn hằng số nào tương tự không.

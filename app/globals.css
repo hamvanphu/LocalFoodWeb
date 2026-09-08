@@ -85,3 +85,29 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Băng chữ chạy dưới hero — xem components/effects/Marquee.tsx.
+   Dùng CSS animation (không phải Framer Motion) để `animation-play-state` dừng được
+   đúng tại chỗ khi rê chuột, thay vì nhảy về đầu băng. */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation-name: marquee-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  /* animation-duration đặt inline, tỉ lệ theo số mục */
+}
+
+/* Dừng khi rê chuột hoặc khi có phần tử bên trong nhận focus bàn phím */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Người bật "giảm chuyển động" thì không chạy chữ nữa */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}

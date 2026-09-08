@@ -34,3 +34,5 @@
 
 ---
 *Cập nhật lần cuối: 2026-08-26.*
+
+| 8 | **Chưa có thông báo tự động khi có báo nội dung sai / đánh giá spam** — PM phải chủ động mở Supabase Dashboard chạy SQL mới biết | `ADMIN-GUIDE-LF.md` mục 4, `TRANSFORMATION-PLAN-LF.md` G4 | Khi PM chọn kênh (Discord/Slack ~10 phút, hoặc email nhiều bước hơn). **Quyết định có ý thức: không làm trang /admin trên site**, vì cần `service_role` key mà key đó lọt vào client là mất toàn bộ dữ liệu |

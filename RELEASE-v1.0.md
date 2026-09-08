@@ -62,7 +62,7 @@ Report: `reports/build-report.html` · `reports/hoi-thoai-pm-ai.html`
 | 1 | **LCP chưa đạt NFR** (6,20s / 2,5s) | Thư viện bản đồ nặng ~1MB. Chấp nhận có ý thức: bản đồ là tính năng lõi. Đã đo lại với 63 tỉnh — khoảng cách tới ngưỡng thu hẹp từ ~6,3s còn ~3,7s |
 | 2 | **Nội dung chưa kiểm hết (R2)** | 63% món không có nguồn Wikipedia. PM đọc lướt 15/197, **0 món đối chiếu chi tiết**. Mitigation là kênh báo lỗi của người đọc — nhưng site còn ít người dùng |
 | 4 | **Cổng a11y chạy tay** | Chưa nối vào build |
-| 5 | **Không thông báo khi có báo lỗi nội dung** | PM phải tự chạy SQL mới thấy |
+| 5 | **Không thông báo khi có báo lỗi nội dung** | PM phải tự chạy SQL mới thấy. Đã có `ADMIN-GUIDE-LF.md` với câu SQL sẵn + hướng dẫn dựng webhook; chờ PM chọn kênh thông báo |
 | 6 | **Video demo chưa quay** | Đã có kịch bản `VIDEO-SCRIPT-LF.md` |
 | 7 | **PM chưa tự test lại checklist mới** | US-01/01b/02/03/12/13 đã viết lại, AI chạy thử PASS nhưng chưa thay được PM tự kiểm |
 | 8 | **Backlog phase-2** | Wishlist (US-09), lọc khẩu vị (US-10), quiz (US-11) |

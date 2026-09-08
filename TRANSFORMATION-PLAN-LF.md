@@ -50,7 +50,7 @@ Cấp 2 đã đạt nhưng còn 4 chỗ mỏng — chính là 4 điểm yếu qu
 | G1 | **Cổng a11y chạy tay**, không nối vào build | Lần sau sót thì không ai chặn | Thêm script `pnpm check:a11y`, chạy trong CI | 1-2h |
 | G2 | **Không có cổng kiểm link nguồn còn sống** | 3 link 404 nằm im, zod vẫn PASS (OP-11) | Script kiểm link định kỳ, cảnh báo link chết | 1h |
 | ~~G3~~ | ~~Không có cổng kiểm tính đúng đắn địa lý~~ | Marker giữa Biển Đông sống 12 ngày (OP-06, R13) | ✅ **XONG 2026-09-06** — `pnpm check:geo`, đã chứng minh bắt được lỗi cũ | — |
-| G4 | **Không có thông báo khi có báo nội dung sai** | US-15 chạy rồi nhưng PM phải tự chạy SQL mới thấy | Supabase Database Webhook → email/Slack | 1h |
+| G4 | **Không có thông báo khi có báo nội dung sai** | US-15 chạy rồi nhưng PM phải tự chạy SQL mới thấy | 🟡 **Một nửa xong (2026-09-08):** đã có `ADMIN-GUIDE-LF.md` với câu SQL sẵn dùng + hướng dẫn dựng webhook. Còn lại: PM chọn kênh (Discord/Slack rẻ nhất, hoặc email) rồi dán URL | ~30ph sau khi chọn kênh |
 
 **Tổng còn lại: ~3 giờ** (G3 đã xong). Cả 4 đều biến một việc "nhớ thì làm" thành **cổng tự động**, đúng
 tinh thần Cấp 2: *AI gắn vào quy trình*, không phụ thuộc trí nhớ người.

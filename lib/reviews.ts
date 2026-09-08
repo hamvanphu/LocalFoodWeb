@@ -83,6 +83,28 @@ export async function fetchReviews(
 }
 
 /**
+ * Đánh giá mới nhất trên toàn site, dùng cho khối "Cảm nhận mới nhất" ở trang chủ.
+ *
+ * Không cần lọc `kind` hay `status` ở đây: policy SELECT chỉ trả về
+ * `status='visible' AND kind='review'`, nên báo nội dung sai và mục đã ẩn không bao
+ * giờ lọt ra. Lọc thêm ở client chỉ là thừa và dễ khiến người đọc code tưởng đó mới
+ * là lớp bảo vệ.
+ */
+export async function fetchRecentReviews(limit = 6): Promise<DishReview[]> {
+  const supabase = getReviewClient();
+  if (!supabase) throw new ReviewError("Chưa cấu hình Supabase.");
+
+  const { data, error } = await supabase
+    .from("dish_reviews")
+    .select("id, province_slug, dish_slug, author_name, rating, comment, created_at")
+    .order("created_at", { ascending: false })
+    .limit(limit);
+
+  if (error) throw new ReviewError("Không tải được đánh giá.");
+  return (data ?? []) as DishReview[];
+}
+
+/**
  * Kiểm tra phía client. Đây là lớp thứ nhất cho trải nghiệm tốt — lớp thật sự
  * bảo vệ dữ liệu là `check` constraint + RLS policy trong `supabase/schema.sql`.
  */

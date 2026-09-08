@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import FoodMapLoader from "@/components/map/FoodMapLoader";
 import HeroSection from "@/components/HeroSection";
 import ProvinceExplorerGrid from "@/components/province/ProvinceExplorerGrid";
+import RecentReviews, { type DishLookup } from "@/components/review/RecentReviews";
 import heroBubbles from "@/data/hero-bubbles.json";
 import { buildProvinceMapFeatureCollection } from "@/lib/geo";
 import { getAllProvinces, getHeroDish } from "@/lib/provinces";
@@ -14,6 +15,15 @@ export default function HomePage() {
   // Trang chủ chỉ hiện tỉnh nổi bật (danh sách curated dùng chung với bubble bản đồ),
   // không hiện tất cả — tránh trang chủ bị rợp khi scale ra 63 tỉnh (PM feedback 2026-09-03).
   const highlighted = provinces.filter((p) => heroBubbles.provinceSlugs.includes(p.slug));
+
+  // Bảng tra slug → tên hiển thị, dựng sẵn ở server để khối đánh giá không phải
+  // tải lại toàn bộ dữ liệu tỉnh ở phía trình duyệt.
+  const dishLookup: DishLookup = {};
+  for (const p of provinces) {
+    for (const d of p.dishes) {
+      dishLookup[`${p.slug}/${d.slug}`] = { provinceName: p.name, dishName: d.name };
+    }
+  }
 
   const heroPhoto = provinces
     .map((province) => getHeroDish(province)?.images[0])
@@ -56,6 +66,8 @@ export default function HomePage() {
           <ProvinceExplorerGrid provinces={highlighted} />
         </div>
       </section>
+
+      <RecentReviews lookup={dishLookup} />
     </div>
   );
 }

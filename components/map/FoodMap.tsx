@@ -17,6 +17,8 @@ import {
 } from "./mapStyle";
 import MapToolbar from "./MapToolbar";
 import DishMarker from "./DishMarker";
+import SovereigntyMarker from "./SovereigntyMarker";
+import sovereignty from "@/data/sovereignty.json";
 import type { ProvinceMapProperties } from "@/lib/geo";
 
 interface FoodMapProps {
@@ -79,6 +81,38 @@ export default function FoodMap({ provinces }: FoodMapProps) {
         onMove={handleMove}
         onLoad={handleLoad}
       >
+        {/* Hoàng Sa và Trường Sa — thuộc chủ quyền Việt Nam. Hiện ở MỌI mức zoom,
+            kể cả khung mặc định, vì basemap chỉ ghi nhãn quốc tế và không thể hiện
+            chủ quyền. Xem `data/sovereignty.json`. */}
+        {sovereignty.archipelagos.map((a) => (
+          <Marker
+            key={a.id}
+            longitude={a.center[0]}
+            latitude={a.center[1]}
+            anchor="center"
+            style={{ zIndex: 0 }}
+          >
+            <SovereigntyMarker
+              name={a.name}
+              admin={a.admin}
+              detailed
+              onClick={() => goToProvince(a.provinceSlug)}
+            />
+          </Marker>
+        ))}
+
+        {/* Tên gọi Việt Nam của vùng biển mà bản đồ quốc tế ghi "South China Sea" */}
+        <Marker
+          longitude={sovereignty.seaName.center[0]}
+          latitude={sovereignty.seaName.center[1]}
+          anchor="center"
+          style={{ zIndex: 0 }}
+        >
+          <span className="pointer-events-none select-none whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.18em] text-chili-dark/70">
+            {sovereignty.seaName.label}
+          </span>
+        </Marker>
+
         {ordered.map((f) => {
           const [lng, lat] = f.geometry.coordinates;
           const p = f.properties;

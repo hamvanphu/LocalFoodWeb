@@ -143,6 +143,30 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   Đà Nẵng `[108.22, 16.06]`); giữ nguyên `centroids.json` vì nó là dữ liệu
   dẫn xuất từ geojson. **Bài học:** không tin centroid hình học cho đơn vị
   hành chính có quần đảo — phải mắt thường soi lại trên bản đồ thật.
+
+  **⚠️ Làm rõ để không bị hiểu sai (bổ sung 2026-09-08):** đưa centroid về phần đất
+  liền là quyết định **hiển thị marker ẩm thực**, **không liên quan tới chủ quyền**.
+  **Hoàng Sa và Trường Sa thuộc chủ quyền Việt Nam** — Hoàng Sa là huyện Hoàng Sa
+  (TP Đà Nẵng), Trường Sa là huyện Trường Sa (tỉnh Khánh Hòa). Lý do thuần kỹ thuật:
+  bún chả cá Nha Trang không nấu ở Trường Sa, nên marker *món ăn* phải nằm nơi món ăn
+  thực sự có. Chủ quyền được thể hiện bằng **lớp riêng** (`data/sovereignty.json` +
+  `SovereigntyMarker.tsx`), hiện ở **mọi mức zoom** kể cả khung mặc định — xem mục
+  dưới.
+- **[CHỦ QUYỀN] Bản đồ không thể hiện Hoàng Sa và Trường Sa** (PM yêu cầu rà soát,
+  2026-09-08): kiểm bằng ảnh chụp bản đồ thật thì thấy **hai thiếu sót**. Một, khung
+  nhìn mặc định dừng ở kinh độ 109,6°Đ nên **cả hai quần đảo nằm ngoài tầm nhìn** —
+  người mở trang không hề thấy. Hai, basemap MapTiler chỉ ghi nhãn quốc tế
+  (**"PARACEL ISLANDS"**, **"South China Sea"**), không có "Hoàng Sa", "Trường Sa",
+  "Biển Đông", và không thể hiện chủ quyền. **Xử lý:** mở rộng khung mặc định tới
+  114,4°Đ / 8,0°B để bao cả hai; thêm lớp `data/sovereignty.json` +
+  `SovereigntyMarker.tsx` hiện ở mọi mức zoom với nhãn tiếng Việt kèm **đơn vị hành
+  chính quản lý**, cộng nhãn "Biển Đông"; marker chủ quyền cố ý khác kiểu marker món
+  ăn (hình thoi viền đỏ, không phải ảnh tròn) để không bị nhầm là điểm ẩm thực; bấm
+  vào quần đảo dẫn tới trang tỉnh quản lý. **Bài học:** đây là loại thiếu sót **không
+  cổng nào bắt được** — build sạch, `check:geo` PASS, QA PASS, 7 KPI đạt — vì chưa ai
+  đặt ra yêu cầu đó. Nó chỉ lộ khi có người nhìn bản đồ và hỏi *"bản đồ này đã đúng
+  chưa"* thay vì *"bản đồ này có chạy không"*. Ghi thành **OP-12** trong
+  `OPERATING-LOG-LF.md`.
 - **Khung nhìn mặc định cắt mất mũi Cà Mau** (cùng đợt): `initialViewState`
   hard-code `center [107.5, 16.5] + zoom 5` chỉ vừa khung ở một tỉ lệ viewport
   nhất định; với khung bản đồ cao `70vh` trên màn 900px thì phần cực Nam bị

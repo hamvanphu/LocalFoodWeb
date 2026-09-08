@@ -34,6 +34,22 @@
 | 2 | Kiểm riêng **Khánh Hòa** (Nha Trang) và **Đà Nẵng** | Cả hai nằm đúng dải ven biển miền Trung, **không trôi ra khơi** | ☐ |
 | 3 | Kiểm vài tỉnh có đảo: **Kiên Giang, Bà Rịa-Vũng Tàu, Quảng Ngãi** | Nằm đúng phần đất liền, không bị đảo kéo lệch ra | ☐ |
 
+## US-01c — 🇻🇳 Bản đồ thể hiện đúng chủ quyền biển đảo *(mục MỚI, 2026-09-08)*
+
+> **Vì sao có mục này:** rà soát ngày 2026-09-08 phát hiện khung nhìn mặc định **không
+> bao gồm Hoàng Sa và Trường Sa**, và basemap chỉ ghi nhãn quốc tế. Không cổng tự động
+> nào bắt được — xem `OPERATING-LOG-LF.md` OP-12.
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 1 | Mở trang chủ, **không zoom, không kéo** | Thấy **cả hai** quần đảo trong khung: **Quần đảo Hoàng Sa** và **Quần đảo Trường Sa** | ☐ |
+| 2 | Đọc nhãn từng quần đảo | Có đủ **tên tiếng Việt + đơn vị hành chính**: "Huyện Hoàng Sa, thành phố Đà Nẵng" và "Huyện Trường Sa, tỉnh Khánh Hòa" | ☐ |
+| 3 | Nhìn vùng biển giữa bản đồ | Có nhãn **"BIỂN ĐÔNG"** (không chỉ để nhãn quốc tế "South China Sea" của basemap) | ☐ |
+| 4 | So sánh hình dạng marker quần đảo với marker tỉnh | **Khác kiểu rõ rệt** — quần đảo là hình thoi viền đỏ + nhãn chữ, không phải ảnh món ăn hình tròn | ☐ |
+| 5 | Bấm vào **Quần đảo Hoàng Sa** | Tới trang Đà Nẵng — tỉnh quản lý huyện đảo này | ☐ |
+| 6 | Bấm vào **Quần đảo Trường Sa** | Tới trang Khánh Hòa | ☐ |
+| 7 | Bấm nút **la bàn** (về toàn cảnh) rồi nhìn lại | Cả hai quần đảo **vẫn nằm trong khung** sau khi reset | ☐ |
+
 ## US-02 — Zoom vào: marker to dần, nhãn hiện thêm, **không tỉnh nào biến mất**
 
 | # | Bước làm | Kỳ vọng | PASS/FAIL |

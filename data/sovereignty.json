@@ -1,0 +1,28 @@
+{
+  "note": "Hai quần đảo thuộc chủ quyền Việt Nam, hiển thị trên bản đồ ở MỌI mức zoom kể cả khung mặc định. Basemap MapTiler dùng nhãn quốc tế (Paracel Islands / Spratly Islands / South China Sea) và không thể hiện chủ quyền, nên lớp này bổ sung nhãn tiếng Việt và đơn vị hành chính quản lý.",
+  "seaName": {
+    "label": "Biển Đông",
+    "center": [111.2, 14.2],
+    "note": "Tên gọi Việt Nam của vùng biển mà bản đồ quốc tế ghi là 'South China Sea'."
+  },
+  "archipelagos": [
+    {
+      "id": "hoang-sa",
+      "name": "Quần đảo Hoàng Sa",
+      "nameEn": "Hoang Sa (Paracel) Archipelago",
+      "admin": "Huyện Hoàng Sa, thành phố Đà Nẵng",
+      "provinceSlug": "da-nang",
+      "center": [112.0, 16.5],
+      "summary": "Quần đảo Hoàng Sa thuộc chủ quyền Việt Nam, được tổ chức thành huyện Hoàng Sa trực thuộc thành phố Đà Nẵng."
+    },
+    {
+      "id": "truong-sa",
+      "name": "Quần đảo Trường Sa",
+      "nameEn": "Truong Sa (Spratly) Archipelago",
+      "admin": "Huyện Trường Sa, tỉnh Khánh Hòa",
+      "provinceSlug": "khanh-hoa",
+      "center": [113.6, 10.2],
+      "summary": "Quần đảo Trường Sa thuộc chủ quyền Việt Nam, được tổ chức thành huyện Trường Sa trực thuộc tỉnh Khánh Hòa."
+    }
+  ]
+}

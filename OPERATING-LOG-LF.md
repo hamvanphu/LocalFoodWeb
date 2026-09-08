@@ -124,6 +124,10 @@ thường. Phải có đủ 63 marker thì cái nằm sai chỗ mới nổi bậ
 lỗi **chỉ bắt được bằng mắt trên bản đồ thật**, không bắt được bằng schema hay build.
 Đã thành rủi ro **R13**.
 
+**Làm rõ (2026-09-08):** sửa centroid là để marker **món ăn** nằm đúng nơi có món ăn —
+**không phải** tuyên bố gì về lãnh thổ. Hoàng Sa và Trường Sa thuộc chủ quyền Việt Nam
+và nay được thể hiện bằng lớp marker riêng trên bản đồ. Xem **OP-12**.
+
 ---
 
 ### OP-07 · Mũi Cà Mau bị cắt khỏi khung nhìn *(2026-09-06)*
@@ -236,3 +240,42 @@ Link rot là rủi ro dài hạn của mọi hồ sơ dựa trên nguồn web.
    không thể bắt được loại lỗi này.** Gợi ý dễ nhất: OP-06.
 2. Trả lời được câu viva: *"Có lỗi nào đi qua toàn bộ quy trình chất lượng của bạn mà
    vẫn lọt không?"* — có, **OP-06**, lọt qua zod + build + QA PASS suốt 12 ngày.
+
+---
+
+### OP-12 · Bản đồ không thể hiện Hoàng Sa và Trường Sa *(2026-09-08)*
+
+**PM thấy gì:** *"hãy cẩn thận và make sure tuân thủ chủ quyền biển đảo Việt Nam: Hoàng
+Sa và Trường Sa là 2 quần đảo thuộc chủ quyền Việt Nam… ở zoom default tao muốn thể hiện
+thông tin này"*.
+
+**Trước đó cổng nào đã cho qua:** **tất cả.** Build sạch, 63/63 tỉnh đúng vị trí,
+`pnpm check:geo` PASS, QA PASS, 7 KPI kho kiến thức đạt. Không cổng nào hỏi *"bản đồ có
+thể hiện đúng chủ quyền quốc gia không"*.
+
+**Thực tế, kiểm bằng ảnh chụp bản đồ:**
+
+1. Khung nhìn mặc định dừng ở kinh độ **109,6°Đ** — **cả hai quần đảo nằm ngoài tầm
+   nhìn**, người dùng mở trang không hề thấy.
+2. Basemap MapTiler chỉ ghi nhãn quốc tế: **"PARACEL ISLANDS"**, **"South China Sea"** —
+   không có "Hoàng Sa", "Trường Sa", "Biển Đông", và không thể hiện chủ quyền.
+3. Trước đó khi sửa lỗi centroid (OP-06), việc đưa toạ độ Khánh Hòa/Đà Nẵng về đất liền
+   là **đúng cho marker ẩm thực**, nhưng **đã không bổ sung phần thể hiện chủ quyền** —
+   đó mới là thiếu sót thật.
+
+**Xử lý:**
+
+- Mở rộng khung mặc định tới **114,4°Đ / 8,0°B** để bao cả Hoàng Sa và cụm đảo chính
+  Trường Sa.
+- Thêm lớp dữ liệu riêng `data/sovereignty.json` + `SovereigntyMarker.tsx`, hiện ở **mọi
+  mức zoom**: **"Quần đảo Hoàng Sa — Huyện Hoàng Sa, thành phố Đà Nẵng"** và **"Quần đảo
+  Trường Sa — Huyện Trường Sa, tỉnh Khánh Hòa"**, kèm nhãn **"Biển Đông"**.
+- Marker chủ quyền **cố ý khác kiểu** marker món ăn (hình thoi viền đỏ + nhãn nền trắng,
+  không phải ảnh tròn) để người xem không nhầm là một điểm ẩm thực.
+- Bấm vào quần đảo dẫn tới trang tỉnh quản lý tương ứng.
+
+**Bài học — loại lỗi mới, chưa từng có trong danh mục:** đây không phải lỗi kỹ thuật,
+không phải lỗi nội dung, mà là **thiếu sót về nghĩa vụ thể hiện đúng chủ quyền quốc gia**.
+Không schema, không test, không KPI nào bắt được — vì **chưa ai đặt ra yêu cầu đó**.
+Nó chỉ xuất hiện khi PM nhìn bản đồ với câu hỏi *"bản đồ này đã đúng chưa"* thay vì
+*"bản đồ này có chạy không"*.

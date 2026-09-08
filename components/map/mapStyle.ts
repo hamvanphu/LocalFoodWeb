@@ -11,13 +11,22 @@ export const VIETNAM_CENTER: [number, number] = [106.5, 16.1];
 export const VIETNAM_INITIAL_ZOOM = 5;
 
 /**
- * Khung bao phần đất liền Việt Nam ([tây, nam] → [đông, bắc]). Dùng `fitBounds` thay vì
- * center+zoom cứng vì center [107.5, 16.5] cũ cắt mất mũi Cà Mau ở khung 70vh — fitBounds
- * tự co giãn theo kích thước thật của khung nên không phụ thuộc chiều cao viewport.
+ * Khung nhìn mặc định ([tây, nam] → [đông, bắc]).
+ *
+ * Bao **cả phần đất liền lẫn hai quần đảo Hoàng Sa và Trường Sa** — hai quần đảo thuộc
+ * chủ quyền Việt Nam, nên khung mặc định phải thể hiện được. Khung cũ dừng ở kinh độ
+ * 109,6°Đ khiến cả hai nằm ngoài tầm nhìn.
+ *
+ * Mở rộng tới 114,4°Đ và xuống 8,0°B để bao Hoàng Sa (~112°Đ, 16,5°B) và cụm đảo chính
+ * của Trường Sa (~113,6°Đ, 10,2°B). Không kéo tới hết 117,3°Đ — biên ngoài cùng của
+ * Trường Sa — vì khi đó phần đất liền bị thu nhỏ quá mức; marker + nhãn quần đảo đã
+ * đảm nhiệm việc thể hiện chủ quyền.
+ *
+ * Dùng `fitBounds` thay center+zoom cứng: center cũ cắt mất mũi Cà Mau ở khung 70vh.
  */
 export const VIETNAM_BOUNDS: [[number, number], [number, number]] = [
-  [102.1, 8.4],
-  [109.6, 23.5],
+  [102.1, 8.0],
+  [114.4, 23.5],
 ];
 
 export const VIETNAM_FIT_PADDING = 32;

@@ -9,12 +9,21 @@
  * polygon một số tỉnh **bao gồm cả huyện đảo xa bờ** (Trường Sa với Khánh Hòa, Hoàng
  * Sa với Đà Nẵng) nên bị kéo hẳn ra biển.
  *
+ * ⚠️ PHẠM VI CỦA CỔNG NÀY: chỉ kiểm vị trí **marker món ăn**. Bbox "đất liền" dưới đây
+ * KHÔNG phải tuyên bố về lãnh thổ. Hoàng Sa và Trường Sa thuộc chủ quyền Việt Nam và
+ * được thể hiện riêng trên bản đồ qua `data/sovereignty.json` — chúng không nằm trong
+ * bbox này chỉ vì ở đó không có món ăn nào để gắn marker.
+ *
  * Chạy: `pnpm check:geo`
  */
 import fs from "node:fs";
 import path from "node:path";
 
-/** Bbox phần ĐẤT LIỀN Việt Nam. Cố ý KHÔNG bao các quần đảo xa bờ — đó chính là điểm. */
+/**
+ * Bbox phần ĐẤT LIỀN, dùng để kiểm marker món ăn không bị trôi ra biển.
+ * Cố ý không bao quần đảo xa bờ vì ở đó không gắn marker ẩm thực — KHÔNG mang ý nghĩa
+ * lãnh thổ (xem ghi chú phạm vi ở đầu file).
+ */
 const MAINLAND = { west: 102.1, east: 109.6, south: 8.3, north: 23.5 };
 
 const dir = path.join(process.cwd(), "data", "provinces");

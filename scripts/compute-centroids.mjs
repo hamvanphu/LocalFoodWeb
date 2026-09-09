@@ -6,16 +6,6 @@ import fs from "node:fs";
 const SRC = new URL("../data/geo/vietnam-provinces-63.geojson", import.meta.url);
 const OUT = new URL("../data/geo/centroids.json", import.meta.url);
 
-function ringArea(ring) {
-  let sum = 0;
-  for (let i = 0; i < ring.length - 1; i++) {
-    const [x1, y1] = ring[i];
-    const [x2, y2] = ring[i + 1];
-    sum += x1 * y2 - x2 * y1;
-  }
-  return sum / 2;
-}
-
 function ringCentroid(ring) {
   let cx = 0;
   let cy = 0;

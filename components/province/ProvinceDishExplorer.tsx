@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { LayoutGrid, GalleryHorizontal } from "lucide-react";
 import DishTile from "./DishTile";
 import DishCard from "./DishCard";
@@ -10,6 +10,24 @@ import type { Locale } from "@/lib/locale";
 import type { Dish } from "@/lib/types";
 
 type ViewMode = "overview" | "timeline";
+
+/**
+ * Hash của URL là **trạng thái nằm ngoài React**, nên đọc nó bằng `useSyncExternalStore`
+ * chứ không phải `useEffect`.
+ *
+ * Cách cũ (`useEffect` đọc `window.location.hash`, dep là `[dishes]`) có lỗi thật: đang
+ * ở trang một tỉnh mà bấm kết quả tìm kiếm sang **món khác cùng tỉnh** thì hash đổi nhưng
+ * `dishes` không đổi ⇒ effect không chạy lại ⇒ panel chi tiết không mở.
+ *
+ * `getServerSnapshot` trả về chuỗi rỗng vì server không hề biết hash — React sẽ hydrate
+ * với panel đóng rồi đọc lại hash thật ngay sau đó, nên không lệch hydration.
+ */
+function subscribeToHash(onChange: () => void) {
+  window.addEventListener("hashchange", onChange);
+  return () => window.removeEventListener("hashchange", onChange);
+}
+const readHash = () => window.location.hash.replace("#", "");
+const readHashOnServer = () => "";
 
 export default function ProvinceDishExplorer({
   dishes,
@@ -23,15 +41,19 @@ export default function ProvinceDishExplorer({
   locale?: Locale;
 }) {
   const [mode, setMode] = useState<ViewMode>("overview");
-  const [selected, setSelected] = useState<Dish | null>(null);
 
   // Deep-link: /provinces/{slug}#{dish-slug} (dùng bởi kết quả tìm kiếm) tự mở panel chi tiết.
-  useEffect(() => {
-    const hash = window.location.hash.replace("#", "");
-    if (!hash) return;
-    const match = dishes.find((dish) => dish.slug === hash);
-    if (match) setSelected(match);
-  }, [dishes]);
+  const hash = useSyncExternalStore(subscribeToHash, readHash, readHashOnServer);
+
+  /**
+   * Thao tác của người dùng được ghi kèm hash lúc đó. Nhờ vậy khi hash đổi, lựa chọn cũ
+   * tự hết hiệu lực và panel bám theo URL mới — không cần effect nào để đồng bộ lại.
+   */
+  const [override, setOverride] = useState<{ hash: string; dish: Dish | null } | null>(null);
+
+  const fromHash = hash ? (dishes.find((dish) => dish.slug === hash) ?? null) : null;
+  const selected = override?.hash === hash ? override.dish : fromHash;
+  const setSelected = (dish: Dish | null) => setOverride({ hash, dish });
 
   return (
     <div>

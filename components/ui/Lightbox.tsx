@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ImageOff, X } from "lucide-react";
 import Image from "next/image";
+import { t } from "@/lib/ui-strings";
+import { useLocale } from "@/lib/useLocale";
 import type { DishImage } from "@/lib/types";
 
 export default function Lightbox({
@@ -15,10 +17,21 @@ export default function Lightbox({
   alt: string;
   onClose: () => void;
 }) {
+  // Đọc ngôn ngữ từ URL thay vì nhận prop: đây là component lá dùng ở nhiều nơi, một
+  // prop có mặc định "vi" mà nơi gọi quên truyền sẽ âm thầm hiện tiếng Việt trên trang
+  // tiếng Anh — lỗi không ai thấy cho tới khi có người đọc bản EN.
+  const locale = useLocale();
   const [failed, setFailed] = useState(false);
-  useEffect(() => {
-    if (image) setFailed(false);
-  }, [image]);
+
+  // Mở ảnh khác thì phải xoá trạng thái lỗi của ảnh trước, nếu không ảnh mới bị
+  // báo hỏng oan. Dùng mẫu "chỉnh state ngay trong lúc render" của React thay vì
+  // useEffect: effect chạy SAU khi trình duyệt vẽ, nên người dùng sẽ thấy nháy
+  // một khung "ảnh không tải được" rồi mới thấy ảnh thật.
+  const [prevImage, setPrevImage] = useState(image);
+  if (image !== prevImage) {
+    setPrevImage(image);
+    setFailed(false);
+  }
 
   return (
     <AnimatePresence>
@@ -39,7 +52,7 @@ export default function Lightbox({
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              aria-label="Đóng ảnh"
+              aria-label={t(locale, "image.close")}
               onClick={onClose}
               className="absolute -top-11 right-0 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
             >
@@ -49,7 +62,7 @@ export default function Lightbox({
               {failed ? (
                 <div className="flex flex-col items-center gap-2 text-white/70">
                   <ImageOff className="h-8 w-8" />
-                  <span className="text-sm">Ảnh tạm thời không tải được</span>
+                  <span className="text-sm">{t(locale, "image.failed")}</span>
                 </div>
               ) : (
                 <Image

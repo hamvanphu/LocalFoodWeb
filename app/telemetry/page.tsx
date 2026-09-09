@@ -6,7 +6,6 @@ import {
   telemetryData,
   sessions,
   gitBounds,
-  totalRealHours,
   totalIncidents,
   gateSummary,
   estimateReconcile,
@@ -38,7 +37,6 @@ function Stat({ label, value, sub }: { label: string; value: string; sub?: strin
 
 export default function TelemetryPage() {
   const bounds = gitBounds();
-  const real = totalRealHours();
   const rec = estimateReconcile();
   const gates = telemetryData.gates as TelemetryGate[];
   const gsum = gateSummary();

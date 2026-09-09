@@ -111,6 +111,11 @@ const strings = {
     "footer.about": "Dự án cá nhân giới thiệu ẩm thực địa phương Việt Nam. Ảnh món ăn dùng nguồn Wikimedia Commons theo giấy phép Creative Commons, ghi chú nguồn tại từng ảnh. Mỗi món đều kèm nguồn tham chiếu để bạn tự đối chiếu — nếu thấy thông tin chưa đúng, dùng nút",
     "footer.aboutEnd": "ở trang món ăn để chúng tôi sửa.",
 
+    "image.failed": "Ảnh tạm thời không tải được",
+    "image.pending": "Ảnh minh hoạ đang cập nhật",
+    "image.close": "Đóng ảnh",
+    "sheet.close": "Đóng",
+
     "lang.switchTo": "English",
     "lang.label": "Ngôn ngữ",
   },
@@ -219,6 +224,11 @@ const strings = {
     "footer.telemetry": "Telemetry — how this project was built",
     "footer.about": "A personal project introducing Vietnam's regional food. Dish photos come from Wikimedia Commons under Creative Commons licences, credited on each image. Every dish carries its reference sources so you can check them yourself — if something looks wrong, use the",
     "footer.aboutEnd": "button on the dish page and we will fix it.",
+
+    "image.failed": "Image could not load right now",
+    "image.pending": "Photo coming soon",
+    "image.close": "Close photo",
+    "sheet.close": "Close",
 
     "lang.switchTo": "Tiếng Việt",
     "lang.label": "Language",

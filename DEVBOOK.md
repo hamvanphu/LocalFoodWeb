@@ -268,6 +268,38 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
   hoa toàn bộ qua CSS, nên `innerText` trả về "KEY INGREDIENTS" và phép kiểm báo MISS
   trong khi giao diện hoàn toàn đúng. Suýt nữa đi sửa một lỗi không tồn tại.
 
+## Dọn lint — và một bug thật nấp sau nó (2026-09-09)
+
+Ba lỗi `react-hooks/set-state-in-effect` tồn tại từ trước US-16. Sửa đúng gốc thay vì
+tắt rule, và **một trong ba hoá ra che một bug thật**:
+
+- **Deep-link không mở panel khi đổi món cùng tỉnh** (`ProvinceDishExplorer`). Effect đọc
+  `window.location.hash` với dep là `[dishes]`. Đang ở `/provinces/ha-noi` mà bấm kết quả
+  tìm kiếm sang món khác **cùng tỉnh Hà Nội** thì hash đổi nhưng `dishes` không đổi ⇒
+  effect không chạy lại ⇒ panel không mở. Người dùng bấm kết quả tìm kiếm mà không thấy
+  gì xảy ra. Xử lý: hash là **trạng thái ngoài React**, nên đọc bằng `useSyncExternalStore`
+  (subscribe `hashchange`, `getServerSnapshot` trả rỗng để không lệch hydration), rồi
+  **suy ra** món đang mở thay vì đồng bộ bằng effect. Thao tác người dùng được ghi kèm
+  hash lúc đó, nên hash đổi là lựa chọn cũ tự hết hiệu lực. Đã kiểm bằng trình duyệt thật:
+  4/4 kịch bản PASS, trước đó kịch bản 2 FAIL.
+- **`Lightbox` nháy khung "ảnh không tải được"**: effect reset `failed` chạy **sau** khi
+  trình duyệt vẽ, nên mở ảnh mới ngay sau một ảnh hỏng sẽ thấy nháy báo lỗi rồi mới thấy
+  ảnh. Xử lý: mẫu "chỉnh state trong lúc render" của React (so `prevImage`).
+- **`DishReviews`**: `load()` đặt state đồng bộ ở nhánh `!enabled` — mà nhánh đó vô nghĩa
+  vì component đã `return null` khi `!enabled`. Nội tuyến vào effect theo mẫu promise
+  callback, **thêm cờ `alive`** chặn phản hồi của món cũ ghi đè món mới khi mở nhanh hai
+  món liên tiếp.
+
+**Bài học:** cả 3 cảnh báo đều bị coi là "nợ kỹ thuật vặt" và để đó nhiều tuần. Một trong
+số đó là bug người dùng gặp được. Cảnh báo lint về **effect** đáng đọc kỹ hơn cảnh báo về
+biến thừa — chúng nói về *thời điểm* code chạy, chỗ mà đọc code bằng mắt hay sai nhất.
+
+**Chuỗi tiếng Việt sót trong component lá**: `Lightbox`, `ImageWithFallback`, `Sheet` vẫn
+hiện tiếng Việt trên trang `/en` sau khi US-16 xong — không cổng nào bắt được, vì chúng
+nằm sâu và chỉ hiện khi ảnh lỗi hoặc mở panel. Chọn `useLocale()` đọc URL thay vì luồn
+prop `locale`: prop có mặc định `"vi"` mà nơi gọi quên truyền sẽ **âm thầm** hiện sai
+ngôn ngữ — đúng loại lỗi vừa mắc ở `Lightbox` khi thêm prop rồi quên truyền từ `DishCard`.
+
 # Phần B — Quyết định uỷ quyền, cổng fail-closed, hard-stop
 
 > **Bổ sung 2026-09-06.** Phần A ở trên ghi *AI sai → PM sửa*. Nhưng `§8.3` của

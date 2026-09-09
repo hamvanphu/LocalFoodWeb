@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
+import { t } from "@/lib/ui-strings";
+import { useLocale } from "@/lib/useLocale";
 
 interface SheetProps {
   open: boolean;
@@ -12,6 +14,7 @@ interface SheetProps {
 
 /** Panel trượt từ phải (desktop) / toàn màn hình (mobile) — dùng cho xem chi tiết món mà không rời trang tổng quan. */
 export default function Sheet({ open, onClose, children }: SheetProps) {
+  const locale = useLocale();
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -48,7 +51,7 @@ export default function Sheet({ open, onClose, children }: SheetProps) {
             transition={{ type: "spring", damping: 28, stiffness: 260 }}
           >
             <button
-              aria-label="Đóng"
+              aria-label={t(locale, "sheet.close")}
               onClick={onClose}
               className="sticky top-3 left-full z-10 -ml-14 flex h-9 w-9 items-center justify-center rounded-full bg-surface/90 text-ink shadow-soft backdrop-blur hover:bg-surface"
             >

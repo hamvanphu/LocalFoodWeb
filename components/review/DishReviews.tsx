@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MessageSquare, AlertCircle, Loader2, Send, Star, Flag } from "lucide-react";
 import StarRating from "./StarRating";
@@ -54,24 +54,28 @@ export default function DishReviews({
 
   const isReport = kind === "content_report";
 
-  const load = useCallback(async () => {
-    if (!enabled) {
-      setLoading(false);
-      return;
-    }
-    try {
-      setReviews(await fetchReviews(provinceSlug, dishSlug));
-      setLoadError(false);
-    } catch {
-      setLoadError(true);
-    } finally {
-      setLoading(false);
-    }
-  }, [enabled, provinceSlug, dishSlug]);
-
   useEffect(() => {
-    void load();
-  }, [load]);
+    // Chưa cấu hình Supabase thì thoát ngay — không đặt state ở đây, vì component
+    // đã return null ở dưới khi `!enabled`, và đặt state đồng bộ trong effect gây
+    // render dây chuyền (react-hooks/set-state-in-effect).
+    if (!enabled) return;
+
+    // `alive` chặn phản hồi của món cũ ghi đè lên món mới: người dùng mở nhanh
+    // hai món liên tiếp thì hai lần gọi mạng chạy song song và có thể về sai thứ tự.
+    let alive = true;
+    fetchReviews(provinceSlug, dishSlug)
+      .then((r) => {
+        if (!alive) return;
+        setReviews(r);
+        setLoadError(false);
+      })
+      .catch(() => alive && setLoadError(true))
+      .finally(() => alive && setLoading(false));
+
+    return () => {
+      alive = false;
+    };
+  }, [enabled, provinceSlug, dishSlug]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();

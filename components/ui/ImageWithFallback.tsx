@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { t } from "@/lib/ui-strings";
+import { useLocale } from "@/lib/useLocale";
 import Image from "next/image";
 import { UtensilsCrossed } from "lucide-react";
 import { placeholderGradientFor } from "@/lib/image-fallback";
@@ -15,6 +17,7 @@ interface ImageWithFallbackProps {
   priority?: boolean;
 }
 
+/** Xem ghi chú ở `Lightbox`: component lá đọc ngôn ngữ từ URL, không nhận prop. */
 function PlaceholderCard({
   slug,
   name,
@@ -26,6 +29,8 @@ function PlaceholderCard({
   className: string;
   reason: "no-image" | "load-error";
 }) {
+  const locale = useLocale();
+
   return (
     <div
       className={`relative flex items-center justify-center overflow-hidden bg-gradient-to-br ${placeholderGradientFor(
@@ -39,9 +44,7 @@ function PlaceholderCard({
           {name}
         </span>
         <span className="text-xs opacity-80">
-          {reason === "load-error"
-            ? "Ảnh tạm thời không tải được"
-            : "Ảnh minh hoạ đang cập nhật"}
+          {t(locale, reason === "load-error" ? "image.failed" : "image.pending")}
         </span>
       </div>
     </div>

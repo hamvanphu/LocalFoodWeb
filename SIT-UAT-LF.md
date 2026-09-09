@@ -18,7 +18,7 @@
 | # | Bước làm | Kỳ vọng | PASS/FAIL |
 |---|---|---|---|
 | 1 | Mở trang chủ, cuộn xuống khối bản đồ, **không zoom tay** | Thấy marker rải khắp Việt Nam. Marker là **ảnh món ăn tròn** (món nào chưa có ảnh thì là nền gradient + icon dao dĩa), **không phải chấm màu đơn sắc** | ☐ |
-| 2 | **Đếm nhanh hai đầu đất nước** | Thấy marker ở **cực Bắc (Hà Giang/Cao Bằng)** và **cực Nam (Cà Mau)** — cả hai **nằm trọn trong khung**, không bị cắt | ☐ |
+| 2 | **Đếm nhanh hai đầu đất nước** | Thấy marker ở **cực Bắc (Hà Giang/Cao Bằng)** và **cực Nam (Cà Mau)** — cả hai **nằm trọn trong khung**, không bị cắt. ⚠️ Bước này chỉ kiểm **đất liền**; khung nhìn mặc định còn phải bao **Hoàng Sa + Trường Sa** — kiểm ở **§US-01c**, không được bỏ | ☐ |
 | 3 | So sánh kích thước marker | Có **2 cỡ rõ rệt**: tỉnh nổi bật to hơn hẳn tỉnh thường (≈36px so với ≈18px) | ☐ |
 | 4 | Nhìn nhãn tên món ở mức zoom mặc định | **Chưa có nhãn nào** — đúng thiết kế, tránh chữ chồng chữ khi nhìn toàn quốc | ☐ |
 

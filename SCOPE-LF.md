@@ -2,6 +2,31 @@
 
 > Bước [0] Capstone Playbook: chốt phạm vi trước khi thiết kế. Artefact này thay thế cho phần "chốt miệng" đã làm sai quy trình ở phiên trước — viết lại đầy đủ để có Cổng hiểu thật.
 
+> ## 🧊 Đây là bản ĐÓNG BĂNG — đọc đúng cách
+>
+> *(khai báo bổ sung 2026-09-09, sau rà soát T2/P2)*
+>
+> File này ghi lại **phạm vi đã quyết ngày 2026-08-26**, và **cố ý không cập nhật** theo
+> sản phẩm. Nó là **lịch sử quyết định**, không phải mô tả hiện trạng.
+>
+> Nghĩa là: mục *Out of scope* bên dưới đọc là **"đã quyết bỏ tại thời điểm đó"**, KHÔNG
+> phải *"hiện đang không có"*. Thực tế **3 mục trong đó về sau đã được PM yêu cầu làm và
+> đã ship**:
+>
+> | Ghi trong file này (26/08) | Thực tế hôm nay | Quyết định đảo ở đâu |
+> |---|---|---|
+> | Đa ngôn ngữ — out of scope | ✅ Song ngữ Việt–Anh, 63/63 tỉnh | `SPEC-LF.md` US-16 (09/09) |
+> | Nội dung người dùng đóng góp — out of scope | ✅ Review/Rating + Báo nội dung sai | `SPEC-LF.md` US-14, US-15 (06/09) |
+> | D2: "không database/backend, dữ liệu tĩnh JSON" | ✅ Supabase chạy production | `ARCH-LF.md` **D3** |
+> | D1: 8 tỉnh MVP | ✅ 63/63 tỉnh | `WEEKLY-LF.md` mục 2 |
+>
+> **Muốn biết phạm vi hiện tại thì đọc `SPEC-LF.md`, không đọc file này.**
+>
+> Vì sao giữ nguyên thay vì sửa: đối chiếu *"đã định làm gì"* với *"cuối cùng làm gì"* là
+> dữ liệu thật của dự án — sửa file này là xoá mất bằng chứng scope đã trôi 4 lần. Quy ước
+> "artefact đóng băng có chủ đích" áp cho `SCOPE-LF.md`, `EST-LF.md`, `ARCH-LF.md`, đã ghi
+> ở `KNOWLEDGE-HEALTH-LF.md` khi đo KPI c3.
+
 ## Problem statement
 
 Người dùng Việt Nam (và du khách) muốn khám phá món ăn đặc trưng theo từng

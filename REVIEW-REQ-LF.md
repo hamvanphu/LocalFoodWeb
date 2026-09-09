@@ -24,21 +24,35 @@ vặt, và PM sẽ mất thời gian phân loại rác. Rà thật thì phải c
 
 ## Bảng phát hiện — **PM điền cột cuối**
 
-| # | Loại | Phát hiện | Bằng chứng | PM phán xử |
+| # | Loại | Phát hiện | Bằng chứng | PM phán xử (2026-09-09) |
 |---|---|---|---|---|
-| **P1** | 🔴 Mâu thuẫn | AC của US-01 nói khung nhìn mặc định bao trọn **đất liền** ("Hà Giang → mũi Cà Mau"). Nhưng R14 + US-01c đòi khung mặc định phải **bao cả Hoàng Sa và Trường Sa** — code đi tới **114,4°Đ**, xa ngoài đất liền | `SPEC-LF.md:21` vs `mapStyle.ts:27-30`, `RISK-LF.md` R14 | ☐ Thật ☐ Không ☐ Để sau |
-| **P2** | 🔴 Mâu thuẫn | `SCOPE-LF.md` mục *Out of scope* vẫn liệt kê 3 thứ **đã ship**: đa ngôn ngữ (US-16), nội dung do người dùng đóng góp/review (US-14, US-15). D2 vẫn ghi *"không database/backend, dữ liệu tĩnh JSON"* trong khi Supabase đã chạy production | `SCOPE-LF.md:36-38, 43, 45-46` | ☐ Thật ☐ Không ☐ Để sau |
-| **P3** | 🔴 Mâu thuẫn | AC của US-05: cuộn xuống dưới bản đồ *"thấy danh sách card **mỗi tỉnh**"*. Thực tế trang chủ chỉ hiện **8 tỉnh** nổi bật; 63 tỉnh nằm ở `/browse` | `SPEC-LF.md:25` vs `hero-bubbles.json` (8 slug), `HomeView.tsx` lọc `highlighted` | ☐ Thật ☐ Không ☐ Để sau |
-| **P4** | 🔴 Lỗi thực tế | AC của US-16 viết `/provinces/hue` ↔ `/en/provinces/hue`. **Không tồn tại slug `hue`** — slug thật là `thua-thien-hue`, nên `/provinces/hue` trả 404 | `SPEC-LF.md:80` vs `data/provinces/thua-thien-hue.json` | ☐ Thật ☐ Không ☐ Để sau |
-| **P5** | 🟠 Mâu thuẫn | NFR *"Không có auth"* ghi *"Không lưu trữ dữ liệu cá nhân người dùng → **không cần NFR về mã hoá/phân quyền**"*. Nhưng US-14 lưu `author_name` do người dùng nhập vào database, và RLS **chính là** phân quyền — lại là rào chắn duy nhất | `SPEC-LF.md:127` vs `SPEC-LF.md:49`, `supabase/schema.sql` | ☐ Thật ☐ Không ☐ Để sau |
-| **P6** | 🟠 Ambiguity | NFR *Content integrity* đòi *"≥1 nguồn tham chiếu **chính thống**"* nhưng **không định nghĩa "chính thống"**. Hậu quả đã đo được: **63% món không có nguồn Wikipedia**, 21/63 tỉnh cả 3 món đều không — vẫn "đạt" NFR. Cổng zod chỉ kiểm *có* URL, không kiểm chất lượng nguồn | `SPEC-LF.md:121` vs `RISK-LF.md` R2 | ☐ Thật ☐ Không ☐ Để sau |
-| **P7** | 🟠 Mâu thuẫn nội bộ | Trong **cùng một dòng US-01**: phần *Story* nói *"vài bubble món ăn nổi bật"*, phần *AC* nói *"tất cả tỉnh có dữ liệu đều có marker hiện sẵn"*. Story chưa cập nhật khi bỏ thiết kế 2 tầng | `SPEC-LF.md:21` | ☐ Thật ☐ Không ☐ Để sau |
-| **P8** | 🟡 Thiếu | **Không story/AC nào phủ `tasteTags`.** Thực tế badge hiện slug tiếng Anh thô — `spicy`, `savory`, `noodle-soup` — trên **cả bản tiếng Việt**. Chưa ai từng quyết định điều này; nó lọt vào sản phẩm qua schema | `lib/types.ts` `TASTE_TAGS`, `DishCard.tsx:72-75`; không có US nào nhắc | ☐ Thật ☐ Không ☐ Để sau |
-| **P9** | 🟡 Thiếu | Vai **Content Editor** chỉ mô tả *"sửa `data/provinces/*.json`, không qua UI admin"*. Không dòng nào cho 2 việc đã phát sinh: sửa bản dịch `data/i18n/en/*.json`, và **kiểm duyệt/ẩn review + xử lý báo lỗi** qua Supabase Dashboard | `SPEC-LF.md:13, 132-137` vs `ADMIN-GUIDE-LF.md` | ☐ Thật ☐ Không ☐ Để sau |
-| **P10** | 🟡 Ambiguity | US-07 đòi không tràn ngang ở *"viewport ≤ 400px"*; NFR Responsive lại cam kết *"từ **360px** trở lên"*. Máy 320px (iPhone SE) **nằm trong** phạm vi US-07 nhưng **ngoài** cam kết NFR | `SPEC-LF.md:27` vs `SPEC-LF.md:124` | ☐ Thật ☐ Không ☐ Để sau |
-| **P11** | 🟢 Lỗi thời | GAP-02 vẫn nằm ở mục *"negative case CHƯA XỬ LÝ"* với điều kiện *"nếu tới hạn nộp bài vẫn chưa có key thật"*. Key MapTiler đã có từ **2026-09-03**; điều kiện không bao giờ kích hoạt. Người đọc hôm nay không phân biệt được đây là việc còn treo hay đã hết hiệu lực | `SPEC-LF.md:35` vs `DOR-LF.md` (mục MapTiler đã đóng) | ☐ Thật ☐ Không ☐ Để sau |
+| **P1** | 🔴 Mâu thuẫn | AC của US-01 nói khung nhìn mặc định bao trọn **đất liền** ("Hà Giang → mũi Cà Mau"). Nhưng R14 + US-01c đòi khung mặc định phải **bao cả Hoàng Sa và Trường Sa** — code đi tới **114,4°Đ**, xa ngoài đất liền | `SPEC-LF.md:21` vs `mapStyle.ts:27-30`, `RISK-LF.md` R14 | ✅ **Thật** |
+| **P2** | 🟡 ~~Mâu thuẫn~~ → **Thiếu khai báo** | ⚠️ **AI tự rút lại một phần sau khi PM duyệt.** Khung ban đầu ("SCOPE mâu thuẫn với sản phẩm") **sai theo quy ước của chính dự án**: `KNOWLEDGE-HEALTH-LF.md` khi đo c3 đã chốt `SCOPE`/`EST`/`ARCH` là **artefact đóng băng có chủ đích**, và ghi rõ cách đo cũ đã *"phạt oan"* chúng. Vậy việc SCOPE còn ghi "đa ngôn ngữ — out of scope" là **đúng thiết kế**, không phải lỗi. **Phần còn đúng, nhỏ hơn:** SCOPE **không tuyên bố ở đầu file** rằng nó là bản đóng băng → người đọc mới không phân biệt được *"đã quyết bỏ hồi đó"* với *"đang bỏ"* | `SCOPE-LF.md:36-38, 43, 45-46` vs `KNOWLEDGE-HEALTH-LF.md` mục "Hai điều phải nói thật" #1 | ✅ Thật, **nhưng đã thu hẹp phạm vi** |
+| **P3** | 🔴 Mâu thuẫn | AC của US-05: cuộn xuống dưới bản đồ *"thấy danh sách card **mỗi tỉnh**"*. Thực tế trang chủ chỉ hiện **8 tỉnh** nổi bật; 63 tỉnh nằm ở `/browse` | `SPEC-LF.md:25` vs `hero-bubbles.json` (8 slug), `HomeView.tsx` lọc `highlighted` | ✅ **Thật** |
+| **P4** | 🔴 Lỗi thực tế | AC của US-16 viết `/provinces/hue` ↔ `/en/provinces/hue`. **Không tồn tại slug `hue`** — slug thật là `thua-thien-hue`, nên `/provinces/hue` trả 404 | `SPEC-LF.md:80` vs `data/provinces/thua-thien-hue.json` | ✅ **Thật** |
+| **P5** | 🟠 Mâu thuẫn | NFR *"Không có auth"* ghi *"Không lưu trữ dữ liệu cá nhân người dùng → **không cần NFR về mã hoá/phân quyền**"*. Nhưng US-14 lưu `author_name` do người dùng nhập vào database, và RLS **chính là** phân quyền — lại là rào chắn duy nhất | `SPEC-LF.md:127` vs `SPEC-LF.md:49`, `supabase/schema.sql` | ✅ **Thật** |
+| **P6** | 🟠 Ambiguity | NFR *Content integrity* đòi *"≥1 nguồn tham chiếu **chính thống**"* nhưng **không định nghĩa "chính thống"**. Hậu quả đã đo được: **63% món không có nguồn Wikipedia**, 21/63 tỉnh cả 3 món đều không — vẫn "đạt" NFR. Cổng zod chỉ kiểm *có* URL, không kiểm chất lượng nguồn | `SPEC-LF.md:121` vs `RISK-LF.md` R2 | ✅ **Thật** |
+| **P7** | 🟠 Mâu thuẫn nội bộ | Trong **cùng một dòng US-01**: phần *Story* nói *"vài bubble món ăn nổi bật"*, phần *AC* nói *"tất cả tỉnh có dữ liệu đều có marker hiện sẵn"*. Story chưa cập nhật khi bỏ thiết kế 2 tầng | `SPEC-LF.md:21` | ✅ **Thật** |
+| **P8** | 🟡 Thiếu | **Không story/AC nào phủ `tasteTags`.** Thực tế badge hiện slug tiếng Anh thô — `spicy`, `savory`, `noodle-soup` — trên **cả bản tiếng Việt**. Chưa ai từng quyết định điều này; nó lọt vào sản phẩm qua schema | `lib/types.ts` `TASTE_TAGS`, `DishCard.tsx:72-75`; không có US nào nhắc | ✅ **Thật** |
+| **P9** | 🟡 Thiếu | Vai **Content Editor** chỉ mô tả *"sửa `data/provinces/*.json`, không qua UI admin"*. Không dòng nào cho 2 việc đã phát sinh: sửa bản dịch `data/i18n/en/*.json`, và **kiểm duyệt/ẩn review + xử lý báo lỗi** qua Supabase Dashboard | `SPEC-LF.md:13, 132-137` vs `ADMIN-GUIDE-LF.md` | ✅ **Thật** |
+| **P10** | 🟡 Ambiguity | US-07 đòi không tràn ngang ở *"viewport ≤ 400px"*; NFR Responsive lại cam kết *"từ **360px** trở lên"*. Máy 320px (iPhone SE) **nằm trong** phạm vi US-07 nhưng **ngoài** cam kết NFR | `SPEC-LF.md:27` vs `SPEC-LF.md:124` | ✅ **Thật** |
+| **P11** | 🟢 Lỗi thời | GAP-02 vẫn nằm ở mục *"negative case CHƯA XỬ LÝ"* với điều kiện *"nếu tới hạn nộp bài vẫn chưa có key thật"*. Key MapTiler đã có từ **2026-09-03**; điều kiện không bao giờ kích hoạt. Người đọc hôm nay không phân biệt được đây là việc còn treo hay đã hết hiệu lực | `SPEC-LF.md:35` vs `DOR-LF.md` (mục MapTiler đã đóng) | ✅ **Thật** |
 
 **11 phát hiện** — vượt mốc ≥5 của đề bài.
+
+### PM phán xử — 2026-09-09
+
+PM duyệt **11/11 là thật**. Nhưng khi ghi lại kết quả, AI tự đối chiếu thêm và **rút lại
+một phần P2**: cách đóng khung ban đầu mâu thuẫn với quy ước *"artefact đóng băng có chủ
+đích"* mà chính dự án đã chốt ở `KNOWLEDGE-HEALTH-LF.md`. Chi tiết ở dòng P2.
+
+**Vì sao ghi lại chuyện này thay vì im lặng sửa:** `RISK-LF.md` **R3 (rubber-stamping)**
+là rủi ro còn mở của dự án, và nó áp cho **cả hai chiều**. PM duyệt cả gói mà không có
+mục nào bị bác là **đúng dạng tín hiệu** mà R3 cảnh báo. Ở đây phát hiện sai lại do chính
+AI viết ra, nên AI có trách nhiệm chỉ ra — nếu không, một dương tính giả sẽ được đóng dấu
+"PM đã duyệt" và trở thành căn cứ để sửa nhầm một artefact vốn cố tình giữ nguyên.
+
+**Kết quả sau phán xử:** 10 phát hiện giữ nguyên, 1 phát hiện (P2) thu hẹp phạm vi.
 
 ---
 

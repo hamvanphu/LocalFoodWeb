@@ -1,6 +1,10 @@
 # Local Food v1.1 — Trạng thái bản phát hành
 
-**Ngày:** 2026-09-09 · **Tag:** `v1.1` → `67ec10a`
+**Ngày:** 2026-09-09 · **Tag:** `v1.1`
+
+> Cố ý **không ghi mã commit** ở đây: file này nằm trong chính commit được gắn tag, nên
+> hash ghi vào sẽ luôn trỏ commit *trước đó* — ghi hash là tự tạo ra một con số sai.
+> Tra commit thật bằng `git rev-parse v1.1`.
 **Sản phẩm:** https://local-food-hamvanphus-projects.vercel.app
 **Mã nguồn:** https://github.com/hamvanphu/LocalFoodWeb
 

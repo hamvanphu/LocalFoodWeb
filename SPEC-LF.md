@@ -94,6 +94,23 @@ trang này tồn tại để giới thiệu. Quy ước đầy đủ ở `I18N-G
 3. **Fallback theo từng trường**, không theo cả trang: thiếu bản dịch ở đâu thì giữ tiếng
    Việt đúng chỗ đó.
 
+### Bổ sung 2026-09-09 — US-17 (đóng P8 từ rà soát T2)
+
+| # | Story | Acceptance Criteria (Given/When/Then) |
+|---|---|---|
+| **US-17** | Là người đọc bản tiếng Việt, tôi muốn nhãn khẩu vị của món hiện bằng tiếng Việt, để không phải đọc chữ Anh lẫn trong giao diện Việt. | **Given** tôi xem chi tiết một món ở bản tiếng Việt, **When** nhìn hàng nhãn khẩu vị dưới tên món, **Then** thấy tiếng Việt (`cay`, `chua`, `đậm đà`, `món nước`…), **không** phải slug `spicy`/`savory`/`noodle-soup`. **Given** tôi xem cùng món ở bản tiếng Anh, **When** nhìn hàng đó, **Then** thấy tiếng Anh đọc tự nhiên (`noodle soup`, `street food` — có dấu cách, không phải gạch nối kiểu slug). **Given** dữ liệu có thêm nhãn khẩu vị mới chưa khai báo chuỗi hiển thị, **When** trang render, **Then** hiện slug gốc thay vì trống — chưa dịch thì xấu, nhưng không được mất thông tin. |
+
+**Vì sao có story này:** đây **không phải yêu cầu mới**, mà là **lỗ hổng do rà soát T2 tìm
+ra (P8)**. `tasteTags` lọt vào giao diện qua schema `lib/types.ts` từ walking skeleton và
+hiện slug tiếng Anh thô trên **cả bản tiếng Việt** suốt 2 tuần — không story nào phủ, nên
+không test nào bắt, và không ai từng quyết định. Viết story ở đây để nó trở thành **quyết
+định có chủ đích** thay vì thứ vô tình.
+
+**Ràng buộc:** chỉ đổi **cách hiển thị** trong `lib/ui-strings.ts`; giá trị lưu trong
+`data/provinces/*.json` giữ nguyên slug tiếng Anh. Lý do: 63 file dữ liệu đã qua zod và
+đã được kiểm; đổi giá trị dữ liệu chỉ để đổi chữ trên màn hình là rủi ro không cần thiết.
+Backlog US-10 (lọc bản đồ theo khẩu vị) sau này vẫn lọc trên slug, không lọc trên chữ hiển thị.
+
 ### Backlog phase-2 (ngoài 2 tuần, không phải MVP)
 
 | # | Story |

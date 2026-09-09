@@ -34,6 +34,19 @@ const strings = {
     "map.reset": "Về toàn cảnh Việt Nam",
 
     "dish.hero": "Món đặc trưng",
+
+    // Khẩu vị: giá trị trong data là slug tiếng Anh (TASTE_TAGS) — chỉ đổi cách HIỂN THỊ,
+    // không đụng 63 file dữ liệu. Bản EN cũng đi qua đây để bỏ dấu gạch nối.
+    "taste.spicy": "cay",
+    "taste.sour": "chua",
+    "taste.sweet": "ngọt",
+    "taste.savory": "đậm đà",
+    "taste.herb-forward": "nhiều rau thơm",
+    "taste.street-food": "ăn đường phố",
+    "taste.noodle-soup": "món nước",
+    "taste.grilled": "nướng",
+    "taste.seafood": "hải sản",
+    "taste.vegetarian-friendly": "hợp ăn chay",
     "dish.zoom": "Phóng to ảnh {name}",
 
     "occasion.Quanh năm": "Quanh năm",
@@ -145,6 +158,17 @@ const strings = {
     "map.reset": "Back to full view of Vietnam",
 
     "dish.hero": "Signature dish",
+
+    "taste.spicy": "spicy",
+    "taste.sour": "sour",
+    "taste.sweet": "sweet",
+    "taste.savory": "savoury",
+    "taste.herb-forward": "herb-forward",
+    "taste.street-food": "street food",
+    "taste.noodle-soup": "noodle soup",
+    "taste.grilled": "grilled",
+    "taste.seafood": "seafood",
+    "taste.vegetarian-friendly": "vegetarian-friendly",
     "dish.zoom": "Enlarge photo of {name}",
 
     // Mùa dịch bình thường, nhưng hai cái Tết giữ nguyên: đây là tên lễ riêng của Việt Nam,

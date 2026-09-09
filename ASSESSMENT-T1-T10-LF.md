@@ -11,7 +11,7 @@
 | # | Assignment | Điểm | Bắt buộc | Bằng chứng chính |
 |---|---|:---:|:---:|---|
 | T1 | AI viết Requirement | **2** | | `SCOPE-LF.md`, `SPEC-LF.md` |
-| T2 | AI Review Requirement | **2** | | `REVIEW-REQ-LF.md` *(bổ sung 2026-09-09)* |
+| T2 | AI Review Requirement | **3** | | `REVIEW-REQ-LF.md` — 11 phát hiện, 11 đã đóng |
 | T3 | AI sinh WBS | **3** | | `WBS-LF.md` |
 | T4 | AI Estimation | **3** | | `EST-LF.md` |
 | T5 | AI sinh Risk List | **4** | ✅ **BB** | `RISK-LF.md` |
@@ -21,12 +21,13 @@
 | T9 | AI Retrospective | **3** | | `CASE-STUDY-LF.md`, `TELEMETRY-LF.md` §3 |
 | T10 | AI Delivery Dashboard | **4** | ✅ **BB** | `/telemetry`, `KNOWLEDGE-HEALTH-LF.md` |
 
-### Kết luận: **9/10 ở mức ≥2 — ĐỦ ĐIỀU KIỆN qua cổng, chờ PM phân xử T2**
+### Kết luận: **9/10 ở mức ≥2 — ĐỦ ĐIỀU KIỆN qua cổng Phase 2**
 
-> **Cập nhật 2026-09-09:** T2 đã làm bổ sung (`REVIEW-REQ-LF.md`, 11 phát hiện đã đối
-> chiếu code). Điểm tạm tính **2**, **chốt được khi PM phân loại xong** cột "PM phán xử" —
-> tiêu chí T2 đòi *"PM phân loại đúng cái nào thật"*, chưa có bước đó thì chưa đủ.
-> T8 vẫn = 0, nhưng §7.3 chỉ đòi ≥9/10 nên không còn chặn.
+> **Cập nhật 2026-09-09:** T2 làm bổ sung xong (`REVIEW-REQ-LF.md`) — 11 phát hiện, PM đã
+> phân loại, **11/11 đã đóng**, và P8 sinh ra một story mới (US-17) làm đổi sản phẩm thật.
+> Chấm **3** chứ không phải 2 vì có đủ cả 3 vế: phát hiện vượt mốc (11 > 5), PM phân xử
+> thật, và **AI tự bác một phát hiện của chính mình** sau khi PM đã duyệt — đúng tinh thần
+> chống rubber-stamping. T8 vẫn = 0, nhưng §7.3 cho phép 1 assignment dưới ngưỡng.
 
 - Hai điều kiện **bắt buộc** đều đạt: T5 = 4, T10 = 4.
 - Điều kiện **≥9/10 ở mức ≥2**: đạt **9/10** sau khi bổ sung T2. T8 = 0 là mục duy nhất
@@ -63,7 +64,7 @@ diễn ra tự nhiên, **không phải một bước diễn tập có chủ đí
 
 ---
 
-### T2 — AI Review Requirement · **2/4** *(bổ sung 2026-09-09)*
+### T2 — AI Review Requirement · **3/4** *(bổ sung 2026-09-09)*
 
 **Lần đo đầu: 1/4 — trượt.** Không có artefact nào đúng dạng. Cái gần nhất là `RTM-LF.md`
 §3 nhưng khác cả thời điểm lẫn bản chất (review **truy vết** ở bước [10], không phải review
@@ -80,8 +81,13 @@ trọn *"đất liền"*, mâu thuẫn trực tiếp với R14 (khung phải bao
 đi tới 114,4°Đ). Ai đó "sửa cho khớp AC" sẽ **thu khung về đất liền và xoá mất phần chủ
 quyền**.
 
-**Vì sao 2 chứ chưa phải 3:** tiêu chí đòi *"PM phân loại đúng cái nào thật"* — cột "PM
-phán xử" **đang để trống**. Điểm chỉ chốt được sau khi PM tick xong.
+**PM đã phân loại 2026-09-09: 11/11 là thật.** Khi ghi lại, AI **tự rút lại một phần P2**
+— cách đóng khung ban đầu mâu thuẫn với quy ước *"artefact đóng băng có chủ đích"* mà
+chính dự án đã chốt. Ghi lại thay vì im lặng sửa, vì R3 (rubber-stamping) áp cho **cả hai
+chiều**: duyệt cả gói không bác mục nào là đúng dạng tín hiệu R3 cảnh báo.
+
+**11/11 đã đóng.** Đáng chú ý nhất: P8 sinh ra **US-17** (nhãn khẩu vị theo ngôn ngữ) —
+bài rà soát không dừng ở sửa tài liệu mà **đẻ ra story thật và làm đổi sản phẩm**.
 
 ---
 

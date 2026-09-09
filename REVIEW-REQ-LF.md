@@ -33,7 +33,7 @@ vặt, và PM sẽ mất thời gian phân loại rác. Rà thật thì phải c
 | **P5** | 🟠 Mâu thuẫn | NFR *"Không có auth"* ghi *"Không lưu trữ dữ liệu cá nhân người dùng → **không cần NFR về mã hoá/phân quyền**"*. Nhưng US-14 lưu `author_name` do người dùng nhập vào database, và RLS **chính là** phân quyền — lại là rào chắn duy nhất | `SPEC-LF.md:127` vs `SPEC-LF.md:49`, `supabase/schema.sql` | ✅ **Thật** |
 | **P6** | 🟠 Ambiguity | NFR *Content integrity* đòi *"≥1 nguồn tham chiếu **chính thống**"* nhưng **không định nghĩa "chính thống"**. Hậu quả đã đo được: **63% món không có nguồn Wikipedia**, 21/63 tỉnh cả 3 món đều không — vẫn "đạt" NFR. Cổng zod chỉ kiểm *có* URL, không kiểm chất lượng nguồn | `SPEC-LF.md:121` vs `RISK-LF.md` R2 | ✅ **Thật** |
 | **P7** | 🟠 Mâu thuẫn nội bộ | Trong **cùng một dòng US-01**: phần *Story* nói *"vài bubble món ăn nổi bật"*, phần *AC* nói *"tất cả tỉnh có dữ liệu đều có marker hiện sẵn"*. Story chưa cập nhật khi bỏ thiết kế 2 tầng | `SPEC-LF.md:21` | ✅ **Thật** |
-| **P8** | 🟡 Thiếu | **Không story/AC nào phủ `tasteTags`.** Thực tế badge hiện slug tiếng Anh thô — `spicy`, `savory`, `noodle-soup` — trên **cả bản tiếng Việt**. Chưa ai từng quyết định điều này; nó lọt vào sản phẩm qua schema | `lib/types.ts` `TASTE_TAGS`, `DishCard.tsx:72-75`; không có US nào nhắc | ✅ **Thật** |
+| **P8** ✅ đã sửa | 🟡 Thiếu | **Không story/AC nào phủ `tasteTags`.** Thực tế badge hiện slug tiếng Anh thô — `spicy`, `savory`, `noodle-soup` — trên **cả bản tiếng Việt**. Chưa ai từng quyết định điều này; nó lọt vào sản phẩm qua schema | `lib/types.ts` `TASTE_TAGS`, `DishCard.tsx:72-75`; không có US nào nhắc | ✅ **Thật** |
 | **P9** | 🟡 Thiếu | Vai **Content Editor** chỉ mô tả *"sửa `data/provinces/*.json`, không qua UI admin"*. Không dòng nào cho 2 việc đã phát sinh: sửa bản dịch `data/i18n/en/*.json`, và **kiểm duyệt/ẩn review + xử lý báo lỗi** qua Supabase Dashboard | `SPEC-LF.md:13, 132-137` vs `ADMIN-GUIDE-LF.md` | ✅ **Thật** |
 | **P10** | 🟡 Ambiguity | US-07 đòi không tràn ngang ở *"viewport ≤ 400px"*; NFR Responsive lại cam kết *"từ **360px** trở lên"*. Máy 320px (iPhone SE) **nằm trong** phạm vi US-07 nhưng **ngoài** cam kết NFR | `SPEC-LF.md:27` vs `SPEC-LF.md:124` | ✅ **Thật** |
 | **P11** | 🟢 Lỗi thời | GAP-02 vẫn nằm ở mục *"negative case CHƯA XỬ LÝ"* với điều kiện *"nếu tới hạn nộp bài vẫn chưa có key thật"*. Key MapTiler đã có từ **2026-09-03**; điều kiện không bao giờ kích hoạt. Người đọc hôm nay không phân biệt được đây là việc còn treo hay đã hết hiệu lực | `SPEC-LF.md:35` vs `DOR-LF.md` (mục MapTiler đã đóng) | ✅ **Thật** |
@@ -53,6 +53,28 @@ AI viết ra, nên AI có trách nhiệm chỉ ra — nếu không, một dươn
 "PM đã duyệt" và trở thành căn cứ để sửa nhầm một artefact vốn cố tình giữ nguyên.
 
 **Kết quả sau phán xử:** 10 phát hiện giữ nguyên, 1 phát hiện (P2) thu hẹp phạm vi.
+
+### Trạng thái xử lý — 2026-09-09
+
+**11/11 đã đóng.** Xem commit `91433f8` (10 phát hiện) và commit sau đó (P8).
+
+| Phát hiện | Cách đóng |
+|---|---|
+| P1 | AC của US-01 sửa thành *"đất liền **VÀ** hai quần đảo Hoàng Sa, Trường Sa"*, ghi kèm toạ độ `114,4°Đ / 8,0°B` và trỏ thẳng `VIETNAM_BOUNDS` |
+| P2 | `SCOPE-LF.md` thêm khai báo **🧊 bản ĐÓNG BĂNG** ở đầu file + bảng đối chiếu 4 mục đã đảo quyết định. **Không sửa nội dung gốc** |
+| P3 | AC của US-05 sửa cho khớp thiết kế đã quyết: tỉnh nổi bật + link sang `/browse` |
+| P4 | `/provinces/hue` → `/provinces/thua-thien-hue` |
+| P5 | NFR *"Không có auth"* viết lại — không còn dùng làm lý do miễn phân quyền |
+| P6 | Định nghĩa *"nguồn chính thống"* thành 4 loại cụ thể, kèm cảnh báo chưa rà lại theo định nghĩa mới |
+| P7 | Story của US-01 sửa từ *"vài bubble"* → *"tất cả tỉnh có dữ liệu"* |
+| P8 | **PM chọn dịch sang tiếng Việt.** Viết thành **US-17** + 4 ca kiểm thử, code sửa ở `ui-strings.ts` + `DishCard.tsx`. Kiểm bằng trình duyệt: VI = `cay · đậm đà · món nước · ăn đường phố`; EN = `spicy · savoury · noodle soup · street food` |
+| P9 | Thêm vai **Moderator** + 3 dòng use-case còn thiếu |
+| P10 | Thống nhất ngưỡng responsive về **360px** ở cả US-07 lẫn NFR |
+| P11 | GAP-02 đánh dấu **hết hiệu lực từ 2026-09-03**, giữ làm lịch sử |
+
+**Một quan sát đáng ghi:** P8 sinh ra **US-17** — tức bài rà soát requirement không chỉ
+sửa tài liệu mà **đẻ ra một story thật và làm đổi sản phẩm**. Đó là bằng chứng cụ thể
+nhất cho việc T2 không phải thủ tục giấy tờ.
 
 ---
 

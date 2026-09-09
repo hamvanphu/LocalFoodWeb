@@ -71,7 +71,7 @@ export default function DishCard({
           <div className="mt-2 flex flex-wrap gap-1.5">
             {dish.tasteTags.map((tag) => (
               <Badge key={tag} tone="neutral">
-                {tag}
+                {t(locale, `taste.${tag}`)}
               </Badge>
             ))}
           </div>

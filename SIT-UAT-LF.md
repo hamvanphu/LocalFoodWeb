@@ -259,3 +259,18 @@ chỉ chứng minh checklist khớp sản phẩm — **không thay được PM t
 > chừng** vì hết hạn mức phiên. Không thể tin "file có trên đĩa" nghĩa là "dịch xong đúng".
 > Cổng này đối chiếu từng file dịch với bản gốc: đủ món, đủ 4 trường, **số phần tử
 > `keyIngredients`/`prepOutline` khớp**, không chứa trường cấm (`name`, `sourceRefs`…).
+
+## US-17 — Nhãn khẩu vị theo ngôn ngữ *(bổ sung 2026-09-09, đóng P8 từ rà soát T2)*
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 1 | Mở `/provinces/thua-thien-hue`, bấm vào ô **Bún bò Huế** | Dưới tên món thấy nhãn **tiếng Việt**: `cay`, `đậm đà`, `món nước`, `ăn đường phố` | ☐ |
+| 2 | Rà nhanh vài món khác ở vài tỉnh | **Không còn** chữ `spicy`, `savory`, `noodle-soup`, `street-food` ở bất kỳ đâu trên bản tiếng Việt | ☐ |
+| 3 | Mở `/en/provinces/thua-thien-hue`, cùng món đó | Nhãn tiếng Anh **đọc tự nhiên**: `noodle soup`, `street food` — có dấu cách, **không** phải slug gạch nối | ☐ |
+| 4 | Đối chiếu số lượng nhãn giữa hai bản | Bằng nhau — dịch nhãn không được làm mất hay thêm nhãn nào | ☐ |
+
+> **Đây là lỗi rà soát T2 tìm ra, không phải yêu cầu mới.** `tasteTags` hiện slug tiếng Anh
+> thô trên bản tiếng Việt suốt 2 tuần. Nó lọt vào qua schema chứ không qua story nào, nên
+> không cổng nào bắt: build xanh (slug hợp lệ), axe-core sạch (không phải lỗi a11y),
+> `check:i18n` không đụng tới (nhãn giao diện, không phải nội dung món). Chỉ lộ ra khi có
+> người ngồi đọc SPEC rồi đối chiếu với màn hình.

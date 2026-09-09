@@ -26,6 +26,11 @@ function redact(s) {
   if (typeof s !== "string") return s;
   return s
     .replace(/eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}/g, "«KEY ĐÃ CHE»")
+    // JWT bị cắt cụt vẫn phải che: bản thân header không chứa bí mật, nhưng người đọc
+    // báo cáo không phân biệt được và sẽ tưởng là key đã lọt ra ngoài.
+    .replace(/eyJ[A-Za-z0-9_-]{8,}/g, "«KEY ĐÃ CHE»")
+    // Email: file này được gửi cho người khác. Che mặc định, PM muốn hiện thì tự bỏ.
+    .replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, "«EMAIL ĐÃ CHE»")
     .replace(/https:\/\/[a-z0-9]{15,}\.supabase\.co/g, "https://«PROJECT».supabase.co")
     .replace(/\b[a-z0-9]{20,}\.supabase\.co/g, "«PROJECT».supabase.co")
     .replace(/(NEXT_PUBLIC_MAPTILER_KEY\s*=\s*)[A-Za-z0-9]{8,}/g, "$1«KEY ĐÃ CHE»")

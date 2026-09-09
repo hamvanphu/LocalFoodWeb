@@ -1,6 +1,6 @@
 {
   "note": "Nguồn số cho dashboard /telemetry. Mọi con số ở đây phải TRUY ĐƯỢC về git/file/output lệnh, trừ nhóm 'pmEstimated' vốn do PM tự khai. Xem TELEMETRY-LF.md.",
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-09",
   "sessions": [
     {
       "date": "2026-08-25",
@@ -40,17 +40,59 @@
     },
     {
       "date": "2026-09-06",
-      "commits": 8,
+      "commits": 18,
       "gitLowerBoundH": 1.72,
       "gitUpperBoundH": 11.52,
       "pmEstimatedH": 5,
       "grouped": false,
       "work": "55 tỉnh, refactor bản đồ + sửa 2 centroid, RTM/Telemetry/Weekly, deploy Vercel, US-14 + US-15"
+    },
+    {
+      "date": "2026-09-07",
+      "commits": 6,
+      "gitLowerBoundH": null,
+      "gitUpperBoundH": null,
+      "pmEstimatedH": 2.5,
+      "grouped": false,
+      "work": "Đo lại hiệu năng ở 63 tỉnh (kết quả trái với dự đoán), 7 KPI Knowledge Health, báo cáo HTML cho sếp, xuất hội thoại, tag v1.0",
+      "pmRangeH": [
+        2,
+        3
+      ],
+      "pmNote": "PM trả lời: 2–3 giờ"
+    },
+    {
+      "date": "2026-09-08",
+      "commits": 4,
+      "gitLowerBoundH": null,
+      "gitUpperBoundH": null,
+      "pmEstimatedH": 3.5,
+      "grouped": false,
+      "work": "Chủ quyền biển đảo: Hoàng Sa/Trường Sa lên bản đồ ở mọi mức zoom (R14), tempo marquee, quy trình quản trị qua Supabase Dashboard, khối Cảm nhận mới nhất ở trang chủ",
+      "pmRangeH": [
+        3,
+        4
+      ],
+      "pmNote": "PM trả lời: \"trên 3 giờ\" — cận dưới chắc chắn là 3h, cận trên là giả định"
+    },
+    {
+      "date": "2026-09-09",
+      "commits": 6,
+      "gitLowerBoundH": null,
+      "gitUpperBoundH": null,
+      "pmEstimatedH": 2.5,
+      "grouped": false,
+      "work": "Song ngữ Việt–Anh 63/63 tỉnh (US-16, ~41.000 từ, 10 agent song song), dọn lint về 0 và sửa bug deep-link, tự đánh giá T1–T10, bài T2 rà requirement (11 phát hiện, sửa 11/11), US-17 nhãn khẩu vị, tag v1.1",
+      "pmRangeH": [
+        2,
+        3
+      ],
+      "pmNote": "PM trả lời: 2–3 giờ"
     }
   ],
   "groupedEstimateH": 9,
   "groupedNote": "PM ước tính gộp cho 3 phiên 25/08 + 03/09 + 05/09 (trả lời: 'trên 9 giờ')",
-  "baselineNoAiH": 600,
+  "baselineNoAiH": 765,
   "baselineNote": "PM tự chốt. Là ước lượng phản-thực (counterfactual), không ai thực sự làm lại bằng tay để đo.",
   "estimate": {
     "pertH": 50.7,
@@ -61,12 +103,15 @@
     "provincesPlanned": 8,
     "provincesActual": 63,
     "dishes": 197,
-    "sourceRefs": 222,
+    "sourceRefs": 287,
     "dishesWithImage": 75,
     "staticRoutes": 68,
-    "commits": 48,
-    "trackedFiles": 217,
-    "artefacts": 20
+    "commits": 69,
+    "trackedFiles": 316,
+    "artefacts": 31,
+    "provincesTranslated": 63,
+    "gateScripts": 2,
+    "sitUatStories": 16
   },
   "incidents": [
     {
@@ -169,19 +214,23 @@
     }
   ],
   "tokens": {
-    "source": "Đo từ transcript phiên (~/.claude/projects/…/54b73208-….jsonl, 39,7MB, 2.092 lượt AI trả lời). Claude Code ghi usage thật vào từng lượt — đây là SỐ ĐO, không phải ước lượng.",
-    "sessionStart": "2026-08-25T13:52Z",
-    "sessionEnd": "2026-09-07T13:40Z",
-    "inputNew": 4174,
-    "output": 2204563,
-    "cacheWrite": 12292829,
-    "cacheRead": 898544605,
-    "totalRaw": 913046171,
-    "billableFull": 14501566,
-    "cacheHitRate": 98.7,
-    "mdPerMillionBillable": 0.151,
-    "caveat": "Đó là bối cảnh được đọc lại ở mỗi lượt, không phải nội dung mới. Trích con số 913M mà bỏ ngữ cảnh sẽ gây hiểu sai — con số phản ánh đúng khối lượng làm việc là khoảng 14,5M tính giá đầy đủ, trong đó 2,2M là output AI thực sự viết ra.",
-    "estimateNote": "Không có bước 'est' — không ai ước lượng token trước khi bắt đầu. Chỉ có reconcile (số thật)."
+    "source": "Đo từ transcript phiên 54b73208 (52,4MB, 2.787 lượt AI trả lời). Claude Code ghi usage thật vào từng lượt — đây là SỐ ĐO, không phải ước lượng. Chạy lại: node scripts/update-telemetry.mjs",
+    "sessionStart": "2026-08-25T13:52:21.628Z",
+    "sessionEnd": "2026-09-09T14:45:53.660Z",
+    "inputNew": 5546,
+    "output": 3035988,
+    "cacheWrite": 16329671,
+    "cacheRead": 1219748569,
+    "totalRaw": 1239119774,
+    "billableFull": 19371205,
+    "cacheHitRate": 98.4,
+    "mdPerMillionBillable": 0.177,
+    "caveat": "Đó là bối cảnh được đọc lại ở mỗi lượt, không phải nội dung mới. Trích con số 1239M mà bỏ ngữ cảnh sẽ gây hiểu sai — con số phản ánh đúng khối lượng làm việc là khoảng 19.4M tính giá đầy đủ, trong đó 3.0M là output AI thực sự viết ra.",
+    "estimateNote": "Không có bước 'est' — không ai ước lượng token trước khi bắt đầu. Chỉ có reconcile (số thật).",
+    "turnsWithUsage": 2787,
+    "totalAllTypes": 1239119774,
+    "scopeNote": "CHỈ tính phiên 54b73208 (Local Food). Phiên 3ffd154d (13–21/08) thuộc dự án PB-04 khác — đã kiểm cwd và loại đúng.",
+    "knownGap": "⚠️ Con số này là SÀN, không phải tổng. Đã kiểm: transcript có 0 lượt sidechain, nên token của agent chạy nền (6 agent nội dung 03/09, ~8 agent mở rộng 06/09, 10 agent dịch 09/09) KHÔNG được ghi vào đây. Mẫu từ thông báo tác vụ 09/09: mỗi agent dịch báo 68.836–99.668 token. Không ước lượng bù — muốn tổng thật phải lấy từ trang usage của tài khoản."
   },
   "codebase": {
     "note": "Đo bằng `git ls-files` (chỉ file đã track). KHÔNG tính node_modules và KHÔNG tính 00_Docs (giáo trình bootcamp, không phải sản phẩm của dự án).",
@@ -316,5 +365,31 @@
       }
     ],
     "caveat": "c7 có thiên lệch đã biết: AI tự chọn 6 chức năng và tự liệt kê tham chiếu, máy chỉ verify file/anchor CÓ TỒN TẠI — không verify nội dung có thực sự liên quan. Đúng quy trình thì PM phải tự đối chiếu kết quả với thực tế (như prompt mẫu ghi). Con số 100% nên đọc là 'không có tham chiếu bịa', không phải 'chất lượng truy xuất hoàn hảo'."
-  }
+  },
+  "realHours": {
+    "previousTotalH": [
+      16,
+      22
+    ],
+    "addedH": [
+      7,
+      10
+    ],
+    "totalH": [
+      23,
+      32
+    ],
+    "note": "Cộng dồn: khoảng cũ 16–22h (tới 06/09) + 3 phiên mới do PM tự khai. Giờ người KHÔNG suy từ git — xem mục 1."
+  },
+  "baselineNoAiHPrevious": 600,
+  "baselineChangeNote": "600h → 765h (2026-09-09). Lý do: phạm vi tăng thêm phần song ngữ 63/63 tỉnh (~41.000 từ dịch chuyên ngành). Chi tiết cách suy ra ở baselineRevised và TELEMETRY-LF.md mục 5.3.",
+  "baselineRevised": {
+    "h": [
+      730,
+      800
+    ],
+    "note": "Baseline 600h lập cho phạm vi tới 06/09. Từ đó phạm vi đã tăng: dịch 41.000 từ nội dung ẩm thực chuyên ngành Việt→Anh (dịch chuyên ngành ~2.000–3.000 từ/ngày ⇒ ~110–160h) cộng phần kỹ thuật đa ngôn ngữ (~90 chuỗi giao diện, tách route, kiểm thử ⇒ ~20–40h). Vẫn là ƯỚC TÍNH phản-thực, không phải số đo — điểm yếu đã nêu ở 5.4."
+  },
+  "devbookEntries": 36,
+  "measuredBy": "node scripts/update-telemetry.mjs — chạy lại được, không nhập tay"
 }

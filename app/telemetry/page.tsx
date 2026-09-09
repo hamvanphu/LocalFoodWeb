@@ -237,7 +237,9 @@ export default function TelemetryPage() {
           <Stat
             label="MD / 1M token"
             value={String(tk.mdPerMillionBillable)}
-            sub="Theo token tính giá; 1 man-day ≈ 6,6M"
+            sub={`Theo token tính giá; 1 man-day ≈ ${(
+              tk.billableFull / 1e6 / (tk.mdPerMillionBillable * (tk.billableFull / 1e6))
+            ).toFixed(1)}M`}
           />
         </div>
         <div className="mt-4 flex gap-2 rounded-card bg-surface-muted p-4 text-sm text-ink/80">

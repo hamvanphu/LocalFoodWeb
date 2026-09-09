@@ -1,6 +1,6 @@
 # Local Food v1.1 — Trạng thái bản phát hành
 
-**Ngày:** 2026-09-09 · **Tag:** `v1.1` → `9d2b7f3`
+**Ngày:** 2026-09-09 · **Tag:** `v1.1` → `67ec10a`
 **Sản phẩm:** https://local-food-hamvanphus-projects.vercel.app
 **Mã nguồn:** https://github.com/hamvanphu/LocalFoodWeb
 

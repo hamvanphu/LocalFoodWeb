@@ -11,7 +11,7 @@
 | # | Assignment | Điểm | Bắt buộc | Bằng chứng chính |
 |---|---|:---:|:---:|---|
 | T1 | AI viết Requirement | **2** | | `SCOPE-LF.md`, `SPEC-LF.md` |
-| T2 | AI Review Requirement | **1** | | *(không có artefact đúng dạng)* |
+| T2 | AI Review Requirement | **2** | | `REVIEW-REQ-LF.md` *(bổ sung 2026-09-09)* |
 | T3 | AI sinh WBS | **3** | | `WBS-LF.md` |
 | T4 | AI Estimation | **3** | | `EST-LF.md` |
 | T5 | AI sinh Risk List | **4** | ✅ **BB** | `RISK-LF.md` |
@@ -21,16 +21,24 @@
 | T9 | AI Retrospective | **3** | | `CASE-STUDY-LF.md`, `TELEMETRY-LF.md` §3 |
 | T10 | AI Delivery Dashboard | **4** | ✅ **BB** | `/telemetry`, `KNOWLEDGE-HEALTH-LF.md` |
 
-### ⛔ Kết luận thẳng: **8/10 ở mức ≥2 — CHƯA QUA cổng, thiếu đúng 1 assignment**
+### Kết luận: **9/10 ở mức ≥2 — ĐỦ ĐIỀU KIỆN qua cổng, chờ PM phân xử T2**
+
+> **Cập nhật 2026-09-09:** T2 đã làm bổ sung (`REVIEW-REQ-LF.md`, 11 phát hiện đã đối
+> chiếu code). Điểm tạm tính **2**, **chốt được khi PM phân loại xong** cột "PM phán xử" —
+> tiêu chí T2 đòi *"PM phân loại đúng cái nào thật"*, chưa có bước đó thì chưa đủ.
+> T8 vẫn = 0, nhưng §7.3 chỉ đòi ≥9/10 nên không còn chặn.
 
 - Hai điều kiện **bắt buộc** đều đạt: T5 = 4, T10 = 4.
-- Điều kiện **≥9/10 ở mức ≥2** thì **trượt**: T2 = 1 và T8 = 0.
+- Điều kiện **≥9/10 ở mức ≥2**: đạt **9/10** sau khi bổ sung T2. T8 = 0 là mục duy nhất
+  còn dưới ngưỡng — nằm trong hạn mức 1 assignment được phép.
 - Telemetry: ✅ có, dùng chung toàn dự án (`TELEMETRY-LF.md` + trang `/telemetry` chạy thật).
 
-Nghịch lý đáng nói: phần **khó nhất** (T5 Risk, T10 Dashboard) đạt mức cao nhất, còn phần
-**rẻ nhất** (T2, T8 — mỗi cái dưới 1 giờ) lại là chỗ trượt. Không phải vì làm không nổi,
-mà vì **chưa từng được coi là việc phải làm** — cả hai đều không nằm trên đường tới sản
-phẩm chạy được, nên trôi mất trong 2 tuần chạy theo tính năng.
+**Nghịch lý ở lần đo đầu (trước khi bổ sung T2):** phần **khó nhất** (T5 Risk, T10
+Dashboard) đạt mức cao nhất, còn phần **rẻ nhất** (T2, T8 — mỗi cái dưới 1 giờ) lại là chỗ
+trượt. Không phải vì làm không nổi, mà vì **chưa từng được coi là việc phải làm** — cả hai
+đều không nằm trên đường tới sản phẩm chạy được, nên trôi mất trong 2 tuần chạy theo tính
+năng. Bằng chứng cho điều đó: T2 làm bù trong chưa tới 1 giờ và **tìm ra 11 vấn đề thật**,
+trong đó có một vấn đề đụng tới chủ quyền.
 
 ---
 
@@ -55,29 +63,25 @@ diễn ra tự nhiên, **không phải một bước diễn tập có chủ đí
 
 ---
 
-### T2 — AI Review Requirement · **1/4** ⚠️ điểm trượt
+### T2 — AI Review Requirement · **2/4** *(bổ sung 2026-09-09)*
 
-**Đề bài:** AI rà draft T1 tìm mâu thuẫn/thiếu/ambiguity, sinh câu hỏi làm rõ.
-**Tiêu chí:** ≥5 phát hiện hợp lệ; PM phân loại đúng cái nào thật.
+**Lần đo đầu: 1/4 — trượt.** Không có artefact nào đúng dạng. Cái gần nhất là `RTM-LF.md`
+§3 nhưng khác cả thời điểm lẫn bản chất (review **truy vết** ở bước [10], không phải review
+**requirement** ở bước [1]; 3 phát hiện thay vì ≥5; không có bước PM phân loại).
 
-**Thực tế: không có artefact nào đúng dạng này.** Cái gần nhất là `RTM-LF.md` §3, nhưng
-khác cả về thời điểm lẫn bản chất:
+**Chiều review bị ngược.** Cả dự án chạy theo **PM review AI** (8 Cổng hiểu, PM bác 5 lần)
+— kỷ luật mạnh nhất của dự án. Nhưng T2 đòi chiều ngược lại: **AI rà chính bản requirement**
+rồi PM phân xử phát hiện nào thật.
 
-| Đề bài T2 đòi | Dự án có |
-|---|---|
-| AI review **requirement** | AI review **truy vết** (story ↔ code ↔ test) |
-| Ngay sau bước [1] | Ở bước [10], gần cuối |
-| ≥5 phát hiện | 3 (GAP-T1, GAP-T2, GAP-T3) |
-| PM phân loại thật/giả | Không có bước phân loại |
+**Đã làm bù → `REVIEW-REQ-LF.md`:** rà `SCOPE-LF.md` + `SPEC-LF.md`, ra **11 phát hiện**
+(vượt mốc ≥5), **mỗi phát hiện đối chiếu code/dữ liệu thật** kèm file + dòng để PM tự kiểm.
+Có 7 câu hỏi làm rõ. Phát hiện nặng nhất — P1: AC của US-01 nói khung nhìn mặc định bao
+trọn *"đất liền"*, mâu thuẫn trực tiếp với R14 (khung phải bao Hoàng Sa + Trường Sa, code
+đi tới 114,4°Đ). Ai đó "sửa cho khớp AC" sẽ **thu khung về đất liền và xoá mất phần chủ
+quyền**.
 
-**Chiều review bị ngược.** Toàn bộ dự án chạy theo **PM review AI** (8 Cổng hiểu, PM bác
-5 lần) — kỷ luật này rất mạnh và là điểm sáng nhất của dự án. Nhưng T2 đòi chiều ngược
-lại: **AI review chính bản requirement** rồi PM phân xử phát hiện nào thật. Chiều đó gần
-như không có.
-
-Chỉ cho **1** chứ không phải 0 vì có dùng AI để rà và có phát hiện hợp lệ (GAP-T2 dẫn tới
-việc viết test cho US-12/13, và **việc viết test đó tìm ra 3 lỗi thật** mà build xanh +
-axe-core sạch đều không thấy). Nhưng không đủ số lượng và sai dạng bài.
+**Vì sao 2 chứ chưa phải 3:** tiêu chí đòi *"PM phân loại đúng cái nào thật"* — cột "PM
+phán xử" **đang để trống**. Điểm chỉ chốt được sau khi PM tick xong.
 
 ---
 
@@ -256,15 +260,16 @@ Cho 4 vì dashboard **tự chỉ ra điểm yếu của chính nó** — thứ h
 
 ## Việc phải làm để qua cổng
 
-Cần nâng **ít nhất 1 trong 2** assignment trượt lên mức ≥2. Cả hai đều rẻ:
-
-| Việc | Công sức | Giá trị thật ngoài điểm số |
+| Việc | Trạng thái | Kết quả |
 |---|---|---|
-| **T2 — AI review requirement** | ~45 phút | **Cao.** `SPEC-LF.md` đã phình từ US-01 tới US-16 qua 2 tuần, thêm từng đợt theo yêu cầu miệng. Gần như chắc chắn có mâu thuẫn và AC lỗi thời thật nằm trong đó. Rà nghiêm túc sẽ tìm ra lỗi thật, giống hệt lần viết test cho US-12/13 |
-| **T8 — Meeting summary** | ~30 phút | Trung bình. Cần một cuộc họp thật (buổi review với sếp, hoặc diễn tập viva có người thứ hai) rồi tóm tắt → action item + owner + hạn, PM xác nhận |
+| **T2 — AI review requirement** | ✅ **XONG 2026-09-09** (~45 phút) | `REVIEW-REQ-LF.md` — 11 phát hiện đã đối chiếu code, 7 câu hỏi làm rõ. Dự đoán "gần như chắc chắn có mâu thuẫn thật trong SPEC" đã **đúng** |
+| **T8 — Meeting summary** | ⬜ Chưa làm (~30 phút) | Cần một cuộc họp **thật** (buổi review với sếp, hoặc diễn tập viva có người thứ hai) rồi tóm tắt → action item + owner + hạn, PM xác nhận |
 
-**Khuyến nghị: làm T2 trước.** Không cần sắp lịch với ai, và nhiều khả năng tìm ra lỗi
-thật trong SPEC — đúng loại giá trị mà bootcamp muốn dạy. Làm cả hai thì được 10/10.
+### Còn lại 2 việc
+
+1. **PM phân loại 11 phát hiện của T2** (Thật / Không / Để sau). Chưa có bước này thì T2
+   chưa chốt được điểm — tiêu chí đòi *"PM phân loại đúng cái nào thật"*.
+2. **T8** nếu muốn 10/10. Không bắt buộc để qua cổng (§7.3 cho phép 1 assignment dưới mức).
 
 **Không nên làm:** viết hồi tố một "biên bản họp" từ hội thoại PM ↔ AI rồi gọi đó là T8.
 Đề bài đòi *cuộc họp thật*; bịa ra đầu vào để lấp ô trống chính là thứ mà toàn bộ kỷ luật

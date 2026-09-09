@@ -227,7 +227,9 @@ database: `content_report` thiếu mô tả → 401, mô tả 5 ký tự → 401
 *(AI đã chạy thử toàn bộ 2 checklist trên bằng trình duyệt: **8/8 bước PASS**. Việc này
 chỉ chứng minh checklist khớp sản phẩm — **không thay được PM tự test**.)*
 
-## US-16 — Chuyển ngôn ngữ Việt ↔ Anh *(bổ sung 2026-09-09)*
+## US-16 — Chuyển ngôn ngữ Việt ↔ Anh *(bổ sung 2026-09-09)* — ✅ **PM ĐÃ TEST, PASS (2026-09-09)**
+
+> PM tự test và chốt PASS. Nếu phát hiện thêm vấn đề khi dùng thật sẽ phản hồi bổ sung.
 
 | # | Bước làm | Kỳ vọng | PASS/FAIL |
 |---|---|---|---|

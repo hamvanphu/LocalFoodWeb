@@ -1,0 +1,58 @@
+{
+  "slug": "dong-thap",
+  "summary": "Đồng Tháp is known as the \"land of pink lotus\", where the annual floating-water season brings an abundance of country produce. Its cooking is defined by the famous hủ tiếu Sa Đéc, by the dishes made from field rats during the flood season, and by nem Lai Vung with its distinctive sweet-sour ferment.",
+  "dishes": {
+    "hu-tieu-sa-dec": {
+      "description": "Hủ tiếu Sa Đéc is the celebrated speciality of Sa Đéc city in Đồng Tháp, distinguished by noodles made from local rice flour and water of a particular pH, which gives strands that are soft yet springy and naturally clear-white without any bleaching. The broth is simmered from pork bones for hours, clean and naturally sweet without any MSG.",
+      "keyIngredients": [
+        "Fresh hủ tiếu noodles made from Sa Đéc rice",
+        "Pork bones simmered for the broth",
+        "Pork and pork offal (liver, heart, intestine)",
+        "Dried shrimp and dried squid (for sweetness in the broth)",
+        "Bean sprouts, garlic chives, celery",
+        "Fried shallots, lime, chilli"
+      ],
+      "prepOutline": [
+        "Local rice is soaked and ground to a batter, spread into thin sheets, then cut into strands and left to dry off a little",
+        "Simmer the pork bones for hours with dried shrimp and dried squid for a clear, sweet broth",
+        "Blanch the hủ tiếu noodles and the bean sprouts briefly in boiling water, then put them in the bowl",
+        "Arrange the pork and offal on top, ladle over the hot broth and scatter on fried shallots"
+      ],
+      "howToEat": "Hủ tiếu is eaten hot the moment the broth goes in, adjusted with lime, chilli and nước mắm (Vietnamese fish sauce) or chilli sauce to taste, with raw bean sprouts and fresh garlic chives on the side."
+    },
+    "chuot-dong-quay-lu-cao-lanh": {
+      "description": "Chuột đồng quay lu is a signature dish of the Cao Lãnh area of Đồng Tháp, at its most common during the floating-water season when the field rats are fattest and meatiest. They are cleaned, marinated, then hung inside an earthenware jar and turned steadily over charcoal until evenly golden with crackling skin.",
+      "keyIngredients": [
+        "Field rat (caught during the floating-water season)",
+        "Sả (lemongrass), garlic, five-spice powder",
+        "Salt, sugar, nước mắm (Vietnamese fish sauce)",
+        "Rau răm (Vietnamese coriander), green banana and cucumber to eat alongside",
+        "Salt, pepper and lime dip"
+      ],
+      "prepOutline": [
+        "The field rats are cleaned of fur and offal and washed thoroughly with salt and liquor to take away any smell",
+        "Marinate them with sả (lemongrass), minced garlic, five-spice powder and the other seasonings for about 30 minutes",
+        "Hook each one inside an earthenware jar with hot charcoal burning beneath",
+        "Keep turning the jar steadily until the skin is golden and crisp and the meat is cooked through"
+      ],
+      "howToEat": "The roasted meat is chopped into bite-sized pieces and eaten with a salt, pepper and lime dip, rau răm (Vietnamese coriander), green banana and cucumber to balance the richness of the crisp skin and meat."
+    },
+    "nem-lai-vung": {
+      "description": "Nem Lai Vung is the celebrated speciality of Lai Vung district in Đồng Tháp. It is said to have been devised by Mrs Tư Măn of Tân Khánh hamlet for weddings, then passed around by local people and built up into a trade selling at the market. The nem (fermented pork roll) has pale pink meat, wrapped in lá vông (coral-tree leaf) and studded with peppercorns and white garlic, balancing salty, sweet, sour and hot. The craft of making nem Lai Vung has been recognised as national intangible cultural heritage.",
+      "keyIngredients": [
+        "Lean pork",
+        "Pork skin",
+        "Lá vông (coral-tree leaf, for wrapping)",
+        "Garlic, pepper, chilli",
+        "Sugar and salt (for the natural sour ferment)"
+      ],
+      "prepOutline": [
+        "The lean pork is pounded smooth together with shredded pork skin and the seasonings",
+        "Mix the meat thoroughly with sugar and salt to start the natural sour ferment",
+        "Wrap small portions of the mixture in lá vông (coral-tree leaf), tucking in slices of garlic and peppercorns",
+        "Leave the nem at room temperature for 2-3 days until it has soured just enough and the meat has turned pink"
+      ],
+      "howToEat": "Unwrap the leaf and eat the nem as it is, or dip it in chilli sauce or a dark soybean sauce; it is usually served as a starter or as something to drink with at a party."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "thai-nguyen",
+  "summary": "Thái Nguyên is called Vietnam's 'first among famous teas' thanks to the chè Tân Cương known across the country, alongside cơm lam from Định Hóa carrying the flavour of the Việt Bắc uplands and bánh chưng Bờ Đậu boiled in natural spring water. This midland province blends the cultures of the northern mountain peoples into every dish.",
+  "dishes": {
+    "che-tan-cuong": {
+      "description": "Chè Tân Cương is Vietnam's most famous tea, grown across the three communes of Tân Cương, Phúc Xuân and Đại Phúc in Thái Nguyên city, where the terrain rises close to 1000m and the climate and soil suit the tea plant particularly well. Tea growing here began around 1920-1922, when Đội Năm (Vũ Văn Thiệt) brought in the plants. The finished tea has tightly curled leaves of a silvery blue-black, brews to a rich golden liquor, and gives a gentle astringency with a sweet finish and its own distinctive fragrance.",
+      "keyIngredients": [
+        "Young tea shoots — one bud and two leaves",
+        "Spring water or rainwater for brewing",
+        "A stoneware or ceramic pot and cups"
+      ],
+      "prepOutline": [
+        "Pick the young shoots early in the morning while the dew still sits on them",
+        "Halt oxidation by pan-firing the leaf in a hot wok (the 'sao suốt' continuous firing method)",
+        "Roll the leaf into its curled shape, then fire it dry over several passes until it is properly crisp",
+        "Give it a final aromatic firing to bring up the signature fragrance before packing"
+      ],
+      "howToEat": "The tea is brewed with water at a hard boil in a stoneware pot and poured into small cups to be taken sip by sip, following the soft astringency through to the sweet finish in the throat — usually served to guests or sipped over a gathering."
+    },
+    "com-lam-dinh-hoa": {
+      "description": "Cơm lam is a traditional dish of the ethnic peoples of the northern mountains, and is especially well known in Định Hóa district, Thái Nguyên — the ATK safe zone of the resistance years. Upland glutinous rice is packed into a length of young nứa bamboo with a little water, sealed with lá chuối (banana leaf) and roasted over glowing charcoal, giving chewy, fragrant grains carrying the scent of the fresh bamboo.",
+      "keyIngredients": [
+        "Upland glutinous rice",
+        "A tube of young nứa bamboo",
+        "Lá chuối (banana leaf) to seal the tube",
+        "Clean spring water"
+      ],
+      "prepOutline": [
+        "Rinse the upland glutinous rice and soak it a few hours until softened",
+        "Put the rice and water into the young nứa bamboo tube in the right proportion",
+        "Seal the mouth of the tube with a fresh lá chuối (banana leaf)",
+        "Roast the tube over glowing charcoal, turning it evenly, until the rice is cooked and fragrant"
+      ],
+      "howToEat": "Cơm lam is split open and the charred outer bamboo peeled away, then eaten with muối vừng (sesame salt) or grilled meat — usually by visitors touring the ATK area of Định Hóa."
+    },
+    "banh-chung-bo-dau": {
+      "description": "Bánh chưng Bờ Đậu is the speciality of the craft village at the Bờ Đậu junction, Cổ Lũng commune, Phú Lương district, Thái Nguyên, which grew from the small stall Nguyễn Thị Xuân ran under a kapok tree in the 1960s, selling cakes she wrapped herself. The cakes use Thái Nguyên glutinous rice and are boiled in water from the spring behind the village, which keeps their natural green colour and gives a deep fragrance few other places can match.",
+      "keyIngredients": [
+        "Thái Nguyên glutinous rice",
+        "Mung bean for the filling",
+        "Pork belly",
+        "Lá dong (dong leaf)",
+        "Spring water for boiling the cakes"
+      ],
+      "prepOutline": [
+        "Rinse the glutinous rice and soak it, and hull and soak the mung beans",
+        "Season the pork belly with pepper and shallot for the filling",
+        "Wrap the cakes into neat squares in lá dong (dong leaf) using the traditional frame",
+        "Boil the cakes in spring water for 8-10 hours straight so they cook through evenly"
+      ],
+      "howToEat": "Bánh chưng Bờ Đậu is eaten with dưa hành (pickled shallots) or dipped in nước mắm (Vietnamese fish sauce). It sells all year round, but most of all at Tết Nguyên Đán, when people order it from all over as a gift."
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "lang-son",
+  "summary": "Lạng Sơn is the trading gateway to China, a place where the food cultures of the Tày and Nùng people meet and the marks of that exchange are plain to see. Vịt quay lá mắc mật, meltingly steamed khâu nhục and rich bánh cuốn trứng are the dishes that made the name of xứ Lạng (the old name for the Lạng Sơn country) cooking.",
+  "dishes": {
+    "vit-quay-lang-son": {
+      "description": "Vịt quay Lạng Sơn is famous right across the Northeast border region, made with the Thất Khê duck breed known for its tender meat and small bones. The duck is stuffed with lá mắc mật (*mac mat* leaf) — a leaf particular to the northern mountains — then roasted over than hoa (charcoal), brushed constantly with honey mixed with vinegar as it turns so the skin comes out glossy gold and shatteringly crisp. The fragrance of mắc mật against the sweetness of the honey gives the roast duck of xứ Lạng a taste nothing else can be mistaken for.",
+      "keyIngredients": [
+        "Thất Khê duck",
+        "Mắc mật (*mac mat*) leaves and fruit",
+        "Honey",
+        "Vinegar",
+        "Ginger, shallot"
+      ],
+      "prepOutline": [
+        "Choose a firm-fleshed Thất Khê duck, clean it and leave it to drain",
+        "Stuff mắc mật (*mac mat*) leaves and seasonings into the cavity, then sew it shut",
+        "Blanch the duck in boiling water mixed with vinegar and honey so the skin tightens and shines",
+        "Roast over than hoa (charcoal), turning steadily and brushing with honey throughout",
+        "Roast until the skin is golden and crisp and the meat cooked through, then chop into pieces"
+      ],
+      "howToEat": "The duck is chopped into bite-sized pieces and dipped in mixed nước mắm (Vietnamese fish sauce) or in soy sauce with ginger and garlic, usually eaten with rice or bánh mì (Vietnamese baguette) at the roast-duck shops along the old street of Kỳ Lừa."
+    },
+    "khau-nhuc-lang-son": {
+      "description": "Khâu nhục is a traditional dish of the Tày and Nùng people of Lạng Sơn, brought in by the Chinese communities who migrated to the Northeast border region and then made local. Pork belly is blanched, its skin roasted golden, sliced and marinated with taro, five-spice and tương (fermented soybean sauce), packed into a bowl and steamed over water for hours until it is meltingly soft — rich but never cloying. It appears above all on the Tết feast tray and at the important ceremonies of xứ Lạng (the old name for the Lạng Sơn country).",
+      "keyIngredients": [
+        "Pork belly",
+        "Taro",
+        "Five-spice powder",
+        "Tương (fermented soybean sauce), vinegar",
+        "Shallot, garlic, ginger"
+      ],
+      "prepOutline": [
+        "Parboil the pork belly, then roast the skin until golden",
+        "Cut the meat into thick slices and marinate with five-spice and tương (fermented soybean sauce)",
+        "Cut the taro into pieces and fry them briefly to firm up",
+        "Pack the meat and taro into a bowl in alternating layers, laid face down",
+        "Steam over water for several hours until the meat is meltingly tender"
+      ],
+      "howToEat": "To serve, turn the bowl out onto a plate so the golden skin sits on top, and eat it hot with white rice; it is a regular part of the Tết and wedding feasts of Lạng Sơn locals."
+    },
+    "banh-cuon-trung-lang-son": {
+      "description": "Bánh cuốn trứng is the Lạng Sơn variation on ordinary bánh cuốn (steamed rice rolls): instead of a filling of mộc nhĩ (wood ear) and minced pork, an egg is cracked straight onto the batter as it steams on the cloth. The yolk cooks just to softness, its richness set against the thin, supple rice sheet, and the rolls are eaten with a bowl of dipping sauce or hot bone broth — the breakfast that belongs to xứ Lạng (the old name for the Lạng Sơn country).",
+      "keyIngredients": [
+        "Rice flour",
+        "Egg",
+        "Fried shallot",
+        "Chả lụa (Vietnamese pork sausage), minced pork (optional)",
+        "Bone broth, or sweet-sour nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Mix rice flour with water into a smooth batter",
+        "Spread a thin layer of batter over a cloth-topped steamer",
+        "Crack an egg onto the batter while it is still wet, cover and steam through",
+        "Roll the sheet up gently so the yolk stays whole, and lift it onto a plate",
+        "Ladle over bone broth, or mix a dipping sauce to serve alongside"
+      ],
+      "howToEat": "Bánh cuốn trứng is eaten hot the moment it comes off the steamer, either ladled over with simmered bone broth or dipped in mixed nước mắm (Vietnamese fish sauce), with fried shallot and chả lụa (Vietnamese pork sausage) scattered over depending on the shop."
+    }
+  }
+}

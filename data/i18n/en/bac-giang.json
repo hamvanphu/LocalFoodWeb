@@ -1,0 +1,55 @@
+{
+  "slug": "bac-giang",
+  "summary": "Bắc Giang is midland country, known for the traditional rice-noodle craft of Lục Ngạn, the free-range hill chickens of Yên Thế, and the long-established bánh đa (large rice cracker) villages along the Thương river. The food here is plain and rooted in the northern countryside, yet several of its products have become national names.",
+  "dishes": {
+    "mi-chu": {
+      "description": "Mì Chũ is a dried mì (rice noodle) and the speciality of the craft village of Thủ Dương, in Nam Dương commune, Lục Ngạn district, Bắc Giang, and it carries a protected trademark of its own. The strands are made from bao thai hồng rice grown on the Lục Ngạn hills, come out a natural ivory white, stay springy and firm rather than turning mushy when cooked, and keep the faint characteristic scent of the rice.",
+      "keyIngredients": [
+        "bao thai hồng rice",
+        "well water from Thủ Dương village",
+        "marrow bones simmered for the broth",
+        "spring onion, coriander"
+      ],
+      "prepOutline": [
+        "Wash the rice, soak it, then grind it into a smooth wet batter",
+        "Spread the batter into thin sheets over a steamer, the same way bánh phở (flat rice noodles) are made",
+        "Dry the steamed sheets on bamboo racks in the sun until the surface sets",
+        "Cut the sheets into noodle strands and dry them a second time so they keep",
+        "To serve, blanch the dried noodles in boiling water to soften them before ladling on the broth"
+      ],
+      "howToEat": "Dried Mì Chũ is blanched again and served under a hot bone broth with spring onion and coriander, like a bowl of phở or any noodle soup; it can also be stir-fried dry with meat and vegetables for a full-flavoured fried-noodle dish."
+    },
+    "ga-doi-yen-the": {
+      "description": "Gà đồi Yên Thế is a local crossbred chicken (mainly the Ri lai and Mía lai lines) raised free-range on the hillsides of Yên Thế district, Bắc Giang. Because the birds move constantly and feed on natural forage, the meat is firm, the skin crisp and the flavour markedly deeper than industrially raised chicken; in 2011 it became the first livestock product in Vietnam granted an exclusive trademark certification.",
+      "keyIngredients": [
+        "Gà đồi Yên Thế chicken (Ri lai and Mía lai lines)",
+        "lime leaf, ginger, sả (lemongrass)",
+        "salt, mắc khén (Northwest Vietnamese wild pepper) or black pepper"
+      ],
+      "prepOutline": [
+        "Raise the birds free-range on the hills for 7-8 months so the meat is firm and fragrant",
+        "Clean the chicken, leaving it whole or cutting it into pieces depending on the dish",
+        "Boil it, steam it with lime leaf, or grill it over than hoa (charcoal), depending on the preparation",
+        "Chop into bite-sized pieces and arrange with finely shredded lime leaf"
+      ],
+      "howToEat": "Usually boiled and dipped in lime-leaf salt, steamed with lime leaf, or grilled over than hoa (charcoal); eaten with rice and raw greens at banquets or on festival days."
+    },
+    "banh-da-ke": {
+      "description": "Bánh đa Kế is the grilled bánh đa (large rice cracker) of Dĩnh Kế village, now part of Bắc Giang city, a craft more than 600 years old. The cracker is made from rice flour spread thin, scattered with sesame and peanuts and a little gấc (gac fruit) for its red-orange colour, then sun-dried and puffed over than hoa (charcoal), giving it a nutty richness and a shattering crispness all its own.",
+      "keyIngredients": [
+        "plain rice, ground to flour",
+        "sesame",
+        "peanuts",
+        "gấc (gac fruit) for colour",
+        "than hoa (charcoal) for grilling"
+      ],
+      "prepOutline": [
+        "Soak the rice, then grind it fine into a wet batter",
+        "Mix the batter with sesame, roughly crushed peanuts and gấc (gac fruit) flesh",
+        "Spread it into thin sheets over a steamer, then dry them on bamboo racks in the sun",
+        "Puff the crackers directly over than hoa (charcoal) until crisp and fragrant"
+      ],
+      "howToEat": "Bánh đa Kế is usually grilled crisp and eaten on its own as a snack, or broken into pieces and used to scoop up gỏi and nộm (tossed salads); it is a familiar gift at festivals, Tết and weddings."
+    }
+  }
+}

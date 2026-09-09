@@ -1,0 +1,58 @@
+{
+  "slug": "da-nang",
+  "summary": "Đà Nẵng is known not only for mì Quảng but for bánh tráng cuốn thịt heo — a plain dish of three main ingredients that nonetheless leaves visitors remembering it for good — along with humble mít trộn and the gỏi cá of Nam Ô, the fishing village at the foot of the Hải Vân pass.",
+  "dishes": {
+    "banh-trang-cuon-thit-heo-da-nang": {
+      "description": "Bánh tráng cuốn thịt heo is the speciality bound up with Đà Nẵng alone, made of ingredients that seem simple enough — bánh tráng (rice paper), pork, raw herbs — and yet combine into a balance that is hard to forget. Boiled pork belly is sliced thin and rolled up with supple, chewy bánh tráng, fresh bún (fresh rice noodles) and a great many of the raw herbs particular to Đà Nẵng.",
+      "keyIngredients": [
+        "Boiled pork belly",
+        "Bánh tráng (rice paper)",
+        "Fresh bún (fresh rice noodles)",
+        "Raw herbs, lettuce, húng quế (Thai basil), diếp cá (fish mint)",
+        "Mắm nêm (fermented anchovy sauce) or sweet-sour nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Boil the pork belly just through, let it cool, then slice it thin with both lean and fat in each piece",
+        "Lay out the bánh tráng (rice paper) and arrange the fresh bún, the pork and the raw herbs on top",
+        "Roll it up tight into a bite-sized roll",
+        "Mix the mắm nêm (fermented anchovy sauce), or a deep sweet-sour nước mắm (Vietnamese fish sauce) in the central style"
+      ],
+      "howToEat": "Dip the roll into a bowl of mắm nêm (fermented anchovy sauce) mixed with pineapple, garlic and chilli, and eat it straight away while the bánh tráng (rice paper) is still supple."
+    },
+    "mit-tron-da-nang": {
+      "description": "Mít trộn is a plain snack bound up with the childhood of generations of Đà Nẵng people, which came about in the late 19th century when people around Đà Nẵng and Quảng Nam put the young jackfruit in their gardens to use. Young jackfruit is boiled just through, torn into strands and tossed with roasted peanuts, fried shallot, nước mắm (Vietnamese fish sauce) and rau răm (Vietnamese coriander), with pork skin, shrimp or silkworm pupae added depending on the stall.",
+      "keyIngredients": [
+        "Young jackfruit",
+        "Roasted peanuts, roughly crushed",
+        "Fried shallot",
+        "Rau răm (Vietnamese coriander), húng lủi (spearmint)",
+        "Pork skin or shrimp (optional)",
+        "Mixed nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Boil the young jackfruit until soft but not collapsing, so the strands hold",
+        "Tear the jackfruit into fine strands",
+        "Toss the jackfruit with roasted peanuts, fried shallot, rau răm (Vietnamese coriander) and the mixed nước mắm (Vietnamese fish sauce)",
+        "Add crisp-fried pork skin or shrimp to taste"
+      ],
+      "howToEat": "Eaten with crisp grilled bánh tráng (rice paper) broken into pieces to scoop it up, usually as an afternoon nibble."
+    },
+    "goi-ca-nam-o-da-nang": {
+      "description": "Gỏi cá Nam Ô is the finest thing to come out of the Nam Ô fishing village, which sits at the mouth of the Cu Đê river at the foot of the Hải Vân pass, about 10km from the centre of Đà Nẵng. The fish used for the gỏi (Vietnamese salad) is usually cá trích (herring) caught fresh in the early hours, so the flesh is very sweet with little fishy smell, and it is brought together with riềng (galangal), sesame and roasted peanuts for its distinctive depth of flavour.",
+      "keyIngredients": [
+        "Fresh cá trích (herring), or cá cơm (anchovy)",
+        "Riềng (galangal), garlic and ginger pounded fine",
+        "Roasted sesame",
+        "Roasted peanuts",
+        "Bánh tráng (rice paper), raw herbs, chuối chát (astringent green banana), starfruit"
+      ],
+      "prepOutline": [
+        "Choose cá trích caught early in the day and fillet out the boneless flesh",
+        "Marinate the fish with riềng (galangal), garlic and ginger pounded fine, along with a little lime juice",
+        "Toss the marinated fish with roasted sesame and roughly crushed roasted peanuts",
+        "Prepare the thick dipping sauce from the fish bones pounded fine and cooked with seasonings"
+      ],
+      "howToEat": "Roll the gỏi cá up in bánh tráng (rice paper) with raw herbs, chuối chát (astringent green banana) and sour starfruit, and dip into the thick sauce."
+    }
+  }
+}

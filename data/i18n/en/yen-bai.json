@@ -1,0 +1,39 @@
+{
+  "slug": "yen-bai",
+  "summary": "Yên Bái is known for the Mường Lò plain — the second-largest glutinous rice basket of the Northwest — which yields the Tú Lệ glutinous rice behind Thái dishes such as xôi ngũ sắc (five-coloured steamed glutinous rice) and cốm (young green rice). Alongside it, the vịt bầu (pot-bellied duck) raised free-range in the hills of Lâm Thượng is another prized product, adding to the culinary picture of this mountain province.",
+  "dishes": {
+    "xoi-ngu-sac-muong-lo": {
+      "description": "Xôi ngũ sắc is a signature dish of the Thái people of the Mường Lò area, made from fragrant, sticky Tú Lệ glutinous rice dyed in five natural colours drawn from forest leaves: white from the rice itself, red from lá cơm đỏ (a red dye leaf) or gấc fruit, green from pomelo peel and forest leaves, purple from lá cơm đen (a black dye leaf), and yellow from nghệ (turmeric). The five colours stand for the five elements and for a wish for harmony and abundance, so the dish is not only good to eat but carries deep spiritual meaning for the Thái.",
+      "keyIngredients": ["Tú Lệ glutinous rice", "Forest dye leaves (lá cơm đỏ, lá cơm đen)", "Nghệ (turmeric), pomelo peel", "Lá dong (dong leaf)"],
+      "prepOutline": [
+        "Wash the forest leaves and boil them in stream water until the colour comes out",
+        "Soak the glutinous rice separately in each coloured liquid for 6-12 hours",
+        "Drain the rice and steam each colour separately in a bamboo chõ (steamer) over a wood fire",
+        "Arrange the coloured rice on a tray or plate into a harmonious five-colour pattern"
+      ],
+      "howToEat": "Xôi ngũ sắc is usually eaten with grilled meat or dipped in muối vừng (sesame salt); it appears at Tết and at festivals, and is given as a gift to visitors who come to Mường Lò."
+    },
+    "com-tu-le": {
+      "description": "Cốm Tú Lệ is regarded as the culinary treasure of Tú Lệ in Văn Chấn district, made from young glutinous rice harvested while the grain is still milky. The rice is threshed the same day and roasted in a cast-iron pan over low heat, stirred constantly so it cooks evenly, then pounded in a mortar about ten times until it reaches its characteristic supple chewiness. The tender green grains are wrapped in fresh lá chuối (banana leaf) to hold their fragrance, and every visitor who comes up to Tú Lệ in harvest season wants to take some home.",
+      "keyIngredients": ["Young Tú Lệ glutinous paddy", "Fresh lá chuối (banana leaf) for wrapping", "Ripe banana or ripe persimmon (when eaten alongside)"],
+      "prepOutline": [
+        "Harvest the glutinous paddy early in the morning while it is still wet with dew and thresh it the same day",
+        "Roast the paddy in a cast-iron pan over low heat, stirring steadily",
+        "Let it cool, then pound it in a mortar about ten times until the cốm is supple and free of husk",
+        "Wrap the cốm in fresh lá chuối (banana leaf) to keep its colour and fragrance"
+      ],
+      "howToEat": "Cốm Tú Lệ is at its best with bananas ripened to freckled or tree-ripened persimmon, and it is also made into chè cốm (a sweet cốm pudding), chả cốm (cốm and pork patties) or chả tôm cốm (cốm and shrimp patties)."
+    },
+    "vit-bau-lam-thuong": {
+      "description": "Vịt bầu Lâm Thượng is a native duck breed raised free-range in Lâm Thượng commune, Lục Yên district, foraging on moss and small fish and shrimp in the streams. The birds are raised for about 5-7 months to a weight of roughly 1.6-2.2kg, giving firm, fragrant meat far leaner than factory-farmed duck. In 2020 the breed received certification from the National Office of Intellectual Property, making it a speciality brand of Lục Yên.",
+      "keyIngredients": ["Vịt bầu Lâm Thượng (the local pot-bellied duck)", "Nước mẻ (liquid from a fermented rice starter)", "Rau răm (Vietnamese coriander), ginger", "Bamboo shoots or rau đắng (bitter herb), for stir-frying the offal"],
+      "prepOutline": [
+        "Choose a vịt bầu Lâm Thượng of about 1.6-2.2kg and clean it thoroughly to take away any off smell",
+        "Bring the water almost to the boil before lowering the duck in, so the meat stays firm",
+        "Boil it just through, lift it out to cool a little, then chop it into pieces",
+        "The offal and gizzard can be stir-fried separately with rau đắng (bitter herb) or bamboo shoots"
+      ],
+      "howToEat": "Vịt bầu Lâm Thượng is most often boiled and dipped in nước mẻ (liquid from a fermented rice starter) mixed with rau răm (Vietnamese coriander); it is also made into mọc vịt gói lá (duck mọc wrapped in leaves) or duck offal stir-fried with rau đắng."
+    }
+  }
+}

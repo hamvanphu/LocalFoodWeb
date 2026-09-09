@@ -1,0 +1,54 @@
+{
+  "slug": "ha-nam",
+  "summary": "Hà Nam is the gateway province south of Hà Nội, famous for the cá kho braised in a niêu đất (clay pot) from làng Vũ Đại, the village of Nam Cao's fiction, along with chuối ngự Đại Hoàng — a banana once chosen as tribute to the king — and simple breakfast dishes such as bánh cuốn Phủ Lý. The cooking here is thoroughly Red River Delta, drawing carefully on the produce of the Châu and Đáy rivers.",
+  "dishes": {
+    "ca-kho-lang-vu-dai": {
+      "description": "Cá kho làng Vũ Đại is the speciality of Nhân Hậu village (formerly Đại Hoàng) in Hòa Hậu commune, Lý Nhân district, Hà Nam — the village bound up with the writing of Nam Cao. The fish is kho (braised in a dark savoury caramel) inside a niêu đất (clay pot) over a wood fire for many hours, giving a deep flavour, bones soft enough to eat and flesh that stays firm, scented with riềng (galangal) and ginger.",
+      "keyIngredients": [
+        "Cá trắm đen (black carp), or cá trắm cỏ (grass carp)",
+        "Riềng (galangal) and ginger, sliced",
+        "Lime juice, or quả chay and quả dọc (local sour fruits)",
+        "Nước hàng (caramel sauce) and good nước mắm (Vietnamese fish sauce)",
+        "A niêu đất (clay pot) with a lá chuối (banana leaf) lid"
+      ],
+      "prepOutline": [
+        "Choose fresh cá trắm đen (black carp), clean it and cut it into thick sections",
+        "Line the bottom of the niêu đất (clay pot) with riềng (galangal) and ginger, then lay the fish on top",
+        "Marinate the fish with nước mắm (Vietnamese fish sauce), nước hàng (caramel sauce) and seasonings for a few hours",
+        "Braise over a low wood fire for 10-12 hours until the liquid has cooked away and the bones are meltingly soft"
+      ],
+      "howToEat": "The cá kho is eaten hot with plain rice, and is especially common on the Tết tray in Hà Nam households; at the end of the year it is ordered as a gift and sent all over the country."
+    },
+    "chuoi-ngu-dai-hoang": {
+      "description": "Chuối ngự Đại Hoàng is a small-fruited, exceptionally fragrant banana grown in Đại Hoàng village (now Nhân Hậu) in Hòa Hậu commune, Lý Nhân district, Hà Nam — where the Trần kings chose it as tribute, which is how it got its name. The ripe fruit has a glossy yellow skin and deeply sweet yellow flesh with a gentle fragrance, quite unlike the ordinary Cavendish varieties.",
+      "keyIngredients": [
+        "The chuối ngự trắng, chuối ngự trâu or chuối ngự mít varieties",
+        "Alluvial soil along the Châu Giang river"
+      ],
+      "prepOutline": [
+        "Grow the bananas on the alluvial flats along the river, tending them by inherited family method",
+        "Choose a mature bunch and cut it down as the fruit starts to plump up",
+        "Let the bananas ripen naturally over a few days until the skin colours evenly yellow",
+        "Keep them somewhere cool and airy to hold the fragrance until they are eaten"
+      ],
+      "howToEat": "Chuối ngự is eaten as it is once just ripe, and is often set on the five-fruit tray and given as a fine gift at Tết for its clean sweetness and distinctive fragrance."
+    },
+    "banh-cuon-phu-ly": {
+      "description": "Bánh cuốn Phủ Lý is the well-known breakfast dish of Phủ Lý city in Hà Nam, set apart by sheets spread in two passes from tám xoan rice flour — wafer-thin yet chewy. It is usually eaten with chả (pork patties) grilled over than hoa (charcoal) and with chả quế (cinnamon-scented pork sausage), which gives it a richer flavour of its own compared with bánh cuốn Thanh Trì or the egg-filled bánh cuốn of Hà Nội.",
+      "keyIngredients": [
+        "Tám xoan rice flour (a fragrant northern rice variety)",
+        "Wood ear mushroom, dried shallot",
+        "Grilled chả (pork patties) or chả quế (cinnamon-scented pork sausage)",
+        "Sweet-sour mixed nước mắm (Vietnamese fish sauce)",
+        "Fresh herbs on the side"
+      ],
+      "prepOutline": [
+        "Soak the tám xoan rice and grind it to a smooth batter",
+        "Spread the sheet in two thin layers over the steamer so it comes out translucent and chewy",
+        "Roll the sheets around a filling of wood ear mushroom and fragrant fried shallot",
+        "Arrange them with the grilled chả (pork patties) and pour over the sweet-sour nước mắm (Vietnamese fish sauce)"
+      ],
+      "howToEat": "The bánh cuốn is eaten hot straight off the steamer, dipped in the sweet-sour nước mắm (Vietnamese fish sauce) with grilled chả (pork patties) alongside — the everyday breakfast of Phủ Lý locals."
+    }
+  }
+}

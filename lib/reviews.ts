@@ -1,4 +1,6 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { t } from "./ui-strings";
+import type { Locale } from "./locale";
 
 /**
  * Client Supabase cho tính năng review/rating (ARCH-LF.md D3).
@@ -108,20 +110,26 @@ export async function fetchRecentReviews(limit = 6): Promise<DishReview[]> {
  * Kiểm tra phía client. Đây là lớp thứ nhất cho trải nghiệm tốt — lớp thật sự
  * bảo vệ dữ liệu là `check` constraint + RLS policy trong `supabase/schema.sql`.
  */
-export function validateReview(input: NewReview): string | null {
+/**
+ * Trả về thông báo lỗi đã dịch, hoặc null nếu hợp lệ.
+ *
+ * Nhận `locale` thay vì trả về mã lỗi để nơi gọi tự tra: form chỉ việc hiện thẳng chuỗi,
+ * và mọi thông báo nằm chung một chỗ trong `ui-strings.ts`.
+ */
+export function validateReview(input: NewReview, locale: Locale = "vi"): string | null {
   const name = input.authorName.trim();
-  if (!name) return "Hãy nhập tên của bạn.";
+  if (!name) return t(locale, "validate.needName");
   if (name.length > REVIEW_MAX_NAME) {
-    return `Tên tối đa ${REVIEW_MAX_NAME} ký tự.`;
+    return t(locale, "validate.nameTooLong", { max: REVIEW_MAX_NAME });
   }
   if (input.comment.length > REVIEW_MAX_COMMENT) {
-    return `Nội dung tối đa ${REVIEW_MAX_COMMENT} ký tự.`;
+    return t(locale, "validate.commentTooLong", { max: REVIEW_MAX_COMMENT });
   }
 
   if (input.kind === "content_report") {
     // Báo lỗi không cần sao, nhưng bắt buộc mô tả đủ dài để còn sửa được
     if (input.comment.trim().length < REPORT_MIN_COMMENT) {
-      return `Hãy mô tả chỗ sai (ít nhất ${REPORT_MIN_COMMENT} ký tự) để chúng tôi sửa được.`;
+      return t(locale, "validate.reportTooShort", { min: REPORT_MIN_COMMENT });
     }
     return null;
   }
@@ -132,7 +140,7 @@ export function validateReview(input: NewReview): string | null {
     input.rating < 1 ||
     input.rating > 5
   ) {
-    return "Hãy chọn số sao từ 1 đến 5.";
+    return t(locale, "validate.needStars");
   }
   return null;
 }
@@ -184,14 +192,15 @@ export function averageRating(reviews: DishReview[]): number | null {
 }
 
 /** "3 ngày trước", "vừa xong"… — tránh kéo thêm thư viện ngày tháng chỉ cho việc này. */
-export function relativeTime(iso: string): string {
+export function relativeTime(iso: string, locale: Locale = "vi"): string {
   const diff = Date.now() - new Date(iso).getTime();
   const min = Math.floor(diff / 60000);
-  if (min < 1) return "vừa xong";
-  if (min < 60) return `${min} phút trước`;
+  if (min < 1) return t(locale, "time.justNow");
+  if (min < 60) return t(locale, "time.minutes", { n: min });
   const hour = Math.floor(min / 60);
-  if (hour < 24) return `${hour} giờ trước`;
+  if (hour < 24) return t(locale, "time.hours", { n: hour });
   const day = Math.floor(hour / 24);
-  if (day < 30) return `${day} ngày trước`;
-  return new Date(iso).toLocaleDateString("vi-VN");
+  if (day < 30) return t(locale, "time.days", { n: day });
+  // Quá 30 ngày thì hiện ngày thật, theo quy ước định dạng của từng ngôn ngữ
+  return new Date(iso).toLocaleDateString(locale === "en" ? "en-GB" : "vi-VN");
 }

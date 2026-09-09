@@ -16,11 +16,14 @@ import {
   type DishReview,
   type ReviewKind,
 } from "@/lib/reviews";
+import { t } from "@/lib/ui-strings";
+import type { Locale } from "@/lib/locale";
 
 interface DishReviewsProps {
   provinceSlug: string;
   dishSlug: string;
   dishName: string;
+  locale?: Locale;
 }
 
 /** Chặn gửi lặp liên tiếp — rào chắn tối thiểu cho RISK R10 (không có pre-moderation). */
@@ -29,7 +32,12 @@ const COOLDOWN_MS = 30_000;
 // không bị chặn oan bởi cooldown của hành động khác.
 const cooldownKey = (p: string, d: string, k: ReviewKind) => `lf-review-sent:${k}:${p}:${d}`;
 
-export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishReviewsProps) {
+export default function DishReviews({
+  provinceSlug,
+  dishSlug,
+  dishName,
+  locale = "vi",
+}: DishReviewsProps) {
   const enabled = isReviewEnabled();
 
   const [reviews, setReviews] = useState<DishReview[]>([]);
@@ -77,7 +85,7 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
       comment,
       kind,
     };
-    const invalid = validateReview(input);
+    const invalid = validateReview(input, locale);
     if (invalid) {
       setFormError(invalid);
       return;
@@ -89,9 +97,7 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
       const last = window.localStorage.getItem(cooldownKey(provinceSlug, dishSlug, kind));
       if (last && Date.now() - Number(last) < COOLDOWN_MS) {
         setFormError(
-          isReport
-            ? "Bạn vừa báo lỗi cho món này. Đợi một chút rồi thử lại nhé."
-            : "Bạn vừa gửi đánh giá cho món này. Đợi một chút rồi thử lại nhé.",
+          t(locale, isReport ? "review.cooldownReport" : "review.cooldownReview"),
         );
         return;
       }
@@ -116,7 +122,7 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
         /* bỏ qua */
       }
     } catch (err) {
-      setFormError(err instanceof Error ? err.message : "Gửi đánh giá thất bại.");
+      setFormError(err instanceof Error ? err.message : t(locale, "review.failed"));
     } finally {
       setSending(false);
     }
@@ -135,13 +141,13 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
           className="flex items-center gap-2 font-display text-lg font-semibold text-ink"
         >
           <MessageSquare className="h-5 w-5 text-chili" aria-hidden="true" />
-          Đánh giá món này
+          {t(locale, "review.title")}
         </h4>
         {avg !== null && (
           <div className="flex items-center gap-2 text-sm">
-            <StarRating value={Math.round(avg)} readOnly size={16} label={`Trung bình ${avg} trên 5 sao`} />
+            <StarRating value={Math.round(avg)} readOnly size={16} label={t(locale, "review.avgLabel", { avg })} />
             <span className="font-medium text-ink">{avg}</span>
-            <span className="text-ink/70">({reviews.length} đánh giá)</span>
+            <span className="text-ink/70">{t(locale, "review.count", { n: reviews.length })}</span>
           </div>
         )}
       </div>
@@ -149,10 +155,10 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
       <form onSubmit={handleSubmit} className="mt-4 rounded-card bg-surface-muted p-4">
         {/* Tách "chấm sao món ăn" khỏi "báo nội dung sai": người muốn báo bài viết
             sai không nên bị buộc chấm sao thấp, làm hỏng điểm của chính món ăn. */}
-        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Loại phản hồi">
+        <div className="flex flex-wrap gap-2" role="tablist" aria-label={t(locale, "review.kindLabel")}>
           {([
-            { k: "review" as const, icon: Star, text: "Đánh giá món" },
-            { k: "content_report" as const, icon: Flag, text: "Báo nội dung sai" },
+            { k: "review" as const, icon: Star, text: t(locale, "review.tabReview") },
+            { k: "content_report" as const, icon: Flag, text: t(locale, "review.tabReport") },
           ]).map(({ k, icon: Icon, text }) => (
             <button
               key={k}
@@ -177,43 +183,44 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
 
         {isReport ? (
           <p className="mt-3 text-sm text-ink/75">
-            Thấy thông tin chưa đúng về <strong className="text-ink">{dishName}</strong>?
-            Mô tả giúp chỗ sai — báo lỗi gửi riêng tới người quản trị, không hiện công khai.
+            {t(locale, "review.reportLead")}{" "}
+            <strong className="text-ink">{dishName}</strong>?{" "}
+            {t(locale, "review.reportPrompt")}
           </p>
         ) : (
           <div className="mt-3 flex flex-wrap items-center gap-3">
-            <span className="text-sm font-medium text-ink">Bạn thấy món này thế nào?</span>
+            <span className="text-sm font-medium text-ink">{t(locale, "review.prompt")}</span>
             <StarRating
               value={rating}
               onChange={setRating}
-              label={`Chấm điểm cho ${dishName}`}
+              label={t(locale, "review.rateLabel", { name: dishName })}
             />
           </div>
         )}
 
         <div className="mt-3 grid gap-3 sm:grid-cols-[minmax(0,14rem)_1fr]">
           <label className="block">
-            <span className="sr-only">Tên của bạn</span>
+            <span className="sr-only">{t(locale, "review.name")}</span>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               maxLength={REVIEW_MAX_NAME}
-              placeholder="Tên của bạn"
+              placeholder={t(locale, "review.name")}
               className="w-full rounded-control border border-border bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink/50 focus:border-chili focus:ring-2 focus:ring-chili/30 focus:outline-none"
             />
           </label>
           <label className="block">
-            <span className="sr-only">{isReport ? "Mô tả chỗ sai" : "Bình luận"}</span>
+            <span className="sr-only">
+              {t(locale, isReport ? "review.reportLabel" : "review.commentLabel")}
+            </span>
             <input
               type="text"
               value={comment}
               onChange={(e) => setComment(e.target.value)}
               maxLength={REVIEW_MAX_COMMENT}
               placeholder={
-                isReport
-                  ? "Sai ở chỗ nào? (bắt buộc)"
-                  : "Cảm nhận của bạn (không bắt buộc)"
+                t(locale, isReport ? "review.reportPlaceholder" : "review.comment")
               }
               className="w-full rounded-control border border-border bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink/50 focus:border-chili focus:ring-2 focus:ring-chili/30 focus:outline-none"
             />
@@ -222,7 +229,7 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
 
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
           <span className="text-xs text-ink/65">
-            {comment.length}/{REVIEW_MAX_COMMENT} ký tự
+            {t(locale, "review.chars", { n: comment.length, max: REVIEW_MAX_COMMENT })}
           </span>
           <button
             type="submit"
@@ -234,7 +241,9 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
             ) : (
               <Send className="h-4 w-4" aria-hidden="true" />
             )}
-            {sending ? "Đang gửi…" : isReport ? "Gửi báo lỗi" : "Gửi đánh giá"}
+            {sending
+              ? t(locale, "review.sending")
+              : t(locale, isReport ? "review.submitReport" : "review.submit")}
           </button>
         </div>
 
@@ -247,24 +256,22 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
         )}
         {justSent && (
           <p role="status" className="mt-3 text-sm text-herb-dark">
-            {justSent === "content_report"
-              ? "Đã gửi tới người quản trị. Cảm ơn bạn đã giúp nội dung chính xác hơn!"
-              : "Cảm ơn bạn đã đánh giá!"}
+            {t(locale, justSent === "content_report" ? "review.reportThanks" : "review.thanks")}
           </p>
         )}
       </form>
 
       <div className="mt-5">
         {loading ? (
-          <p className="text-sm text-ink/70">Đang tải đánh giá…</p>
+          <p className="text-sm text-ink/70">{t(locale, "review.loading")}</p>
         ) : loadError ? (
           <p className="flex items-center gap-2 text-sm text-ink/70">
             <AlertCircle className="h-4 w-4 shrink-0 text-amber-dark" aria-hidden="true" />
-            Chưa tải được đánh giá lúc này. Nội dung món ăn phía trên vẫn xem bình thường.
+            {t(locale, "review.loadError")}
           </p>
         ) : reviews.length === 0 ? (
           <p className="text-sm text-ink/70">
-            Chưa có đánh giá nào cho món này — bạn là người đầu tiên nhé!
+            {t(locale, "review.none")}
           </p>
         ) : (
           <ul className="space-y-3">
@@ -283,7 +290,7 @@ export default function DishReviews({ provinceSlug, dishSlug, dishName }: DishRe
                         luôn có; vẫn phòng null để type an toàn. */}
                     {r.rating !== null && <StarRating value={r.rating} readOnly size={14} />}
                     <span className="text-sm font-medium text-ink">{r.author_name}</span>
-                    <span className="text-xs text-ink/65">{relativeTime(r.created_at)}</span>
+                    <span className="text-xs text-ink/65">{relativeTime(r.created_at, locale)}</span>
                   </div>
                   {r.comment && <p className="mt-1.5 text-sm text-ink/80">{r.comment}</p>}
                 </motion.li>

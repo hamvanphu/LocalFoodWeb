@@ -1,0 +1,39 @@
+{
+  "slug": "vinh-phuc",
+  "summary": "Vĩnh Phúc is a midland province known for cá thính Lập Thạch — a rustic fish soured and cured in thính (roasted ground rice) that has people reaching for more rice — along with the plain bánh hòn of Hương Canh and the free-range hill chicken of Lập Thạch. Its cooking carries the mark of a half-hill landscape where the lowlands meet the mountainous midlands.",
+  "dishes": {
+    "ca-thinh-lap-thach": {
+      "description": "Cá thính Lập Thạch grew out of the habit among people in Lập Thạch district of souring fish to keep it for a long time, done during the chiêm planting season when the ponds ran low and the catch was plentiful. Fresh fish is salted and then packed with thính (roasted ground rice) in a glazed earthenware jar for several months, giving a gentle sourness and the characteristic nutty scent of thính. The dish was granted trademark protection in 2010 and made the Top 100 Vietnamese specialities for 2020-2021.",
+      "keyIngredients": ["Freshwater fish (cá mương, cá rô, cá chép, cá mè and the like)", "Thính (roasted ground rice)", "Coarse salt", "A glazed earthenware jar for curing"],
+      "prepOutline": [
+        "Clean the fish and salt it so it takes up the salt and gives off some of its water",
+        "Roast rice until golden and fragrant, then grind it into fine thính (roasted ground rice)",
+        "Mix the salted fish evenly with the thính",
+        "Pack the fish into a glazed earthenware jar, press it down tightly and seal it to cure for a few weeks to a few months"
+      ],
+      "howToEat": "Cá thính is usually pan-fried or lightly grilled before eating to bring out the scent of the thính (roasted ground rice), and served with hot rice and raw greens — the deep sour, nutty taste is what makes it go so well with rice."
+    },
+    "banh-hon": {
+      "description": "Bánh hòn is a plain country snack of the Hương Canh and Hợp Thịnh areas, in Phúc Yên town and Tam Dương district, born of the reverence for every grain of rice among people of the wet-rice lowlands. Plain rice flour is rolled into balls the size of a ping-pong ball around a filling of minced pork, spring onion and wood ear mushroom, then steamed in layers in a chõ (traditional steamer).",
+      "keyIngredients": ["Plain rice soured by soaking", "Minced pork", "Spring onion, wood ear mushroom", "Crushed peanuts (depending on the maker)"],
+      "prepOutline": [
+        "Soak the plain rice for about two days, grind it and soak it a further two days, changing the souring water regularly",
+        "Mix the minced pork filling with spring onion, wood ear mushroom and seasonings",
+        "Roll the dough into small round balls, put the filling in the middle and seal them closed",
+        "Stack the cakes in layers in a chõ (steamer) and steam until the skins turn translucent"
+      ],
+      "howToEat": "Bánh hòn is eaten hot straight from the steamer, dipped in mixed nước mắm (Vietnamese fish sauce) or eaten with raw greens; it is a familiar breakfast snack sold at the country markets of Vĩnh Phúc."
+    },
+    "ga-doi-lap-thach": {
+      "description": "Gà đồi Lập Thạch is a chicken raised free-range by the people of Lập Thạch district on the hillsides under the fruit trees, foraging for insects and wild grasses, so the meat is firm, the skin crisp and the bird leaner than factory-farmed chicken. Vĩnh Phúc's hill chickens are usually smaller than those of the other northern mountain provinces, but in exchange the meat is chewier and more deeply flavoured.",
+      "keyIngredients": ["Free-range hill chicken", "Lime leaf, ginger, sả (lemongrass)", "Coarse salt, pepper"],
+      "prepOutline": [
+        "Raise the birds free-range on the hills for several months so the meat firms up",
+        "Clean the chicken and leave it whole or joint it, depending on the dish",
+        "Boil, grill or roast it to taste, keeping the heat moderate so the skin crisps without burning",
+        "Chop into bite-size pieces and serve with shredded lime leaf"
+      ],
+      "howToEat": "Hill chicken is usually boiled and dipped in salt with lime leaf, or grilled with honey; it is a common dish for guests at gatherings and banquets in Vĩnh Phúc."
+    }
+  }
+}

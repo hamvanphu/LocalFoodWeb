@@ -1,6 +1,4 @@
-import { notFound } from "next/navigation";
-import ProvinceDishExplorer from "@/components/province/ProvinceDishExplorer";
-import ProvinceHero from "@/components/province/ProvinceHero";
+import ProvinceView from "@/components/pages/ProvinceView";
 import { getAllProvinceSlugs, getHeroDish, getProvinceBySlug } from "@/lib/provinces";
 
 export function generateStaticParams() {
@@ -19,6 +17,7 @@ export async function generateMetadata({
   return {
     title: `${province.name} — ${hero?.name ?? "Ẩm thực địa phương"} | Local Food`,
     description: province.summary,
+    alternates: { languages: { vi: `/provinces/${slug}`, en: `/en/provinces/${slug}` } },
   };
 }
 
@@ -28,25 +27,5 @@ export default async function ProvincePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const province = getProvinceBySlug(slug);
-  if (!province) notFound();
-
-  const heroDish = getHeroDish(province);
-
-  return (
-    <div>
-      <ProvinceHero province={province} heroDish={heroDish} />
-
-      <section className="mx-auto max-w-5xl px-6 py-12">
-        <h2 className="mb-2 font-display text-2xl font-semibold text-ink">
-          Món ăn đặc trưng
-        </h2>
-        <ProvinceDishExplorer
-          dishes={province.dishes}
-          provinceName={province.name}
-          provinceSlug={province.slug}
-        />
-      </section>
-    </div>
-  );
+  return <ProvinceView slug={slug} locale="vi" />;
 }

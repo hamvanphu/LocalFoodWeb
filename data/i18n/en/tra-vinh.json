@@ -1,0 +1,60 @@
+{
+  "slug": "tra-vinh",
+  "summary": "Trà Vinh is a coastal province of the Mekong Delta where the Khmer community makes up about a third of the population and has left a deep mark on local food culture. Its cooking is a meeting of Kinh, Khmer and Chinese tastes — most notably bún nước lèo (a rice-noodle soup) rich with mắm bò hóc (fermented fish paste), the bánh tét of Trà Cuôn from a century-old craft village, and rare delicacies such as đuông chà là (date-palm grubs).",
+  "dishes": {
+    "bun-nuoc-leo-tra-vinh": {
+      "description": "Bún nước lèo originated with the Khmer community and is found across the provinces of the southwest, but each place has its own character. In Trà Vinh the broth is cooked from mắm bò hóc (fermented fish paste, Khmer prahok) in the traditional Khmer way, so it is saltier and more strongly scented than the sweeter Sóc Trăng version, and it is usually eaten with cá lóc (snakehead fish), shrimp, roast pork and chả giò (fried rolls). The dish has been honoured among Vietnam's 100 representative speciality dishes, reflecting the long-standing blend of Khmer, Vietnamese and Chinese cooking in this land.",
+      "keyIngredients": [
+        "Mắm bò hóc (fermented freshwater-fish paste, made the Khmer way)",
+        "Thick fresh bún (rice noodles)",
+        "Cá lóc (snakehead fish), boiled and flaked",
+        "Shrimp, roast pork",
+        "Chả giò (fried rolls), pork blood curd",
+        "Shredded banana blossom, shredded raw greens, bean sprouts",
+        "Sả (lemongrass), chilli, lime"
+      ],
+      "prepOutline": [
+        "Cook the mắm bò hóc (fermented fish paste) with water, then strain out the solids to leave a deeply savoury liquid",
+        "Add bruised sả (lemongrass) to the broth pot and season to taste",
+        "Boil the cá lóc (snakehead fish) and flake the meat; prepare the shrimp, roast pork and chả giò (fried rolls) to serve alongside",
+        "Blanch the bún (rice noodles), arrange the fish, shrimp and roast pork on top, and ladle the broth over to cover"
+      ],
+      "howToEat": "Bún nước lèo is eaten hot with a plate of raw greens, shredded banana blossom and bean sprouts, with a squeeze of lime and crushed chilli to taste, balancing the deep saltiness of the broth."
+    },
+    "banh-tet-tra-cuon": {
+      "description": "Bánh tét Trà Cuôn comes from Trà Cuôn hamlet in Kim Hòa commune, Cầu Ngang district, where a Khmer woman named Thạch Thị Lết created it around 80 years ago to make a living; it later spread to become a speciality known across the Mekong Delta. What sets it apart is the pork fat, cut into long strips and marinated with salt, sugar and spring onion before being packed in with the glutinous rice and mung bean, and in some places salted egg yolk and dried shrimp are added too, giving a distinctively rich, nutty taste. Along Highway 53 the Trà Cuôn area has even grown a \"bánh tét market\" of its own, drawing visitors who stop to buy them as gifts.",
+      "keyIngredients": [
+        "Soft glutinous rice",
+        "Split, hulled mung beans",
+        "Pork fat cut into long strips",
+        "Salted egg yolk, dried shrimp (depending on the maker)",
+        "Lá chuối (banana leaf) for wrapping",
+        "Salt, sugar, spring onion"
+      ],
+      "prepOutline": [
+        "Rinse the glutinous rice, soak it until soft and drain, then mix in a little salt and the juice of pandan or lá cẩm (magenta plant) leaves for colour",
+        "Steam the mung beans and mash them smooth for the filling",
+        "Marinate the pork fat with salt, sugar and spring onion; salted egg yolk and dried shrimp may be added to the filling",
+        "Wrap the rice, mung bean filling and pork fat in lá chuối (banana leaf) into a long cylinder and tie it tightly",
+        "Boil the cakes for several hours until the glutinous rice is cooked through and tender"
+      ],
+      "howToEat": "Bánh tét Trà Cuôn is usually cut into rounds and eaten with dưa món (sweet-sour mixed pickles) or củ kiệu (pickled scallion bulbs); it can be eaten cool or pan-fried briefly so the outside of the rice crisps up."
+    },
+    "duong-cha-la-tra-vinh": {
+      "description": "Đuông chà là are the larvae of a palm weevil that lives inside the trunk of the date palm, considered the rarest and most expensive speciality of Trà Vinh, the area regarded as the heartland of this grub. Unlike the đuông dừa (coconut palm grub) common in Bến Tre, which has dark innards, the đuông chà là has a pure white body, and a date palm attacked by them usually yields only a single grub, which makes them very scarce. People watch for a withering palm crown to work out which tree holds one before cutting it down.",
+      "keyIngredients": [
+        "Live đuông chà là (date-palm grubs)",
+        "Undiluted nước mắm (Vietnamese fish sauce)",
+        "Salt, pepper, chilli",
+        "Raw greens to eat alongside"
+      ],
+      "prepOutline": [
+        "Look for date palms with a withering crown to identify which trees hold grubs inside",
+        "Fell the tree and split out the tender core where the grubs sit",
+        "Rinse the grubs in lightly salted water",
+        "Cook them by grilling, frying in butter or steaming, or eat them live dipped in nước mắm (Vietnamese fish sauce), according to taste"
+      ],
+      "howToEat": "Đuông chà là are usually dipped in undiluted nước mắm (Vietnamese fish sauce) with a little pepper and chilli and eaten with raw greens; some seasoned diners prefer them live, for the natural richness."
+    }
+  }
+}

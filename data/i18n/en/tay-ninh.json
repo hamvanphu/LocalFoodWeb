@@ -1,0 +1,58 @@
+{
+  "slug": "tay-ninh",
+  "summary": "Tây Ninh has no coastline, yet it produced muối tôm (shrimp salt), famous across the whole country, and in Trảng Bàng town it has a trade known for bánh tráng phơi sương (dew-soaked rice paper) and for a family recipe for bánh canh. Tây Ninh cooking carries the mark of a dry, sun-beaten land, using ingredients brought in from elsewhere with enough skill to create specialities found nowhere else.",
+  "dishes": {
+    "banh-trang-phoi-suong-trang-bang": {
+      "description": "Bánh tráng phơi sương is the celebrated speciality of Trảng Bàng town, Tây Ninh, and came about by accident when sheets of bánh tráng (rice paper) were left out overnight and turned soft and supple from the dew. It is made from good new-harvest rice with nothing blended in, toasted over a rice-husk charcoal fire until small bubbles rise on the surface, then set out in the dew at first light — timed exactly so the sheets turn soft and pliable without going soggy.",
+      "keyIngredients": [
+        "New-harvest rice of high quality (nothing blended in)",
+        "Salt (instead of sugar, as in ordinary bánh tráng)",
+        "Boiled pork (usually leg)",
+        "Assorted raw greens, especially ambarella leaf, tía tô (perilla), pennywort and diếp cá (fish mint)",
+        "Sweet-and-sour nước mắm (Vietnamese fish sauce) mixed to a house recipe"
+      ],
+      "prepOutline": [
+        "New-harvest rice is ground into a batter and spread into thin sheets",
+        "Toast the sheets over a charcoal fire fuelled with peanut shells until small bubbles rise and the sheets turn milky white",
+        "Set the sheets out at first light while the dew is falling so they take up moisture and turn soft and supple",
+        "Watch the timing closely — left out too long, the sheets go wet and soggy"
+      ],
+      "howToEat": "Bánh tráng phơi sương is rolled around thinly sliced boiled pork and a great deal of raw greenery, then dipped into sweet-and-sour nước mắm (Vietnamese fish sauce), or into mắm nêm (fermented anchovy sauce) mixed the Trảng Bàng way."
+    },
+    "muoi-tom-tay-ninh": {
+      "description": "Muối tôm (shrimp salt) is the improbable pride of Tây Ninh — a province with no coast, short of both salt and shrimp, that nevertheless created a seasoning famous at home and abroad. Coarse salt is brought in from the Mekong Delta and dried shrimp from Cà Mau or Bà Rịa - Vũng Tàu, combined with locally grown chilli, then pounded and dried to a house recipe to give brick-red grains with their distinctive fragrant heat.",
+      "keyIngredients": [
+        "Coarse salt (brought in from the Mekong Delta)",
+        "Dried shrimp (from Cà Mau and Bà Rịa - Vũng Tàu)",
+        "Fresh chilli grown in Tây Ninh",
+        "Garlic, sả (lemongrass)",
+        "MSG, sugar"
+      ],
+      "prepOutline": [
+        "Grind or pound the coarse salt, dried shrimp and chilli together in the maker's own proportions",
+        "Mix the blend evenly with minced garlic, sả (lemongrass) and seasonings",
+        "Spread the mixture in the sun for a few hours so it takes up the sun and wind",
+        "Dry it at 80-90°C for several hours, then sterilise it so it keeps"
+      ],
+      "howToEat": "Muối tôm is used for dipping sour fruit such as ambarella, mango and guava, or tossed with bánh tráng (rice paper) to make bánh tráng trộn and bánh tráng muối tôm, snacks eaten all over Vietnam."
+    },
+    "banh-canh-trang-bang": {
+      "description": "Bánh canh Trảng Bàng is the culinary pride of Tây Ninh, dating from the early twentieth century and said to have once been sent as tribute to the court under the Nguyễn dynasty. The bánh canh (thick rice noodles) are made from white rice flour, soft and springy at once, cooked in a clear, sweet broth simmered from pork bones and the distinctive well water of the Trảng Bàng area, and eaten with boiled pork taken off the bone.",
+      "keyIngredients": [
+        "White rice flour (for the bánh canh noodles)",
+        "Pork bones, pork (leg or trotter)",
+        "Well water (for its distinctive clean sweetness)",
+        "Spring onion, fried shallots",
+        "Raw greens and bean sprouts on the side",
+        "Undiluted nước mắm (Vietnamese fish sauce) with lime and chilli"
+      ],
+      "prepOutline": [
+        "Knead the rice flour and roll it into soft, springy bánh canh noodles",
+        "Simmer pork bones for several hours for a clear, sweet broth",
+        "Boil the pork just until done, take it off the bone and slice it thin",
+        "Blanch the bánh canh noodles, ladle over the hot broth and arrange the pork on top"
+      ],
+      "howToEat": "Bánh canh is eaten hot the moment the broth is ladled over, with spring onion and fried shallots scattered on, a squeeze of lime, and chilli and undiluted nước mắm (Vietnamese fish sauce) added to taste."
+    }
+  }
+}

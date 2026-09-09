@@ -1,0 +1,54 @@
+{
+  "slug": "quang-binh",
+  "summary": "Quảng Bình, land of the Lào wind and white sand, has a plain, thoroughly central-Vietnamese cuisine: bánh bột lọc, chewy and soft in its leaf wrapper; cháo canh, with thick noodle strands eaten with crisp ram; and khoai deo, the sweet, nutty country gift made from sweet potatoes grown on the Hải Ninh sand dunes.",
+  "dishes": {
+    "banh-bot-loc-quang-binh": {
+      "description": "Bánh bột lọc is the plain, characteristic cake of Quảng Bình: the wrapper is made from pure tapioca starch (bột lọc), clear and chewy, around a filling of shrimp, pork and wood ear mushroom. Each one is carefully wrapped in a village banana leaf and steamed, giving a taste that is rustic but hard to forget.",
+      "keyIngredients": [
+        "Tapioca starch (bột lọc)",
+        "Shrimp",
+        "Pork belly",
+        "Wood ear mushroom",
+        "Lá chuối (banana leaf) for wrapping",
+        "Fried shallot"
+      ],
+      "prepOutline": [
+        "Knead the tapioca starch with fiercely boiling water until the dough is pliable and clear",
+        "Stir-fry the shrimp, pork belly and wood ear mushroom with fried shallot and seasoning to make the filling",
+        "Roll the dough into small balls, enclose the filling and wrap each in lá chuối (banana leaf)",
+        "Steam until the wrapper has turned fully translucent"
+      ],
+      "howToEat": "Peel back the banana leaf, dip the cake in sweet-sour nước mắm (Vietnamese fish sauce), scatter over fried shallot and eat it hot — best of all on a cold day."
+    },
+    "chao-canh-quang-binh": {
+      "description": "Cháo canh (also called bánh canh Quảng Bình) carries the word cháo (rice porridge) in its name but is really closer to phở or bún: the strands are rolled thick from rice or wheat flour and eaten in a clean, sweet bone broth with toppings such as cá lóc (snakehead fish), mackerel, shrimp or minced pork.",
+      "keyIngredients": [
+        "Rice flour or wheat flour",
+        "Pork bones or fish bones",
+        "Cá lóc (snakehead fish), mackerel or shrimp",
+        "Ram Ba Đồn (crisp deep-fried rolls)",
+        "Raw herbs, fresh chilli"
+      ],
+      "prepOutline": [
+        "Knead the rice or wheat flour, roll it thin and cut it into broad, thick strands",
+        "Simmer pork or fish bones for a naturally sweet broth",
+        "Boil or pan-sear the fish, shrimp and minced pork for the toppings",
+        "Blanch the noodle strands, ladle over the hot broth and arrange the toppings on top"
+      ],
+      "howToEat": "Eat it hot with ram Ba Đồn (crisp deep-fried rolls) broken into the bowl for extra crunch, adding raw herbs and fresh chilli to taste."
+    },
+    "khoai-deo-quang-binh": {
+      "description": "Khoai deo is the speciality country gift of the white sand dunes of Hải Ninh (Quảng Ninh district, Quảng Bình), made from red sweet potatoes dried in the natural sun and wind, giving a sweet, nutty taste and a chew like malt candy without ever turning crumbly or hard.",
+      "keyIngredients": [
+        "Red sweet potato (grown on the Hải Ninh sand dunes)",
+        "Sugar (depending on the recipe)"
+      ],
+      "prepOutline": [
+        "Choose even, unblemished red sweet potatoes and boil or steam them until just done",
+        "Peel them and either slice them or leave the smaller ones whole",
+        "Dry them in the sun and sea wind for several days until they firm up, turn chewy and take on a deep amber colour"
+      ],
+      "howToEat": "Nibble khoai deo with a cup of hot tea; it is often taken home as a gift when leaving Quảng Bình."
+    }
+  }
+}

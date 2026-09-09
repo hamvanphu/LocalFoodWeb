@@ -1,0 +1,39 @@
+{
+  "slug": "tuyen-quang",
+  "summary": "Tuyên Quang sits on the Lô and Gâm rivers, home to Tày and Nùng communities whose cooking is bound up with the rivers and with traditional cakes. Bánh gai from Chiêm Hóa, vịt bầu (a local pot-bellied duck breed) from Minh Hương and cá lăng (river catfish) from the Lô are its emblematic products, drawn from native ingredients and the skilled hands of the people here.",
+  "dishes": {
+    "banh-gai-chiem-hoa": {
+      "description": "Bánh gai Chiêm Hóa is a celebrated speciality of the Tày people of Chiêm Hóa district, made from nếp hoa vàng (a fragrant glutinous rice) and lá gai (ramie leaf) that is dried, stripped of its veins, chopped, boiled and pounded smooth before being worked into the dough for the wrapper. The filling is mung bean, fresh coconut and pork fat marinated in sugar, which gives a rich, chewy bite without being cloying, and the cake is wrapped in dried lá chuối (banana leaf) for its distinctive scent. It is made in quantity for the Rằm tháng Bảy (fifteenth day of the seventh lunar month) to offer to the ancestors, an expression of filial devotion in Tày and Nùng families.",
+      "keyIngredients": ["Nếp hoa vàng (a fragrant glutinous rice)", "Lá gai (ramie leaf)", "Mung bean, fresh coconut, pork fat", "Dried lá chuối (banana leaf) for wrapping"],
+      "prepOutline": [
+        "Dry the lá gai (ramie leaf), strip out the veins, chop it, boil it, wring it dry and grind it smooth",
+        "Mix the ground lá gai into glutinous rice flour to make the wrapper dough",
+        "Make the filling from mung bean, coconut and pork fat marinated in sugar",
+        "Wrap the cakes in dried lá chuối (banana leaf) and steam them through"
+      ],
+      "howToEat": "Peel off the lá chuối (banana leaf) and eat the cake cool; it is usually laid out on the ancestral offering tray at the Rằm tháng Bảy, or given as a gift carrying the taste of home."
+    },
+    "vit-bau-minh-huong": {
+      "description": "Vịt bầu Minh Hương, also called vịt suối (stream duck), is a long-established native duck breed of Minh Hương commune in Hàm Yên district, raised free-range along the streams so the meat is firm, sweet and lean. In 2016 the \"Vịt bầu Minh Hương\" mark was recognised by the National Office of Intellectual Property, becoming a point of culinary pride for Hàm Yên. The duck is usually boiled or steamed together with xôi (steamed glutinous rice) to keep the natural sweetness of the meat intact.",
+      "keyIngredients": ["Vịt bầu Minh Hương (the local pot-bellied duck)", "Fragrant glutinous rice", "Sả (lemongrass), rau răm (Vietnamese coriander)", "Nước mắm (Vietnamese fish sauce), garlic"],
+      "prepOutline": [
+        "Choose a vịt bầu Minh Hương of about 1.8-2.2kg and clean it",
+        "Stuff sả (lemongrass) and seasonings into the cavity",
+        "Set the duck over a steamer of glutinous rice and cook the two together for about 35-40 minutes",
+        "Once cooked, chop the duck into bite-size pieces and arrange on a plate"
+      ],
+      "howToEat": "Vịt bầu Minh Hương is eaten hot straight after chopping, with xôi (steamed glutinous rice) and a dip of nước mắm (Vietnamese fish sauce) with ginger, or mắm mixed with rau răm (Vietnamese coriander)."
+    },
+    "ca-lang-song-lo": {
+      "description": "Cá lăng is a whiskered, scaleless catfish that lives on the bed of the Lô river where it runs through Tuyên Quang; the heavy silt there helps the fish build firm, fragrant flesh. It is a high-value, nutritious species, and local cooks turn it into many dishes — grilled, om (braised) with green banana and tofu, or in a sour soup — making it an emblematic product of the gentle Lô.",
+      "keyIngredients": ["Cá lăng (river catfish) from the Lô", "Green banana, tofu (for the om braise)", "Nghệ (turmeric), mẻ (fermented rice starter), riềng (galangal)", "Fresh herbs, dill"],
+      "prepOutline": [
+        "Choose fresh cá lăng (river catfish), clean it and cut it into bite-size pieces",
+        "Marinate the fish with nghệ (turmeric), riềng (galangal) and seasonings until it takes up the flavour",
+        "Om (braise) it with green banana, tofu and mẻ (fermented rice starter), or grill it over than hoa (charcoal)",
+        "Adjust the seasoning and scatter over fresh herbs and dill before serving"
+      ],
+      "howToEat": "Cá lăng (river catfish) from the Lô is at its best hot — dipped in nước mắm (Vietnamese fish sauce) with ginger when grilled, or eaten with bún (fresh rice noodles) or rice when braised or made into a sour soup."
+    }
+  }
+}

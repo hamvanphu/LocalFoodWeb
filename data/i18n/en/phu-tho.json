@@ -1,0 +1,53 @@
+{
+  "slug": "phu-tho",
+  "summary": "Phú Thọ — the Đất Tổ, the ancestral land of the nation — has a plain, homely cuisine stamped by the Mường people and the midland farmers, above all thịt chua Thanh Sơn, pork fermented inside a bamboo tube, and bánh tai, a plain-rice cake with a pork filling. Alongside these, the produce of the cọ palm, such as cọ ỏm, is a culinary trait of the northern midlands that is hard to find anywhere else.",
+  "dishes": {
+    "thit-chua-thanh-son": {
+      "description": "Thịt chua Thanh Sơn is a plain dish of the Mường people of Thanh Sơn district, Phú Thọ, born of the old need to keep meat for a long time in the uplands. Pork belly and shoulder are sliced thin, seasoned, then tossed with finely ground thính (roasted ground rice), packed tight into a bamboo tube or a box and left to ferment naturally for three to five days. The result has a gentle sourness and a springy, crunchy skin against the nutty fragrance of the thính, making it the best-known speciality of the Đất Tổ.",
+      "keyIngredients": [
+        "Pork belly and shoulder (with the skin on)",
+        "Finely ground thính (roasted ground rice)",
+        "Salt, black pepper",
+        "A bamboo tube or box for the fermenting"
+      ],
+      "prepOutline": [
+        "Wash the pork, drain it and slice it thin into bite-sized pieces",
+        "Season with salt and black pepper and let it take up the flavour",
+        "Toss the meat with thính (roasted ground rice) until every piece is coated",
+        "Pack it tightly into a bamboo tube or box and leave it somewhere cool and airy for three to five days to sour"
+      ],
+      "howToEat": "Roll thịt chua up in lá sung (young fig leaf), young guava leaf or other astringent leaves and dip it in chilli sauce; it is usually eaten with grilled bánh đa (rice cracker) and goes especially well cold with beer in summer."
+    },
+    "banh-tai-phu-tho": {
+      "description": "Bánh tai, also called bánh hòn, is the well-known homely breakfast of Phú Thọ town, made from plain rice soaked and pounded to a smooth dough around a filling of slightly fatty pork, dried shallot and pepper. The maker shapes the dough into a curve like an ear, closes it over the filling and steams it. The cake is simple but demands a deft, patient hand at every stage so the wrapper turns out springy and does not fall apart in the steamer.",
+      "keyIngredients": [
+        "Good plain rice",
+        "Pork with some fat",
+        "Dried shallot, black pepper",
+        "Salt, MSG"
+      ],
+      "prepOutline": [
+        "Rinse the plain rice, soak it for three to four hours, then pound or mill it into a dough",
+        "Roll the dough into balls, parboil for about 20 minutes, then pound it smooth again",
+        "Make the filling from finely pounded pork mixed with dried shallot, pepper and salt",
+        "Shape the dough around the filling into an ear-like curve and steam for about 30 minutes"
+      ],
+      "howToEat": "Bánh tai is eaten hot straight from the steamer, usually for breakfast, and can be dipped in nước mắm (Vietnamese fish sauce) with chilli to taste."
+    },
+    "co-om-phu-tho": {
+      "description": "Cọ ỏm is a plain, characteristic dish of the Phú Thọ midlands, made from the fruit of the cọ palm — the tree bound up with the landscape of the Đất Tổ. The fruit is peeled and then \"ỏm\" (steeped) in water of about 80 degrees C, held at a bare simmer until the palm oil rises to the surface and the fruit turns from dark green to a glossy yellow. Cọ ỏm has a distinctive rich, nutty taste with a faint astringency rather than sweetness or strong perfume — a very particular kind of plainness in the cooking of the Đất Tổ.",
+      "keyIngredients": [
+        "Cọ palm fruit",
+        "Water",
+        "Salt"
+      ],
+      "prepOutline": [
+        "Choose sticky-fleshed cọ fruit at just-ripe stage, scrape off the outer bloom and wash clean",
+        "Heat water with a little salt until it barely trembles (about 80 degrees C)",
+        "Drop in the fruit, keep the heat low and stir gently so everything stays submerged",
+        "Om (steep gently) until the palm oil rises to the surface and the fruit turns yellow, then take it off the heat"
+      ],
+      "howToEat": "Cọ ỏm is eaten as it is while still warm, peeling out the rich, nutty flesh; it is usually given as a gift from the countryside or eaten with rice as a homely dish of the Phú Thọ locals."
+    }
+  }
+}

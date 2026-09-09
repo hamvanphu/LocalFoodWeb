@@ -1,9 +1,19 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
+import { localePath, type Locale } from "@/lib/i18n";
+import { t } from "@/lib/ui-strings";
 import type { Dish, Province } from "@/lib/types";
 
-export default function ProvinceHero({ province, heroDish }: { province: Province; heroDish?: Dish }) {
+export default function ProvinceHero({
+  province,
+  heroDish,
+  locale = "vi",
+}: {
+  province: Province;
+  heroDish?: Dish;
+  locale?: Locale;
+}) {
   return (
     <section className="relative">
       <div className="h-64 w-full sm:h-80">
@@ -17,14 +27,14 @@ export default function ProvinceHero({ province, heroDish }: { province: Provinc
       </div>
       <div className="mx-auto max-w-6xl px-6">
         <Link
-          href="/"
+          href={localePath(locale, "/")}
           className="mt-4 inline-flex items-center gap-1.5 text-sm text-ink/70 hover:text-ink"
         >
           <ArrowLeft className="h-4 w-4" />
-          Quay lại bản đồ
+          {t(locale, "province.backToMap")}
         </Link>
         <p className="mt-4 text-xs uppercase tracking-wide text-amber-dark">
-          Miền {province.region}
+          {t(locale, `region.${province.region}`)}
         </p>
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">
           {province.name}
@@ -32,7 +42,7 @@ export default function ProvinceHero({ province, heroDish }: { province: Provinc
         <p className="mt-3 max-w-2xl text-ink/70">{province.summary}</p>
         {province.summarySourceRefs.length > 0 && (
           <p className="mt-2 text-xs text-ink/65">
-            Nguồn tham chiếu:{" "}
+            {t(locale, "province.source")}{" "}
             {province.summarySourceRefs.map((ref, i) => (
               <span key={ref.url}>
                 {i > 0 && ", "}

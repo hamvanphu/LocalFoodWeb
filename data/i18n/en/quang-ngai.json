@@ -1,0 +1,55 @@
+{
+  "slug": "quang-ngai",
+  "summary": "Quảng Ngãi, the country of núi Ấn and sông Trà (Ấn mountain and the Trà river), is bound to the specialities of the Trà Khúc river: don, cleanly sweet and cooked from a small shellfish; cá bống sông Trà (Trà river goby) braised deep with pepper; and the squid bánh xèo of the Sa Huỳnh coast.",
+  "dishes": {
+    "don-quang-ngai": {
+      "description": "Don is the name of both the dish and the small shellfish it is made from — a thin, pale-yellow-shelled member of the hến (basket clam) family that lives in the brackish water of the Trà Khúc and Vệ rivers. The don broth is clean, sweet and perfectly clear, and needs almost no seasoning because the sweetness is already there in the shellfish; eaten with bánh tráng (rice paper) broken into it and raw greens, it makes the plain country dish of Quảng Ngãi.",
+      "keyIngredients": [
+        "Don (a small brackish-water shellfish)",
+        "Bánh tráng (rice paper), grilled or left plain",
+        "Spring onion, green chilli",
+        "Raw greens"
+      ],
+      "prepOutline": [
+        "Rinse the sand off the don shells",
+        "Boil the don briefly to draw out the sweet liquor — this is the \"soul\" of the dish",
+        "Separate the don meat from the shells",
+        "The meat can also be cooked into a soup with mustard greens or rau muống (water spinach), or fried with spring onion"
+      ],
+      "howToEat": "Ladle the hot don broth into a bowl, break bánh tráng (rice paper) into it, scatter over spring onion and green chilli, and eat it with raw greens."
+    },
+    "ca-bong-song-tra-kho-tieu": {
+      "description": "Cá bống sông Trà (Trà river goby) is a fish no bigger than a finger, but firm-fleshed and naturally sweet, living in the clear water of the Trà Khúc river. Braised kho style with pepper — deep-flavoured and sharply hot — it is one of the four Quảng Ngãi specialities recognised by the Vietnam Records Organisation.",
+      "keyIngredients": [
+        "Cá bống sông Trà (Trà river goby)",
+        "Pepper",
+        "Nước mắm (Vietnamese fish sauce)",
+        "Sugar, shallot, chilli",
+        "Nước màu (caramelised sugar)"
+      ],
+      "prepOutline": [
+        "Catch the cá bống (goby) in season, from the first to the eighth lunar month, when the fish swim upstream",
+        "Clean the fish and marinate them with nước mắm (Vietnamese fish sauce), pepper, sugar and nước màu (caramelised sugar)",
+        "Kho the fish over a bare simmer until the sauce reduces to a syrup and the seasoning has gone right through"
+      ],
+      "howToEat": "Eaten with hot white rice; it can also be left to cool and packed into jars to keep, or given as a gift."
+    },
+    "banh-xeo-muc-quang-ngai": {
+      "description": "Bánh xèo in Quảng Ngãi is small enough to sit in the palm of the hand, the natural ivory white of rice flour rather than the bright yellow of the southern kind, and made with less oil. The version filled with fresh squid from the Sa Huỳnh coast carries a sweetness of the sea all its own, and is eaten with the hot, pungent nước mắm (Vietnamese fish sauce) of Lý Sơn.",
+      "keyIngredients": [
+        "Rice flour",
+        "Fresh squid",
+        "Bean sprouts",
+        "Chuối chát (green astringent banana), cucumber, raw greens",
+        "Nước mắm (Vietnamese fish sauce) from Lý Sơn"
+      ],
+      "prepOutline": [
+        "Mix the rice batter fairly thin, with a little nghệ (turmeric) powder for a faint colour if you like",
+        "Fry shallot until fragrant, then sear the fresh squid in the pan first",
+        "Pour the batter into a small mould about 20cm across, add bean sprouts, and cover so it cooks through evenly",
+        "Lift the bánh onto a plate as soon as it is just done and still soft"
+      ],
+      "howToEat": "Eaten with chuối chát (green astringent banana), cucumber and raw greens, dipped in nước mắm (Vietnamese fish sauce) from Lý Sơn mixed with garlic and chilli."
+    }
+  }
+}

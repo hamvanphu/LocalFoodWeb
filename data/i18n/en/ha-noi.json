@@ -1,0 +1,74 @@
+{
+  "slug": "ha-noi",
+  "summary": "Hà Nội cooking is refined and restrained — clear broths, seasoning used sparingly, letting the ingredients speak for themselves.",
+  "dishes": {
+    "pho-bo": {
+      "description": "Phở Hà Nội is the benchmark for Vietnamese phở (rice-noodle soup) — a clear, delicate beef broth simmered for hours, served with flat bánh phở (fresh flat rice noodles) and a few thin slices of beef. Compared with southern phở, the Hà Nội version is more restrained: few herbs, no bean sprouts, letting the natural sweetness of the broth lead.",
+      "keyIngredients": [
+        "Beef bones, shank and brisket",
+        "Bánh phở (flat rice noodles)",
+        "Charred ginger and onion",
+        "Star anise, cinnamon, black cardamom",
+        "Nước mắm (Vietnamese fish sauce), spring onion, coriander"
+      ],
+      "prepOutline": [
+        "Char the ginger and onion until fragrant, then add them to the bone pot",
+        "Simmer the beef bones for 6-8 hours, skimming constantly so the broth stays clear",
+        "Season with nước mắm (Vietnamese fish sauce), adjusting the star anise, cinnamon and black cardamom",
+        "Blanch the bánh phở (flat rice noodles) and lay raw or cooked beef on top",
+        "Ladle boiling broth over the bowl so the beef cooks just through"
+      ],
+      "howToEat": "Eaten hot, usually in the morning. Squeeze in a little lime (or quất, a Vietnamese kumquat) and add fresh chilli; Hà Nội locals tend to taste the broth before adding garlic vinegar or soy sauce, and they don't pile in raw herbs the way the southern style does."
+    },
+    "bun-cha": {
+      "description": "Pork chả (grilled patties and slices) cooked over than hoa (charcoal), eaten with bún (fresh rice noodles) and a sweet-sour dipping sauce holding pickled green papaya and carrot — the classic Hà Nội lunch, and famous worldwide.",
+      "keyIngredients": [
+        "Pork belly and minced shoulder",
+        "Bún lá or bún rối (fresh rice noodles, pressed into small sheets or left loose)",
+        "Nước mắm (Vietnamese fish sauce), sugar, vinegar or lime, garlic and chilli",
+        "Green papaya and carrot pickled sweet and sour",
+        "Raw herbs and leaves on the side — lettuce, tía tô (perilla), kinh giới (Vietnamese balm)"
+      ],
+      "prepOutline": [
+        "Marinate the pork in nước mắm (Vietnamese fish sauce), sugar and minced shallot and garlic",
+        "Grill over than hoa (charcoal) until the edges are charred and fragrant",
+        "Mix the sweet-sour dipping sauce and drop in the pickled papaya and carrot",
+        "Slide the grilled chả into a bowl of the warm dipping sauce",
+        "Serve with bún (fresh rice noodles) and raw herbs"
+      ],
+      "howToEat": "Pick up the bún (fresh rice noodles) and herbs and dip them straight into the bowl of sauce holding the chả, rather than pouring sauce over dry noodles the way some other places do — that keeps the bún loose and the sauce strong in its own bowl."
+    },
+    "cha-ca-la-vong": {
+      "description": "Cá lăng (a river catfish) marinated in nghệ (turmeric) and mẻ (fermented rice starter), then grilled and swirled in hot fat right at the table with dill and spring onion, eaten with bún (fresh rice noodles) and mắm tôm (fermented shrimp paste) — the dish bound up with Hà Nội's Chả Cá street.",
+      "keyIngredients": [
+        "Cá lăng (river catfish) fillets",
+        "Nghệ (turmeric), mẻ (fermented rice starter), riềng (galangal)",
+        "Dill, spring onion",
+        "Bún (fresh rice noodles), roasted peanuts, mắm tôm (fermented shrimp paste)"
+      ],
+      "prepOutline": [
+        "Marinate the fish in nghệ (turmeric), mẻ (fermented rice starter) and riềng (galangal) for a few hours",
+        "Grill the fish briefly over charcoal",
+        "Swirl it again with dill and spring onion in a pan of hot fat right at the table",
+        "Spoon into bowls and eat with bún (fresh rice noodles), roasted peanuts and mắm tôm (fermented shrimp paste)"
+      ],
+      "howToEat": "Eat it while the dill is still crisp, dipping into mắm tôm (fermented shrimp paste) mixed with lime and chilli — the smell of dill in hot fat is the part it cannot be without."
+    },
+    "banh-cuon": {
+      "description": "Unlike the meat-filled bánh cuốn (steamed rice rolls) common in many places, bánh cuốn Thanh Trì — from Thanh Trì village in Hà Nội — is defined by having NO filling: sheets as thin as paper, stacked in a leaf-lined basket and eaten with chả lụa (Vietnamese pork sausage) and its own mixed nước mắm (Vietnamese fish sauce). This is easy to mistake if the only bánh cuốn you know is the filled kind.",
+      "keyIngredients": [
+        "Thin rice-flour batter (no filling mixed in)",
+        "Fried shallots",
+        "Chả lụa or giò (Vietnamese pork sausage) to eat alongside",
+        "Nước mắm (Vietnamese fish sauce) mixed lightly sweet and sour"
+      ],
+      "prepOutline": [
+        "Spread an extremely thin layer of rice batter over a cloth-topped steamer, with no filling scattered on",
+        "Peel off each paper-thin sheet the moment it is just set",
+        "Layer the sheets into a leaf-lined basket",
+        "Scatter over fried shallots and serve with chả lụa (Vietnamese pork sausage) and the mixed nước mắm (Vietnamese fish sauce)"
+      ],
+      "howToEat": "Eaten cool or barely warm, dipped lightly into the diluted nước mắm (Vietnamese fish sauce) rather than soaked in it, so the delicate taste of the sheets comes through; usually with sliced chả lụa or giò (Vietnamese pork sausage)."
+    }
+  }
+}

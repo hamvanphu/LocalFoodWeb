@@ -1,0 +1,58 @@
+{
+  "slug": "ha-giang",
+  "summary": "Hà Giang is a limestone plateau home to a large Mông population, and its cooking is shaped by the cold and the difficult terrain. Cháo ấu tẩu, cakes made from tam giác mạch (buckwheat) seed and the sweet dumpling dish thắng dền are specialities that carry the mark of the stone plateau's culture and its harsh natural conditions.",
+  "dishes": {
+    "chao-au-tau-ha-giang": {
+      "description": "Cháo ấu tẩu is among the most unusual dishes of the Mông people of Hà Giang, made from the ấu tẩu (aconite tuber), a poisonous root that grows on the slopes of the plateau. The tubers are soaked overnight in rice-washing water, then simmered for hours with plain and sticky rice and pork trotter until the toxicity is gone and the porridge is smooth and thick. It tastes faintly bitter and richly fatty, and is often likened to a folk remedy for chills and fatigue in the cool highland air.",
+      "keyIngredients": [
+        "Ấu tẩu (aconite tuber)",
+        "Plain rice and sticky rice",
+        "Pork trotter",
+        "Egg",
+        "Spring onion, ngò gai (sawtooth herb)",
+        "Pepper, chilli"
+      ],
+      "prepOutline": [
+        "Soak the ấu tẩu (aconite tuber) overnight in rice-washing water to reduce its toxicity",
+        "Simmer the tubers for hours until completely soft",
+        "Add the rice and pork trotter and simmer together until the porridge is smooth and thick",
+        "Crack an egg into the hot porridge and season to taste",
+        "Scatter over spring onion, ngò gai (sawtooth herb) and pepper before ladling it out"
+      ],
+      "howToEat": "The porridge is eaten hot straight from the ladle, usually in the evening in Hà Giang's old quarter; the seller adds extra pepper and chilli for warmth, to drive off a chill."
+    },
+    "banh-tam-giac-mach": {
+      "description": "Bánh tam giác mạch is made from the seed of the tam giác mạch (buckwheat) flower that grows widely on the Đồng Văn stone plateau, and which local people keep as a food store alongside maize and rice. The seed is sun-dried, milled to a fine flour, mixed with water, pressed into flat round cakes and then steamed or grilled over charcoal. The cakes are nutty and rich with the faint sharpness particular to buckwheat, and are sold most of all during the flowering season in October and November.",
+      "keyIngredients": [
+        "Tam giác mạch (buckwheat) seed",
+        "Water",
+        "A traditional cake mould"
+      ],
+      "prepOutline": [
+        "Harvest the tam giác mạch (buckwheat) seed and dry it in the sun for a week",
+        "Mill the dried seed to a fine flour",
+        "Knead the flour with water until smooth and pliable",
+        "Press the dough into round moulds, then steam or grill it over charcoal until done"
+      ],
+      "howToEat": "The cakes are eaten hot straight off the grill, either plain or dipped in a little honey — a common snack at the markets and during the buckwheat flowering season on the stone plateau."
+    },
+    "thang-den-ha-giang": {
+      "description": "Thắng dền is the familiar winter snack of Hà Giang's old quarter: shaped like bánh trôi (glutinous rice balls in syrup) but smaller, made from sticky rice flour with a mung bean filling or none at all, boiled and then dropped into a bowl of hot ginger syrup. The warm sweetness of the syrup with the sharp heat of fresh ginger drives off the cold of the stone plateau — quite unlike the light sweetness of traditional bánh trôi nước.",
+      "keyIngredients": [
+        "Sticky rice flour",
+        "Mung bean",
+        "Đường phên (unrefined cane sugar slab)",
+        "Fresh ginger",
+        "Grated coconut, sesame"
+      ],
+      "prepOutline": [
+        "Soak the sticky rice overnight, mill it to a fine flour and knead it pliable",
+        "Cook the mung beans and mix them with grated coconut and sesame for the filling",
+        "Roll the dough into small balls, either around the filling or left plain",
+        "Boil the balls until they float to the surface, then lift them out",
+        "Heat the đường phên (unrefined cane sugar) syrup with bruised ginger and drop the balls in"
+      ],
+      "howToEat": "Thắng dền is eaten hot as soon as it is ladled into the bowl, with extra sesame and grated coconut scattered over — a favourite late-night dish at Hà Giang's night market in the cold season."
+    }
+  }
+}

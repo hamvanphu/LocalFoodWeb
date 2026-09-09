@@ -4,11 +4,19 @@ import { useMemo, useState } from "react";
 import { CalendarDays, Check } from "lucide-react";
 import ProvinceTeaserCard from "./ProvinceTeaserCard";
 import { OCCASIONS } from "@/lib/types";
+import type { Locale } from "@/lib/locale";
+import { t } from "@/lib/ui-strings";
 import type { Occasion, Province, Region } from "@/lib/types";
 
 const REGION_ORDER: Region[] = ["Bắc", "Trung", "Nam"];
 
-export default function BrowseProvinces({ provinces }: { provinces: Province[] }) {
+export default function BrowseProvinces({
+  provinces,
+  locale = "vi",
+}: {
+  provinces: Province[];
+  locale?: Locale;
+}) {
   const [active, setActive] = useState<Occasion | null>(null);
 
   const filtered = useMemo(() => {
@@ -30,7 +38,7 @@ export default function BrowseProvinces({ provinces }: { provinces: Province[] }
       <div className="mb-8 flex flex-wrap items-center gap-2">
         <span className="flex items-center gap-1.5 text-sm font-medium text-ink/70">
           <CalendarDays className="h-4 w-4" />
-          Lọc theo mùa/lễ hội:
+          {t(locale, "browse.filter")}
         </span>
         {OCCASIONS.map((occasion) => {
           const on = active === occasion;
@@ -48,7 +56,7 @@ export default function BrowseProvinces({ provinces }: { provinces: Province[] }
               {/* Xem chú thích ở ProvinceExplorerGrid: dấu ✓ là tín hiệu không dựa
                   vào màu (WCAG 1.4.1), aria-pressed cho trình đọc màn hình. */}
               {on && <Check className="h-3.5 w-3.5" aria-hidden="true" />}
-              {occasion}
+              {t(locale, `occasion.${occasion}`)}
             </button>
           );
         })}
@@ -56,15 +64,19 @@ export default function BrowseProvinces({ provinces }: { provinces: Province[] }
 
       {grouped.length === 0 ? (
         <p className="rounded-card border border-dashed border-border p-8 text-center text-sm text-ink/50">
-          Chưa có tỉnh nào gắn dịp &ldquo;{active}&rdquo; — thử bỏ lọc hoặc chọn dịp khác.
+          {t(locale, "browse.emptyFilter", {
+            occasion: active ? t(locale, `occasion.${active}`) : "",
+          })}
         </p>
       ) : (
         <div className="space-y-10">
           {grouped.map(({ region, items }) => (
             <section key={region}>
               <h2 className="mb-4 font-display text-xl font-semibold text-ink">
-                Miền {region}{" "}
-                <span className="text-sm font-normal text-ink/65">({items.length} tỉnh)</span>
+                {t(locale, `region.${region}`)}{" "}
+                <span className="text-sm font-normal text-ink/65">
+                  {t(locale, "browse.groupCount", { n: items.length })}
+                </span>
               </h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 {items.map((province, index) => (
@@ -73,6 +85,7 @@ export default function BrowseProvinces({ provinces }: { provinces: Province[] }
                     province={province}
                     hero={province.dishes.find((d) => d.slug === province.heroDishSlug)}
                     index={index}
+                    locale={locale}
                   />
                 ))}
               </div>

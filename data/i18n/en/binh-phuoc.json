@@ -1,0 +1,56 @@
+{
+  "slug": "binh-phuoc",
+  "summary": "Bình Phước is Vietnam's cashew capital, with close to 175,000 hectares under cashew, and also home to a number of ethnic minority communities such as the Xtiêng, whose forest cooking is entirely its own. Beyond the celebrated roasted cashews, the grilled chicken and the soups the local people cook inside lồ ô bamboo tubes are what define the food of this red basalt country.",
+  "dishes": {
+    "hat-dieu-binh-phuoc": {
+      "description": "Cashews are the product that made Bình Phước's name — the province has the largest planted cashew area in the country, around 175,000 hectares, and is regarded as Vietnam's 'cashew capital'. Genuine Bình Phước cashews usually make grade A at roughly 240 nuts per pound (W240), with large, rich, fragrant kernels that taste markedly fuller than cashews imported from Cambodia, and international specialists count them a premium nut.",
+      "keyIngredients": [
+        "Freshly harvested raw cashews",
+        "Coarse salt",
+        "Cooking oil or butter (depending on the method)",
+        "Lime leaf and sả (lemongrass) — in some seasoned recipes"
+      ],
+      "prepOutline": [
+        "Crack the hard outer shell off the raw cashews and take out the kernels",
+        "Roast or dry the kernels briefly to drive off any irritant shell oil left on them",
+        "Roast or dry the kernels at a moderate temperature until evenly golden and crisp",
+        "Toss them with salt or seasoning while still hot so it clings to the kernels"
+      ],
+      "howToEat": "Salt-roasted cashews are eaten as a snack, with drinks, or offered to guests; eat them straight while they are still crisp and fragrant, usually with hot tea."
+    },
+    "ga-nuong-dat-set-binh-phuoc": {
+      "description": "Grilled chicken is a familiar Bình Phước speciality: free-range chicken marinated with the local spices and forest leaves, then grilled over glowing charcoal until the skin is golden and crisp while the meat inside stays sweet and tender. In some places the bird is packed in clay before grilling to hold in all its sweetness and moisture, which gives it the plain, earthy flavour particular to this red basalt country.",
+      "keyIngredients": [
+        "Free-range chicken",
+        "Sả (lemongrass), lime leaf, forest leaves",
+        "Chilli salt, honey",
+        "Clean clay (for the clay-baked version)"
+      ],
+      "prepOutline": [
+        "Clean the chicken and leave it whole or cut it into large pieces",
+        "Marinate it with sả (lemongrass), lime leaf, salt, honey and seasoning for at least 30 minutes",
+        "For the clay-baked version: pack the marinated bird in a layer of clean clay and bury it in glowing charcoal until the clay dries hard",
+        "Grill the chicken over the charcoal, turning it steadily so the skin goes golden and crisp without scorching"
+      ],
+      "howToEat": "The chicken is chopped into bite-sized pieces and dipped in salt with chilli and lime, or salt, pepper and lime, and eaten with raw herbs and cơm lam (rice cooked in a bamboo tube) or xôi (steamed glutinous rice)."
+    },
+    "canh-thut-la-nhip": {
+      "description": "Canh thụt is a distinctive traditional dish of the Xtiêng people of Bình Phước, usually cooked for special festive occasions. Forest greens such as lá nhíp (a wild forest leaf), rattan shoots and wild bamboo shoots, along with cà pháo (small Vietnamese eggplant), are cooked with fish, crab, shrimp or stream snails, all put into an ống lồ ô (a lồ ô bamboo tube) and pounded constantly with a pestle while it cooks, until everything melds into a thick mixture that tastes deeply of the forest.",
+      "keyIngredients": [
+        "Lá nhíp (a wild forest leaf; the young shoots)",
+        "Rattan shoots, wild bamboo shoots",
+        "Cà pháo (small Vietnamese eggplant)",
+        "Fish, crab, shrimp or stream snails",
+        "Ống lồ ô (a lồ ô bamboo tube to cook in)",
+        "Salt, forest chilli"
+      ],
+      "prepOutline": [
+        "Clean and prepare the forest greens and the fish, crab or stream snails",
+        "Put everything into the ống lồ ô (bamboo tube) with a little water and salt",
+        "Set the tube over the fire and, as it cooks, keep pounding into it with a pestle so the ingredients meld together",
+        "Cook until the mixture is thick and gives off the distinctive scent of the forest greens"
+      ],
+      "howToEat": "Canh thụt is spooned out and eaten with rice or cơm lam (rice cooked in a bamboo tube), and appears chiefly at festivals or when the Xtiêng are honouring important guests."
+    }
+  }
+}

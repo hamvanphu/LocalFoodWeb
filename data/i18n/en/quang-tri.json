@@ -1,0 +1,55 @@
+{
+  "slug": "quang-tri",
+  "summary": "Quảng Trị cooking is tied to its rivers and its long-established craft villages: cháo bột cá lóc, whose chewy dough strands have to be eaten with chopsticks; bánh ướt Phương Lang, from a village trade nearly a hundred years old; and the cháo cá vạt giường variant of the Hải Lăng area — all carrying the sharp, peppery heat typical of the sun-and-wind Central region.",
+  "dishes": {
+    "chao-bot-ca-loc-quang-tri": {
+      "description": "Cháo bột cá lóc is a distinctive speciality of Quảng Trị. Although it is called \"cháo\" (rice porridge), it is not cooked from rice grains at all but from rice flour kneaded and rolled into thick strands that stay pleasantly firm and chewy when cooked, rather than turning soft the way ordinary porridge does. The broth is simmered from the head, bones and tail of cá lóc (snakehead fish) and seasoned with củ nén (Vietnamese shallot-garlic), nén leaves, chilli and the pungent pepper of Vĩnh Linh.",
+      "keyIngredients": [
+        "Rice flour (rolled into strands)",
+        "Cá lóc (snakehead fish)",
+        "Củ nén (Vietnamese shallot-garlic), nén leaves",
+        "Chilli, Vĩnh Linh pepper",
+        "Spring onion, fresh herbs"
+      ],
+      "prepOutline": [
+        "Soak the rice, grind it into flour, then knead it thoroughly, roll it thin and cut it into broad, thick strands",
+        "Boil the cá lóc (snakehead fish) whole, pick off the meat and marinate it with salt, pepper, shallot and nước mắm (Vietnamese fish sauce)",
+        "Simmer the broth from the fish head, bones and tail for natural sweetness, seasoning with củ nén (Vietnamese shallot-garlic) and chilli",
+        "Blanch the dough strands just until done, ladle over the broth and arrange the fish on top"
+      ],
+      "howToEat": "Quảng Trị locals eat this with chopsticks to pick up the chewy dough strands, and spoon up the thick broth separately."
+    },
+    "banh-uot-phuong-lang": {
+      "description": "Bánh ướt Phương Lang is the speciality of Phương Lang village (Hải Ba commune, Hải Lăng district), where the traditional trade of making bánh ướt (freshly steamed rice sheets) goes back nearly a hundred years. Because it uses good Quảng Trị rice, the steamed sheet comes out thinner, softer and far more supple than bánh ướt made elsewhere.",
+      "keyIngredients": [
+        "Rice, soaked and finely ground",
+        "Sweet-and-sour nước mắm (Vietnamese fish sauce)",
+        "Fried shallots, raw herbs and leaves",
+        "Boiled pork or chả (Vietnamese pork patty/sausage), depending on the shop"
+      ],
+      "prepOutline": [
+        "Rinse the rice, soak it overnight, then grind it into a smooth batter",
+        "Spread the batter thinly over a pot of boiling water and steam it into soft sheets",
+        "Roll or stack the sheets in layers and scatter fried shallots over the top",
+        "Mix a sweet-and-sour dipping sauce from nước mắm (Vietnamese fish sauce), garlic, chilli and sugar"
+      ],
+      "howToEat": "Eaten with boiled pork or chả (Vietnamese pork patty/sausage), dipped in sweet-and-sour nước mắm (Vietnamese fish sauce), with raw herbs and leaves."
+    },
+    "chao-ca-vat-giuong-hai-lang": {
+      "description": "Cháo cá vạt giường is the local variant of cháo bột cá lóc, characteristic of the Hải Lăng area of Quảng Trị. The name \"vạt giường\" comes from the shape of the dough, rolled out and cut into broad strips that resemble the slats of a traditional bamboo bed. Depending on the season, the dish can also be made with duck, crab paste, shrimp or crab.",
+      "keyIngredients": [
+        "Rice-flour strands, rolled and cut broad",
+        "Cá lóc (snakehead fish), or duck, crab or shrimp",
+        "Củ nén (Vietnamese shallot-garlic)",
+        "Shallot, pepper, nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Soak the rice, grind it, press and roll it by hand into thin sheets, then cut broad strands",
+        "Boil the cá lóc (snakehead fish) whole, bone it and marinate the meat with salt, pepper, shallot and nước mắm (Vietnamese fish sauce)",
+        "Cook the broth from the fish bones with củ nén (Vietnamese shallot-garlic) until fragrant and sweet",
+        "Combine the dough strands, the marinated fish and the broth in one large bowl and scatter over fried shallots"
+      ],
+      "howToEat": "Shared communally from a single tray, eaten while taking in the scent of củ nén (Vietnamese shallot-garlic) and shallot that defines the dish."
+    }
+  }
+}

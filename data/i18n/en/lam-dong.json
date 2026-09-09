@@ -1,0 +1,57 @@
+{
+  "slug": "lam-dong",
+  "summary": "Lâm Đồng, centred on the city of Đà Lạt with its cool temperate climate all year round, is one of the few places in Vietnam able to grow atiso (artichoke) and many cold-country vegetables. Đà Lạt cooking joins local ingredients (lá é, atiso) to a lively night-time street food culture, giving it a character of its own within the Central Highlands.",
+  "dishes": {
+    "lau-ga-la-e-da-lat": {
+      "description": "Lẩu gà lá é is the lẩu (hotpot) particular to Đà Lạt, using lá é — a native herb with a hot, pungent, faintly acrid taste of its own — cooked in a lightly sour chicken broth. It is regarded as a must-try on any visit to Đà Lạt, for its unfamiliar flavour and for the warmth that suits the city's chilly air.",
+      "keyIngredients": [
+        "Gà ta (local free-range chicken)",
+        "Lá é (a basil variety used in the Central Highlands)",
+        "Sour bamboo shoot",
+        "Mushrooms",
+        "Sả (lemongrass), green chilli",
+        "Bún (fresh rice noodles) or mì (wheat noodles) to eat with"
+      ],
+      "prepOutline": [
+        "Chop the chicken into bite-sized pieces and blanch them briefly in boiling water",
+        "Cook the broth from the chicken bones with sả (lemongrass) and sour bamboo shoot for a clean sourness",
+        "Drop the chicken and the mushrooms into the boiling broth",
+        "Add the lá é last and cook a few minutes more so its scent comes up without being lost"
+      ],
+      "howToEat": "Eaten hot as a hotpot, dipping greens and mushrooms in and dipping the chicken in green chilli salt, taken with bún (fresh rice noodles) or fresh mì (wheat noodles); it is at its best in the chill of Đà Lạt's air."
+    },
+    "banh-trang-nuong-da-lat": {
+      "description": "Bánh tráng nướng has been likened to 'Vietnamese pizza', and is especially common in Đà Lạt, where the dish belongs to the culture of walking the night market. A sheet of bánh tráng (rice paper) is grilled over charcoal and spread with egg, minced meat, dried shrimp and spring onion, giving a shell that is shatteringly crisp and scented with smoke.",
+      "keyIngredients": [
+        "Thin bánh tráng (rice paper)",
+        "Chicken or quail egg",
+        "Minced meat, dried shrimp",
+        "Spring onion, fried shallot",
+        "Chilli sauce, spring onion in hot fat"
+      ],
+      "prepOutline": [
+        "Lay the bánh tráng (rice paper) on the grill rack and grill it over glowing charcoal until lightly crisp",
+        "Spread beaten egg evenly over the face of the sheet",
+        "Scatter the minced meat, dried shrimp and spring onion on top",
+        "Keep grilling until the egg is set and the sheet is crisp all over, then brush on chilli sauce and the spring onion fat"
+      ],
+      "howToEat": "Eaten straight away while still hot and crisp, and it can be folded in half like a sandwich; it is usually bought while strolling the night market or the sloping streets of Đà Lạt in the evening."
+    },
+    "atiso-da-lat": {
+      "description": "Atiso (artichoke) was brought into Vietnam by the French in the early 20th century and is grown most of all in Đà Lạt, thanks to a climate that stays cool all year. From atiso, Đà Lạt people make atiso tea and soups or hotpots stewed with pork trotter or bones, using the flower base and the bracts for the clean, cooling sweetness that is theirs alone.",
+      "keyIngredients": [
+        "Đà Lạt atiso (artichoke) heads",
+        "Pork trotter or marrow bones",
+        "Jujube, lotus seed (depending on the recipe)",
+        "Salt, pepper"
+      ],
+      "prepOutline": [
+        "Choose fresh atiso (artichoke) heads, cut away the hard thorns and rinse clean",
+        "Simmer the bones or pork trotter for hours to draw out a sweet stock",
+        "Add the atiso to stew alongside until the petals are soft and have taken up the sweetness of the stock",
+        "Adjust the seasoning to taste before taking it off the heat"
+      ],
+      "howToEat": "Served hot as a soup or hotpot within a rice meal, taking the atiso (artichoke) petals one by one and dipping them in salt and pepper, eaten with the tender stewed pork trotter; the dried atiso tea is steeped in boiling water and drunk as a herbal tea."
+    }
+  }
+}

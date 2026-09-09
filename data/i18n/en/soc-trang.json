@@ -1,0 +1,60 @@
+{
+  "slug": "soc-trang",
+  "summary": "Sóc Trăng is where three communities — Kinh, Khmer and Hoa — meet, producing one of the most distinctive food cultures in the Mekong Delta: bún nước lèo carrying the soul of Khmer culture, the rich sweet bánh pía of Hoa origin, and the crisp bánh cống of the local Khmer people.",
+  "dishes": {
+    "bun-nuoc-leo-soc-trang": {
+      "description": "Bún nước lèo is a dish deeply marked by Khmer culture and regarded as the finest of Sóc Trăng's cooking, in a province with a large Khmer community. The nước lèo (broth) is made from mắm (fermented fish paste) of cá lóc (snakehead fish) or cá sặc (gourami) dissolved into fresh coconut water and seasoned with ngải bún (an aromatic rhizome) for its signature fragrance; the Sóc Trăng version leans towards the sweeter Hoa style and does not come with the salt-and-chilli dipping sauce used in Trà Vinh.",
+      "keyIngredients": [
+        "Mắm (fermented fish paste) of cá lóc (snakehead fish) or cá sặc (gourami)",
+        "Fresh coconut water",
+        "Ngải bún (an aromatic rhizome)",
+        "Cá lóc (snakehead fish), fresh shrimp",
+        "Roast pork",
+        "Fresh bún (rice noodles)",
+        "Bean sprouts, garlic chives, shredded banana blossom, shredded water spinach"
+      ],
+      "prepOutline": [
+        "Dissolve the mắm (fermented fish paste) in water and strain it carefully for a clear extract",
+        "Blend the strained mắm with fresh coconut water and bruised ngải bún (an aromatic rhizome) to bring out the signature aroma",
+        "Boil the cá lóc (snakehead fish) and shrimp just until done and set the picked fish meat aside",
+        "Ladle the nước lèo (broth) over a bowl of bún (rice noodles) already topped with the fish, shrimp and roast pork"
+      ],
+      "howToEat": "Bún nước lèo is eaten hot with a great deal of greenery — bean sprouts, garlic chives, shredded banana blossom — and you can squeeze in lime and add fresh chilli to sharpen the flavour."
+    },
+    "banh-pia-soc-trang": {
+      "description": "Bánh pía, a layered pastry, originates from the Teochew region of China and travelled with Hoa migrants to Sóc Trăng, where it became the province's best-known speciality. It is built from many thin layers of pastry wrapped around a filling of mung bean, durian and salted egg; peeling it apart, the thin layers flake off one by one in a way nothing else quite matches.",
+      "keyIngredients": [
+        "Wheat flour and pork fat (for the layered pastry)",
+        "Finely mashed mung bean",
+        "Durian",
+        "Salted egg",
+        "Sugar"
+      ],
+      "prepOutline": [
+        "Work the wheat flour with pork fat into two separate doughs, one fat-based and one water-based",
+        "Roll the two doughs thin and fold them alternately many times to build the layers of the pastry",
+        "Cook down a mung bean and durian filling and set a salted egg in the centre",
+        "Enclose the filling in the layered pastry and bake until the crust turns golden"
+      ],
+      "howToEat": "Bánh pía is eaten as it is with hot tea; as you peel it, the thin layers flake away one by one, meeting the rich mung bean, the heady durian and the light saltiness of the salted egg."
+    },
+    "banh-cong-soc-trang": {
+      "description": "Bánh cống is a speciality of the Khmer community in Sóc Trăng, named after the cylindrical metal mould, shaped like a length of pipe, in which the batter is set. It comes out darker than similar fritters made elsewhere, with a filling of whole mung beans mixed with minced pork and cassava, and a whole shrimp set on top.",
+      "keyIngredients": [
+        "Rice flour, soybean flour",
+        "Whole mung beans",
+        "Minced pork",
+        "Grated cassava",
+        "Whole fresh shrimp",
+        "Oil for frying"
+      ],
+      "prepOutline": [
+        "Mix the rice flour with soybean flour and seasonings into a batter of medium thickness",
+        "Combine the filling of minced pork, grated cassava and whole mung beans",
+        "Spoon batter into the tube-shaped mould, add the filling in the middle and lay a shrimp on top",
+        "Lower the mould into a pan of hot oil, fry until golden and crisp, then turn the fritter out"
+      ],
+      "howToEat": "Bánh cống is eaten with raw greens such as mustard greens, rau răm (Vietnamese coriander), lettuce and dứa cá (sour-fermented pickled fish), dipped in sweet-and-sour nước mắm (Vietnamese fish sauce) mixed with garlic and chilli."
+    }
+  }
+}

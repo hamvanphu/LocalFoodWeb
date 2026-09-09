@@ -226,3 +226,34 @@ database: `content_report` thiếu mô tả → 401, mô tả 5 ký tự → 401
 
 *(AI đã chạy thử toàn bộ 2 checklist trên bằng trình duyệt: **8/8 bước PASS**. Việc này
 chỉ chứng minh checklist khớp sản phẩm — **không thay được PM tự test**.)*
+
+## US-16 — Chuyển ngôn ngữ Việt ↔ Anh *(bổ sung 2026-09-09)*
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 1 | Ở trang chủ, bấm nút **English** trên đầu trang | URL đổi thành `/en`, tiêu đề lớn thành *"A food map of **Vietnam**"* | ☐ |
+| 2 | Vào `/provinces/thua-thien-hue`, bấm **English** | Tới `/en/provinces/thua-thien-hue` — **đúng tỉnh đang xem**, không bị đá về trang chủ | ☐ |
+| 3 | Ở trang đó bấm ngược lại **Tiếng Việt** | Quay về `/provinces/thua-thien-hue`, không mất vị trí | ☐ |
+| 4 | Đọc phần mô tả tỉnh ở bản `/en` | Là tiếng Anh, **không** còn tiếng Việt | ☐ |
+| 5 | Nhìn **tên món** ở bản `/en` (vd Huế, Hà Nội) | Vẫn là **tiếng Việt có dấu**: "Bún bò Huế", "Phở", "Bánh khoái" — **không** dịch thành "Hue Beef Noodle Soup" | ☐ |
+| 6 | Mở chi tiết 1 món ở `/en`, đọc **Key ingredients** | Nhãn tiếng Anh, nhưng nguyên liệu đặc trưng giữ tiếng Việt kèm chú thích: `nước mắm (Vietnamese fish sauce)`, `than hoa (charcoal)`, `mắc khén` | ☐ |
+| 7 | Vẫn ở món đó, đọc **How it is made** | Các bước bằng tiếng Anh, **đúng số bước** như bản tiếng Việt (mở 2 tab so sánh) | ☐ |
+| 8 | Ở `/en`, nhìn bản đồ ở khung mặc định | Thấy **Hoàng Sa Archipelago (Paracel Islands)**, **Trường Sa Archipelago (Spratly Islands)**, **Biển Đông (East Sea)** — tên Việt là tên chính | ☐ |
+| 9 | Bấm vào marker Hoàng Sa ở `/en` | Tới `/en/provinces/da-nang` (giữ nhánh tiếng Anh, không nhảy về bản tiếng Việt) | ☐ |
+| 10 | Ở `/en`, gõ `pho` vào ô tìm kiếm | Vẫn ra kết quả (nhãn tiếng Việt — đúng thiết kế), bấm vào thì tới `/en/provinces/...` chứ không rơi về bản tiếng Việt | ☐ |
+| 11 | Ở `/en`, vào `/en/browse`, bấm chip **"Tết Nguyên Đán"** | Chip hiện *"Tết Nguyên Đán (Lunar New Year)"*; lọc chạy đúng như bản tiếng Việt | ☐ |
+| 12 | Ở `/en`, gửi 1 đánh giá thiếu tên | Thông báo lỗi bằng **tiếng Anh** ("Please enter your name."), không phải tiếng Việt | ☐ |
+| 13 | Vào URL sai ở nhánh EN, vd `/en/provinces/khong-co-that` | Trang 404 hiện **bằng tiếng Anh**, nút quay lại trỏ về `/en` | ☐ |
+| 14 | Ở bản `/en`, kéo xuống chân trang | Phần giới thiệu bằng tiếng Anh; link Telemetry vẫn trỏ `/telemetry` (bản tiếng Việt — **có chủ đích**, đây là báo cáo nội bộ) | ☐ |
+
+> **Lỗi tìm ra khi làm US-16:** `localePath()` ban đầu nằm chung file với hàm đọc bản dịch
+> bằng `node:fs`. 16 client component import nó → `node:fs` bị kéo vào bundle trình duyệt
+> → **build đổ hoàn toàn** ("the chunking context does not support external modules").
+> TypeScript **không** bắt được: về mặt kiểu thì hoàn toàn hợp lệ. Đã tách `lib/locale.ts`
+> (dùng chung được) khỏi `lib/i18n.ts` (chỉ server) để ranh giới này là ranh giới **file**,
+> không thể vô tình vượt qua.
+
+> **Vì sao có `pnpm check:i18n`:** 10 agent dịch song song, 6 trong số đó **bị ngắt giữa
+> chừng** vì hết hạn mức phiên. Không thể tin "file có trên đĩa" nghĩa là "dịch xong đúng".
+> Cổng này đối chiếu từng file dịch với bản gốc: đủ món, đủ 4 trường, **số phần tử
+> `keyIngredients`/`prepOutline` khớp**, không chứa trường cấm (`name`, `sourceRefs`…).

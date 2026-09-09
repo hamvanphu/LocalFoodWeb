@@ -1,0 +1,57 @@
+{
+  "slug": "kon-tum",
+  "summary": "Kon Tum is the northernmost province of the Tây Nguyên (Central Highlands), home to the Bahnar, Xơ Đăng and Giẻ Triêng peoples and to a cuisine tied closely to the forest and the mountains. Its cooking stands out for dishes built on wild forest leaves, native pork, and newer specialities that have taken hold in the cool climate of Măng Đen, such as sturgeon.",
+  "dishes": {
+    "goi-la-kon-tum": {
+      "description": "Gỏi lá is the signature dish of Kon Tum and is considered the soul of its cooking: a spread of anywhere from 30 to more than 60 different leaves — lá lộc vừng (barringtonia leaf), lá sung (young fig leaf), guava leaf, young mango leaf, chùm ruột (star gooseberry leaf), đinh lăng (dinh lang leaf) and more — wrapped around pork, shrimp and pork skin, then dipped in a special fermented sauce cooked from glutinous rice and dried shrimp.",
+      "keyIngredients": [
+        "30-60 kinds of wild forest leaves (lộc vừng, sung, guava, đinh lăng...)",
+        "Boiled pork belly",
+        "Shrimp",
+        "Pork skin tossed with thính (roasted ground rice)",
+        "Fermented dipping sauce made from glutinous rice, dried shrimp and minced pork"
+      ],
+      "prepOutline": [
+        "Wash the many kinds of leaves and lay them out on large trays",
+        "Boil the pork belly and slice it thinly; steam or boil the shrimp",
+        "Toss the pork skin with thính (roasted ground rice) so it is fragrant and crunchy",
+        "Cook the thick fermented dipping sauce from glutinous rice, dried shrimp and minced pork, and season it to taste"
+      ],
+      "howToEat": "Roll a few leaves into a cone, put pork, shrimp and pork skin in the middle, dip it deep into the fermented sauce and eat the whole parcel in one bite; switch between different leaves through the meal to catch the full range of astringent, sour, nutty and spicy notes."
+    },
+    "heo-mang-den-nuong": {
+      "description": "Heo Măng Đen is a native pig raised free-range by ethnic minority communities on the Măng Đen plateau (Kon Plông district). Foraging on vegetables and forest insects, the pigs give firm, lean meat with a natural sweetness quite unlike industrially raised pork.",
+      "keyIngredients": [
+        "Heo Măng Đen pork (heo sọc dưa, the melon-striped local pig)",
+        "Mắc khén (Northwest Vietnamese wild pepper)",
+        "Wild mountain pepper",
+        "Sả (lemongrass), chilli",
+        "Lá é (a basil variety used in the Central Highlands) or wild forest leaves"
+      ],
+      "prepOutline": [
+        "Choose a small free-range pig, clean it, and leave it in large pieces or cut it into bite-sized chunks",
+        "Marinate the meat with mắc khén (Northwest Vietnamese wild pepper), wild mountain pepper, and pounded sả (lemongrass) and chilli",
+        "Grill over a low charcoal fire, turning steadily until the skin is golden and crisp",
+        "Chop into bite-sized pieces as soon as the meat is just cooked through"
+      ],
+      "howToEat": "Eaten hot straight off the grill, dipped in wild mountain pepper salt or lá é (a Central Highlands basil) salt, and usually served with rượu cần (communal jar wine) at village feasts."
+    },
+    "ca-tam-mang-den": {
+      "description": "Thanks to a cool climate all year round, much like Đà Lạt, the Măng Đen area has taken up cold-water sturgeon farming in recent years, and the fish has become a new speciality drawing visitors. Sturgeon is grilled, cooked as lẩu (hotpot) or steamed; the flesh is firm, has few fine bones and is highly nutritious.",
+      "keyIngredients": [
+        "Sturgeon farmed at Măng Đen",
+        "Sả (lemongrass), nghệ (turmeric)",
+        "Sour bamboo shoots (if making lẩu)",
+        "Wild forest greens to eat alongside",
+        "Green chilli salt"
+      ],
+      "prepOutline": [
+        "Clean the sturgeon and cut it into bite-sized pieces",
+        "Marinate the fish with sả (lemongrass) and nghệ (turmeric), or with the local grilling spices",
+        "Grill over than hoa (charcoal), or cook it as a sour lẩu (hotpot) with bamboo shoots and forest greens",
+        "Keep the heat moderate so the fish cooks evenly without drying out"
+      ],
+      "howToEat": "Eaten hot — dipped in green chilli salt if grilled, or dunked in the pot with forest greens and bún (fresh rice noodles) if made as a sour lẩu (hotpot)."
+    }
+  }
+}

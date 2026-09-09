@@ -1,0 +1,86 @@
+{
+  "slug": "khanh-hoa",
+  "summary": "Khánh Hòa is a south-central coastal province centred on the seaside city of Nha Trang, where the food is tied to fresh seafood and a long-established fishing trade. Signature dishes such as bún cá, nem nướng Ninh Hòa, bánh căn and bánh canh chả cá all build on the clean sweetness of sea fish and the freshness of raw herbs, giving the land of agarwood a style of cooking that is light yet full of flavour.",
+  "dishes": {
+    "bun-ca-nha-trang": {
+      "description": "Bún cá Nha Trang is tied to the fishing trade of Khánh Hòa's port city — the broth is simmered from the bones of fresh fish (usually cá thu, mackerel, or cá cờ, billfish) with seasonings and aromatics for a clean, clear sweetness with no fishiness at all. A full bowl carries springy house-made chả cá (fish paste cakes), steamed fresh fish, and sometimes fish roe, fish innards or crunchy jellyfish — that last version has its own name, bún sứa. It is a common breakfast or lunch all over Nha Trang, from pavement stalls to restaurants.",
+      "keyIngredients": [
+        "Fresh cá thu (mackerel) or cá cờ (billfish)",
+        "House-pounded chả cá (fish paste cakes)",
+        "Fresh bún (rice noodles)",
+        "Jellyfish (at some shops)",
+        "Tomato, pineapple",
+        "Raw herbs, bean sprouts",
+        "Spring onion, coriander, chilli, lime"
+      ],
+      "prepOutline": [
+        "Simmer the fresh fish bones and heads with onion and ginger for a clean, sweet broth with no fishy edge",
+        "Pound fresh fish flesh into chả cá (fish paste cakes) and steam or fry them until springy",
+        "Briefly boil or steam whole pieces of fish and set them aside",
+        "Blanch the fresh bún (rice noodles) and lay them in the bowl with the chả cá, the fish and the jellyfish if using",
+        "Ladle over the hot broth, add tomato and pineapple, and scatter with spring onion and coriander"
+      ],
+      "howToEat": "Eaten hot the moment the broth goes in, with raw herbs and bean sprouts, a squeeze of lime and fresh chilli or sa tế to taste; usually taken as breakfast or a light lunch."
+    },
+    "nem-nuong-ninh-hoa": {
+      "description": "Nem nướng Ninh Hòa is the speciality of Ninh Hòa town in Khánh Hòa, famous nationwide and once honoured with an Asian culinary record. Pork (usually a cut that is a third to a half fat) is pounded or ground with minced shallot, garlic, nước mắm (Vietnamese fish sauce), sugar and pepper until springy and dense, then rolled into balls or moulded onto sticks and grilled over than hoa (charcoal). What sets the Ninh Hòa version apart is that it is only ever rolled in bánh tráng (rice paper) with raw herbs, never served with bún or bánh phở as it is in some other places.",
+      "keyIngredients": [
+        "Lean pork and pork fat (pounded smooth)",
+        "Minced shallot and garlic",
+        "Nước mắm (Vietnamese fish sauce), sugar, pepper",
+        "Thin bánh tráng (rice paper)",
+        "Green mango, cucumber, shredded carrot and daikon",
+        "Herbs (húng / Thai basil, tía tô / perilla)",
+        "A dipping sauce of minced pork, glutinous rice and annatto oil"
+      ],
+      "prepOutline": [
+        "Pound or grind the pork with the seasonings until it is springy and smooth",
+        "Roll the meat into balls or wrap it around bamboo sticks",
+        "Grill over than hoa (charcoal) until golden and fragrant",
+        "Prepare the raw herbs, the pickled vegetables and the bánh tráng (rice paper) to serve alongside",
+        "Cook the distinctive dipping sauce from minced pork, glutinous rice and annatto oil until it turns a glossy gold"
+      ],
+      "howToEat": "Roll the nem nướng in bánh tráng (rice paper) with raw herbs, green mango and pickles into small parcels, then dip them deep into the bowl of thick golden sauce made from minced pork and glutinous rice."
+    },
+    "banh-can": {
+      "description": "Bánh căn is a homely rice cake found all along the south-central coast, Khánh Hòa included; it comes originally from the Chăm and was taken up and adapted by the Vietnamese. Unlike bánh khọt, which is fried in oil, bánh căn is poured and cooked in a fired-clay mould set over a charcoal fire, giving a slightly pitted surface, a faint scorched note and a lightly crisp base. The cakes are usually made in pairs and eaten with egg, chả cá (fish paste cake) or squid depending on the shop, dipped in mixed nước mắm (Vietnamese fish sauce) or mắm nêm (fermented anchovy sauce).",
+      "keyIngredients": [
+        "Soaked rice, ground to a batter",
+        "Eggs (hen or quail)",
+        "Chả cá (fish paste cake), squid or shrimp",
+        "Scallion oil, pork crackling",
+        "Green mango, star fruit, shredded cucumber",
+        "Mixed nước mắm (Vietnamese fish sauce) or mắm nêm (fermented anchovy sauce)",
+        "Raw herbs to serve"
+      ],
+      "prepOutline": [
+        "Soak the rice for about six hours, mix it with cold cooked rice and grind it into a liquid batter",
+        "Heat the many-holed clay mould over the charcoal fire and brush it with oil so nothing sticks",
+        "Pour in the batter, crack an egg on top and cover until the surface is pitted and the base is golden and crisp",
+        "Lift the cakes onto a plate and scatter over scallion oil and pork crackling",
+        "Mix a sweet-sour nước mắm (Vietnamese fish sauce) or mắm nêm (fermented anchovy sauce) for dipping"
+      ],
+      "howToEat": "Bánh căn is eaten hot, each pair dipped right into the bowl of mixed nước mắm (Vietnamese fish sauce) or mắm nêm (fermented anchovy sauce), with green mango, sour star fruit and sliced cucumber to balance the richness."
+    },
+    "banh-canh-cha-ca-nha-trang": {
+      "description": "Bánh canh chả cá is a familiar dish along the central coast — Nha Trang, Quy Nhơn, Đà Nẵng — and the Nha Trang version stands out for chả cá (fish paste cakes) made from fresh cá thu (mackerel) pounded smooth with shallot, sugar and nước mắm (Vietnamese fish sauce), then steamed or fried golden. The broth is simmered from the bones, head and tail of the fish for 20-30 minutes to draw out its natural sweetness, and served with soft, chewy bánh canh strands of rice or tapioca starch for a bowl that tastes thoroughly of the sea.",
+      "keyIngredients": [
+        "Fresh cá thu (mackerel)",
+        "Rice flour or tapioca starch for the bánh canh strands",
+        "Egg",
+        "Shallot, spring onion, rau răm (Vietnamese coriander)",
+        "Nước mắm (Vietnamese fish sauce), sugar, stock powder",
+        "Raw herbs, shredded banana blossom",
+        "Bình Định nước mắm mixed with chilli"
+      ],
+      "prepOutline": [
+        "Clean the cá thu (mackerel) and fillet it, setting the bones, head and tail aside",
+        "Simmer the bones, head and tail for 20-30 minutes for a clean, sweet broth",
+        "Grind the fish flesh smooth with shallot, sugar, nước mắm (Vietnamese fish sauce) and seasonings",
+        "Steam the chả cá for 10-15 minutes, then fry it golden to bring up the aroma",
+        "Blanch the bánh canh strands briefly, lay them in the bowl with the chả cá and ladle over the hot broth"
+      ],
+      "howToEat": "Serve hot the moment the broth goes in, with raw herbs and shredded banana blossom, and a little Bình Định nước mắm (Vietnamese fish sauce) mixed with chilli to deepen the flavour."
+    }
+  }
+}

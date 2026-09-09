@@ -1,0 +1,53 @@
+{
+  "slug": "hai-duong",
+  "summary": "Hải Dương is known as the home of bánh đậu xanh (a pressed mung bean sweet), an elegant little treat usually taken with tea, along with the celebrated Thanh Hà lychee and the chewy, fragrant bánh gai of Ninh Giang, made here for centuries. All three specialities are tied to traditional craft villages and reflect the refined way of life of the old xứ Đông region.",
+  "dishes": {
+    "banh-dau-xanh": {
+      "description": "Bánh đậu xanh is Hải Dương's best-known traditional speciality, made from finely ground mung bean paste mixed with sugar and lard (or vegetable oil) and pressed into small squares. It is sweet and nutty and melts gently in the mouth, and is usually wrapped in paper or thin paper boxes printed with the distinctive marks of the long-established makers in Hải Dương city.",
+      "keyIngredients": [
+        "Finely ground mung bean",
+        "Granulated sugar",
+        "Pork lard or vegetable oil",
+        "Pomelo flower essence"
+      ],
+      "prepOutline": [
+        "Hull the mung beans, steam them through, then pound or grind them very fine",
+        "Cook the bean paste with sugar and lard in a hot pan until it comes together, smooth and pliable",
+        "Work in a little pomelo flower essence for fragrance",
+        "Press the paste into small wooden moulds, cut into squares and wrap in paper"
+      ],
+      "howToEat": "Bánh đậu xanh is nibbled with hot green tea or strong black tea, letting the square dissolve slowly in the mouth against the faint astringency of the tea; it is also the souvenir visitors most often carry home from Hải Dương."
+    },
+    "vai-thieu-thanh-ha": {
+      "description": "Vải thiều Thanh Hà (a prized lychee variety) traces back to the ancestral lychee tree that Hoàng Văn Cơm (1848-1923) grafted from seed brought back from China in the late 19th century; the tree still stands in Thanh Sơn commune, Thanh Hà district, Hải Dương. The fruit is small, with rough red skin, a nearly vestigial stone, thick translucent white flesh and a deep, fragrant sweetness few other lychees can match.",
+      "keyIngredients": [
+        "The Thanh Hà vải thiều (lychee) variety",
+        "Alluvial riverside soil"
+      ],
+      "prepOutline": [
+        "Tend the trees using techniques handed down through generations of the family",
+        "Harvest when the skin has turned evenly red, in early June",
+        "Pack the fresh fruit for same-day sale or for shipping further afield",
+        "Surplus fruit can be dried for long keeping"
+      ],
+      "howToEat": "Vải thiều Thanh Hà is at its best eaten fresh straight after picking; it is also dried or pressed into juice so it can be enjoyed all year round."
+    },
+    "banh-gai-ninh-giang": {
+      "description": "Bánh gai Ninh Giang (a steamed glutinous rice cake) is a craft more than 700 years old in Ninh Giang town, Hải Dương. The glossy black casing is made from glutinous rice flour mixed with pounded lá gai (ramie leaf), wrapped around a filling of mung bean, coconut and pork fat. Each cake is folded into a neat square in dried banana leaf, and unwrapping it releases the distinctive scent of lá gai against the rich, nutty filling.",
+      "keyIngredients": [
+        "Glutinous rice flour",
+        "Pounded lá gai (ramie leaf)",
+        "Mung bean for the filling",
+        "Grated coconut and pork fat",
+        "Dried banana leaf for wrapping"
+      ],
+      "prepOutline": [
+        "Boil the lá gai (ramie leaf) through, pound it fine, then mix it into the glutinous rice flour",
+        "Knead the dough until smooth and supple, then let it rest so it becomes chewy",
+        "Fry the mung bean filling with coconut, pork fat and sugar until rich and nutty",
+        "Wrap the cakes in dried banana leaf and steam them through"
+      ],
+      "howToEat": "Bánh gai is eaten cool, peeled out of its banana leaf, usually as a gift or a dessert; many people consider it among the best bánh gai in Vietnam."
+    }
+  }
+}

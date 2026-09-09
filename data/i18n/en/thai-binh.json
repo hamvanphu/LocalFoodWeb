@@ -1,0 +1,55 @@
+{
+  "slug": "thai-binh",
+  "summary": "Thái Bình, the coastal rice country of the Red River delta, is known for the fragrant, chewy bánh cáy of làng Nguyễn, once sent as tribute to the king; for canh cá Quỳnh Côi with its deep country flavour; and for the humble gỏi nhệch of the brackish water along the rivers. Thái Bình cooking is plain but full-flavoured, a reflection of a life bound to the paddy fields and the waterways.",
+  "dishes": {
+    "banh-cay-lang-nguyen": {
+      "description": "Bánh cáy of làng Nguyễn — Nguyên Xá commune, Đông Hưng district, Thái Bình — is said to have been created by Nguyễn Thị Tần (1724-?). It was first called bánh ngũ vị, the five-flavour cake, until King Lê Hiển Tông renamed it bánh cáy because its colour resembled the roe of cáy, a small marsh crab. It brings together glutinous rice, mạch nha (malt syrup), peanuts, sesame and candied winter melon for a sweet, nutty taste with a light scent of ginger running through it.",
+      "keyIngredients": [
+        "Nếp cái hoa vàng (a prized glutinous rice variety)",
+        "Mạch nha (malt syrup)",
+        "Roasted peanuts and sesame",
+        "Candied winter melon, ginger",
+        "Gardenia fruit or gấc (a red spiny gourd) for colour"
+      ],
+      "prepOutline": [
+        "Steam the glutinous rice, dry it, then roast each batch separately by colour until crisp",
+        "Cook the mạch nha (malt syrup) with sugar until thick and chewy and fragrant with ginger",
+        "Stir the roasted rice, peanuts, sesame and candied winter melon into the hot syrup",
+        "Press the mixture into a mould to set into a block, then cut it into small pieces"
+      ],
+      "howToEat": "Bánh cáy is eaten with hot tea and is often given as a gift at Tết and at festivals, as a speciality carrying the character of the Thái Bình rice country."
+    },
+    "canh-ca-quynh-coi": {
+      "description": "Canh cá Quỳnh Côi is the speciality of Quỳnh Côi town, Quỳnh Phụ district, Thái Bình, pairing bánh đa (broad rice noodles) with cá rô đồng (climbing perch) slowly braised in a clear, sweet broth. Unlike the crisp-fried fish served elsewhere, the fish here is om (braised gently) over a low flame so that it stays firm and sweet, matched against a full-bodied broth cooked from the fish bones.",
+      "keyIngredients": [
+        "Cá rô đồng (climbing perch)",
+        "Bánh đa noodles (the broad rice noodles of Thái Bình)",
+        "Tomato, spring onion, dill",
+        "Nước mắm (Vietnamese fish sauce), fish bones simmered for the broth"
+      ],
+      "prepOutline": [
+        "Clean the cá rô đồng (climbing perch) and separate the flesh from the bones",
+        "Simmer the fish bones for a clear, sweet broth",
+        "Om (braise) the fish with tomato and seasonings over a low flame until it takes up the flavour",
+        "Blanch the bánh đa (broad rice noodles), ladle over the broth and lay the fish on top"
+      ],
+      "howToEat": "Canh cá Quỳnh Côi is eaten hot with spring onion and dill scattered over, and is the everyday breakfast people in Thái Bình are used to."
+    },
+    "goi-nhech": {
+      "description": "Gỏi nhệch is a homely dish of the brackish riverside country of Thái Bình, made from cá nhệch (rice-paddy eel), an eel-like fish that lives where the rivers meet the sea. The flesh is cleaned of its slime, sliced thin and tossed with thính (roasted ground rice) and served with chẻo, a dipping sauce cooked from the pounded bones of the fish — nutty, rich and unmistakable among raw fish salads.",
+      "keyIngredients": [
+        "Fresh cá nhệch (rice-paddy eel)",
+        "Thính (roasted ground rice)",
+        "Nhệch bones (for the chẻo sauce)",
+        "Lá sung (young fig leaf), lá mơ (Paederia leaf) and fresh herbs on the side"
+      ],
+      "prepOutline": [
+        "Clean the slime off the cá nhệch (rice-paddy eel) with limewater or wood ash",
+        "Fillet it, slice it thin and toss it with thính (roasted ground rice)",
+        "Pound the fish bones and cook them with seasonings into a thick chẻo sauce",
+        "Lay out the gỏi with a basket of raw greens and a bowl of chẻo for dipping"
+      ],
+      "howToEat": "Gỏi nhệch is wrapped in lá sung (young fig leaf), lá mơ (Paederia leaf) and fresh herbs and dipped deep into the rich chẻo sauce — a favourite snack with drinks when visiting the coastal reaches of Thái Bình."
+    }
+  }
+}

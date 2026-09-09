@@ -1,0 +1,83 @@
+{
+  "slug": "an-giang",
+  "summary": "An Giang sits at the head of the Mekong in Vietnam, where Việt, Khmer and Chăm cultures meet and produce a rich, distinctive cuisine. From a golden bowl of bún cá (rice-noodle fish soup) carrying its Khmer breath, to the strange bitter-sweet gỏi sầu đâu (a salad of neem leaves), to the famous seven-course beef of the Núi Sam area and the jars of mắm (fermented fish) from Châu Đốc known across the whole Mekong Delta, An Giang's food reflects its river life and the cultural crossing of this southwestern border country.",
+  "dishes": {
+    "bun-ca-chau-doc": {
+      "description": "Bún cá Châu Đốc is the signature bún (fresh rice noodle) fish soup of An Giang's border country, deeply marked by the meeting of Việt and Khmer cooking. The dish followed the Khmer community into the land around Châu Đốc, where Việt cooks adapted and adjusted it to local taste, and it became an An Giang speciality no visitor skips. The soul of the bowl is a broth glowing yellow from fresh nghệ (turmeric) and cá lóc (snakehead) caught in the paddies, blended with the depth of mắm ruốc (fermented shrimp/krill paste) — a flavour at once clean and deep, unmistakably of the southwestern Mekong.",
+      "keyIngredients": [
+        "Cá lóc (snakehead fish) from the paddy fields",
+        "Fresh nghệ (turmeric)",
+        "Bún (fresh rice noodles)",
+        "Mắm ruốc (fermented shrimp/krill paste)",
+        "Pork bones",
+        "Bông điên điển (sesbania blossom) or bông súng (water lily stems)",
+        "Shredded water spinach",
+        "Trứng vịt lộn (developed duck egg, optional)"
+      ],
+      "prepOutline": [
+        "Clean the cá lóc (snakehead fish), boil it through, then pick off the flesh, keeping the poaching liquid",
+        "Simmer pork bones with sả (lemongrass) for 30-45 minutes for a sweet base to the broth",
+        "Marinate the fish in fresh nghệ (turmeric) and stir-fry it firm and golden before it goes into the broth pot",
+        "Season with dissolved mắm ruốc (fermented shrimp/krill paste), nghệ and the juice of ngải bún (fingerroot rhizome) for the dish's colour and characteristic scent",
+        "Blanch the bún (fresh rice noodles), lay the turmeric-fried fish on top and ladle over the hot broth"
+      ],
+      "howToEat": "Bún cá Châu Đốc is eaten hot with the raw greens of the Mekong Delta — bông điên điển (sesbania blossom), bông súng (water lily stems), shredded water spinach, bean sprouts and herbs; you can add chả cá (fish cake), roast pork or trứng vịt lộn (developed duck egg), and squeeze in lime and fresh chilli to lift it."
+    },
+    "goi-sau-dau": {
+      "description": "Gỏi sầu đâu, a gỏi (Vietnamese-style tossed salad), came from Cambodia with the Khmer community into the border country of An Giang and became a plain, everyday speciality there, most common when the sầu đâu (neem) tree flowers from the eleventh to the third lunar month. The salad is built on the leaves and blossoms of the sầu đâu tree — a leaf with a characteristic bitterness — tossed with dried cá sặc (snakeskin gourami) or cá lóc (snakehead), pork belly, cucumber and shredded green mango. The pleasure of it lies in that first mild bitterness of the sầu đâu leaf, which turns to a clean sweet aftertaste the longer you chew, against the salt of the dried fish and the sour-sweet nước mắm me (a tamarind and fish-sauce dressing) — a complex whole very typical of southwestern border cooking.",
+      "keyIngredients": [
+        "Sầu đâu (neem) leaves and blossoms",
+        "Dried cá sặc (snakeskin gourami) or dried cá lóc (snakehead)",
+        "Pork belly",
+        "Cucumber",
+        "Green mango",
+        "Nước mắm me (a tamarind and fish-sauce dressing)",
+        "Garlic, chilli"
+      ],
+      "prepOutline": [
+        "Blanch the sầu đâu (neem) leaves and blossoms briefly in salted boiling water to take the sharpest edge off the bitterness",
+        "Grill or fry the dried fish through, then tear it into fine shreds",
+        "Slice the cucumber, green mango and shallot thinly",
+        "Cook the nước mắm me (tamarind and fish-sauce dressing) down until slightly syrupy, to serve both as dressing and as dipping sauce",
+        "Toss the sầu đâu leaves with the dried fish, pork belly, cucumber and mango in the nước mắm me"
+      ],
+      "howToEat": "Gỏi sầu đâu is usually eaten with bánh tráng (dry rice paper), or rolled up with the other ingredients, and dipped in the sweet-sour nước mắm me (a tamarind and fish-sauce dip); chew well to catch the full turn from bitter to sweet that the sầu đâu (neem) leaf is prized for."
+    },
+    "bo-bay-mon-nui-sam": {
+      "description": "Bò bảy món — beef in seven courses — is the celebrated dish of the Núi Sam area of Châu Đốc, An Giang. It appeared in the early twentieth century and became a culinary name known across the whole South. As the name says, a diner works through seven beef preparations in one meal: bò nhúng giấm (beef swished in a vinegar broth), chả đùm (a steamed beef and offal loaf), bò cuốn lá lốt (beef rolled in lá lốt, wild betel leaf), bò lúc lắc (shaking beef), grilled beef offal, bò tái chanh (beef cured rare in lime) and cháo bò (beef rice porridge). The range of the preparations, together with the freshness of the local beef, has made this dish a point of culinary pride for An Giang.",
+      "keyIngredients": [
+        "Beef (several different cuts)",
+        "Bánh tráng (dry rice paper)",
+        "Raw herbs, sour star fruit, green banana",
+        "Mature ginger",
+        "Nước mắm me (a tamarind and fish-sauce dip)"
+      ],
+      "prepOutline": [
+        "Choose fresh beef and divide it by cut to suit each course (swished in vinegar, grilled, served rare and so on)",
+        "Prepare a lightly sour dipping broth with vinegar and pineapple for swishing the beef",
+        "Marinate and roll each course separately — chả đùm, bò cuốn lá lốt — before grilling or steaming",
+        "Cook the cháo bò (beef rice porridge) to close the meal",
+        "Mix the tamarind dip or the mắm nêm (fermented anchovy sauce) to eat alongside"
+      ],
+      "howToEat": "Diners roll each beef course up in bánh tráng (dry rice paper) with raw herbs, sour star fruit, green banana and cucumber, and dip it in nước mắm me (a tamarind and fish-sauce dip) or mắm nêm (fermented anchovy sauce) mixed with pineapple; the meal usually ends with a steaming bowl of cháo bò (beef rice porridge)."
+    },
+    "mam-chau-doc": {
+      "description": "Mắm Châu Đốc — the fermented fish of Châu Đốc — is An Giang's most famous speciality, built up over nearly a century and a half thanks to a position ideal for fishing the Hậu river. Châu Đốc is called the Mekong Delta's 'kingdom of mắm', with hundreds of workshops turning out more than twenty different kinds: mắm cá linh, mắm cá lóc (snakehead), mắm cá sặc (snakeskin gourami), mắm thái, mắm ba khía. Each workshop keeps its own inherited blending formula, giving a range of flavour hard to match anywhere else, and the season peaks during the floodwaters when fish and shrimp are abundant.",
+      "keyIngredients": [
+        "Fresh fish (cá linh, cá lóc/snakehead, cá sặc/snakeskin gourami and others)",
+        "Coarse salt",
+        "Thính (roasted ground rice)",
+        "Đường thốt nốt (palmyra palm sugar)",
+        "Papaya (used for mắm thái)"
+      ],
+      "prepOutline": [
+        "Clean the fresh fish, then salt it for around 30 days to ferment",
+        "After rinsing, coat the fish in a layer of fragrant thính (roasted ground rice)",
+        "Cure it a further 60-90 days until the mắm is evenly ripe and carries its characteristic aroma",
+        "Simmer the mắm down with đường thốt nốt (palmyra palm sugar) for body and a sweet finish",
+        "Jar or pack the finished product by type"
+      ],
+      "howToEat": "Mắm Châu Đốc can be eaten raw with fresh greens, green banana and star fruit to catch the full salt-sweet balance, or cooked into dishes such as mắm kho (mắm braised down), lẩu mắm (a mắm hotpot) and bún mắm (a mắm noodle soup); newcomers should start with the milder kinds, such as mắm cá linh."
+    }
+  }
+}

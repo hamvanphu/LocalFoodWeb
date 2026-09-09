@@ -1,0 +1,59 @@
+{
+  "slug": "tien-giang",
+  "summary": "Tiền Giang is the gateway to the Mekong Delta, famous nationwide for hủ tiếu Mỹ Tho (a rice-noodle soup) along with specialities that carry the stamp of the Gò Công area, such as the mắm tôm chà once sent to the imperial court and the crisp bánh giá of chợ Giồng.",
+  "dishes": {
+    "hu-tieu-my-tho": {
+      "description": "Hủ tiếu Mỹ Tho appeared in the 1960s and spread across the city of Mỹ Tho and on to Gò Công, Cái Bè and Cai Lậy; it has been certified a \"Vietnamese Standard - WTO Gold Brand\". The noodles, made from Gò Cát rice grown in Mỹ Phong commune, are clear white and noticeably springier and firmer than other hủ tiếu (rice noodles), and they meet a clean, sweet broth drawn from marrow bones, dried squid and white radish.",
+      "keyIngredients": [
+        "Dried hủ tiếu (rice noodles) made from Gò Cát rice",
+        "Pork marrow bones",
+        "Dried squid, dried shrimp",
+        "White radish",
+        "Pork, pork offal, fresh shrimp",
+        "Bean sprouts, garlic chives, fried shallots"
+      ],
+      "prepOutline": [
+        "Blanch the dried hủ tiếu (rice noodles) separately in boiling water, since the strands carry a characteristic faint sourness",
+        "Simmer the marrow bones with dried squid, dried shrimp and white radish for several hours for a deeply sweet broth",
+        "Boil the pork, pork offal and fresh shrimp, then slice them to bite size",
+        "Pile the blanched noodles into a bowl, add the toppings and ladle over the hot broth"
+      ],
+      "howToEat": "Hủ tiếu is eaten with raw bean sprouts, garlic chives and fried shallots, seasoned to taste with lime, chilli, pepper and soy sauce; it can be served in broth or dry, with the broth kept in a separate bowl."
+    },
+    "mam-tom-cha-go-cong": {
+      "description": "Mắm tôm chà Gò Công is a speciality with more than 200 years of history; it is said that Empress Dowager Từ Dụ took it with her to the imperial court in Huế as a tribute to the king. It is made from fresh tôm đất (small field shrimp) pounded to a pulp and then pressed through a sieve to keep only the fine flesh, which is fermented with seasonings into a rich salty-sweet paste with a distinctive brick-red colour.",
+      "keyIngredients": [
+        "Fresh tôm đất (small field shrimp)",
+        "Salt",
+        "Sugar, white rice liquor",
+        "Chilli, garlic",
+        "Good nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Wash the fresh tôm đất (small field shrimp) and pound or grind them to a pulp",
+        "Press the shrimp pulp through a fine sieve to remove shells and legs, keeping only the smooth, thick flesh",
+        "Mix the shrimp flesh with salt, sugar, liquor and seasonings, then dry it in the sun to ferment",
+        "Age the paste in a sealed jar until it turns fragrant and takes on its characteristic brick-red colour"
+      ],
+      "howToEat": "Mắm tôm chà is usually eaten with plain rice, used as a dipping sauce for boiled pork rolled in bánh tráng (dry rice paper), or served with the speciality fruits of the Cái Bè area."
+    },
+    "banh-gia-cho-giong": {
+      "description": "Bánh giá (also called bánh vá) is a speciality tied to chợ Giồng market in Gò Công Tây, Tiền Giang. It is fried in a large ladle, with batter poured over bean sprouts, shrimp and pork liver, and comes out of the oil an appetising golden colour.",
+      "keyIngredients": [
+        "Rice flour blended with tapioca starch",
+        "Bean sprouts",
+        "Fresh shrimp",
+        "Pork liver",
+        "Raw greens to eat alongside",
+        "Sweet-sour nước mắm (Vietnamese fish sauce) with garlic and chilli"
+      ],
+      "prepOutline": [
+        "Mix rice flour with tapioca starch and water into a moderately thick batter",
+        "Lay bean sprouts in the ladle, spoon batter over them, then set shrimp and pork liver on top",
+        "Lower the whole ladle into a pan of boiling oil and fry until the cake loosens from the ladle and turns golden and crisp",
+        "Lift the cake out and drain the oil before arranging it on a plate"
+      ],
+      "howToEat": "Bánh giá is eaten hot with raw greens, dipped deep into sweet-sour nước mắm (Vietnamese fish sauce) mixed with garlic and chilli, so the crispness of the crust meets the sweetness of the shrimp and bean sprouts."
+    }
+  }
+}

@@ -1,28 +1,36 @@
 {
   "note": "Hai quần đảo thuộc chủ quyền Việt Nam, hiển thị trên bản đồ ở MỌI mức zoom kể cả khung mặc định. Basemap MapTiler dùng nhãn quốc tế (Paracel Islands / Spratly Islands / South China Sea) và không thể hiện chủ quyền, nên lớp này bổ sung nhãn tiếng Việt và đơn vị hành chính quản lý.",
+  "noteEn": "Bản tiếng Anh giữ tên riêng Việt Nam có dấu làm tên chính, kèm tên quốc tế trong ngoặc để người đọc nước ngoài định vị được. Đây là lớp nhãn quan trọng nhất của bản tiếng Anh: người đọc tiếng Anh chính là đối tượng chỉ nhìn thấy nhãn 'South China Sea' của basemap.",
   "seaName": {
     "label": "Biển Đông",
+    "labelEn": "Biển Đông (East Sea)",
     "center": [111.2, 14.2],
+    "centerEn": [111.9, 14.2],
+    "noteCenterEn": "Nhãn tiếng Anh dài hơn nên phải đẩy sang đông ~0.7°, nếu không mép trái đè lên marker món ăn ven biển Quảng Ngãi ở khung zoom mặc định.",
     "note": "Tên gọi Việt Nam của vùng biển mà bản đồ quốc tế ghi là 'South China Sea'."
   },
   "archipelagos": [
     {
       "id": "hoang-sa",
       "name": "Quần đảo Hoàng Sa",
-      "nameEn": "Hoang Sa (Paracel) Archipelago",
+      "nameEn": "Hoàng Sa Archipelago (Paracel Islands)",
       "admin": "Huyện Hoàng Sa, thành phố Đà Nẵng",
+      "adminEn": "Hoàng Sa district, Đà Nẵng city",
       "provinceSlug": "da-nang",
       "center": [112.0, 16.5],
-      "summary": "Quần đảo Hoàng Sa thuộc chủ quyền Việt Nam, được tổ chức thành huyện Hoàng Sa trực thuộc thành phố Đà Nẵng."
+      "summary": "Quần đảo Hoàng Sa thuộc chủ quyền Việt Nam, được tổ chức thành huyện Hoàng Sa trực thuộc thành phố Đà Nẵng.",
+      "summaryEn": "The Hoàng Sa Archipelago is Vietnamese sovereign territory, administered as Hoàng Sa district of Đà Nẵng city."
     },
     {
       "id": "truong-sa",
       "name": "Quần đảo Trường Sa",
-      "nameEn": "Truong Sa (Spratly) Archipelago",
+      "nameEn": "Trường Sa Archipelago (Spratly Islands)",
       "admin": "Huyện Trường Sa, tỉnh Khánh Hòa",
+      "adminEn": "Trường Sa district, Khánh Hòa province",
       "provinceSlug": "khanh-hoa",
       "center": [113.6, 10.2],
-      "summary": "Quần đảo Trường Sa thuộc chủ quyền Việt Nam, được tổ chức thành huyện Trường Sa trực thuộc tỉnh Khánh Hòa."
+      "summary": "Quần đảo Trường Sa thuộc chủ quyền Việt Nam, được tổ chức thành huyện Trường Sa trực thuộc tỉnh Khánh Hòa.",
+      "summaryEn": "The Trường Sa Archipelago is Vietnamese sovereign territory, administered as Trường Sa district of Khánh Hòa province."
     }
   ]
 }

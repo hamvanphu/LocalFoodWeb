@@ -1,0 +1,58 @@
+{
+  "slug": "dak-lak",
+  "summary": "Đắk Lắk is the coffee capital and the heart of the cồng chiêng (gong) culture of the Central Highlands, with the city of Buôn Ma Thuột leading its cuisine. The food here brings together the traditions of the native Ê Đê and M'Nông peoples (grilled chicken, cơm lam) and town dishes of its own such as bún đỏ, which came out of the Buôn Ma Thuột night market.",
+  "dishes": {
+    "ga-nuong-com-lam-ban-don": {
+      "description": "Gà nướng cơm lam Bản Đôn comes from the Ê Đê people of Buôn Đôn — a place known for the trade of catching and taming wild elephants. Free-range chicken is grilled whole over charcoal and eaten with cơm lam (glutinous rice cooked in a bamboo tube) roasted in ống tre (bamboo tube), making the pair of dishes that stands as the emblem of tourism in Đắk Lắk.",
+      "keyIngredients": [
+        "Free-range chicken from Buôn Đôn",
+        "Sả (lemongrass), mắc khén (a wild Vietnamese mountain pepper), tiêu rừng (forest pepper)",
+        "Wild forest honey",
+        "Glutinous rice, young ống tre (bamboo tube)",
+        "Green chilli salt"
+      ],
+      "prepOutline": [
+        "Marinate the whole chicken with pounded sả (lemongrass), chilli salt and wild forest honey",
+        "Grill the chicken at a distance from the fire so it cooks slowly and colours evenly",
+        "Put soaked glutinous rice and water into a young ống tre (bamboo tube) and plug it with lá chuối (banana leaf)",
+        "Roast the tube of cơm lam, turning it evenly, until the bamboo is scorched and the rice is cooked and supple"
+      ],
+      "howToEat": "Tear the grilled chicken apart by hand and dip it in green chilli salt or in salt, pepper and lime; split the tube open for the glutinous rice inside, scented with bamboo, and eat the two together at one meal."
+    },
+    "bun-do-buon-ma-thuot": {
+      "description": "Bún đỏ is a street dish found only in Buôn Ma Thuột, with thick round bún (fresh rice noodles) turned its characteristic red-orange by annatto oil together with tomato. The broth is clean and sweet, cooked with riêu cua (freshwater paddy-crab curd), and eaten with chả viên (small pounded-meat balls), quail eggs and crisp-fried pork skin.",
+      "keyIngredients": [
+        "Thick-stranded bún (fresh rice noodles)",
+        "Annatto oil, tomato",
+        "Riêu cua (freshwater paddy-crab curd)",
+        "Chả viên (small pounded-meat balls), quail eggs",
+        "Crisp-fried pork skin",
+        "Raw herbs"
+      ],
+      "prepOutline": [
+        "Cook the broth from bones and tomato, adding annatto oil for the characteristic red-orange colour",
+        "Strain the riêu cua and drop it into the pot so it rises in clouds",
+        "Blanch the thick-stranded bún through boiling water",
+        "Ladle the bún into the bowl, pour over the broth, and add the chả viên, quail eggs and fried pork skin"
+      ],
+      "howToEat": "Eaten hot, with the raw herbs (bean sprouts, fresh herbs) tossed through the bowl before eating; sa tế (chilli paste) or fresh chilli can be added for heat."
+    },
+    "goi-du-du-kien-vang": {
+      "description": "Gỏi đu đủ kiến vàng is a singular dish of the native peoples around Buôn Đôn, using kiến vàng (weaver ants) or winged forest ants — insects with a faint sourness and a rich, nutty quality — tossed with shredded green papaya for an unfamiliar sour-hot-sweet-nutty flavour, and it is often introduced to visitors at the tourist sites of Bản Đôn.",
+      "keyIngredients": [
+        "Shredded green papaya",
+        "Kiến vàng (weaver ants) or winged forest ants",
+        "Chilli, lime",
+        "Wild forest herbs",
+        "Grilled bánh tráng (rice paper) to eat with"
+      ],
+      "prepOutline": [
+        "Shred the green papaya, soak it in lightly salted water and squeeze it dry",
+        "Gather and prepare the kiến vàng or winged ants from a forest ant nest",
+        "Toss the papaya with the ants, chilli, lime and finely cut herbs",
+        "Adjust the seasoning for the sour-hot balance before arranging it on the plate"
+      ],
+      "howToEat": "Eaten with crisp grilled bánh tráng (rice paper) to scoop up the gỏi, usually as a starter or a drinking dish at the tourist spots of Buôn Đôn."
+    }
+  }
+}

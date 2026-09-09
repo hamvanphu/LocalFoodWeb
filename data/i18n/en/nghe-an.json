@@ -1,0 +1,55 @@
+{
+  "slug": "nghe-an",
+  "summary": "Nghệ An, the country known as xứ Nghệ, stands out for its dishes made from lươn đồng (field eel) — the cháo lươn and súp lươn of Vinh have been recognised as national intangible cultural heritage — and for soft bánh mướt, a plain food woven into the everyday life of the people here.",
+  "dishes": {
+    "chao-luon-vinh": {
+      "description": "Cháo lươn Nghệ An, above all in the city of Vinh, is a famous plain dish cooked from lươn đồng (field eel) and rice. The rice is soaked well and cooked overnight so the grains swell evenly without breaking down; the porridge comes out glossy gold and smooth, eaten with rich eel meat and heavy with the scent of nghệ (turmeric) and fried shallot. The knowledge of cooking eel dishes held by Nghệ An locals has been recognised as national intangible cultural heritage.",
+      "keyIngredients": [
+        "Lươn đồng (field eel)",
+        "Plain rice with a little sticky rice",
+        "Fresh nghệ (turmeric)",
+        "Ginger",
+        "Hành tăm (a small local shallot)",
+        "Rau răm (Vietnamese coriander), spring onion"
+      ],
+      "prepOutline": [
+        "Choose live eels, slim and firm-fleshed, and rub the slime off with ash or salt",
+        "Boil or fry the eel with nghệ (turmeric), ginger, hành tăm (a small local shallot) and liquor to take away the fishiness and bring up a good gold colour",
+        "Strip the meat from the bones and fry it again with seasonings until firm and fragrant",
+        "Simmer the rice into a smooth, thick porridge, ladle it out and scatter the fried eel over it with spring onion and rau răm (Vietnamese coriander)"
+      ],
+      "howToEat": "Eaten hot, with chilli powder or pepper added to taste, and with bánh mướt or quẩy (fried dough stick) alongside for crunch."
+    },
+    "sup-luon-nghe-an": {
+      "description": "Súp lươn is the sibling of cháo lươn, built on the same lươn đồng (field eel) but with a liquid thickened heavier with tapioca or arrowroot starch, and usually eaten with bánh mì (Vietnamese baguette) or bánh mướt rather than with rice or rice porridge.",
+      "keyIngredients": [
+        "Lươn đồng (field eel)",
+        "Tapioca or arrowroot starch",
+        "Nghệ (turmeric), ginger, hành tăm (a small local shallot)",
+        "Rau răm (Vietnamese coriander), spring onion",
+        "Ớt chưng (chilli cooked down in oil)"
+      ],
+      "prepOutline": [
+        "Prepare and fry the eel meat with nghệ (turmeric), ginger and hành tăm (a small local shallot), the same way as for cháo lươn",
+        "Cook a broth from the eel bones, season it, then stir in tapioca starch for the thickness the dish is known for",
+        "Put the fried eel in the bowl and ladle the hot, thickened soup over it"
+      ],
+      "howToEat": "Eaten with toasted bánh mì (Vietnamese baguette) or with bánh mướt, with extra spring onion, rau răm (Vietnamese coriander) and ớt chưng (chilli cooked down in oil) to taste."
+    },
+    "banh-muot-nghe-an": {
+      "description": "Bánh mướt is made from rice flour spread thin into a steamed rice sheet, close in shape and method to northern bánh cuốn or southern bánh ướt but smaller — about the length of a finger, white and soft, and kept from sticking by a film of oil brushed on as it is rolled. It is bound up with everyday life in xứ Nghệ, and is usually eaten with cháo lươn or súp lươn.",
+      "keyIngredients": [
+        "Rice flour",
+        "Cooking oil or lard",
+        "Sour-and-spicy nước mắm (Vietnamese fish sauce)",
+        "Rau răm (Vietnamese coriander), garlic, chilli"
+      ],
+      "prepOutline": [
+        "Mill the rice to a fine flour and let it down to the right thinness",
+        "Spread the batter thin over the steamer, roll each sheet into a small roll and brush it with oil so it does not stick",
+        "Mix a sour-and-spicy dipping sauce from nước mắm (Vietnamese fish sauce), garlic, chilli and finely chopped rau răm (Vietnamese coriander)"
+      ],
+      "howToEat": "Dip bánh mướt into the sour-and-spicy nước mắm (Vietnamese fish sauce), or eat it with cháo lươn, súp lươn or stewed beef."
+    }
+  }
+}

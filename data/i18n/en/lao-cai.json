@@ -1,0 +1,56 @@
+{
+  "slug": "lao-cai",
+  "summary": "Lào Cai is a highland province of the Northwest on the Chinese border, home to temperate Sa Pa and to the Bắc Hà market day, bright with the colours of the Mông and Dao people. Its cooking carries the mark of the mountains and forests: thắng cố of horse simmered in one great pan, cá hồi (trout) raised in Sa Pa's cold streams, and the rich, fragrant meat of free-ranging village pigs.",
+  "dishes": {
+    "thang-co-bac-ha": {
+      "description": "Thắng cố is a traditional dish of the Mông people, born some 200 years ago when Mông communities settled in the Bắc Hà area of Lào Cai, and later taken up by the Dao, Tày and Kinh of the region. It is cooked from the meat and all the offal of a horse (or of buffalo, beef or pork in the modern version) in one large pan: the meat is first fried firm in the animal's own fat, then covered with water and simmered soft, seasoned with thảo quả (black cardamom), cinnamon and grilled sả (lemongrass) pounded fine. Thắng cố Bắc Hà is the most famous in the country, usually cooked and sold right at the market, the pan kept over the fire all through the market day.",
+      "keyIngredients": [
+        "Horse meat and offal (or buffalo, or beef)",
+        "Thảo quả (black cardamom)",
+        "Cinnamon",
+        "Grilled sả (lemongrass)",
+        "Salt, địa điền (a local highland spice)"
+      ],
+      "prepOutline": [
+        "Clean the meat and all the offal thoroughly and cut it into bite-sized pieces",
+        "Fry the meat firm in the animal's own fat in a large cast-iron pan",
+        "Add water, bring it to the boil and skim constantly so the liquid stays clear and sweet",
+        "Add thảo quả (black cardamom), cinnamon and grilled sả (lemongrass), pounded fine, and simmer them with the meat",
+        "Simmer for hours until soft, keeping the pan over the charcoal fire for as long as it is being sold"
+      ],
+      "howToEat": "Thắng cố is ladled into bowls and eaten hot right at the market, usually sipped alongside rượu ngô (Bắc Hà maize liquor) and eaten with bánh ngô (maize cake); for highland people, every market day it is as much a gathering as a meal."
+    },
+    "ca-hoi-sa-pa": {
+      "description": "Cá hồi Sa Pa is the first and best-known cá hồi vân (rainbow trout) farming operation in Vietnam, drawing on stream water that stays at 15-16 degrees Celsius all year round in places such as Thác Bạc, Tả Van and Bản Khoang. Because the climate is close to Europe's, the fish grow slowly but come out firm-fleshed, a natural pink-orange, cleanly sweet and less fatty than imported salmon. The farms have become a source of livelihood for ethnic minority communities in the highlands, and a food-tourism name for Sa Pa.",
+      "keyIngredients": [
+        "Cá hồi vân (rainbow trout) farmed at Sa Pa",
+        "Ginger, sả (lemongrass)",
+        "Cải mèo (a highland mustard green) or local herbs",
+        "Seasonings for grilling, or for lẩu (hotpot)"
+      ],
+      "prepOutline": [
+        "Choose fish just taken from the cold-stream tanks",
+        "Clean it, then fillet it or cut it into steaks depending on the dish",
+        "Marinate it with ginger and sả (lemongrass) if grilling, or prepare a hot-and-sour lẩu (hotpot) broth",
+        "Grill over than hoa (charcoal), or dip into the lẩu with local greens"
+      ],
+      "howToEat": "Cá hồi Sa Pa is most often made into gỏi, grilled in foil, cooked as a lẩu (hotpot) with măng chua (soured bamboo shoot), or pan-seared as fillets, and served hot with cải mèo (a highland mustard green) and the wild forest greens particular to Sa Pa."
+    },
+    "thit-lon-cap-nach": {
+      "description": "Lợn cắp nách is a native pig of the Lào Cai highlands, a cross between wild boar and the Mường pig. Left to roam and forage for itself, a full-grown animal still weighs under 20kg — small enough to be carried to market tucked under one arm, which is where the name comes from. The meat is lean, the skin thin and crisp, the grain firm and naturally fragrant from a life spent entirely loose on the mountainsides.",
+      "keyIngredients": [
+        "Lợn cắp nách pork",
+        "Lá mắc mật (*mac mat* leaf), or riềng (galangal) and sả (lemongrass)",
+        "Coarse salt, tiêu rừng (wild forest pepper)",
+        "Cải mèo (a highland mustard green) to eat alongside"
+      ],
+      "prepOutline": [
+        "Pick a small lợn cắp nách, clean it, and leave it in large pieces or break it down",
+        "Marinate the meat with riềng (galangal), sả (lemongrass) and mắc mật (*mac mat*), or with coarse salt alone to keep the natural taste",
+        "Grill it over than hoa (charcoal), or steam or boil it depending on the dish",
+        "Slice into bite-sized pieces the moment it is just cooked, while it still holds its sweetness"
+      ],
+      "howToEat": "Lợn cắp nách is usually steamed, grilled or roasted to keep its natural sweetness, and dipped in salt with pepper and lime, or in pounded lá nhội (a local forest leaf); it is common at feasts and at the speciality restaurants of Sa Pa and Bắc Hà."
+    }
+  }
+}

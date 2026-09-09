@@ -1,0 +1,56 @@
+{
+  "slug": "binh-thuan",
+  "summary": "Bình Thuận, centred on the coastal city of Phan Thiết, holds a large fishing ground rich in fresh seafood, squid above all. Its cooking stands out for dishes built on squid and fresh sea fish done in the một nắng style (cured under a single day of sun), alongside savoury street snacks in a style particular to Phan Thiết.",
+  "dishes": {
+    "muc-mot-nang-phan-thiet": {
+      "description": "Mực một nắng is the speciality bound up with the name of Phan Thiết, made from squid just off the boat and dried for exactly one day of sun (một nắng) so it keeps its moisture, its suppleness and its natural sweetness instead of turning hard the way ordinary dried squid does. It is the sea gift visitors to Bình Thuận buy home most often.",
+      "keyIngredients": [
+        "Fresh squid — mực ống (tube squid) or mực lá (bigfin reef squid)",
+        "Sea salt",
+        "Chilli sauce, or muối tôm (shrimp salt)",
+        "Spring onion sizzled in hot fat"
+      ],
+      "prepOutline": [
+        "Pick out squid just landed at the pier, clean it and split it lengthwise down the body",
+        "Salt it lightly with sea salt, then dry it for exactly one day of sun so the surface sets while the flesh stays supple",
+        "Grill over glowing charcoal until cooked through, fragrant and lightly charred at the edges",
+        "Tear the grilled squid into strips and spoon the hot spring onion fat over the top"
+      ],
+      "howToEat": "Tear it into strips and dip in chilli sauce or sweet-sour muối tôm (shrimp salt); it is usually eaten as a drinking snack or given as a gift, and can be grilled again over charcoal before eating to bring the aroma back."
+    },
+    "goi-ca-mai": {
+      "description": "Gỏi cá mai is the raw-fish gỏi (Vietnamese salad) of the Bình Thuận coast, using cá mai (silverside) — a small scaleless fish with little fishy smell — tossed with lime or vinegar until the flesh firms and turns white. What defines the dish is its thick sweet-sour dipping sauce made from ripe tamarind and chuối sứ (a stubby local banana), quite unlike the usual nước mắm (Vietnamese fish sauce) dip served with gỏi.",
+      "keyIngredients": [
+        "Fresh cá mai (silverside)",
+        "Lime or vinegar",
+        "Sour tamarind, ripe chuối sứ (a stubby local banana)",
+        "Roasted peanuts, finely pounded",
+        "Raw herbs, bánh tráng (rice paper)"
+      ],
+      "prepOutline": [
+        "Clean the cá mai, lift out the bones and leave to drain",
+        "Work the fish with lime or vinegar so the flesh firms up and loses its fishy edge",
+        "Toss the fish with onion, chilli and finely shredded herbs",
+        "Mix the dipping sauce from sour tamarind, ripe chuối sứ and finely pounded roasted peanuts"
+      ],
+      "howToEat": "Roll the cá mai up in bánh tráng (rice paper) with raw herbs, dip into the thick tamarind-banana sauce, and eat with crisp grilled bánh tráng alongside for extra crunch."
+    },
+    "banh-xeo-phan-thiet": {
+      "description": "According to Vietnamese Wikipedia, bánh xèo Phan Thiết is a distinct variant of Vietnamese bánh xèo (a crisp savoury fried pancake): the cakes are small, no bigger than the hollow of a bowl, and rather than being wrapped in bánh tráng (rice paper) with raw herbs as in the south, they are eaten straight with sweet-sour nước mắm (Vietnamese fish sauce). Tuyên Quang street in Phan Thiết is known as the city's 'bánh xèo street'.",
+      "keyIngredients": [
+        "Rice-flour batter mixed with nghệ (turmeric)",
+        "Shrimp, squid or minced meat",
+        "Bean sprouts",
+        "Sweet-sour nước mắm (Vietnamese fish sauce)",
+        "Shredded papaya pickle"
+      ],
+      "prepOutline": [
+        "Mix the rice-flour batter with fresh nghệ (turmeric) for its distinctive yellow colour",
+        "Pour the batter into a hot small pan along with the shrimp, squid or minced meat filling and bean sprouts",
+        "Fry until the rim of the cake is crisp and golden, then fold it in half",
+        "Lift the small cakes into a bowl and ladle sweet-sour nước mắm (Vietnamese fish sauce) straight over them"
+      ],
+      "howToEat": "Unlike southern bánh xèo, bánh xèo Phan Thiết is eaten right there in its small bowl under a ladle of nước mắm (Vietnamese fish sauce), optionally with the papaya pickle, and needs no bánh tráng (rice paper) wrapper or raw herbs."
+    }
+  }
+}

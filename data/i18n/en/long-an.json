@@ -1,0 +1,58 @@
+{
+  "slug": "long-an",
+  "summary": "Long An is the gateway between the Southeast region and the Mekong Delta, where rich rice fields and canals feed a cuisine steeped in the rivers and waterways of the western delta. Lạp xưởng tươi Cần Đước, cá lóc nướng trui and the canh chua (sour soup) and lẩu mắm dishes have belonged to daily life here for generations.",
+  "dishes": {
+    "lap-xuong-tuoi-can-duoc": {
+      "description": "Lạp xưởng tươi Cần Đước is the speciality of the Rạch Kiến area of Cần Đước district in Long An, with a history of more than 300 years that began with a Chinese family who settled there as pork butchers. Unlike dry lạp xưởng (Vietnamese cured pork sausage), left days in the sun, the fresh Cần Đước version has a sweet-sour taste of its own, a surface still faintly moist and flecks of pink fat like pomegranate seeds; because it is never dried right through, it keeps the softness and the natural sweetness of the meat.",
+      "keyIngredients": [
+        "Fresh lean pork shoulder",
+        "Pork fat, diced small",
+        "Cleaned pig intestine for the casing",
+        "Sugar, salt, rượu trắng (white rice liquor), five-spice",
+        "Whole peppercorns"
+      ],
+      "prepOutline": [
+        "Chop or mince the pork and the fat, dicing the fat small so it gives richness and bite",
+        "Mix the meat and fat with sugar, salt, rượu trắng (white rice liquor) and five-spice in the family's own proportions",
+        "Stuff the mixture into cleaned pig intestine and tie it off into short links",
+        "Dry the sausages a short while in gentle sun — never right through, as ordinary lạp xưởng is — then hang them somewhere cool and airy"
+      ],
+      "howToEat": "The fresh sausages are fried, grilled or steamed until golden, cut into diagonal slices and eaten with pickles, raw greens and hot rice or bánh mì (Vietnamese baguette)."
+    },
+    "ca-loc-nuong-trui-long-an": {
+      "description": "Cá lóc nướng trui is about as plain and rustic as the cooking of Long An and the whole southwestern delta gets, held to be the easiest thing you can do to a fish while keeping every bit of the natural sweetness of a field-caught cá lóc (snakehead). The fish comes straight from the water, unscaled and ungutted, is run through with a skewer from head to tail and buried under a heap of burning straw until the scales outside are charred and the flesh within is cooked sweet and fragrant.",
+      "keyIngredients": [
+        "Fresh field cá lóc (snakehead), live or just caught",
+        "Dry straw for the fire",
+        "Fresh bún (rice noodles), bánh tráng (rice paper)",
+        "Wild raw greens — rau đắng (bitter herb), húng (basil), diếp cá (fish mint) and others",
+        "Nước mắm me (a tamarind dip made with Vietnamese fish sauce), or salt and chilli, for dipping"
+      ],
+      "prepOutline": [
+        "Rinse the live cá lóc (snakehead) briefly; do not scale it and do not gut it",
+        "Run a long bamboo skewer from the mouth to the tail so the fish stays straight over the fire",
+        "Stand the skewer in the ground, heap dry straw over it and set it alight, letting the straw burn down completely as the fish cooks",
+        "Scrape away the charred scales outside and keep the flesh within"
+      ],
+      "howToEat": "The flesh is lifted off the bone and rolled up in bánh tráng (rice paper) dipped in water, with fresh bún (rice noodles) and raw greens, then dipped into a bowl of mắm me (tamarind dip) or salt with chilli and lime."
+    },
+    "lau-mam-long-an": {
+      "description": "Lẩu mắm is a plain everyday dish that carries the long food tradition of Long An, the land where the Southeast region meets the Mekong Delta. The broth is cooked from mắm cá linh or mắm cá sặc — fermented pastes of a small Mekong river fish and of gourami — let down with pork bone stock; it gives off a strong fragrance of its own, and the heat of chilli with the sweetness of the seafood and pork makes a lẩu (hotpot) that is deep-flavoured and hard to forget.",
+      "keyIngredients": [
+        "Mắm cá linh or mắm cá sặc (fermented pastes of a small Mekong river fish and of gourami)",
+        "Pork bone stock",
+        "Cá lóc (snakehead), shrimp, squid, pork belly",
+        "Aubergine, okra",
+        "Sả (lemongrass), garlic, chilli",
+        "Greens on the side: bông súng (water lily stem), bông điên điển (sesbania flower), rau đắng (bitter herb), rau muống (water spinach)"
+      ],
+      "prepOutline": [
+        "Melt the mắm (fermented fish paste) down in water, strain out the bones and keep the strong-tasting liquor",
+        "Simmer a pork bone stock and mix it with the strained mắm liquor",
+        "Fry sả (lemongrass) and garlic until fragrant, taste and adjust the pot, then add the aubergine and okra",
+        "Set out the seafood, the meat and the delta greens for dipping into the lẩu (hotpot)"
+      ],
+      "howToEat": "The pot is kept boiling at the table; diners dip the fish, shrimp, squid, meat and greens into the simmering broth, eat it with fresh bún (rice noodles), and add nước mắm (Vietnamese fish sauce) with chilli to taste."
+    }
+  }
+}

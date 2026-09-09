@@ -1,0 +1,55 @@
+{
+  "slug": "ninh-binh",
+  "summary": "Ninh Bình, land of the old capital Hoa Lư amid ranges of limestone karst, is famous for cơm cháy (crisp fried rice crust) eaten with a goat or beef sauce, and for mountain goat meat kept firm by herds that climb and graze freely. Nem chua Yên Mạc, whose origins trace to the Huế royal kitchen, is another of the region's signature gifts.",
+  "dishes": {
+    "com-chay-ninh-binh": {
+      "description": "Cơm cháy Ninh Bình (crisp fried rice crust) grew out of a recipe by Đinh Hoàng Thăng, who learned to cook in Hà Nội and then went home to open a shop devoted to the dish, from where it spread into a speciality of the whole region. The rice is round-grain gạo nếp hương (fragrant glutinous rice), spread thin in a cast-iron pot, dried, then deep-fried into the golden, airy, crackling sheet it is known for. In 2012 cơm cháy Ninh Bình was named among Vietnam's Top 50 specialities.",
+      "keyIngredients": [
+        "Gạo nếp hương (fragrant glutinous rice)",
+        "Goat or beef",
+        "Carrot, onion, mushrooms",
+        "Oil for deep-frying",
+        "A thickened sauce"
+      ],
+      "prepOutline": [
+        "Cook the gạo nếp hương (fragrant glutinous rice) until just done and spread it thin and even in a cast-iron pot",
+        "Press it down firmly and let it air-dry for several days until hard",
+        "Deep-fry until the rice is evenly golden and crisp",
+        "Ladle over a sauce of goat or beef stir-fried with the vegetables"
+      ],
+      "howToEat": "Eat it the moment it is hot and crisp, ladling over the thick sauce of goat or beef stir-fried with vegetables so the rice softens gradually while the outer edge stays crunchy."
+    },
+    "thit-de-nui-ninh-binh": {
+      "description": "Ninh Bình mountain goat owes its reputation to herds left to roam the limestone ranges, forever climbing and browsing on medicinal and wild forest leaves, which gives meat that is firm, fragrant and leaner than that of penned goats. The dish received a geographical indication certificate in 2018 and was listed among Vietnam's Top 50 specialities by the Vietnam Record Centre in 2012.",
+      "keyIngredients": [
+        "Mountain goat meat",
+        "Lá mơ (*mo* leaf), riềng (galangal), sả (lemongrass)",
+        "Goat blood (for the rare-dressed version)",
+        "Rượu Kim Sơn (to drink alongside)"
+      ],
+      "prepOutline": [
+        "Choose free-ranging mountain goat, clean it and rub it down with ginger wine to take off the smell",
+        "Work it into a range of dishes: dressed rare with lime, grilled, stir-fried, steamed",
+        "For the rare version, toss thinly sliced goat with lá mơ (*mo* leaf), riềng (galangal) and blood",
+        "Grill or stir-fry quickly over high heat to keep the meat sweet"
+      ],
+      "howToEat": "Goat is usually eaten with lá mơ (*mo* leaf), dipped in tương gừng (fermented soybean sauce with ginger), served alongside cơm cháy (crisp fried rice crust) and sipped with rượu Kim Sơn — the standard dish Ninh Bình locals set out for guests."
+    },
+    "nem-chua-yen-mac": {
+      "description": "Nem chua Yên Mạc is tied to the story of Phạm Thị Thư, daughter of the Nguyễn-dynasty minister Phạm Thận Duật, who learned to make nem in the Huế royal kitchen and passed the method on to her home village of Yên Mạc, Yên Mô district, Ninh Bình. The nem ferments naturally from pork and pork skin, giving a clean sourness and a distinctive springy crunch — quite unlike the deep-fried nem chua rán found elsewhere.",
+      "keyIngredients": [
+        "Lean pork",
+        "Pork skin cut into threads",
+        "Thính (roasted ground rice)",
+        "Garlic, chilli, guava leaf or lá đinh lăng (*dinh lang* leaf)"
+      ],
+      "prepOutline": [
+        "Choose fresh lean pork and pound or mince it fine",
+        "Mix the meat with the shredded pork skin and fragrant thính (roasted ground rice)",
+        "Season, then shape into small nem",
+        "Wrap each one in guava leaf or lá đinh lăng (*dinh lang* leaf) and leave to ferment naturally for a few days"
+      ],
+      "howToEat": "Nem chua is eaten as it is, with no further cooking, dipped in chilli sauce; it is usually served as a snack with drinks or carried home as a speciality gift when leaving Ninh Bình."
+    }
+  }
+}

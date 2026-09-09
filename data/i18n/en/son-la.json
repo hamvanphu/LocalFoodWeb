@@ -1,0 +1,54 @@
+{
+  "slug": "son-la",
+  "summary": "Sơn La is the cultural heart of the Black Thái people of the Northwest, and its food stands out for the gác bếp technique of smoke-curing buffalo and beef above the kitchen hearth, and for the refined treatment of stream fish in pa pỉnh tộp. Mắc khén (Northwest Vietnamese wild pepper) and chẩm chéo (the Thái dipping condiment) are the soul of almost every dish here, giving a pungent, deeply savoury flavour that is hard to mistake for any other region.",
+  "dishes": {
+    "thit-trau-gac-bep-son-la": {
+      "description": "Thịt trâu gác bếp is a long-standing speciality of the ethnic groups of the Northwest, and Sơn La is one of the most renowned places making it. Buffalo and beef raised free-range in the mountains is trimmed to the sinew-free loin, cut into long strips and marinated with chilli, ginger and above all mắc khén (Northwest Vietnamese wild pepper), the wild peppercorn of the highland peoples. Once marinated, the meat is hung above the kitchen hearth and smoked over wood from the limestone hills for days on end, which keeps it for a month without any preservative.",
+      "keyIngredients": [
+        "Buffalo or beef (shoulder loin)",
+        "Mắc khén (Northwest Vietnamese wild pepper)",
+        "Chilli, ginger",
+        "Wood smoke for curing"
+      ],
+      "prepOutline": [
+        "Trim the sinew-free loin of buffalo and cut it into strips about 20x5cm",
+        "Marinate the meat with mắc khén (Northwest Vietnamese wild pepper) and pounded chilli and ginger until it is evenly seasoned",
+        "Skewer or hang the meat above the kitchen hearth",
+        "Smoke it continuously over wood for several days until it is dry and firm"
+      ],
+      "howToEat": "Thịt trâu gác bếp is usually grilled or warmed again over charcoal to soften it, torn along the grain and dipped in chẩm chéo (the Thái dipping condiment); it is eaten as a snack with rice liquor, or given as a speciality gift."
+    },
+    "nam-pia": {
+      "description": "Nậm pịa is a distinctive dish of the Thái people of Sơn La, made from the thick liquid in the small intestine of buffalo or cattle combined with offal — stomach, intestine, heart, liver and lungs — from grazing animals. It is slightly bitter at first but leaves a sweet finish in the throat, along with the pungent heat of mắc khén (Northwest Vietnamese wild pepper). Nậm pịa has long been regarded as the dish that tests a diner's nerve on a first encounter with Northwest cooking.",
+      "keyIngredients": [
+        "Nậm pịa (the liquid from the small intestine of cattle or buffalo)",
+        "Intestine, stomach, heart, liver, lungs",
+        "Mắc khén (Northwest Vietnamese wild pepper), chilli",
+        "Wild forest herbs"
+      ],
+      "prepOutline": [
+        "Take the nậm pịa liquid from the small intestine of cattle or buffalo and strain it clean",
+        "Clean and boil the offal, then chop it small",
+        "Simmer the nậm pịa with the offal, mắc khén (Northwest Vietnamese wild pepper) and chilli until it thickens",
+        "Adjust the seasoning and cook it down to a thick consistency"
+      ],
+      "howToEat": "Nậm pịa is usually used as a dipping sauce for grilled or boiled meat and offal, eaten with fresh herbs; folk belief also holds that it helps clear a hangover."
+    },
+    "pa-pinh-top-son-la": {
+      "description": "Pa pỉnh tộp — \"folded grilled fish\" in the Thái language — is a traditional dish and one of the finest expressions of Thái cooking in Sơn La, prepared with great care for honoured guests. Fresh stream fish (cá chép, cá trôi, cá trắm) is split along the spine rather than the belly so it can be folded, stuffed full of seasonings such as ginger, sả (lemongrass), mắc khén (Northwest Vietnamese wild pepper) and hạt dổi (doi seed, an aromatic highland spice), then clamped between sticks and grilled over than hoa (charcoal). The dish brings sour, hot, salty, sweet and bitter into balance, showing the finesse with which the Thái of the Northwest combine their seasonings.",
+      "keyIngredients": [
+        "Stream fish (cá chép, cá trôi, cá trắm — carp varieties)",
+        "Mắc khén (Northwest Vietnamese wild pepper), hạt dổi (doi seed, an aromatic highland spice)",
+        "Ginger, sả (lemongrass), fresh herbs",
+        "Nghệ (turmeric), rice flour"
+      ],
+      "prepOutline": [
+        "Choose fresh stream fish, split it along the spine and clean it",
+        "Stuff the cavity with ginger, sả (lemongrass), mắc khén (Northwest Vietnamese wild pepper), hạt dổi (doi seed, an aromatic highland spice) and fresh herbs",
+        "Fold the fish over and clamp it between bamboo sticks to hold its shape while grilling",
+        "Grill over than hoa (charcoal) until the fish is cooked through, fragrant and firm"
+      ],
+      "howToEat": "Pa pỉnh tộp is at its best hot, with xôi (sticky rice), dipped in chẩm chéo (the Thái dipping condiment) and sipped alongside rượu ngô (corn liquor), as Thái custom has it."
+    }
+  }
+}

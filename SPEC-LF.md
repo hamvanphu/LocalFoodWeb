@@ -73,6 +73,26 @@ có thông báo tự động. Ghi rõ ở `RISK-LF.md` R2, không giả vờ là
 3. **Nội dung món ăn vẫn phải render tĩnh (SSG)** — chỉ khối đánh giá là động.
    Supabase chết thì trang vẫn phải xem được.
 
+### Bổ sung 2026-09-09 — US-16 (PM yêu cầu chuyển ngữ Việt–Anh)
+
+| # | Story | Acceptance Criteria (Given/When/Then) |
+|---|---|---|
+| **US-16** | Là người đọc không biết tiếng Việt, tôi muốn đọc toàn bộ nội dung món ăn bằng tiếng Anh, nhưng **vẫn thấy nguyên tên món và tên nguyên liệu đặc trưng bằng tiếng Việt**, để hiểu được món ăn mà không bị mất bản sắc của nó. | **Given** tôi đang ở bất kỳ trang nào, **When** tôi bấm nút chuyển ngôn ngữ, **Then** tôi tới **đúng trang đó** ở ngôn ngữ kia (đang xem Huế thì sang bản tiếng Anh của Huế, không bị đá về trang chủ); **And** URL đổi thật (`/provinces/hue` ↔ `/en/provinces/hue`) nên tôi **chia sẻ được link đúng ngôn ngữ**. **Given** tôi đọc bản tiếng Anh, **When** tôi xem mô tả/nguyên liệu/cách làm/cách ăn, **Then** nội dung là tiếng Anh; **And** **tên món và tên tỉnh vẫn là tiếng Việt có dấu** (`Phở`, `Bún chả`, `Hà Nội`); **And** nguyên liệu/gia vị đặc trưng giữ tiếng Việt kèm chú thích ngắn lần đầu (`nước mắm (Vietnamese fish sauce)`, `mắc khén`, `than hoa`), **không** bị dịch phẳng thành *fish sauce*. **Given** một tỉnh **chưa** có bản dịch, **When** tôi mở trang tiếng Anh của tỉnh đó, **Then** trang vẫn hiện nội dung tiếng Việt ở đúng phần chưa dịch — **không** để trống, không lỗi. **Given** tôi ở bản tiếng Anh, **When** tôi nhìn bản đồ, **Then** Hoàng Sa/Trường Sa/Biển Đông vẫn hiện, với tên riêng tiếng Việt làm tên chính kèm tên quốc tế trong ngoặc. |
+
+**Vì sao tên món không dịch:** tên món là danh từ riêng của văn hoá ẩm thực. "Hanoi Beef
+Noodle Soup" không phải là một cái tên — nó là một lời mô tả, và nó xoá mất chính thứ mà
+trang này tồn tại để giới thiệu. Quy ước đầy đủ ở `I18N-GLOSSARY-LF.md`.
+
+**Ràng buộc kỹ thuật đã chốt:**
+
+1. **Bản dịch nằm ở file riêng** (`data/i18n/en/{slug}.json`), không trộn vào
+   `data/provinces/*.json`. Lý do: 10 agent dịch song song; nếu ghi thẳng vào file gốc
+   thì một lỗi bất kỳ làm hỏng luôn nội dung tiếng Việt — thứ đã kiểm và không có bản sao.
+2. **Số phần tử `keyIngredients`/`prepOutline` phải khớp bản gốc** — lệch nghĩa là dịch
+   thiếu bước. Ép bằng cổng `pnpm check:i18n`, không dựa vào việc đọc lại.
+3. **Fallback theo từng trường**, không theo cả trang: thiếu bản dịch ở đâu thì giữ tiếng
+   Việt đúng chỗ đó.
+
 ### Backlog phase-2 (ngoài 2 tuần, không phải MVP)
 
 | # | Story |

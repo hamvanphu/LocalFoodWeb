@@ -7,6 +7,8 @@ import ImageWithFallback from "@/components/ui/ImageWithFallback";
 import Lightbox from "@/components/ui/Lightbox";
 import Badge from "@/components/ui/Badge";
 import DishReviews from "@/components/review/DishReviews";
+import { t } from "@/lib/ui-strings";
+import type { Locale } from "@/lib/locale";
 import type { Dish } from "@/lib/types";
 
 export default function DishCard({
@@ -14,12 +16,14 @@ export default function DishCard({
   provinceSlug,
   priority = false,
   index = 0,
+  locale = "vi",
 }: {
   dish: Dish;
   /** Cần cho khối đánh giá — cặp (province_slug, dish_slug) là khoá của review. */
   provinceSlug: string;
   priority?: boolean;
   index?: number;
+  locale?: Locale;
 }) {
   const [zoomed, setZoomed] = useState(false);
   const primaryImage = dish.images[0] ?? null;
@@ -38,7 +42,7 @@ export default function DishCard({
         type="button"
         onClick={() => primaryImage && setZoomed(true)}
         className={`group relative block h-56 w-full ${primaryImage ? "cursor-zoom-in" : "cursor-default"}`}
-        aria-label={primaryImage ? `Phóng to ảnh ${dish.name}` : dish.name}
+        aria-label={primaryImage ? t(locale, "dish.zoom", { name: dish.name }) : dish.name}
       >
         <ImageWithFallback
           slug={dish.slug}
@@ -60,7 +64,7 @@ export default function DishCard({
             {dish.name}
             {dish.isHero && (
               <Badge tone="chili" className="ml-2 align-middle">
-                Món đặc trưng
+                {t(locale, "dish.hero")}
               </Badge>
             )}
           </h3>
@@ -79,7 +83,7 @@ export default function DishCard({
           <div>
             <h4 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-herb">
               <Carrot className="h-4 w-4" aria-hidden="true" />
-              Nguyên liệu chính
+              {t(locale, "province.ingredients")}
             </h4>
             <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-ink/80">
               {dish.keyIngredients.map((item) => (
@@ -90,7 +94,7 @@ export default function DishCard({
           <div>
             <h4 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-herb">
               <ListOrdered className="h-4 w-4" aria-hidden="true" />
-              Cách làm sơ lược
+              {t(locale, "province.steps")}
             </h4>
             <ol className="mt-2 list-decimal space-y-1 pl-4 text-sm text-ink/80">
               {dish.prepOutline.map((step) => (
@@ -103,14 +107,14 @@ export default function DishCard({
         <div className="rounded-xl bg-turmeric/10 p-4">
           <h4 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-amber-dark">
             <Utensils className="h-4 w-4" aria-hidden="true" />
-            Cách ăn gợi ý
+            {t(locale, "province.howToEat")}
           </h4>
           <p className="mt-1 text-sm text-ink/80">{dish.howToEat}</p>
         </div>
 
         {dish.sourceRefs.length > 0 && (
           <p className="text-xs text-ink/65">
-            Nguồn tham chiếu:{" "}
+            {t(locale, "province.source")}{" "}
             {dish.sourceRefs.map((ref, i) => (
               <span key={ref.url}>
                 {i > 0 && ", "}
@@ -126,6 +130,7 @@ export default function DishCard({
           provinceSlug={provinceSlug}
           dishSlug={dish.slug}
           dishName={dish.name}
+          locale={locale}
         />
       </div>
 

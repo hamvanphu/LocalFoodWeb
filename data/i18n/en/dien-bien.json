@@ -1,0 +1,54 @@
+{
+  "slug": "dien-bien",
+  "summary": "Điện Biên is the land of the Black Thái people in the Northwest, known for its fragrant, chewy Điện Biên rice and for mắc khén (Northwest Vietnamese wild pepper), the spice of these mountains. The cooking leans towards deeply seasoned grilled dishes and wild produce such as hoa ban (bauhinia blossom) and rêu đá (moss gathered from stream-bed stones), reflecting how closely the ethnic-minority communities here live with nature.",
+  "dishes": {
+    "ga-nuong-mac-khen-dien-bien": {
+      "description": "Gà nướng mắc khén is a signature dish of the Thái people of Điện Biên, made with free-ranging village chicken marinated in mắc khén — the wild mountain pepper characteristic of the Northwest. The bird is grilled over than hoa (charcoal) at moderate heat, and once the meat firms up another coat of mắc khén is brushed onto the skin to bring out its distinctive aroma. The natural sweetness of the chicken meets the warm, pungent scent of the spice, and the combination is hard to forget.",
+      "keyIngredients": [
+        "Free-ranging village chicken",
+        "Mắc khén (Northwest Vietnamese wild pepper)",
+        "Salt, chilli",
+        "Than hoa (charcoal) for grilling"
+      ],
+      "prepOutline": [
+        "Choose a firm-fleshed village chicken, clean it and butterfly it open",
+        "Marinate the bird with crushed mắc khén (Northwest Vietnamese wild pepper), salt and chilli until it soaks through",
+        "Grill over than hoa (charcoal) at moderate heat, turning steadily",
+        "Once the meat firms up, brush more mắc khén onto the skin and cook until golden and fragrant"
+      ],
+      "howToEat": "Eat the chicken hot, dipped in chẩm chéo (a Thái pounded dipping condiment) or in salt with lime and chilli, usually with xôi nếp nương (upland sticky rice) or cơm lam (rice cooked in a bamboo tube) and forest greens."
+    },
+    "nom-hoa-ban": {
+      "description": "Nộm hoa ban is a rustic nộm (tossed salad) found only in Điện Biên, where hoa ban — the bauhinia blossom — turns the hills white in spring. Fresh petals are tossed with bitter bamboo shoots and grilled stream fish for a sour, sweet and lightly salty flavour that tastes of the Northwest hills. It shows the skill with which the Thái people of Điện Biên turn wild produce into food.",
+      "keyIngredients": [
+        "Fresh hoa ban (bauhinia blossom)",
+        "Bitter bamboo shoots",
+        "Grilled stream fish",
+        "Lime, chilli, fresh herbs"
+      ],
+      "prepOutline": [
+        "Pick fresh hoa ban (bauhinia blossom), remove the stamens, wash and blanch briefly",
+        "Boil the bitter bamboo shoots until tender and slice them small",
+        "Grill the stream fish and flake off the flesh",
+        "Toss the blossom, bamboo shoots and fish together with the sour and spicy seasonings until they soak in"
+      ],
+      "howToEat": "Eat the nộm as soon as it is tossed so the blossom and bamboo stay crisp; it is usually served as a starter on the Thái banquet tray."
+    },
+    "reu-da-nuong-dien-bien": {
+      "description": "Rêu đá is the green moss that clings to stones on the beds of Điện Biên's streams, and the Thái people gather it from September through to May. The moss is rinsed clean in the stream water itself, mixed with mắc khén (Northwest Vietnamese wild pepper), garlic, chilli, sả (lemongrass), ginger and herbs, then wrapped in lá dong (*dong* leaf) and grilled over than hoa (charcoal). It is an unusual dish, both novel to the palate and held to be good for the health, and it typifies the stream-bound cooking of the highland communities.",
+      "keyIngredients": [
+        "Rêu đá (moss from stream-bed stones)",
+        "Mắc khén (Northwest Vietnamese wild pepper)",
+        "Garlic, chilli, sả (lemongrass), ginger",
+        "Lá dong (*dong* leaf) for wrapping"
+      ],
+      "prepOutline": [
+        "Lift the fresh rêu đá (stream-stone moss) from the water and rinse it repeatedly in the stream",
+        "Mix the moss with mắc khén (Northwest Vietnamese wild pepper), finely chopped garlic, chilli, sả (lemongrass) and ginger, and herbs",
+        "Wrap the mixture in lá dong (*dong* leaf) and tie the parcel tightly with bamboo strips",
+        "Bury it in embers or grill it over than hoa (charcoal) until fragrant"
+      ],
+      "howToEat": "Eat the grilled moss hot, straight off the coals, either with rice or as a snack to drink rượu (Vietnamese rice liquor) with at a Thái meal."
+    }
+  }
+}

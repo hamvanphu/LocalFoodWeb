@@ -56,6 +56,24 @@ báo.
 | **Đánh giá & báo lỗi nội dung** (`components/review/`, `lib/reviews.ts`, `supabase/`) | **Layer 0 mở rộng** — thêm **nguồn dữ liệu thứ hai** | Đây là lần đầu dự án có backend. Quyết định D3 trong `ARCH-LF.md` đảo một phần nguyên tắc "không backend". RLS là điều kiện bắt buộc (R11) | ✅ Xong (US-14, US-15) |
 | **Dashboard telemetry** (`app/telemetry/`, `lib/telemetry.ts`, `data/telemetry.json`) | Bề mặt (nội bộ) | Không phục vụ người dùng cuối, phục vụ quản trị dự án. Đọc dữ liệu tĩnh riêng | ✅ Xong |
 | **Cổng kiểm địa lý** (`scripts/check-geo.mjs`) | Layer 0 — **cổng chất lượng** | Chặn loại lỗi từng lọt qua mọi cổng khác (R13/OP-06) | ✅ Xong |
+| **Lớp chủ quyền biển đảo** (`data/sovereignty.json`, `components/map/SovereigntyMarker.tsx`) | Layer 0 — dữ liệu bản đồ | Không phải điểm ẩm thực. Basemap chỉ ghi nhãn quốc tế và không thể hiện chủ quyền, nên đây là lớp dữ liệu độc lập, hiện ở **mọi** mức zoom | ✅ Xong |
+
+### Bổ sung 2026-09-09 — Module đa ngôn ngữ (US-16)
+
+| Module | Tầng | Vì sao | Trạng thái |
+|---|---|---|---|
+| **`lib/locale.ts`** — hằng số ngôn ngữ + `localePath()` | **Layer 0**, dùng chung server/client | Mọi module sinh đường dẫn đều phụ thuộc nó. **Bắt buộc không được chứa API của Node**: khi `localePath` còn nằm chung file với hàm đọc `node:fs`, 16 client component kéo luôn `node:fs` vào bundle và **build đổ hoàn toàn** | ✅ Xong |
+| **`lib/i18n.ts`** — nạp & ghép bản dịch | **Layer 0, chỉ server** | Đọc `data/i18n/en/*.json` bằng `node:fs`, ghép lên dữ liệu gốc lúc render. Fallback **theo từng trường**: thiếu bản dịch ở đâu thì giữ tiếng Việt đúng chỗ đó | ✅ Xong |
+| **`lib/ui-strings.ts`** — ~90 chuỗi giao diện 2 ngôn ngữ | Layer 0, dùng chung | Object phẳng, không kéo thư viện i18n (bản đồ đã là phần nặng nhất của bundle — R12) | ✅ Xong |
+| **`lib/useLocale.ts`** — suy ngôn ngữ từ URL | Bề mặt (client) | Header/footer/404 nằm trong root layout dùng chung, mà layout chạy ở server thì không biết pathname. Chỉ mảnh phụ thuộc ngôn ngữ mới thành client | ✅ Xong |
+| **`components/pages/*View.tsx`** — thân trang dùng chung | Bề mặt | Để `/x` và `/en/x` không phải chép lại nhau — thứ chắc chắn sẽ lệch sau vài lần sửa. Route chỉ khai báo `locale` + metadata | ✅ Xong |
+| **`data/i18n/en/*.json`** — 63 file bản dịch | Layer 0 — dữ liệu | Tách khỏi `data/provinces/` để 10 agent dịch song song **không thể** làm hỏng bản tiếng Việt (đã kiểm, không có bản sao) | ✅ 63/63 |
+| **Cổng kiểm bản dịch** (`scripts/check-i18n.mjs`) | Layer 0 — **cổng chất lượng** | 6/10 agent bị ngắt giữa chừng ⇒ không thể tin "có file là xong". Đối chiếu số phần tử `keyIngredients`/`prepOutline` với bản gốc | ✅ Xong |
+
+**Nhận xét:** phân tầng cũ **không phải sửa** khi thêm ngôn ngữ thứ hai — `lib/provinces.ts`
+và schema dữ liệu giữ nguyên, bản dịch chỉ là một lớp ghép lên trên lúc đọc. Điều phải học
+lại là một ranh giới **mới**: Layer 0 giờ có phần **chỉ chạy được ở server**, và ranh giới
+đó phải là ranh giới **file** thì mới không vượt qua nhầm được.
 
 **Nhận xét về phân tầng:** nguyên tắc xếp tầng ở bảng gốc **vẫn đúng** sau khi mở rộng
 — data schema/loader, map data, routing vẫn là Layer 0 và không phải sửa lại khi đi từ

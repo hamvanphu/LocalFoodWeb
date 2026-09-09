@@ -1,0 +1,58 @@
+{
+  "slug": "thanh-hoa",
+  "summary": "Thanh Hóa is the transition between the northern delta and the north-central coast, holding the plain of the Mã river, the seaside of Sầm Sơn and the salt-touched land of Nga Sơn all at once, and its cooking is correspondingly varied: from nem chua, the fermented pork roll famous across the country, to the painstaking gỏi cá nhệch of the river mouths, to chả tôm grilled with the sea flavour of Sầm Sơn.",
+  "dishes": {
+    "nem-chua-thanh-hoa": {
+      "description": "Nem chua Thanh Hóa is a celebrated fermented dish, regarded as the culinary emblem of the province. Unlike nem chua elsewhere, the Thanh Hóa version is lightly and cleanly sour with a mild sweetness, cured naturally by fermenting in leaves rather than by any cooking or preservative. It is made in several shapes — bars, squares, thick rounds, and a grilled version — each with its own texture and its own way of being eaten.",
+      "keyIngredients": [
+        "Minced lean pork",
+        "Pork skin cut into fine strips",
+        "Thính (roasted ground rice)",
+        "Garlic",
+        "Chilli",
+        "Lá đinh lăng (dinh lang leaf) or guava leaf",
+        "Lá chuối (banana leaf) for the outer wrapping"
+      ],
+      "prepOutline": [
+        "Take lean pork while it is still warm and mince it at once so it keeps its natural bind",
+        "Mix the pork with the strips of pork skin, thính (roasted ground rice), garlic, chilli, pepper and a little sugar and salt",
+        "Shape the mixture into small parcels, set each on a lá đinh lăng (dinh lang leaf) or guava leaf and wrap it in lá chuối (banana leaf)",
+        "Ferment at room temperature — 8-12 hours in the warm season, 24-36 hours in the cold — until it is just cured and lightly sour"
+      ],
+      "howToEat": "Unwrap the lá chuối (banana leaf) and eat it as it is with chilli sauce or fresh garlic; the grilled kind is cooked over than hoa (charcoal) until fragrant and eaten with raw greens."
+    },
+    "goi-ca-nhech-nga-son": {
+      "description": "Gỏi cá nhệch is the speciality of the brackish country of Nga Sơn, made from cá nhệch (rice-paddy eel) — an eel-family fish with a long body and slippery skin that lives where the river meets the sea. It began as a fisherman's everyday dish, but the skill involved has made it a speciality kept for honoured guests, and it demands a practised hand because the skin is so slick with slime.",
+      "keyIngredients": [
+        "Fresh cá nhệch (rice-paddy eel)",
+        "Thính (roasted ground rice)",
+        "Lime leaf, lá sung (young fig leaf), assorted fresh herbs",
+        "Chẻo dipping sauce (pounded fish liver and bones)"
+      ],
+      "prepOutline": [
+        "Clean the slime off the fish with weak limewater or ash, then fillet it and discard the bones",
+        "Slice the fish thin and toss it with thính (roasted ground rice) to perfume it and firm up the flesh",
+        "Pound the bones and liver with seasonings to make the signature bowl of chẻo",
+        "Lay the gỏi out on a platter with a basket of raw greens, lá sung (young fig leaf) and finely shredded lime leaf"
+      ],
+      "howToEat": "Wrap a piece of the gỏi with raw greens and lá sung (young fig leaf) in bánh đa (a rice cracker) or a banana leaf, dip it deep into the thick bowl of chẻo and eat it straight away."
+    },
+    "cha-tom-thanh-hoa": {
+      "description": "Chả tôm Thanh Hóa is a snack bound up with Thanh Hóa city and the Sầm Sơn coast, made with fresh river shrimp for their sweetness and firm flesh. The bánh phở (flat rice noodle sheet) wrapped around the outside grills up golden and crisp, while inside sits a filling of shrimp mixed with rich pork belly — a dish that is both unfamiliar and deeply savoury.",
+      "keyIngredients": [
+        "Fresh river shrimp",
+        "Pork belly",
+        "Bánh phở (flat rice noodle sheets)",
+        "Dried shallot",
+        "Gấc (a red spiny gourd, for colour)",
+        "Sweet-and-sour dipping sauce"
+      ],
+      "prepOutline": [
+        "Pound the shrimp with the pork belly and mix in fried dried shallot and seasonings",
+        "Lay out a sheet of bánh phở (flat rice noodle sheet), place the shrimp filling on it and roll it into a small parcel",
+        "Skewer the rolls on bamboo sticks and grill over than hoa (charcoal) until the bánh phở turns golden, crisp and fragrant"
+      ],
+      "howToEat": "Eaten with raw greens and bánh cuốn (steamed rice rolls), dipped in sweet-and-sour nước mắm (Vietnamese fish sauce) mixed the way Thanh Hóa locals mix it."
+    }
+  }
+}

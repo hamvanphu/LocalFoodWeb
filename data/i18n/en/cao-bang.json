@@ -1,0 +1,62 @@
+{
+  "slug": "cao-bang",
+  "summary": "Cao Bằng is the border province at the head of the Northeast, home to the Tày and Nùng peoples and to a cuisine steeped in the mountain forest, built around mắc mật, duck, and dishes made from rice flour. Phở chua tossed dry, seven-flavour roast duck and bánh cuốn ladled with bone broth are the dishes that make the character of this land of peaks and water.",
+  "dishes": {
+    "pho-chua-cao-bang": {
+      "description": "Phở chua is a long-established dish particular to Cao Bằng, and quite unlike the familiar phở in broth, because this is a dry-tossed phở eaten cool. The distinctively supple, chewy bánh phở (flat rice noodles) of Cao Bằng is tossed with crisp-fried pork belly, fried khoai tàu (a tuber found only in Cao Bằng and Bắc Kạn), pork liver and stomach, roast duck and herbs, and then a sweet-sour sauce is poured over the top. It tends to appear in summer for being cooling and light, and is taken as a point of culinary pride by the people of this mountain country.",
+      "keyIngredients": [
+        "Cao Bằng bánh phở (flat rice noodles)",
+        "Fried pork belly",
+        "Fried khoai tàu (a tuber found only in Cao Bằng and Bắc Kạn)",
+        "Pork liver and stomach",
+        "Roast duck",
+        "Sweet-sour sauce",
+        "Herbs, roasted peanuts"
+      ],
+      "prepOutline": [
+        "Blanch the bánh phở (flat rice noodles) until soft, then drain",
+        "Fry the pork belly, the sliced khoai tàu and the pork liver and stomach until crisp",
+        "Mix the sweet-sour sauce from vinegar, sugar and the distinctive local seasonings",
+        "Toss the bánh phở with everything already cooked and pour the sauce over the top",
+        "Scatter over roasted peanuts and herbs before eating"
+      ],
+      "howToEat": "Phở chua is eaten cool, everything tossed together with the sauce right before eating; it usually serves as a starter or an afternoon bite at the pavement stalls of Cao Bằng city."
+    },
+    "vit-quay-7-vi-cao-bang": {
+      "description": "Vịt quay 7 vị is the celebrated speciality of Cao Bằng, made from vịt bầu (a stocky local duck) raised free-range, its flesh firm and lean. The duck is stuffed with lá mắc mật (mac mat leaf) together with seven seasonings — ginger, garlic, dried shallot, peppercorns, honey, tofu and mắc mật fruit — then roasted over than hoa (charcoal) and brushed repeatedly with honey so the skin turns burnished and crackling. The faint sourness of mắc mật against the sweetness of the honey gives it a flavour no roast duck from anywhere else can be mistaken for.",
+      "keyIngredients": [
+        "Vịt bầu (a stocky local duck) from Cao Bằng",
+        "Mắc mật leaves and fruit",
+        "Honey",
+        "Ginger, garlic, dried shallot",
+        "Peppercorns",
+        "Tofu"
+      ],
+      "prepOutline": [
+        "Choose a vịt bầu of about 1.8-2kg, clean it and leave it to drain",
+        "Stuff the belly with lá mắc mật (mac mat leaf) and the mixture of seven seasonings, then sew it shut",
+        "Blanch the duck through vinegar and honey so the skin tightens and takes colour",
+        "Roast the duck over than hoa (charcoal), turning it evenly and brushing on honey continuously until the skin is crisp and golden",
+        "Chop into bite-sized pieces and serve hot with a dipping sauce made from the juices inside the duck"
+      ],
+      "howToEat": "The roast duck is chopped into bite-sized pieces and dipped in nước mắm (Vietnamese fish sauce) mixed with ginger, or in the sweet-sour juices from inside the duck; it is usually eaten with rice, or used as the filling for bánh cuốn (steamed rice rolls) and phở chua."
+    },
+    "banh-cuon-canh-cao-bang": {
+      "description": "Bánh cuốn Cao Bằng is a plain country dish of the Tày, made from local rice ground fine, spread thin and then rolled around a filling of minced meat or egg. What sets it furthest apart from the bánh cuốn (steamed rice rolls) of other regions is that Cao Bằng people do not dip it in sweet-sour nước mắm (Vietnamese fish sauce) at all, but ladle a bowl of broth simmered from pork bones over it, with sour bamboo shoot and chilli added — making a warming breakfast that belongs to the uplands.",
+      "keyIngredients": [
+        "Cao Bằng rice flour",
+        "Minced pork or egg",
+        "Pork bones for the broth",
+        "Sour bamboo shoot",
+        "Coriander, húng (a mint-family herb), chilli"
+      ],
+      "prepOutline": [
+        "Soak the rice and grind it into a smooth wet batter",
+        "Spread the sheets thin over a steamer, rolling each one around the minced meat or egg filling",
+        "Simmer pork bones for a clear broth and season it to taste",
+        "Turn the bánh cuốn out into a bowl and flood it with the hot broth along with the sour bamboo shoot"
+      ],
+      "howToEat": "Bánh cuốn is eaten hot, flooded with the bone broth rather than dipped in nước mắm (Vietnamese fish sauce), with coriander, húng and fresh chilli scattered over to taste; it is a common breakfast in Cao Bằng city."
+    }
+  }
+}

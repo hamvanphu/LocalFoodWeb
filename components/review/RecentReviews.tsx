@@ -11,6 +11,8 @@ import {
   isReviewEnabled,
   type DishReview,
 } from "@/lib/reviews";
+import { localePath, type Locale } from "@/lib/locale";
+import { t } from "@/lib/ui-strings";
 
 /** Tra tên hiển thị từ slug — dựng ở server rồi truyền xuống, tránh gọi lại dữ liệu tỉnh ở client. */
 export interface DishLookup {
@@ -19,9 +21,10 @@ export interface DishLookup {
 
 interface RecentReviewsProps {
   lookup: DishLookup;
+  locale?: Locale;
 }
 
-export default function RecentReviews({ lookup }: RecentReviewsProps) {
+export default function RecentReviews({ lookup, locale = "vi" }: RecentReviewsProps) {
   const enabled = isReviewEnabled();
   const [reviews, setReviews] = useState<DishReview[]>([]);
   const [state, setState] = useState<"loading" | "ready" | "error">("loading");
@@ -55,10 +58,10 @@ export default function RecentReviews({ lookup }: RecentReviewsProps) {
         <div>
           <h2 className="flex items-center gap-2 font-display text-2xl font-semibold text-ink">
             <MessageSquareQuote className="h-6 w-6 text-chili" aria-hidden="true" />
-            Cảm nhận mới nhất
+            {t(locale, "home.recentReviews")}
           </h2>
           <p className="mt-1 text-sm text-ink/70">
-            Đánh giá gần đây từ người ghé thăm. Bạn cũng có thể chấm sao ở trang từng món.
+            {t(locale, "home.recentReviewsHint")}
           </p>
         </div>
       </div>
@@ -86,12 +89,12 @@ export default function RecentReviews({ lookup }: RecentReviewsProps) {
                 transition={{ duration: 0.35, delay: i * 0.05 }}
               >
                 <Link
-                  href={`/provinces/${r.province_slug}#${r.dish_slug}`}
+                  href={localePath(locale, `/provinces/${r.province_slug}#${r.dish_slug}`)}
                   className="group flex h-full flex-col rounded-card border border-border bg-surface p-4 shadow-soft transition hover:border-chili/40 hover:shadow-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-chili"
                 >
                   <div className="flex flex-wrap items-center gap-2">
                     {r.rating !== null && <StarRating value={r.rating} readOnly size={14} />}
-                    <span className="text-xs text-ink/65">{relativeTime(r.created_at)}</span>
+                    <span className="text-xs text-ink/65">{relativeTime(r.created_at, locale)}</span>
                   </div>
 
                   {r.comment && (

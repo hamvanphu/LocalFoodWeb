@@ -1,0 +1,56 @@
+{
+  "slug": "hau-giang",
+  "summary": "Hậu Giang is a young province of the Mekong Delta, known for two specialities carrying protected geographical indications — cá thát lát (clown featherback fish) and the Cầu Đúc pineapple — alongside homely river-country dishes such as the bún gỏi già of the Phụng Hiệp area.",
+  "dishes": {
+    "cha-ca-that-lat-hau-giang": {
+      "description": "Cá thát lát (clown featherback) is a flat-bodied freshwater fish with firm, sweet, nearly boneless flesh, regarded in the old days as a dish fit to send to the king. Hậu Giang is one of the best-known areas in the Mekong Delta for raising and working with it: the flesh is pounded smooth with seasonings to make the springy, snappy chả cá (fish paste cakes) the province is known for, which then becomes the backbone of many traditional dishes.",
+      "keyIngredients": [
+        "Fresh cá thát lát (clown featherback) flesh",
+        "Spring onion, pepper, garlic",
+        "Nước mắm (Vietnamese fish sauce), salt, sugar",
+        "Garlic chives or dill (when used in soups and lẩu)"
+      ],
+      "prepOutline": [
+        "Fillet the cá thát lát (clown featherback), scraping every bit of flesh from the skin",
+        "Pound the flesh smooth with spring onion, pepper and seasonings until it turns springy and binds together",
+        "Roll into balls or press into flat cakes, depending on the dish",
+        "Fry until golden, steam, or use in soups and lẩu (hotpot), depending on how it is being cooked"
+      ],
+      "howToEat": "Golden-fried chả cá thát lát is eaten with raw herbs and a sweet-sour nước mắm (Vietnamese fish sauce) dip or chilli sauce; it is also commonly rolled into balls and dropped into soups and lẩu (hotpot) to add sweetness and a snappy bite."
+    },
+    "khom-cau-duc": {
+      "description": "Khóm Cầu Đúc is a Queen pineapple that the people of Hỏa Tiến commune have grown since the 1930s on the salt- and alum-affected land along the Cái Lớn river; it is now one of Hậu Giang's main crops and carries its own geographical indication. The fruit has a short stalk, a small core, deep yellow flesh with little fibre, a clean sweetness edged with light sourness, and it keeps for 10-15 days without spoiling.",
+      "keyIngredients": [
+        "Ripe Khóm Cầu Đúc pineapple",
+        "Salt and chilli (for eating fresh)",
+        "Sugar (for jam or juice)"
+      ],
+      "prepOutline": [
+        "Pick fruit that has turned evenly golden, with the raised eyes and slightly deep eye sockets characteristic of the Cầu Đúc variety",
+        "Peel, cut out the eyes, then cut into bite-sized pieces",
+        "It can also be made into jam, juice or pineapple wine, or used as a cooking ingredient",
+        "Keep it somewhere cool and airy if not eating it straight away, since it holds well for some time"
+      ],
+      "howToEat": "Khóm Cầu Đúc is usually eaten fresh, dipped in salt and chilli to bring out the full clean sweetness and light sourness, or used for juice, jam and other accompaniments."
+    },
+    "bun-goi-gia-phung-hiep": {
+      "description": "Bún gỏi già (also written bún gỏi dà) is the speciality of the Phụng Hiệp area of Hậu Giang, born from a crossing of bún mắm and gỏi cuốn that Mekong Delta cooks reworked into a soup dish — sour with tamarind, sweet from the bone broth, and deep with the flavour of mắm (fermented fish) made from cá lóc (snakehead) or cá linh (a small Mekong river fish).",
+      "keyIngredients": [
+        "Mắm (fermented fish) made from cá lóc (snakehead) or cá linh (a small Mekong river fish)",
+        "Tamarind",
+        "Pork bones, simmered for the broth",
+        "Fresh shrimp",
+        "Fresh bún (rice noodles)",
+        "Shredded banana blossom, shredded water spinach",
+        "Herbs, bean sprouts"
+      ],
+      "prepOutline": [
+        "Dissolve the mắm (fermented fish) in water, then strain off the concentrated, deeply flavoured liquid",
+        "Simmer pork bones for a sweet broth, then combine it with the strained mắm liquid and tamarind",
+        "Adjust the pot until the sour, sweet and salty are in balance",
+        "Blanch the bún and prepare the shrimp and the greens to serve alongside"
+      ],
+      "howToEat": "The bún (rice noodles) go into the bowl with the shrimp and are flooded with the sweet-sour, mắm-rich broth, eaten with shredded banana blossom, shredded water spinach and herbs, with lime and chilli added to taste."
+    }
+  }
+}

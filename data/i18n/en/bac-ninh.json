@@ -1,0 +1,56 @@
+{
+  "slug": "bac-ninh",
+  "summary": "Bắc Ninh — the Kinh Bắc country, with a thousand years of learning behind it — is known for refined dishes tied to betrothal and wedding rites, such as bánh phu thê from Đình Bảng, alongside plainer specialities like nem Bùi and bánh tẻ from làng Chờ, handed down through generations of craft villages.",
+  "dishes": {
+    "banh-phu-the": {
+      "description": "Bánh phu thê (also called bánh xu xê) is a nearly thousand-year-old speciality of Đình Bảng village, Từ Sơn town, Bắc Ninh, and stands as a symbol of faithful married love. It is made from bột năng, also called bột đao (tapioca starch), tinted a natural yellow with gardenia fruit and filled with sweet, nutty mung bean, then wrapped square in lá dong (dong leaf) or banana leaf.",
+      "keyIngredients": [
+        "bột năng or bột đao (tapioca starch)",
+        "mung bean for the filling",
+        "grated coconut",
+        "gardenia fruit for the yellow colour",
+        "lá dong (dong leaf) or banana leaf for wrapping"
+      ],
+      "prepOutline": [
+        "Soak and boil the gardenia fruit to draw out its natural yellow colour",
+        "Knead the tapioca starch with the gardenia water and sugar until pliable and translucent",
+        "Stir-fry the mung bean filling with sugar and grated coconut until light and nutty",
+        "Wrap the dough and filling in lá dong (dong leaf) into a square, then steam or boil it through"
+      ],
+      "howToEat": "Peel back the leaf; the cake, translucent and glowing yellow, is eaten cool. It appears above all on the betrothal and wedding gift trays and as a gift carrying a wish for the couple's happiness."
+    },
+    "nem-bui": {
+      "description": "Nem Bùi (also called nem thính) is a nearly hundred-year-old speciality of Bùi village, Ninh Xá commune, Thuận Thành district, Bắc Ninh. Unlike nem chua, which ferments raw meat, nem Bùi uses thính (roasted ground rice), milled fine and tossed with pork skin and meat, to give its characteristic nutty richness and fragrance without needing a long souring.",
+      "keyIngredients": [
+        "pork (rump)",
+        "pork skin, cut into shreds",
+        "thính (roasted ground rice), milled fine",
+        "garlic, đinh lăng (dinh lang leaf) or lá sung (young fig leaf), guava leaf"
+      ],
+      "prepOutline": [
+        "Choose good rice, soak it about 3 hours, drain it and roast it golden",
+        "Mill the roasted rice into fine, fragrant thính",
+        "Toss thinly sliced boiled pork and pork skin with the thính and seasonings",
+        "Press the mixture into small balls and wrap them in guava leaf or lá sung (young fig leaf)"
+      ],
+      "howToEat": "Nem Bùi is eaten with lá sung (young fig leaf) or đinh lăng (dinh lang leaf), dipped in chilli sauce or sweet-sour nước mắm (Vietnamese fish sauce), and is usually picked at over beer when friends gather."
+    },
+    "banh-te-lang-cho": {
+      "description": "Bánh tẻ làng Chờ is the speciality of Yên Phong commune in Bắc Ninh, wrapped in narrow lá dong (dong leaf), with a thin casing and a generous filling, moderately soft rather than collapsing into mush the way bánh giò does. The rice is carefully chosen from soft plain varieties such as Thái Bao or 203 and milled fine according to the craft village's inherited method.",
+      "keyIngredients": [
+        "soft plain rice (the Thái Bao and 203 varieties)",
+        "minced pork",
+        "wood ear mushroom",
+        "dried shallot",
+        "lá dong (dong leaf) for wrapping"
+      ],
+      "prepOutline": [
+        "Soak the plain rice about 5 hours, then grind it very fine into a wet batter",
+        "Stir the batter over heat until just cooked into a thick, pliable paste",
+        "Stir-fry the minced pork filling with wood ear mushroom and dried shallot until fragrant",
+        "Wrap the paste and filling in narrow lá dong (dong leaf), then steam or boil them through"
+      ],
+      "howToEat": "Bánh tẻ is eaten hot: peel back the lá dong (dong leaf) and dip it in nước mắm (Vietnamese fish sauce) with chilli, or eat it plain to catch the soft fragrance of the rice paste against the pork and wood ear filling."
+    }
+  }
+}

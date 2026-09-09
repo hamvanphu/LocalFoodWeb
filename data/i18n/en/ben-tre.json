@@ -1,0 +1,56 @@
+{
+  "slug": "ben-tre",
+  "summary": "Bến Tre is called Vietnam's \"coconut country\", with groves stretching the length of its river islands, and almost every speciality of the province is tied to the coconut — from the coconut candy known around the world, to plain everyday dishes like đuông dừa (coconut palm weevil larvae) and cơm dừa (rice cooked with coconut).",
+  "dishes": {
+    "keo-dua-ben-tre": {
+      "description": "Coconut candy is the best-known speciality of Bến Tre, once called kẹo Mỏ Cày, and first produced at scale in the town of Bến Tre from 1970. The candy has the characteristic richness of coconut milk against the clean sweetness of malt syrup, and can be varied with durian, pandan, chocolate or peanut.",
+      "keyIngredients": [
+        "Coconut meat (for the coconut milk)",
+        "Sugar",
+        "Malt syrup",
+        "Durian, pandan or peanut (depending on the variety)",
+        "Bánh tráng, a thin edible rice-flour wafer, for wrapping the candy"
+      ],
+      "prepOutline": [
+        "Press the grated coconut meat for its rich coconut milk",
+        "Cook the coconut milk with the malt syrup and sugar over a low flame, stirring constantly until the mixture thickens and changes colour",
+        "Pour the mixture while still hot into an oiled mould, let it cool, and cut it into small pieces",
+        "Wrap each piece in a thin bánh tráng rice-flour wafer before packing"
+      ],
+      "howToEat": "Peel off the wafer wrapping and eat the candy as it is; it is usually given as a gift, or picked at alongside hot tea."
+    },
+    "duong-dua-ben-tre": {
+      "description": "Đuông dừa are the larvae of a rhinoceros beetle that lives inside the coconut trunk, and they are considered the most distinctive and the most prized delicacy of the coconut country of Bến Tre. Farmers once regarded đuông as a pest of the coconut palm and fed them only to chickens, but today they are an expensive speciality for their characteristic richness, likened to \"living cream\" carrying the scent of coconut meat.",
+      "keyIngredients": [
+        "Live đuông dừa (coconut palm weevil larvae)",
+        "Undiluted nước mắm (Vietnamese fish sauce), lime, chilli",
+        "Raw greens to eat alongside",
+        "Seasonings for grilling or frying, depending on the preparation"
+      ],
+      "prepOutline": [
+        "Đuông dừa are taken from rotting coconut trunks or from the young coconut shoot",
+        "Rinse them clean; they can be eaten live (with the head removed) dipped in nước mắm (Vietnamese fish sauce), or grilled or deep-fried crisp",
+        "For grilling, thread them on skewers and grill over glowing charcoal until evenly golden",
+        "For frying, dip them in batter and deep-fry until the outside is crisp"
+      ],
+      "howToEat": "Grilled or fried đuông dừa are dipped in hot-and-sour nước mắm (Vietnamese fish sauce) and eaten with raw greens; eaten live, they go straight into undiluted nước mắm with chilli."
+    },
+    "com-dua-ben-tre": {
+      "description": "Cơm dừa — rice cooked inside a coconut, or rice cooked with coconut milk — is a plain dish but one thoroughly of Bến Tre's coconut country. The rice is cooked in rich coconut milk and comes out carrying its characteristic coconut fragrance; it is usually eaten with strongly savoury dishes such as tép rang (pan-fried small shrimp) or thịt kho (kho-braised pork) to balance the richness.",
+      "keyIngredients": [
+        "Rice",
+        "Coconut milk",
+        "A fresh coconut (for cooking the rice inside the fruit, if available)",
+        "Tép rang (pan-fried small shrimp) or thịt kho (kho-braised pork) to eat alongside",
+        "Salt, sugar"
+      ],
+      "prepOutline": [
+        "Wash the rice, then soak it in coconut milk thinned with a little salt and sugar",
+        "Cook the rice as usual, or steam it inside a hollowed-out coconut to hold the fragrance",
+        "Turn the rice through as soon as it is just done so the coconut milk soaks evenly into every grain",
+        "Prepare the savoury dishes to eat alongside, such as tép rang (pan-fried small shrimp) or thịt kho (kho-braised pork)"
+      ],
+      "howToEat": "Cơm dừa is eaten hot the moment it is done, with tép rang (pan-fried small shrimp) or thịt kho tàu (pork braised in caramel) so the salt-sweet flavours balance the richness of the coconut."
+    }
+  }
+}

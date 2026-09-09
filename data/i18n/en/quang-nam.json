@@ -1,0 +1,82 @@
+{
+  "slug": "quang-nam",
+  "summary": "Quảng Nam is where the cooking of central Vietnam converges, and its old town of Hội An was a bustling trading port in the 17th century where Vietnamese, Chinese and Japanese cultures met. The food here is bold and dry rather than soupy, heavy on raw herbs and local produce, and nothing typifies it more than mì Quảng — the dish that carries the region's own name.",
+  "dishes": {
+    "mi-quang": {
+      "description": "Mì Quảng carries the name of its home province, Quảng Nam, and differs sharply from phở (rice-noodle soup) or bún (fresh rice noodles) in that its broth is not meant to flood the bowl but to sit as a thin layer of thick, deeply flavoured nước nhân barely covering the noodles. The noodles are milled from rice and coloured a natural yellow with gardenia-seed water (some places add egg), cut broader than phở noodles. The nước nhân is simmered from pork bones and then cooked with shrimp and pork — in some places chicken or cá lóc (snakehead fish) — giving a heavy sweetness rather than the clear delicacy of northern phở.",
+      "keyIngredients": [
+        "Rice noodles coloured yellow with gardenia-seed water",
+        "Nước nhân (the thick broth) simmered from pork bones",
+        "Shrimp and pork, or chicken, and in some places cá lóc (snakehead fish)",
+        "Boiled quail eggs",
+        "Nine kinds of raw herbs and leaves: húng (Vietnamese basil), lettuce, baby mustard greens, bean sprouts, rau răm (Vietnamese coriander), shredded banana blossom...",
+        "Grilled bánh tráng (dry rice paper) and crushed roasted peanuts"
+      ],
+      "prepOutline": [
+        "Simmer pork bones for a sweet stock, then fry the shrimp and pork with shallot, nghệ (turmeric) and seasoning to make a thick, deep orange-yellow nước nhân",
+        "Blanch the fresh rice noodles in boiling water, drain them and lay them in the bowl",
+        "Arrange the various raw herbs underneath the noodles or beside them",
+        "Spoon the nước nhân with its shrimp and pork over the top so it barely covers the noodles (not flooding them as with phở)",
+        "Scatter over crushed roasted peanuts, add broken pieces of grilled bánh tráng (dry rice paper) and a green chilli"
+      ],
+      "howToEat": "Eat it with grilled bánh tráng (dry rice paper) snapped into crisp shards, either as a scoop or dropped in with the noodles; toss everything through with the raw herbs before eating, squeeze in lime and bite into a Quảng Nam green chilli for the sharp heat that defines the dish."
+    },
+    "cao-lau": {
+      "description": "Cao lầu is a dry noodle speciality that is only ever properly made in Hội An. It is said to have appeared in the 17th century, when Chinese and Japanese merchants still crowded the port, so it carries traces of both cuisines, later reshaped to Vietnamese taste. Cao lầu noodles take their distinctive yellow from being mixed with the ash of a local tree (ash from Cù Lao Chàm) and then soaked in water from Hội An's famous Bá Lễ well, which gives them a chew and bite quite unlike ordinary noodles. The dish is almost soupless — just a spoonful of nước xíu (the juices from marinating the char siu pork) drizzled over, enough to season it through.",
+      "keyIngredients": [
+        "Yellow cao lầu noodles made from ash-soaked rice, steamed in layers",
+        "Sliced xá xíu (char siu roast pork)",
+        "Fresh shrimp",
+        "Crisp-fried pork skin (tóp mỡ)",
+        "Trà Quế raw herbs: húng (Vietnamese basil), bean sprouts, baby mustard greens",
+        "Soy sauce and chilli"
+      ],
+      "prepOutline": [
+        "Soak the rice with lye ash (ash from a local tree), grind it into batter, then spread and steam it into yellow, chewy noodles",
+        "Marinate and roast the pork into xá xíu (char siu), keeping the marinade juices as nước xíu",
+        "Deep-fry small squares of pork skin until crisp, to scatter over the top",
+        "Lay out the cao lầu noodles, then add the xá xíu, shrimp, crisp pork skin and Trà Quế raw herbs",
+        "Drizzle over a small amount of nước xíu — never flooding the bowl as with mì or phở"
+      ],
+      "howToEat": "Toss everything in the bowl together before eating and add chilli and soy sauce to taste; since there is almost no broth it is eaten dry, chewed slowly to catch the bite of the noodles and the crisp pork skin."
+    },
+    "banh-mi-phuong": {
+      "description": "Bánh mì Phượng is a bánh mì shop on Phan Châu Trinh street in Hội An, which started in the 1990s from a small market stall before moving to its present address. What sets it apart is that the loaf is always kept hot, crisp outside and soft within, while the fillings run to more than 20 variations, from the traditional to European-style ones such as ham and cheese. The late chef Anthony Bourdain once called it 'the best bánh mì in the world', likening it to 'a symphony in a sandwich'.",
+      "keyIngredients": [
+        "A baguette, crisp outside and soft inside",
+        "Thinly sliced grilled pork",
+        "Liver pâté and chả lụa (Vietnamese pork sausage) or sausage",
+        "Fresh herbs: coriander, húng (Vietnamese basil)",
+        "Cucumber, pickled vegetables",
+        "The shop's own sauce"
+      ],
+      "prepOutline": [
+        "Keep baking the baguettes so the crust is always hot and crisp when served",
+        "Grill the marinated, thinly sliced pork over charcoal",
+        "Spread liver pâté and butter over both cut faces of the loaf",
+        "Layer in the grilled pork, chả lụa (Vietnamese pork sausage) or sausage, cucumber, pickled vegetables and fresh herbs",
+        "Drizzle over the shop's own sauce and chilli sauce before wrapping it for the customer"
+      ],
+      "howToEat": "Eat it while it is still hot to catch the crackle of the crust; at peak times you will usually queue 15-20 minutes. You can eat in or take away, and add more chilli sauce if you like heat."
+    },
+    "com-ga-hoi-an": {
+      "description": "Cơm gà Hội An is the old town's own take on chicken rice, concentrated along Phan Châu Trinh, Hoàng Diệu and Lê Lợi streets, and quite unlike the cơm gà of nearby Tam Kỳ or Đà Nẵng. The rice is carefully chosen and cooked in the chicken poaching liquid with a little nghệ (turmeric), so the grains stay separate and fragrant with a pale yellow tint rather than the deep colour and stickiness of some other versions. The chicken must be young gà ta (free-range native chicken), poached until just done and then torn into strands, eaten with thinly sliced onion, rau răm (Vietnamese coriander) and a sweet-sour nước mắm gừng.",
+      "keyIngredients": [
+        "Rice cooked in the chicken poaching liquid with a little nghệ (turmeric)",
+        "Poached gà ta (free-range native chicken), torn into strands",
+        "Thinly sliced red onion",
+        "Rau răm (Vietnamese coriander), coriander",
+        "Nước mắm gừng (nước mắm, Vietnamese fish sauce, with ginger) or a salt, pepper and lime dip",
+        "Chicken offal (gizzard, liver) tossed with rau răm, served alongside"
+      ],
+      "prepOutline": [
+        "Poach a young gà ta (free-range native chicken) until just done and keep the liquid for the rice",
+        "Rinse the rice and cook it in the poaching liquid with a little nghệ (turmeric) so it comes out separate, fragrant and faintly yellow",
+        "Tear the chicken into bite-sized strands and toss it lightly with onion and rau răm (Vietnamese coriander)",
+        "Mix the nước mắm gừng (nước mắm, Vietnamese fish sauce, with ginger), or prepare a salt, pepper and lime dip",
+        "Spread the rice on a plate, pile the torn chicken on top and serve with the offal tossed with rau răm if you have it"
+      ],
+      "howToEat": "Eat it while the rice is still hot, tossing the torn chicken through the onion and rau răm (Vietnamese coriander), then dipping in salt, pepper and lime or spooning over nước mắm gừng (nước mắm, Vietnamese fish sauce, with ginger) to taste; you can order a side of offal to go with it."
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "bac-kan",
+  "summary": "Bắc Kạn is a mountain province with a large Tày population living around Ba Bể lake, so its food is bound up with freshwater fish, glutinous rice and traditional leaf-wrapped cakes. Grilled fish from Pác Ngòi, bánh gio (ash-water glutinous rice cake) with cane molasses, and hand-made miến (dong-starch glass noodles) are the province's most representative products.",
+  "dishes": {
+    "ca-nuong-ba-be": {
+      "description": "Cá nướng Pác Ngòi is a signature dish of the Tày people of Pác Ngòi hamlet, Nam Mẫu commune, Ba Bể district, made from fish caught directly in Ba Bể lake. The fish is marinated and then grilled over than hoa (charcoal) until the skin tightens and turns golden and the flesh is sweet and free of any fishy edge; the fish are small enough that bones and all are eaten.",
+      "keyIngredients": [
+        "fish from Ba Bể lake (small fish)",
+        "nghệ (turmeric)",
+        "salt, pepper, chilli",
+        "than hoa (charcoal) for grilling"
+      ],
+      "prepOutline": [
+        "Pick fish just caught in the lake and clean them",
+        "Marinate the fish with nghệ (turmeric), salt, pepper and chilli so the seasoning soaks in and the skin firms",
+        "Skewer or clamp the fish and grill over than hoa (charcoal), turning steadily",
+        "Grill until the skin is golden and crisp and the flesh is cooked through without splitting or burning"
+      ],
+      "howToEat": "The fish is eaten hot on the spot, dipped in chilli salt or chẩm chéo (a northwestern dipping spice mix), usually with rice or xôi (sticky rice) while taking in the view of Ba Bể lake."
+    },
+    "banh-gio-mat-mia": {
+      "description": "Bánh gio (also called bánh tro) is a traditional cake of the Tày people of Bắc Kạn, made from glutinous rice soaked in the ash water of certain forest trees, wrapped in lá chít (chit leaf) and boiled through. The cake comes out glossy amber, soft and smooth, with a clean cooling taste, and eaten with cane molasses it balances into a gentle, nutty sweetness.",
+      "keyIngredients": [
+        "glutinous rice",
+        "ash water (forest wood burnt to ash, then strained for the soaking water)",
+        "lá chít (chit leaf) for wrapping",
+        "cane molasses"
+      ],
+      "prepOutline": [
+        "Burn the forest wood for ash and strain it to a clear ash water",
+        "Soak the glutinous rice in the ash water for several hours to take up its colour and taste",
+        "Wrap the soaked rice in lá chít (chit leaf) into small batons",
+        "Boil the cakes for several hours until the rice turns translucent, soft and smooth"
+      ],
+      "howToEat": "Peel back the lá chít (chit leaf), cut the cake into thin rounds and pour cane molasses evenly over them; eaten cool, as a snack or a dessert."
+    },
+    "mien-dong-bac-kan": {
+      "description": "Miến dong Bắc Kạn is made by hand from dong riềng (canna) root grown on highland above 1,000m, such as around the Áng Toòng pass. It is prized for strands that stay springy and firm, hold up to long cooking without falling apart, and keep their natural colour with no bleaching agent. It is one of the province's flagship OCOP products, sought after across the country as a Tết gift.",
+      "keyIngredients": [
+        "dong riềng (canna) root",
+        "clean water",
+        "bones or chicken giblets for the broth, when the miến is served in soup"
+      ],
+      "prepOutline": [
+        "Harvest the dong riềng (canna) root, wash it and mill it for its starch",
+        "Filter and settle the starch repeatedly until it is pure and naturally white",
+        "Spread the starch into thin sheets, then cut them into strands",
+        "Sun-dry the strands in the open air so they keep"
+      ],
+      "howToEat": "Miến dong (dong-starch glass noodles) is soaked until it swells, then cooked into soups, served as miến with chicken or with giblets, or stir-fried; it holds its springy bite even once it has cooled."
+    }
+  }
+}

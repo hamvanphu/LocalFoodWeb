@@ -1,0 +1,58 @@
+{
+  "slug": "vinh-long",
+  "summary": "Vĩnh Long lies between the Tiền and Hậu branches of the Mekong and is known as the land of fertile river islets in the heart of the delta. Its food is tied to the river and the orchards — the rustic cá lóc nướng trui (snakehead grilled in burning straw), the cá cháy of Trà Ôn, a prized seasonal catch from the Hậu river, and the unusual bánh xèo hến of the Cù Lao Dài islets.",
+  "dishes": {
+    "ca-loc-nuong-trui": {
+      "description": "Cá lóc nướng trui is a country dish bound up with the settling of the southern frontier, and today it is promoted widely at the garden and eco-tourism spots of Vĩnh Long. A freshly caught wild cá lóc (snakehead fish) is left whole — not scaled, not gutted — skewered on a bamboo stick from mouth to tail, stood upright in the ground, covered in dry straw and set alight until it is cooked. This plain way of grilling keeps the natural sweetness and the characteristic scent of a field-caught fish; to eat it you simply scrape off the burnt scales to reveal the fragrant white flesh inside.",
+      "keyIngredients": [
+        "A live wild cá lóc (snakehead fish)",
+        "Dry straw (or glowing charcoal)",
+        "Fresh bún (rice noodles), bánh tráng (dry rice paper)",
+        "Raw greens and assorted herbs",
+        "Nước mắm (Vietnamese fish sauce) with tamarind, or mắm nêm (fermented anchovy sauce)"
+      ],
+      "prepOutline": [
+        "Rinse the slime off the freshly caught cá lóc (snakehead fish), leaving it whole — no scaling, no gutting",
+        "Run a long bamboo skewer through it from mouth to tail",
+        "Stand the skewer in the ground, heap dry straw over the fish and light it, until the fish is cooked through",
+        "Scrape off the blackened scales to reveal the fragrant white flesh"
+      ],
+      "howToEat": "The flesh is lifted off and rolled in bánh tráng (dry rice paper) with bún (fresh rice noodles) and raw greens, then dipped in nước mắm (Vietnamese fish sauce) with tamarind, or in sweet-sour mắm nêm (fermented anchovy sauce) — eaten straight away while hot, to get the full scent of a field-caught fish."
+    },
+    "ca-chay-tra-on": {
+      "description": "Cá cháy is a rare brackish-water fish recorded in old chronicles under the name \"thiều ngư\". It appears in one season only, before and after Tết Nguyên Đán, when the chướng wind blows in over the stretch of the Hậu river at Trà Ôn. It has a flat body and silvery scales and is quite bony, but the flesh is white, lightly rich and fragrant in a way few brackish-water fish are. As the river environment changes, the Trà Ôn catch grows ever scarcer, pushing prices high and turning the fish into a prized gift at Tết.",
+      "keyIngredients": [
+        "Fresh cá cháy",
+        "Fresh sugarcane (to line the pot when braising)",
+        "Tamarind, or shredded green mango",
+        "Dill, tomato",
+        "Nước mắm (Vietnamese fish sauce), sugar, pepper"
+      ],
+      "prepOutline": [
+        "Clean the cá cháy and cut it into bite-size pieces",
+        "Lay split fresh sugarcane in the bottom of the pot, set the fish on top and kho rim (braise it down) over low heat until the bones soften",
+        "Or make a sour soup with tamarind, tomato and dill",
+        "The flesh can also be sliced thin and dipped into a simmering hotpot along with shredded green mango"
+      ],
+      "howToEat": "Braised cá cháy is eaten hot with plain rice, or served as a sour hotpot with raw greens and bún (fresh rice noodles) dipped in; because it is quite bony, diners tend to eat slowly to enjoy the full rich, fragrant taste of the fish."
+    },
+    "banh-xeo-hen-cu-lao-dai": {
+      "description": "Bánh xèo hến is found only around Cù Lao Dài in Vũng Liêm district, and was placed by the Vietnam Records Organisation (VietKings) on its list of 100 Vietnamese speciality dishes for 2021-2022. Unlike the usual bánh xèo (a crisp fried rice-flour cake) filled with shrimp and pork, the filling here uses fresh river hến (basket clams) stir-fried with shrimp, mung bean and shredded jicama, while the batter is enriched with coconut milk and — a local trick — a little coriander juice, which keeps the cake crisp and stops it sticking even with very little fat in the pan. It is usually rolled up with lá cách (a local aromatic leaf), cát lồi (costus shoot) and the wild greens characteristic of these river islets.",
+      "keyIngredients": [
+        "Fresh river hến (basket clams)",
+        "Shrimp",
+        "Rice flour mixed with coconut milk",
+        "Mung bean, shredded củ sắn (jicama)",
+        "Lá cách (a local aromatic leaf), cát lồi (costus shoot), wild greens",
+        "Sweet-sour nước mắm (Vietnamese fish sauce) with garlic and chilli"
+      ],
+      "prepOutline": [
+        "Boil the river hến (basket clams) to take the meat, then stir-fry it briefly with shrimp so it takes up the seasoning",
+        "Mix rice flour with coconut milk and coriander juice to give the cake its crispness",
+        "Stir-fry the hến and shrimp filling together with mung bean and shredded củ sắn (jicama)",
+        "Pour the batter into a hot pan greased with pork fat, add the filling, cover and wait until the cake is golden and crisp"
+      ],
+      "howToEat": "Bánh xèo hến is eaten hot straight from the pan, rolled up with lá cách (a local aromatic leaf), cát lồi (costus shoot) and local wild greens, then dipped in sweet-sour nước mắm (Vietnamese fish sauce) with garlic and chilli."
+    }
+  }
+}

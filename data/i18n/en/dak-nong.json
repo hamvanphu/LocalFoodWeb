@@ -1,0 +1,57 @@
+{
+  "slug": "dak-nong",
+  "summary": "Đắk Nông is a Central Highlands province split off from Đắk Lắk in 2004, long home to the M'Nông and Mạ peoples. Its indigenous cooking is bound to the forests, rivers and streams — above all the dishes cooked inside ống tre (bamboo tubes) such as canh thụt and cơm lam, along with cá lăng (river catfish) grilled from the Sêrêpốk river.",
+  "dishes": {
+    "canh-thut": {
+      "description": "Canh thụt is an ancestral dish of the M'Nông and Mạ peoples of Đắk Nông. The name comes from the way it is made: the ingredients go into an ống tre (bamboo tube) and are then 'thụt' — pounded and stirred continuously with chopsticks as they cook, so everything melds into a smooth mass. It is usually served to honoured guests at festivals and weddings.",
+      "keyIngredients": [
+        "Lá bép, also called lá nhíp (a wild highland leaf)",
+        "Đọt mây rừng (wild rattan shoots)",
+        "Cà đắng (bitter highland eggplant)",
+        "Stream fish, or pork and pork ribs",
+        "A young ống tre (bamboo tube)"
+      ],
+      "prepOutline": [
+        "Prepare the lá bép (a wild highland leaf), shave the đọt mây (rattan shoots) thin and slice the cà đắng (bitter eggplant)",
+        "Put the stream fish or meat into an ống tre (bamboo tube) with the forest greens and a little water",
+        "Set the tube over the fire and keep pounding and stirring with chopsticks so the ingredients break down and combine",
+        "Season to taste and keep pounding until the soup thickens — that is when it is done"
+      ],
+      "howToEat": "Tip the canh thụt into a bowl and eat it piping hot with cơm lam (rice cooked in a bamboo tube) or plain rice. It is usually the main dish on the M'Nông and Mạ tray set out for guests."
+    },
+    "com-lam-dak-nong": {
+      "description": "Cơm lam is the emblematic dish of the M'Nông and Mạ communities of Đắk Nông: sticky rice cooked inside a tube of bamboo or nứa so it keeps all its natural chew and fragrance. According to the provincial tourism portal, cơm lam is usually eaten with grilled meat and chilli salt at community festivals and weddings.",
+      "keyIngredients": [
+        "Sticky rice",
+        "A young tube of tre or nứa bamboo",
+        "Stream water",
+        "Chilli salt",
+        "Grilled meat to eat alongside"
+      ],
+      "prepOutline": [
+        "Rinse the sticky rice, soak it, then pack it into the ống tre (bamboo tube) with just enough water",
+        "Plug the mouth of the tube with lá chuối (banana leaf) or lá dong (*dong* leaf)",
+        "Roast the tube over glowing charcoal, turning it steadily until the bamboo skin chars",
+        "Split away the outer casing, leaving the thin silky membrane wrapped around the rice"
+      ],
+      "howToEat": "Eat the cơm lam while it is still hot, dipped in chilli salt or alongside grilled meat, peeling off the thin bamboo membrane around it first."
+    },
+    "ca-lang-nuong-than-hong": {
+      "description": "Cá lăng (river catfish) caught from the stretch of the Sêrêpốk that runs through Đắk Nông has firm flesh with few fine bones, and grilling brings out a deep sweetness. According to the Đắk Nông provincial tourism portal, the dish was named in the Top 100 Vietnamese specialities for 2020–2021.",
+      "keyIngredients": [
+        "Cá lăng (river catfish) from the Sêrêpốk",
+        "Lá chuối (banana leaf) or forest leaves for wrapping",
+        "Sả (lemongrass), green chilli",
+        "Sticky rice (to eat alongside)",
+        "A dipping seasoning of sả, chilli and forest greens"
+      ],
+      "prepOutline": [
+        "Clean the cá lăng (river catfish), leaving it whole or cutting it into large sections",
+        "Season lightly with salt and bruised sả (lemongrass)",
+        "Wrap the fish in lá chuối (banana leaf) or forest leaves, then bury or grill it over glowing charcoal",
+        "Turn it steadily until the fish is cooked and fragrant and the leaf wrapper is lightly charred"
+      ],
+      "howToEat": "Peel back the leaf wrapper, lift the flesh off and dip it in a sả (lemongrass) and chilli sauce or in salt, pepper and lime, with cơm lam (rice cooked in a bamboo tube) or xôi (sticky rice) alongside."
+    }
+  }
+}

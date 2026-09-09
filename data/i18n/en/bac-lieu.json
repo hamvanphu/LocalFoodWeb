@@ -1,0 +1,60 @@
+{
+  "slug": "bac-lieu",
+  "summary": "Bạc Liêu is a meeting point of Kinh, Khmer and Chinese culture, famous for the legend of the \"Công tử Bạc Liêu\" (the young lord of Bạc Liêu), and its cuisine carries a strong Chinese imprint alongside the river dishes of the Mekong Delta. Its two best-known specialities are bún bò cay and bánh tằm bì — both named among Vietnam's representative dishes.",
+  "dishes": {
+    "bun-bo-cay-bac-lieu": {
+      "description": "Bún bò cay is a dish found only in Bạc Liêu, quite unlike the bún (fresh rice noodle) beef soups of other places thanks to its distinctive fierce heat. The broth is simmered from beef bones and seasoned with sả (lemongrass) and whole bird's eye chillies, seeds and all, dropped straight into the bowl — heat that rushes up the nose while the clean sweetness of the simmered bones still holds. This dish, along with bánh tằm bì, was recognised by the Vietnam Culinary Culture Association as a representative dish in 2023.",
+      "keyIngredients": [
+        "Beef bones and beef (flank, tendon)",
+        "Fresh thin bún (rice noodles)",
+        "Sả (lemongrass) stalks",
+        "Whole bird's eye chillies (seeds left in)",
+        "Salt, lime",
+        "Spring onion, ngò gai (sawtooth herb)"
+      ],
+      "prepOutline": [
+        "Simmer the beef bones for hours with bruised sả (lemongrass) for a clear, sweet broth",
+        "Boil the beef just through, then slice it into bite-sized pieces",
+        "Fry sả and chilli until fragrant, then adjust the broth for salt and sweetness",
+        "Drop the bruised bird's eye chillies whole into the bowl of boiling broth for the dish's signature heat"
+      ],
+      "howToEat": "The fresh bún (rice noodles) are blanched hot, the beef laid on top and the hot, fiery broth ladled over to cover; diners squeeze in lime, eat it with raw greens, and can crush the bird's eye chillies in the bowl to raise the heat to taste."
+    },
+    "banh-tam-bi-bac-lieu": {
+      "description": "Bánh tằm takes its name from the shape of the strands — round, plump and ivory white, like silkworms. The strands are made from steamed rice flour and eaten with bì (shredded pork and pork skin tossed with thính, roasted ground rice), rich coconut milk and a sweet-sour nước mắm (Vietnamese fish sauce) with garlic and chilli, giving a flavour at once creamy and deep that is very much Bạc Liêu's own.",
+      "keyIngredients": [
+        "Rice flour (for the bánh tằm strands)",
+        "Bì (shredded pork and pork skin with thính, roasted ground rice)",
+        "Coconut milk",
+        "Sweet-sour nước mắm (Vietnamese fish sauce), garlic and chilli",
+        "Cucumber, bean sprouts, herbs",
+        "Mỡ hành (spring onion in hot fat)"
+      ],
+      "prepOutline": [
+        "Knead the rice flour and roll it into round strands, then steam them until translucent and springy",
+        "Slice boiled pork into shreds and toss it with pork skin and fragrant thính (roasted ground rice) to make the bì",
+        "Mix the coconut milk to a light thickness, and dilute the sweet-sour nước mắm (Vietnamese fish sauce) to taste",
+        "Lay the bánh tằm strands on a plate and arrange the bì, cucumber and bean sprouts over them"
+      ],
+      "howToEat": "Spoon the coconut milk and mỡ hành (spring onion in hot fat) over the top, ladle on the sweet-sour nước mắm (Vietnamese fish sauce), and toss everything together before eating so the strands take up both the richness and the sweet-sour balance."
+    },
+    "banh-cu-cai-bac-lieu": {
+      "description": "Bánh củ cải came with the Chinese community as they migrated into Bạc Liêu and then merged into the food culture of the South; it used to appear at death anniversaries and at Tết in Chinese families. The wrapper is made from wheat flour worked together with finely grated white radish, and it looks like an oversized há cảo (steamed dumpling), though the taste is entirely different thanks to a filling of dried shrimp, lean pork and mung bean.",
+      "keyIngredients": [
+        "White wheat flour",
+        "White radish, finely grated",
+        "Dried shrimp or small white shrimp",
+        "Lean pork",
+        "Split hulled mung beans",
+        "Sweet-sour nước mắm (Vietnamese fish sauce) or soy sauce"
+      ],
+      "prepOutline": [
+        "Grate the white radish fine and work it into the wheat flour to make a soft, pliable wrapper",
+        "Stir-fry the filling of crushed dried shrimp, minced lean pork and mung bean until cooked and fragrant",
+        "Wrap the filling in the dough, shaping it like an oversized há cảo (steamed dumpling)",
+        "Steam the cakes in a basket steamer until the wrapper turns translucent and soft"
+      ],
+      "howToEat": "The cakes are eaten hot straight from the steamer, dipped in sweet-sour nước mắm (Vietnamese fish sauce) with chilli or in soy sauce, with fried shallot scattered over for fragrance."
+    }
+  }
+}

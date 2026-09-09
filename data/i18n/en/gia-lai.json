@@ -1,0 +1,57 @@
+{
+  "slug": "gia-lai",
+  "summary": "Gia Lai is a red basalt plateau in the northern Central Highlands, where the cooking of Kinh settlers meets that of the indigenous Jrai and Bahnar. Its characteristic dishes lean on mountain and forest produce — grilled meat, cơm lam (rice cooked in a bamboo tube) — along with phở khô, the dish that has become the culinary emblem of the hill town of Pleiku.",
+  "dishes": {
+    "pho-kho-gia-lai": {
+      "description": "Phở khô Gia Lai is also called 'phở hai tô' — two-bowl phở — because it arrives in two separate bowls: one of dry phở noodles tossed with meat, one of clear broth. In 2012 the Asia Record Organisation recognised it as holding 'Asian culinary value', and in 2021 it was chosen for the Ministry of Information and Communications' 'Vietnamese Cuisine' stamp set.",
+      "keyIngredients": [
+        "Dry phở noodles (chewier and finer than ordinary phở noodles)",
+        "Beef flank or shredded chicken",
+        "Blanched bean sprouts",
+        "Fried shallots, tương đen (a dark fermented soybean sauce), chilli sauce",
+        "Broth simmered from bones"
+      ],
+      "prepOutline": [
+        "Blanch the dry phở noodles in boiling water and drain them well so they stay springy rather than soft",
+        "Toss the noodles with spring-onion oil, fried shallots and a little of the characteristic tương đen (dark fermented soybean sauce) and chilli sauce",
+        "Lay the beef flank or shredded chicken and the blanched bean sprouts over the bowl of noodles",
+        "Ladle the clear bone broth with spring onion and coriander into a second bowl"
+      ],
+      "howToEat": "Toss the bowl of dry noodles with the sauces and greens first, then alternate with the hot bowl of broth beside it — sip the broth, lift the noodles, and add more chilli sauce or tương đen (dark fermented soybean sauce) to taste."
+    },
+    "com-lam-ga-nuong": {
+      "description": "Cơm lam gà nướng is a rustic dish found across the Central Highlands, Gia Lai included. Sticky rice is packed into a young bamboo tube and roasted over charcoal until tender and scented with bamboo, and eaten with free-range chicken grilled in a marinade of sả (lemongrass), mắc khén (Northwest Vietnamese wild pepper) and forest honey.",
+      "keyIngredients": [
+        "Sticky rice",
+        "A young tube of tre or nứa bamboo",
+        "Free-range chicken",
+        "Sả (lemongrass), mắc khén (Northwest Vietnamese wild pepper), wild mountain pepper",
+        "Green chilli salt"
+      ],
+      "prepOutline": [
+        "Rinse the sticky rice, soak it, then pack it into the ống tre (bamboo tube) with a little water and plug it with lá chuối (banana leaf)",
+        "Roast the bamboo tube over glowing charcoal, turning it evenly until steam and fragrance come off it",
+        "Marinate the chicken with sả (lemongrass), mắc khén (Northwest Vietnamese wild pepper), chilli salt and wild honey",
+        "Grill the chicken over charcoal at moderate heat, kept at a distance so it cooks through and the skin turns golden and crisp"
+      ],
+      "howToEat": "Split the bamboo tube open for the fragrant, chewy cơm lam, tear off the grilled chicken and dip it in green chilli salt or in salt, pepper and lime, and eat the two together while still hot."
+    },
+    "bo-mot-nang-muoi-kien-vang": {
+      "description": "Bò một nắng muối kiến vàng is the speciality of Krông Pa district — the largest cattle-raising area in Gia Lai — and originates with the indigenous Jrai. Thinly sliced beef is dried for exactly one day of sun, then grilled and dipped in muối kiến vàng, a salt pounded with nests of yellow forest ants, giving a sour, hot, salty flavour found nowhere else.",
+      "keyIngredients": [
+        "Beef (topside or loin)",
+        "Salt",
+        "Yellow forest ants",
+        "Bird's eye chilli",
+        "Sả (lemongrass)"
+      ],
+      "prepOutline": [
+        "Slice the beef thin, as for a steak, and season lightly with salt and sả (lemongrass)",
+        "Dry it for exactly one day of sun so the surface firms up while the inside stays tender",
+        "Grill the meat over glowing charcoal until just cooked and fragrant",
+        "Pound the muối kiến vàng (yellow forest ant salt) with bird's eye chilli to make the distinctive dip"
+      ],
+      "howToEat": "Tear the grilled beef into strips and dip it straight into the pounded muối kiến vàng (yellow forest ant salt); it is usually eaten as a drinking dish or given as a Central Highlands gift."
+    }
+  }
+}

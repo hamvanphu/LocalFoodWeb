@@ -1,0 +1,53 @@
+{
+  "slug": "ca-mau",
+  "summary": "Cà Mau is the country's southernmost tip, with the U Minh mangrove ecosystem and broad coastal mudflats that yield famous specialities such as ba khía (a small mangrove crab) from Rạch Gốc, sea crab from Năm Căn, and the freshwater dried fish of U Minh Hạ.",
+  "dishes": {
+    "ba-khia-rach-goc": {
+      "description": "Ba khía is a small crab of the fiddler crab family that lives among the roots of đước and mắm mangroves in the tidal forest; it carries three stripes across its shell, which is where the name \"ba khía\" (three stripes) comes from. The Rạch Gốc area of Cà Mau is held to give the best ba khía, because the crabs feed on fallen mắm fruit and so have firm flesh and plenty of bright red roe. Ba khía is usually salted down into mắm ba khía (salt-cured ba khía) — a plain country dish found across the whole Cửu Long delta.",
+      "keyIngredients": [
+        "Fresh ba khía (caught on the rising water, the 8th to 10th lunar months)",
+        "Coarse rock salt",
+        "Garlic, chilli, lime",
+        "Sugar and MSG (to taste)"
+      ],
+      "prepOutline": [
+        "Wash the mud off the ba khía while they are still alive",
+        "Salt the ba khía with coarse rock salt to a balanced saltiness, then seal them in lu and khạp (earthenware jars)",
+        "Cure for several days up to a week so the ba khía ferment just far enough, the flesh firm and the characteristic aroma coming through",
+        "Before eating, toss the salted ba khía with garlic, chilli, lime and sugar to bring the flavours up"
+      ],
+      "howToEat": "Pull off the shell, crack the claws and eat the salted ba khía straight with plain rice or cơm tấm (broken rice); the deep saltiness is lifted with a squeeze of lime and minced garlic and chilli, which brings out the aroma and takes the harsh edge off."
+    },
+    "cua-ca-mau": {
+      "description": "Cà Mau crab, and above all the sea crab of the Năm Căn - Ngọc Hiển area, is known across the country: raised naturally in mangrove forest interlaced with brackish square ponds, it gives firm meat, abundant roe and a deep sweetness few other places can match.",
+      "keyIngredients": [
+        "Năm Căn crab — cua gạch (roe crab) or cua thịt (meat crab)",
+        "Salt, pepper and lime dip",
+        "Sả (lemongrass) and chilli, for steaming or for rang me",
+        "Sour tamarind (for cua rang me, crab tossed in tamarind)"
+      ],
+      "prepOutline": [
+        "Choose crabs still alive and strong, with a firm apron, to be sure of plenty of meat and roe",
+        "Rinse the crabs clean, then steam them with sả (lemongrass) for about 15-20 minutes until evenly cooked",
+        "For cua rang me, the crab is first fried briefly, then tossed in a sweet-sour tamarind sauce",
+        "Lay the crab out on the plate while still hot so the sweetness of the meat holds"
+      ],
+      "howToEat": "Steamed crab is opened up and eaten with the salt, pepper and lime dip so the natural sweetness of the meat and roe comes through whole; cua rang me is eaten with hot rice, or you break the claws by hand and dip them in the sauce."
+    },
+    "kho-ca-boi-u-minh": {
+      "description": "Cá bổi (cá sặc bổi, snakeskin gourami) lives in the flooded tràm (melaleuca) forest of U Minh Hạ, where plankton and algae are plentiful as natural feed for the fish, and this is what makes the area's dried cá bổi so well known that it has been granted certified trademark protection. Dried cá bổi is made mainly during the dry season, by the traditional method of sun-drying.",
+      "keyIngredients": [
+        "Fresh cá sặc bổi (snakeskin gourami), about palm-sized",
+        "Coarse rock salt",
+        "Natural sunshine for drying"
+      ],
+      "prepOutline": [
+        "Cá bổi is caught fresh from the freshwater country of the U Minh Hạ forest",
+        "Clean the fish and salt it just enough for the flesh to take the seasoning evenly",
+        "Dry the fish in natural sun over several days running, until firm and dry",
+        "Store the dried fish somewhere dry so it keeps its distinctive flavour for a long time"
+      ],
+      "howToEat": "Dried cá bổi is usually grilled or briefly fried over the flame to bring out its aroma, then torn into pieces and eaten with hot rice or plain rice congee, dipped in tamarind nước mắm (Vietnamese fish sauce) or in chilli salt."
+    }
+  }
+}

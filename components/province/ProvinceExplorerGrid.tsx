@@ -4,9 +4,17 @@ import { useMemo, useState } from "react";
 import { CalendarDays, Check } from "lucide-react";
 import ProvinceTeaserCard from "./ProvinceTeaserCard";
 import { OCCASIONS } from "@/lib/types";
+import type { Locale } from "@/lib/locale";
+import { t } from "@/lib/ui-strings";
 import type { Occasion, Province } from "@/lib/types";
 
-export default function ProvinceExplorerGrid({ provinces }: { provinces: Province[] }) {
+export default function ProvinceExplorerGrid({
+  provinces,
+  locale = "vi",
+}: {
+  provinces: Province[];
+  locale?: Locale;
+}) {
   const [active, setActive] = useState<Occasion | null>(null);
 
   const filtered = useMemo(() => {
@@ -21,7 +29,7 @@ export default function ProvinceExplorerGrid({ provinces }: { provinces: Provinc
       <div className="mb-6 flex flex-wrap items-center gap-2">
         <span className="flex items-center gap-1.5 text-sm font-medium text-ink/70">
           <CalendarDays className="h-4 w-4" />
-          Lọc theo mùa/lễ hội:
+          {t(locale, "browse.filter")}
         </span>
         {OCCASIONS.map((occasion) => {
           const on = active === occasion;
@@ -41,7 +49,7 @@ export default function ProvinceExplorerGrid({ provinces }: { provinces: Provinc
               {/* Dấu ✓ là tín hiệu KHÔNG dựa vào màu — WCAG 1.4.1 (Use of Color),
                   cũng là AC của US-13. Người mù màu vẫn phân biệt được. */}
               {on && <Check className="h-3.5 w-3.5" aria-hidden="true" />}
-              {occasion}
+              {t(locale, `occasion.${occasion}`)}
             </button>
           );
         })}
@@ -49,7 +57,9 @@ export default function ProvinceExplorerGrid({ provinces }: { provinces: Provinc
 
       {filtered.length === 0 ? (
         <p className="rounded-card border border-dashed border-border p-8 text-center text-sm text-ink/50">
-          Chưa có tỉnh nào gắn dịp &ldquo;{active}&rdquo; — thử bỏ lọc hoặc chọn dịp khác.
+          {t(locale, "browse.emptyFilter", {
+            occasion: active ? t(locale, `occasion.${active}`) : "",
+          })}
         </p>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2">
@@ -59,6 +69,7 @@ export default function ProvinceExplorerGrid({ provinces }: { provinces: Provinc
               province={province}
               hero={province.dishes.find((d) => d.slug === province.heroDishSlug)}
               index={index}
+              locale={locale}
             />
           ))}
         </div>

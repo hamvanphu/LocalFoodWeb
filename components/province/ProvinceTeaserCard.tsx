@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
+import { localePath, type Locale } from "@/lib/locale";
+import { t } from "@/lib/ui-strings";
 import type { Province, Dish, Region } from "@/lib/types";
 
 const REGION_ACCENT: Record<Region, string> = {
@@ -15,10 +17,12 @@ export default function ProvinceTeaserCard({
   province,
   hero,
   index,
+  locale = "vi",
 }: {
   province: Province;
   hero?: Dish;
   index: number;
+  locale?: Locale;
 }) {
   return (
     <motion.div
@@ -29,7 +33,7 @@ export default function ProvinceTeaserCard({
       whileHover={{ y: -4 }}
     >
       <Link
-        href={`/provinces/${province.slug}`}
+        href={localePath(locale, `/provinces/${province.slug}`)}
         className="group flex overflow-hidden rounded-card border border-border bg-surface shadow-soft transition-shadow duration-200 hover:shadow-card"
       >
         <span className={`w-1.5 shrink-0 ${REGION_ACCENT[province.region]}`} />
@@ -43,12 +47,14 @@ export default function ProvinceTeaserCard({
         </div>
         <div className="p-4">
           <p className="text-xs font-medium uppercase tracking-wide text-amber-dark">
-            Miền {province.region}
+            {t(locale, `region.${province.region}`)}
           </p>
           <p className="mt-1 font-display text-lg font-semibold text-ink transition-colors group-hover:text-chili">
             {province.name}
           </p>
-          <p className="mt-1 text-sm text-ink/70">Món tiêu biểu: {hero?.name}</p>
+          <p className="mt-1 text-sm text-ink/70">
+            {t(locale, "card.heroDish")} {hero?.name}
+          </p>
         </div>
       </Link>
     </motion.div>

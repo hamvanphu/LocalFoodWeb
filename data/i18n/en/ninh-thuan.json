@@ -1,0 +1,59 @@
+{
+  "slug": "ninh-thuan",
+  "summary": "Ninh Thuận is the hot, dry country typical of the south-central coast, where Chăm and Việt food cultures meet. The semi-arid climate has made goat and sheep herding a strong local trade, while rice-flour dishes such as bánh căn and bánh xèo carry a deep imprint of traditional Chăm cooking.",
+  "dishes": {
+    "thit-de-ninh-thuan": {
+      "description": "Thanks to hot, low-rainfall weather and hillsides of dry scrub, the goats and sheep of Ninh Thuận graze freely on native grass and leaves, so the meat is firm, fragrant and almost free of the rank smell that penned goats carry. Ninh Thuận goat is worked into many dishes — dê nướng (grilled goat), dê né (goat seared on a sizzling plate), lẩu dê (goat hotpot), tiết canh dê (goat blood pudding) — and has become the speciality most closely tied to this land.",
+      "keyIngredients": [
+        "Goat meat (leg, belly)",
+        "Sả (lemongrass)",
+        "Riềng (galangal)",
+        "Mẻ (fermented rice starter) / sa tế (satay chilli paste)",
+        "Raw herbs, green banana, starfruit",
+        "Bánh tráng (dry rice paper)"
+      ],
+      "prepOutline": [
+        "Choose young goat, trim out the sinew and cut into bite-sized pieces",
+        "Marinate the meat with sả (lemongrass), riềng (galangal), five-spice and sa tế (satay chilli paste) for about 30 minutes",
+        "Grill over than hoa (charcoal), or dip into a lẩu (hotpot) broth of lemongrass and sour bamboo shoot",
+        "Set out a platter of raw herbs, green banana, sour starfruit and bánh tráng (dry rice paper) to eat alongside"
+      ],
+      "howToEat": "Roll the grilled goat up in bánh tráng (dry rice paper) with raw herbs, green banana and sour starfruit, then dip it in mắm nêm (fermented anchovy sauce) or chao (fermented bean curd); if you are eating it as lẩu (hotpot), dip the meat only until it is just done and take it with a hot-and-sour dipping sauce."
+    },
+    "banh-can-ninh-thuan": {
+      "description": "Bánh căn comes from Chăm cooking and was later taken up and adapted by the Việt, becoming a signature dish of Ninh Thuận, Bình Thuận and Khánh Hòa. The batter is poured into small terracotta moulds set over a charcoal fire; unlike bánh khọt, which is fried in oil, bánh căn is 'grilled' dry, so the outside is crisp and the inside soft.",
+      "keyIngredients": [
+        "Ground rice batter",
+        "Egg",
+        "Shrimp, squid or minced pork",
+        "Pork fat",
+        "Mixed nước mắm (Vietnamese fish sauce) or mắm nêm (fermented anchovy sauce)",
+        "Shredded green mango"
+      ],
+      "prepOutline": [
+        "Soak the rice for about six hours, then grind it with a little cooked cold rice so the cakes come out light",
+        "Set the many-holed terracotta mould over the charcoal and brush it with pork fat so nothing sticks",
+        "Pour in the batter, crack in an egg or lay shrimp or squid on top, and cover to cook through",
+        "Prise the cakes out once the tops have set and the bases are golden and crisp"
+      ],
+      "howToEat": "Eat them hot, straight from the mould, either spooned over with or dipped into mixed nước mắm (Vietnamese fish sauce) — some places use mắm nêm (fermented anchovy sauce) instead — with shredded green mango, raw herbs and various kinds of chả and nem alongside."
+    },
+    "banh-canh-cha-ca-phan-rang": {
+      "description": "Bánh canh chả cá is the version of bánh canh (thick rice-flour noodles) particular to Phan Rang in Ninh Thuận, recorded by Vietnamese Wikipedia as one of the regional variants of the dish. The broth is simmered from sea fish and pork bones for a clean sweetness, and eaten with springy house-made chả cá (fish cake).",
+      "keyIngredients": [
+        "Rice-flour bánh canh (thick noodles)",
+        "Chả cá (fish cake) made from mackerel or barracuda",
+        "Pork bones and fish for the broth",
+        "Spring onion, pepper",
+        "Green chilli"
+      ],
+      "prepOutline": [
+        "Pound fresh fish to a paste with seasoning for the chả cá (fish cake) and shape it into balls or flat pieces",
+        "Steam or fry the chả cá until just cooked",
+        "Simmer the broth from pork bones and fish heads for several hours",
+        "Blanch the bánh canh (thick rice-flour noodles), ladle over the broth and arrange the chả cá on top"
+      ],
+      "howToEat": "Eat it hot with sliced Ninh Thuận green chilli or chilli powder, a squeeze of lime and a scattering of pepper; it is usually eaten in the morning or in the late afternoon."
+    }
+  }
+}

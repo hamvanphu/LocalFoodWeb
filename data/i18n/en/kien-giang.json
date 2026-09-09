@@ -1,0 +1,58 @@
+{
+  "slug": "kien-giang",
+  "summary": "Kiên Giang holds both a coastal plain and the pearl island of Phú Quốc, giving it a rich island-and-sea cuisine: fresh gỏi cá trích, the deeply flavoured bún cá of Rạch Giá city, and the celebrated nước mắm (Vietnamese fish sauce) of Phú Quốc, recognised as national intangible cultural heritage.",
+  "dishes": {
+    "goi-ca-trich-phu-quoc": {
+      "description": "Gỏi cá trích is among the best-loved homely specialities of Phú Quốc island, Kiên Giang. Fresh cá trích (herring) is filleted thin and steeped in lime juice until the flesh firms and the fishiness eases, then tossed with onion, grated coconut and roasted peanuts, for a taste of the sea balanced between sour, rich and crunchy.",
+      "keyIngredients": [
+        "Fresh cá trích (herring)",
+        "Lime juice",
+        "Thinly sliced onion and shallot",
+        "Grated coconut",
+        "Roasted peanuts, roughly crushed",
+        "Raw herbs, bánh tráng (rice paper), bún (rice noodles)",
+        "Sweet-sour nước mắm (Vietnamese fish sauce) with garlic and chilli"
+      ],
+      "prepOutline": [
+        "Scale the cá trích (herring), remove the head and guts, and cut the fillets away",
+        "Steep the fillets in lime juice so the flesh firms up and the fishy smell fades",
+        "Toss the steeped fish with onion, shallot, grated coconut, roasted peanuts and seasonings",
+        "Mix a sweet-sour nước mắm (Vietnamese fish sauce) with minced garlic and chilli for dipping"
+      ],
+      "howToEat": "Gỏi cá trích is rolled up in bánh tráng (rice paper) with bún (rice noodles) and raw herbs, then dipped into the bowl of sweet-sour nước mắm (Vietnamese fish sauce) with garlic and chilli to get the full sour, rich, crunchy effect."
+    },
+    "bun-ca-kien-giang": {
+      "description": "Bún cá is a familiar, widely eaten dish in Rạch Giá city, Kiên Giang, built on tender, fragrant cá lóc (snakehead — or cá thu, mackerel, or cá nhồng, barracuda) with fresh shrimp, served in a clear sweet broth with bean sprouts, shredded banana blossom and a great many of the herbs typical of the Mekong Delta.",
+      "keyIngredients": [
+        "Cá lóc (snakehead), or cá thu (mackerel) or cá nhồng (barracuda)",
+        "Fresh shrimp",
+        "Pork or fish bones simmered for the broth",
+        "Fresh bún (rice noodles)",
+        "Bean sprouts, shredded banana blossom",
+        "Herbs, lime, chilli, nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Boil or steam the fish through, pick off the flesh and set it aside, keeping the bones for the broth",
+        "Simmer the broth from the fish or pork bones until clear and sweet",
+        "Boil the shrimp or briefly stir-fry them until just done",
+        "Blanch the bún and bean sprouts, lay the fish and shrimp on top and flood the bowl with the hot broth"
+      ],
+      "howToEat": "Bún cá is eaten hot, seasoned to taste with lime, chilli and nước mắm (Vietnamese fish sauce), with shredded banana blossom and herbs to balance the sweetness of the broth and the fish."
+    },
+    "nuoc-mam-phu-quoc": {
+      "description": "Nước mắm Phú Quốc is a traditional Vietnamese fish sauce famous at home and abroad, made on Phú Quốc island, Kiên Giang, for more than 200 years. It is produced entirely from anchovies fermented with salt in large wooden vats for 12-15 months, giving a sauce high in protein, with a natural, deep saltiness and a distinctive aroma. The craft of making it was recognised as national intangible cultural heritage in 2021.",
+      "keyIngredients": [
+        "Cá cơm (anchovy — the sọc tiêu, đỏ and than varieties)",
+        "Coarse salt (low in impurities)",
+        "Large wooden vats for the fermentation"
+      ],
+      "prepOutline": [
+        "Fresh cá cơm (anchovies) are mixed with salt at roughly three parts fish to one part salt, right on board the fishing boat",
+        "Pack the salted fish into large wooden vats and press it down under weights",
+        "Leave it to ferment naturally, undisturbed, for about 12-15 months",
+        "Draw off the nước mắm nhĩ (the first, purest run) in stages from the vats and grade it by protein content"
+      ],
+      "howToEat": "Nước mắm Phú Quốc is used neat as a dipping sauce, or mixed with garlic, chilli, lime and sugar to dip seafood, gỏi (Vietnamese salads) and many other Vietnamese dishes."
+    }
+  }
+}

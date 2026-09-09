@@ -4,6 +4,8 @@ import { useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Search, MapPin, UtensilsCrossed, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { localePath, type Locale } from "@/lib/locale";
+import { t } from "@/lib/ui-strings";
 import type { SearchEntry } from "@/lib/searchIndex";
 
 function normalize(text: string): string {
@@ -14,7 +16,13 @@ function normalize(text: string): string {
     .replace(/đ/g, "d");
 }
 
-export default function SearchBar({ index }: { index: SearchEntry[] }) {
+export default function SearchBar({
+  index,
+  locale = "vi",
+}: {
+  index: SearchEntry[];
+  locale?: Locale;
+}) {
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
@@ -45,12 +53,12 @@ export default function SearchBar({ index }: { index: SearchEntry[] }) {
           }}
           onFocus={() => setOpen(true)}
           onBlur={() => setTimeout(() => setOpen(false), 120)}
-          placeholder="Tìm món ăn, tỉnh thành…"
+          placeholder={t(locale, "nav.search")}
           className="w-full bg-transparent text-sm text-ink placeholder:text-ink/40 focus:outline-none"
         />
         {query && (
           <button
-            aria-label="Xoá tìm kiếm"
+            aria-label={t(locale, "nav.clearSearch")}
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => {
               setQuery("");
@@ -76,7 +84,7 @@ export default function SearchBar({ index }: { index: SearchEntry[] }) {
             role="status"
             className="absolute left-0 right-0 top-full z-30 mt-2 rounded-control border border-border bg-surface px-3.5 py-3 text-sm text-ink/75 shadow-lifted"
           >
-            Không tìm thấy món ăn hay tỉnh nào khớp{" "}
+            {t(locale, "search.empty")}{" "}
             <span className="font-medium text-ink">“{query.trim()}”</span>.
           </motion.div>
         )}
@@ -93,7 +101,7 @@ export default function SearchBar({ index }: { index: SearchEntry[] }) {
               <li key={entry.href + entry.label}>
                 <button
                   onMouseDown={(e) => e.preventDefault()}
-                  onClick={() => goTo(entry.href)}
+                  onClick={() => goTo(localePath(locale, entry.href))}
                   className="flex w-full items-center gap-2.5 px-3.5 py-2.5 text-left text-sm hover:bg-surface-muted"
                 >
                   {entry.type === "province" ? (
@@ -103,7 +111,9 @@ export default function SearchBar({ index }: { index: SearchEntry[] }) {
                   )}
                   <span>
                     <span className="font-medium text-ink">{entry.label}</span>
-                    <span className="ml-1.5 text-ink/65">{entry.subtitle}</span>
+                    <span className="ml-1.5 text-ink/65">
+                      {entry.region ? t(locale, `region.${entry.region}`) : entry.subtitle}
+                    </span>
                   </span>
                 </button>
               </li>

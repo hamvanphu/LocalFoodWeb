@@ -1,0 +1,52 @@
+{
+  "slug": "hung-yen",
+  "summary": "Hưng Yên is bound up with the nhãn lồng (a prized longan) of Phố Hiến — a fruit once sent as tribute to the king and praised in the writings of Lê Quý Đôn — along with the celebrated hand-fermented tương Bần and the gà Đông Tảo with its remarkable legs. This is a rich stretch of country on the bank of the Red River, where the farm produce has become the local culinary pride.",
+  "dishes": {
+    "nhan-long-hung-yen": {
+      "description": "Nhãn lồng Hưng Yên is a prized longan variety grown in the old Phố Hiến area; it was once carried to the king in procession with flags, gongs and drums, which gave it the name 'nhãn tiến' (tribute longan). The ancestral tree, more than 400 years old, still stands at Hiến pagoda in Hưng Yên city. The fruit has thick, crisp flesh, a small stone and a clean sweetness that the scholar Lê Quý Đôn once likened to the taste of 'holy water from heaven'.",
+      "keyIngredients": [
+        "The nhãn lồng variety (also called nhãn đường phèn, 'rock-sugar longan')",
+        "Alluvial soil along the Red River"
+      ],
+      "prepOutline": [
+        "Tend the orchards by traditional knowledge passed down over generations",
+        "Harvest in early autumn, when the skin turns a bright yellow-brown",
+        "Keep the fresh fruit somewhere cool and airy to hold its crispness and sweetness",
+        "Surplus fruit can be dried as long nhãn (dried longan flesh) to use over time"
+      ],
+      "howToEat": "Nhãn lồng is at its best eaten fresh straight off the tree; it is also dried into long nhãn (dried longan flesh) for chè (sweet soup) or steeped as a cooling tea."
+    },
+    "tuong-ban": {
+      "description": "Tương Bần is the traditional fermented dipping sauce of Bần Yên Nhân village in Mỹ Hào town, Hưng Yên, famous since the late 19th century. The tương (fermented soybean sauce) is made from soybeans, mould-fermented glutinous rice and salt, aged in earthenware jars out in the sun for months to give a balanced salty-sweet taste and its characteristic thick brown colour — the sauce of the folk verse, 'I go, and I miss home: the water spinach soup, the aubergine steeped in tương'.",
+      "keyIngredients": [
+        "Soybeans",
+        "Mould-fermented glutinous rice",
+        "White salt",
+        "Earthenware jars for the ageing"
+      ],
+      "prepOutline": [
+        "Roast the soybeans, then steep them in water for about seven days to ferment naturally",
+        "Steam the glutinous rice and let it grow the golden, areca-blossom mould",
+        "Mix the soybean liquid with the rice mould and salt in the family's proportions",
+        "Age the mixture in earthenware jars out in the sun for two to six months, stirring it through every day"
+      ],
+      "howToEat": "Tương Bần is used as a dip for boiled greens, cà pháo (small pickled aubergine) and boiled meat, or as a seasoning in kho (braised) and stir-fried dishes, giving them the characteristic flavour of northern delta cooking."
+    },
+    "ga-dong-tao": {
+      "description": "Gà Đông Tảo is a rare chicken breed originating in Đông Tảo commune, Khoái Châu district, Hưng Yên, marked by its huge, rough, scaly legs like a scaled-down elephant's foot. It was once raised as tribute for the king and served at important ceremonies; today it is a high-end speciality with firm meat, crisp skin and little fat.",
+      "keyIngredients": [
+        "A whole gà Đông Tảo",
+        "Lime leaf, ginger",
+        "Thuốc bắc (Chinese medicinal herbs — for stewing)",
+        "Salt, pepper"
+      ],
+      "prepOutline": [
+        "Raise the birds free-range for 12-18 months so the legs grow large and the meat firms up",
+        "Clean the bird; it can be boiled, roasted or stewed with thuốc bắc (Chinese medicinal herbs)",
+        "If boiling, keep the heat very low so the skin stays crisp and does not split",
+        "Chop into bite-sized pieces and arrange with shredded lime leaf"
+      ],
+      "howToEat": "Gà Đông Tảo is usually served as steamed skin from the legs, stewed with thuốc bắc (Chinese medicinal herbs), or boiled and dipped in salt with lime leaf; it appears at banquets and at Tết because of the breed's value and rarity."
+    }
+  }
+}

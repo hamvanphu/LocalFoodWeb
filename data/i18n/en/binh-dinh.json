@@ -1,0 +1,56 @@
+{
+  "slug": "binh-dinh",
+  "summary": "Bình Định, the martial-arts country of central Vietnam, takes pride in bánh xèo tôm nhảy, made with shrimp so fresh they are still jumping; in bún chả cá Quy Nhơn, thick with the taste of the sea; and in the tangy, springy nem of chợ Huyện — the gift no local wedding or death anniversary can do without.",
+  "dishes": {
+    "banh-xeo-tom-nhay-binh-dinh": {
+      "description": "Bánh xèo tôm nhảy is Bình Định's most striking speciality, a crisp fried rice-flour cake whose name comes from the filling: live tôm đất (a small local shrimp), still jumping in the basin when it is brought home from the market. Unlike the large, heavily filled bánh xèo of the South, the Bình Định version is small and neat, with a thin, brittle shell, and still holds the full-flavoured character of this martial-arts country.",
+      "keyIngredients": [
+        "rice flour",
+        "live tôm đất (a small local shrimp)",
+        "bean sprouts",
+        "raw greens, lettuce, green banana",
+        "sweet-sour nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Mix the rice flour with water, adding a little turmeric powder for a light golden colour",
+        "Heat the mould, spread a thin layer of batter over it, then lay the still-fresh tôm đất on top",
+        "Add bean sprouts and cover so the cake crisps evenly on both sides",
+        "Lift the cake onto a plate once the shell is crisp and golden"
+      ],
+      "howToEat": "Roll the bánh xèo with raw greens, lettuce and green banana in bánh tráng (dry rice paper), and dip it in sweet-sour nước mắm (Vietnamese fish sauce) mixed with garlic and chilli."
+    },
+    "bun-cha-ca-quy-nhon": {
+      "description": "Bún chả cá is the signature dish of the coastal city of Quy Nhơn, drawing on central Vietnam's abundant sea fish — cá thu (mackerel), cá mối (lizardfish), cá cờ (sailfish), cá rựa (wolf herring) — to make the chả cá (fish cake). The broth is clear and cleanly sweet from fish bones and tomato, eaten with fried or steamed chả cá, springy and sweet.",
+      "keyIngredients": [
+        "chả cá (fish cake, from cá thu/mackerel, cá mối/lizardfish or cá rựa/wolf herring)",
+        "fish bones for the broth",
+        "tomato, pineapple",
+        "fresh bún (rice noodles)",
+        "raw greens, spring onion"
+      ],
+      "prepOutline": [
+        "Pound the fresh fish with seasonings until smooth and springy, shape it into pieces and fry or steam them through",
+        "Simmer the broth from the bones and heads, seasoning with tomato and pineapple for a light clean sourness",
+        "Blanch the fresh bún (rice noodles), lay the chả cá (fish cake) on top and ladle over the hot broth"
+      ],
+      "howToEat": "Eaten with raw greens and bean sprouts, with mắm ruốc (fermented shrimp/krill paste) or fresh chilli added to taste."
+    },
+    "nem-cho-huyen-binh-dinh": {
+      "description": "Nem chợ Huyện comes from the village of Chợ Huyện, Phước Lộc commune, Tuy Phước district, Bình Định — once a gathering place for well-to-do families, where a taste for refined food gradually took hold. The nem balances sour against sweet with a faint astringency from the guava leaf it is wrapped in, and it is indispensable at weddings, death anniversaries and Tết for the people of Bình Định.",
+      "keyIngredients": [
+        "lean pork",
+        "pork skin",
+        "garlic, chilli, pepper",
+        "guava leaf",
+        "banana leaf for the outer wrapping"
+      ],
+      "prepOutline": [
+        "Grind the lean pork while still fresh, together with finely shredded pork skin",
+        "Mix the meat with garlic, chilli, pepper and seasonings to taste",
+        "Press it into small balls, wrap them in guava leaf and then in an outer layer of banana leaf",
+        "Leave them to ferment naturally at room temperature until the nem has soured just enough"
+      ],
+      "howToEat": "Peel off the leaves and eat the nem as it is with chilli sauce or fresh garlic; it is usually eaten with drinks or given as a gift."
+    }
+  }
+}

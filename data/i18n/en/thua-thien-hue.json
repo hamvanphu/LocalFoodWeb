@@ -1,0 +1,73 @@
+{
+  "slug": "thua-thien-hue",
+  "summary": "The cooking of the old capital Huế is bold and fiery, shaped by the style of the royal court — many small, refined dishes, each with its own dipping sauce.",
+  "dishes": {
+    "bun-bo-hue": {
+      "description": "A deep, fiery noodle soup with a broth simmered from beef bones and pork trotter, scented with sả (lemongrass) and mắm ruốc (fermented shrimp/krill paste), served with thick round bún (rice noodles) — the culinary emblem of the old capital, far more forceful than northern phở.",
+      "keyIngredients": [
+        "Beef bones, pork trotter, beef shank",
+        "Thick round bún (rice noodles)",
+        "Sả (lemongrass), mắm ruốc (fermented shrimp/krill paste), chilli-annatto oil",
+        "Banana blossom, raw greens",
+        "Congealed pork blood (optional)"
+      ],
+      "prepOutline": [
+        "Simmer the beef bones and pork trotter with bruised sả (lemongrass)",
+        "Dissolve the mắm ruốc (fermented shrimp/krill paste), strain off the clear liquid and add it to the pot",
+        "Render annatto oil to give the broth its deep red colour",
+        "Blanch the bún (rice noodles) and lay the beef shank, trotter and blood on top",
+        "Ladle over the boiling broth and scatter with spring onion and coriander"
+      ],
+      "howToEat": "Eaten hot, with a squeeze of lime and extra sa tế (chilli-oil paste) or mắm ruốc (fermented shrimp/krill paste) to your own tolerance for heat; crush the banana blossom and raw greens and drop them into the bowl for a cool, crisp bite against the fierce broth."
+    },
+    "com-hen": {
+      "description": "Cold rice tossed with stir-fried hến (tiny freshwater clams), their cooking liquor, pork cracklings, peanuts and a great deal of raw greenery — the everyday dish of the Cồn Hến quarter of Huế, balanced between sour and hot.",
+      "keyIngredients": [
+        "Hến (tiny freshwater clams — the meat and the cooking liquor)",
+        "Cold rice",
+        "Pork cracklings, roasted peanuts",
+        "Raw greens, shredded banana blossom",
+        "Sa tế (chilli-oil paste), mắm ruốc (fermented shrimp/krill paste)"
+      ],
+      "prepOutline": [
+        "Boil the hến (tiny freshwater clams) and keep the clear cooking liquor",
+        "Stir-fry the clam meat with seasonings until fragrant",
+        "Toss the cold rice with the raw greens, pork cracklings and peanuts",
+        "Ladle over the hot clam liquor and add sa tế (chilli-oil paste) and mắm ruốc (fermented shrimp/krill paste)"
+      ],
+      "howToEat": "Mix everything together thoroughly before eating and ladle on more hot clam liquor so the rice does not dry out; it is only complete if you eat it as hot as Huế taste demands."
+    },
+    "banh-khoai": {
+      "description": "The Huế version of bánh xèo — smaller, thicker and crisper than the southern kind, filled with shrimp, pork and bean sprouts and eaten with a distinctive nước lèo of liver and peanut rather than the usual sweet-and-sour nước mắm (Vietnamese fish sauce).",
+      "keyIngredients": [
+        "Rice flour mixed with nghệ (turmeric)",
+        "Shrimp, pork belly, bean sprouts",
+        "Huế nước lèo (a sauce of pork liver, peanut and sesame)",
+        "Raw greens, sour star fruit, green banana"
+      ],
+      "prepOutline": [
+        "Mix the rice batter with nghệ (turmeric) to bring up the yellow colour",
+        "Pour the batter into a hot pan and add the shrimp, pork and bean sprouts",
+        "Fold the cake in half once the edges are golden and crisp",
+        "Mix the liver-and-peanut nước lèo particular to Huế"
+      ],
+      "howToEat": "Roll it up with raw greens, sour star fruit and green banana, then dip it deep into the Huế nước lèo — the rich, nutty sauce is the single biggest difference from southern bánh xèo."
+    },
+    "banh-beo-nam-loc": {
+      "description": "The three Huế court cakes usually served together on one tray: bánh bèo steamed in little bowls and topped with tôm cháy (dried shrimp floss), bánh nậm wrapped flat in a leaf around a shrimp-and-pork filling, and bánh lọc, clear as glass around shrimp and pork, wrapped in lá chuối (banana leaf).",
+      "keyIngredients": [
+        "Rice flour (for bánh bèo and bánh nậm), tapioca starch (for bánh lọc)",
+        "Tôm cháy (dried shrimp floss), minced pork belly",
+        "Lá chuối (banana leaf) or lá dong (dong leaf) for wrapping",
+        "Diluted nước mắm (Vietnamese fish sauce) with chilli"
+      ],
+      "prepOutline": [
+        "Steam the rice batter in little bowls (bánh bèo) or in leaf wrappers (bánh nậm)",
+        "Pound the tôm cháy (dried shrimp floss) fine and scatter it over the bánh bèo",
+        "Enclose shrimp and pork in clear tapioca dough and steam it (bánh lọc)",
+        "Arrange all three on a tray or plate and serve with nước mắm (Vietnamese fish sauce) and chilli"
+      ],
+      "howToEat": "Spoon the diluted nước mắm (Vietnamese fish sauce) with chilli straight over each kind of cake and eat them in small mouthfuls — the 'ăn chơi' style of Huế court food, meant for grazing rather than for filling you up."
+    }
+  }
+}

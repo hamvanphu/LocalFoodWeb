@@ -1,0 +1,57 @@
+{
+  "slug": "ha-tinh",
+  "summary": "Hà Tĩnh cooking is plain but full-flavoured. Its emblem is kẹo cu đơ, sweet and nutty with cane molasses and peanuts, a country gift tied to an unusual folk story — alongside coastal dishes such as gỏi cá đục and homely plates like ram bánh mướt.",
+  "dishes": {
+    "keo-cu-do": {
+      "description": "Kẹo cu đơ is the best-known speciality of Hà Tĩnh: cane molasses, sugar, malt syrup, ginger and roasted peanuts cooked over a low flame with constant stirring, then pressed between two toasted rice crackers. The name \"cu đơ\" comes from a folk story about a man called Cu Hai in Hương Sơn — French soldiers called him \"Hai\", which became the French \"deux\", pronounced \"đơ\".",
+      "keyIngredients": [
+        "Cane molasses",
+        "Sugar",
+        "Malt syrup",
+        "Fresh ginger",
+        "Peanuts",
+        "Toasted bánh tráng, also called bánh đa (a toasted sesame rice cracker)"
+      ],
+      "prepOutline": [
+        "Cook the cane molasses, sugar, malt syrup and ginger over a low flame, stirring constantly until the mixture thickens",
+        "Roast the peanuts until fragrant and crisp, then stir them evenly into the boiling molasses",
+        "Spoon the hot mixture onto one toasted cracker and press a second cracker down on top",
+        "Leave it to cool and set hard, then cut or snap it into pieces"
+      ],
+      "howToEat": "Snap off a piece and eat it with a cup of hot green tea, which balances the sweetness and lifts the aroma."
+    },
+    "goi-ca-duc-thach-hai": {
+      "description": "Gỏi cá đục is the characteristic dish of the Thạch Hải coast in Hà Tĩnh, made with cá đục (sillago, a small white sea fish) caught the same day. It is lightly sour from lime against the natural sweetness of the fish and the crunch of thính, and it made the top 100 Vietnamese specialities in 2021.",
+      "keyIngredients": [
+        "Fresh cá đục (sillago)",
+        "Thính (roasted ground rice)",
+        "Lime, or sour starfruit",
+        "Fresh herbs, lá sung (young fig leaf)",
+        "Roasted peanuts, roughly crushed"
+      ],
+      "prepOutline": [
+        "Clean the cá đục (sillago), fillet out the white flesh and leave it to drain",
+        "Squeeze over lime or toss with sour starfruit so the fish cures while keeping its fresh sweetness",
+        "Toss the fish with thính (roasted ground rice) and crushed roasted peanuts for fragrance and nuttiness",
+        "Mix a dipping sauce of nước mắm (Vietnamese fish sauce), garlic and chilli to serve alongside"
+      ],
+      "howToEat": "Roll the cured fish with fresh herbs and lá sung (young fig leaf) in bánh tráng (rice paper) and dip it in the sour, spicy nước mắm (Vietnamese fish sauce)."
+    },
+    "ram-banh-muot-ha-tinh": {
+      "description": "Ram bánh mướt brings two things together: ram (crisp fried rolls) and soft bánh mướt (freshly steamed rice sheets), making a dish that is at once crunchy and chewy — a Hà Tĩnh signature, usually eaten at breakfast or at family gatherings.",
+      "keyIngredients": [
+        "Bánh mướt (thinly steamed rice-flour sheets)",
+        "Bánh tráng (rice paper) for wrapping the ram rolls",
+        "Minced pork, miến (glass noodles), wood ear mushroom",
+        "Sweet-sour nước mắm (Vietnamese fish sauce)",
+        "Raw herbs and greens"
+      ],
+      "prepOutline": [
+        "Make the ram filling from minced pork, miến (glass noodles), wood ear mushroom and carrot, roll it in bánh tráng (rice paper) and deep-fry until crisp",
+        "Steam the bánh mướt from rice batter and roll each sheet into a small soft roll",
+        "Arrange the crisp ram and the soft bánh mướt on the same plate, with raw greens and sweet-sour nước mắm (Vietnamese fish sauce)"
+      ],
+      "howToEat": "Break the ram into pieces, wrap them with bánh mướt (steamed rice sheet) and raw greens, and dip in sweet-sour nước mắm (Vietnamese fish sauce) mixed with garlic and chilli."
+    }
+  }
+}

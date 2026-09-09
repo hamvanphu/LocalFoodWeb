@@ -19,13 +19,16 @@ import MapToolbar from "./MapToolbar";
 import DishMarker from "./DishMarker";
 import SovereigntyMarker from "./SovereigntyMarker";
 import sovereignty from "@/data/sovereignty.json";
+import { localePath, type Locale } from "@/lib/locale";
+import { t } from "@/lib/ui-strings";
 import type { ProvinceMapProperties } from "@/lib/geo";
 
 interface FoodMapProps {
   provinces: FeatureCollection<Point, ProvinceMapProperties>;
+  locale?: Locale;
 }
 
-export default function FoodMap({ provinces }: FoodMapProps) {
+export default function FoodMap({ provinces, locale = "vi" }: FoodMapProps) {
   const router = useRouter();
   const mapRef = useRef<MapRef | null>(null);
   const [zoom, setZoom] = useState(VIETNAM_INITIAL_ZOOM);
@@ -49,8 +52,8 @@ export default function FoodMap({ provinces }: FoodMapProps) {
   );
 
   const goToProvince = useCallback(
-    (slug: string) => router.push(`/provinces/${slug}`),
-    [router],
+    (slug: string) => router.push(localePath(locale, `/provinces/${slug}`)),
+    [router, locale],
   );
 
   const handleMove = useCallback((e: ViewStateChangeEvent) => {
@@ -93,8 +96,9 @@ export default function FoodMap({ provinces }: FoodMapProps) {
             style={{ zIndex: 0 }}
           >
             <SovereigntyMarker
-              name={a.name}
-              admin={a.admin}
+              name={locale === "en" ? a.nameEn : a.name}
+              admin={locale === "en" ? a.adminEn : a.admin}
+              locale={locale}
               detailed
               onClick={() => goToProvince(a.provinceSlug)}
             />
@@ -103,13 +107,17 @@ export default function FoodMap({ provinces }: FoodMapProps) {
 
         {/* Tên gọi Việt Nam của vùng biển mà bản đồ quốc tế ghi "South China Sea" */}
         <Marker
-          longitude={sovereignty.seaName.center[0]}
-          latitude={sovereignty.seaName.center[1]}
+          longitude={
+            locale === "en" ? sovereignty.seaName.centerEn[0] : sovereignty.seaName.center[0]
+          }
+          latitude={
+            locale === "en" ? sovereignty.seaName.centerEn[1] : sovereignty.seaName.center[1]
+          }
           anchor="center"
           style={{ zIndex: 0 }}
         >
           <span className="pointer-events-none select-none whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.18em] text-chili-dark/70">
-            {sovereignty.seaName.label}
+            {locale === "en" ? sovereignty.seaName.labelEn : sovereignty.seaName.label}
           </span>
         </Marker>
 
@@ -186,12 +194,13 @@ export default function FoodMap({ provinces }: FoodMapProps) {
             className="pointer-events-none absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-pill border border-white/40 bg-white/85 px-4 py-2 text-sm font-medium text-ink shadow-card backdrop-blur-md"
           >
             <Hand className="h-4 w-4 text-chili" />
-            Bấm vào một điểm để khám phá món ăn
+            {t(locale, "map.hint")}
           </motion.div>
         )}
       </AnimatePresence>
 
       <MapToolbar
+        locale={locale}
         className="absolute top-4 right-4"
         onZoomIn={() => mapRef.current?.zoomIn({ duration: 200 })}
         onZoomOut={() => mapRef.current?.zoomOut({ duration: 200 })}

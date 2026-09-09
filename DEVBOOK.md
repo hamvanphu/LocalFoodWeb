@@ -233,6 +233,41 @@ Nhật ký "AI sai/vướng → xử lý" trong quá trình build. Ghi ngay khi 
 
 ---
 
+## Chuyển ngữ Việt–Anh — US-16 (2026-09-09)
+
+- **`node:fs` lọt vào bundle trình duyệt, build đổ hoàn toàn**: `lib/i18n.ts` vừa chứa
+  `localePath()` (thuần logic chuỗi) vừa chứa hàm đọc file bản dịch bằng `node:fs`. 16
+  client component import `localePath` từ đó → Turbopack kéo cả module vào bundle client
+  → `FATAL: the chunking context (unknown) does not support external modules (request:
+  node:fs)`. **`tsc --noEmit` không bắt được** — về mặt kiểu thì hoàn toàn hợp lệ; chỉ
+  `pnpm build` mới lộ. Xử lý: tách `lib/locale.ts` (hằng số + `localePath`, dùng chung
+  server/client) khỏi `lib/i18n.ts` (chỉ server). Bài học: **ranh giới server/client phải
+  là ranh giới file**, không phải quy ước trong đầu — vì `import type` được xoá lúc biên
+  dịch nên dễ tưởng nhầm là mọi import đều an toàn.
+- **6/10 agent dịch bị ngắt giữa chừng vì hết hạn mức phiên**, nhưng file chúng đã ghi
+  thì vẫn đầy đủ và hợp lệ (49/63 sống sót, 0 file hỏng). Không thể tin trạng thái báo
+  cáo của agent — phải **kiểm bằng cách đối chiếu file trên đĩa với bản gốc**. Đó là lý
+  do có `pnpm check:i18n`: đủ món, đủ 4 trường, **số phần tử `keyIngredients`/
+  `prepOutline` khớp bản gốc**, không chứa trường cấm.
+- **Bảng thuật ngữ bị chính nó phản lại**: mục 1 của `I18N-GLOSSARY-LF.md` lấy `Cao lầu`
+  làm ví dụ tên món phải giữ nguyên. Nhưng ở Nam Định, "tiệm cao lâu của Hoa kiều" nghĩa
+  là **tiệm ăn kiểu người Hoa** (酒樓). Cùng dạng với `chao` (động từ, không phải chao
+  đậu) và `mắm` ở Cà Mau (**cây mắm** ngập mặn, không phải mắm lên men). Bài học: bảng
+  thuật ngữ là **gợi ý theo nghĩa, không phải lệnh thay-chuỗi** — đã ghi thành mục 4c.
+- **Chạy pilot 1 tỉnh trước khi dịch 62 tỉnh** đã trả công ngay: bản thử Hà Nội lộ 3 bẫy
+  mà nếu không có sẽ bị nhân lên toàn bộ 63 tỉnh.
+- **Trường dữ liệu chết vẫn được gửi xuống client**: sau khi cho `SearchEntry` mang mã
+  vùng thô để client tự dịch, trường `subtitle` cũ (`"Miền Bắc"`) không còn ai đọc nhưng
+  vẫn nằm trong payload của **cả 63 tỉnh, ở cả hai ngôn ngữ**. Không lỗi, không ai thấy —
+  chỉ lộ ra khi grep chuỗi tiếng Việt trong HTML bản tiếng Anh.
+- **Nhãn tiếng Anh dài hơn làm hỏng bố cục bản đồ**: "BIỂN ĐÔNG (EAST SEA)" rộng hơn
+  "BIỂN ĐÔNG" nên mép trái đè lên marker món ăn ven biển Quảng Ngãi ở khung zoom mặc
+  định. Chỉ phát hiện được bằng **chụp ảnh bản đồ thật rồi nhìn**, không phải bằng test.
+  Xử lý: `centerEn` riêng, đẩy sang đông 0.7°.
+- **Kiểm bằng `innerText` bị `text-transform` đánh lừa**: nhãn "Key ingredients" hiển thị
+  hoa toàn bộ qua CSS, nên `innerText` trả về "KEY INGREDIENTS" và phép kiểm báo MISS
+  trong khi giao diện hoàn toàn đúng. Suýt nữa đi sửa một lỗi không tồn tại.
+
 # Phần B — Quyết định uỷ quyền, cổng fail-closed, hard-stop
 
 > **Bổ sung 2026-09-06.** Phần A ở trên ghi *AI sai → PM sửa*. Nhưng `§8.3` của

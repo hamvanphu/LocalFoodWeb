@@ -5,6 +5,8 @@ import { LayoutGrid, GalleryHorizontal } from "lucide-react";
 import DishTile from "./DishTile";
 import DishCard from "./DishCard";
 import Sheet from "@/components/ui/Sheet";
+import { t } from "@/lib/ui-strings";
+import type { Locale } from "@/lib/locale";
 import type { Dish } from "@/lib/types";
 
 type ViewMode = "overview" | "timeline";
@@ -13,10 +15,12 @@ export default function ProvinceDishExplorer({
   dishes,
   provinceName,
   provinceSlug,
+  locale = "vi",
 }: {
   dishes: Dish[];
   provinceName: string;
   provinceSlug: string;
+  locale?: Locale;
 }) {
   const [mode, setMode] = useState<ViewMode>("overview");
   const [selected, setSelected] = useState<Dish | null>(null);
@@ -39,7 +43,7 @@ export default function ProvinceDishExplorer({
           }`}
         >
           <LayoutGrid className="h-4 w-4" />
-          Tổng quan
+          {t(locale, "province.overview")}
         </button>
         <button
           onClick={() => setMode("timeline")}
@@ -48,7 +52,7 @@ export default function ProvinceDishExplorer({
           }`}
         >
           <GalleryHorizontal className="h-4 w-4" />
-          Hành trình
+          {t(locale, "province.journey")}
         </button>
       </div>
 
@@ -67,7 +71,13 @@ export default function ProvinceDishExplorer({
         <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4">
           {dishes.map((dish, index) => (
             <div key={dish.slug} className="w-[85vw] max-w-md shrink-0 snap-center">
-              <DishCard dish={dish} provinceSlug={provinceSlug} priority={index === 0} index={index} />
+              <DishCard
+                dish={dish}
+                provinceSlug={provinceSlug}
+                priority={index === 0}
+                index={index}
+                locale={locale}
+              />
             </div>
           ))}
         </div>
@@ -77,10 +87,10 @@ export default function ProvinceDishExplorer({
         {selected && (
           <div>
             <p className="px-6 pt-2 text-xs uppercase tracking-wide text-ink/65">
-              {provinceName} · Món ăn đặc trưng
+              {provinceName} · {t(locale, "province.dishes")}
             </p>
             <div className="p-6 pt-3">
-              <DishCard dish={selected} provinceSlug={provinceSlug} priority index={0} />
+              <DishCard dish={selected} provinceSlug={provinceSlug} priority index={0} locale={locale} />
             </div>
           </div>
         )}

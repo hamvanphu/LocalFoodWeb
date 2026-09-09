@@ -1,0 +1,56 @@
+{
+  "slug": "nam-dinh",
+  "summary": "Nam Định is held to be one of the cradles of Vietnamese phở (rice-noodle soup), which grew out of the two villages of Vân Cù and Giao Cù, where the trade is a hundred years old. Thành Nam (the old name for Nam Định city) is known besides for the soft, fragrant bánh gai bà Thi and the crisp, nutty kẹo Sìu Châu — country gifts that generations have grown up with.",
+  "dishes": {
+    "pho-nam-dinh": {
+      "description": "Phở Nam Định has more than a hundred years behind it, beginning in the two craft villages of Vân Cù and Giao Cù, whose people worked in the Chinese-run cao lâu (Chinese-style restaurants) before breaking away to open phở shops of their own. A Nam Định bowl is marked by a broth that is clear yet full-flavoured, faintly fragrant with ginger and nước mắm (Vietnamese fish sauce), by wide bánh phở (flat rice noodles) that are soft with a little chew, and by fresh, sweet beef. In 2024 phở Nam Định, together with phở Hà Nội, was recognised as national intangible cultural heritage.",
+      "keyIngredients": [
+        "Wide bánh phở (flat rice noodles)",
+        "Beef bones for the broth",
+        "Beef, served rare or well done",
+        "Charred ginger and charred shallot",
+        "Good nước mắm (Vietnamese fish sauce), cinnamon, star anise"
+      ],
+      "prepOutline": [
+        "Simmer the beef bones for hours with charred ginger and shallot for a clear, sweet broth",
+        "Season the broth with nước mắm (Vietnamese fish sauce) and a little cinnamon and star anise for a light fragrance",
+        "Blanch the wide bánh phở (flat rice noodles) and lay them in the bowl",
+        "Arrange rare or cooked beef on top and ladle the hot broth over"
+      ],
+      "howToEat": "Phở is eaten hot the moment the broth is ladled over, usually with quẩy (fried dough sticks), lime and fresh chilli, and usually at breakfast; the mark of a Nam Định phở shop is the cooking counter set right at the door, where customers can watch."
+    },
+    "banh-gai-ba-thi": {
+      "description": "Bánh gai bà Thi comes from the bánh gai of Cầu Ốc in Lộc Hạ, Nam Định city, which Mrs Thi built into a brand of her own from 1978. The cakes are made from sticky rice flour worked with finely pounded lá gai (ramie leaf), filled with mung bean, coconut, lotus seed and pork fat, and wrapped in dried banana leaf — counted among the best-known country gifts of Thành Nam.",
+      "keyIngredients": [
+        "Sticky rice flour",
+        "Lá gai (ramie leaf), pounded fine",
+        "Mung bean and lotus seed for the filling",
+        "Grated coconut, pork fat",
+        "Sesame scattered over the outside"
+      ],
+      "prepOutline": [
+        "Boil the lá gai (ramie leaf), pound it fine and work it into the sticky rice flour until smooth and pliable",
+        "Cook the mung bean filling with sugar, grated coconut, lotus seed and pork fat",
+        "Wrap the dough and filling in dried lá chuối (banana leaf) and scatter sesame over the outside",
+        "Steam the cakes through and let them cool before eating"
+      ],
+      "howToEat": "Bánh gai bà Thi is eaten cool, with the banana leaf peeled back; it is usually bought as a gift when visiting Nam Định, for the supple fragrance of lá gai (ramie leaf) against the sweet, nutty filling."
+    },
+    "keo-sieu-chau": {
+      "description": "Kẹo Sìu Châu — also called kẹo lạc Nam Định — is a traditional speciality of Nam Định city, made from crisp roasted peanuts stirred into pulled mạch nha (malt syrup), pressed thin and cut into small bars. The name 'Sìu Châu' comes from the old Chinese community's usage, and is bound up with the long-established sweet makers on Hàng Sắt street.",
+      "keyIngredients": [
+        "Roasted shelled peanuts",
+        "Mạch nha (malt syrup)",
+        "Roasted sesame",
+        "Fresh ginger"
+      ],
+      "prepOutline": [
+        "Roast the peanuts crisp and rub off the papery skins",
+        "Boil the mạch nha (malt syrup) with sugar until it pulls thick and is fragrant with ginger",
+        "Stir the roasted peanuts and sesame quickly into the hot syrup",
+        "Roll the mixture thin on a flat surface and cut it into small bars while it is still warm"
+      ],
+      "howToEat": "Kẹo Sìu Châu snaps crisp as you bite into it, usually taken with hot tea or bought as a gift, since it keeps a long time without losing its crunch or its fragrance."
+    }
+  }
+}

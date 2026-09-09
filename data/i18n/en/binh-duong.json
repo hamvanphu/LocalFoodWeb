@@ -1,0 +1,58 @@
+{
+  "slug": "binh-duong",
+  "summary": "Bình Dương is a fertile orchard country along the Sài Gòn river, best known for the centuries-old mangosteen and durian orchards of Lái Thiêu. Local cooking deftly pairs garden fruit with meat and fish in the southern manner, seen at its clearest in fruit gỏi (Vietnamese tossed salads), bánh bèo bì and nem chua.",
+  "dishes": {
+    "goi-ga-mang-cut-lai-thieu": {
+      "description": "Gỏi gà măng cụt belongs to the famous Lái Thiêu mangosteen country of Bình Dương, where mangosteen trees hundreds of years old still fruit reliably every season. Still-green mangosteen is peeled and its tender flesh shaved thin, then tossed with shredded chicken to give a light sourness and clean crunch against the rich sweetness of the meat — a very local way of turning garden fruit into a gỏi (Vietnamese tossed salad).",
+      "keyIngredients": [
+        "Green Lái Thiêu mangosteen (the tender flesh shaved thin)",
+        "Poached free-range chicken, torn into strands",
+        "Rau răm (Vietnamese coriander), húng quế (Thai basil)",
+        "Fried shallots, roasted peanuts",
+        "Sweet-sour nước mắm (Vietnamese fish sauce) mixed with garlic and chilli"
+      ],
+      "prepOutline": [
+        "Choose mangosteen that is still green but just ready, peel it and shave the tender flesh thin, soaking it in lightly salted water so it does not darken",
+        "Poach the chicken just through, then tear it into bite-sized strands",
+        "Toss the shaved mangosteen with the shredded chicken, rau răm (Vietnamese coriander) and húng quế (Thai basil)",
+        "Pour over the sweet-sour nước mắm (Vietnamese fish sauce), toss again, then scatter fried shallots and roasted peanuts on top"
+      ],
+      "howToEat": "The gỏi is eaten the moment it is tossed so the mangosteen keeps its crunch, usually scooped up with bánh phồng tôm (prawn crackers) or bánh tráng (rice paper), with a little more sweet-sour nước mắm (Vietnamese fish sauce) for dipping if you want it stronger."
+    },
+    "banh-beo-bi-binh-duong": {
+      "description": "Bánh bèo bì has been made in Bình Dương for hundreds of years, most famously in the version tied to chợ Búng (An Thạnh, Thuận An). Unlike central-region bánh bèo, which comes with its dipping sauce in a separate bowl, the Bình Dương version has diluted nước mắm (Vietnamese fish sauce) poured straight over the cakes, which are eaten with bì (pork and pork skin cut into strips and tossed with thính, roasted ground rice) and mỡ hành (spring onion oil) — light and richly nutty at the same time.",
+      "keyIngredients": [
+        "Rice flour and tapioca starch (for the bánh bèo)",
+        "Bì (boiled pork and pork skin cut into strips and tossed with thính, roasted ground rice)",
+        "Steamed mung beans, mashed smooth",
+        "Mỡ hành (spring onion oil)",
+        "Shredded cucumber",
+        "Diluted, lightly sweet nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Mix rice flour with tapioca starch and water, then steam it in small dishes into thin bánh bèo",
+        "Boil the pork and pork skin, cut them into fine strips and toss with thính (roasted ground rice) and seasoning to make the bì",
+        "Steam the mung beans, mash them smooth and scatter them over the cakes along with mỡ hành (spring onion oil)",
+        "Mix the nước mắm (Vietnamese fish sauce) diluted and gently sweet in the local style, not as strong as central-region dipping sauce"
+      ],
+      "howToEat": "The bánh bèo are laid out on a plate, topped with bì, mung beans, mỡ hành (spring onion oil) and shredded cucumber, and then the diluted nước mắm (Vietnamese fish sauce) is poured straight onto the plate and eaten at once with chopsticks or a spoon — never dipped from a separate bowl."
+    },
+    "nem-lai-thieu": {
+      "description": "Nem Lái Thiêu is Bình Dương's own nem chua, made from fresh pork fermented naturally with thính (roasted ground rice) and wrapped in lá vông (*vong* leaf) or lá chuối (banana leaf). After a few days of curing the nem is ready, gently sour and springy to the bite; locals often give it as a gift and just as often eat it as a snack with drinks at parties.",
+      "keyIngredients": [
+        "Fresh lean pork, pork skin cut into strips",
+        "Thính (roasted ground rice)",
+        "Garlic, chilli, pepper",
+        "Lá vông (*vong* leaf) or lá chuối (banana leaf) for wrapping",
+        "Bamboo strips for tying"
+      ],
+      "prepOutline": [
+        "Pound or mince the fresh pork smooth and mix it with the strips of pork skin",
+        "Season the meat with thính (roasted ground rice), garlic, pepper and a little sugar and salt to balance it",
+        "Wrap each small nem in lá vông (*vong* leaf) or lá chuối (banana leaf), with another layer of banana leaf around the outside",
+        "Cure the nem at room temperature for about 2-3 days, until it has fermented to a pleasant sourness"
+      ],
+      "howToEat": "Nem Lái Thiêu is unwrapped and eaten as it is with garlic and chilli or chilli sauce, usually as a snack with drinks or alongside bread and raw herbs."
+    }
+  }
+}

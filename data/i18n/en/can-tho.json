@@ -1,0 +1,81 @@
+{
+  "slug": "can-tho",
+  "summary": "Cần Thơ is the hub of the Mekong Delta, known for the Cái Răng floating market and a river-country cuisine that is western-delta through and through. Its cooking turns on abundant freshwater catch, long-fermented mắm (fermented fish), and the habit of eating everything with great heaps of fresh herbs — which is what makes Cần Thơ food both deep-flavoured and fresh at once.",
+  "dishes": {
+    "lau-mam": {
+      "description": "Lẩu mắm is the lẩu (hotpot) that defines the western Mekong, cooked from fermented fish mắm — usually mắm cá sặc (fermented gourami) or mắm cá linh (fermented linh, a small Mekong river fish) — let down with a clean-sweet pork bone stock. In Cần Thơ and across the Mekong Delta the dish belongs to river life, where field fish and garden greens are on hand all year round. The deep, faintly pungent taste of the mắm is balanced by the sweetness of the stock and the fresh, sharp bite of a great many kinds of greens.",
+      "keyIngredients": [
+        "Mắm cá sặc (fermented gourami) or mắm cá linh (fermented linh fish)",
+        "Pork bone stock",
+        "Cá lóc (snakehead), cá basa (basa catfish) or cá kèo (a slender goby)",
+        "Shrimp, squid, pork belly",
+        "Aubergine, okra",
+        "Sả (lemongrass), ginger, garlic, chilli",
+        "Greens on the side: bông súng (water lily stems), bông điên điển (sesbania flowers), kèo nèo (a marsh green), rau đắng (bitter herb), banana blossom, water spinach"
+      ],
+      "prepOutline": [
+        "The fish mắm is dissolved in water and strained of its bones, leaving a deep-flavoured liquid",
+        "Simmer pork bones for hours to draw out their natural sweetness, then combine with the strained mắm liquid",
+        "Fry sả (lemongrass) and garlic until fragrant, adjust the seasoning of the pot, and add the aubergine and okra",
+        "Set out the seafood, the meat and the many western-delta greens to eat alongside"
+      ],
+      "howToEat": "The pot sits on a burner kept at a constant boil; diners dip the fish, shrimp, squid, meat and greens into the boiling broth, eat it with fresh bún (fresh rice noodles), and dip further into nước mắm (Vietnamese fish sauce) with chilli, or into the hotpot broth itself."
+    },
+    "banh-xeo-can-tho": {
+      "description": "Bánh xèo (a crisp savoury fried pancake) is found all over Vietnam, but the western-delta version in Cần Thơ is large, with a shell made shatteringly crisp by rice batter mixed with fresh nghệ (turmeric) and coconut milk, while the filling is often varied with a local speciality such as ốc gạo (a small river snail). The cake is wrapped in mustard greens or other greens particular to the region, giving it the rich, nutty character that belongs to the river country.",
+      "keyIngredients": [
+        "Rice flour, fresh nghệ (turmeric)",
+        "Coconut milk",
+        "Pork, shrimp",
+        "Bean sprouts, mung bean",
+        "Ốc gạo, a small river snail (the variant particular to Cần Thơ)",
+        "Raw herbs and mustard greens to eat with",
+        "Sweet-sour nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Soak the rice and grind it with fresh nghệ (turmeric), then thin the batter with coconut milk for its yellow colour and richness",
+        "Pour the batter into a hot oiled pan, swirling evenly so the shell comes out thin and crisp",
+        "Lay the pork, shrimp, bean sprouts and mung bean (and ốc gạo, for the local variant) over one half of the cake",
+        "Fold the cake in half, fry until the shell is crisp and golden, then lift it onto a plate"
+      ],
+      "howToEat": "Bánh xèo is eaten by hand, not with chopsticks: take a mustard leaf or a sheet of bánh tráng (rice paper), wrap a piece of the cake with raw herbs, then dip it deep into a bowl of sweet-sour nước mắm (Vietnamese fish sauce) mixed southern-style."
+    },
+    "nem-nuong-cai-rang": {
+      "description": "Nem nướng Cái Răng is the speciality tied to Cần Thơ's Cái Răng floating market, born more than half a century ago from the recipe of a woman the locals called Tư Khem, who lived on the bank of the Cái Răng canal. Unlike the nem nướng of Nha Trang, the Cần Thơ version is usually eaten with soft, fine bánh hỏi from Phong Điền, along with a great many herbs and the sour, astringent fruits of the western delta.",
+      "keyIngredients": [
+        "Fresh pork pounded smooth with pork fat",
+        "A secret seasoning mix (garlic, pepper, sugar, nước mắm — Vietnamese fish sauce)",
+        "Bánh hỏi from Phong Điền",
+        "Thin bánh tráng (rice paper)",
+        "Chuối chát (astringent green banana), cucumber, starfruit, pineapple",
+        "Herbs of all kinds",
+        "Tương xay (a thick ground fermented soybean sauce) or sour-hot nước mắm for dipping"
+      ],
+      "prepOutline": [
+        "The pork is pounded smooth with pork fat and the secret seasoning until it turns supple and fine",
+        "Roll the meat into small round balls and thread them onto bamboo skewers",
+        "Grill the nem over glowing charcoal until the balls are burnished golden and fragrant",
+        "Set out the bánh hỏi, bánh tráng, raw herbs and dipping sauce to serve alongside"
+      ],
+      "howToEat": "Lay a grilled nem on a sheet of bánh tráng (rice paper) with bánh hỏi, herbs, chuối chát (astringent green banana), starfruit and pineapple, roll it up, then dip it into a bowl of thick tương xay (ground fermented soybean sauce) or of sour-hot nước mắm (Vietnamese fish sauce) mixed with garlic and chilli."
+    },
+    "chuoi-nep-nuong": {
+      "description": "Chuối nếp nướng began in neighbouring Vĩnh Long province and spread across the western delta, Cần Thơ included, becoming a favourite snack on the streets and at the floating market alike. A ripe chuối xiêm (a stubby local banana) is cased in a layer of supple glutinous rice, wrapped in lá chuối (banana leaf) and grilled over charcoal until the rice outside is charred and crisp and the banana inside is soft and sweet.",
+      "keyIngredients": [
+        "Ripe chuối xiêm (a stubby local banana)",
+        "Glutinous rice",
+        "Coconut milk",
+        "Sugar, salt",
+        "Lá chuối (banana leaf) for wrapping",
+        "Roasted peanuts, roasted sesame"
+      ],
+      "prepOutline": [
+        "The chuối xiêm is peeled and left about 30 minutes in sugar and salt to take the seasoning",
+        "The glutinous rice is mixed with coconut milk, sugar, salt and a little tapioca starch so it holds together and stays supple",
+        "Case each banana in a layer of the rice, then wrap it on the outside in lá chuối (banana leaf)",
+        "Grill over charcoal until the leaf is fragrant and charred and the rice outside is cooked and lightly crisp"
+      ],
+      "howToEat": "Peel back the leaf and cut the chuối nếp nướng into lengths or leave it whole, pour over rich coconut milk and scatter roasted peanuts and sesame on top; it can be eaten hot, straight off the grill."
+    }
+  }
+}

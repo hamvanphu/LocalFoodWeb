@@ -1,0 +1,82 @@
+{
+  "slug": "hai-phong",
+  "summary": "Hải Phòng is the largest port city in northern Vietnam, and its food culture carries the mingled marks of coastal life, the Red River delta and the French colonial period. Cooking here is known for being clean-tasting — never too hot, too salty or too sweet — prizing the freshness of the seafood and the celebrated nước mắm (Vietnamese fish sauce) of Cát Hải. Bánh đa cua, nem cua bể, bánh mì cay and the snail dishes are the names diners across the country associate with Hải Phòng.",
+  "dishes": {
+    "banh-da-cua": {
+      "description": "Bánh đa cua is considered the culinary emblem of Hải Phòng, bringing together the plain-spoken character of the delta countryside and the polish of a port city. The strands of red bánh đa (a broad rice noodle) are chewy and naturally red-brown from the traditional sun-drying method, the finest coming from the Dư Hàng Kênh area. The broth is built from marrow bones, dried shrimp, tomato and tamarind, enriched with the fatty roe of cua đồng (rice-paddy crab), giving a clean, deep sweetness quite unlike the phở or bún of Hà Nội.",
+      "keyIngredients": [
+        "Red bánh đa (the broad rice noodle used for bánh đa cua)",
+        "Cua đồng (rice-paddy crab — choose females, heavy with roe)",
+        "Pork marrow bones",
+        "Dried shrimp",
+        "Tomato, tamarind",
+        "Rau muống (water spinach), rau rút and rau nhút (water mimosa)",
+        "Mắm tôm (fermented shrimp paste), lime, chilli"
+      ],
+      "prepOutline": [
+        "Pound or grind the cua đồng (rice-paddy crab), strain off the crab liquid, then bring it to the boil so the roe sets into curds that float to the top",
+        "Simmer the marrow bones with dried shrimp to draw sweetness into the broth",
+        "Fry shallots, cook off the tomato and tamarind, stir them into the broth pot and season to taste",
+        "Blanch the red bánh đa and the greens (rau muống, rau rút) in boiling water",
+        "Lay the bánh đa in the bowl, add the greens, chả lá lốt (pork patties in wild betel leaf) or fish chả if you have them, then ladle over the broth and the crab curds"
+      ],
+      "howToEat": "Eaten hot the moment the broth goes in, usually with raw herbs, bean sprouts, lime, fresh chilli and a little mắm tôm (fermented shrimp paste) or chilli-mắm to deepen the flavour; many shops also serve it with chả lá lốt (pork patties in wild betel leaf) or grilled mackerel chả."
+    },
+    "nem-cua-be": {
+      "description": "Nem cua bể is Hải Phòng's own take on the fried nem, born of the abundant seafood off Đồ Sơn and Cát Hải. Unlike the long cylindrical nem common elsewhere, nem cua bể is folded into its distinctive square, filled with fresh sea crab meat torn into shreds together with shrimp, pork shoulder, miến (glass noodles), wood ear mushroom and bean sprouts, then fried crisp while keeping the deep sweetness of the crab.",
+      "keyIngredients": [
+        "Bánh đa nem (the rice-paper wrappers used for nem)",
+        "Sea crab meat",
+        "Fresh shrimp",
+        "Pork shoulder",
+        "Miến dong (arrowroot glass noodles), wood ear mushroom",
+        "Bean sprouts, spring onion",
+        "Egg (to bind)"
+      ],
+      "prepOutline": [
+        "Steam or boil the sea crab, pick out the meat and tear it into shreds by hand",
+        "Mix the crab meat with minced shrimp, pork shoulder, softened miến cut into lengths, shredded wood ear mushroom, bean sprouts and spring onion",
+        "Season, then add egg yolk so the filling binds",
+        "Dip the bánh đa nem briefly to soften it, then fold the filling into the distinctive square",
+        "Deep-fry over moderate heat until the wrapper is golden and crisp"
+      ],
+      "howToEat": "Nem cua bể is best eaten hot, within five to ten minutes of frying while the wrapper is still crisp, usually with fresh bún (rice noodles), raw herbs and a sweet-sour nước mắm (Vietnamese fish sauce) dip mixed with garlic and chilli."
+    },
+    "banh-mi-cay-hai-phong": {
+      "description": "Bánh mì cay, also called bánh mì que, appeared in the 1980s at a small shop in Khánh Lạp alley near the Hàng Kênh area of Hải Phòng. Each roll is barely longer than a hand span and only a little thicker than a finger, with a crackling crust, spread inside with rich pâté and eaten with chí chương — a fiercely hot house-fermented chilli sauce — making a cheap street snack that has hooked generations of Hải Phòng schoolchildren and students.",
+      "keyIngredients": [
+        "Bánh mì que (finger-thin baguettes about 20cm long)",
+        "Pork liver pâté",
+        "Back fat",
+        "Chí chương (a fermented chilli sauce of chilli, tomato, garlic and salt)",
+        "Coriander"
+      ],
+      "prepOutline": [
+        "Make the pâté from pork liver, fat and lean meat, steaming it in a water bath for about six hours until soft, rich and fragrant",
+        "Ferment the chí chương from fresh chilli, tomato, garlic and salt to the family recipe until the flavour comes up",
+        "Bake the bánh mì que in the oven until the crust is crisp",
+        "Split each roll lengthways and spread the pâté and fat evenly inside",
+        "Add coriander and chí chương to taste"
+      ],
+      "howToEat": "Eaten hot while the bread is still crisp, dipped in or drizzled with as much chí chương as you can take, usually alongside iced or hot tea; Hải Phòng locals tend to buy several at once because the rolls are so small."
+    },
+    "oc-hai-phong": {
+      "description": "Thanks to its position on the coast and the abundant seafood from Hạ Long bay, Cát Hải and the nearby estuaries, ốc (sea snails) have become a street-food emblem of Hải Phòng. They are sorted here in fine detail into varieties such as ốc mút, ốc đá and ốc hương, and served alongside other fresh shellfish like clams, ngán (a mud clam) and oysters, cooked in many ways — boiled, stir-fried with tamarind, stir-fried with coconut or steamed with lemongrass — for a wide range of flavours that still let the natural sweetness of the seafood through.",
+      "keyIngredients": [
+        "Sea snails of various kinds (ốc mút, ốc đá, ốc hương and others)",
+        "Clams, ngán (a mud clam), oysters",
+        "Sả (lemongrass), ginger, lime leaf",
+        "Tamarind, coconut milk",
+        "Chilli, garlic",
+        "Nước mắm (Vietnamese fish sauce) from Cát Hải"
+      ],
+      "prepOutline": [
+        "Soak the snails in rice-washing water or with chilli so they purge sand and mud",
+        "Boil them with sả (lemongrass), ginger and a few lime leaves to take away any fishy smell",
+        "Then cook to suit the dish: stir-fried with tamarind, stir-fried with rich coconut milk, or steamed with sả",
+        "Mix the dipping sauce from Cát Hải nước mắm (Vietnamese fish sauce), lime, chilli, garlic and minced ginger"
+      ],
+      "howToEat": "Eaten hot straight off the stove, picking the snails out with a toothpick and dipping them in the sour-hot ginger and chilli nước mắm (Vietnamese fish sauce); usually enjoyed in the evening with friends at the pavement snail stalls."
+    }
+  }
+}

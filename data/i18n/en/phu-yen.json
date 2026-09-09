@@ -1,0 +1,58 @@
+{
+  "slug": "phu-yen",
+  "summary": "Phú Yên is a south-central coastal province known for the country's largest ocean tuna fishery (Vũng Rô, Đông Tác) and for brackish lagoons such as Ô Loan and Cù Mông that yield distinctive seafood. Phú Yên cooking leans clean and lightly spiced, making the most of live sea produce — above all ocean tuna eye, Ô Loan blood cockles and bánh canh hẹ.",
+  "dishes": {
+    "mat-ca-ngu-dai-duong": {
+      "description": "Mắt cá ngừ đại dương (ocean tuna eye) is bound up with the tuna-line fishery of the Phú Yên fishermen, whose catch is the largest in the country. Each tuna weighing tens of kilos yields only a single pair of eyes the size of a fist, rich and nutty in taste and regarded as the finest and most nourishing part of the fish, which has made it a rare and costly speciality.",
+      "keyIngredients": [
+        "Ocean tuna eyes",
+        "Thuốc bắc (Chinese herbal tonic ingredients: jujube, goji berry, lotus seed)",
+        "Ginger",
+        "Spring onion",
+        "Pepper"
+      ],
+      "prepOutline": [
+        "Clean the tuna eyes, rub them with ginger wine to take off the fishiness, then wash off the slime",
+        "Arrange the eyes in a lidded pot with thuốc bắc (Chinese herbal tonic ingredients: jujube, goji berry, lotus seed), ginger and seasoning",
+        "Double-boil for several hours over a low flame until the eyes are soft and the broth clean and sweet",
+        "Adjust the seasoning and scatter over spring onion and pepper before serving"
+      ],
+      "howToEat": "Eat it hot, straight from the pot, each portion ladled into its own small bowl as a tiềm (double-boiled tonic), with bread or plain rice alongside, and drink down the rich, sweet broth the eye releases."
+    },
+    "banh-canh-he": {
+      "description": "Bánh canh hẹ is a common breakfast right across Phú Yên, set apart from bánh canh (thick rice-flour noodles) elsewhere by the sharp bite of finely chopped fresh garlic chives strewn over the top. The broth is simmered from bones and fresh fish — usually mackerel or sailfish — the noodles are soft and springy rice flour, and it is eaten with both fried and steamed chả cá (fish cake).",
+      "keyIngredients": [
+        "Rice-flour bánh canh (thick noodles)",
+        "Fried chả cá (fish cake)",
+        "Steamed chả cá",
+        "Fresh garlic chives",
+        "Bones and fish for the broth",
+        "Pepper, chilli"
+      ],
+      "prepOutline": [
+        "Simmer the broth from pork bones and fish heads for several hours until it is sweet and clear",
+        "Boil the fresh rice-flour bánh canh (thick noodles) until just done",
+        "Fry some of the chả cá (fish cake) golden and steam the rest so it stays soft and springy",
+        "Blanch the noodles, ladle over the hot broth, arrange the chả cá on top and scatter with chopped garlic chives"
+      ],
+      "howToEat": "Eat it hot the moment it is ladled into the bowl, with a squeeze of lime and ground or fresh chilli to lift it, stirring the garlic chives through the broth before you drink it."
+    },
+    "so-huyet-dam-o-loan": {
+      "description": "Ô Loan lagoon, in Tuy An district, is a well-known stretch of brackish water in Phú Yên that produces blood cockles with thick, sweet, richly flavoured flesh thanks to its particular ecology. Ô Loan blood cockles were granted a geographical indication certificate by the Intellectual Property Office in 2018, confirming their standing as a regional speciality.",
+      "keyIngredients": [
+        "Ô Loan blood cockles",
+        "Sả (lemongrass)",
+        "Ginger",
+        "Salt, pepper and lime dip",
+        "Rau răm (Vietnamese coriander)"
+      ],
+      "prepOutline": [
+        "Soak the cockles in rice-washing water with chilli so they spit out the sand",
+        "Steam or briefly boil them with bruised sả (lemongrass) until the shells just open",
+        "They can also be grilled over than hoa (charcoal) with spring onion oil to bring up the aroma",
+        "Prepare a salt, pepper and lime dip, or mắm gừng (nước mắm, Vietnamese fish sauce, with ginger), to go with them"
+      ],
+      "howToEat": "Eat them while still hot, prising the shells apart by hand and dipping in salt, pepper and lime or in mắm gừng (nước mắm, Vietnamese fish sauce, with ginger); they are usually served as a dish with drinks, with rau răm (Vietnamese coriander) alongside."
+    }
+  }
+}

@@ -1,8 +1,11 @@
 "use client";
 
+import type { Locale } from "@/lib/locale";
+
 interface SovereigntyMarkerProps {
   name: string;
   admin: string;
+  locale?: Locale;
   /** Luôn bật: đơn vị hành chính là phần khẳng định chủ quyền, không ẩn theo zoom. */
   detailed: boolean;
   onClick?: () => void;
@@ -22,13 +25,18 @@ export default function SovereigntyMarker({
   admin,
   detailed,
   onClick,
+  locale = "vi",
 }: SovereigntyMarkerProps) {
   const Tag = onClick ? "button" : "div";
 
   return (
     <Tag
       {...(onClick ? { type: "button" as const, onClick } : {})}
-      aria-label={`${name} — ${admin}, thuộc chủ quyền Việt Nam`}
+      aria-label={
+        locale === "en"
+          ? `${name} — ${admin}. Sovereign territory of Vietnam.`
+          : `${name} — ${admin}, thuộc chủ quyền Việt Nam`
+      }
       className={`flex flex-col items-center gap-1 ${
         onClick
           ? "cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-chili"

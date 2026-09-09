@@ -1,0 +1,54 @@
+{
+  "slug": "quang-ninh",
+  "summary": "Quảng Ninh holds the great Hạ Long bay and a rich stretch of sea and islands, so its cooking leans towards live seafood and the rare specialities of that coast. Chả mực pounded by hand in Hạ Long, the prized sá sùng of Vân Đồn and the hill-raised gà đồi Tiên Yên are the dishes that made the name of đất mỏ (the coal-mining country) cooking.",
+  "dishes": {
+    "cha-muc-ha-long": {
+      "description": "Chả mực Hạ Long is the best-known speciality of Quảng Ninh, and is on the list of Vietnam's 50 top speciality gifts. Fresh squid caught off Hạ Long and Vân Đồn is pounded by hand with a pestle in a stone mortar until it binds and turns springy, mixed with hard pork fat, shallot and pepper, shaped into patties and deep-fried until the outside is golden and crisp while the inside stays white, sweet and springy. The essential difference is that the squid is pounded by hand rather than machine-minced, which is what gives it a natural bite nowhere else can match.",
+      "keyIngredients": [
+        "Fresh Hạ Long squid",
+        "Mỡ khổ (hard back fat)",
+        "Shallot, dill",
+        "Pepper, nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Choose squid just off the boat, clean it and leave it to drain",
+        "Pound the squid by hand in a stone mortar with the mỡ khổ (hard back fat) until it is smooth and springy",
+        "Mix in minced shallot and pepper, and season with nước mắm (Vietnamese fish sauce)",
+        "Shape the mixture into flat round patties",
+        "Deep-fry until both sides are golden and crisp"
+      ],
+      "howToEat": "Chả mực is eaten hot, dipped in chilli sauce or in sweet-sour nước mắm (Vietnamese fish sauce), usually with bánh cuốn (steamed rice rolls) or plain xôi (sticky rice), or as something to drink over; it is the speciality gift no one leaves Hạ Long without."
+    },
+    "sa-sung-van-don": {
+      "description": "Sá sùng — also called địa sâm or sâu biển — is a prized marine peanut worm that lives only in the sand of the tidal flats at Quan Lạn and Minh Châu in Vân Đồn district. Gathering it is painstaking work: people dig along the flats at low tide and take only a very small quantity in a day, so the price is high and it is likened to the 'solid gold' of the sea. Dried sá sùng has a deep natural sweetness, and is commonly simmered into phở and bún broths because it lifts a clean sweetness out of them with no monosodium glutamate at all.",
+      "keyIngredients": [
+        "Sá sùng (peanut worm), fresh or dried",
+        "Broth for phở or bún",
+        "Seasonings to taste"
+      ],
+      "prepOutline": [
+        "Dig the sá sùng (peanut worm) out of the tidal sand at low water",
+        "Clean out the sand-filled gut",
+        "Dry it in the sun, or toast it briefly in a hot pan to bring up the fragrance",
+        "Simmer it into a bone broth, or roast it crisp to eat as it is"
+      ],
+      "howToEat": "Dried sá sùng (peanut worm) is usually roasted crisp and picked at over beer or liquor, or simmered with bones to draw a natural sweetness into the broth of Quảng Ninh's phở and seafood bún."
+    },
+    "ga-doi-tien-yen": {
+      "description": "Gà Tiên Yên is a prized native chicken of Tiên Yên district in Quảng Ninh, recognisable by its beard and its glossy yellow skin and feet. The birds range free on the hillsides and forage insects, worms and crickets, so the meat is firm and the skin crisp, with a thin marbling of fat through the grain that gives the rich fragrance it is known for when boiled or steamed. It is listed among Vietnam's 50 top speciality gifts and is a flagship OCOP product of Quảng Ninh.",
+      "keyIngredients": [
+        "Gà Tiên Yên",
+        "Lime leaf",
+        "Coarse salt, pepper",
+        "Ginger, shallot"
+      ],
+      "prepOutline": [
+        "Choose a hill-ranged Tiên Yên chicken and clean it",
+        "Boil or steam the bird whole with ginger and shallot for fragrance",
+        "Chop it into pieces the moment it is just cooked, while the skin is still crisp",
+        "Scatter finely shredded lime leaf over it before arranging it on the plate"
+      ],
+      "howToEat": "The boiled Tiên Yên chicken is chopped into pieces and dipped in salt with lime and chilli, or in salt with lime leaf; it appears at feasts and important banquets, and many visitors seek it out as a speciality to take home."
+    }
+  }
+}

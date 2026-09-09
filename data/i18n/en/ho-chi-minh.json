@@ -1,0 +1,96 @@
+{
+  "slug": "ho-chi-minh",
+  "summary": "TP. Hồ Chí Minh (formerly Sài Gòn) is the liveliest food centre in southern Vietnam, where dishes from every region and from the Chinese and Khmer communities have gathered and been reworked. The cooking leans sweet and rich, uses plenty of herbs and carefully mixed dipping sauces, and is defined by a culture of eating out, and eating late, on the pavement. Cơm tấm, bánh mì and hủ tiếu are the dishes bound up with the city's urban rhythm.",
+  "dishes": {
+    "com-tam": {
+      "description": "Cơm tấm is the emblematic dish of Sài Gòn, born from the broken grains (tấm) that rice workers swept up at the end of each day at the milling houses in the early 20th century. From a cheap meal for poor labourers it became a speciality loved right across the city, eaten morning, noon and night. Sài Gòn locals hold cơm tấm as close as Hà Nội locals hold phở, and it is found everywhere from pavement stalls to smart restaurants.",
+      "keyIngredients": [
+        "Gạo tấm (broken rice)",
+        "Grilled pork chop",
+        "Bì (shredded pork and pork skin)",
+        "Steamed chả trứng (egg and pork loaf)",
+        "Fried egg",
+        "Pickled carrot and daikon",
+        "Sweet-sour nước mắm (Vietnamese fish sauce)",
+        "Scallion oil"
+      ],
+      "prepOutline": [
+        "Wash and cook the gạo tấm (broken rice) in a nồi đất (clay pot) or cast-iron pot so the grains come out dry, loose and fragrant.",
+        "Marinate the pork chops in sả (lemongrass), garlic, sugar and nước mắm (Vietnamese fish sauce), then grill over than hoa (charcoal) until the edges char and the smell rises.",
+        "Make the bì from pork and pork skin cut into fine strips and tossed with thính (roasted ground rice).",
+        "Steam the chả trứng with wood ear mushroom and miến (glass noodles) until set, soft and rich.",
+        "Mix a light sweet-sour nước mắm, and pickle carrot and daikon in vinegar and sugar.",
+        "Plate the rice with the chop, the bì, the chả trứng, a fried egg, cucumber and pickles, then spoon over the scallion oil."
+      ],
+      "howToEat": "Cơm tấm is eaten with a spoon and fork rather than chopsticks; the sweet-sour nước mắm (Vietnamese fish sauce) is poured straight over the plate rather than kept as a separate dip, and the pickles and cucumber balance the richness of the grilled chop and the scallion oil."
+    },
+    "hu-tieu-nam-vang": {
+      "description": "Hủ tiếu Nam Vang originates in Khmer Phnom Penh (Nam Vang) and was carried into Sài Gòn by the Chinese and Khmer communities, becoming one of the city's most characteristic hủ tiếu (rice noodle) dishes. It combines springy hủ tiếu strands, a broth simmered from pork bones, and pork offal, shrimp and squid, for a deep flavour that carries the mark of Khmer, Chinese and Vietnamese cooking meeting.",
+      "keyIngredients": [
+        "Springy hủ tiếu strands (tapioca-starch noodles)",
+        "Pork bones",
+        "Minced pork",
+        "Pork offal (liver, intestine)",
+        "Shrimp",
+        "Squid",
+        "Quail eggs",
+        "Fried garlic",
+        "Garlic chives, bean sprouts, herbs"
+      ],
+      "prepOutline": [
+        "Simmer the pork bones for hours for a clear, naturally sweet broth.",
+        "Blanch the hủ tiếu in boiling water just until done, chewy but tender.",
+        "Prepare and cook the pork liver, shrimp, minced pork and quail eggs.",
+        "Fry the garlic golden and fragrant to scatter over the bowl.",
+        "Lay the hủ tiếu in the bowl with the toppings, then ladle the hot broth over.",
+        "Scatter over spring onion, garlic chives, pepper and fried garlic, and serve with bean sprouts and herbs."
+      ],
+      "howToEat": "Hủ tiếu Nam Vang is eaten hot the moment the broth goes in, so the strands do not go soft; diners usually squeeze in lime, add fresh chilli or chilli sauce, and toss everything with the bean sprouts and garlic chives before starting. It can be ordered dry (broth served on the side) or in soup, as you prefer."
+    },
+    "banh-mi-sai-gon": {
+      "description": "Bánh mì Sài Gòn descends from the French baguette that arrived in Vietnam under colonial rule in the 19th century, reshaped by Sài Gòn bakers into a shorter loaf (about 30-40cm) with a crisp crust and a hollow crumb ready to be filled. The filled form common today is thought to have taken clear shape from around 1958, when bakeries began putting meat and pâté inside the loaf, creating a fast food thoroughly Vietnamese in character.",
+      "keyIngredients": [
+        "Vietnamese baguette",
+        "Liver pâté",
+        "Roast or grilled pork",
+        "Chả lụa (Vietnamese pork sausage)",
+        "Pickled carrot and daikon",
+        "Cucumber",
+        "Coriander, chilli",
+        "Sauces (mayonnaise, soy sauce)"
+      ],
+      "prepOutline": [
+        "Bake the loaf until the crust crackles and the crumb is light.",
+        "Prepare the liver pâté, the roast or grilled pork, and the chả lụa (Vietnamese pork sausage), sliced.",
+        "Pickle shredded carrot and daikon in vinegar and sugar.",
+        "Split the loaf lengthways and spread pâté and mayonnaise or sauce evenly over both faces.",
+        "Layer in the meat, the chả, the pickles, cucumber, coriander and chilli.",
+        "Add more sauce or a little soy sauce to taste before wrapping it up."
+      ],
+      "howToEat": "Bánh mì should be eaten right after it is made so the crust stays crisp; it is held in the hand and eaten quickly on the move, or as breakfast or an afternoon snack on the pavements of Sài Gòn."
+    },
+    "banh-xeo-mien-nam": {
+      "description": "Bánh xèo is a Vietnamese dish whose name comes from the 'xèo xèo' sizzle the batter makes as it hits the hot pan. The southern and Mekong Delta version stands out for its crackling shell, tinted golden with nghệ (turmeric) powder, and a generous filling of shrimp and pork with egg — unlike bánh khoái of central Vietnam, whose shell is thinner and less crisp. It is a dish deeply of the river country, and usually appears when family and friends gather.",
+      "keyIngredients": [
+        "Rice flour",
+        "Nghệ (turmeric) powder",
+        "Coconut milk",
+        "Shrimp",
+        "Pork belly",
+        "Bean sprouts",
+        "Egg",
+        "Assorted raw leaves and herbs (lettuce, diếp cá / fish mint, tía tô / perilla)",
+        "Sweet-sour nước mắm (Vietnamese fish sauce)"
+      ],
+      "prepOutline": [
+        "Mix the rice flour with nghệ (turmeric) powder and coconut milk for a golden, rich shell.",
+        "Briefly stir-fry the shrimp and thinly sliced pork belly until they firm up.",
+        "Pour a thin layer of batter into the hot pan, swirl it out evenly, then add the shrimp, pork and bean sprouts.",
+        "Cover, or hold it over moderate heat, until the bánh is cooked and crisp with golden edges.",
+        "Fold it in half and lift it onto a plate the moment the shell is crisp.",
+        "Mix the sweet-sour nước mắm (Vietnamese fish sauce) and set out the plate of raw herbs."
+      ],
+      "howToEat": "Bánh xèo is rolled up in bánh tráng (rice paper) or in raw leaves (lettuce, diếp cá / fish mint, tía tô / perilla), then dipped deep into sweet-sour nước mắm (Vietnamese fish sauce) mixed with garlic and chilli, and eaten with the hands while still hot so you get the full crackle of the shell."
+    }
+  }
+}

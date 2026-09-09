@@ -1,0 +1,61 @@
+{
+  "slug": "ba-ria-vung-tau",
+  "summary": "Bà Rịa - Vũng Tàu is a coastal province of the southeastern region, known for its beaches and large fishing ports, so its cooking turns on seafood landed fresh every day. Bánh khọt Vũng Tàu, the gỏi (raw fish salads) and the hot-and-sour seafood lẩu (hotpots) are the clearest expressions of this province's sea-facing way of eating.",
+  "dishes": {
+    "banh-khot-vung-tau": {
+      "description": "Bánh khọt is a small fried rice-flour cake typical of the South, and the Vũng Tàu version is taken as the benchmark for being noticeably richer than elsewhere. The batter is rice flour loosened with coconut milk, poured into small fired-clay moulds greased with mỡ hành (pork fat with spring onion) until the rim turns brittle and crisp while the centre stays soft, with a fresh shrimp set on top. Vũng Tàu cooks tend to use more fat, giving the cakes the full, rich taste characteristic of the coast.",
+      "keyIngredients": [
+        "Rice flour",
+        "Coconut milk",
+        "Fresh shrimp",
+        "Pork fat, spring onion",
+        "Steamed mung beans",
+        "Raw greens to eat alongside (mustard greens, lettuce, herbs)",
+        "Sweet-sour nước mắm (Vietnamese fish sauce), with pickled carrot and shredded papaya"
+      ],
+      "prepOutline": [
+        "Mix rice flour with coconut milk and a little turmeric powder for a light golden colour",
+        "Pour mỡ hành (pork fat with spring onion) into each small fired-clay mould already heated over charcoal",
+        "Ladle in the batter, cover so the rim crisps while the centre stays soft, and set a shrimp and a few mung beans on top",
+        "When the cake is golden through, work it carefully out of the mould with a spoon"
+      ],
+      "howToEat": "Lift a cake with your fingers or a spoon onto a mustard green leaf with herbs, roll it up and dip it deep into the bowl of sweet-sour nước mắm (Vietnamese fish sauce) with its pickles; you can also scatter the pickles straight over the cake before dipping."
+    },
+    "lau-ca-duoi-vung-tau": {
+      "description": "Lẩu cá đuối is a familiar dish for the sea people of Vũng Tàu, making use of the fresh cá đuối (stingray) landed close to shore. Cá đuối flesh has almost no fine bones — only soft cartilage in the head and along the spine — and cooks to a natural sweetness, lightly springy and not fishy at all if it is prepared properly. The lẩu (hotpot) broth is built hot and sour with soured bamboo shoot, giving it a depth that suits seafood well.",
+      "keyIngredients": [
+        "Fresh cá đuối (stingray)",
+        "Soured bamboo shoot",
+        "Tomato, pineapple",
+        "Sả (lemongrass), chilli, and tamarind or tắc (a Vietnamese kumquat) for sourness",
+        "Vegetables to dip: water spinach, banana blossom, okra, water mimosa"
+      ],
+      "prepOutline": [
+        "Prepare the cá đuối (stingray) thoroughly, rubbing it with salt and vinegar or ginger to strip the slime and the fishy smell",
+        "Cut the fish into bite-sized pieces and season it lightly",
+        "Fry the sả (lemongrass) until fragrant, then build the hot-and-sour broth with soured bamboo shoot, tomato and tamarind",
+        "Once the broth boils, drop in the cá đuối and cook it just through, adjusting the sour-hot balance"
+      ],
+      "howToEat": "The lẩu (hotpot) is kept simmering at the table and eaten with fresh bún (rice noodles) and vegetables dipped into the boiling broth, the fish dipped in undiluted nước mắm (Vietnamese fish sauce) with crushed chilli."
+    },
+    "goi-ca-mai-vung-tau": {
+      "description": "Gỏi cá mai is a plain, everyday dish of the fishermen along the Bà Rịa - Vũng Tàu coast, made with cá mai (silverside), a small fish with a translucent body, firm flesh and almost no fishy smell. The fish is cured rare in lime juice or vinegar rather than over heat, then tossed with thính (roasted ground rice), roasted peanuts and herbs, making a cool, lightly sour gỏi (tossed salad) very characteristic of this coast.",
+      "keyIngredients": [
+        "Fresh cá mai (silverside)",
+        "Lime or vinegar",
+        "Thính (roasted ground rice)",
+        "Roasted peanuts, roughly crushed",
+        "Sour star fruit, green banana",
+        "Herbs, fried shallot",
+        "Sweet-sour nước mắm (Vietnamese fish sauce) with garlic and chilli"
+      ],
+      "prepOutline": [
+        "Scale the cá mai (silverside), remove head and guts, rinse and drain",
+        "Cure the fish in lime juice or vinegar until the flesh turns rare and firms up",
+        "Squeeze the fish dry, then toss it with thính (roasted ground rice), roasted peanuts, fried shallot and finely chopped herbs",
+        "Mix the sweet-sour nước mắm (Vietnamese fish sauce) with garlic and chilli for dipping"
+      ],
+      "howToEat": "Gỏi cá mai is usually rolled in bánh tráng (dry rice paper) with raw greens, star fruit and green banana, then dipped into a bowl of strong sweet-sour nước mắm (Vietnamese fish sauce)."
+    }
+  }
+}

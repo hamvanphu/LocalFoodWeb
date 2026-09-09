@@ -1,0 +1,54 @@
+{
+  "slug": "lai-chau",
+  "summary": "Lai Châu is a border province in the far Northwest, home to Thái, Dao and Mông communities who let their livestock roam and fish the mountain streams. Its cooking is defined by plain grilled and ash-buried dishes such as lợn cắp nách, cá bống vùi tro and lam nhọ, which keep the raw flavours of the mountains intact.",
+  "dishes": {
+    "lon-cap-nach-lai-chau": {
+      "description": "Lợn cắp nách is the small native pig of the ethnic minority communities in the Lai Châu highlands. Left to roam the hill fields, it grows slowly and weighs only about 10-20kg when it goes to market. Because it is so small, people would carry a whole pig to market tucked under one arm — which is where the name comes from. The meat is firm and lean with little fat, and naturally fragrant from all that movement and a diet foraged in the forest.",
+      "keyIngredients": [
+        "A whole lợn cắp nách",
+        "Lá nhội (nhoi leaf), wild forest herbs",
+        "Salt, chilli, mắc khén (Northwest Vietnamese wild pepper)",
+        "Riềng (galangal), sả (lemongrass)"
+      ],
+      "prepOutline": [
+        "Pick a small lợn cắp nách, clean it and singe the skin twice over straw or sugarcane bagasse so it smells good",
+        "Break the carcass down into cuts for each dish (grilled, steamed, stir-fried offal)",
+        "Marinate the meat with salt, riềng (galangal), sả (lemongrass) and mắc khén (Northwest Vietnamese wild pepper) depending on the dish",
+        "Grill or steam until just cooked, keeping the meat sweet and tender"
+      ],
+      "howToEat": "The pork is usually grilled or steamed, then dipped in nậm chéo (the local dipping sauce) with lá nhội (nhoi leaf), fresh herbs and fresh chilli, and eaten with xôi (sticky rice) or plain rice."
+    },
+    "ca-bong-vui-tro": {
+      "description": "Cá bống vùi tro is a homely Lai Châu dish made with small cá bống (goby) caught in the streams of the region. The fish are marinated with chilli, pepper, ginger, mắc khén (Northwest Vietnamese wild pepper), húng (Vietnamese mint) and sả (lemongrass) until the seasoning soaks in, then wrapped in lá dong (dong leaf) and buried in hot ashes until done. Burying rather than grilling directly cooks the fish evenly while keeping its natural sweetness, so the scent of the mountain spices comes through together with that of the roasted lá dong.",
+      "keyIngredients": [
+        "Cá bống (goby) from mountain streams",
+        "Chilli, pepper, ginger, mắc khén (Northwest Vietnamese wild pepper)",
+        "Húng (Vietnamese mint), sả (lemongrass)",
+        "Lá dong (dong leaf) for wrapping"
+      ],
+      "prepOutline": [
+        "Clean the stream cá bống (goby) and let them drain",
+        "Marinate the fish with chilli, pepper, ginger, mắc khén (Northwest Vietnamese wild pepper), húng (Vietnamese mint) and sả (lemongrass) for 15-30 minutes",
+        "Wrap the marinated fish in lá dong (dong leaf) and tie the parcel tightly",
+        "Bury the parcel in hot ashes for about 30 minutes, turning it several times so it cooks evenly"
+      ],
+      "howToEat": "Cá bống vùi tro is eaten hot the moment the leaf is opened, usually as a drinking snack or alongside rice or xôi (sticky rice) at a family meal."
+    },
+    "lam-nho": {
+      "description": "Lam nhọ is a signature dish of the Thái people of Lai Châu; in Thái the name means \"grilled\" (lam) and \"tender, falling apart\" (nhọ). Fresh buffalo or beef is seared over than hoa (charcoal), sliced thin and tossed with pumpkin leaves, wild forest greens and the local spices, then grilled again inside an ống tre (bamboo tube) until it is meltingly soft. The dish is deeply savoury, the sweetness of the grilled meat set against the nutty taste of the forest greens.",
+      "keyIngredients": [
+        "Buffalo or beef",
+        "Pumpkin leaves, wild forest greens",
+        "Mắc khén (Northwest Vietnamese wild pepper), chilli, sả (lemongrass)",
+        "An ống tre (bamboo tube) for grilling"
+      ],
+      "prepOutline": [
+        "Choose fresh buffalo or beef and sear it over than hoa (charcoal)",
+        "Slice the seared meat thinly",
+        "Toss the meat with pumpkin leaves, forest greens and mắc khén (Northwest Vietnamese wild pepper), chilli and sả (lemongrass)",
+        "Pack the mixture into an ống tre (bamboo tube) and grill it on over the coals until the meat is completely tender"
+      ],
+      "howToEat": "Lam nhọ is eaten hot, usually as a drinking snack or with xôi (sticky rice) at Thái festivals and when the household receives guests."
+    }
+  }
+}

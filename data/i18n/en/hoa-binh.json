@@ -1,0 +1,54 @@
+{
+  "slug": "hoa-binh",
+  "summary": "Hòa Bình is the cultural cradle of the Mường people, with stilt-house hamlets set among limestone valleys. Mường cooking here is bound up with fermenting and souring meat to preserve it, and with cooking rice inside ống tre (bamboo tubes), producing dishes such as thịt muối chua, cơm lam and thịt trâu nấu lá lồm — lightly sour, deeply savoury and quite their own.",
+  "dishes": {
+    "thit-muoi-chua-hoa-binh": {
+      "description": "Thịt lợn muối chua is a distinctive invention of the Mường people of Hòa Bình, brought out for festivals and Tết, for weddings, and for honoured guests. Pork from pigs raised loose in the forest is cut into pieces and seasoned with pounded riềng (galangal), salt, a forest-leaf fermentation starter and glutinous rice wine, then packed with thính (roasted ground rice) into an earthenware jar for a week or two to sour naturally. The finished meat is coated in the golden thính, with a characteristic saltiness and gentle sourness.",
+      "keyIngredients": [
+        "Village pork (belly, shoulder)",
+        "Thính — roasted rice, ground fine",
+        "Riềng (galangal), salt, men lá (a forest-leaf fermentation starter)",
+        "Rượu nếp cái (glutinous rice wine)"
+      ],
+      "prepOutline": [
+        "Cut the pork into bite-sized pieces and season with pounded riềng (galangal), salt, men lá (a forest-leaf fermentation starter) and glutinous rice wine",
+        "Toss the seasoned meat with thính (roasted ground rice) so every piece is coated",
+        "Pack the meat into a jar or tube lined with lá chuối (banana leaf) and press it down tight",
+        "Leave it above the kitchen fire or somewhere dry for a week or two to ferment sour"
+      ],
+      "howToEat": "The soured meat is wrapped in forest leaves — lá sung (young fig leaf), lá mơ, đinh lăng (*dinh lang* leaf) — and dipped in chilli sauce, usually served as a starter or alongside rice wine."
+    },
+    "com-lam-hoa-binh": {
+      "description": "Cơm lam is bound up with the daily life of the Mường of Hòa Bình, arising from the habit of carrying rice up to the fields or into the forest, then cutting a length of bamboo and cooking the rice on the spot. Fragrant upland glutinous rice is soaked in stream water, packed into a young ống tre (bamboo tube) and roasted over embers until cooked through. The saying \"eat cơm lam, live in a stilt house\" suggests how far this dish has become an inseparable part of Mường culture in Hòa Bình.",
+      "keyIngredients": [
+        "Upland glutinous rice",
+        "Young ống tre (bamboo tube)",
+        "Stream water",
+        "Lá chuối (banana leaf) to plug the tube"
+      ],
+      "prepOutline": [
+        "Rinse the upland glutinous rice and soak it for about two hours with a little salt",
+        "Put the rice and stream water into a young ống tre (bamboo tube) and plug the mouth tightly with lá chuối (banana leaf)",
+        "Stand the tubes around the fire and turn them steadily as they roast",
+        "Test by pressing the tube lightly; roast until the rice is cooked soft and fragrant"
+      ],
+      "howToEat": "Let the cơm lam cool a little, peel away the charred outer layer while keeping the thin bamboo membrane inside, and eat it with grilled meat, sesame salt, or the hot dipping sauce of the Mường."
+    },
+    "thit-trau-nau-la-lom": {
+      "description": "Thịt trâu nấu lá lồm is a well-known homely speciality of the Mường of Hòa Bình, joining the tender sweetness of fresh buffalo meat to the clean, gentle sourness of lá lồm, a forest leaf that grows widely in the mountains of Hòa Bình. The buffalo is stewed until soft with a little broken rice and the lá lồm until the liquid thickens, making a deep, warming dish well suited to the cool days of the highlands.",
+      "keyIngredients": [
+        "Buffalo meat (shank or loin)",
+        "Fresh lá lồm (a sour forest leaf)",
+        "Broken rice",
+        "Seasonings, chilli"
+      ],
+      "prepOutline": [
+        "Choose fresh buffalo meat, red with firm grain, and cut it into bite-sized pieces",
+        "Choose deep green lá lồm (sour forest leaf), wash it and chop it fine",
+        "Stew the buffalo with a little broken rice until it is almost tender",
+        "Add the lá lồm and cook it in, seasoning to taste; do not cook it too long or it turns bitter"
+      ],
+      "howToEat": "The dish is at its best served hot, with plain rice or bún (rice noodles); it appears both at everyday meals and at Mường gatherings."
+    }
+  }
+}

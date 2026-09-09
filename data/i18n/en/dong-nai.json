@@ -1,0 +1,58 @@
+{
+  "slug": "dong-nai",
+  "summary": "Đồng Nai sits on the Đồng Nai river and is known for the century-old pomelo village of Tân Triều, giving it a cuisine that pairs freshwater fish with prized fruit. Gỏi cá Biên Hòa, the dishes built around pomelo and the specialities of the Long Khánh area together make up the province's varied culinary identity.",
+  "dishes": {
+    "goi-ca-bien-hoa": {
+      "description": "Gỏi cá Biên Hòa is a long-established speciality of Biên Hòa city, made with fresh field-caught cá lóc (snakehead fish) from the Đồng Nai river. The fish is skinned, boned and sliced thin, seasoned with salt, pepper, sugar, lime and chilli, then tossed with a great many fresh herbs and a sweet-sour dressing — a fresh, boldly flavoured gỏi (tossed salad) that belongs to this riverside city.",
+      "keyIngredients": [
+        "Fresh field-caught cá lóc (snakehead fish) from the Đồng Nai river",
+        "Salt, pepper, sugar, lime and chilli for the marinade",
+        "Herbs: đinh lăng (*dinh lang* leaf), húng quế (Thai basil), ngò gai (sawtooth herb), tía tô (perilla), diếp cá (fish mint)",
+        "Roasted peanuts, bánh tráng (rice paper)",
+        "A thick sweet-sour nước mắm (Vietnamese fish sauce) dressing"
+      ],
+      "prepOutline": [
+        "Clean the cá lóc (snakehead fish), remove the skin and bones and slice it thin",
+        "Season the sliced fish with salt, pepper, sugar, lime and chilli so the flesh firms up and loses any rawness",
+        "Wash the herbs and leave them to drain",
+        "Mix a rich sweet-sour dressing to dip the rolls in"
+      ],
+      "howToEat": "Wrap a piece of the seasoned fish and a handful of herbs in bánh tráng (rice paper) or in a leaf, roll it up tightly and dip it deep into the bowl of sweet-sour dressing; you can scatter roasted peanuts over the top."
+    },
+    "goi-buoi-tan-trieu": {
+      "description": "Gỏi bưởi makes use of the prized Tân Triều pomelo — a green, thin-skinned variety with a clean sweetness and no bitterness, grown in Tân Triều, Vĩnh Cửu, Đồng Nai. The segments are teased apart and tossed with shrimp and pork, or simply with herbs and a sweet-sour nước mắm (Vietnamese fish sauce) dressing, making a light, balanced gỏi (tossed salad) that turns up both at family meals and at the pomelo-village tourist sites.",
+      "keyIngredients": [
+        "Tân Triều pomelo (segmented, the flesh teased loose)",
+        "Boiled shrimp or boiled pork belly",
+        "Shredded carrot",
+        "Rau răm (Vietnamese coriander), húng quế (Thai basil)",
+        "Roasted peanuts",
+        "Sweet-sour nước mắm (Vietnamese fish sauce) mixed with garlic and chilli"
+      ],
+      "prepOutline": [
+        "Peel the pomelo, separate the segments, then gently pull the vesicles apart, discarding the bitter parts",
+        "Boil the shrimp and pork belly, then slice or shred them",
+        "Toss the pomelo with the shrimp, pork, shredded carrot and herbs",
+        "Pour over the sweet-sour nước mắm (Vietnamese fish sauce) dressing and toss gently so the pomelo does not break up"
+      ],
+      "howToEat": "Gỏi bưởi is eaten with crisp fried bánh phồng tôm (puffed prawn crackers) to scoop it up, with roasted peanuts scattered over just before serving."
+    },
+    "ga-hap-buoi-tan-trieu": {
+      "description": "Gà hấp bưởi is an invention of the people of Tân Triều, a way of using the fragrant pomelo leaves and rind the area is known for. Free-range chicken is steamed with pomelo leaves or finely shaved pomelo rind, which gives the meat a gentle, distinctive fragrance quite unlike the usual chicken steamed with lime leaves or salt.",
+      "keyIngredients": [
+        "Free-range chicken",
+        "Tân Triều pomelo leaves, or finely shaved pomelo rind",
+        "Sả (lemongrass), ginger",
+        "Salt, seasoning powder",
+        "Rau răm (Vietnamese coriander) to eat alongside"
+      ],
+      "prepOutline": [
+        "Clean the chicken, keeping it whole or cutting it into large pieces, and rub it with salt and ginger to remove any off smell",
+        "Line the bottom of the steamer with pomelo leaves or shaved rind and lay more over the bird",
+        "Steam the chicken with bruised sả (lemongrass) until the meat is tender and carries the pomelo fragrance",
+        "Chop the cooked chicken into bite-sized pieces"
+      ],
+      "howToEat": "The steamed chicken is chopped up and eaten with rau răm (Vietnamese coriander) and a dip of salt, pepper and lime or of salt and chilli, usually at family gatherings."
+    }
+  }
+}

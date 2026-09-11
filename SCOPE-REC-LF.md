@@ -1,0 +1,100 @@
+# [0] SCOPE bổ sung — "Trưa nay ăn gì" (gợi ý món cho dân văn phòng)
+
+> Bước [0] cho một tính năng mới, viết **trước** khi code — đúng bài học **GAP-T2**, nơi
+> Search và Filter đi thẳng từ yêu cầu miệng vào WBS rồi build, không story không AC nên
+> không test nào bắt được, và lỗi nằm im trên production nhiều ngày.
+>
+> `SCOPE-LF.md` gốc là **bản đóng băng** (chốt 2026-08-26). File này là scope riêng cho
+> tính năng phát sinh, không sửa file gốc.
+
+**Ngày:** 2026-09-11 · **Trạng thái:** ⬜ chờ Cổng hiểu của PM
+
+---
+
+## Problem statement
+
+Dân văn phòng có một nỗi đau rất cụ thể và lặp lại **mỗi ngày**: *"trưa nay ăn gì?"*.
+Đây không phải bài toán thiếu thông tin — mà là **mệt vì phải chọn** (decision fatigue),
+trong một khung giờ nghỉ ngắn, kèm vài ràng buộc xã hội mà không app đặt đồ ăn nào nói ra:
+
+- Ăn xong **buồn ngủ cả chiều** thì hỏng việc.
+- Món **nặng mùi** (mắm tôm, mắm ruốc, sầu riêng) mang về bàn làm việc ở văn phòng mở là
+  một vấn đề **xã giao**, không phải vấn đề khẩu vị.
+- Quá cay giữa trưa họp chiều thì khổ.
+
+Local Food đang có **197 món của 63 tỉnh** nhưng **không có đường nào để hỏi "gợi ý cho
+tôi"** — người dùng phải tự biết tên tỉnh hoặc tên món mới tra được. Với người chỉ muốn
+biết trưa nay ăn gì, toàn bộ kho nội dung này hiện **không dùng được**.
+
+## Phạm vi: chọn lọc, không phải toàn bộ 197 món
+
+PM nêu rõ: *"Lựa chọn filter bớt chứ ko full nhé, vì có vài món có thể chỉ phù hợp ăn vặt
+hoặc kiểu nhậu thôi."*
+
+Đã đo trên dữ liệu thật để xác nhận nhu cầu này là có căn cứ:
+
+| Nhóm loại khỏi gợi ý bữa trưa | Ví dụ có thật trong dữ liệu |
+|---|---|
+| Mồi nhậu | Nem Bùi · Bò một nắng muối kiến vàng · Thịt lợn muối chua · Gỏi đu đủ kiến vàng |
+| Ăn vặt / quà chiều | Bánh phu thê · Bánh gio mật mía · Chuối nếp nướng |
+| Tráng miệng, kẹo | Kẹo dừa Bến Tre · các loại chè |
+| Đặc sản mua về làm quà | Hạt điều rang · Mực một nắng · Miến dong |
+
+Gợi ý một đĩa **mồi nhậu** cho bữa trưa công sở là sai về bản chất, không phải sai về
+khẩu vị. Vì vậy tính năng này **bắt buộc** phải lọc.
+
+## 10 câu hỏi làm rõ + giả định mặc định
+
+| # | Câu hỏi | Trả lời / Giả định mặc định |
+|---|---|---|
+| 1 | Bối cảnh dùng: đi ăn tiệm, mang cơm, hay nấu ở nhà? | ✅ **PM chốt: "trưa nay ăn gì" — gợi ý món ĐI ĂN.** Không làm phần "mang cơm đi làm" vì dữ liệu hiện **không có** thuộc tính hâm lại/đựng hộp, sẽ phải gán tay thêm 197 món |
+| 2 | Có gợi ý **quán** không? | ❌ **KHÔNG.** Site là bản đồ ẩm thực vùng miền, **không có dữ liệu quán/giá/địa chỉ**. Gợi ý ở mức **"ăn món gì"**, và phải nói rõ điều đó trên giao diện để người dùng không kỳ vọng nhầm |
+| 3 | Phân loại 197 món bằng cách nào? | ✅ **PM chốt: AI phân loại + PM duyệt mẫu.** Đã đo và loại bỏ phương án tự động thuần: từ khoá bắt nhầm *"Hạt điều rang"* vào **cả** nhóm nhậu lẫn ăn vặt, *"Bánh đa Kế"* vào cả ăn vặt lẫn lễ Tết |
+| 4 | Đặt ở đâu? | ✅ **PM chốt: trang riêng `/goi-y`** (và `/en/goi-y`). URL thật nên chia sẻ được kết quả |
+| 5 | Có cần đăng nhập / lưu sở thích? | ❌ Không — giữ nguyên nguyên tắc không auth. Lựa chọn bộ lọc nằm trên URL (query string) nên chia sẻ được mà không cần tài khoản |
+| 6 | Gợi ý bao nhiêu món một lần? | Mặc định hiện **tối đa 12 món** khớp bộ lọc, kèm nút **"Chọn giúp tôi"** bốc ngẫu nhiên 1 món — vì vấn đề gốc là *mệt vì phải chọn*, đưa ra 60 món là tái tạo lại đúng vấn đề đó |
+| 7 | Ràng buộc "văn phòng" gồm những gì? | Bốn chiều, tất cả suy được từ dữ liệu đang có: **không cay** · **nhẹ bụng** (ít chiên rán) · **món nước/ấm bụng** · **chay được**. Cộng một chiều đặc thù: **tránh món nặng mùi** |
+| 8 | Có tính tới mùa/dịp lễ không? | Không ở bản đầu. `occasions` đã có bộ lọc riêng ở `/browse` (US-13); nhồi thêm vào đây làm loãng trọng tâm |
+| 9 | Song ngữ ngay không? | ✅ Có. Site đã song ngữ từ v1.1; thêm một trang chỉ có tiếng Việt là tạo nợ ngay lúc sinh ra |
+| 10 | Dữ liệu phân loại lưu ở đâu? | Trong **chính `data/provinces/*.json`** (thêm 1 trường cho mỗi món), **không** tách file riêng. Khác với bản dịch — lý do ở `ARCH-LF.md` D4 |
+
+## Quyết định nền
+
+- **D-REC-1 — Chỉ gợi ý MÓN, không gợi ý quán.** Ràng buộc cứng do dữ liệu: không có
+  giá, không có địa chỉ, không có giờ mở cửa. Giao diện phải nói thẳng điều này.
+- **D-REC-2 — Thêm đúng MỘT trường gán tay cho mỗi món** (`mealTypes`), mọi thuộc tính
+  còn lại **suy ra bằng code**. Lý do đầy đủ ở `ARCH-LF.md` D4.
+- **D-REC-3 — Bản đầu chỉ làm bữa trưa đi ăn.** "Mang cơm đi làm" đưa vào backlog, không
+  làm nửa vời.
+
+## Out of scope (rõ ràng, không phải quên)
+
+- Gợi ý **quán ăn**, giá tiền, khoảng cách, giờ mở cửa — không có dữ liệu.
+- **Mang cơm đi làm** / nấu sẵn — cần thuộc tính hâm lại, đựng hộp mà dữ liệu chưa có.
+- Đặt món, liên kết app giao đồ ăn.
+- Cá nhân hoá theo lịch sử (không có tài khoản, không theo dõi người dùng).
+- Dinh dưỡng, calo, chỉ số đường huyết — **cố ý không làm**: đây là nội dung sức khoẻ,
+  nói sai có hại thật, mà dự án không có nguồn dinh dưỡng nào để đối chiếu.
+
+## Định nghĩa Done cho tính năng này
+
+1. Mọi món trong `data/provinces/*.json` có `mealTypes` hợp lệ — **zod chặn ở build**.
+2. Có cổng `pnpm check:meal` kiểm phân loại, chạy lại được.
+3. `/goi-y` và `/en/goi-y` chạy, bộ lọc hoạt động, có trạng thái rỗng tử tế.
+4. Bộ lọc nằm trên URL → chia sẻ được kết quả.
+5. US-18 có AC trong `SPEC-LF.md` và checklist trong `SIT-UAT-LF.md` — **viết trước khi code**.
+6. PM duyệt mẫu phân loại và **ghi đúng mức đã kiểm** (theo cách đã làm ở `SPOTCHECK-LF.md`).
+
+---
+
+## 🔒 Cổng hiểu — bước [0] cho tính năng này — ⬜ **CHƯA ĐÓNG**
+
+PM cần trả lời bằng lời của mình trước khi bước [8] BUILD được phép chạy:
+
+1. **Tính năng này cố tình KHÔNG làm gì, và vì sao bỏ được?**
+   (gợi ý: không gợi ý quán — vì sao đó là ràng buộc dữ liệu chứ không phải lười)
+2. **Vì sao phải gán tay `mealTypes` thay vì suy tự động?**
+   (gợi ý: xem 2 ví dụ bắt nhầm ở câu 3 bảng trên)
+3. **Rủi ro lớn nhất của tính năng này là gì?**
+   (gợi ý: nó *khẳng định* một điều về món ăn — "món này hợp văn phòng" — mà không nguồn
+   nào kiểm chứng được. Xem `RISK-LF.md` R16/R17)

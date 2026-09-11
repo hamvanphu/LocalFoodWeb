@@ -116,3 +116,42 @@ theo (nếu cần) sẽ đặt ra khi các task W2-* triển khai xong.
    tảng chưa xong đúng hạn, tránh quyết định vội lúc gấp.
 
 Cổng đã đóng → bước [6] Risk + Delegation Map được phép bắt đầu.
+
+
+---
+
+## Ước lượng bổ sung — US-18 "Trưa nay ăn gì" (2026-09-11)
+
+> Input: `WBS-LF.md` Wave 4. Đơn vị: **giờ người thật**.
+
+| Task | Giả định đứng sau con số | Lạc quan | Khả dĩ | Bi quan |
+|---|---|---|---|---|
+| W4-1 Schema `mealTypes` | Thêm union + zod, đã làm loại việc này ở W1-1 | 0.25h | 0.5h | 1h |
+| W4-2 Phân loại 197 món | **Rủi ro cao nhất** — không phải gõ phím mà là phán đoán; món ranh giới (bánh xèo, gỏi, đồ nướng) tốn thời gian gấp bội món rõ ràng | 1.5h | 2h | 4h |
+| W4-3 Cổng `check:meal` | Tương tự `check-i18n.mjs` đã có, dùng lại khung | 0.5h | 0.75h | 1.5h |
+| W4-4 `lib/recommend.ts` | Hàm thuần, logic lọc không phức tạp | 0.75h | 1h | 2h |
+| W4-5 Trang `/goi-y` ×2 ngôn ngữ | Dùng lại `DishTile`/`Sheet` đã có; phần mới là bộ lọc + trạng thái rỗng | 1.5h | 2h | 4h |
+| W4-6 Bộ lọc trên query string | `useSearchParams` + `router.replace`, đã quen sau US-16 | 0.25h | 0.5h | 1h |
+| W4-7 Chuỗi 2 ngôn ngữ + link header | Thuần dữ liệu, khung `ui-strings` đã có | 0.25h | 0.5h | 1h |
+| W4-8 Checklist SIT-UAT | Đã viết 16 story loại này | 0.25h | 0.5h | 1h |
+
+**Tổng:** Lạc quan **5,25h** · Khả dĩ **7,75h** · Bi quan **15,5h**
+**PERT = (5,25 + 4×7,75 + 15,5) / 6 ≈ 8,3 giờ**
+
+### Bài học từ EST trước, áp vào đây
+
+Ước lượng Wave 1 **sai hơn 20 lần** vì lập theo mô hình *"người gõ code"* trong khi việc
+thật là *"người phán xử, agent gõ"* (`CASE-STUDY-LF.md` §C). Lần này tách rõ hai loại:
+
+| Loại việc | Task | Agent làm hộ được? |
+|---|---|---|
+| **Gõ code** | W4-1, W4-3, W4-4, W4-5, W4-6, W4-7 | ✅ Gần như toàn bộ ⇒ giờ người ≈ thời gian đọc và duyệt |
+| **Phán đoán** | W4-2 (phân loại), W4-9 (PM duyệt mẫu) | ❌ Không — đây là **chi phí thật** và là phần duy nhất khó nén |
+
+→ Dự đoán: PERT 8,3h sẽ **lại cao hơn thực tế** ở phần code, nhưng **W4-2 và W4-9 thì
+không nén được**. Ghi trước để lần sau đối chiếu xem dự đoán này đúng hay sai.
+
+### Không vượt mốc ⇒ không cần bước cắt scope
+
+8,3h nằm trong quỹ thời gian còn lại, nên **không kích hoạt** bước trade-off scope–time
+như lần Wave 1 (49,5h > 30–40h). Ghi rõ để không ai tưởng bước đó bị bỏ quên.

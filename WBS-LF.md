@@ -116,6 +116,30 @@ PM sẽ spot-check ngẫu nhiên vài tỉnh sau khi xong, theo đúng tinh th�
   định "không backend" (đã ghi ở ARCH mục chưa chốt).
 - GSAP scroll storytelling (nếu Framer Motion chưa đủ "wow").
 
+## Wave 4 — US-18 "Trưa nay ăn gì" (bẻ tới task, 2026-09-11)
+
+> Input: `SCOPE-REC-LF.md` + `SPEC-LF.md` US-18 + `ARCH-LF.md` D4.
+> **Thứ tự bắt buộc: móng trước, bề mặt sau.** W4-1→W4-3 là dữ liệu và cổng kiểm; không
+> được bắt đầu W4-5 (giao diện) khi chưa có dữ liệu thật để lọc.
+
+| # | Task | Output | Phụ thuộc | Ước lượng |
+|---|---|---|---|---|
+| **W4-1** | Thêm `mealTypes` vào `lib/types.ts` (union đóng 5 giá trị) + zod schema **bắt buộc**; build phải đổ nếu món nào thiếu | `lib/types.ts` cập nhật, build đỏ có chủ đích | — | 0.5h |
+| **W4-2** | AI phân loại **197 món**, ghi thẳng vào `data/provinces/*.json`, mỗi món kèm lý do ngắn để PM soi lại | 63 file cập nhật | W4-1 | 2h |
+| **W4-3** | Cổng `pnpm check:meal` — mọi món có `mealTypes` hợp lệ, thống kê phân bố theo nhóm, cảnh báo nhóm bất thường (vd 1 tỉnh không món bữa chính nào) | `scripts/check-meal.mjs` | W4-2 | 0.75h |
+| **W4-4** | `lib/recommend.ts` — quy tắc suy thuộc tính (cay / món nước / chay / nặng mùi / nhiều dầu mỡ) + hàm lọc. **Thuần hàm, không phụ thuộc React** | `lib/recommend.ts` | W4-2 | 1h |
+| **W4-5** | Trang `/goi-y` + `/en/goi-y`: bộ lọc, danh sách kết quả, nút "Chọn giúp tôi", trạng thái rỗng, ghi rõ giới hạn "không gợi ý quán" | `app/goi-y/`, `app/en/goi-y/`, `components/recommend/` | W4-4 | 2h |
+| **W4-6** | Trạng thái bộ lọc nằm trên **query string** để chia sẻ được link | cập nhật W4-5 | W4-5 | 0.5h |
+| **W4-7** | Chuỗi giao diện 2 ngôn ngữ + link ở header | `lib/ui-strings.ts`, `HeaderBar.tsx` | W4-5 | 0.5h |
+| **W4-8** | Checklist kiểm thử US-18 vào `SIT-UAT-LF.md` | `SIT-UAT-LF.md` | W4-5 | 0.5h |
+| **🔒 W4-9** | **Cổng hiểu con — PM duyệt mẫu phân loại** (~20 món nhóm ranh giới) trước khi coi tính năng là xong | Quyết định PASS/FAIL + ghi mức đã kiểm | W4-2, W4-5 | PM review |
+
+**Tổng ước tính (không kể W4-9):** ~7,75h.
+
+**Nhóm ranh giới cần PM soi kỹ ở W4-9** (chỗ dễ sai nhất, không phải bốc ngẫu nhiên):
+món vừa ăn no vừa ăn vặt được (`Bánh xèo`, `Bánh khọt`, `Bánh căn`), gỏi/nộm (ăn kèm hay
+mồi nhậu?), các món nướng (`Bò một nắng`, `Gà nướng`), và món khô đóng gói.
+
 ## Các việc hay sót đã rà theo brief (không được quên)
 
 - **Kiểm thử negative-case theo AC** (không chỉ happy path) — đã có W1-11,

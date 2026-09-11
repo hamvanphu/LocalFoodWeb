@@ -111,6 +111,32 @@ không test nào bắt, và không ai từng quyết định. Viết story ở �
 đã được kiểm; đổi giá trị dữ liệu chỉ để đổi chữ trên màn hình là rủi ro không cần thiết.
 Backlog US-10 (lọc bản đồ theo khẩu vị) sau này vẫn lọc trên slug, không lọc trên chữ hiển thị.
 
+### Bổ sung 2026-09-11 — US-18 ("Trưa nay ăn gì" — gợi ý món cho dân văn phòng)
+
+> Scope riêng của tính năng: `SCOPE-REC-LF.md`. Quyết định kiến trúc: `ARCH-LF.md` **D4**.
+> Story viết **trước** khi code — đúng bài học GAP-T2.
+
+| # | Story | Acceptance Criteria (Given/When/Then) |
+|---|---|---|
+| **US-18** | Là dân văn phòng đang đói và **mệt vì phải chọn**, tôi muốn được gợi ý vài món hợp bữa trưa công sở theo vài ràng buộc của riêng tôi, để quyết định nhanh mà không phải rà 197 món. | **Given** tôi mở `/goi-y` chưa chọn gì, **When** trang tải, **Then** thấy danh sách món **đã lọc sẵn còn nhóm hợp bữa trưa** — không phải toàn bộ 197 món; **And** trang nói rõ đây là gợi ý **món ăn**, **không phải gợi ý quán** (không có giá, địa chỉ, khoảng cách). **Given** tôi bật bộ lọc *"tránh món nặng mùi"*, **When** danh sách cập nhật, **Then** món có `mắm tôm`/`mắm ruốc`/`mắm nêm`/`mắm bò hóc`/`sầu riêng` trong nguyên liệu **biến mất khỏi kết quả**. **Given** tôi bật *"không cay"*, **Then** món gắn khẩu vị `cay` biến mất. **Given** tôi bật nhiều bộ lọc cùng lúc, **Then** chúng cộng dồn (AND), không phải cộng gộp (OR). **Given** bộ lọc của tôi không còn món nào khớp, **When** danh sách rỗng, **Then** hiện **thông báo rõ kèm gợi ý bỏ bớt bộ lọc** — không phải vùng trắng *(bài học US-12)*. **Given** tôi bấm **"Chọn giúp tôi"**, **Then** hệ thống bốc **ngẫu nhiên 1 món** trong nhóm đang khớp và làm nổi bật nó — vì vấn đề gốc là mệt vì phải chọn, đưa ra 60 lựa chọn là tái tạo lại đúng vấn đề đó. **Given** tôi đã chọn bộ lọc, **When** tôi copy URL gửi đồng nghiệp, **Then** họ mở ra thấy **đúng bộ lọc đó** (trạng thái nằm trên query string, không nằm trong bộ nhớ trình duyệt). **Given** tôi bấm vào một món được gợi ý, **Then** tới đúng trang tỉnh và **mở sẵn panel chi tiết món đó**. **Given** tôi đang ở bản tiếng Anh, **When** mở `/en/goi-y`, **Then** toàn bộ nhãn bộ lọc là tiếng Anh nhưng **tên món vẫn tiếng Việt** *(nguyên tắc US-16)*. |
+
+**Vì sao lọc bớt chứ không hiện đủ 197 món** *(yêu cầu trực tiếp của PM)*: gợi ý một đĩa
+**mồi nhậu** hay một gói **đặc sản mua về làm quà** cho bữa trưa công sở là sai về **bản
+chất món**, không phải sai về khẩu vị. Đã kiểm dữ liệu thật và xác nhận nhóm này tồn tại:
+Nem Bùi, Bò một nắng muối kiến vàng, Kẹo dừa Bến Tre, Hạt điều rang, Mực một nắng…
+
+**Ràng buộc bắt buộc (không phải nice-to-have):**
+
+1. **`mealTypes` là trường BẮT BUỘC** trên mọi món, ép bằng zod ở build. Thiếu một món là
+   build đổ — không được để món nào "rơi" khỏi phân loại rồi âm thầm biến mất khỏi gợi ý.
+2. **Không suy đoán "hợp văn phòng" bằng từ khoá trên tên món.** Đã đo và chứng minh là
+   không đáng tin (`SCOPE-REC-LF.md` câu 3). Chỉ suy tự động những thứ **tra được theo mặt
+   chữ** trong `keyIngredients`/`tasteTags`; phần phán đoán ngữ nghĩa phải gán tay.
+3. **Trang phải nói rõ giới hạn**: không gợi ý quán, không có giá, và phân loại là **phán
+   đoán của người biên tập** chứ không phải chuẩn dinh dưỡng.
+4. **Không đưa lời khuyên dinh dưỡng/sức khoẻ** (calo, đường huyết) — dự án không có nguồn
+   nào đối chiếu, nói sai có hại thật.
+
 ### Backlog phase-2 (ngoài 2 tuần, không phải MVP)
 
 | # | Story |

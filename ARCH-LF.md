@@ -135,6 +135,76 @@ cầm anon key (vốn lộ công khai trong code client, đúng thiết kế c�
 Supabase) có thể đọc/sửa/xoá toàn bộ bảng — đây là lỗi bảo mật nghiêm trọng
 nếu bỏ sót, không phải chi tiết vặt.
 
+## D4 — Phân loại món: gán tay MỘT trường, suy ra phần còn lại (2026-09-11, cho US-18)
+
+### Vấn đề
+
+`/goi-y` cần biết món nào **ăn no được vào bữa trưa** và món nào chỉ hợp **nhậu / ăn vặt /
+làm quà**. Dữ liệu hiện **không có chiều này**. `tasteTags` không thay thế được:
+`street-food` có 69 món nhưng *phở cũng là street-food và vẫn là bữa chính*.
+
+### Đã thử và loại: suy hoàn toàn tự động
+
+Chạy thử phân loại bằng từ khoá trên tên + mô tả + cách ăn. **Kết quả không đáng tin**,
+có bằng chứng cụ thể:
+
+| Món | Bị bắt nhầm vào |
+|---|---|
+| Hạt điều rang Bình Phước | **cả** "mồi nhậu" **lẫn** "ăn vặt" |
+| Bánh đa Kế | **cả** "ăn vặt" **lẫn** "món lễ Tết" |
+| Kẹo dừa Bến Tre | lọt vào bộ lọc "nặng mùi" |
+
+Lý do gốc: *"món này ăn no được không"* là **phán đoán ngữ nghĩa**, không phải phép tra
+chuỗi. Đẩy nó cho regex là lặp lại đúng sai lầm đã ghi ở mục 4b của `I18N-GLOSSARY-LF.md`
+— *bảng thuật ngữ là gợi ý theo nghĩa, không phải lệnh thay chuỗi*.
+
+### Quyết định
+
+**Chia đôi theo tiêu chí "tra được theo mặt chữ hay phải hiểu nghĩa":**
+
+| Thuộc tính | Cách có | Vì sao |
+|---|---|---|
+| **`mealTypes`** — bữa chính / ăn vặt / tráng miệng / mồi nhậu / đặc sản làm quà | 🖐️ **Gán tay** từng món (AI đề xuất, PM duyệt mẫu) | Phán đoán ngữ nghĩa. Không tự động hoá được đáng tin |
+| `cay` | ⚙️ Suy — `tasteTags` chứa `spicy` | Đã là dữ liệu có sẵn, đã qua zod |
+| `món nước` | ⚙️ Suy — `tasteTags` chứa `noodle-soup` | nt |
+| `chay được` | ⚙️ Suy — `tasteTags` chứa `vegetarian-friendly` | nt |
+| `nặng mùi` | ⚙️ Suy — `keyIngredients` chứa từ trong **danh sách curated** (`mắm tôm`, `mắm ruốc`, `mắm nêm`, `mắm bò hóc`, `mắm cáy`, `mắm tép`, `sầu riêng`) | **Kiểm sự có mặt của nguyên liệu**, không phải hiểu nghĩa — tra chuỗi ở đây là đúng việc |
+| `nhiều dầu mỡ` | ⚙️ Suy — `prepOutline` chứa `chiên`/`rán`/`quay giòn` | nt — kiểm kỹ thuật nấu, có mặt hay không |
+
+**Nguyên tắc rút ra:** *gán tay thứ phải hiểu; suy tự động thứ chỉ cần tra.*
+
+### Vì sao `mealTypes` nằm TRONG `data/provinces/*.json`, khác với bản dịch
+
+Bản dịch tiếng Anh nằm ở file riêng (`data/i18n/en/`) vì **10 agent ghi song song** — một
+lỗi bất kỳ sẽ hỏng luôn nội dung tiếng Việt vốn không có bản sao.
+
+`mealTypes` thì ngược lại:
+
+1. **Một trường ngắn, một tập giá trị đóng** — zod chặn được ngay ở build, không cần cổng
+   riêng để phát hiện file hỏng.
+2. **Thuộc tính nội tại của món**, không phải một bản thể hiện khác của nó. Tách ra là
+   chia đôi một thứ vốn liền mạch, và tạo nguy cơ lệch khoá khi thêm/xoá món.
+3. **Không có ghi song song quy mô lớn**: gán lần lượt, có thể chia lô nhưng mỗi file vẫn
+   do một lượt ghi duy nhất chịu trách nhiệm.
+
+→ Tiêu chí tách file **không** phải "dữ liệu mới thì tách", mà là **"có nguy cơ ghi đè
+hỏng bản gốc không có bản sao hay không"**.
+
+### Đánh đổi đã chấp nhận
+
+| Được | Mất |
+|---|---|
+| Chỉ 1 trường phải gán tay cho 197 món | Vẫn là 197 phán đoán, và **PM chỉ duyệt mẫu** ⇒ rủi ro còn lại, ghi ở `RISK-LF.md` R16 |
+| Quy tắc suy nằm gọn trong code, sửa 1 chỗ áp cho cả 197 món | Danh sách "nặng mùi" là **curated bằng tay** ⇒ thiếu từ nào thì lọt món đó, âm thầm |
+| zod chặn ngay ở build nếu thiếu phân loại | Thêm một trường bắt buộc ⇒ mọi món mới sau này **buộc phải** phân loại, không bỏ qua được |
+
+### Ranh giới tầng (khớp `MODULEMAP-LF.md`)
+
+- `mealTypes` + zod schema → **Layer 0** (dữ liệu & hợp đồng)
+- Quy tắc suy thuộc tính + hàm lọc → **Layer 0** (`lib/recommend.ts`, thuần hàm, test được
+  mà không cần trình duyệt)
+- Trang `/goi-y` + bộ lọc → **Bề mặt**
+
 ## ⚠️ Phần CHƯA CHỐT
 
 1. **`sourceRef` chưa có trong schema — áp dụng cho CẢ `Province.summary`

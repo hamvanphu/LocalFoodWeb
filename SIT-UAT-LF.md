@@ -274,3 +274,41 @@ chỉ chứng minh checklist khớp sản phẩm — **không thay được PM t
 > không cổng nào bắt: build xanh (slug hợp lệ), axe-core sạch (không phải lỗi a11y),
 > `check:i18n` không đụng tới (nhãn giao diện, không phải nội dung món). Chỉ lộ ra khi có
 > người ngồi đọc SPEC rồi đối chiếu với màn hình.
+
+## US-18 — "Trưa nay ăn gì" *(bổ sung 2026-09-11)*
+
+| # | Bước làm | Kỳ vọng | PASS/FAIL |
+|---|---|---|---|
+| 1 | Mở `/goi-y` | Thấy **đúng 2 món**, không phải danh sách dài | ☐ |
+| 2 | Nhìn 2 món đó | **Khác nhau**, và (gần như luôn) **khác tỉnh** — hai bát bún cùng một tỉnh thì không phải hai lựa chọn thật | ☐ |
+| 3 | Đọc từng món | Có đủ **ảnh · mô tả · nguyên liệu chính · cách làm · cách ăn** — đọc được ngay, **không phải bấm sang trang khác** | ☐ |
+| 4 | Bấm **"Đổi món khác"** | Ra **cặp mới**, URL đổi thành `/goi-y?s=…` | ☐ |
+| 5 | Bấm liên tiếp 5–6 lần | Mỗi lần ra cặp khác; không bị kẹt ở cùng một cặp | ☐ |
+| 6 | Copy URL hiện tại, mở ở **tab ẩn danh** | Thấy **đúng 2 món giống hệt** — cặp món nằm trên URL, không nằm trong bộ nhớ trình duyệt | ☐ |
+| 7 | **Tải lại trang (F5) và nhìn kỹ lúc trang hiện ra** | Món **không nháy đổi**. Nếu thấy món A chớp rồi thành món B thì đó là **lệch hydration** — FAIL | ☐ |
+| 8 | Rà nhanh vài chục lần bấm, nhìn tên món | **Không thấy** món nhậu (Nem Bùi, Bò một nắng muối kiến vàng), kẹo (Kẹo dừa Bến Tre), hạt (Hạt điều rang), đồ khô (Mực một nắng) | ☐ |
+| 9 | Nhìn dòng chữ nhỏ dưới nút | Ghi rõ số món trong bể và nói đã loại nhậu/ăn vặt/tráng miệng/đặc sản làm quà | ☐ |
+| 10 | Đọc khối ghi chú cuối trang | Nói thẳng đây là gợi ý **món**, **không phải quán**; không có giá/địa chỉ; phân loại là phán đoán người biên tập | ☐ |
+| 11 | Tìm một món có mắm tôm/mắm ruốc (bấm tới khi gặp) | Có nhãn **"nặng mùi"**; và món đó **vẫn hiện** — chỉ cảnh báo chứ không tự loại | ☐ |
+| 12 | Mở `/en/goi-y` | Nhãn giao diện tiếng Anh, nội dung món tiếng Anh, **tên món vẫn tiếng Việt** | ☐ |
+| 13 | Ở `/en/goi-y` bấm "Show me two others" | Tới `/en/goi-y?s=…`, **không** rơi về bản tiếng Việt | ☐ |
+| 14 | Bấm link "Xem trang …" dưới một món | Tới đúng trang tỉnh và **mở sẵn panel món đó** | ☐ |
+| 15 | Thu cửa sổ xuống ~380px | Hai món xếp dọc, không tràn ngang | ☐ |
+
+### 🔒 W4-9 — PM duyệt mẫu phân loại *(cổng riêng, chưa làm là chưa xong)*
+
+Chạy `pnpm check:meal` để xem phân bố, rồi đọc **nhóm ranh giới** — không bốc ngẫu nhiên,
+vì lỗi tập trung ở đó:
+
+| Nhóm | Vì sao dễ sai | Kỳ vọng |
+|---|---|---|
+| Bánh xèo / bánh khọt / bánh căn | Vừa ăn no được vừa là món ăn chơi | Nên có **cả** `bua-chinh` lẫn `an-vat` |
+| Gỏi / nộm | Ranh giới mồi nhậu ↔ món ăn kèm cơm | Đọc `howToEat` xem có ăn với cơm không |
+| Món nướng (bò, gà, dê) | Ăn với cơm hay để nhắm rượu? | Nếu mô tả nhấn rượu thì phải có `moi-nhau` |
+| Nem chua / thịt muối | Gần như luôn là đồ nhắm | Nên có `moi-nhau`, **không** nên có `bua-chinh` |
+| Đồ khô, hạt, trà, kẹo | Không ăn tại chỗ | `dac-san-qua`, **không** được có `bua-chinh` |
+
+> **Vì sao cổng này không bỏ được (`RISK-LF.md` R16):** món bị gán nhầm thành `moi-nhau`
+> sẽ **biến mất hoàn toàn** khỏi gợi ý. Người dùng **không thể báo lỗi về một thứ họ không
+> nhìn thấy** — khác hẳn R2, nơi nội dung sai vẫn hiện ra và còn bị soi. Cổng tự động chỉ
+> bắt được *thiếu* phân loại, không bắt được *phân loại sai*.

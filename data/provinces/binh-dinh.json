@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://vnexpress.net/thuong-thuc-banh-xeo-tom-nhay-binh-dinh-o-ha-noi-4683224.html", "label": "VnExpress – Bánh xèo tôm nhảy Bình Định" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh bột gạo nhân tôm cuốn rau, ăn mấy cái là no nhưng cũng là món ăn chơi quen thuộc ngoài hàng."
     },
     {
       "slug": "bun-cha-ca-quy-nhon",
@@ -51,7 +53,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_ch%E1%BA%A3_c%C3%A1", "label": "Wikipedia tiếng Việt – Bún chả cá" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Tô bún tươi chan nước dùng xương cá kèm chả cá, ăn no được như bữa chính."
     },
     {
       "slug": "nem-cho-huyen-binh-dinh",
@@ -71,7 +75,9 @@
       "sourceRefs": [
         { "url": "https://thanhnien.vn/ve-binh-dinh-dung-quen-lang-nem-cho-huyen-185856053.htm", "label": "Thanh Niên – Làng nem Chợ Huyện, Bình Định" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["moi-nhau", "an-vat", "dac-san-qua"],
+      "mealTypeNote": "Cách ăn nói rõ thường dùng làm món nhắm hoặc quà biếu, bóc lá ăn trực tiếp chứ không kèm cơm."
     }
   ]
 }

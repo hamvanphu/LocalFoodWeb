@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://vietnamhoinhap.vn/vi/thit-chua-thanh-son--dac-san-nuc-tieng-vung-dat-to-phu-tho-22382.htm", "label": "Thịt chua Thanh Sơn: Đặc sản nức tiếng vùng đất Tổ Phú Thọ" }
       ],
-      "occasions": ["Quanh năm", "Mùa hè"]
+      "occasions": ["Quanh năm", "Mùa hè"],
+      "mealTypes": ["moi-nhau", "dac-san-qua"],
+      "mealTypeNote": "Thịt lên men cuốn lá chát chấm tương ớt, howToEat nói rõ 'rất hợp khi dùng lạnh cùng bia' nên là mồi nhậu; món được nén trong ống nứa hoặc hộp để bảo quản lâu nên cũng hay mua về làm quà, và vì không có tinh bột chính nên không thay được bữa trưa."
     },
     {
       "slug": "banh-tai-phu-tho",
@@ -48,7 +50,9 @@
       "sourceRefs": [
         { "url": "https://dulichphutho.gov.vn/nghe-lam-banh-tai-truyen-thong-thi-xa-phu-tho.html", "label": "Nghề làm bánh tai truyền thống thị xã Phú Thọ - Cổng TTĐT du lịch Phú Thọ" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Vỏ bột gạo tẻ bọc nhân thịt lợn hấp chín, đủ tinh bột và đạm để ăn no thay một bữa, nhưng howToEat xác định đây là món quà sáng nên vừa là bữa chính vừa là món ăn vặt."
     },
     {
       "slug": "co-om-phu-tho",
@@ -68,7 +72,9 @@
       "sourceRefs": [
         { "url": "https://dulichphutho.gov.vn/co-om-mon-ngon-tu-mien-dat-to.html", "label": "Cọ ỏm - món ngon từ miền đất Tổ - Cổng TTĐT du lịch Phú Thọ" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat"],
+      "mealTypeNote": "Chỉ ăn phần thịt quả cọ bùi béo hơi chát, howToEat gọi là 'món quà quê' và chỉ ăn kèm cơm như một món phụ, không đủ no để thay bữa trưa."
     }
   ]
 }

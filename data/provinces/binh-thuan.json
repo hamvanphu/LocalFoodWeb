@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://danviet.vn/dac-san-binh-thuan-day-la-2-loai-ca-bien-ngon-muc-mot-nang-goi-ca-mai-nem-thu-ca-lang-khen-20250323000415097-d1217058.html", "label": "Đặc sản Bình Thuận – Dân Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "dac-san-qua"],
+      "mealTypeNote": "Cách ăn nói thẳng là món nhậu hoặc quà biếu; mực phơi nắng bảo quản được nên du khách mua về làm quà."
     },
     {
       "slug": "goi-ca-mai",
@@ -51,7 +53,9 @@
         { "url": "https://danviet.vn/dac-san-binh-thuan-day-la-2-loai-ca-bien-ngon-muc-mot-nang-goi-ca-mai-nem-thu-ca-lang-khen-20250323000415097-d1217058.html", "label": "Đặc sản Bình Thuận – Dân Việt" },
         { "url": "https://toptravels.com.vn/news/goi-ca-mai-lagi-mon-dac-san-doc-dao-cua-vung-bien-binh-thuan", "label": "Gỏi cá mai Lagi – Toptravels (nguồn tham khảo, không phải Wikipedia)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Gỏi cá sống cuốn bánh tráng chấm nước me, không có tinh bột chính nên chỉ hợp nhắm hoặc ăn chơi."
     },
     {
       "slug": "banh-xeo-phan-thiet",
@@ -73,7 +77,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_x%C3%A8o", "label": "Bánh xèo – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh bột gạo nhân tôm mực chan mắm ăn ngay trong chén, gọi vài chén là no nhưng vẫn là món ăn chơi phố xá."
     }
   ]
 }

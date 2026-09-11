@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/K%E1%BA%B9o_Cu_%C4%90%C6%A1", "label": "Wikipedia tiếng Việt – Kẹo Cu Đơ" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["an-vat", "trang-mieng"],
+      "mealTypeNote": "Là kẹo mật mía lạc ép bánh tráng, cách ăn là bẻ từng miếng nhấm cùng chén trà xanh nên chỉ ăn chơi hoặc tráng miệng."
     },
     {
       "slug": "goi-ca-duc-thach-hai",
@@ -48,7 +50,9 @@
       "sourceRefs": [
         { "url": "https://mia.vn/cam-nang-du-lich/nhung-mon-dac-san-ha-tinh-12392", "label": "MIA.vn – Những món đặc sản Hà Tĩnh" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau"],
+      "mealTypeNote": "Cá sống trộn thính cuốn lá sung chấm mắm chua cay là đĩa nhắm chia nhau ở vùng biển, tinh bột chỉ có lá bánh tráng nên không đủ no cho bữa trưa."
     },
     {
       "slug": "ram-banh-muot-ha-tinh",
@@ -67,7 +71,9 @@
       "sourceRefs": [
         { "url": "https://baohatinh.vn/am-thuc-ha-tinh-dam-da-phong-vi-que-huong-post237989.html", "label": "Báo Hà Tĩnh – Ẩm thực Hà Tĩnh đậm đà phong vị quê hương" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Có bánh mướt tráng từ bột gạo ăn cùng ram rán và rau sống, mô tả ghi là món của bữa sáng nên no được."
     }
   ]
 }

@@ -56,7 +56,11 @@
       ],
       "occasions": [
         "Quanh năm"
-      ]
+      ],
+      "mealTypes": [
+        "bua-chinh"
+      ],
+      "mealTypeNote": "Món nước có bánh phở và thịt bò chan nước dùng ninh xương, ăn nóng là no được cả bữa."
     },
     {
       "slug": "bun-cha",
@@ -98,7 +102,11 @@
       ],
       "occasions": [
         "Quanh năm"
-      ]
+      ],
+      "mealTypes": [
+        "bua-chinh"
+      ],
+      "mealTypeNote": "Mô tả nói thẳng đây là món trưa kinh điển của Hà Nội, ăn kèm bún và rau sống nên đủ no."
     },
     {
       "slug": "cha-ca-la-vong",
@@ -138,7 +146,11 @@
       ],
       "occasions": [
         "Quanh năm"
-      ]
+      ],
+      "mealTypes": [
+        "bua-chinh"
+      ],
+      "mealTypeNote": "Cá lăng chao mỡ ăn cùng bún, lạc rang và mắm tôm ngay tại bàn, đủ tinh bột và đạm cho một bữa chính."
     },
     {
       "slug": "banh-cuon",
@@ -172,7 +184,12 @@
       ],
       "occasions": [
         "Quanh năm"
-      ]
+      ],
+      "mealTypes": [
+        "bua-chinh",
+        "an-vat"
+      ],
+      "mealTypeNote": "Bánh bột gạo ăn kèm chả lụa nên no được, nhưng bánh mỏng như tờ giấy và ăn nguội theo kiểu quà sáng nhẹ nên cũng là món ăn chơi."
     }
   ]
 }

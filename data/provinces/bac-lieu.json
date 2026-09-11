@@ -36,7 +36,9 @@
         { "url": "https://mia.vn/cam-nang-du-lich/bun-bo-cay-bac-lieu-15540", "label": "Bún bò cay Bạc Liêu – MIA.vn" },
         { "url": "https://danviet.vn/am-thuc-bac-lieu-hai-mon-dac-san-nay-lot-top-am-thuc-tieu-bieu-viet-nam-20231112165329188.htm", "label": "Ẩm thực Bạc Liêu: hai món đặc sản lọt top ẩm thực tiêu biểu Việt Nam – Dân Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Tô bún tươi chan nước hầm xương bò, ăn no được như bữa chính."
     },
     {
       "slug": "banh-tam-bi-bac-lieu",
@@ -63,7 +65,9 @@
       "sourceRefs": [
         { "url": "https://danviet.vn/am-thuc-bac-lieu-hai-mon-dac-san-nay-lot-top-am-thuc-tieu-bieu-viet-nam-20231112165329188.htm", "label": "Ẩm thực Bạc Liêu: hai món đặc sản lọt top ẩm thực tiêu biểu Việt Nam – Dân Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Sợi bánh bột gạo ăn cùng bì heo và nước cốt dừa, một đĩa đủ no nhưng cũng hay được ăn như quà sáng, quà chiều."
     },
     {
       "slug": "banh-cu-cai-bac-lieu",
@@ -90,7 +94,9 @@
       "sourceRefs": [
         { "url": "https://www.sggp.org.vn/banh-cu-cai-bac-lieu-post102500.html", "label": "Bánh củ cải Bạc Liêu – Báo Sài Gòn Giải Phóng" }
       ],
-      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh bột mì nhân tôm thịt đậu xanh, ăn vài cái là no nhưng thường được dùng như món ăn chơi, điểm tâm."
     }
   ]
 }

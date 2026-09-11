@@ -41,7 +41,9 @@
         { "url": "https://vi.wikipedia.org/wiki/C%C3%A1_l%C3%B3c_n%C6%B0%E1%BB%9Bng_trui", "label": "Cá lóc nướng trui – Wikipedia tiếng Việt" },
         { "url": "https://vinhlongtourist.vn/vi/detailnews/?t=ca-loc-nuong-trui-dac-san-vinh-long-niu-chan-du-khach&id=news_11186", "label": "Cá lóc nướng trui – đặc sản Vĩnh Long níu chân du khách – Cổng thông tin du lịch Vĩnh Long" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cá nướng gỡ thịt cuốn cùng bánh tráng, bún và rau sống chấm mắm me, có tinh bột chính đi kèm nên là một suất ăn no."
     },
     {
       "slug": "ca-chay-tra-on",
@@ -67,7 +69,9 @@
       "sourceRefs": [
         { "url": "https://thvl.vn/song-khoe/am-thuc/ca-chay-tra-on/", "label": "Cá cháy Trà Ôn – Đài Phát thanh - Truyền hình Vĩnh Long (THVL)" }
       ],
-      "occasions": ["Tết Nguyên Đán"]
+      "occasions": ["Tết Nguyên Đán"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cá kho rim ăn nóng cùng cơm trắng hoặc làm lẩu chua nhúng kèm bún, đúng dạng món mặn của mâm cơm chính."
     },
     {
       "slug": "banh-xeo-hen-cu-lao-dai",
@@ -95,7 +99,9 @@
         { "url": "https://kyluc.vn/tin-tuc/bep-vang/vietkings-cong-bo-top-100-mon-an-dac-san-viet-nam-2021-2022-p-120-banh-xeo-hen-cu-lao-dai-tinh-vinh-long", "label": "VietKings công bố Top 100 món ăn đặc sản Việt Nam – Bánh xèo hến Cù lao Dài" },
         { "url": "https://vinhlongtourist.vn/vi/detailnews/?t=binh-di-con-hen-song-que-dam-da-banh-xeo-hen-xu-cu-lao-dai&id=news_11371", "label": "Bình dị con hến sông quê, đậm đà bánh xèo hến xứ cù lao Dài – Cổng thông tin du lịch Vĩnh Long" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh xèo nhân hến, tôm, đậu xanh và củ sắn cuốn rau rừng, ăn vài cái là no nhưng cũng thường được dùng như món ăn chơi."
     }
   ]
 }

@@ -33,7 +33,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/C%C3%A1_th%C3%A1t_l%C3%A1t", "label": "Cá thát lát – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Là món mặn ăn kèm rau sống và cũng được viên thả vào canh, lẩu của mâm cơm nên thuộc nhóm ăn với cơm."
     },
     {
       "slug": "khom-cau-duc",
@@ -57,7 +59,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/Kh%C3%B3m_C%E1%BA%A7u_%C4%90%C3%BAc", "label": "Khóm Cầu Đúc – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["trang-mieng", "an-vat"],
+      "mealTypeNote": "Trái khóm ăn tươi chấm muối ớt hoặc làm mứt, nước ép nên chỉ là món tráng miệng, ăn chơi."
     },
     {
       "slug": "bun-goi-gia-phung-hiep",
@@ -85,7 +89,9 @@
       "sourceRefs": [
         { "url": "https://www.vietfuntravel.com.vn/blog/dac-san-hau-giang-bun-goi-da.html", "label": "Đặc sản Hậu Giang - Bún gỏi dà – Viet Fun Travel" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Tô bún chan ngập nước dùng mắm cá kèm tôm và rau, no được cả bữa."
     }
   ]
 }

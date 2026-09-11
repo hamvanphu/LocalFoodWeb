@@ -35,7 +35,9 @@
           "label": "Bún cá Châu Đốc, đặc sản trứ danh của đất An Giang – MIA.vn"
         }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Tô bún gạo chan nước dùng cá lóc, ăn nóng no bụng nên thay được bữa trưa."
     },
     {
       "slug": "goi-sau-dau",
@@ -59,7 +61,9 @@
           "label": "Gỏi sầu đâu – Wikipedia tiếng Việt"
         }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Gỏi khô cá trộn lá đắng, ăn kèm bánh tráng chứ không có tinh bột chính nên hợp lai rai hoặc ăn chơi hơn là bữa no."
     },
     {
       "slug": "bo-bay-mon-nui-sam",
@@ -89,7 +93,9 @@
           "label": "Bò bảy món – Wikipedia tiếng Việt"
         }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Là trọn một bữa bảy món thịt bò, kết thúc bằng tô cháo bò nên đủ no như bữa chính."
     },
     {
       "slug": "mam-chau-doc",
@@ -119,7 +125,9 @@
           "label": "Mắm Châu Đốc, đặc sản cầu kỳ bậc nhất của vùng đất An Giang – MIA.vn"
         }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["dac-san-qua"],
+      "mealTypeNote": "Mắm ủ rồi đóng hũ, đóng gói thành phẩm để mua về làm quà hoặc làm nguyên liệu nấu, không phải món ăn liền tại chỗ."
     }
   ]
 }

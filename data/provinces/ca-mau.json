@@ -40,7 +40,9 @@
         { "url": "https://vi.wikipedia.org/wiki/Ba_kh%C3%ADa", "label": "Ba khía – Wikipedia tiếng Việt" },
         { "url": "https://vtcnews.vn/ba-khia-rach-goc-mon-dac-san-ca-mau-khong-the-bo-lo-ar760432.html", "label": "Ba khía Rạch Gốc - món đặc sản Cà Mau không thể bỏ lỡ – VTC News" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Mắm ba khía là món mặn đậm đà, cách ăn ghi rõ là tách mai ăn trực tiếp cùng cơm trắng hoặc cơm tấm nên thay được một bữa chính."
     },
     {
       "slug": "cua-ca-mau",
@@ -65,7 +67,9 @@
       "sourceRefs": [
         { "url": "https://vietnamnet.vn/dac-san-ca-mau-dam-huong-vi-vung-dat-mui-khong-the-bo-lo-2107503.html", "label": "Đặc sản Cà Mau đậm hương vị vùng đất mũi – VietNamNet" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cua hấp và cua rang me đều được ăn kèm cơm nóng, là món mặn chính của mâm cơm nên xếp vào bữa chính."
     },
     {
       "slug": "kho-ca-boi-u-minh",
@@ -89,7 +93,9 @@
       "sourceRefs": [
         { "url": "https://mia.vn/cam-nang-du-lich/thuong-thuc-kho-ca-sac-boi-u-minh-dam-da-huong-vi-mien-que-song-nuoc-9987", "label": "Khô cá sặc bổi U Minh – MIA.vn" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "dac-san-qua"],
+      "mealTypeNote": "Khô cá bổi nướng hoặc chiên rồi xé ăn cùng cơm nóng, cháo trắng nên là món mặn đưa cơm; đồng thời là cá phơi nắng khô, có nhãn hiệu bảo hộ, thường mua về làm quà."
     }
   ]
 }

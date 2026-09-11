@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://baotuyenquang.com.vn/banh-gai-chiem-hoa-vao-mua-179493.html", "label": "Bánh gai Chiêm Hóa vào mùa - Báo Tuyên Quang" }
       ],
-      "occasions": ["Quanh năm", "Mùa thu"]
+      "occasions": ["Quanh năm", "Mùa thu"],
+      "mealTypes": ["an-vat", "trang-mieng", "dac-san-qua"],
+      "mealTypeNote": "Bánh nếp ngọt nhân đậu xanh dừa ăn nguội, được bày mâm cúng Rằm tháng Bảy và dùng làm quà biếu nên thuộc nhóm quà bánh chứ không phải bữa ăn."
     },
     {
       "slug": "vit-bau-minh-huong",
@@ -52,7 +54,9 @@
       "sourceRefs": [
         { "url": "https://dulichnahang.com/vit-bau-minh-huong-tuyen-quang-vi-sao-lai-noi-tieng-gia-ca-va-noi-ban-bid107.html", "label": "Vịt bầu Minh Hương Tuyên Quang vì sao lại nổi tiếng?" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Vịt được đồ chín ngay trên chõ xôi nếp, ăn nóng cùng xôi và chấm nước mắm gừng nên là món mặn đủ no cho bữa chính."
     },
     {
       "slug": "ca-lang-song-lo",
@@ -72,7 +76,9 @@
       "sourceRefs": [
         { "url": "https://thuysanvietnam.com.vn/tuyen-quang-cac-loai-ca-quy-hiem-tren-song-lo-song-gam/", "label": "Tuyên Quang: Các loài cá quý hiếm trên sông Lô, sông Gâm - Tạp chí Thủy sản Việt Nam" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Phần howToEat nói cá om chuối đậu hoặc nấu canh chua dùng kèm bún, cơm — đúng dạng món mặn ăn với cơm của bữa chính."
     }
   ]
 }

@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://vtcnews.vn/bi-quyet-lam-mon-chao-luon-nghe-an-khong-phai-ai-cung-biet-ar768963.html", "label": "VTC News – Bí quyết làm cháo lươn Nghệ An" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cháo gạo nấu sánh mịn ăn cùng thịt lươn xào, thêm bánh mướt hoặc quẩy, đủ no cho một bữa."
     },
     {
       "slug": "sup-luon-nghe-an",
@@ -47,7 +49,9 @@
       "sourceRefs": [
         { "url": "https://baoxuan.vov.vn/doi-song/cach-lam-chao-va-sup-luon-nghe-an-cuc-ngon-tai-nha-post1259415.vov", "label": "VOV – Cách làm cháo và súp lươn Nghệ An" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Súp lươn sánh đặc ăn kèm bánh mì nướng giòn hoặc bánh mướt nên no được như một bữa."
     },
     {
       "slug": "banh-muot-nghe-an",
@@ -66,7 +70,9 @@
       "sourceRefs": [
         { "url": "https://vnexpress.net/banh-muot-dac-san-it-nguoi-biet-khi-den-nghe-an-3880826.html", "label": "VnExpress – Bánh mướt, đặc sản ít người biết khi đến Nghệ An" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Bánh tráng từ bột gạo, thường ăn cùng cháo lươn, súp lươn hoặc bò hầm thành một bữa no."
     }
   ]
 }

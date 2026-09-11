@@ -34,7 +34,9 @@
       "sourceRefs": [
         { "url": "https://vietnamnet.vn/dac-san-binh-duong-ngon-tru-danh-va-mon-goi-ga-mang-cut-hot-trend-2146373.html", "label": "Đặc sản Bình Dương ngon trứ danh và món gỏi gà măng cụt hot trend (VietNamNet)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Gỏi trộn xúc bằng bánh phồng tôm, bánh tráng, không có tinh bột chính nên hợp lai rai hoặc ăn chơi hơn là bữa no."
     },
     {
       "slug": "banh-beo-bi-binh-duong",
@@ -61,7 +63,9 @@
       "sourceRefs": [
         { "url": "https://doanhnhan.baophapluat.vn/kham-pha-san-vat-mien-nam-viet-nam-ky-1-sau-rieng-lai-thieu-mang-cut-lai-thieu-bun-tom-chau-truc-banh-beo-bi-cho-bung-39810.html", "label": "Khám phá sản vật miền Nam: bánh bèo bì chợ Búng (Doanh nhân – Báo Pháp luật) — nguồn báo chí, chưa có bài Wikipedia riêng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Đĩa bánh bèo bột gạo phủ bì heo, đậu xanh và mỡ hành, ăn no được nhưng cũng là món quà chiều quen thuộc."
     },
     {
       "slug": "nem-lai-thieu",
@@ -87,7 +91,9 @@
       "sourceRefs": [
         { "url": "https://hanoidep.vn/dac-san-binh-duong/", "label": "Đặc sản Bình Dương: nem Lái Thiêu (Hanoidep.vn) — nguồn báo chí, chưa có bài Wikipedia riêng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat", "dac-san-qua"],
+      "mealTypeNote": "Mô tả và cách ăn nói rõ là món nhắm trong tiệc và thường dùng làm quà biếu, ăn trực tiếp với tỏi ớt."
     }
   ]
 }

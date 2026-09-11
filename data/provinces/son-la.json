@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/Th%E1%BB%8Bt_g%C3%A1c_b%E1%BA%BFp", "label": "Thịt gác bếp – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "dac-san-qua"],
+      "mealTypeNote": "howToEat ghi rõ 'dùng làm món nhắm rượu hoặc quà biếu đặc sản', lại là thịt hun khói khô bảo quản được cả tháng nên không phải món ăn no."
     },
     {
       "slug": "nam-pia",
@@ -50,7 +52,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/N%E1%BA%ADm_p%E1%BB%8Ba", "label": "Nặm pịa – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau"],
+      "mealTypeNote": "howToEat nói món sền sệt này dùng làm nước chấm cho thịt và lòng nướng, dân gian còn cho là 'giúp giải rượu' nên gắn với bàn nhậu chứ không thay được bữa."
     },
     {
       "slug": "pa-pinh-top-son-la",
@@ -72,7 +76,9 @@
       "sourceRefs": [
         { "url": "https://thanhpho.sonla.gov.vn/du-lich/pa-pinh-top-tinh-hoa-am-thuc-dong-bao-thai-son-la-576816", "label": "Pa Pỉnh Tộp - Tinh hoa ẩm thực đồng bào Thái Sơn La (Cổng TTĐT TP Sơn La)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "moi-nhau"],
+      "mealTypeNote": "howToEat nói ăn nóng cùng xôi nếp nên có tinh bột đi kèm, đủ no cho một bữa, đồng thời còn 'nhâm nhi cùng rượu ngô' theo phong tục người Thái nên cũng là món nhắm."
     }
   ]
 }

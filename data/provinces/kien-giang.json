@@ -36,7 +36,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/G%E1%BB%8Fi_c%C3%A1_tr%C3%ADch", "label": "Gỏi cá trích – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn ghi rõ cuốn cùng bánh tráng, bún và rau sống nên đủ tinh bột để no, thay được bữa trưa."
     },
     {
       "slug": "bun-ca-kien-giang",
@@ -63,7 +65,9 @@
       "sourceRefs": [
         { "url": "https://vnexpress.net/bay-mon-ngon-nen-thu-khi-den-kien-giang-4539377.html", "label": "Bảy món ngon nên thử khi đến Kiên Giang – VnExpress" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Món bún nước có bún tươi, cá lóc và tôm chan nước dùng nóng, một tô là no nên thuộc bữa chính."
     },
     {
       "slug": "nuoc-mam-phu-quoc",
@@ -93,7 +97,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/N%C6%B0%E1%BB%9Bc_m%E1%BA%AFm_Ph%C3%BA_Qu%E1%BB%91c", "label": "Nước mắm Phú Quốc – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["dac-san-qua"],
+      "mealTypeNote": "Đây là nước chấm ủ chượp 12-15 tháng rồi đóng chai theo độ đạm, không phải món ăn no mà là đặc sản mua về làm quà."
     }
   ]
 }

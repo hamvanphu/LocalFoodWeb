@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://dulichvietnam.com.vn/ca-nuong-pac-ngoi.html", "label": "Cá nướng Pác Ngòi: hương vị núi rừng nơi hồ Ba Bể" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn nói rõ dùng kèm cơm hoặc xôi, là món mặn ăn với cơm."
     },
     {
       "slug": "banh-gio-mat-mia",
@@ -48,7 +50,9 @@
       "sourceRefs": [
         { "url": "https://mia.vn/cam-nang-du-lich/banh-gio-mat-mia-17691", "label": "Bánh gio mật mía, hương vị dân dã vùng đất Bắc Kạn" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["an-vat", "trang-mieng"],
+      "mealTypeNote": "Cách ăn nói thẳng là ăn nguội như món quà vặt hoặc tráng miệng, chan mật mía ngọt."
     },
     {
       "slug": "mien-dong-bac-kan",
@@ -68,7 +72,9 @@
       "sourceRefs": [
         { "url": "https://eva.vn/di-dau-xem-gi/6-dac-san-bac-kan-ai-cung-mua-ve-lam-qua-nhieu-mon-co-the-ban-chua-tung-duoc-nem-thu-bao-gio-c40a561381.html", "label": "6 đặc sản Bắc Kạn ai cũng mua về làm quà" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["bua-chinh", "dac-san-qua"],
+      "mealTypeNote": "Sợi dong khô bán làm quà, nhưng cách ăn ghi rõ là nấu canh, miến gà, miến lòng — nấu thành bữa ăn no được. Xếp cùng nhóm với Mì Chũ cho nhất quán."
     }
   ]
 }

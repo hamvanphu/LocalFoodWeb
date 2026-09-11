@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://danangfantasticity.com/en/am-thuc-dia-phuong/banh-trang-cuon-thit-heo", "label": "Đà Nẵng Fantasticity (Cổng du lịch Đà Nẵng) – Bánh tráng cuốn thịt heo" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Một suất gồm thịt ba chỉ luộc, bún tươi và bánh tráng cuốn rau, đủ tinh bột lẫn đạm cho một bữa trưa."
     },
     {
       "slug": "mit-tron-da-nang",
@@ -50,7 +52,9 @@
       "sourceRefs": [
         { "url": "https://vinwonders.com/vi/wonderpedia/news/mit-tron-da-nang-mon-an-choi-doc-dao/", "label": "VinWonders – Mít trộn Đà Nẵng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat"],
+      "mealTypeNote": "Mô tả và cách ăn đều gọi thẳng là món ăn vặt dân dã, món ăn chơi buổi chiều xúc bằng bánh tráng nướng."
     },
     {
       "slug": "goi-ca-nam-o-da-nang",
@@ -70,7 +74,9 @@
       "sourceRefs": [
         { "url": "https://danangfantasticity.com/en/am-thuc-dia-phuong/goi-ca-nam-o-da-nang", "label": "Đà Nẵng Fantasticity (Cổng du lịch Đà Nẵng) – Gỏi cá Nam Ô" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Gỏi cá trích sống cuốn bánh tráng với chuối chát, khế chua là đặc sản làng chài dọn ra để nhâm nhi, không có tinh bột chính nên không thay được bữa trưa."
     }
   ]
 }

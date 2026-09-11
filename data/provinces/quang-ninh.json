@@ -32,7 +32,9 @@
         { "url": "https://vi.wikipedia.org/wiki/Ch%E1%BA%A3_m%E1%BB%B1c", "label": "Chả mực - Wikipedia tiếng Việt" },
         { "url": "https://baoquangninh.vn/cha-muc-dai-su-du-lich-am-thuc-cua-quang-ninh-3293249.html", "label": "Chả mực - đại sứ 'du lịch' ẩm thực của Quảng Ninh - Báo Quảng Ninh" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "moi-nhau", "dac-san-qua"],
+      "mealTypeNote": "howToEat nêu đủ ba cách dùng: ăn kèm bánh cuốn hoặc xôi trắng thì thành một bữa no, dùng làm món nhậu, và là 'món quà đặc sản không thể thiếu' mua về khi rời Hạ Long."
     },
     {
       "slug": "sa-sung-van-don",
@@ -52,7 +54,9 @@
       "sourceRefs": [
         { "url": "https://baoquangninh.vn/sa-sung-bau-vat-troi-ban-3276108.html", "label": "Sá sùng - Báu vật trời ban - Báo Quảng Ninh" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "dac-san-qua"],
+      "mealTypeNote": "howToEat nói sá sùng khô 'rang giòn nhâm nhi cùng bia rượu' nên là mồi nhậu, và đây là hải sản phơi khô quý hiếm thường mua về làm quà chứ không phải món ăn no."
     },
     {
       "slug": "ga-doi-tien-yen",
@@ -72,7 +76,9 @@
       "sourceRefs": [
         { "url": "https://baoquangninh.vn/dac-san-ga-doi-tien-yen-2505675.html", "label": "Đặc sản gà đồi Tiên Yên - Báo Quảng Ninh" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Gà luộc chặt miếng chấm muối chanh ớt là món mặn ăn với cơm, xuất hiện trong bữa cỗ và tiệc nên no và hợp lý cho một bữa chính."
     }
   ]
 }

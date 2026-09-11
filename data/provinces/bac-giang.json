@@ -30,7 +30,9 @@
         { "url": "https://tuoitre.vn/mi-chu---dac-san-dat-bac-456687.htm", "label": "Mì Chũ - đặc sản đất Bắc (Tuổi Trẻ)" },
         { "url": "https://vietnamnet.vn/mi-chu-dac-san-doc-quyen-cua-bac-giang-2341050.html", "label": "Mì Chũ - đặc sản độc quyền của Bắc Giang (VietNamNet)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "dac-san-qua"],
+      "mealTypeNote": "Cách ăn mô tả chần mì rồi chan nước dùng xương như một bát phở nên no được; đồng thời là sợi mì phơi khô bó sẵn, bán làm đặc sản mang về."
     },
     {
       "slug": "ga-doi-yen-the",
@@ -50,7 +52,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/G%C3%A0_%C4%91%E1%BB%93i_Y%C3%AAn_Th%E1%BA%BF", "label": "Gà đồi Yên Thế – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn nói rõ dùng kèm cơm và rau sống trong bữa cỗ, là món mặn ăn với cơm."
     },
     {
       "slug": "banh-da-ke",
@@ -70,7 +74,9 @@
       "sourceRefs": [
         { "url": "https://luhanhvietnam.com.vn/du-lich/banh-da-ke-bac-giang-dac-san-dan-da.html", "label": "Bánh đa Kế Bắc Giang - đặc sản dân dã (Lữ hành Việt Nam)" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["an-vat", "dac-san-qua"],
+      "mealTypeNote": "Cách ăn nói thẳng là nướng giòn ăn chơi như quà vặt và là quà biếu dịp lễ Tết; bánh khô nên mang về được."
     }
   ]
 }

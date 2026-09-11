@@ -42,7 +42,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_kh%E1%BB%8Dt", "label": "Bánh khọt – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh bột gạo có tôm, ăn một đĩa là no nhưng cũng thường được ăn chơi ngoài hàng quán."
     },
     {
       "slug": "lau-ca-duoi-vung-tau",
@@ -68,7 +70,9 @@
       "sourceRefs": [
         { "url": "https://www.ivivu.com/blog/2026/06/lau-ca-duoi-vung-tau-dac-san-tru-danh-chinh-phuc-moi-thuc-khach/", "label": "Lẩu cá đuối Vũng Tàu – đặc sản trứ danh (iVIVU)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "moi-nhau"],
+      "mealTypeNote": "Cách ăn nói rõ dùng kèm bún tươi nên no được, đồng thời nồi lẩu giữ sôi cả bàn là kiểu ăn hợp lai rai."
     },
     {
       "slug": "goi-ca-mai-vung-tau",
@@ -102,7 +106,9 @@
       "sourceRefs": [
         { "url": "https://luhanhvietnam.com.vn/du-lich/goi-ca-mai-vung-tau-dac-san-noi-tieng.html", "label": "Gỏi cá mai Vũng Tàu – đặc sản nổi tiếng (Luhanhvietnam)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Gỏi cá sống cuốn bánh tráng chấm mắm, không có tinh bột chính nên chỉ hợp nhắm hoặc ăn chơi."
     }
   ]
 }

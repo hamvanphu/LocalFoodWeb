@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_ch%C3%A1y_Ninh_B%C3%ACnh", "label": "Cơm cháy Ninh Bình – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cơm nếp chiên giòn chan sốt thịt dê hoặc bò xào rau củ, có đủ cả tinh bột lẫn thức ăn mặn nên là bữa chính."
     },
     {
       "slug": "thit-de-nui-ninh-binh",
@@ -52,7 +54,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/D%C3%AA_n%C3%BAi_Ninh_B%C3%ACnh", "label": "Dê núi Ninh Bình – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "moi-nhau"],
+      "mealTypeNote": "Thịt dê ăn kèm cơm cháy như món mặn của bữa cơm, đồng thời cách ăn nói rõ nhấm nháp cùng rượu Kim Sơn khi đãi khách."
     },
     {
       "slug": "nem-chua-yen-mac",
@@ -72,7 +76,9 @@
       "sourceRefs": [
         { "url": "https://visitninhbinh.com.vn/vi/nem-chua-yen-mac-voi-xuat-xu-cung-dinh-lam-say-dam-bao-thuc-khach-6334", "label": "Nem chua Yên Mạc với xuất xứ cung đình (Visit Ninh Bình)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "dac-san-qua"],
+      "mealTypeNote": "Nem lên men ăn liền không có tinh bột đi kèm, cách ăn nêu rõ thường dùng làm món nhắm hoặc quà biếu đặc sản."
     }
   ]
 }

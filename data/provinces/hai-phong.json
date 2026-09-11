@@ -43,7 +43,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_%C4%91a_cua", "label": "Bánh đa cua – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Món nước có sợi bánh đa đỏ, gạch cua đồng và rau, ăn nóng là no được một bữa."
     },
     {
       "slug": "nem-cua-be",
@@ -78,7 +80,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/Nem_cua_b%E1%BB%83", "label": "Nem cua bể – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn ghi rõ là ăn kèm bún tươi và rau sống chấm nước mắm chua ngọt, đủ thành một suất ăn no."
     },
     {
       "slug": "banh-mi-cay-hai-phong",
@@ -111,7 +115,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_m%C3%AC_cay", "label": "Bánh mì cay – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat"],
+      "mealTypeNote": "Mô tả gọi thẳng là món ăn vặt, bánh chỉ to hơn ngón tay nên phải mua nhiều chiếc và nhâm nhi cùng trà đá chứ không thay được bữa."
     },
     {
       "slug": "oc-hai-phong",
@@ -138,7 +144,9 @@
       "sourceRefs": [
         { "url": "https://vinwonders.com/vi/wonderpedia/news/diem-ten-20-quan-oc-hai-phong-tuoi-ngon/", "label": "Điểm tên 20 quán ốc Hải Phòng tươi ngon – VinWonders" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Cách ăn là khêu từng con ở quán ốc vỉa hè vào buổi tối cùng bạn bè, không có tinh bột nên là món lai rai chứ không phải bữa."
     }
   ]
 }

@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://www.ivivu.com/blog/2022/12/du-lich-hoa-binh-thuong-thuc-mon-dac-san-thit-muoi-chua/", "label": "Du lịch Hòa Bình: Thưởng thức món đặc sản thịt muối chua" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["moi-nhau"],
+      "mealTypeNote": "Cách ăn ghi thẳng là món khai vị hoặc nhắm rượu, cuốn lá rừng chấm tương ớt và không có tinh bột để no."
     },
     {
       "slug": "com-lam-hoa-binh",
@@ -50,7 +52,9 @@
       "sourceRefs": [
         { "url": "https://www.vietravel.com/vn/am-thuc-kham-pha/com-lam-hoa-binh-v7448.aspx", "label": "Cơm lam Hòa Bình" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Gạo nếp nương nấu trong ống tre ăn kèm thịt nướng, muối vừng, vốn sinh ra để thay bữa cơm khi đi nương, đi rừng."
     },
     {
       "slug": "thit-trau-nau-la-lom",
@@ -70,7 +74,9 @@
       "sourceRefs": [
         { "url": "https://www.ivivu.com/blog/2022/12/thit-trau-nau-la-lom-dac-san-nhat-dinh-phai-thu-khi-du-lich-hoa-binh/", "label": "Thịt trâu nấu lá lồm - Đặc sản nhất định phải thử khi du lịch Hòa Bình" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn ghi rõ là dùng nóng kèm cơm trắng hoặc bún trong bữa cơm hàng ngày của người Mường."
     }
   ]
 }

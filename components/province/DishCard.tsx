@@ -17,6 +17,7 @@ export default function DishCard({
   priority = false,
   index = 0,
   locale = "vi",
+  showReviews = true,
 }: {
   dish: Dish;
   /** Cần cho khối đánh giá — cặp (province_slug, dish_slug) là khoá của review. */
@@ -24,6 +25,8 @@ export default function DishCard({
   priority?: boolean;
   index?: number;
   locale?: Locale;
+  /** Trang gợi ý tắt phần đánh giá: mục đích ở đó là quyết định nhanh, không phải đọc bình luận. */
+  showReviews?: boolean;
 }) {
   const [zoomed, setZoomed] = useState(false);
   const primaryImage = dish.images[0] ?? null;
@@ -126,12 +129,14 @@ export default function DishCard({
           </p>
         )}
 
-        <DishReviews
-          provinceSlug={provinceSlug}
-          dishSlug={dish.slug}
-          dishName={dish.name}
-          locale={locale}
-        />
+        {showReviews && (
+          <DishReviews
+            provinceSlug={provinceSlug}
+            dishSlug={dish.slug}
+            dishName={dish.name}
+            locale={locale}
+          />
+        )}
       </div>
 
       <Lightbox

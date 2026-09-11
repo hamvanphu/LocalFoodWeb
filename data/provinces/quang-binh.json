@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://quangbinhtravel.vn/en/quang-binh-banh-loc-simple-but-unforgettable-flavor.html", "label": "Quang Binh Travel – Bánh lọc Quảng Bình" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Vỏ bột sắn bọc nhân tôm thịt mộc nhĩ, ăn hết một đĩa thì no nên vẫn thay được bữa, nhưng howToEat mô tả kiểu bóc lá chấm mắm ăn chơi từng chiếc nên cũng là món ăn vặt."
     },
     {
       "slug": "chao-canh-quang-binh",
@@ -50,7 +52,9 @@
       "sourceRefs": [
         { "url": "https://ticotravel.com.vn/chao-canh-quang-binh/", "label": "Tico Travel – Cháo canh Quảng Bình" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Sợi bột cán dày chan nước dùng ninh xương kèm cá lóc, cá thu hoặc tôm và ram Ba Đồn, là món nước đầy đặn ăn no được như phở hay bún."
     },
     {
       "slug": "khoai-deo-quang-binh",
@@ -71,7 +75,9 @@
       "sourceRefs": [
         { "url": "https://www.vietnamplus.vn/khoai-deo-mon-dac-san-dan-da-ma-doc-dao-cua-vung-dat-quang-binh-post912018.vnp", "label": "VietnamPlus (TTXVN) – Khoai deo Quảng Bình" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat", "dac-san-qua"],
+      "mealTypeNote": "Khoai lang phơi nắng gió nhiều ngày cho khô dẻo, howToEat nói 'nhâm nhi cùng một tách trà nóng, thường dùng làm quà biếu' nên là đồ khô ăn chơi và mua về làm quà."
     }
   ]
 }

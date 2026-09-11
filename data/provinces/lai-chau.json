@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://www.ivivu.com/blog/2023/06/top-12-mon-an-dac-san-lai-chau-ngon-la-hut-thuc-khach/", "label": "Top 12 món ăn đặc sản Lai Châu ngon lạ, hút thực khách" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn ghi rõ chấm nậm chéo và ăn kèm xôi hoặc cơm, đúng dạng món mặn của bữa chính."
     },
     {
       "slug": "ca-bong-vui-tro",
@@ -48,7 +50,9 @@
       "sourceRefs": [
         { "url": "https://www.ivivu.com/blog/2023/06/top-12-mon-an-dac-san-lai-chau-ngon-la-hut-thuc-khach/", "label": "Top 12 món ăn đặc sản Lai Châu ngon lạ, hút thực khách" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "moi-nhau"],
+      "mealTypeNote": "Cách ăn nêu cả hai công dụng: dùng làm món nhắm và ăn kèm cơm, xôi trong bữa cơm gia đình."
     },
     {
       "slug": "lam-nho",
@@ -68,7 +72,9 @@
       "sourceRefs": [
         { "url": "https://www.ivivu.com/blog/2023/06/top-12-mon-an-dac-san-lai-chau-ngon-la-hut-thuc-khach/", "label": "Top 12 món ăn đặc sản Lai Châu ngon lạ, hút thực khách" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "moi-nhau"],
+      "mealTypeNote": "Thịt trâu nướng ống tre được mô tả là món nhắm rượu, nhưng cũng ăn kèm xôi nếp nên no được như một bữa."
     }
   ]
 }

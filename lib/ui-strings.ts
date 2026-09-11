@@ -12,6 +12,25 @@ import type { Locale } from "./locale";
 const strings = {
   vi: {
     "nav.allProvinces": "Tất cả tỉnh",
+    "nav.recommend": "Trưa nay ăn gì?",
+
+    "rec.title": "Trưa nay ăn gì?",
+    "rec.lead": "Bấm một nút, nhận hai món hợp bữa trưa kèm luôn công thức. Không phải rà 197 món.",
+    "rec.reroll": "Đổi món khác",
+    "rec.rerolling": "Đang bốc…",
+    "rec.poolNote": "Bốc từ {n} món ăn no được. Món nhậu, ăn vặt, tráng miệng và đặc sản mua về làm quà đã được loại khỏi danh sách này.",
+    "rec.limitTitle": "Gợi ý MÓN, không phải gợi ý QUÁN",
+    "rec.limitBody": "Trang này không có giá, địa chỉ hay khoảng cách — nó nói bạn nên ăn món gì, không nói ăn ở đâu. Phân loại món là phán đoán của người biên tập, không phải chuẩn dinh dưỡng.",
+    "rec.empty": "Chưa có món nào trong danh sách gợi ý. Có thể dữ liệu phân loại chưa xong.",
+    "rec.seeProvince": "Xem trang {name}",
+    "rec.optionA": "Món thứ nhất",
+    "rec.optionB": "Món thứ hai",
+
+    "flag.cay": "cay",
+    "flag.monNuoc": "món nước",
+    "flag.chayDuoc": "chay được",
+    "flag.nangMui": "nặng mùi",
+    "flag.nhieuDauMo": "nhiều dầu mỡ",
     "nav.search": "Tìm món ăn, tỉnh thành…",
     "nav.clearSearch": "Xoá tìm kiếm",
     "search.empty": "Không tìm thấy món ăn hay tỉnh nào khớp",
@@ -135,6 +154,25 @@ const strings = {
 
   en: {
     "nav.allProvinces": "All provinces",
+    "nav.recommend": "What's for lunch?",
+
+    "rec.title": "What's for lunch?",
+    "rec.lead": "One tap, two dishes that work for a workday lunch — recipe included. No scrolling through 197 of them.",
+    "rec.reroll": "Show me two others",
+    "rec.rerolling": "Picking…",
+    "rec.poolNote": "Picked from {n} dishes substantial enough to be lunch. Drinking food, snacks, desserts and take-home specialities are excluded from this pool.",
+    "rec.limitTitle": "This suggests a DISH, not a RESTAURANT",
+    "rec.limitBody": "No prices, addresses or distances here — it tells you what to eat, not where. The classification is an editor's judgement, not a nutritional standard.",
+    "rec.empty": "No dishes in the suggestion pool yet. The classification data may be incomplete.",
+    "rec.seeProvince": "Open {name}",
+    "rec.optionA": "First option",
+    "rec.optionB": "Second option",
+
+    "flag.cay": "spicy",
+    "flag.monNuoc": "soupy",
+    "flag.chayDuoc": "vegetarian-friendly",
+    "flag.nangMui": "strong-smelling",
+    "flag.nhieuDauMo": "rich / fried",
     "nav.search": "Search dishes or provinces…",
     "nav.clearSearch": "Clear search",
     "search.empty": "No dish or province matches",

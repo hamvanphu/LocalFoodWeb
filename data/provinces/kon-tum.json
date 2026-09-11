@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://dantocphattrien.vietnamnet.vn/dac-san-goi-la-kon-tum-65711.html", "label": "Đặc sản gỏi lá Kon Tum – Dân tộc và Phát triển (VietNamNet)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cuốn lá với thịt ba chỉ, tôm và bì heo trộn thính, chấm nước chấm nấu từ gạo nếp và tôm khô, ăn thành một bữa đầy đủ."
     },
     {
       "slug": "heo-mang-den-nuong",
@@ -48,7 +50,9 @@
       "sourceRefs": [
         { "url": "https://khamphamangden.vn/mon-ngon-mang-den/", "label": "Top 10 món ăn ngon ở Măng Đen (nguồn tham khảo du lịch, không phải Wikipedia)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "moi-nhau"],
+      "mealTypeNote": "Là món thịt nướng ăn no được, đồng thời cách ăn nói rõ thường dùng kèm rượu cần trong các bữa tiệc cộng đồng."
     },
     {
       "slug": "ca-tam-mang-den",
@@ -68,7 +72,9 @@
       "sourceRefs": [
         { "url": "https://khamphamangden.vn/mon-ngon-mang-den/", "label": "Top 10 món ăn ngon ở Măng Đen (nguồn tham khảo du lịch, không phải Wikipedia)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cá tầm nướng hoặc nấu lẩu chua, cách ăn nêu rõ nhúng kèm rau rừng và bún nên đủ no cho một bữa chính."
     }
   ]
 }

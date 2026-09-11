@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_%C4%91%E1%BA%ADu_xanh", "label": "Bánh đậu xanh – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat", "dac-san-qua"],
+      "mealTypeNote": "Cách ăn là nhấm nháp cùng trà nóng và được ghi rõ là món quà biếu phổ biến khi ghé Hải Dương, không thay được bữa."
     },
     {
       "slug": "vai-thieu-thanh-ha",
@@ -52,7 +54,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/V%E1%BA%A3i_thi%E1%BB%81u", "label": "Vải thiều – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Mùa hè"]
+      "occasions": ["Mùa hè"],
+      "mealTypes": ["trang-mieng", "dac-san-qua"],
+      "mealTypeNote": "Là quả tươi ăn tráng miệng, phần dư được sấy khô đóng gói để bảo quản lâu dài và mang đi xa."
     },
     {
       "slug": "banh-gai-ninh-giang",
@@ -74,7 +78,9 @@
       "sourceRefs": [
         { "url": "https://scov.gov.vn/ban-sac-van-hoa/gioi-thieu-ban-sac-van-hoa/lang-nghe-banh-gai-ninh-giang.html", "label": "Làng nghề bánh gai Ninh Giang (Cục Văn hóa cơ sở)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat", "trang-mieng", "dac-san-qua"],
+      "mealTypeNote": "Cách ăn ghi thẳng là dùng làm quà biếu hoặc tráng miệng, bánh ngọt ăn nguội nên chỉ ăn chơi."
     }
   ]
 }

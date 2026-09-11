@@ -31,7 +31,9 @@
         { "url": "https://vietnamnet.vn/dac-san-thanh-hoa-khong-phai-ai-cung-dam-thu-khach-sanh-an-khen-ngon-hon-tom-2450214.html", "label": "VietNamNet – Đặc sản Thanh Hóa" },
         { "url": "https://en.wikipedia.org/wiki/Nem_chua", "label": "Wikipedia (EN) – Nem chua" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["an-vat", "moi-nhau"],
+      "mealTypeNote": "Từng viên thịt lên men bóc lá ăn ngay kèm tương ớt, tỏi tươi hoặc nướng ăn với rau sống, không có tinh bột chính nên chỉ là món ăn chơi và mồi nhắm."
     },
     {
       "slug": "goi-ca-nhech-nga-son",
@@ -51,7 +53,9 @@
       "sourceRefs": [
         { "url": "https://nld.com.vn/thoi-su/goi-nhech-mon-ngon-tru-danh-o-xu-thanh-20210208223033965.htm", "label": "Người Lao Động – Gỏi nhệch, món ngon trứ danh xứ Thanh" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau"],
+      "mealTypeNote": "Gỏi cá sống trộn thính cuốn rau chấm chẻo, là món đãi khách quý nhắm từng miếng chứ không phải suất ăn no giữa trưa."
     },
     {
       "slug": "cha-tom-thanh-hoa",
@@ -70,7 +74,9 @@
       "sourceRefs": [
         { "url": "https://nongthonmoi.danviet.vn/cha-tom-thanh-hoa-dac-san-dan-da-mang-huong-vi-kho-quen-cua-xu-thanh-d28414.html", "label": "Dân Việt – Chả tôm Thanh Hóa" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat"],
+      "mealTypeNote": "Chính phần mô tả gọi đây là 'món quà vặt', từng cuộn tôm nướng xiên que ăn kèm rau sống, phần ăn nhỏ không thay được bữa chính."
     }
   ]
 }

@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://www.vietnamairlines.com/cn/vi/plan-book/travel/travel-guide/lau-ga-la-e-da-lat", "label": "Lẩu gà lá é Đà Lạt – Vietnam Airlines Travel Guide" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Lẩu gà lá é dùng chung với bún hoặc mì tươi, là một bữa nóng đầy đủ chứ không phải món ăn chơi."
     },
     {
       "slug": "banh-trang-nuong-da-lat",
@@ -48,7 +50,9 @@
       "sourceRefs": [
         { "url": "https://en.wikipedia.org/wiki/B%C3%A1nh_tr%C3%A1ng_n%C6%B0%E1%BB%9Bng", "label": "Bánh tráng nướng – Wikipedia (tiếng Anh)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat"],
+      "mealTypeNote": "Mô tả gắn với văn hóa dạo chợ đêm, mua ăn ngay tại chỗ với khẩu phần một chiếc bánh tráng mỏng, không thay được bữa."
     },
     {
       "slug": "atiso-da-lat",
@@ -70,7 +74,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/Atis%C3%B4", "label": "Atisô – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "dac-san-qua"],
+      "mealTypeNote": "Bông atiso hầm giò heo được dùng như món canh trong bữa cơm, còn trà atiso khô là thứ đóng gói mua về làm quà."
     }
   ]
 }

@@ -39,7 +39,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/%C4%90i%E1%BB%81u", "label": "Điều (cây điều, hạt điều Bình Phước) – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat", "moi-nhau", "dac-san-qua"],
+      "mealTypeNote": "Cách ăn nói thẳng là dùng làm món ăn vặt, nhắm rượu hoặc đãi khách; nhân điều rang sấy đóng gói nên cũng là đặc sản mua về."
     },
     {
       "slug": "ga-nuong-dat-set-binh-phuoc",
@@ -70,7 +72,9 @@
       "sourceRefs": [
         { "url": "https://vietnamnet.vn/dac-san-binh-phuoc-thom-ngon-doc-la-thu-hut-du-khach-gan-xa-2161605.html", "label": "Đặc sản Bình Phước thơm ngon, độc lạ (VietNamNet)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn nói rõ chặt miếng ăn kèm rau sống và cơm lam hoặc xôi nếp, là món mặn ăn với tinh bột."
     },
     {
       "slug": "canh-thut-la-nhip",
@@ -97,7 +101,9 @@
       "sourceRefs": [
         { "url": "https://baophapluat.vn/canh-thut-mon-am-thuc-doc-dao-cua-dong-bao-dan-toc-thieu-so-tinh-binh-phuoc-post487195.html", "label": "Canh thụt - món ẩm thực độc đáo của đồng bào dân tộc thiểu số Bình Phước (Báo Pháp luật Việt Nam)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn nói rõ múc ra ăn cùng cơm hoặc cơm lam, là món canh ăn với cơm."
     }
   ]
 }

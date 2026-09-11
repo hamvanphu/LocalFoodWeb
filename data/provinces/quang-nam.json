@@ -42,7 +42,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/M%C3%AC_Qu%E1%BA%A3ng", "label": "Mì Quảng – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Sợi mì gạo bản to chan nước nhân đậm cùng tôm thịt, trứng cút và rau sống, là một tô đầy đủ tinh bột lẫn đạm nên thay được bữa trưa."
     },
     {
       "slug": "cao-lau",
@@ -76,7 +78,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/Cao_l%E1%BA%A7u", "label": "Cao lầu – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Tô mì khô trộn xá xíu, tôm và da heo chiên giòn cùng rau Trà Quế, đủ no cho một bữa dù gần như không có nước chan."
     },
     {
       "slug": "banh-mi-phuong",
@@ -110,7 +114,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_m%C3%AC_Ph%C6%B0%E1%BB%A3ng", "label": "Bánh mì Phượng – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Ổ bánh mì kẹp thịt nướng, pate, chả lụa và rau thơm là tinh bột kèm đạm đầy đủ, howToEat còn nói ăn tại chỗ hoặc mang đi nên rất hợp bữa trưa đi làm."
     },
     {
       "slug": "com-ga-hoi-an",
@@ -138,7 +144,9 @@
       "sourceRefs": [
         { "url": "https://hoianheritage.net/vi/trao-doi-chuyen-nganh/chuyen-de-nghien-cuu-trao-doi/Com-ga-pho-Hoi-237.html", "label": "Cơm gà phố Hội – Trung tâm Quản lý Bảo tồn Di sản Văn hóa Hội An" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Một đĩa cơm nấu nước luộc gà ăn cùng gà xé, hành tây và rau răm, là suất cơm hoàn chỉnh nên chắc chắn thuộc nhóm bữa chính."
     }
   ]
 }

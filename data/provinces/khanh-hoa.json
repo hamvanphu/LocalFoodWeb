@@ -34,7 +34,9 @@
         { "url": "https://mia.vn/cam-nang-du-lich/ngon-nuc-no-mon-bun-ca-nha-trang-788", "label": "Bún cá Nha Trang: Đặc sản níu chân du khách – MIA.vn" },
         { "url": "https://vinwonders.com/vi/wonderpedia/news/review-bun-ca-nha-trang/", "label": "Bún cá Nha Trang - Cách nấu & gợi ý quán ngon – VinWonders" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn ghi rõ thường dùng làm bữa sáng hoặc bữa trưa, tô bún chan nước dùng cá kèm chả cá là đủ no."
     },
     {
       "slug": "nem-nuong-ninh-hoa",
@@ -58,7 +60,9 @@
         { "url": "https://vi.wikipedia.org/wiki/Nem_n%C6%B0%E1%BB%9Bng", "label": "Nem nướng – Wikipedia tiếng Việt" },
         { "url": "https://thanhnien.vn/nem-nuong-ninh-hoa-nhan-ky-luc-chau-a-moi-ve-am-thuc-185240107102734131.htm", "label": "Nem nướng Ninh Hòa nhận Kỷ lục châu Á mới về ẩm thực – Thanh Niên" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Nem nướng cuốn bánh tráng cùng rau sống và dưa góp ăn no được thành một suất, nhưng cuốn từng cái nên cũng là món ăn chơi."
     },
     {
       "slug": "banh-can",
@@ -82,7 +86,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_c%C4%83n", "label": "Bánh căn – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh bột gạo đổ khuôn kèm trứng, chả cá hoặc mực ăn no được như bữa sáng, đồng thời là món quà vặt ăn từng cặp."
     },
     {
       "slug": "banh-canh-cha-ca-nha-trang",
@@ -103,7 +109,9 @@
       "sourceRefs": [
         { "url": "https://www.dienmayxanh.com/vao-bep/2-cach-nau-banh-canh-cha-ca-nha-trang-quy-nhon-ngon-dung-vi-01323", "label": "2 cách nấu bánh canh chả cá Nha Trang, Quy Nhơn ngon đúng vị – Điện máy XANH" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Tô bánh canh có sợi bột gạo và chả cá thu chan nước dùng nóng, no được một bữa."
     }
   ]
 }

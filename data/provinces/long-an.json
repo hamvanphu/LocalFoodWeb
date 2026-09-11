@@ -34,7 +34,9 @@
       "sourceRefs": [
         { "url": "https://hutchankhongxanh.com/lap-xuong-tuoi-can-duoc-long-an/", "label": "Lạp xưởng tươi Cần Đước Long An (Hút Chân Không Xanh) — nguồn báo chí, chưa có bài Wikipedia riêng" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["bua-chinh", "dac-san-qua"],
+      "mealTypeNote": "Cách ăn nêu rõ cắt lát ăn cùng cơm nóng hoặc bánh mì nên no được, đồng thời là đặc sản phơi treo bảo quản được, hay mua về làm quà."
     },
     {
       "slug": "ca-loc-nuong-trui-long-an",
@@ -66,7 +68,9 @@
       "sourceRefs": [
         { "url": "https://bazantravel.com/ca-loc-nuong-trui-long-an/", "label": "Cá lóc nướng trui Long An (Bazan Travel) — nguồn báo chí, chưa có bài Wikipedia riêng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Thịt cá được gỡ ra cuốn bánh tráng cùng bún tươi và rau sống nên đủ tinh bột cho một bữa."
     },
     {
       "slug": "lau-mam-long-an",
@@ -93,7 +97,9 @@
       "sourceRefs": [
         { "url": "https://www.ivivu.com/blog/2023/05/top-9-dac-san-long-an-mang-huong-vi-mien-que-ngon-tru-danh/", "label": "Top đặc sản Long An: lẩu mắm (iVIVU) — nguồn báo chí, chưa có bài Wikipedia riêng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Nồi lẩu nhúng cá, tôm, mực, thịt và rau, cách ăn ghi rõ dùng kèm bún tươi nên là một bữa chính đầy đủ."
     }
   ]
 }

@@ -38,10 +38,17 @@ hoặc kiểu nhậu thôi."*
 | Mồi nhậu | Nem Bùi · Bò một nắng muối kiến vàng · Thịt lợn muối chua · Gỏi đu đủ kiến vàng |
 | Ăn vặt / quà chiều | Bánh phu thê · Bánh gio mật mía · Chuối nếp nướng |
 | Tráng miệng, kẹo | Kẹo dừa Bến Tre · các loại chè |
-| Đặc sản mua về làm quà | Hạt điều rang · Mực một nắng · Miến dong |
+| Đặc sản mua về làm quà | Hạt điều rang · Mực một nắng · Bánh đậu xanh Hải Dương |
 
 Gợi ý một đĩa **mồi nhậu** cho bữa trưa công sở là sai về bản chất, không phải sai về
 khẩu vị. Vì vậy tính năng này **bắt buộc** phải lọc.
+
+> **Sửa 2026-09-11 — bảng trên từng có một ví dụ sai, do chính AI viết.** Bản đầu lấy
+> *"Miến dong"* làm ví dụ món phải loại. Khi phân loại thật thì thấy `howToEat` của nó ghi
+> rõ *"nấu canh, nấu miến gà, miến lòng"* — tức nấu thành bữa ăn no được, và cùng dạng với
+> *Mì Chũ* vốn được xếp `bua-chinh`. Ví dụ đó chọn bằng **đúng cái cách dò từ khoá mà mục
+> này đang chê là không đáng tin**. Đã thay bằng *Bánh đậu xanh Hải Dương*, và sửa phân
+> loại cho cả hai loại sợi khô về cùng một hướng.
 
 ## 10 câu hỏi làm rõ + giả định mặc định
 
@@ -115,6 +122,34 @@ phải quên**.
 4. Cặp món **nằm trên URL** → chia sẻ được đúng cặp mình vừa nhận.
 5. US-18 có AC trong `SPEC-LF.md` và checklist trong `SIT-UAT-LF.md` — **viết trước khi code**.
 6. PM duyệt mẫu phân loại và **ghi đúng mức đã kiểm** (theo cách đã làm ở `SPOTCHECK-LF.md`).
+
+## Kết quả phân loại — 2026-09-11
+
+| | Số món |
+|---|---|
+| **Bể gợi ý bữa trưa** (`bua-chinh`) | **132** |
+| Bị loại khỏi gợi ý | **65** |
+| Tổng | 197 |
+
+Phân bố nhãn (một món có thể mang nhiều nhãn): `bua-chinh` 132 · `an-vat` 69 ·
+`moi-nhau` 42 · `dac-san-qua` 40 · `trang-mieng` 17.
+
+**Đã kiểm bằng máy, không phải bằng cảm giác:**
+- `pnpm check:meal`: 197/197 món hợp lệ, và **0 trường nào khác bị 6 agent sửa** (đối
+  chiếu từng file với bản trong git).
+- Mô phỏng **500 lần bấm**: không món nào thuộc nhóm bị loại lọt vào, và cả 132 món trong
+  bể đều xuất hiện được.
+
+**Hai tỉnh không bao giờ xuất hiện trong gợi ý** — cổng cảnh báo bắt được, kiểm lại thì
+**đúng**, không phải lỗi phân loại:
+
+| Tỉnh | Vì sao |
+|---|---|
+| Hải Dương | Cả 3 món là bánh đậu xanh, vải thiều, bánh gai — quà và tráng miệng |
+| Thanh Hóa | Cả 3 món là nem chua, gỏi cá nhệch, chả tôm — đồ nhắm và quà vặt |
+
+Đây là **vấn đề thiếu nội dung của tỉnh**, không phải lỗi phân loại. Không "chữa" bằng
+cách ép một món lên `bua-chinh` — làm thế là bẻ dữ liệu cho vừa tính năng.
 
 ---
 

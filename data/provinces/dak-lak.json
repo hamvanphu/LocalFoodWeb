@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://mia.vn/cam-nang-du-lich/thuong-thuc-ga-nuong-ban-don-daklak-ben-bep-lua-6037", "label": "Thưởng thức Gà nướng Bản Đôn Đắk Lắk – Mia.vn (nguồn du lịch, không phải Wikipedia)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn ghi rõ gà nướng và cơm lam dùng cùng nhau trong một bữa, cơm lam chính là phần tinh bột."
     },
     {
       "slug": "bun-do-buon-ma-thuot",
@@ -50,7 +52,9 @@
       "sourceRefs": [
         { "url": "https://vnexpress.net/dac-san-bun-do-buon-ma-thuot-o-ha-noi-4622811.html", "label": "Đặc sản bún đỏ Buôn Ma Thuột – VnExpress" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Tô bún nước ăn nóng với riêu cua, chả viên, trứng cút và da heo chiên, đủ no thay một bữa trưa."
     },
     {
       "slug": "goi-du-du-kien-vang",
@@ -70,7 +74,9 @@
       "sourceRefs": [
         { "url": "https://mia.vn/cam-nang-du-lich/goi-du-du-kien-lua-buon-ma-thuot-la-ma-ngon-5515", "label": "Gỏi đu đủ kiến lửa Buôn Ma Thuột – Mia.vn (nguồn du lịch, không phải Wikipedia)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Cách ăn ghi rõ dùng như món khai vị hoặc món nhậu tại điểm du lịch, chỉ gồm đu đủ bào sợi trộn kiến nên không no được."
     }
   ]
 }

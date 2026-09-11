@@ -36,7 +36,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_t%E1%BA%A5m", "label": "Cơm tấm – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Đĩa cơm tấm có sườn nướng, bì, chả trứng và mô tả ghi rõ ăn được cả sáng, trưa, tối."
     },
     {
       "slug": "hu-tieu-nam-vang",
@@ -64,7 +66,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/H%E1%BB%A7_ti%E1%BA%BFu_Nam_Vang", "label": "Hủ tiếu Nam Vang – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Tô hủ tiếu có sợi bánh, nước lèo hầm xương cùng tôm, mực, lòng heo nên đủ no cho một bữa."
     },
     {
       "slug": "banh-mi-sai-gon",
@@ -92,7 +96,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_m%C3%AC_S%C3%A0i_G%C3%B2n", "label": "Bánh mì Sài Gòn – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Ổ bánh mì kẹp thịt, pate, chả lụa ăn no được trong bữa sáng, nhưng cách ăn cũng ghi là bữa xế cầm tay ăn nhanh."
     },
     {
       "slug": "banh-xeo-mien-nam",
@@ -120,7 +126,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_x%C3%A8o", "label": "Bánh xèo – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh bột gạo nhân tôm thịt đầy đặn ăn no được, đồng thời là món cuốn ăn chơi trong các buổi họp mặt gia đình, bạn bè."
     }
   ]
 }

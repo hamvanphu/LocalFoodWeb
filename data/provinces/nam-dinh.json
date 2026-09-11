@@ -31,7 +31,9 @@
         { "url": "https://cand.com.vn/Ly-luan/di-san-pho-nam-dinh-i741397/", "label": "Di sản Phở Nam Định (Báo Công an Nhân dân)" },
         { "url": "https://tienphong.vn/net-dac-sac-cua-pho-nam-dinh-vua-tro-thanh-di-san-van-hoa-phi-vat-the-post1667747.tpo", "label": "Nét đặc sắc của phở Nam Định vừa trở thành di sản văn hóa phi vật thể (Tiền Phong)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Món phở bò có bánh phở sợi to và nước dùng xương, ăn no được, là bữa chính điển hình."
     },
     {
       "slug": "banh-gai-ba-thi",
@@ -51,7 +53,9 @@
       "sourceRefs": [
         { "url": "https://dacsannhamon.com/banh-gai-ba-thi/", "label": "Bánh gai Bà Thi đặc sản cổ truyền Nam Định" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat", "trang-mieng", "dac-san-qua"],
+      "mealTypeNote": "Bánh nếp nhân đậu xanh ngọt, ăn nguội và được mua làm quà biếu nên vừa là quà chiều, vừa là món ngọt, vừa là đặc sản mang về."
     },
     {
       "slug": "keo-sieu-chau",
@@ -71,7 +75,9 @@
       "sourceRefs": [
         { "url": "https://vnexpress.net/keo-siu-chau-mon-qua-ngay-xuan-o-nam-dinh-4420362.html", "label": "Kẹo sìu châu - món quà ngày xuân ở Nam Định (VnExpress)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat", "trang-mieng", "dac-san-qua"],
+      "mealTypeNote": "Kẹo lạc mạch nha giòn ngọt, cách ăn nêu rõ nhâm nhi cùng trà nóng và để lâu được nên hợp ăn chơi, tráng miệng và mua làm quà."
     }
   ]
 }

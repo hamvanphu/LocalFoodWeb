@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://fptshop.com.vn/tin-tuc/dien-may/dac-san-dien-bien-165787", "label": "Danh sách 13 đặc sản Điện Biên ấn tượng nhất" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Gà nướng dùng kèm xôi nếp nương hoặc cơm lam và rau rừng, có tinh bột chính đi cùng nên no được cả bữa."
     },
     {
       "slug": "nom-hoa-ban",
@@ -48,7 +50,9 @@
       "sourceRefs": [
         { "url": "https://eva.vn/di-dau-xem-gi/6-dac-san-chi-co-o-dien-bien-cuc-hap-dan-nhieu-mon-phai-den-tan-day-moi-duoc-an-c40a570170.html", "label": "6 đặc sản chỉ có ở Điện Biên cực hấp dẫn" }
       ],
-      "occasions": ["Mùa xuân"]
+      "occasions": ["Mùa xuân"],
+      "mealTypes": ["an-vat", "moi-nhau"],
+      "mealTypeNote": "Chỉ gồm cánh hoa ban trộn măng đắng và cá suối nướng, được dùng làm món khai vị trong mâm cỗ nên hợp nhâm nhi hơn là thay bữa."
     },
     {
       "slug": "reu-da-nuong-dien-bien",
@@ -68,7 +72,9 @@
       "sourceRefs": [
         { "url": "https://eva.vn/di-dau-xem-gi/6-dac-san-chi-co-o-dien-bien-cuc-hap-dan-nhieu-mon-phai-den-tan-day-moi-duoc-an-c40a570170.html", "label": "6 đặc sản chỉ có ở Điện Biên cực hấp dẫn" }
       ],
-      "occasions": ["Mùa thu", "Mùa đông", "Mùa xuân"]
+      "occasions": ["Mùa thu", "Mùa đông", "Mùa xuân"],
+      "mealTypes": ["bua-chinh", "moi-nhau"],
+      "mealTypeNote": "Cách ăn nêu cả hai đường: dùng kèm cơm trong bữa cơm của người Thái, hoặc làm món nhắm rượu."
     }
   ]
 }

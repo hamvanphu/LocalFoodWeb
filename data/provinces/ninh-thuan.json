@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://vinpearl.com/vi/dac-san-ninh-thuan-khanh-hoa", "label": "Đặc sản Ninh Thuận: 19 món ngon không thể bỏ lỡ – Vinpearl" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Thịt dê nướng được cuốn bánh tráng với rau sống, chuối chát, khế hoặc nhúng lẩu nên đủ no cho một bữa chính."
     },
     {
       "slug": "banh-can-ninh-thuan",
@@ -50,7 +52,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_c%C4%83n", "label": "Bánh căn – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Bánh bột gạo đổ khuôn có thêm trứng, tôm hoặc mực, ăn nóng kèm chả, nem và rau sống nên là một suất ăn no."
     },
     {
       "slug": "banh-canh-cha-ca-phan-rang",
@@ -71,7 +75,9 @@
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_canh", "label": "Bánh canh – Wikipedia tiếng Việt" },
         { "url": "https://www.ivivu.com/blog/2024/06/du-lich-ninh-thuan-thuong-thuc-mon-banh-canh-cha-ca-phan-rang-thom-ngon/", "label": "Du lịch Ninh Thuận thưởng thức bánh canh chả cá Phan Rang – Ivivu" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Món nước có sợi bánh canh bột gạo và chả cá, chan nước lèo hầm xương, ăn nóng là no nên thuộc bữa chính."
     }
   ]
 }

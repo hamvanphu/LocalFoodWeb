@@ -40,7 +40,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/K%E1%BA%B9o_d%E1%BB%ABa", "label": "Kẹo dừa – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat", "trang-mieng", "dac-san-qua"],
+      "mealTypeNote": "Là kẹo ngọt, cách ăn nói rõ dùng làm quà biếu hoặc nhâm nhi cùng trà, lại được gói và đóng gói sẵn để mang về."
     },
     {
       "slug": "duong-dua-ben-tre",
@@ -65,7 +67,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/%C4%90u%C3%B4ng_d%E1%BB%ABa", "label": "Đuông dừa – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Đuông nướng hoặc chiên chấm nước mắm ăn kèm rau sống, ăn từng con một nên là món nhắm lạ miệng chứ không thay được bữa."
     },
     {
       "slug": "com-dua-ben-tre",
@@ -91,7 +95,9 @@
       "sourceRefs": [
         { "url": "https://www.bachhoaxanh.com/kinh-nghiem-hay/tong-hop-10-mon-an-dac-san-noi-tieng-xu-dua-ben-tre-ban-nhat-dinh-phai-thu-1364446", "label": "Tổng hợp đặc sản nổi tiếng xứ dừa Bến Tre – Bách Hóa Xanh" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Là cơm nấu nước cốt dừa ăn cùng tép rang hoặc thịt kho, đúng một mâm cơm no."
     }
   ]
 }

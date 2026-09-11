@@ -30,7 +30,9 @@
         { "url": "https://baocaobang.vn/Huong-vi-pho-chua-Cao-Bang-38371.html", "label": "Hương vị phở chua Cao Bằng - Báo Cao Bằng điện tử" },
         { "url": "https://suckhoedoisong.vn/pho-chua-trai-nghiem-am-thuc-vung-cao-169240829154236004.htm", "label": "Phở chua, trải nghiệm ẩm thực vùng cao - Sức khỏe & Đời sống" }
       ],
-      "occasions": ["Quanh năm", "Mùa hè"]
+      "occasions": ["Quanh năm", "Mùa hè"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Có bánh phở cùng thịt ba chỉ rán, vịt quay, khoai chiên nên no được như một bữa; nhưng cách ăn ghi rõ thường dùng làm món khai vị hoặc quà chiều ở quán vỉa hè."
     },
     {
       "slug": "vit-quay-7-vi-cao-bang",
@@ -51,7 +53,9 @@
       "sourceRefs": [
         { "url": "https://mytour.vn/vi/blog/bai-viet/vit-quay-7-vi-hoa-quyen-huong-vi-cuon-hut-long-nguoi.html", "label": "Món vịt quay 7 vị - Đặc sản Cao Bằng - Mytour" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Vịt quay chặt miếng ăn kèm cơm hoặc làm nhân bánh cuốn, phở chua — là món mặn chính của bữa ăn."
     },
     {
       "slug": "banh-cuon-canh-cao-bang",
@@ -71,7 +75,9 @@
       "sourceRefs": [
         { "url": "https://vtcnews.vn/doc-dao-mon-banh-cuon-chan-nuoc-canh-o-cao-bang-dac-san-dan-da-da-an-la-nho-mai-ar672976.html", "label": "Độc đáo món bánh cuốn chan nước canh ở Cao Bằng - VTC News" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh cuốn bột gạo chan nước canh ninh xương là món điểm tâm sáng ấm bụng, nhưng vẫn thuộc nhóm bánh ăn nhẹ nên kèm cả ăn vặt."
     }
   ]
 }

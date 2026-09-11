@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://vnexpress.net/pho-hai-to-mon-an-dat-gia-tri-am-thuc-chau-a-4666534.html", "label": "Phở hai tô, món ăn đạt 'giá trị ẩm thực châu Á' – VnExpress" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Phở hai tô gồm tô sợi phở khô trộn thịt và tô nước dùng riêng, là một suất ăn no đầy đủ."
     },
     {
       "slug": "com-lam-ga-nuong",
@@ -53,7 +55,9 @@
         { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_lam", "label": "Cơm lam – Wikipedia tiếng Việt" },
         { "url": "https://tourtaynguyen.com.vn/ga-nuong-com-lam-dac-san-dan-da-cua-nui-rung-tay-nguyen/", "label": "Gà nướng, cơm lam – đặc sản Tây Nguyên" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cơm lam nếp dẻo ăn cùng gà thả vườn nướng ngay khi còn nóng, đủ tinh bột và đạm cho một bữa."
     },
     {
       "slug": "bo-mot-nang-muoi-kien-vang",
@@ -73,7 +77,9 @@
       "sourceRefs": [
         { "url": "https://gialai.gov.vn/du-khach/dac-san-gia-lai/muoi-kien-vang-krong-pa.html", "label": "Muối kiến vàng Krông Pa – Cổng thông tin điện tử tỉnh Gia Lai" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "dac-san-qua"],
+      "mealTypeNote": "Cách ăn ghi rõ thường dùng làm món nhậu hoặc quà biếu đặc sản, thịt bò phơi một nắng nên để dành mang về được."
     }
   ]
 }

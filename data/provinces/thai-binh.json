@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_c%C3%A1y", "label": "Bánh cáy – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"],
+      "mealTypes": ["an-vat", "trang-mieng", "dac-san-qua"],
+      "mealTypeNote": "Bánh ngọt làm từ nếp, mạch nha và mứt bí, ăn kèm trà nóng và thường được đóng hộp biếu tặng dịp Tết nên chỉ là quà bánh ăn chơi, không thay được bữa."
     },
     {
       "slug": "canh-ca-quynh-coi",
@@ -50,7 +52,9 @@
       "sourceRefs": [
         { "url": "https://vnexpress.net/doi-song-cooking-canh-ca-quynh-coi-4457244.html", "label": "Cách làm canh cá Quỳnh Côi chuẩn vị đặc sản Thái Bình (VnExpress)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Có bánh đa sợi chan nước dùng cá rô làm tinh bột chính, người Thái Bình dùng làm bữa sáng quen thuộc hằng ngày nên một tô là đủ no."
     },
     {
       "slug": "goi-nhech",
@@ -70,7 +74,9 @@
       "sourceRefs": [
         { "url": "https://www.vietnambooking.com/du-lich/blog-du-lich/dac-san-thai-binh.html", "label": "Top đặc sản Thái Bình (Vietnambooking)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau"],
+      "mealTypeNote": "Phần howToEat gọi thẳng đây là 'món nhắm', gỏi cá sống cuốn lá sung chấm chẻo, không có tinh bột chính nên không thay được bữa trưa."
     }
   ]
 }

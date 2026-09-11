@@ -30,7 +30,9 @@
       "sourceRefs": [
         { "url": "https://luhanhvietnam.com.vn/du-lich/dac-san-xoi-ngu-sac-yen-bai.html", "label": "Lên Mường Lò thưởng thức đặc sản xôi ngũ sắc Yên Bái" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán", "Mùa xuân"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán", "Mùa xuân"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Xôi nếp Tú Lệ ăn cùng thịt nướng hoặc chấm muối vừng là tinh bột chính, một suất đủ no cho bữa."
     },
     {
       "slug": "com-tu-le",
@@ -50,7 +52,9 @@
       "sourceRefs": [
         { "url": "https://tienphong.vn/dac-san-cua-dat-va-nguoi-yen-bai-ai-len-tu-le-thuong-com-thom-post1000430.tpo", "label": "Đặc sản của đất và người Yên Bái: Ai lên Tú Lệ thưởng cốm thơm - Tiền Phong" }
       ],
-      "occasions": ["Mùa thu"]
+      "occasions": ["Mùa thu"],
+      "mealTypes": ["an-vat", "trang-mieng", "dac-san-qua"],
+      "mealTypeNote": "Cốm nếp non ăn nhón cùng chuối chín hoặc hồng chín, gói lá chuối làm quà mà du khách mang về nên là quà bánh, không phải bữa ăn."
     },
     {
       "slug": "vit-bau-lam-thuong",
@@ -70,7 +74,9 @@
       "sourceRefs": [
         { "url": "https://dulichtaybac.vn/diem-den/yen-bai/dac-san-vit-bau-lam-thuong-huyen-luc-yen/", "label": "Đặc sản vịt bầu Lâm Thượng, huyện Lục Yên - Du lịch Tây Bắc" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Vịt luộc chấm nước mẻ pha rau răm, thêm mọc vịt gói lá và lòng xào rau đắng — đều là món mặn ăn với cơm của bữa chính."
     }
   ]
 }

@@ -40,7 +40,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_tr%C3%A1ng_ph%C6%A1i_s%C6%B0%C6%A1ng", "label": "Bánh tráng phơi sương – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "dac-san-qua"],
+      "mealTypeNote": "howToEat mô tả cuốn bánh tráng với thịt heo luộc thái mỏng và rất nhiều rau sống chấm mắm nêm, một suất cuốn đủ tinh bột lẫn đạm để no; riêng bánh tráng khô đóng gói thì là đặc sản mua về làm quà."
     },
     {
       "slug": "muoi-tom-tay-ninh",
@@ -66,7 +68,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/Mu%E1%BB%91i_t%C3%B4m", "label": "Muối tôm – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat", "dac-san-qua"],
+      "mealTypeNote": "Đây là gia vị muối sấy khô đóng gói, howToEat nói dùng chấm trái cây chua hoặc trộn bánh tráng thành món 'ăn vặt phổ biến' chứ tự nó không thể ăn no."
     },
     {
       "slug": "banh-canh-trang-bang",
@@ -99,7 +103,9 @@
       "sourceRefs": [
         { "url": "https://mia.vn/cam-nang-du-lich/banh-canh-trang-bang-niem-tu-hao-cua-am-thuc-tay-ninh-8786", "label": "Bánh canh Trảng Bàng, niềm tự hào của ẩm thực Tây Ninh (Mia.vn) — nguồn báo chí, chưa có bài Wikipedia riêng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Sợi bánh canh bột gạo chan nước lèo ninh xương heo ăn cùng thịt heo luộc thái lát, là một tô no bụng nên thuộc nhóm bữa chính."
     }
   ]
 }

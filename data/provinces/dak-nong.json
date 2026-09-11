@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://nhandan.vn/mon-canh-thut-nam-moi-cua-nguoi-mnong-post814021.html", "label": "Món canh thụt nấm mối của người M'nông – Báo Nhân Dân" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cách ăn ghi rõ chan ra bát ăn cùng cơm lam hoặc cơm trắng và được dùng làm món chính trong mâm cỗ đãi khách."
     },
     {
       "slug": "com-lam-dak-nong",
@@ -51,7 +53,9 @@
         { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_lam", "label": "Cơm lam – Wikipedia tiếng Việt" },
         { "url": "https://dulich.daknong.gov.vn/vi/blog/details/dac-san-dak-nong-46", "label": "Đặc sản Đắk Nông – Cổng thông tin du lịch tỉnh Đắk Nông" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cơm lam là gạo nếp nấu chín trong ống tre, tức phần tinh bột chính, dùng cùng thịt nướng và muối ớt là thành một bữa."
     },
     {
       "slug": "ca-lang-nuong-than-hong",
@@ -71,7 +75,9 @@
       "sourceRefs": [
         { "url": "https://dulich.daknong.gov.vn/vi/blog/details/dac-san-dak-nong-46", "label": "Đặc sản Đắk Nông – Cổng thông tin du lịch tỉnh Đắk Nông" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Thịt cá lăng nướng được gỡ ra ăn cùng cơm lam hoặc xôi nếp nên là món mặn của một bữa chính."
     }
   ]
 }

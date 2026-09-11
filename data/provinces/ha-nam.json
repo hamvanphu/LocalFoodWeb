@@ -29,7 +29,9 @@
         { "url": "https://hanam.gov.vn/Pages/ca-kho-lang-vu-dai-do-lua-vu-tet.aspx", "label": "Cá kho Làng Vũ Đại đỏ lửa vụ Tết (Cổng TTĐT tỉnh Hà Nam)" },
         { "url": "https://www.ivivu.com/blog/2023/01/ca-kho-lang-vu-dai-mon-ngon-dan-da-lau-doi-o-lang-chi-pheo/", "label": "Cá kho làng Vũ Đại, món ngon dân dã lâu đời (iVIVU)" }
       ],
-      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"],
+      "mealTypes": ["bua-chinh", "dac-san-qua"],
+      "mealTypeNote": "Cách ăn ghi rõ là ăn nóng cùng cơm trắng nên thay được bữa chính, đồng thời niêu cá kho được đặt làm quà biếu đi xa dịp cuối năm."
     },
     {
       "slug": "chuoi-ngu-dai-hoang",
@@ -52,7 +54,9 @@
         { "url": "https://vi.wikipedia.org/wiki/Chu%E1%BB%91i_ng%E1%BB%B1_%C4%90%E1%BA%A1i_Ho%C3%A0ng", "label": "Chuối ngự Đại Hoàng – Wikipedia tiếng Việt" },
         { "url": "https://vnexpress.net/thoi-su/chuoi-ngu-dai-hoang-dac-san-ha-nam-3999966.html", "label": "Chuối ngự Đại Hoàng đặc sản Hà Nam (VnExpress)" }
       ],
-      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"],
+      "mealTypes": ["trang-mieng", "dac-san-qua"],
+      "mealTypeNote": "Là quả chín ăn trực tiếp, bày mâm ngũ quả và làm quà biếu cao cấp, không có tinh bột chính nên không thay được bữa."
     },
     {
       "slug": "banh-cuon-phu-ly",
@@ -72,7 +76,9 @@
       "sourceRefs": [
         { "url": "https://vnexpress.net/bua-sang-o-phu-ly-voi-banh-da-ca-ro-va-banh-cuon-4459499.html", "label": "Bữa sáng ở Phủ Lý với bánh đa cá rô và bánh cuốn (VnExpress)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Bánh tráng từ bột gạo tám xoan ăn kèm chả nướng, cách ăn ghi là bữa sáng phổ biến của người Phủ Lý nên no được như một bữa."
     }
   ]
 }

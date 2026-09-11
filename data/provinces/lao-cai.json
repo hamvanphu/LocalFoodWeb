@@ -31,7 +31,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/Th%E1%BA%AFng_c%E1%BB%91", "label": "Thắng cố - Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "moi-nhau"],
+      "mealTypeNote": "Là chảo thịt ninh nhừ múc ra bát ăn nóng kèm bánh ngô, đồng thời cách ăn nêu rõ nhâm nhi cùng rượu ngô Bắc Hà."
     },
     {
       "slug": "ca-hoi-sa-pa",
@@ -51,7 +53,9 @@
       "sourceRefs": [
         { "url": "https://laocaitourism.vn/vi/detailnews/?t=ca-hoi-sa-pa-dac-san-lao-cai&id=news_723", "label": "Cá hồi Sa Pa - đặc sản Lào Cai - Cổng thông tin du lịch Lào Cai" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cá hồi nướng, áp chảo hoặc nấu lẩu, ăn nóng kèm rau cải mèo, là món mặn dùng trong bữa cơm."
     },
     {
       "slug": "thit-lon-cap-nach",
@@ -71,7 +75,9 @@
       "sourceRefs": [
         { "url": "https://baolaocai.vn/thit-lon-cap-nach-dac-san-kho-quen-cua-lao-cai-post387318.html", "label": "Thịt lợn cắp nách, đặc sản khó quên của Lào Cai - Báo Lào Cai" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Thịt hấp, nướng hoặc quay chấm muối tiêu chanh, phổ biến trong các bữa cỗ nên là món mặn của bữa chính."
     }
   ]
 }

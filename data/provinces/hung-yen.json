@@ -29,7 +29,9 @@
         { "url": "https://vietnamnet.vn/huyen-thoai-tien-vua-nay-vuon-ra-the-gioi-665541.html", "label": "Nhãn lồng Hưng Yên: Huyền thoại tiến vua nay vươn ra thế giới (VietNamNet)" },
         { "url": "https://scov.gov.vn/ban-sac-van-hoa/huong-vi-que-nha/nhan-long-hung-yen.html", "label": "Nhãn lồng Hưng Yên (Cục Văn hóa cơ sở)" }
       ],
-      "occasions": ["Mùa thu"]
+      "occasions": ["Mùa thu"],
+      "mealTypes": ["trang-mieng", "dac-san-qua"],
+      "mealTypeNote": "Quả tươi ăn tráng miệng, phần dư sấy thành long nhãn khô để dùng dần và mang làm quà."
     },
     {
       "slug": "tuong-ban",
@@ -49,7 +51,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/T%C6%B0%C6%A1ng_B%E1%BA%A7n", "label": "Tương Bần – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["dac-san-qua"],
+      "mealTypeNote": "Là nước chấm lên men ủ trong chum, dùng để chấm và nêm chứ bản thân không phải món ăn no được, thường mua chai về dùng dần hoặc làm quà."
     },
     {
       "slug": "ga-dong-tao",
@@ -69,7 +73,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/G%C3%A0_%C4%90%C3%B4ng_T%E1%BA%A3o", "label": "Gà Đông Tảo – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Gà luộc, hấp hay hầm thuốc bắc chấm muối lá chanh là món mặn ăn với cơm trong mâm tiệc, mâm cỗ."
     }
   ]
 }

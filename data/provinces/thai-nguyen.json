@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/Tr%C3%A0_T%C3%A2n_C%C6%B0%C6%A1ng", "label": "Trà Tân Cương – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["dac-san-qua"],
+      "mealTypeNote": "Là trà khô sao hương rồi đóng gói, dùng để pha uống tiếp khách và mua về làm quà chứ không phải một món ăn."
     },
     {
       "slug": "com-lam-dinh-hoa",
@@ -48,7 +50,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/C%C6%A1m_lam", "label": "Cơm lam – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Gạo nếp nướng trong ống nứa ăn kèm muối vừng hoặc thịt nướng là đủ no cho một bữa, đồng thời cũng được du khách mua ăn chơi dọc đường tham quan ATK Định Hóa."
     },
     {
       "slug": "banh-chung-bo-dau",
@@ -68,7 +72,9 @@
       "sourceRefs": [
         { "url": "https://baothainguyen.vn/xa-hoi/202102/goi-tet-o-lang-nghe-bo-dau-36727AC/", "label": "\"Gói\" Tết ở làng nghề Bờ Đậu – Báo Thái Nguyên" }
       ],
-      "occasions": ["Tết Nguyên Đán", "Quanh năm"]
+      "occasions": ["Tết Nguyên Đán", "Quanh năm"],
+      "mealTypes": ["bua-chinh", "dac-san-qua"],
+      "mealTypeNote": "Bánh gạo nếp nhân đậu xanh thịt ba chỉ ăn kèm dưa hành là một suất ăn no, đồng thời được người dân khắp nơi đặt mua làm quà dịp Tết."
     }
   ]
 }

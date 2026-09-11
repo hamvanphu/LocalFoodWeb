@@ -30,7 +30,9 @@
         { "url": "https://dantocphattrien.vietnamnet.vn/chao-au-tau-dac-san-noi-tieng-cua-ha-giang-23945.html", "label": "Cháo ấu tẩu - đặc sản nổi tiếng của Hà Giang - Dân tộc và Phát triển (VietNamNet)" },
         { "url": "https://www.bachhoaxanh.com/kinh-nghiem-hay/chao-au-tau-dac-san-ha-giang-che-bien-tu-loai-cu-co-doc-tinh-1542704", "label": "Cháo ấu tẩu - Đặc sản Hà Giang chế biến từ loại củ có độc tính" }
       ],
-      "occasions": ["Quanh năm", "Mùa đông"]
+      "occasions": ["Quanh năm", "Mùa đông"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Là bát cháo ninh từ gạo tẻ, gạo nếp và chân giò lợn, có tinh bột chính nên ăn no được như một bữa."
     },
     {
       "slug": "banh-tam-giac-mach",
@@ -52,7 +54,9 @@
       "sourceRefs": [
         { "url": "https://fptshop.com.vn/tin-tuc/dien-may/banh-tam-giac-mach-158476", "label": "Tìm hiểu về bánh tam giác mạch: Vị ngọt thiên nhiên của Hà Giang" }
       ],
-      "occasions": ["Mùa thu"]
+      "occasions": ["Mùa thu"],
+      "mealTypes": ["an-vat"],
+      "mealTypeNote": "Cách ăn gọi thẳng là món quà vặt bán ở các phiên chợ, chỉ là một miếng bánh tròn dẹt ăn nóng chứ không thay được bữa."
     },
     {
       "slug": "thang-den-ha-giang",
@@ -73,7 +77,9 @@
       "sourceRefs": [
         { "url": "https://mia.vn/cam-nang-du-lich/thang-den-ha-giang-mon-an-choi-nuc-long-bao-thuc-khach-3456", "label": "Thắng dền Hà Giang - Món ăn chơi nức lòng bao thực khách" }
       ],
-      "occasions": ["Mùa đông"]
+      "occasions": ["Mùa đông"],
+      "mealTypes": ["an-vat", "trang-mieng"],
+      "mealTypeNote": "Mô tả gọi là món ăn chơi mùa đông gồm viên bột nếp thả trong bát nước đường gừng, vị ngọt nên cũng hợp làm món tráng miệng."
     }
   ]
 }

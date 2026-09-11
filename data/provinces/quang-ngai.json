@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/Don_(m%C3%B3n_%C4%83n)", "label": "Wikipedia tiếng Việt – Don (món ăn)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "howToEat mô tả bẻ vụn bánh tráng thả vào bát nước don nên có tinh bột đi kèm và ăn no được, nhưng description gọi đây là 'món quà quê dân dã' với khẩu phần nhẹ nên cũng xếp vào ăn vặt."
     },
     {
       "slug": "ca-bong-song-tra-kho-tieu",
@@ -47,7 +49,9 @@
       "sourceRefs": [
         { "url": "https://vnexpress.net/thoi-su/dac-san-ca-bong-song-tra-kho-tieu-cua-nguoi-quang-ngai-3602611.html", "label": "VnExpress – Cá bống sông Trà kho tiêu" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "dac-san-qua"],
+      "mealTypeNote": "howToEat ghi 'ăn kèm cơm trắng nóng' nên đây là món mặn đưa cơm đúng nghĩa bữa chính, đồng thời có thể 'đóng hũ dùng dần hoặc làm quà biếu' nên cũng là đặc sản làm quà."
     },
     {
       "slug": "banh-xeo-muc-quang-ngai",
@@ -67,7 +71,9 @@
       "sourceRefs": [
         { "url": "https://baoquangngai.vn/channel/2047/201908/thom-ngon-banh-xeo-vo-sa-huynh-2960551/", "label": "Báo Quảng Ngãi – Bánh xèo vỏ Sa Huỳnh" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh bột gạo nhân mực tươi cuốn rau chấm mắm, ăn vài cái là no nên vẫn thay được bữa, nhưng description nói bánh chỉ nhỏ gọn trong lòng bàn tay và ăn chơi từng cái nên cũng là món ăn vặt."
     }
   ]
 }

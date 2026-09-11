@@ -57,7 +57,11 @@
       ],
       "occasions": [
         "Quanh năm"
-      ]
+      ],
+      "mealTypes": [
+        "bua-chinh"
+      ],
+      "mealTypeNote": "Tô bún sợi to chan nước dùng ninh xương bò và giò heo kèm bắp bò, huyết là một bữa ăn no trọn vẹn."
     },
     {
       "slug": "com-hen",
@@ -98,7 +102,11 @@
       ],
       "occasions": [
         "Quanh năm"
-      ]
+      ],
+      "mealTypes": [
+        "bua-chinh"
+      ],
+      "mealTypeNote": "Có cơm làm tinh bột chính, trộn cùng hến xào, tóp mỡ, đậu phộng và rau sống nên một tô là đủ no cho bữa trưa."
     },
     {
       "slug": "banh-khoai",
@@ -138,7 +146,12 @@
       ],
       "occasions": [
         "Quanh năm"
-      ]
+      ],
+      "mealTypes": [
+        "bua-chinh",
+        "an-vat"
+      ],
+      "mealTypeNote": "Bánh bột gạo nhân tôm thịt giá đỗ cuốn rau chấm nước lèo, ăn vài cái là no nhưng cũng thường được dùng như món ăn chơi buổi chiều."
     },
     {
       "slug": "banh-beo-nam-loc",
@@ -178,7 +191,11 @@
       ],
       "occasions": [
         "Quanh năm"
-      ]
+      ],
+      "mealTypes": [
+        "an-vat"
+      ],
+      "mealTypeNote": "Phần howToEat nói rõ đây là kiểu 'ăn chơi' của ẩm thực cung đình Huế, ăn từng miếng nhỏ chứ không phải bữa chính no bụng."
     }
   ]
 }

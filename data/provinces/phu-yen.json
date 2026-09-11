@@ -29,7 +29,9 @@
         { "url": "https://www.greensm.com/vn-vi/news/dac-san-phu-yen", "label": "Đặc sản Phú Yên – Green SM" },
         { "url": "https://ohdidi.vn/blog/am-thuc/an-gi-o-phu-yen-thuong-thuc-21-mon-ngon-xu-nau-gay-thuong-nho", "label": "Top 21 món ngon đặc sản Phú Yên – Ohdidi" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "howToEat nói ăn kèm bánh mì hoặc cơm trắng và húp cả phần nước dùng, có tinh bột đi cùng nên no và hợp lý cho một bữa trưa."
     },
     {
       "slug": "banh-canh-he",
@@ -50,7 +52,9 @@
         { "url": "https://vi.wikipedia.org/wiki/B%C3%A1nh_canh", "label": "Bánh canh – Wikipedia tiếng Việt" },
         { "url": "https://www.greensm.com/vn-vi/news/dac-san-phu-yen", "label": "Đặc sản Phú Yên – Green SM" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Tô bánh canh sợi bột gạo chan nước lèo ninh xương cá kèm chả cá, là món nước no bụng và vốn được ăn thay bữa sáng nên thay được bữa trưa."
     },
     {
       "slug": "so-huyet-dam-o-loan",
@@ -71,7 +75,9 @@
         { "url": "https://moit.gov.vn/tin-tuc/xuc-tien-thuong-mai/so-huyet-o-loan-dac-san-cua-vung-bien-phu-yen.html", "label": "Sò huyết Ô Loan – đặc sản của vùng biển Phú Yên (Bộ Công Thương)" },
         { "url": "https://vinwonders.com/vi/wonderpedia/news/so-huyet-dam-o-loan/", "label": "Sò huyết đầm Ô Loan – VinWonders" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau"],
+      "mealTypeNote": "howToEat ghi thẳng 'thường dùng làm món nhậu kèm rau răm', lại không có tinh bột hay cơm đi kèm nên không thay được một bữa."
     }
   ]
 }

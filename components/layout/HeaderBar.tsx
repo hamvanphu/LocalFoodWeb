@@ -27,6 +27,12 @@ export default function HeaderBar({ index }: { index: SearchEntry[] }) {
       </Link>
       <SearchBar index={index} locale={locale} />
       <nav className="hidden shrink-0 items-center gap-4 text-sm lg:flex">
+        <Link
+          href={localePath(locale, "/goi-y")}
+          className="font-medium text-chili hover:text-chili-dark"
+        >
+          {t(locale, "nav.recommend")}
+        </Link>
         <Link href={localePath(locale, "/browse")} className="text-ink/70 hover:text-chili">
           {t(locale, "nav.allProvinces")}
         </Link>

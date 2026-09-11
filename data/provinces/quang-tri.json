@@ -28,7 +28,9 @@
       "sourceRefs": [
         { "url": "https://ngoisao.vnexpress.net/chao-bot-ca-loc-quang-tri-an-phai-dung-dua-duoc-xuat-khau-sang-my-4959357.html", "label": "VnExpress – Cháo bột cá lóc Quảng Trị" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Sợi bột gạo cán dày chan nước dùng ninh từ cá lóc, howToEat nói phải gắp bằng đũa như bún phở nên đây là một tô no bụng thay được bữa trưa."
     },
     {
       "slug": "banh-uot-phuong-lang",
@@ -51,7 +53,9 @@
         { "url": "https://tuoitre.vn/thuong-banh-uot-phuong-lang-chao-vat-giuong-quang-tri-20240301215005552.htm", "label": "Thương bánh ướt Phương Lang, cháo vạt giường Quảng Trị – Tuổi Trẻ" },
         { "url": "https://thanhnien.vn/banh-uot-phuong-lang-185452010.htm", "label": "Bánh ướt Phương Lang – Thanh Niên" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "howToEat nói ăn kèm thịt luộc hoặc chả và rau sống nên một đĩa đủ no cho bữa trưa, nhưng bánh ướt vốn là món quà sáng ăn nhẹ nên cũng xếp thêm ăn vặt."
     },
     {
       "slug": "chao-ca-vat-giuong-hai-lang",
@@ -71,7 +75,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/Ch%C3%A1o_c%C3%A1_V%E1%BA%A1t_gi%C6%B0%E1%BB%9Dng_H%E1%BA%A3i_L%C4%83ng", "label": "Wikipedia tiếng Việt – Cháo cá Vạt giường Hải Lăng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Sợi bột gạo bản to nấu cùng thịt cá lóc và nước dùng xương cá, howToEat mô tả dùng chung cả tô lớn theo mâm nên là món nước no bụng."
     }
   ]
 }

@@ -34,7 +34,9 @@
       "sourceRefs": [
         { "url": "https://vietgiaitri.com/goi-ca-bien-hoa-mon-dac-san-ngon-tuyet-cua-dong-nai-20211108i6142826/", "label": "Gỏi cá Biên Hòa – món đặc sản của Đồng Nai (Việt Giải Trí) — nguồn báo chí, chưa có bài Wikipedia riêng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Cá lóc sống thái lát ướp chua cuốn bánh tráng với rau thơm, không có tinh bột chính, là món gỏi hợp nhâm nhi hơn bữa trưa."
     },
     {
       "slug": "goi-buoi-tan-trieu",
@@ -67,7 +69,9 @@
       "sourceRefs": [
         { "url": "https://mia.vn/cam-nang-du-lich/lang-buoi-tan-trieu-nuc-tieng-dong-nai-14216", "label": "Làng bưởi Tân Triều với đặc sản nức tiếng Đồng Nai (Mia.vn) — nguồn báo chí, chưa có bài Wikipedia riêng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat", "moi-nhau"],
+      "mealTypeNote": "Món gỏi thanh mát xúc bằng bánh phồng tôm chiên giòn, không có tinh bột chính nên chỉ là món ăn chơi hoặc món khai vị trong mâm."
     },
     {
       "slug": "ga-hap-buoi-tan-trieu",
@@ -93,7 +97,9 @@
       "sourceRefs": [
         { "url": "https://mia.vn/cam-nang-du-lich/dac-san-dong-nai-12294", "label": "Top món đặc sản Đồng Nai: gà hấp bưởi Tân Triều (Mia.vn) — nguồn báo chí, chưa có bài Wikipedia riêng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Gà ta hấp chặt miếng chấm muối tiêu chanh là món mặn chính dọn trong bữa tiệc gia đình, ăn với cơm được."
     }
   ]
 }

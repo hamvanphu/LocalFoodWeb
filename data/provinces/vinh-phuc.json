@@ -29,7 +29,9 @@
         { "url": "https://vietnamnet.vn/dac-san-ca-thinh-lap-thach-o-vinh-phuc-khach-kho-tinh-cung-khen-ngon-2330824.html", "label": "Đặc sản cá thính Lập Thạch ở Vĩnh Phúc (VietNamNet)" },
         { "url": "https://danviet.vn/ca-thinh-lap-thach-dac-san-que-dan-da-ma-cach-lam-ki-cong-vi-ngon-kho-cuong-20220814223716641-d1037357.html", "label": "Cá thính Lập Thạch: đặc sản quê dân dã (Dân Việt)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Cá ủ thính đem rán hoặc nướng sơ, dùng kèm cơm nóng và chính mô tả nhấn mạnh 'rất tốn cơm' nên là món mặn của bữa chính."
     },
     {
       "slug": "banh-hon",
@@ -49,7 +51,9 @@
       "sourceRefs": [
         { "url": "https://vietnamnet.vn/banh-hon-huong-canh-thom-thao-qua-que-vinh-phuc-319098.html", "label": "Bánh hòn Hương Canh - thơm thảo quà quê Vĩnh Phúc (VietNamNet)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh bột gạo nhân thịt băm mộc nhĩ hấp nóng, được bán làm quà sáng ở chợ quê nên vừa ăn no được vừa là món quà ăn chơi."
     },
     {
       "slug": "ga-doi-lap-thach",
@@ -69,7 +73,9 @@
       "sourceRefs": [
         { "url": "https://eva.vn/di-dau-xem-gi/5-dac-san-chi-co-o-vinh-phuc-cuc-noi-tieng-co-mon-khong-phai-ai-cung-dam-an-c40a562872.html", "label": "5 đặc sản chỉ có ở Vĩnh Phúc (Eva.vn)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "moi-nhau"],
+      "mealTypeNote": "Gà luộc chấm muối lá chanh hoặc nướng mật ong là món mặn ăn với cơm, đồng thời là món đãi khách trong các dịp họp mặt, cỗ bàn."
     }
   ]
 }

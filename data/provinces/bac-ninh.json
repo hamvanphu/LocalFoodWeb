@@ -31,7 +31,9 @@
         { "url": "https://en.wikipedia.org/wiki/B%C3%A1nh_phu_th%C3%AA", "label": "Bánh phu thê – Wikipedia" },
         { "url": "https://danviet.vn/cha-phai-banh-phu-the-o-bac-ninh-co-nem-bui-hon-mot-dac-san-la-mot-phan-van-hoa-kinh-bac-20250323102747351-d1217095.html", "label": "Bánh phu thê và văn hóa ẩm thực Kinh Bắc (Dân Việt)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["an-vat", "trang-mieng"],
+      "mealTypeNote": "Bánh bột năng nhân đậu xanh ngọt, ăn nguội trong tráp lễ và tiệc cưới nên là quà chiều hoặc món ngọt cuối bữa."
     },
     {
       "slug": "nem-bui",
@@ -51,7 +53,9 @@
       "sourceRefs": [
         { "url": "https://vnexpress.net/nem-bui-mon-dac-san-dan-da-o-bac-ninh-3341749.html", "label": "Nem Bùi - món đặc sản dân dã ở Bắc Ninh (VnExpress)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Cách ăn nói rõ thường nhâm nhi cùng bia trong các buổi họp mặt, ăn kèm lá sung chứ không kèm cơm."
     },
     {
       "slug": "banh-te-lang-cho",
@@ -71,7 +75,9 @@
       "sourceRefs": [
         { "url": "https://vinwonders.com/vi/wonderpedia/news/banh-te-lang-cho-bac-ninh/", "label": "Bánh tẻ làng Chờ: đặc sản thơm ngon Bắc Ninh (VinWonders)" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh", "an-vat"],
+      "mealTypeNote": "Bánh bột gạo tẻ có nhân thịt băm mộc nhĩ, ăn nóng vài chiếc là no nhưng vẫn thường được mua như quà sáng."
     }
   ]
 }

@@ -35,7 +35,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/H%E1%BB%A7_ti%E1%BA%BFu", "label": "Hủ tiếu (mục Hủ tiếu Sa Đéc) – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Tô hủ tiếu có sợi bánh gạo, thịt và lòng heo chan nước dùng hầm xương — một suất ăn no điển hình."
     },
     {
       "slug": "chuot-dong-quay-lu-cao-lanh",
@@ -61,7 +63,9 @@
       "sourceRefs": [
         { "url": "https://intour.vn/mon-ngon-mien-nam/nhung-mon-an-dac-san-ngon-tai-dong-thap-1581.html", "label": "Những món ăn đặc sản phải thử khi đến Đồng Tháp – Intour.vn" }
       ],
-      "occasions": ["Mùa thu"]
+      "occasions": ["Mùa thu"],
+      "mealTypes": ["moi-nhau"],
+      "mealTypeNote": "Thịt quay chặt miếng chấm muối tiêu chanh, ăn kèm rau răm, chuối chát, dưa leo mà không đi với cơm — đúng cách dọn của một đĩa mồi."
     },
     {
       "slug": "nem-lai-vung",
@@ -87,7 +91,9 @@
       "sourceRefs": [
         { "url": "https://www.ivivu.com/blog/2022/12/nem-lai-vung-dac-san-tru-danh-cua-dong-thap-nhat-dinh-phai-thu/", "label": "Nem Lai Vung - Đặc sản trứ danh của Đồng Tháp – iVIVU.com" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau", "an-vat"],
+      "mealTypeNote": "Cách ăn ghi rõ thường dùng làm món khai vị hoặc nhắm rượu trong các bữa tiệc, cũng hay bóc lá ăn chơi từng chiếc."
     }
   ]
 }

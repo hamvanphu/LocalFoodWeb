@@ -42,7 +42,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/B%C3%BAn_n%C6%B0%E1%BB%9Bc_l%C3%A8o", "label": "Bún nước lèo – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Bún tươi sợi to chan nước lèo mắm bò hóc kèm cá lóc, tôm và thịt heo quay là một tô đầy đặn đủ no cho bữa chính."
     },
     {
       "slug": "banh-tet-tra-cuon",
@@ -70,7 +72,9 @@
       "sourceRefs": [
         { "url": "https://travinh.baovinhlong.vn/xa-hoi/dac-san-banh-tet-tra-cuon-24469.html", "label": "Đặc sản bánh tét Trà Cuôn – Báo Trà Vinh" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["bua-chinh", "dac-san-qua"],
+      "mealTypeNote": "Đòn bánh nếp nhân đậu xanh, mỡ heo, trứng muối cắt khoanh ăn kèm dưa món là suất ăn no, và cả 'chợ bánh tét' dọc quốc lộ 53 bán cho du khách mua về làm quà."
     },
     {
       "slug": "duong-cha-la-tra-vinh",
@@ -95,7 +99,9 @@
       "sourceRefs": [
         { "url": "https://vi.wikipedia.org/wiki/%C4%90u%C3%B4ng_ch%C3%A0_l%C3%A0", "label": "Đuông chà là – Wikipedia tiếng Việt" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["moi-nhau"],
+      "mealTypeNote": "Đuông nướng hoặc chiên bơ chấm nước mắm nguyên chất, ăn từng con kèm rau sống theo kiểu đặc sản đãi khách sành ăn, không có tinh bột nên không thể thay bữa trưa."
     }
   ]
 }

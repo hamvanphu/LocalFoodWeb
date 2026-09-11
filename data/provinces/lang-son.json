@@ -29,7 +29,9 @@
       "sourceRefs": [
         { "url": "https://luhanhvietnam.com.vn/du-lich/thuong-thuc-dac-san-vit-quay-lang-son.html", "label": "Thưởng thức đặc sản vịt quay Lạng Sơn ngon nức tiếng" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Vịt quay chặt miếng chấm nước mắm pha, cách ăn ghi rõ dùng kèm cơm hoặc bánh mì nên no được như một bữa."
     },
     {
       "slug": "khau-nhuc-lang-son",
@@ -53,7 +55,9 @@
         { "url": "https://baolangson.vn/khau-nhuc-lang-son-dac-sac-am-thuc-vung-bien-1528145.html", "label": "Khâu nhục Lạng Sơn – Đặc sắc ẩm thực vùng biên - Báo Lạng Sơn" },
         { "url": "https://vnexpress.net/doi-song-cooking-khau-nhuc-lang-son-4702792.html", "label": "Cách làm món khâu nhục Lạng Sơn - VnExpress" }
       ],
-      "occasions": ["Quanh năm", "Tết Nguyên Đán"]
+      "occasions": ["Quanh năm", "Tết Nguyên Đán"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Thịt ba chỉ hấp nhừ cùng khoai môn được dùng nóng với cơm trắng, đúng dạng món mặn của bữa chính."
     },
     {
       "slug": "banh-cuon-trung-lang-son",
@@ -74,7 +78,9 @@
       "sourceRefs": [
         { "url": "https://luhanhvietnam.com.vn/du-lich/thuong-thuc-banh-cuon-trung-lang-son-noi-tieng.html", "label": "Thưởng thức đặc sản bánh cuốn trứng Lạng Sơn ăn một lần khó quên" }
       ],
-      "occasions": ["Quanh năm"]
+      "occasions": ["Quanh năm"],
+      "mealTypes": ["bua-chinh"],
+      "mealTypeNote": "Được mô tả là món điểm tâm sáng, có bột gạo và trứng, chan nước dùng xương nên no như một bữa."
     }
   ]
 }

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { OCCASIONS, TASTE_TAGS } from "./types";
+import { MEAL_TYPES, OCCASIONS, TASTE_TAGS } from "./types";
 
 const sourceRefSchema = z.object({
   url: z.url(),
@@ -29,6 +29,12 @@ const dishSchema = z.object({
   images: z.array(dishImageSchema),
   sourceRefs: sourceRefsSchema,
   occasions: z.array(z.enum(OCCASIONS)).min(1),
+  // BẮT BUỘC, tối thiểu 1 phần tử. Món thiếu phân loại sẽ biến mất khỏi gợi ý mà không
+  // ai thấy — nên chặn ngay ở build thay vì để lọt (RISK-LF.md R16, ARCH-LF.md D4).
+  mealTypes: z.array(z.enum(MEAL_TYPES)).min(1, {
+    message: "Cần ≥1 mealTypes (ARCH-LF.md D4) — món thiếu phân loại sẽ biến mất khỏi gợi ý",
+  }),
+  mealTypeNote: z.string().min(1).optional(),
 });
 
 export const provinceSchema = z

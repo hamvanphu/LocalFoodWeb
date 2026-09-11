@@ -27,6 +27,30 @@ export const OCCASIONS = [
 
 export type Occasion = (typeof OCCASIONS)[number];
 
+/**
+ * Loại bữa mà món phù hợp — **gán tay cho từng món**, không suy tự động.
+ *
+ * Vì sao gán tay: "món này ăn no được vào bữa trưa không" là **phán đoán ngữ nghĩa**.
+ * Đã thử suy bằng từ khoá và đo được là không đáng tin — "Hạt điều rang" bị bắt vào cả
+ * nhóm nhậu lẫn ăn vặt, "Bánh đa Kế" vào cả ăn vặt lẫn lễ Tết. Xem `ARCH-LF.md` D4.
+ *
+ * Một món có thể thuộc nhiều loại: bánh xèo vừa ăn no được vừa là món ăn chơi.
+ */
+export const MEAL_TYPES = [
+  /** Ăn no được, thay được bữa trưa. Đây là nhóm DUY NHẤT vào bể gợi ý của US-18. */
+  "bua-chinh",
+  /** Ăn chơi, quà chiều — không thay được bữa. */
+  "an-vat",
+  /** Chè, kẹo, bánh ngọt. */
+  "trang-mieng",
+  /** Mồi nhậu — đi với rượu bia, không hợp bữa trưa công sở. */
+  "moi-nhau",
+  /** Đồ khô, đóng gói, mua về làm quà — không phải món ăn tại chỗ. */
+  "dac-san-qua",
+] as const;
+
+export type MealType = (typeof MEAL_TYPES)[number];
+
 export interface DishImage {
   url: string;
   attribution: string;
@@ -51,6 +75,13 @@ export interface Dish {
   images: DishImage[];
   sourceRefs: SourceRef[];
   occasions: Occasion[];
+  /**
+   * BẮT BUỘC — zod chặn ở build nếu thiếu. Cố ý không cho optional: một món "rơi" khỏi
+   * phân loại sẽ **âm thầm biến mất** khỏi gợi ý mà không ai biết (`RISK-LF.md` R16).
+   */
+  mealTypes: MealType[];
+  /** Lý do phân loại, một câu ngắn — để người duyệt soi lại được, không phải hộp đen. */
+  mealTypeNote?: string;
 }
 
 export interface Province {

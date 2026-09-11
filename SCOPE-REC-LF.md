@@ -52,8 +52,8 @@ khẩu vị. Vì vậy tính năng này **bắt buộc** phải lọc.
 | 3 | Phân loại 197 món bằng cách nào? | ✅ **PM chốt: AI phân loại + PM duyệt mẫu.** Đã đo và loại bỏ phương án tự động thuần: từ khoá bắt nhầm *"Hạt điều rang"* vào **cả** nhóm nhậu lẫn ăn vặt, *"Bánh đa Kế"* vào cả ăn vặt lẫn lễ Tết |
 | 4 | Đặt ở đâu? | ✅ **PM chốt: trang riêng `/goi-y`** (và `/en/goi-y`). URL thật nên chia sẻ được kết quả |
 | 5 | Có cần đăng nhập / lưu sở thích? | ❌ Không — giữ nguyên nguyên tắc không auth. Lựa chọn bộ lọc nằm trên URL (query string) nên chia sẻ được mà không cần tài khoản |
-| 6 | Gợi ý bao nhiêu món một lần? | Mặc định hiện **tối đa 12 món** khớp bộ lọc, kèm nút **"Chọn giúp tôi"** bốc ngẫu nhiên 1 món — vì vấn đề gốc là *mệt vì phải chọn*, đưa ra 60 món là tái tạo lại đúng vấn đề đó |
-| 7 | Ràng buộc "văn phòng" gồm những gì? | Bốn chiều, tất cả suy được từ dữ liệu đang có: **không cay** · **nhẹ bụng** (ít chiên rán) · **món nước/ấm bụng** · **chay được**. Cộng một chiều đặc thù: **tránh món nặng mùi** |
+| 6 | Gợi ý bao nhiêu món một lần? | ✅ **PM chốt lại 2026-09-11: đúng 2 món, bốc ngẫu nhiên, kèm đầy đủ thông tin + công thức nấu.** Bấm lại thì ra cặp khác. *(Bản trước: 12 món + bộ lọc — đã bỏ, xem mục "Đổi yêu cầu" bên dưới)* |
+| 7 | Ràng buộc "văn phòng" gồm những gì? | Áp **tự động ở tầng dữ liệu**, không phải nút cho người dùng bấm: chỉ món `bữa chính` mới vào bể bốc. Các chiều *không cay / chay được / nặng mùi* vẫn **suy ra và hiển thị làm nhãn** để người đọc tự cân nhắc, nhưng **không còn là bộ lọc tương tác** |
 | 8 | Có tính tới mùa/dịp lễ không? | Không ở bản đầu. `occasions` đã có bộ lọc riêng ở `/browse` (US-13); nhồi thêm vào đây làm loãng trọng tâm |
 | 9 | Song ngữ ngay không? | ✅ Có. Site đã song ngữ từ v1.1; thêm một trang chỉ có tiếng Việt là tạo nợ ngay lúc sinh ra |
 | 10 | Dữ liệu phân loại lưu ở đâu? | Trong **chính `data/provinces/*.json`** (thêm 1 trường cho mỗi món), **không** tách file riêng. Khác với bản dịch — lý do ở `ARCH-LF.md` D4 |
@@ -66,6 +66,34 @@ khẩu vị. Vì vậy tính năng này **bắt buộc** phải lọc.
   còn lại **suy ra bằng code**. Lý do đầy đủ ở `ARCH-LF.md` D4.
 - **D-REC-3 — Bản đầu chỉ làm bữa trưa đi ăn.** "Mang cơm đi làm" đưa vào backlog, không
   làm nửa vời.
+- **D-REC-4 *(2026-09-11)* — Bốc đúng 2 món, không có bộ lọc tương tác.** Người dùng bấm
+  một nút, nhận 2 món kèm đủ thông tin và công thức. Lý do ở mục dưới.
+
+## 🔄 Đổi yêu cầu — 2026-09-11 (PM)
+
+> *"tính năng gợi ý là sẽ random từ list ra 2 món thôi. Tức là mỗi lần user vào nhấn
+> feature thì sẽ hiển thị ra 2 món + info + công thức nấu"*
+
+| | Thiết kế cũ (chưa build) | Thiết kế mới |
+|---|---|---|
+| Kết quả | Tới 12 món dạng thẻ | **Đúng 2 món, đầy đủ nội dung + công thức** |
+| Bộ lọc | 5 nút bật/tắt cho người dùng | **Không có.** Lọc áp tự động ở tầng dữ liệu |
+| Thao tác | Chọn bộ lọc → đọc danh sách → bấm vào món → sang trang khác mới thấy công thức | **Bấm một nút → đọc luôn tại chỗ** |
+
+**Vì sao thiết kế mới đúng hơn — không chỉ đơn giản hơn:**
+
+1. **2 là con số đúng cho vấn đề gốc.** Vấn đề là *mệt vì phải chọn*. Một món thì không
+   phải là gợi ý mà là mệnh lệnh; 12 món thì tái tạo lại đúng sự mệt mỏi ban đầu. Hai món
+   cho cảm giác **có quyền chọn** mà không tốn sức.
+2. **Bộ lọc mâu thuẫn với chính mục đích.** Bắt người đang mệt vì phải chọn đi *chọn năm
+   cái bộ lọc trước* là làm nặng thêm đúng việc mà tính năng sinh ra để gỡ.
+3. **Đọc công thức tại chỗ bỏ được một bước nhảy trang.** Bản cũ: bấm món → sang trang
+   tỉnh → mở panel → mới thấy công thức. Ba thao tác cho một câu hỏi đơn giản.
+
+**Cái mất, ghi thẳng:** người ăn chay hoặc không ăn được cay **không có cách nói ra**.
+Bù lại bằng nhãn hiển thị trên mỗi món (`chay được`, `cay`, `nặng mùi`) để họ tự nhìn và
+bấm lại. Nếu về sau thấy khó chịu thật thì mở lại bộ lọc — đã ghi vào backlog, **không
+phải quên**.
 
 ## Out of scope (rõ ràng, không phải quên)
 
@@ -73,6 +101,8 @@ khẩu vị. Vì vậy tính năng này **bắt buộc** phải lọc.
 - **Mang cơm đi làm** / nấu sẵn — cần thuộc tính hâm lại, đựng hộp mà dữ liệu chưa có.
 - Đặt món, liên kết app giao đồ ăn.
 - Cá nhân hoá theo lịch sử (không có tài khoản, không theo dõi người dùng).
+- **Bộ lọc tương tác** (không cay / chay / nhẹ bụng) — bỏ ở bản đầu theo D-REC-4, đưa vào
+  backlog. Nhãn vẫn hiển thị để người đọc tự cân nhắc.
 - Dinh dưỡng, calo, chỉ số đường huyết — **cố ý không làm**: đây là nội dung sức khoẻ,
   nói sai có hại thật, mà dự án không có nguồn dinh dưỡng nào để đối chiếu.
 
@@ -80,8 +110,9 @@ khẩu vị. Vì vậy tính năng này **bắt buộc** phải lọc.
 
 1. Mọi món trong `data/provinces/*.json` có `mealTypes` hợp lệ — **zod chặn ở build**.
 2. Có cổng `pnpm check:meal` kiểm phân loại, chạy lại được.
-3. `/goi-y` và `/en/goi-y` chạy, bộ lọc hoạt động, có trạng thái rỗng tử tế.
-4. Bộ lọc nằm trên URL → chia sẻ được kết quả.
+3. `/goi-y` và `/en/goi-y` chạy: bấm nút ra **2 món khác nhau**, kèm đủ nguyên liệu,
+   cách làm, cách ăn.
+4. Cặp món **nằm trên URL** → chia sẻ được đúng cặp mình vừa nhận.
 5. US-18 có AC trong `SPEC-LF.md` và checklist trong `SIT-UAT-LF.md` — **viết trước khi code**.
 6. PM duyệt mẫu phân loại và **ghi đúng mức đã kiểm** (theo cách đã làm ở `SPOTCHECK-LF.md`).
 

@@ -130,13 +130,18 @@ Cổng đã đóng → bước [6] Risk + Delegation Map được phép bắt đ
 | W4-2 Phân loại 197 món | **Rủi ro cao nhất** — không phải gõ phím mà là phán đoán; món ranh giới (bánh xèo, gỏi, đồ nướng) tốn thời gian gấp bội món rõ ràng | 1.5h | 2h | 4h |
 | W4-3 Cổng `check:meal` | Tương tự `check-i18n.mjs` đã có, dùng lại khung | 0.5h | 0.75h | 1.5h |
 | W4-4 `lib/recommend.ts` | Hàm thuần, logic lọc không phức tạp | 0.75h | 1h | 2h |
-| W4-5 Trang `/goi-y` ×2 ngôn ngữ | Dùng lại `DishTile`/`Sheet` đã có; phần mới là bộ lọc + trạng thái rỗng | 1.5h | 2h | 4h |
-| W4-6 Bộ lọc trên query string | `useSearchParams` + `router.replace`, đã quen sau US-16 | 0.25h | 0.5h | 1h |
+| W4-5 Trang `/goi-y` ×2 ngôn ngữ | Dùng lại `DishCard` đã có (nó vốn đã hiện đủ nguyên liệu/cách làm/cách ăn) ⇒ phần mới chỉ là khung trang + nút đổi món | 1h | 1.5h | 3h |
+| W4-6 Seed trên query string | Máy chủ đọc `searchParams`, suy cặp món tất định — **đơn giản hơn** bộ lọc nhiều chiều của bản trước | 0.25h | 0.5h | 1h |
 | W4-7 Chuỗi 2 ngôn ngữ + link header | Thuần dữ liệu, khung `ui-strings` đã có | 0.25h | 0.5h | 1h |
 | W4-8 Checklist SIT-UAT | Đã viết 16 story loại này | 0.25h | 0.5h | 1h |
 
-**Tổng:** Lạc quan **5,25h** · Khả dĩ **7,75h** · Bi quan **15,5h**
-**PERT = (5,25 + 4×7,75 + 15,5) / 6 ≈ 8,3 giờ**
+**Tổng:** Lạc quan **4,75h** · Khả dĩ **7,25h** · Bi quan **14,5h**
+**PERT = (4,75 + 4×7,25 + 14,5) / 6 ≈ 7,7 giờ**
+
+> **Sửa 2026-09-11 sau khi PM đổi yêu cầu:** PERT 8,3h → **7,7h**. Giảm nhẹ vì bỏ bộ lọc
+> tương tác và dùng lại được `DishCard` sẵn có. **Phần đắt nhất không đổi:** W4-2 (phân
+> loại 197 món) vẫn là 2h khả dĩ và vẫn là rủi ro lớn nhất — đổi bề mặt không làm nhẹ đi
+> công việc phán đoán ở tầng dữ liệu.
 
 ### Bài học từ EST trước, áp vào đây
 

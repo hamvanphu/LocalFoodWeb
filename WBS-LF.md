@@ -119,6 +119,10 @@ PM sẽ spot-check ngẫu nhiên vài tỉnh sau khi xong, theo đúng tinh th�
 ## Wave 4 — US-18 "Trưa nay ăn gì" (bẻ tới task, 2026-09-11)
 
 > Input: `SCOPE-REC-LF.md` + `SPEC-LF.md` US-18 + `ARCH-LF.md` D4.
+> **Cập nhật 2026-09-11:** PM đổi yêu cầu sang *bốc đúng 2 món kèm công thức*, bỏ bộ lọc
+> tương tác (D-REC-4). W4-5/W4-6 sửa theo; W4-1→W4-4 **không đổi** — phần móng dữ liệu
+> giống hệt dù bề mặt đổi. Đó chính là cái lợi của "móng trước, bề mặt sau": yêu cầu
+> đổi ở bề mặt không kéo theo làm lại tầng dữ liệu.
 > **Thứ tự bắt buộc: móng trước, bề mặt sau.** W4-1→W4-3 là dữ liệu và cổng kiểm; không
 > được bắt đầu W4-5 (giao diện) khi chưa có dữ liệu thật để lọc.
 
@@ -128,8 +132,8 @@ PM sẽ spot-check ngẫu nhiên vài tỉnh sau khi xong, theo đúng tinh th�
 | **W4-2** | AI phân loại **197 món**, ghi thẳng vào `data/provinces/*.json`, mỗi món kèm lý do ngắn để PM soi lại | 63 file cập nhật | W4-1 | 2h |
 | **W4-3** | Cổng `pnpm check:meal` — mọi món có `mealTypes` hợp lệ, thống kê phân bố theo nhóm, cảnh báo nhóm bất thường (vd 1 tỉnh không món bữa chính nào) | `scripts/check-meal.mjs` | W4-2 | 0.75h |
 | **W4-4** | `lib/recommend.ts` — quy tắc suy thuộc tính (cay / món nước / chay / nặng mùi / nhiều dầu mỡ) + hàm lọc. **Thuần hàm, không phụ thuộc React** | `lib/recommend.ts` | W4-2 | 1h |
-| **W4-5** | Trang `/goi-y` + `/en/goi-y`: bộ lọc, danh sách kết quả, nút "Chọn giúp tôi", trạng thái rỗng, ghi rõ giới hạn "không gợi ý quán" | `app/goi-y/`, `app/en/goi-y/`, `components/recommend/` | W4-4 | 2h |
-| **W4-6** | Trạng thái bộ lọc nằm trên **query string** để chia sẻ được link | cập nhật W4-5 | W4-5 | 0.5h |
+| **W4-5** | Trang `/goi-y` + `/en/goi-y`: hiện **đúng 2 món** kèm ảnh, mô tả, nguyên liệu, cách làm, cách ăn; nút *"Đổi món khác"*; nhãn cảnh báo (`cay`/`nặng mùi`/`chay được`); ghi rõ giới hạn "không gợi ý quán" | `app/goi-y/`, `app/en/goi-y/`, `components/recommend/` | W4-4 | 2h |
+| **W4-6** | **Seed trên query string** — máy chủ suy cặp món từ seed nên không lệch hydration và chia sẻ được đúng cặp; nút đổi món sinh seed mới | cập nhật W4-5 | W4-5 | 0.5h |
 | **W4-7** | Chuỗi giao diện 2 ngôn ngữ + link ở header | `lib/ui-strings.ts`, `HeaderBar.tsx` | W4-5 | 0.5h |
 | **W4-8** | Checklist kiểm thử US-18 vào `SIT-UAT-LF.md` | `SIT-UAT-LF.md` | W4-5 | 0.5h |
 | **🔒 W4-9** | **Cổng hiểu con — PM duyệt mẫu phân loại** (~20 món nhóm ranh giới) trước khi coi tính năng là xong | Quyết định PASS/FAIL + ghi mức đã kiểm | W4-2, W4-5 | PM review |

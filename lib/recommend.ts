@@ -72,16 +72,27 @@ export function deriveFlags(dish: Dish): OfficeFlags {
 }
 
 /**
- * Bể món được phép gợi ý cho bữa trưa: **chỉ món gắn `bua-chinh`**.
+ * Bể món được phép gợi ý cho bữa trưa: gắn `bua-chinh` **và không gắn `moi-nhau`**.
  *
- * Đây là chỗ thực thi yêu cầu "lọc bớt chứ không full" của PM — mồi nhậu, ăn vặt, tráng
- * miệng và đặc sản làm quà không bao giờ vào đây.
+ * Đây là chỗ thực thi yêu cầu "lọc bớt chứ không full" của PM — ăn vặt, tráng miệng và
+ * đặc sản làm quà không bao giờ vào đây.
+ *
+ * **Vì sao loại cả món lưỡng tính** (PM chốt ở cổng W4-9, 2026-09-11): có 10 món dữ liệu
+ * nói đúng cả hai đường — Rêu đá nướng *"dùng kèm cơm hoặc như món nhắm rượu"*, Thắng cố
+ * *"nhâm nhi cùng rượu ngô"*. Nhãn không sai, nhưng bối cảnh **bữa trưa công sở** thì
+ * không nhậu.
+ *
+ * **Vì sao sửa ở LUẬT chứ không sửa dữ liệu:** nhãn `moi-nhau` của 10 món đó là **đúng**
+ * — gỡ nó đi là làm dữ liệu nói sai sự thật chỉ để vừa một tính năng. Chính sách "bữa
+ * trưa không nhận món nhậu" là của tính năng này, nên nó thuộc về code. Nếu mai sau có
+ * tính năng "gợi ý món nhậu cuối tuần" thì nhãn đó vẫn còn nguyên để dùng.
  */
 export function officePool(provinces: Province[]): RecommendedDish[] {
   const pool: RecommendedDish[] = [];
   for (const province of provinces) {
     for (const dish of province.dishes) {
       if (!dish.mealTypes?.includes("bua-chinh")) continue;
+      if (dish.mealTypes.includes("moi-nhau")) continue;
       pool.push({
         dish,
         provinceSlug: province.slug,

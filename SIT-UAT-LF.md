@@ -295,7 +295,17 @@ chỉ chứng minh checklist khớp sản phẩm — **không thay được PM t
 | 14 | Bấm link "Xem trang …" dưới một món | Tới đúng trang tỉnh và **mở sẵn panel món đó** | ☐ |
 | 15 | Thu cửa sổ xuống ~380px | Hai món xếp dọc, không tràn ngang | ☐ |
 
-### 🔒 W4-9 — PM duyệt mẫu phân loại *(cổng riêng, chưa làm là chưa xong)*
+### 🔒 W4-9 — PM duyệt mẫu phân loại — ✅ **ĐÃ ĐÓNG (2026-09-11)**
+
+PM đã duyệt. Cách làm và kết quả ghi ở `SCOPE-REC-LF.md` mục *"Cổng W4-9"*:
+`scripts/review-meal.mjs` khoanh **23/197 món** đáng ngờ (chỗ dữ liệu tự mâu thuẫn với
+nhãn), PM đọc và quy về **3 quyết định** — loại món lưỡng tính `moi-nhau`, giữ lẩu, không
+sửa dữ liệu bánh Huế. Bể gợi ý **132 → 121 món**.
+
+**Bước 8 và 9 của checklist trên cần test lại** sau thay đổi này.
+
+<details>
+<summary>Hướng dẫn gốc (giữ làm lịch sử)</summary>
 
 Chạy `pnpm check:meal` để xem phân bố, rồi đọc **nhóm ranh giới** — không bốc ngẫu nhiên,
 vì lỗi tập trung ở đó:
@@ -312,3 +322,5 @@ vì lỗi tập trung ở đó:
 > sẽ **biến mất hoàn toàn** khỏi gợi ý. Người dùng **không thể báo lỗi về một thứ họ không
 > nhìn thấy** — khác hẳn R2, nơi nội dung sai vẫn hiện ra và còn bị soi. Cổng tự động chỉ
 > bắt được *thiếu* phân loại, không bắt được *phân loại sai*.
+
+</details>

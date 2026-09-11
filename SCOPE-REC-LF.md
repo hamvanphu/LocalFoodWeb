@@ -127,9 +127,11 @@ phải quên**.
 
 | | Số món |
 |---|---|
-| **Bể gợi ý bữa trưa** (`bua-chinh`) | **132** |
-| Bị loại khỏi gợi ý | **65** |
+| **Bể gợi ý bữa trưa** | **121** |
+| Bị loại khỏi gợi ý | **76** |
 | Tổng | 197 |
+
+**Luật vào bể (chốt ở cổng W4-9, 2026-09-11):** gắn `bua-chinh` **VÀ không gắn** `moi-nhau`.
 
 Phân bố nhãn (một món có thể mang nhiều nhãn): `bua-chinh` 132 · `an-vat` 69 ·
 `moi-nhau` 42 · `dac-san-qua` 40 · `trang-mieng` 17.
@@ -140,13 +142,37 @@ Phân bố nhãn (một món có thể mang nhiều nhãn): `bua-chinh` 132 · `
 - Mô phỏng **500 lần bấm**: không món nào thuộc nhóm bị loại lọt vào, và cả 132 món trong
   bể đều xuất hiện được.
 
-**Hai tỉnh không bao giờ xuất hiện trong gợi ý** — cổng cảnh báo bắt được, kiểm lại thì
+### Cổng W4-9 — PM đã duyệt (2026-09-11)
+
+Thay vì đọc 197 món, dựng `scripts/review-meal.mjs` khoanh vùng chỗ **dữ liệu tự mâu thuẫn
+với nhãn** → còn **23 món** cần soi. Đọc xong thấy 23 món đó thật ra chỉ là **3 quyết định**:
+
+| Quyết định | PM chốt | Hệ quả |
+|---|---|---|
+| 10 món vừa `bua-chinh` vừa `moi-nhau` | **Loại** — "văn phòng thì không nhậu" | Bể 132 → 121 |
+| 4 món lẩu | **Giữ** — vẫn là bữa ăn no | — |
+| Bánh bèo/nậm/lọc Huế (dữ liệu nói "ăn chơi") | **Để nguyên** — tôn trọng dữ liệu | Không sửa nội dung để vừa tính năng |
+
+**Sửa ở LUẬT chứ không sửa dữ liệu.** Nhãn `moi-nhau` của 10 món đó là **đúng** — gỡ đi là
+làm dữ liệu nói sai sự thật chỉ để vừa một tính năng. Chính sách "bữa trưa không nhận món
+nhậu" thuộc về tính năng, nên nằm trong `lib/recommend.ts`. Mai sau có tính năng "gợi ý món
+nhậu cuối tuần" thì nhãn đó vẫn còn nguyên để dùng.
+
+⚠️ **Hai quyết định trên va nhau ở 2 món.** *Lẩu cá đuối Vũng Tàu* và *Lẩu mắm Cần Thơ*
+mang **cả** nhãn `moi-nhau` (dữ liệu ghi *"ngồi quây quần nhúng đồ quanh nồi lẩu sôi cũng
+là cách dọn trên bàn nhậu"*), nên luật loại-món-nhậu cắt chúng dù PM nói giữ lẩu. Đã theo
+**luật chung** vì nó là chính sách bao trùm và được cân nhắc kỹ hơn. *Lẩu gà lá é* và *Lẩu
+mắm Long An* không mang nhãn đó nên vẫn ở lại. Muốn giữ cả 4 thì thêm một ngoại lệ cho
+món lẩu — một dòng trong `officePool`.
+
+**Ba tỉnh không bao giờ xuất hiện trong gợi ý** — cổng cảnh báo bắt được, kiểm lại thì
 **đúng**, không phải lỗi phân loại:
 
 | Tỉnh | Vì sao |
 |---|---|
 | Hải Dương | Cả 3 món là bánh đậu xanh, vải thiều, bánh gai — quà và tráng miệng |
 | Thanh Hóa | Cả 3 món là nem chua, gỏi cá nhệch, chả tôm — đồ nhắm và quà vặt |
+| **Sơn La** *(mới, sau quyết định W4-9)* | Món duy nhất ăn no được là *Pa pỉnh tộp*, mà nó mang nhãn `moi-nhau` (*"nhâm nhi cùng rượu ngô"*) nên bị luật mới cắt |
 
 Đây là **vấn đề thiếu nội dung của tỉnh**, không phải lỗi phân loại. Không "chữa" bằng
 cách ép một món lên `bua-chinh` — làm thế là bẻ dữ liệu cho vừa tính năng.

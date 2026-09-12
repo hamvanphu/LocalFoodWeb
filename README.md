@@ -84,7 +84,20 @@ Không có key thì bản đồ vẫn chạy bằng style demo công khai của 
 pnpm build        # build production — cũng là lúc zod validate toàn bộ 63 file dữ liệu
 pnpm start        # chạy bản production
 pnpm lint
+
+# Ba cổng kiểm chất lượng, chạy độc lập được
+pnpm check:geo    # mọi centroid nằm trong đất liền VN (sinh ra từ rủi ro R13)
+pnpm check:i18n   # bản dịch khớp bản gốc: đủ món, đủ trường, khớp số bước
+pnpm check:meal   # phân loại mealTypes hợp lệ + KHÔNG trường nào khác bị sửa
 ```
+
+> **`check:meal` làm một việc khác thường:** ngoài kiểm dữ liệu, nó **đối chiếu từng file
+> với bản trong git** và fail nếu có trường nào ngoài `mealTypes`/`mealTypeNote` bị đụng.
+> Lý do: nhiều agent ghi song song vào `data/provinces/*.json`, mà đó là nội dung gốc
+> tiếng Việt **không có bản sao nào ngoài git**.
+
+Ngoài ra `node scripts/review-meal.mjs` dựng phiếu soi phân loại — khoanh vùng chỗ dữ liệu
+tự mâu thuẫn với nhãn, để người duyệt đọc ~23 món thay vì 197.
 
 > ⚠️ **Gotcha khi thêm tỉnh mới:** `lib/provinces.ts` cache dữ liệu ở cấp module, nên
 > thêm file `data/provinces/*.json` mới mà dev server đang chạy thì **route mới sẽ 404**.
@@ -95,27 +108,45 @@ pnpm lint
 ## Cấu trúc
 
 ```
-app/                     # App Router: /, /browse, /provinces/[slug], not-found
+app/                     # App Router — tiếng Việt ở gốc, tiếng Anh dưới /en
+  /  /browse  /goi-y  /provinces/[slug]  /telemetry  not-found
+  en/…                   # bản tiếng Anh song song, cùng bộ component
 components/
-  map/                   # FoodMap, DishMarker, MapToolbar, mapStyle
+  map/                   # FoodMap, DishMarker, MapToolbar, SovereigntyMarker, mapStyle
   province/              # ProvinceHero, DishCard, DishTile, ProvinceDishExplorer
+  recommend/             # RerollButton, OfficeFlags — trang "Trưa nay ăn gì"
+  review/                # DishReviews, RecentReviews, StarRating
+  pages/                 # thân trang dùng chung cho 2 ngôn ngữ (*View.tsx)
   ui/                    # Button, Badge, Sheet, Lightbox, ImageWithFallback
   search/                # SearchBar (tìm kiếm không dấu)
 data/
   provinces/*.json       # 63 file, mỗi tỉnh 1 file — thêm tỉnh = thêm file, không sửa code
+  i18n/en/*.json         # bản dịch tiếng Anh, tách riêng để không đụng bản gốc
   geo/                   # ranh giới + centroid 63 tỉnh
+  sovereignty.json       # Hoàng Sa, Trường Sa, Biển Đông — hiện ở mọi mức zoom
   hero-bubbles.json      # danh sách tỉnh nổi bật (marker to + mục "Tỉnh nổi bật")
 lib/
   types.ts  schema.ts    # kiểu dữ liệu + zod schema
   provinces.ts  geo.ts   # đọc/validate dữ liệu, dựng GeoJSON cho bản đồ
+  i18n.ts (server)       # nạp/ghép bản dịch — dùng node:fs, KHÔNG import từ client
+  locale.ts (dùng chung) # hằng số ngôn ngữ + localePath() — an toàn cho client
+  recommend.ts           # bể gợi ý bữa trưa + bốc cặp tất định theo seed
+  reviews.ts             # Supabase: đánh giá + báo nội dung sai
 ```
+
+> ⚠️ `lib/i18n.ts` **chỉ dùng được ở server**. Client phải import từ `lib/locale.ts`.
+> Trộn lẫn sẽ kéo `node:fs` vào bundle trình duyệt và **build đổ hoàn toàn** — TypeScript
+> không bắt được lỗi này.
 
 ### Thêm một tỉnh mới
 
-1. Tạo `data/provinces/{slug}.json` theo `lib/schema.ts` (mỗi món **bắt buộc ≥1
-   `sourceRef`**, đúng 1 món có `isHero: true` khớp `heroDishSlug`).
-2. Chạy `pnpm build` — zod sẽ báo rõ file nào sai field nào nếu có.
-3. Restart dev server (xem gotcha ở trên).
+1. Tạo `data/provinces/{slug}.json` theo `lib/schema.ts`. Mỗi món **bắt buộc**: ≥1
+   `sourceRef`, ≥1 `mealTypes`, và đúng 1 món có `isHero: true` khớp `heroDishSlug`.
+2. Chạy `pnpm build` — zod báo rõ file nào thiếu trường nào.
+3. Chạy `pnpm check:geo` và `pnpm check:meal`.
+4. *(tuỳ chọn)* Thêm `data/i18n/en/{slug}.json` rồi `pnpm check:i18n`. Chưa dịch thì trang
+   tiếng Anh vẫn chạy, chỉ hiện tiếng Việt ở phần chưa dịch.
+5. Restart dev server (xem gotcha ở trên).
 
 ---
 
@@ -154,7 +185,18 @@ Ghi thẳng, không giấu — chi tiết trong `RISK-LF.md` và `RTM-LF.md`:
 - **Chất lượng nguồn không đồng đều.** zod chỉ đảm bảo *có* `sourceRef`, không đảm bảo
   nguồn *uy tín*. Nhiều tỉnh miền núi/Tây Nguyên chỉ có nguồn báo chí hoặc cổng du lịch
   địa phương, không có Wikipedia. Rủi ro R2 vẫn mở.
-- **Search và bộ lọc mùa/lễ hội chưa có user story và test case** — build từ yêu cầu
-  miệng, chưa quay lại viết AC. Xem `RTM-LF.md` GAP-T2.
-- **Chưa có tính năng đánh giá/bình luận** — đã thiết kế sẵn (`ARCH-LF.md` D3) nhưng
-  hoãn sang phase-2.
+- **Bản dịch tiếng Anh chưa ai đọc.** 45.192 từ do 10 agent sinh; cổng `check:i18n` chỉ
+  kiểm **cấu trúc**, không cổng nào kiểm **nghĩa**. Đã tìm được 7 bẫy dịch trong phần được
+  đọc kỹ ⇒ gần như chắc chắn còn bẫy chưa ai thấy. Rủi ro **R15**, còn mở.
+- **Phân loại món ở `/goi-y` là phán đoán của người biên tập**, không phải chuẩn mực. Món
+  bị gán nhầm sẽ **biến mất khỏi gợi ý mà không ai thấy** — người dùng không thể báo lỗi về
+  thứ họ không nhìn thấy. Rủi ro **R16**. Ba tỉnh (Hải Dương, Thanh Hóa, Sơn La) hiện không
+  bao giờ xuất hiện trong gợi ý, vì dữ liệu của họ chỉ có món quà và đồ nhắm.
+- **`/goi-y` gợi ý MÓN, không gợi ý QUÁN** — không có giá, địa chỉ, khoảng cách. Đây là
+  ràng buộc dữ liệu, đã ghi thẳng trên trang.
+
+> **Hai giới hạn dưới đây đã được xử lý, giữ lại để thấy tiến trình:**
+> ~~Search và bộ lọc chưa có user story~~ → đã đóng GAP-T2 (US-12/13), và **việc viết test
+> đó tìm ra 3 lỗi thật** mà build xanh + axe-core sạch đều không thấy.
+> ~~Chưa có đánh giá/bình luận~~ → đã lên production (US-14/15), RLS kiểm bằng cách tự
+> tấn công database.

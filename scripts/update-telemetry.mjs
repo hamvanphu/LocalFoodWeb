@@ -20,7 +20,11 @@ const PM_HOURS = {
     range: [3, 4],
     note: 'PM trả lời: "trên 3 giờ" — cận dưới chắc chắn là 3h, cận trên là giả định',
   },
-  "2026-09-09": { range: [2, 3], note: "PM trả lời: 2–3 giờ" },
+  "2026-09-09": {
+    range: [3, 4],
+    note: "PM khai lại 2026-09-11: 3–4 giờ (ban đầu khai 2–3h, nhưng phiên còn chạy tiếp sau đó)",
+  },
+  "2026-09-11": { range: [2, 3], note: "PM trả lời: 2–3 giờ" },
 };
 
 async function measureTokens() {
@@ -67,7 +71,11 @@ const NEW_SESSIONS = {
   "2026-09-09":
     "Song ngữ Việt–Anh 63/63 tỉnh (US-16, ~41.000 từ, 10 agent song song), dọn lint về 0 và " +
     "sửa bug deep-link, tự đánh giá T1–T10, bài T2 rà requirement (11 phát hiện, sửa 11/11), " +
-    "US-17 nhãn khẩu vị, tag v1.1",
+    "US-17 nhãn khẩu vị, đo lại telemetry, tag v1.1",
+  "2026-09-11":
+    "US-18 'Trưa nay ăn gì': bộ tài liệu [0]→[6] viết TRƯỚC khi code, thêm trường mealTypes " +
+    "và phân loại 197 món bằng 6 agent, cổng check:meal + review-meal, trang /goi-y song ngữ, " +
+    "đóng cổng W4-9 (PM duyệt, bể 132→121 món)",
 };
 
 // Đồng bộ số commit từ git cho MỌI phiên — bảng cũ chốt số giữa chừng phiên 06/09 nên sai.
@@ -108,6 +116,9 @@ d.realHours = {
   previousTotalH: [16, 22],
   addedH: added,
   totalH: [16 + added[0], 22 + added[1]],
+  breakdown: "16–22h (tới 06/09) + " + Object.entries(PM_HOURS)
+    .map(([d2, v]) => `${d2.slice(5)} ${v.range.join("–")}h`)
+    .join(" + "),
   note:
     "Cộng dồn: khoảng cũ 16–22h (tới 06/09) + 3 phiên mới do PM tự khai. " +
     "Giờ người KHÔNG suy từ git — xem mục 1.",
@@ -117,17 +128,18 @@ d.realHours = {
 // tụt và trông như năng suất giảm trong khi thực tế đã làm thêm cả một tính năng lớn.
 // Giữ giá trị cũ để còn truy vết được vì sao đổi.
 d.baselineNoAiHPrevious = d.baselineNoAiHPrevious ?? d.baselineNoAiH;
-d.baselineNoAiH = 765; // điểm giữa của khoảng 730–800 ở baselineRevised
+d.baselineNoAiH = 800; // điểm giữa của khoảng 765–835 ở baselineRevised
 d.baselineChangeNote =
-  "600h → 765h (2026-09-09). Lý do: phạm vi tăng thêm phần song ngữ 63/63 tỉnh (~41.000 từ " +
-  "dịch chuyên ngành). Chi tiết cách suy ra ở baselineRevised và TELEMETRY-LF.md mục 5.3.";
+  "600h → 765h (09-09, thêm song ngữ) → 800h (09-11, thêm US-18). Chi tiết cách suy ra ở " +
+  "baselineRevised và TELEMETRY-LF.md mục 5.3.";
 
 d.baselineRevised = {
-  h: [730, 800],
+  h: [765, 835],
   note:
-    "Baseline 600h lập cho phạm vi tới 06/09. Từ đó phạm vi đã tăng: dịch 41.000 từ nội dung " +
-    "ẩm thực chuyên ngành Việt→Anh (dịch chuyên ngành ~2.000–3.000 từ/ngày ⇒ ~110–160h) cộng " +
-    "phần kỹ thuật đa ngôn ngữ (~90 chuỗi giao diện, tách route, kiểm thử ⇒ ~20–40h). " +
+    "Baseline 600h lập cho phạm vi tới 06/09. Hai lần tăng kể từ đó: (1) song ngữ — dịch " +
+    "41.000 từ ẩm thực chuyên ngành ở tốc độ thực tế ~2.000–3.000 từ/ngày ⇒ ~110–160h, cộng " +
+    "phần kỹ thuật ~20–40h; (2) US-18 — phân loại 197 món bằng tay (~4h), dựng tính năng + " +
+    "2 cổng kiểm + trang song ngữ (~20–28h), bộ tài liệu [0]→[6] (~8h) ⇒ ~35h. " +
     "Vẫn là ƯỚC TÍNH phản-thực, không phải số đo — điểm yếu đã nêu ở 5.4.",
 };
 
@@ -211,4 +223,4 @@ console.log(` TỔNG        : ${f(d.tokens.totalAllTypes)}`);
 console.log("\n=== NÉN ===");
 const [lo, hi] = d.realHours.totalH;
 console.log(` baseline giữ 600h  : ${(600 / hi).toFixed(0)}–${(600 / lo).toFixed(0)}×`);
-console.log(` baseline sửa 730–800h: ${(730 / hi).toFixed(0)}–${(800 / lo).toFixed(0)}×`);
+console.log(` baseline sửa 765–835h: ${(765 / hi).toFixed(0)}–${(835 / lo).toFixed(0)}×`);

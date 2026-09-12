@@ -24,8 +24,9 @@
 | 2026-09-06 | **18** | 08:28 → 19:59 | 11h31 | 1h43 | 63 tỉnh, refactor bản đồ, RTM/telemetry, deploy, US-14 |
 | 2026-09-07 | 6 | | — | — | Đo lại hiệu năng, 7 KPI Knowledge Health, báo cáo HTML, tag `v1.0` |
 | 2026-09-08 | 4 | | — | — | Chủ quyền Hoàng Sa/Trường Sa (R14), marquee, quy trình quản trị |
-| 2026-09-09 | 6 | | — | — | Song ngữ 63/63 tỉnh, lint về 0, tự đánh giá T1–T10, T2, `v1.1` |
-| **Tổng** | **69** | | — | — | 8 phiên, trải 15 ngày |
+| 2026-09-09 | 10 | | — | — | Song ngữ 63/63 tỉnh, lint về 0, tự đánh giá T1–T10, T2, telemetry, `v1.1` |
+| 2026-09-11 | 5 | | — | — | US-18 "Trưa nay ăn gì": tài liệu [0]→[6], `mealTypes` 197 món, `/goi-y`, cổng W4-9 |
+| **Tổng** | **78** | | — | — | 9 phiên, trải 17 ngày |
 
 > **🔴 Sửa số liệu 2026-09-09 — chính bảng này từng sai.** Bản trước ghi 06/09 có **8**
 > commit và tổng **43**; đo lại bằng `git log` cho **18** và **69**. Nguyên nhân: telemetry
@@ -112,15 +113,17 @@ sự cố thật **cao hơn 19**. Đây là nợ ghi chép, không phải số l
 |---|---|---|
 | Tỉnh có dữ liệu | 63/63 | đếm file `data/provinces/` |
 | **Tỉnh đã dịch tiếng Anh** | **63/63** | đếm file `data/i18n/en/` |
+| **Món đã phân loại `mealTypes`** | **197/197** | `pnpm check:meal` |
+| **Bể gợi ý bữa trưa** | **121** (61% của 197) | `pnpm check:meal` |
 | Món ăn | 197 | script đếm `dishes[]` |
 | `sourceRef` | **287** | script đếm |
 | Món có ảnh thật | 75 (38%) | đếm `images.length > 0` |
-| File trong repo (đã track) | **316** | `git ls-files \| wc -l` |
-| Route sinh tĩnh | **134** (63 VI + 63 EN + 8) | output `pnpm build` |
-| Commit | **69** | `git rev-list --count HEAD` |
-| Artefact governance | **31** file `.md` | `ls *.md` |
-| Story có checklist kiểm thử | **16** | đếm `## US-` trong `SIT-UAT-LF.md` |
-| Cổng kiểm chạy được bằng lệnh | **2** (`check:geo`, `check:i18n`) | đếm `scripts/check-*.mjs` |
+| File trong repo (đã track) | **328** | `git ls-files \| wc -l` |
+| Route sinh tĩnh | **136** (63 VI + 63 EN + 10) | output `pnpm build` |
+| Commit | **78** | `git rev-list --count HEAD` |
+| Artefact governance | **33** file `.md` | `ls *.md` |
+| Story có checklist kiểm thử | **17** | đếm `## US-` trong `SIT-UAT-LF.md` |
+| Cổng kiểm chạy được bằng lệnh | **3** (`check:geo`, `check:i18n`, `check:meal`) | đếm `scripts/check-*.mjs` |
 | Mục sự cố trong DEVBOOK | **36** | đếm gạch đầu dòng in đậm |
 
 > Toàn bộ bảng này sinh bằng `node scripts/measure-telemetry.mjs` — **không nhập tay**, nên
@@ -157,9 +160,14 @@ sự cố thật **cao hơn 19**. Đây là nợ ghi chép, không phải số l
 | *(25/08 + 03/09 + 05/09 gộp)* | | | **>9h** | — |
 | 2026-09-07 | — | — | **2–3h** | Đo lại hiệu năng ở 63 tỉnh, 7 KPI Knowledge Health, báo cáo HTML cho sếp, xuất hội thoại, tag `v1.0` |
 | 2026-09-08 | — | — | **>3h** | Chủ quyền Hoàng Sa/Trường Sa lên bản đồ ở mọi mức zoom (R14), tempo marquee, quy trình quản trị, khối "Cảm nhận mới nhất" |
-| 2026-09-09 | — | — | **2–3h** | Song ngữ Việt–Anh 63/63 tỉnh (US-16, ~41.000 từ), dọn lint về 0 + sửa bug deep-link, tự đánh giá T1–T10, bài T2 (11 phát hiện, sửa 11/11), US-17, tag `v1.1` |
-| **TỔNG** | — | — | **≈ 23–32h** | |
+| 2026-09-09 | — | — | **3–4h** | Song ngữ Việt–Anh 63/63 tỉnh (US-16, ~41.000 từ), dọn lint về 0 + sửa bug deep-link, tự đánh giá T1–T10, bài T2 (11 phát hiện, sửa 11/11), US-17, đo lại telemetry, tag `v1.1` |
+| 2026-09-11 | — | — | **2–3h** | US-18 "Trưa nay ăn gì": bộ tài liệu [0]→[6] **viết trước khi code**, thêm `mealTypes` + phân loại 197 món (6 agent), 2 cổng kiểm mới, trang `/goi-y` song ngữ, đóng cổng W4-9 |
+| **TỔNG** | — | — | **≈ 26–36h** | |
 
+> **Cập nhật 2026-09-11.** Phiên 09/09 được PM **khai lại** 2–3h → 3–4h, vì lúc khai lần
+> đầu phiên đó vẫn đang chạy tiếp. Đây là lý do cụ thể để **hỏi lại giờ sau khi phiên kết
+> thúc**, chứ không hỏi giữa chừng — đúng loại lỗi "đo trong khoảng đang đo" đã ghi ở mục 1.
+>
 > **Cập nhật 2026-09-09.** Ba phiên cuối PM tự khai, **không** suy từ git (lý do ở mục 1).
 > Riêng 08/09 PM trả lời *"trên 3 giờ"* — cận dưới chắc chắn là 3h, **cận trên 4h là giả
 > định của AI**, không phải điều PM nói. Ghi rõ để không biến một khoảng mở thành con số đóng.
@@ -196,27 +204,30 @@ Từ 06/09 tới nay phạm vi đã tăng thêm một khối lớn (song ngữ 6
 chuyên ngành). **Cả tử số lẫn mẫu số đều đổi**, nên phải tính lại cả hai chứ không chỉ
 cộng giờ vào mẫu số.
 
-**Mẫu số (giờ thật):** 16–22h → **23–32h** (mục 5.1).
+**Mẫu số (giờ thật):** 16–22h → 23–32h → **26–36h** (mục 5.1).
 
-**Tử số (baseline không có AI):** 600h → **730–800h**. Phần thêm: dịch 41.000 từ nội dung
-ẩm thực chuyên ngành ở tốc độ dịch chuyên ngành thực tế ~2.000–3.000 từ/ngày ⇒ ~110–160h;
-cộng phần kỹ thuật đa ngôn ngữ (~90 chuỗi giao diện, tách nhánh route, kiểm thử) ⇒ ~20–40h.
+**Tử số (baseline không có AI):** 600h → 730–800h → **765–835h**. Hai lần tăng:
+1. *Song ngữ* — dịch 41.000 từ ẩm thực chuyên ngành ở tốc độ thực tế ~2.000–3.000 từ/ngày
+   ⇒ ~110–160h, cộng phần kỹ thuật (~90 chuỗi, tách route, kiểm thử) ⇒ ~20–40h.
+2. *US-18* — phân loại 197 món bằng tay ~4h, dựng tính năng + 2 cổng kiểm + trang song ngữ
+   ~20–28h, bộ tài liệu [0]→[6] ~8h ⇒ **~35h**.
 
 | Cách tính | Nén |
 |---|---|
-| ⚠️ **Sai** — giữ baseline cũ 600h, chỉ cộng giờ vào mẫu số | 19–26× |
-| ✅ **Đúng** — sửa cả tử số lẫn mẫu số | **23–35×** |
+| ⚠️ **Sai** — giữ baseline gốc 600h, chỉ cộng giờ vào mẫu số | 17–23× |
+| ✅ **Đúng** — sửa cả tử số lẫn mẫu số | **21–32×** |
 
-### ➡️ **Nén ≈ 23–35 lần** (khoảng giữa: **~29×**)
+### ➡️ **Nén ≈ 21–32 lần** (khoảng giữa: **~26×**)
 
 **Vì sao phải nêu cả dòng "Sai":** nếu chỉ cộng giờ mới vào mẫu số mà quên tăng baseline,
 chỉ số tụt từ 27–37× xuống 19–26× và **trông như năng suất giảm** — trong khi thực tế là
 đã làm thêm cả một tính năng lớn. Đây là cái bẫy dễ mắc nhất khi cập nhật chỉ số theo kỳ,
 và nó làm sai theo hướng *bi quan* nên càng ít người kiểm lại.
 
-**So với lần đo trước (27–37×):** khoảng mới thấp hơn một chút và **hẹp hơn**. Không nên
-đọc là "năng suất giảm" — baseline cho phần dịch là ước tính thận trọng, và mẫu số giờ đã
-có thêm 3 phiên đo trực tiếp thay vì gộp.
+**Xu hướng qua 3 lần đo: 27–37× → 23–35× → 21–32×.** Đi xuống đều, và **đó là điều đáng
+tin hơn** chứ không phải đáng lo. Lý do: mỗi lần đo lại, mẫu số có thêm giờ PM khai trực
+tiếp (thay vì gộp ước tính), còn tử số là baseline tự ước — mà ước tính thận trọng thì bao
+giờ cũng kéo tỉ số xuống. Con số **giảm dần về phía sự thật**, không phải năng suất giảm.
 
 ### 5.4 ⚠️ Chỉ số Nén này KHÔNG đo cái gì — cần nói rõ ở viva
 
@@ -235,11 +246,11 @@ Nén ~32× là con số rất lớn, và sẽ bị hỏi lại. Những giới h
    lớn nguồn không phải Wikipedia, PM chưa spot-check xong. Nếu spot-check phát hiện
    sai nhiều, phần "sản lượng" trong tử số sẽ phải chiết khấu.
 
-**Cách phát biểu an toàn ở viva:** *"Nén khoảng 23–35 lần về **thời gian tạo ra sản
+**Cách phát biểu an toàn ở viva:** *"Nén khoảng 21–32 lần về **thời gian tạo ra sản
 phẩm**, với baseline là ước tính của tôi chứ không phải số đo, và chưa chiết khấu phần
 chất lượng còn thiếu đã ghi rõ trong RTM."*
 
-**Nếu bị hỏi vì sao con số tụt so với lần trước (27–37×):** không phải năng suất giảm.
+**Nếu bị hỏi vì sao con số tụt qua từng lần đo (27–37× → 23–35× → 21–32×):** không phải năng suất giảm.
 Phạm vi tăng thêm phần song ngữ nên **cả tử số lẫn mẫu số đều phải sửa**; baseline mới cho
 phần dịch là ước tính thận trọng hơn, và mẫu số giờ đã có thêm 3 phiên PM khai trực tiếp
 thay vì gộp. Xem bảng "Sai / Đúng" ở mục 5.3.
@@ -247,7 +258,7 @@ thay vì gộp. Xem bảng "Sai / Đúng" ở mục 5.3.
 ### 5.5 ✅ Token — **đo được từ transcript**, không phải ước lượng *(đo lại 2026-09-09)*
 
 **Nguồn:** transcript của phiên nằm trên đĩa (`~/.claude/projects/…/54b73208-….jsonl`,
-**52,4MB**, **2.762 lượt** trả lời của AI). Claude Code ghi `usage`
+**58,4MB**, **2.984 lượt** trả lời của AI). Claude Code ghi `usage`
 thật vào từng lượt, nên đây là **số đo**, không phải suy đoán. Chạy lại bằng
 `node scripts/update-telemetry.mjs`.
 
@@ -255,12 +266,12 @@ Phiên chạy từ **2026-08-25 13:52** đến **2026-09-09 14:44** — khớp �
 
 | Loại token | Số lượng |
 |---|---|
-| Input mới (không lấy từ cache) | 5.496 |
-| **Output** (AI sinh ra) | **3.015.822** |
-| Cache write (tạo cache) | 16.301.873 |
-| Cache read (dùng lại cache) | 1.208.497.060 |
-| **Tổng thô** | **1.227.820.251 (~1,22 tỷ)** |
-| **Tính giá đầy đủ** *(không gồm cache read)* | **19.323.191 (~19,3M)** |
+| Input mới (không lấy từ cache) | 5.938 |
+| **Output** (AI sinh ra) | **3.400.295** |
+| Cache write (tạo cache) | 18.304.944 |
+| Cache read (dùng lại cache) | 1.328.397.936 |
+| **Tổng thô** | **1.350.109.113 (~1,35 tỷ)** |
+| **Tính giá đầy đủ** *(không gồm cache read)* | **21.711.177 (~21,7M)** |
 
 #### ⚠️ Đừng trích con số 1,22 tỷ mà bỏ ngữ cảnh
 
@@ -269,7 +280,7 @@ phải nội dung mới. Trong một phiên dài 15 ngày, toàn bộ lịch s�
 lượt; cache khiến phần đó rẻ hơn nhiều lần so với input thường.
 
 → Nói *"dự án tiêu 1,22 tỷ token"* là **đúng số nhưng gây hiểu sai**. Con số phản ánh đúng
-khối lượng làm việc là **~19,3M token tính giá đầy đủ**, trong đó **~3,0M là output** —
+khối lượng làm việc là **~21,7M token tính giá đầy đủ**, trong đó **~3,4M là output** —
 phần AI thực sự viết ra.
 
 #### 🔴 Con số này là SÀN, không phải tổng — lỗ hổng đo lường đã biết
@@ -295,7 +306,7 @@ usage của tài khoản — việc đó thuộc PM, AI không truy cập đư�
 
 **PM cần làm trước khi coi bước này đóng:**
 
-1. ✅ **Đã điền mục 5.1/5.2 (2026-09-06), đo lại 2026-09-09** → Nén ≈ **23–35 lần**. Việc còn lại: đọc
+1. ✅ **Đã điền mục 5.1/5.2 (2026-09-06), đo lại 2026-09-09** → Nén ≈ **21–32 lần**. Việc còn lại: đọc
    mục **5.4** và tự thấy thoải mái khi bảo vệ con số đó — nếu thấy 600h là quá cao
    so với cảm nhận thật, hãy sửa lại, vì đó là ước tính của PM chứ không phải số đo.
 2. **Bác ≥1 số** nếu thấy nghi. Gợi ý những số dễ bị hiểu sai nhất, tự AI nêu ra:

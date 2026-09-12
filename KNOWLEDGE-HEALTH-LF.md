@@ -11,7 +11,7 @@
 |---|---|---|---|
 | c1 Traceability Coverage | **91,7%** | ≥ 80% | ✅ |
 | c2 Change Coupling | **100%** | ≥ 70% | ✅ |
-| c3 Freshness | **87%** | ≥ 85% | ✅ *(đã đạt sau khi đo lại hiệu năng)* |
+| c3 Freshness | **87%** → *cần đo lại* | ≥ 85% | ⚠️ *(xem mục "Đo lại 2026-09-11" — c3 lại bắt được lỗi thật trong `README.md`)* |
 | c4 Orphan Rate | **7,9%** | ≤ 15% | ✅ |
 | c5 Review Evidence | **92%** | ≥ 90% | ✅ |
 | c6 Decision Coverage | **100%** | ≥ 75% | ✅ |
@@ -40,6 +40,40 @@ mục "Cập nhật hiện trạng 2026-09-07" và xếp tầng cho các module 
 **Đã xử lý nốt (2026-09-07):** `PERFORMANCE-LF.md` đo Lighthouse hồi **8 tỉnh** — đã **đo lại với 63 tỉnh**, trung vị 3 lần. Kết quả **trái dự đoán**: hiệu năng tốt hơn (LCP 8,8s → 6,20s, payload −19%) dù dữ liệu gấp 8 lần. c3 lên **87%**, đạt target.
 
 > **Đây là vòng đời đầy đủ của một KPI:** đo → phát hiện tài liệu lỗi thời → sửa → đo lại → chỉ số đạt. Không phải con số trang trí.
+
+## 🔄 Đo lại 2026-09-11 — c3 lại bắt được lỗi thật, lần thứ hai
+
+Sau khi ship US-16/17/18, rà lại toàn bộ artefact xem cái nào còn mô tả sản phẩm cũ.
+
+**c3 bắt được lỗi nghiêm trọng nhất ở đúng chỗ tệ nhất — mục *"Giới hạn đã biết"* của
+`README.md`**, nơi người chấm đọc kỹ nhất. Nó vẫn ghi:
+
+| README nói | Thực tế |
+|---|---|
+| *"Chưa có tính năng đánh giá/bình luận"* | Đã lên production từ **06/09** (US-14/15) |
+| *"Search và bộ lọc chưa có user story và test case"* | Đã đóng GAP-T2 từ **07/09** |
+
+Tức là bản README đang **tự khai nhược điểm mình không còn có nữa** — vừa sai, vừa thiệt.
+Cùng dạng lỗi với lần c3 bắt `MODULEMAP-LF.md` hồi 07/09, và **cùng nguyên nhân gốc**:
+thêm tính năng thì viết tài liệu mới, nhưng **không rà lại tài liệu cũ**.
+
+### Bảy artefact đã đồng bộ trong đợt này
+
+`README` · `RTM` · `MODULEMAP` · `TELEMETRY` · `TECH-DEBT` · `OPERATING-LOG` ·
+`DELEGATION-MAP` — thêm US-16/17/18, 3 cổng kiểm, và các rủi ro R15/R16/R17.
+
+### Một điều phải nói thật về cách đo c3
+
+Phép rà lần này (tìm artefact **không** nhắc `US-18`/`mealTypes`/`goi-y`) **báo thừa 14
+file**, trong đó phần lớn **không đáng phải nhắc**: `I18N-GLOSSARY` là quy ước dịch,
+`DOR-LF` là cổng của lát cắt cũ đã đóng, `ADMIN-GUIDE` nói về Supabase dashboard.
+
+Đây là **lần thứ hai trong cùng một phiên** một bộ lọc tự động của AI báo thừa — lần trước
+là `review-meal.mjs` gắn cờ 7 món nhóm B mà 6 là báo nhầm. Cả hai đều **cố ý** thiên về báo
+thừa: sót một artefact lỗi thời thì nguy hiểm hơn đọc nhầm vài file không cần sửa.
+
+**Nhưng phải nói ra**, vì nếu đọc con số "14 file lỗi thời" mà không đọc phần này thì sẽ
+tưởng hồ sơ tệ hơn thực tế. **Số 14 là danh sách để người sàng, không phải kết luận.**
 
 ## Cách đo — để ai cũng chạy lại được
 

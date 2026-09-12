@@ -209,6 +209,66 @@ Link rot là rủi ro dài hạn của mọi hồ sơ dựa trên nguồn web.
 
 ---
 
+### OP-14 — Cổng đối chiếu bắt được thứ mà "agent báo xong" không bắt được *(2026-09-11)*
+
+**Bối cảnh:** 6 agent ghi song song vào `data/provinces/*.json` — file nội dung gốc tiếng
+Việt, đã kiểm, **không có bản sao nào ngoài git**.
+
+**Việc làm khác lần trước:** đợt dịch (US-16) tránh rủi ro này bằng cách cho agent ghi ra
+**file riêng**. Lần này không tách được, vì `mealTypes` là thuộc tính nội tại của món.
+Nên thay vì tránh, phải **canh**: cổng `check:meal` đọc `git show HEAD:<file>` và so từng
+trường, fail nếu bất cứ thứ gì ngoài 2 trường được phép bị đụng.
+
+**Kết quả:** 6 agent, 197 món, **0 trường nào khác bị sửa**. Nhưng giá trị thật không nằm
+ở con số 0 — mà ở chỗ **nếu có lỗi thì đã bắt được ngay**, thay vì phát hiện sau vài tuần
+khi ai đó tình cờ đọc lại một món.
+
+**Bài học:** "agent báo đã xong và tự kiểm rồi" **không phải bằng chứng**. Bằng chứng là
+một phép đối chiếu chạy được lại, do bên thứ ba (cổng) thực hiện. Cùng một bài học với
+R11 (RLS đóng bằng cách tự tấn công DB, không bằng "đã chạy migration").
+
+---
+
+### OP-15 — Yêu cầu đổi giữa chừng, và cái giá của "móng trước bề mặt sau" *(2026-09-11)*
+
+**Sự việc:** bộ tài liệu US-18 viết xong (12 món + 5 bộ lọc), PM đổi yêu cầu sang **2 món
+kèm công thức**, trước khi code một dòng nào.
+
+**Phải sửa lại:** W4-5, W4-6 (giao diện) và AC trong SPEC.
+**Không phải đụng:** W4-1→W4-4 — trường dữ liệu, cổng kiểm, logic lọc.
+
+**Vì sao đáng ghi:** đây là **lần thứ hai** nguyên tắc này trả công đo được. Lần đầu là mở
+rộng 8→63 tỉnh mà không sửa một dòng code. Hai lần đủ để nói đây là tính chất của thiết
+kế, không phải may.
+
+**Điều ngược lại cũng đúng và cần nói:** nếu PM đổi yêu cầu ở **tầng dữ liệu** (ví dụ "phân
+loại theo giá tiền" thay vì theo loại bữa) thì toàn bộ công phân loại 197 món phải làm lại.
+"Móng trước" bảo vệ khỏi thay đổi ở bề mặt, **không** bảo vệ khỏi thay đổi ở móng.
+
+---
+
+### OP-16 — Duyệt 197 món bằng cách không đọc 197 món *(2026-09-11)*
+
+**Vấn đề:** cổng W4-9 đòi PM duyệt phân loại. Đưa 197 món cho PM đọc là cách chắc chắn
+biến cổng thành nghi thức — sẽ bị đọc lướt, đúng kiểu **R3 rubber-stamping**.
+
+**Cách làm:** viết `scripts/review-meal.mjs` khoanh vùng chỗ **dữ liệu tự mâu thuẫn với
+nhãn** (món gắn `bua-chinh` mà `howToEat` ghi *"ăn chơi"*, *"nhắm rượu"*) → còn **23 món**.
+Đọc 23 món đó thì lộ ra chúng chỉ là **3 quyết định chính sách**, không phải 23 phán đoán.
+
+**Cố ý không bốc mẫu ngẫu nhiên:** lỗi phân loại **không rải đều**, nó tụ ở nhóm ranh giới.
+Bốc ngẫu nhiên 20 món sẽ trúng phần lớn là món hiển nhiên đúng — tốn thời gian PM mà không
+tìm ra gì. Khác với `SPOTCHECK-LF.md` (nội dung món), nơi bốc ngẫu nhiên **là đúng** vì lỗi
+hallucination rải đều.
+
+**Kết quả:** PM quyết 3 chính sách trong vài phút. Bể gợi ý 132 → 121 món.
+
+**Bài học:** khi giao việc phán đoán hàng loạt cho AI, thiết kế cổng duyệt sao cho PM quyết
+**chính sách** chứ không duyệt **từng kết quả**. Và chọn cách lấy mẫu theo **hình dạng của
+lỗi**, không theo thói quen.
+
+---
+
 ## Tổng kết
 
 | Nhóm | Số | Ý nghĩa |

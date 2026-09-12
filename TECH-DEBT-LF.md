@@ -19,6 +19,10 @@
 | 6 | ~~6 tỉnh MVP còn lại chưa có data~~ | **✅ XONG (2026-09-03)** — cả 8/8 tỉnh MVP đã có data, mỗi món đều có `sourceRefs` đối chiếu Wikipedia/nguồn uy tín, 27/32 món có ảnh thật (5 món không tìm được ảnh phù hợp, dùng fallback gradient trung thực) | — |
 | 7 | Trang `/browse` liệt kê toàn bộ tỉnh — chưa làm, giá trị tăng khi >8 tỉnh | `WBS-LF.md` Wave 2 | Phase-2 |
 
+| 8 | **Xuống dòng không nhất quán trong `data/provinces/`** — đa số file dùng LF, nhưng `quang-tri.json` và `hai-phong.json` dùng **CRLF**. Hệ quả thật: `git diff` hiện file CRLF thành **viết lại toàn bộ** (83+/77−) thay vì 6 dòng thêm ⇒ **không review được**, và là bẫy cho bất kỳ agent nào chèn text theo dòng | Agent phát hiện khi làm W4-2 (2026-09-11) | Khi có `.gitattributes` chuẩn hoá; chưa gấp vì đã có cổng `check:meal` đối chiếu nội dung nên lỗi định dạng không lọt thành lỗi dữ liệu |
+| 9 | **Ba tỉnh không bao giờ xuất hiện ở `/goi-y`** — Hải Dương, Thanh Hóa, Sơn La. Phân loại **đúng**, đây là **thiếu nội dung**: các tỉnh này chỉ có món quà/đồ nhắm trong dữ liệu | `SCOPE-REC-LF.md`, `RISK-LF.md` R16 | Khi bổ sung món ăn no được cho 3 tỉnh đó. **Không** chữa bằng cách ép một món lên `bua-chinh` — bẻ dữ liệu cho vừa tính năng |
+| 10 | **Không có cách báo "sao món X không có trong gợi ý"** — kênh US-15 chỉ báo được nội dung **hiện ra** là sai, không báo được món bị **ẩn đi** oan | `RISK-LF.md` R16 | Phase-2. Đây là lỗ hổng cấu trúc của mọi tính năng lọc, không riêng cái này |
+
 ## 🔴 Đã giải quyết ngay trong phiên này — PM cần biết
 
 - **Bản đồ không hiển thị gì** (PM báo cáo 2026-09-03): nguyên nhân là bug

@@ -1,6 +1,6 @@
 {
   "note": "Nguồn số cho dashboard /telemetry. Mọi con số ở đây phải TRUY ĐƯỢC về git/file/output lệnh, trừ nhóm 'pmEstimated' vốn do PM tự khai. Xem TELEMETRY-LF.md.",
-  "updatedAt": "2026-09-09",
+  "updatedAt": "2026-09-11",
   "sessions": [
     {
       "date": "2026-08-25",
@@ -77,12 +77,26 @@
     },
     {
       "date": "2026-09-09",
-      "commits": 6,
+      "commits": 10,
+      "gitLowerBoundH": null,
+      "gitUpperBoundH": null,
+      "pmEstimatedH": 3.5,
+      "grouped": false,
+      "work": "Song ngữ Việt–Anh 63/63 tỉnh (US-16, ~41.000 từ, 10 agent song song), dọn lint về 0 và sửa bug deep-link, tự đánh giá T1–T10, bài T2 rà requirement (11 phát hiện, sửa 11/11), US-17 nhãn khẩu vị, tag v1.1",
+      "pmRangeH": [
+        3,
+        4
+      ],
+      "pmNote": "PM khai lại 2026-09-11: 3–4 giờ (ban đầu khai 2–3h, nhưng phiên còn chạy tiếp sau đó)"
+    },
+    {
+      "date": "2026-09-11",
+      "commits": 5,
       "gitLowerBoundH": null,
       "gitUpperBoundH": null,
       "pmEstimatedH": 2.5,
       "grouped": false,
-      "work": "Song ngữ Việt–Anh 63/63 tỉnh (US-16, ~41.000 từ, 10 agent song song), dọn lint về 0 và sửa bug deep-link, tự đánh giá T1–T10, bài T2 rà requirement (11 phát hiện, sửa 11/11), US-17 nhãn khẩu vị, tag v1.1",
+      "work": "US-18 'Trưa nay ăn gì': bộ tài liệu [0]→[6] viết TRƯỚC khi code, thêm trường mealTypes và phân loại 197 món bằng 6 agent, cổng check:meal + review-meal, trang /goi-y song ngữ, đóng cổng W4-9 (PM duyệt, bể 132→121 món)",
       "pmRangeH": [
         2,
         3
@@ -92,7 +106,7 @@
   ],
   "groupedEstimateH": 9,
   "groupedNote": "PM ước tính gộp cho 3 phiên 25/08 + 03/09 + 05/09 (trả lời: 'trên 9 giờ')",
-  "baselineNoAiH": 765,
+  "baselineNoAiH": 800,
   "baselineNote": "PM tự chốt. Là ước lượng phản-thực (counterfactual), không ai thực sự làm lại bằng tay để đo.",
   "estimate": {
     "pertH": 50.7,
@@ -106,12 +120,12 @@
     "sourceRefs": 287,
     "dishesWithImage": 75,
     "staticRoutes": 68,
-    "commits": 69,
-    "trackedFiles": 316,
-    "artefacts": 31,
+    "commits": 78,
+    "trackedFiles": 328,
+    "artefacts": 33,
     "provincesTranslated": 63,
-    "gateScripts": 2,
-    "sitUatStories": 16
+    "gateScripts": 3,
+    "sitUatStories": 17
   },
   "incidents": [
     {
@@ -214,21 +228,21 @@
     }
   ],
   "tokens": {
-    "source": "Đo từ transcript phiên 54b73208 (52,4MB, 2.787 lượt AI trả lời). Claude Code ghi usage thật vào từng lượt — đây là SỐ ĐO, không phải ước lượng. Chạy lại: node scripts/update-telemetry.mjs",
+    "source": "Đo từ transcript phiên 54b73208 (52,4MB, 2.984 lượt AI trả lời). Claude Code ghi usage thật vào từng lượt — đây là SỐ ĐO, không phải ước lượng. Chạy lại: node scripts/update-telemetry.mjs",
     "sessionStart": "2026-08-25T13:52:21.628Z",
-    "sessionEnd": "2026-09-09T14:45:53.660Z",
-    "inputNew": 5546,
-    "output": 3035988,
-    "cacheWrite": 16329671,
-    "cacheRead": 1219748569,
-    "totalRaw": 1239119774,
-    "billableFull": 19371205,
+    "sessionEnd": "2026-09-11T15:32:11.170Z",
+    "inputNew": 5938,
+    "output": 3400295,
+    "cacheWrite": 18304944,
+    "cacheRead": 1328397936,
+    "totalRaw": 1350109113,
+    "billableFull": 21711177,
     "cacheHitRate": 98.4,
-    "mdPerMillionBillable": 0.177,
-    "caveat": "Đó là bối cảnh được đọc lại ở mỗi lượt, không phải nội dung mới. Trích con số 1239M mà bỏ ngữ cảnh sẽ gây hiểu sai — con số phản ánh đúng khối lượng làm việc là khoảng 19.4M tính giá đầy đủ, trong đó 3.0M là output AI thực sự viết ra.",
+    "mdPerMillionBillable": 0.178,
+    "caveat": "Đó là bối cảnh được đọc lại ở mỗi lượt, không phải nội dung mới. Trích con số 1350M mà bỏ ngữ cảnh sẽ gây hiểu sai — con số phản ánh đúng khối lượng làm việc là khoảng 21.7M tính giá đầy đủ, trong đó 3.4M là output AI thực sự viết ra.",
     "estimateNote": "Không có bước 'est' — không ai ước lượng token trước khi bắt đầu. Chỉ có reconcile (số thật).",
-    "turnsWithUsage": 2787,
-    "totalAllTypes": 1239119774,
+    "turnsWithUsage": 2984,
+    "totalAllTypes": 1350109113,
     "scopeNote": "CHỈ tính phiên 54b73208 (Local Food). Phiên 3ffd154d (13–21/08) thuộc dự án PB-04 khác — đã kiểm cwd và loại đúng.",
     "knownGap": "⚠️ Con số này là SÀN, không phải tổng. Đã kiểm: transcript có 0 lượt sidechain, nên token của agent chạy nền (6 agent nội dung 03/09, ~8 agent mở rộng 06/09, 10 agent dịch 09/09) KHÔNG được ghi vào đây. Mẫu từ thông báo tác vụ 09/09: mỗi agent dịch báo 68.836–99.668 token. Không ước lượng bù — muốn tổng thật phải lấy từ trang usage của tài khoản."
   },
@@ -372,23 +386,24 @@
       22
     ],
     "addedH": [
-      7,
-      10
+      10,
+      14
     ],
     "totalH": [
-      23,
-      32
+      26,
+      36
     ],
+    "breakdown": "16–22h (tới 06/09) + 09-07 2–3h + 09-08 3–4h + 09-09 3–4h + 09-11 2–3h",
     "note": "Cộng dồn: khoảng cũ 16–22h (tới 06/09) + 3 phiên mới do PM tự khai. Giờ người KHÔNG suy từ git — xem mục 1."
   },
   "baselineNoAiHPrevious": 600,
-  "baselineChangeNote": "600h → 765h (2026-09-09). Lý do: phạm vi tăng thêm phần song ngữ 63/63 tỉnh (~41.000 từ dịch chuyên ngành). Chi tiết cách suy ra ở baselineRevised và TELEMETRY-LF.md mục 5.3.",
+  "baselineChangeNote": "600h → 765h (09-09, thêm song ngữ) → 800h (09-11, thêm US-18). Chi tiết cách suy ra ở baselineRevised và TELEMETRY-LF.md mục 5.3.",
   "baselineRevised": {
     "h": [
-      730,
-      800
+      765,
+      835
     ],
-    "note": "Baseline 600h lập cho phạm vi tới 06/09. Từ đó phạm vi đã tăng: dịch 41.000 từ nội dung ẩm thực chuyên ngành Việt→Anh (dịch chuyên ngành ~2.000–3.000 từ/ngày ⇒ ~110–160h) cộng phần kỹ thuật đa ngôn ngữ (~90 chuỗi giao diện, tách route, kiểm thử ⇒ ~20–40h). Vẫn là ƯỚC TÍNH phản-thực, không phải số đo — điểm yếu đã nêu ở 5.4."
+    "note": "Baseline 600h lập cho phạm vi tới 06/09. Hai lần tăng kể từ đó: (1) song ngữ — dịch 41.000 từ ẩm thực chuyên ngành ở tốc độ thực tế ~2.000–3.000 từ/ngày ⇒ ~110–160h, cộng phần kỹ thuật ~20–40h; (2) US-18 — phân loại 197 món bằng tay (~4h), dựng tính năng + 2 cổng kiểm + trang song ngữ (~20–28h), bộ tài liệu [0]→[6] (~8h) ⇒ ~35h. Vẫn là ƯỚC TÍNH phản-thực, không phải số đo — điểm yếu đã nêu ở 5.4."
   },
   "devbookEntries": 36,
   "measuredBy": "node scripts/update-telemetry.mjs — chạy lại được, không nhập tay"

@@ -15,10 +15,18 @@
 | **[Mới, D3] Tạo Supabase project + lấy URL/anon key** | L4 | **A+** | AI **không tự đăng ký** dịch vụ ngoài thay PM (giống MapTiler) | PM tự tạo project, dán key vào `.env.local` |
 | **[Mới, D3] Viết RLS policy trên bảng `dish_reviews`** | L4 | **A+ — bắt buộc PM xác nhận trước khi coi là xong** | AI viết SQL policy, nhưng **không tự chạy trên Supabase dashboard** — đưa PM chạy hoặc PM xác nhận rõ ràng trước | PM tự chạy SQL trên Supabase dashboard (hoặc xác nhận rõ ràng cho AI chạy qua CLI/API nếu có), rồi tự kiểm tra RLS đã bật (thử query từ client xem có bị chặn đúng không) |
 | Form submit review/rating (UI phía client) | L3 | **A** | AI tự viết UI + validate phía client | PM spot-check UI, không cần duyệt từng dòng |
+| **[Mới 2026-09-11] Phân loại hàng loạt bằng agent song song ghi thẳng vào file dữ liệu gốc** (`mealTypes` cho 197 món) | L3 | **A, kèm cổng đối chiếu BẮT BUỘC** | AI chia lô cho nhiều agent ghi thẳng vào `data/provinces/*.json`. **Điều kiện tiên quyết: working tree sạch và đã commit**, vì git là bản sao lưu duy nhất | Cổng `pnpm check:meal` **tự đối chiếu từng file với bản trong git** và fail nếu bất kỳ trường nào khác bị sửa. PM **không** phải review từng dòng diff — máy làm việc đó. PM chỉ duyệt **nội dung phân loại** ở cổng W4-9 |
+| **[Mới 2026-09-11] Phán đoán ngữ nghĩa hàng loạt** (món này ăn no được không) | L2 | **Người quyết ở mức CHÍNH SÁCH, AI làm ở mức từng món** | AI gán từng món + ghi lý do vào dữ liệu để soi lại được | PM **không** duyệt 197 món. AI khoanh vùng chỗ dữ liệu tự mâu thuẫn (`scripts/review-meal.mjs`) → PM chỉ đọc phần đó và quyết **chính sách**, không quyết từng món. Ở W4-9, 23 món đáng ngờ quy về đúng **3 quyết định** |
 | Cắt scope (chuyển Phương án A→B theo checkpoint R1) | L2 | **Người quyết, AI đề xuất** | AI có thể nhắc khi tới hạn checkpoint, đề xuất phương án | PM là người quyết định cuối, không tự động hoá quyết định này dù đã có "tự động" trong câu chữ ở EST-LF.md — chữ "tự động" ở đó nghĩa là "không cần bàn lại từ đầu", không phải "AI tự quyết" |
 
 ---
 
+> **Cập nhật 2026-09-11 — bài học uỷ quyền rút ra từ US-18:** khi giao việc **phán đoán
+> hàng loạt** cho AI, thứ PM cần duyệt **không phải kết quả từng món** mà là **chính sách
+> đứng sau**. Bắt PM đọc 197 món là biến cổng duyệt thành nghi thức — sẽ bị đọc lướt, đúng
+> kiểu rubber-stamping ở R3. Cách làm đúng: AI khoanh vùng chỗ đáng ngờ, PM quyết chính
+> sách, rồi áp chính sách bằng **code** chứ không sửa dữ liệu cho vừa.
+>
 > **Cập nhật 2026-09-06:** xem `DEVBOOK.md` **Phần B** để biết mức L nào đã được
 > áp dụng thật, cổng nào fail-closed (và cổng nào fail-open có chủ đích), cùng các
 > hard-stop đã gặp — đó là bằng chứng bắt buộc theo §8.3 mục 2.

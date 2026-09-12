@@ -70,6 +70,21 @@ báo.
 | **`data/i18n/en/*.json`** — 63 file bản dịch | Layer 0 — dữ liệu | Tách khỏi `data/provinces/` để 10 agent dịch song song **không thể** làm hỏng bản tiếng Việt (đã kiểm, không có bản sao) | ✅ 63/63 |
 | **Cổng kiểm bản dịch** (`scripts/check-i18n.mjs`) | Layer 0 — **cổng chất lượng** | 6/10 agent bị ngắt giữa chừng ⇒ không thể tin "có file là xong". Đối chiếu số phần tử `keyIngredients`/`prepOutline` với bản gốc | ✅ Xong |
 
+### Bổ sung 2026-09-11 — Module gợi ý món (US-18)
+
+| Module | Tầng | Vì sao | Trạng thái |
+|---|---|---|---|
+| **`mealTypes`** trong `data/provinces/*.json` + zod | **Layer 0** — dữ liệu & hợp đồng | Thuộc tính nội tại của món, **gán tay** vì là phán đoán ngữ nghĩa (`ARCH-LF.md` D4). Nằm TRONG file gốc chứ không tách ra — tiêu chí tách file là *"có nguy cơ ghi đè hỏng bản gốc không"*, không phải *"dữ liệu mới thì tách"* | ✅ 197/197 |
+| **`lib/recommend.ts`** — bể gợi ý, suy thuộc tính, bốc cặp | **Layer 0** — hàm thuần | Không phụ thuộc React nên chạy được cả hai phía và test được không cần trình duyệt. Chứa **chính sách của tính năng** (bữa trưa không nhận món nhậu) — cố ý để ở code chứ không bẻ dữ liệu | ✅ Xong |
+| **Cổng `pnpm check:meal`** | Layer 0 — **cổng chất lượng** | Việc chính không phải kiểm đủ trường (zod làm rồi) mà là **đối chiếu từng file với git** để bắt agent sửa nhầm trường khác | ✅ Xong |
+| **`scripts/review-meal.mjs`** | Công cụ phán xử (không thuộc sản phẩm) | Khoanh vùng chỗ dữ liệu tự mâu thuẫn với nhãn → 23/197 món cần soi, thay vì bắt người đọc hết | ✅ Xong |
+| **`app/goi-y/`, `components/recommend/`** | Bề mặt | Trang bốc 2 món; seed trên query string để không lệch hydration và chia sẻ được | ✅ Xong |
+
+**Điều đáng ghi nhất:** PM **đổi yêu cầu giữa chừng** (12 món + bộ lọc → 2 món kèm công
+thức) mà **chỉ phải sửa tầng Bề mặt** — W4-1→W4-4 (dữ liệu, cổng, logic) không đụng một
+dòng. Đây là lần thứ hai "móng trước, bề mặt sau" trả công cụ thể, sau lần mở rộng 8→63
+tỉnh không phải sửa code.
+
 **Nhận xét:** phân tầng cũ **không phải sửa** khi thêm ngôn ngữ thứ hai — `lib/provinces.ts`
 và schema dữ liệu giữ nguyên, bản dịch chỉ là một lớp ghép lên trên lúc đọc. Điều phải học
 lại là một ranh giới **mới**: Layer 0 giờ có phần **chỉ chạy được ở server**, và ranh giới

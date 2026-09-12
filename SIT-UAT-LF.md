@@ -294,9 +294,13 @@ chỉ chứng minh checklist khớp sản phẩm — **không thay được PM t
 | 13 | Ở `/en/goi-y` bấm "Show me two others" | Tới `/en/goi-y?s=…`, **không** rơi về bản tiếng Việt | ☐ |
 | 14 | Bấm link "Xem trang …" dưới một món | Tới đúng trang tỉnh và **mở sẵn panel món đó** | ☐ |
 | 15 | Thu cửa sổ xuống ~380px | Hai món xếp dọc, không tràn ngang | ☐ |
-| 16 | Nhìn nút **"Đổi món khác"** vài giây | Vành màu **quay quanh** nút, mặt nút **chuyển màu** đỏ ớt ↔ vàng nghệ, có quầng sáng thở phía sau. **Không** có vệt màu nào tràn ra ngoài nút | ☐ |
-| 17 | Rê chuột lại gần nút | Nút **hút nhẹ theo con trỏ** và phóng to một chút; icon dao dĩa nghiêng, icon lấp lánh to ra | ☐ |
-| 18 | *(nếu bật "giảm chuyển động" trong hệ điều hành)* | Nút **vẫn nhiều màu và vẫn nổi bật**, chỉ đứng yên — không phải trở về nút phẳng một màu | ☐ |
+| 16 | Nhìn **bubble** vài chục giây | Bubble **chạy vòng quanh mép màn hình** — xuống mép trái, sang mép dưới, lên mép phải, về mép trên. Vành màu quay quanh, mặt bubble chuyển màu đỏ ớt ↔ vàng nghệ | ☐ |
+| 17 | Quan sát lúc bubble đi ở **đoạn dọc** (mép trái/phải) | Nằm trong khoảng trống hai bên, **không đè** lên hai thẻ món | ☐ |
+| 18 | **Rê chuột tới gần bubble** | Bubble **dừng lại ngay tại chỗ** (không giật về đầu quỹ đạo), phóng to một chút → bấm được | ☐ |
+| 19 | Bấm bubble | Đổi cặp món, URL đổi seed, bubble tiếp tục chạy | ☐ |
+| 20 | Bấm phím **Tab** tới bubble | Bubble **dừng lại** khi nhận focus, có viền focus rõ, bấm Enter đổi được món | ☐ |
+| 21 | **Mở trên điện thoại thật** | Bubble **neo cố định** góc dưới phải, **không chạy** — vì máy cảm ứng không có hover nên không cách nào dừng nó trước khi chạm | ☐ |
+| 22 | *(nếu bật "giảm chuyển động" trong hệ điều hành)* | Bubble **neo góc dưới phải, đứng yên**, nhưng **vẫn nhiều màu và vẫn nổi bật** — không trở về nút phẳng một màu | ☐ |
 
 ### 🔒 W4-9 — PM duyệt mẫu phân loại — ✅ **ĐÃ ĐÓNG (2026-09-11)**
 

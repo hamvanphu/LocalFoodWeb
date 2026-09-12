@@ -210,3 +210,68 @@ body {
      đó là yêu cầu thiết kế chứ không phải hiệu ứng trang trí bỏ đi được. */
   .magic-face { animation: none; background-position: 25% 50%; }
 }
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Bubble "Trưa nay ăn gì" — chạy VÒNG QUANH MÉP màn hình ở /goi-y.
+
+   Vì sao đi theo mép chứ không trôi tự do: bản đầu cho nó trôi ngẫu nhiên hai
+   trục thì nó **đè lên ảnh món ăn** ở giữa trang. Nội dung nằm trong cột giữa
+   (max-w-5xl), nên chạy sát mép vừa đúng nghĩa "chạy quanh màn hình" vừa để
+   trống phần người ta đang đọc.
+
+   Dùng CSS animation chứ KHÔNG dùng Framer Motion — đúng bài học từ marquee:
+   `animation-play-state: paused` dừng được **tại chỗ**, còn Framer khi pause
+   thì nhảy về đầu. Ở đây đó là điều bắt buộc: mục tiêu đang chạy thì không
+   bấm được, nên nó phải đứng yên ngay khi chuột tới gần.
+   ───────────────────────────────────────────────────────────────────────── */
+
+@keyframes bubble-orbit {
+  0%   { translate: 0 0; }                                        /* mép trái, trên */
+  25%  { translate: 0 calc(100svh - 21rem); }                     /* xuống mép trái */
+  50%  { translate: calc(100vw - 11rem) calc(100svh - 21rem); }   /* sang mép phải */
+  75%  { translate: calc(100vw - 11rem) 0; }                      /* lên mép phải */
+  100% { translate: 0 0; }                                        /* về chỗ cũ */
+}
+
+.bubble-roam {
+  position: fixed;
+  left: 1rem;
+  top: 9rem;
+  z-index: 40;
+  animation: bubble-orbit 32s linear infinite;
+}
+
+/* Dừng khi rê chuột tới hoặc khi nhận focus bàn phím — mục tiêu đang chạy thì
+   không bấm được. */
+.bubble-roam:hover,
+.bubble-roam:focus-within {
+  animation-play-state: paused;
+}
+
+/* Máy cảm ứng KHÔNG có hover ⇒ không có cách nào dừng bubble trước khi chạm.
+   Đuổi theo mục tiêu đang chạy bằng ngón tay là trải nghiệm tệ, nên trên các
+   máy này bubble **neo cố định** ở góc dưới phải thay vì chạy. */
+@media (hover: none) {
+  .bubble-roam {
+    left: auto;
+    right: 1rem;
+    top: auto;
+    bottom: 1.25rem;
+    animation: none;
+    translate: none;
+  }
+}
+
+/* Người tắt hiệu ứng: neo góc dưới phải, không chạy. Vẫn giữ nguyên màu và độ
+   nổi — nổi bật là yêu cầu thiết kế, không phải hiệu ứng bỏ đi được. */
+@media (prefers-reduced-motion: reduce) {
+  .bubble-roam {
+    left: auto;
+    right: 1.5rem;
+    top: auto;
+    bottom: 1.5rem;
+    animation: none;
+    translate: none;
+  }
+}

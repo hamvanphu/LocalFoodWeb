@@ -73,6 +73,13 @@ khẩu vị. Vì vậy tính năng này **bắt buộc** phải lọc.
   còn lại **suy ra bằng code**. Lý do đầy đủ ở `ARCH-LF.md` D4.
 - **D-REC-3 — Bản đầu chỉ làm bữa trưa đi ăn.** "Mang cơm đi làm" đưa vào backlog, không
   làm nửa vời.
+- **D-REC-5 *(2026-09-12)* — Hành động chính là một bubble CHẠY VÒNG QUANH MÉP màn hình.**
+  PM yêu cầu đổi từ nút tĩnh sang bubble động cho bắt mắt. Ba ràng buộc bắt buộc kèm theo,
+  vì một mục tiêu đang chạy thì **rất khó bấm**: (a) dừng **tại chỗ** khi chuột tới gần
+  hoặc khi nhận focus bàn phím — làm bằng CSS animation chứ không phải Framer Motion, vì
+  Framer pause thì nhảy về đầu (bài học marquee); (b) **máy cảm ứng không có hover** nên
+  bubble neo cố định, không chạy; (c) chạy **sát mép** chứ không trôi tự do — bản thử đầu
+  trôi hai trục ngẫu nhiên thì đè lên ảnh món ở giữa trang.
 - **D-REC-4 *(2026-09-11)* — Bốc đúng 2 món, không có bộ lọc tương tác.** Người dùng bấm
   một nút, nhận 2 món kèm đủ thông tin và công thức. Lý do ở mục dưới.
 

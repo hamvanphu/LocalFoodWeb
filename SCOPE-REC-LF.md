@@ -57,7 +57,7 @@ khẩu vị. Vì vậy tính năng này **bắt buộc** phải lọc.
 | 1 | Bối cảnh dùng: đi ăn tiệm, mang cơm, hay nấu ở nhà? | ✅ **PM chốt: "trưa nay ăn gì" — gợi ý món ĐI ĂN.** Không làm phần "mang cơm đi làm" vì dữ liệu hiện **không có** thuộc tính hâm lại/đựng hộp, sẽ phải gán tay thêm 197 món |
 | 2 | Có gợi ý **quán** không? | ❌ **KHÔNG.** Site là bản đồ ẩm thực vùng miền, **không có dữ liệu quán/giá/địa chỉ**. Gợi ý ở mức **"ăn món gì"**, và phải nói rõ điều đó trên giao diện để người dùng không kỳ vọng nhầm |
 | 3 | Phân loại 197 món bằng cách nào? | ✅ **PM chốt: AI phân loại + PM duyệt mẫu.** Đã đo và loại bỏ phương án tự động thuần: từ khoá bắt nhầm *"Hạt điều rang"* vào **cả** nhóm nhậu lẫn ăn vặt, *"Bánh đa Kế"* vào cả ăn vặt lẫn lễ Tết |
-| 4 | Đặt ở đâu? | ✅ **PM chốt: trang riêng `/goi-y`** (và `/en/goi-y`). URL thật nên chia sẻ được kết quả |
+| 4 | Đặt ở đâu? | ✅ **PM chốt: trang riêng `/goi-y`** (và `/en/goi-y`). URL thật nên chia sẻ được kết quả. **Cập nhật 2026-09-12:** lối vào là **bubble ở mọi trang**, không còn link trên thanh menu — xem D-REC-6 |
 | 5 | Có cần đăng nhập / lưu sở thích? | ❌ Không — giữ nguyên nguyên tắc không auth. Lựa chọn bộ lọc nằm trên URL (query string) nên chia sẻ được mà không cần tài khoản |
 | 6 | Gợi ý bao nhiêu món một lần? | ✅ **PM chốt lại 2026-09-11: đúng 2 món, bốc ngẫu nhiên, kèm đầy đủ thông tin + công thức nấu.** Bấm lại thì ra cặp khác. *(Bản trước: 12 món + bộ lọc — đã bỏ, xem mục "Đổi yêu cầu" bên dưới)* |
 | 7 | Ràng buộc "văn phòng" gồm những gì? | Áp **tự động ở tầng dữ liệu**, không phải nút cho người dùng bấm: chỉ món `bữa chính` mới vào bể bốc. Các chiều *không cay / chay được / nặng mùi* vẫn **suy ra và hiển thị làm nhãn** để người đọc tự cân nhắc, nhưng **không còn là bộ lọc tương tác** |
@@ -73,6 +73,12 @@ khẩu vị. Vì vậy tính năng này **bắt buộc** phải lọc.
   còn lại **suy ra bằng code**. Lý do đầy đủ ở `ARCH-LF.md` D4.
 - **D-REC-3 — Bản đầu chỉ làm bữa trưa đi ăn.** "Mang cơm đi làm" đưa vào backlog, không
   làm nửa vời.
+- **D-REC-6 *(2026-09-12)* — Bubble là lối vào DUY NHẤT, có mặt ở mọi trang.** PM bỏ link
+  "Trưa nay ăn gì?" trên thanh menu. Hệ quả bắt buộc: bubble phải nằm trong **root layout**
+  chứ không riêng `/goi-y` — nếu chỉ ở trang đó thì **trang đó không còn đường nào đi vào**.
+  Nhãn đổi theo ngữ cảnh: ở trang khác là *"Trưa nay ăn gì?"* (tên tính năng), ở ngay
+  `/goi-y` là *"Đổi món khác"* (việc nó thật sự làm) — vẫn một bubble duy nhất, chỉ nói
+  đúng việc thay vì lặp lại tiêu đề trang.
 - **D-REC-5 *(2026-09-12)* — Hành động chính là một bubble CHẠY VÒNG QUANH MÉP màn hình.**
   PM yêu cầu đổi từ nút tĩnh sang bubble động cho bắt mắt. Ba ràng buộc bắt buộc kèm theo,
   vì một mục tiêu đang chạy thì **rất khó bấm**: (a) dừng **tại chỗ** khi chuột tới gần

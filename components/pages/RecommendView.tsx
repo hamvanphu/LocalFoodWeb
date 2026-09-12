@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight, Info, UtensilsCrossed } from "lucide-react";
 import DishCard from "@/components/province/DishCard";
 import OfficeFlagList from "@/components/recommend/OfficeFlags";
-import RerollBubble from "@/components/recommend/RerollBubble";
 import { getAllProvinces } from "@/lib/provinces";
 import { localizeProvinces } from "@/lib/i18n";
 import { localePath, type Locale } from "@/lib/locale";
@@ -77,10 +76,6 @@ export default function RecommendView({
           ))}
         </div>
       )}
-
-      {/* Bubble trôi quanh màn hình — hành động chính. Đặt ngoài luồng nội dung vì nó
-          `position: fixed`; để trong header sẽ bị cuộn mất. */}
-      <RerollBubble locale={locale} />
 
       {/* Giới hạn phải nói thẳng, không giấu ở chân trang — US-18 AC và RISK R17. */}
       <aside className="mt-12 flex gap-3 rounded-card border border-border bg-surface-muted p-5">

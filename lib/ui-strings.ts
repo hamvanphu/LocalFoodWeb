@@ -12,7 +12,8 @@ import type { Locale } from "./locale";
 const strings = {
   vi: {
     "nav.allProvinces": "Tất cả tỉnh",
-    "nav.recommend": "Trưa nay ăn gì?",
+    "rec.bubble": "Trưa nay ăn gì?",
+    "rec.bubbleAria": "Trưa nay ăn gì? Gợi ý hai món hợp bữa trưa",
 
     "rec.title": "Trưa nay ăn gì?",
     "rec.lead": "Bấm một nút, nhận hai món hợp bữa trưa kèm luôn công thức. Không phải rà 197 món.",
@@ -154,7 +155,8 @@ const strings = {
 
   en: {
     "nav.allProvinces": "All provinces",
-    "nav.recommend": "What's for lunch?",
+    "rec.bubble": "What's for lunch?",
+    "rec.bubbleAria": "What's for lunch? Suggest two dishes for a workday lunch",
 
     "rec.title": "What's for lunch?",
     "rec.lead": "One tap, two dishes that work for a workday lunch — recipe included. No scrolling through 197 of them.",

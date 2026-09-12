@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Be_Vietnam_Pro, Lora } from "next/font/google";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import RerollBubble from "@/components/recommend/RerollBubble";
 import MotionProvider from "@/components/motion/MotionProvider";
 import GrainOverlay from "@/components/effects/GrainOverlay";
 import "./globals.css";
@@ -36,6 +37,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
+          {/* Lối vào DUY NHẤT của tính năng gợi ý, thay cho link trên thanh menu.
+              Phải ở root layout: nếu chỉ đặt trong /goi-y thì trang đó không còn
+              đường nào đi vào. `position: fixed` nên không ảnh hưởng bố cục. */}
+          <RerollBubble />
         </MotionProvider>
       </body>
     </html>

@@ -294,6 +294,9 @@ chỉ chứng minh checklist khớp sản phẩm — **không thay được PM t
 | 13 | Ở `/en/goi-y` bấm "Show me two others" | Tới `/en/goi-y?s=…`, **không** rơi về bản tiếng Việt | ☐ |
 | 14 | Bấm link "Xem trang …" dưới một món | Tới đúng trang tỉnh và **mở sẵn panel món đó** | ☐ |
 | 15 | Thu cửa sổ xuống ~380px | Hai món xếp dọc, không tràn ngang | ☐ |
+| 15b | **Mở trang chủ, `/browse`, một trang tỉnh bất kỳ** | Bubble **có mặt ở mọi trang**, nhãn **"Trưa nay ăn gì?"**. Thanh menu **không còn** link "Trưa nay ăn gì?" — bubble là lối vào duy nhất | ☐ |
+| 15c | Rê chuột cho bubble dừng rồi bấm, **từ trang chủ** | Sang `/goi-y?s=…` và hiện **đúng 2 món** | ☐ |
+| 15d | Khi đang ở `/goi-y`, nhìn nhãn bubble | Đổi thành **"Đổi món khác"** — vì tên tính năng đã là tiêu đề trang, lặp lại thì thừa | ☐ |
 | 16 | Nhìn **bubble** vài chục giây | Bubble **chạy vòng quanh mép màn hình** — xuống mép trái, sang mép dưới, lên mép phải, về mép trên. Vành màu quay quanh, mặt bubble chuyển màu đỏ ớt ↔ vàng nghệ | ☐ |
 | 17 | Quan sát lúc bubble đi ở **đoạn dọc** (mép trái/phải) | Nằm trong khoảng trống hai bên, **không đè** lên hai thẻ món | ☐ |
 | 18 | **Rê chuột tới gần bubble** | Bubble **dừng lại ngay tại chỗ** (không giật về đầu quỹ đạo), phóng to một chút → bấm được | ☐ |

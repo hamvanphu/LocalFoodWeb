@@ -1,15 +1,22 @@
 "use client";
 
 import { useTransition } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Sparkles, UtensilsCrossed } from "lucide-react";
 import { newSeed } from "@/lib/recommend";
-import { localePath, type Locale } from "@/lib/locale";
+import { localePath } from "@/lib/locale";
+import { useLocale } from "@/lib/useLocale";
 import { t } from "@/lib/ui-strings";
 
 /**
- * Bubble "Đổi món khác" — trôi quanh màn hình, là **hành động chính duy nhất** của
- * trang `/goi-y`.
+ * Bubble "Trưa nay ăn gì?" — chạy vòng quanh mép màn hình, có mặt ở **mọi trang**.
+ *
+ * Đây là **lối vào duy nhất** của tính năng gợi ý (PM bỏ link trên thanh menu, 2026-09-12).
+ * Vì vậy nó phải nằm trong root layout chứ không riêng `/goi-y` — nếu chỉ ở trang đó thì
+ * trang đó sẽ không còn đường nào đi vào.
+ *
+ * Bấm ở trang bất kỳ → sang `/goi-y` với cặp món mới. Bấm khi đang ở `/goi-y` → đổi cặp
+ * khác. Cùng một hành vi, nên cùng một nhãn.
  *
  * Ba điều phải đúng, nếu không nó chỉ là đồ trang trí gây khó chịu:
  *
@@ -22,9 +29,21 @@ import { t } from "@/lib/ui-strings";
  *
  * Chuyển động nằm ở CSS; file này chỉ lo hình thức và hành vi bấm.
  */
-export default function RerollBubble({ locale }: { locale: Locale }) {
+export default function RerollBubble() {
+  // Bubble nằm trong root layout dùng chung mọi trang, mà layout chạy ở server nên không
+  // biết đường dẫn hiện tại — đọc ngôn ngữ từ URL. Xem ghi chú ở `lib/useLocale.ts`.
+  const locale = useLocale();
   const router = useRouter();
+  const pathname = usePathname() || "/";
   const [pending, startTransition] = useTransition();
+
+  /**
+   * Nhãn đổi theo ngữ cảnh. Ở trang khác, bubble là **lối vào** nên mang tên tính năng.
+   * Ở ngay `/goi-y`, tên đó đã là tiêu đề trang rồi — lặp lại thì thừa, và lúc đó việc
+   * nó làm thật sự là *đổi cặp khác*. Vẫn là một bubble duy nhất, chỉ nói đúng việc.
+   */
+  const onFeaturePage = pathname === "/goi-y" || pathname === "/en/goi-y";
+  const labelKey = onFeaturePage ? "rec.reroll" : "rec.bubble";
 
   return (
     <div className="bubble-roam pointer-events-none">
@@ -38,7 +57,7 @@ export default function RerollBubble({ locale }: { locale: Locale }) {
             });
           });
         }}
-        aria-label={t(locale, "rec.reroll")}
+        aria-label={onFeaturePage ? t(locale, "rec.reroll") : t(locale, "rec.bubbleAria")}
         className="magic-ring group pointer-events-auto relative isolate grid h-28 w-28 place-items-center rounded-full p-[4px] shadow-lifted transition-transform duration-300 hover:scale-110 active:scale-95 disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-chili sm:h-32 sm:w-32"
       >
         {/* Quầng sáng thở — trong nút để trôi theo cùng */}
@@ -57,8 +76,8 @@ export default function RerollBubble({ locale }: { locale: Locale }) {
             className={`relative h-6 w-6 ${pending ? "animate-spin" : "transition-transform duration-500 group-hover:rotate-[18deg]"}`}
             aria-hidden="true"
           />
-          <span className="relative text-[13px] font-semibold leading-tight sm:text-sm">
-            {t(locale, pending ? "rec.rerolling" : "rec.reroll")}
+          <span className="relative text-balance px-1 text-[13px] font-semibold leading-tight sm:text-sm">
+            {t(locale, pending ? "rec.rerolling" : labelKey)}
           </span>
           <Sparkles
             className="relative h-4 w-4 opacity-90 transition-transform duration-500 group-hover:scale-125"

@@ -10,7 +10,11 @@
  *     Tool call rút thành một dòng tóm tắt; tool result (rất dài) thì bỏ.
  *  3. KHÔNG SỬA LỜI — nội dung hội thoại giữ nguyên văn, kể cả chỗ AI sai.
  *
- * Chạy: node scripts/export-transcript.mjs <đường-dẫn-jsonl> <file-html-đầu-ra>
+ * Chạy: node scripts/export-transcript.mjs <đường-dẫn-jsonl> <file-đầu-ra>
+ *
+ * Định dạng suy từ đuôi file: `.md` ra Markdown, còn lại ra HTML. Cùng một nguồn và cùng
+ * một phép che secret — chỉ khác cách trình bày, nên không tách thành hai script để rồi
+ * lệch nhau.
  */
 import fs from "node:fs";
 import readline from "node:readline";
@@ -132,6 +136,58 @@ const body = turns
     return `<div class="turn ai"><div class="who">AI<span class="ts">${d(t.ts)}</span></div>${txt}${toolLine}</div>`;
   })
   .join("\n");
+
+/* ── Chế độ Markdown ──────────────────────────────────────────────────────
+   Giữ nguyên văn hội thoại; Markdown của AI để nguyên vì file đích cũng là Markdown.
+   Lời PM cho vào blockquote để phân biệt được ai nói mà không cần màu sắc. */
+if (OUT.toLowerCase().endsWith(".md")) {
+  const NL = "\n";
+  const mdBody = turns
+    .map((t) => {
+      const when = d(t.ts);
+      if (t.who === "pm") {
+        const quoted = t.text.split(NL).map((l) => `> ${l}`).join(NL);
+        return `### 🧑 PM · ${when}${NL}${NL}${quoted}`;
+      }
+      const tools = t.tools?.length
+        ? NL + NL + "<details>" + NL +
+          `<summary>${t.tools.length} thao tác công cụ</summary>` + NL + NL +
+          t.tools
+            .map((x) => `- \`${x.name}\`${x.label ? " — " + x.label.replace(/`/g, "'") : ""}`)
+            .join(NL) +
+          NL + NL + "</details>"
+        : "";
+      return `### 🤖 AI · ${when}${NL}${NL}${t.text}${tools}`;
+    })
+    .join(NL + NL + "---" + NL + NL);
+
+  const head = [
+    "# Hội thoại PM ↔ AI — Local Food",
+    "",
+    `**${stats.user} lượt PM · ${stats.ai} lượt AI trả lời · ${stats.tools} thao tác công cụ**`,
+    `Từ ${d(stats.firstTs)} đến ${d(stats.lastTs)}`,
+    "",
+    "> **Về bản xuất này:** giữ **nguyên văn** hội thoại, kể cả những chỗ AI làm sai và bị",
+    "> PM sửa — đó là phần có giá trị nhất của hồ sơ này, không phải phần đáng giấu.",
+    ">",
+    "> Thao tác công cụ được rút thành một dòng tóm tắt và gấp lại trong `<details>`; kết",
+    "> quả trả về của công cụ (rất dài, là output máy) được lược bỏ.",
+    ">",
+    "> **Mọi khoá API, chuỗi bí mật và địa chỉ email đã được che.**",
+    ">",
+    "> Xuất tự động bằng `scripts/export-transcript.mjs` từ log của Claude Code — không",
+    "> phải bản chép tay, nên không chọn lọc được.",
+    "",
+    "---",
+    "",
+  ].join(NL);
+
+  fs.writeFileSync(OUT, head + mdBody + NL, "utf8");
+  console.log(`✓ ${OUT}`);
+  console.log(`  ${stats.user} lượt PM · ${stats.ai} lượt AI · ${stats.tools} thao tác`);
+  console.log(`  ${(fs.statSync(OUT).size / 1048576).toFixed(1)} MB`);
+  process.exit(0);
+}
 
 const html = `<!doctype html>
 <html lang="vi"><head><meta charset="utf-8">

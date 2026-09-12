@@ -25,6 +25,7 @@ const PM_HOURS = {
     note: "PM khai lại 2026-09-11: 3–4 giờ (ban đầu khai 2–3h, nhưng phiên còn chạy tiếp sau đó)",
   },
   "2026-09-11": { range: [2, 3], note: "PM trả lời: 2–3 giờ" },
+  "2026-09-12": { range: [1, 2], note: "PM trả lời: 1–2 giờ" },
 };
 
 async function measureTokens() {
@@ -76,6 +77,10 @@ const NEW_SESSIONS = {
     "US-18 'Trưa nay ăn gì': bộ tài liệu [0]→[6] viết TRƯỚC khi code, thêm trường mealTypes " +
     "và phân loại 197 món bằng 6 agent, cổng check:meal + review-meal, trang /goi-y song ngữ, " +
     "đóng cổng W4-9 (PM duyệt, bể 132→121 món)",
+  "2026-09-12":
+    "Làm nổi hành động chính của /goi-y qua 3 vòng theo góp ý PM: nút tĩnh nhiều màu → " +
+    "bubble chạy vòng quanh mép màn hình → bubble thành lối vào duy nhất ở mọi trang " +
+    "(bỏ link trên thanh menu); đồng bộ 8 artefact lệch pha sau US-18",
 };
 
 // Đồng bộ số commit từ git cho MỌI phiên — bảng cũ chốt số giữa chừng phiên 06/09 nên sai.
@@ -128,18 +133,19 @@ d.realHours = {
 // tụt và trông như năng suất giảm trong khi thực tế đã làm thêm cả một tính năng lớn.
 // Giữ giá trị cũ để còn truy vết được vì sao đổi.
 d.baselineNoAiHPrevious = d.baselineNoAiHPrevious ?? d.baselineNoAiH;
-d.baselineNoAiH = 800; // điểm giữa của khoảng 765–835 ở baselineRevised
+d.baselineNoAiH = 810; // điểm giữa của khoảng 775–845 ở baselineRevised
 d.baselineChangeNote =
-  "600h → 765h (09-09, thêm song ngữ) → 800h (09-11, thêm US-18). Chi tiết cách suy ra ở " +
+  "600h → 765h (09-09, song ngữ) → 800h (09-11, US-18) → 810h (09-12, bubble). Cách suy ra ở " +
   "baselineRevised và TELEMETRY-LF.md mục 5.3.";
 
 d.baselineRevised = {
-  h: [765, 835],
+  h: [775, 845],
   note:
     "Baseline 600h lập cho phạm vi tới 06/09. Hai lần tăng kể từ đó: (1) song ngữ — dịch " +
     "41.000 từ ẩm thực chuyên ngành ở tốc độ thực tế ~2.000–3.000 từ/ngày ⇒ ~110–160h, cộng " +
     "phần kỹ thuật ~20–40h; (2) US-18 — phân loại 197 món bằng tay (~4h), dựng tính năng + " +
     "2 cổng kiểm + trang song ngữ (~20–28h), bộ tài liệu [0]→[6] (~8h) ⇒ ~35h. " +
+    "(3) bubble + 3 vòng tinh chỉnh giao diện theo góp ý PM ⇒ ~10h. " +
     "Vẫn là ƯỚC TÍNH phản-thực, không phải số đo — điểm yếu đã nêu ở 5.4.",
 };
 
@@ -223,4 +229,4 @@ console.log(` TỔNG        : ${f(d.tokens.totalAllTypes)}`);
 console.log("\n=== NÉN ===");
 const [lo, hi] = d.realHours.totalH;
 console.log(` baseline giữ 600h  : ${(600 / hi).toFixed(0)}–${(600 / lo).toFixed(0)}×`);
-console.log(` baseline sửa 765–835h: ${(765 / hi).toFixed(0)}–${(835 / lo).toFixed(0)}×`);
+console.log(` baseline sửa 775–845h: ${(775 / hi).toFixed(0)}–${(845 / lo).toFixed(0)}×`);

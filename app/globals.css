@@ -111,3 +111,102 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nút "Đổi món khác" ở /goi-y — hành động chính của trang, cố ý làm nổi hẳn.
+   Dùng đúng bảng màu ẩm thực đã chốt (ớt → nghệ → rau thơm), không thêm màu lạ.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Vành gradient quay quanh nút — phần "magic" chính.
+   Dùng thuộc tính `rotate` riêng, KHÔNG dùng `transform: rotate`: phần tử này còn cần
+   `translate` để căn giữa, mà `transform` sẽ ghi đè mất. */
+@keyframes magic-spin {
+  to { rotate: 1turn; }
+}
+
+/* Quầng sáng thở nhẹ phía sau */
+@keyframes magic-glow {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50%      { opacity: 0.75; transform: scale(1.06); }
+}
+
+/* Vệt sáng quét ngang mặt nút, nghỉ dài giữa hai lần cho khỏi nhức mắt */
+@keyframes magic-sheen {
+  0%, 62%  { transform: translateX(-140%) skewX(-18deg); }
+  86%, 100%{ transform: translateX(240%)  skewX(-18deg); }
+}
+
+/*
+ * ⚠️ Phần tử quay PHẢI là hình VUÔNG to hơn nút, và nút phải `overflow: hidden`.
+ *
+ * Lần đầu viết `inset: 0` (tức một viên thuốc 324×80) rồi cho xoay — kết quả là nó quét
+ * thành **một dải chéo khổng lồ cắt ngang cả trang**. Hình chữ nhật dài mà xoay thì phủ
+ * một vùng rộng gấp nhiều lần chính nó. Chỉ phát hiện được khi **chụp ảnh trang và nhìn**;
+ * build, tsc và lint đều xanh.
+ *
+ * Hình vuông cạnh 200% bề ngang thì xoay kiểu gì cũng luôn phủ kín nút, và `overflow:
+ * hidden` của nút cắt nó lại đúng hình viên thuốc.
+ */
+.magic-ring {
+  overflow: hidden;
+}
+
+.magic-ring::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  background: conic-gradient(
+    from 0deg,
+    var(--color-chili),
+    var(--color-turmeric),
+    #ffe6a3,
+    var(--color-herb),
+    var(--color-turmeric),
+    var(--color-chili)
+  );
+  animation: magic-spin 3.2s linear infinite;
+  z-index: 0;
+}
+
+/* Mặt nút tự chuyển màu — đây mới là thứ đọc được từ xa, vành 4px thì quá mảnh.
+   Gradient rộng gấp 3 khổ nút rồi trượt qua lại, nên màu chảy liên tục không giật. */
+@keyframes magic-flow {
+  0%, 100% { background-position:   0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+.magic-face {
+  background-image: linear-gradient(
+    110deg,
+    var(--color-chili-dark),
+    var(--color-chili),
+    var(--color-amber),
+    var(--color-turmeric-dark),
+    var(--color-chili)
+  );
+  background-size: 300% 100%;
+  animation: magic-flow 6s ease-in-out infinite;
+}
+
+.magic-glow {
+  animation: magic-glow 3s ease-in-out infinite;
+}
+
+.magic-sheen {
+  animation: magic-sheen 4.5s ease-in-out infinite;
+}
+
+/* Tôn trọng người tắt hiệu ứng: giữ nguyên màu và độ nổi, chỉ dừng chuyển động.
+   Nút vẫn phải nổi bật — đó là yêu cầu thiết kế, không phải hiệu ứng trang trí. */
+@media (prefers-reduced-motion: reduce) {
+  .magic-ring::before { animation: none; }
+  .magic-glow { animation: none; opacity: 0.55; }
+  .magic-sheen { display: none; }
+  /* Giữ nguyên gradient nhiều màu, chỉ dừng chuyển động — nút vẫn phải nổi bật,
+     đó là yêu cầu thiết kế chứ không phải hiệu ứng trang trí bỏ đi được. */
+  .magic-face { animation: none; background-position: 25% 50%; }
+}

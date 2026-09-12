@@ -294,6 +294,9 @@ chỉ chứng minh checklist khớp sản phẩm — **không thay được PM t
 | 13 | Ở `/en/goi-y` bấm "Show me two others" | Tới `/en/goi-y?s=…`, **không** rơi về bản tiếng Việt | ☐ |
 | 14 | Bấm link "Xem trang …" dưới một món | Tới đúng trang tỉnh và **mở sẵn panel món đó** | ☐ |
 | 15 | Thu cửa sổ xuống ~380px | Hai món xếp dọc, không tràn ngang | ☐ |
+| 16 | Nhìn nút **"Đổi món khác"** vài giây | Vành màu **quay quanh** nút, mặt nút **chuyển màu** đỏ ớt ↔ vàng nghệ, có quầng sáng thở phía sau. **Không** có vệt màu nào tràn ra ngoài nút | ☐ |
+| 17 | Rê chuột lại gần nút | Nút **hút nhẹ theo con trỏ** và phóng to một chút; icon dao dĩa nghiêng, icon lấp lánh to ra | ☐ |
+| 18 | *(nếu bật "giảm chuyển động" trong hệ điều hành)* | Nút **vẫn nhiều màu và vẫn nổi bật**, chỉ đứng yên — không phải trở về nút phẳng một màu | ☐ |
 
 ### 🔒 W4-9 — PM duyệt mẫu phân loại — ✅ **ĐÃ ĐÓNG (2026-09-11)**
 

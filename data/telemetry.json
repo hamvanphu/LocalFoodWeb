@@ -1,6 +1,6 @@
 {
   "note": "Nguồn số cho dashboard /telemetry. Mọi con số ở đây phải TRUY ĐƯỢC về git/file/output lệnh, trừ nhóm 'pmEstimated' vốn do PM tự khai. Xem TELEMETRY-LF.md.",
-  "updatedAt": "2026-09-12",
+  "updatedAt": "2026-09-18",
   "sessions": [
     {
       "date": "2026-08-25",
@@ -105,7 +105,7 @@
     },
     {
       "date": "2026-09-12",
-      "commits": 4,
+      "commits": 5,
       "gitLowerBoundH": null,
       "gitUpperBoundH": null,
       "pmEstimatedH": 1.5,
@@ -134,9 +134,9 @@
     "sourceRefs": 287,
     "dishesWithImage": 75,
     "staticRoutes": 68,
-    "commits": 82,
-    "trackedFiles": 328,
-    "artefacts": 33,
+    "commits": 85,
+    "trackedFiles": 330,
+    "artefacts": 34,
     "provincesTranslated": 63,
     "gateScripts": 3,
     "sitUatStories": 17
@@ -242,21 +242,21 @@
     }
   ],
   "tokens": {
-    "source": "Đo từ transcript phiên 54b73208 (52,4MB, 3.090 lượt AI trả lời). Claude Code ghi usage thật vào từng lượt — đây là SỐ ĐO, không phải ước lượng. Chạy lại: node scripts/update-telemetry.mjs",
+    "source": "Đo từ transcript phiên 54b73208 (52,4MB, 3.257 lượt AI trả lời). Claude Code ghi usage thật vào từng lượt — đây là SỐ ĐO, không phải ước lượng. Chạy lại: node scripts/update-telemetry.mjs",
     "sessionStart": "2026-08-25T13:52:21.628Z",
-    "sessionEnd": "2026-09-12T10:24:14.415Z",
-    "inputNew": 6148,
-    "output": 3547970,
-    "cacheWrite": 20521905,
-    "cacheRead": 1402867708,
-    "totalRaw": 1426943731,
-    "billableFull": 24076023,
+    "sessionEnd": "2026-09-18T13:55:14.691Z",
+    "inputNew": 6480,
+    "output": 3727995,
+    "cacheWrite": 23153826,
+    "cacheRead": 1543247746,
+    "totalRaw": 1570136047,
+    "billableFull": 26888301,
     "cacheHitRate": 98.3,
-    "mdPerMillionBillable": 0.169,
-    "caveat": "Đó là bối cảnh được đọc lại ở mỗi lượt, không phải nội dung mới. Trích con số 1427M mà bỏ ngữ cảnh sẽ gây hiểu sai — con số phản ánh đúng khối lượng làm việc là khoảng 24.1M tính giá đầy đủ, trong đó 3.5M là output AI thực sự viết ra.",
+    "mdPerMillionBillable": 0.151,
+    "caveat": "Đó là bối cảnh được đọc lại ở mỗi lượt, không phải nội dung mới. Trích con số 1570M mà bỏ ngữ cảnh sẽ gây hiểu sai — con số phản ánh đúng khối lượng làm việc là khoảng 26.9M tính giá đầy đủ, trong đó 3.7M là output AI thực sự viết ra.",
     "estimateNote": "Không có bước 'est' — không ai ước lượng token trước khi bắt đầu. Chỉ có reconcile (số thật).",
-    "turnsWithUsage": 3090,
-    "totalAllTypes": 1426943731,
+    "turnsWithUsage": 3257,
+    "totalAllTypes": 1570136047,
     "scopeNote": "CHỈ tính phiên 54b73208 (Local Food). Phiên 3ffd154d (13–21/08) thuộc dự án PB-04 khác — đã kiểm cwd và loại đúng.",
     "knownGap": "⚠️ Con số này là SÀN, không phải tổng. Đã kiểm: transcript có 0 lượt sidechain, nên token của agent chạy nền (6 agent nội dung 03/09, ~8 agent mở rộng 06/09, 10 agent dịch 09/09) KHÔNG được ghi vào đây. Mẫu từ thông báo tác vụ 09/09: mỗi agent dịch báo 68.836–99.668 token. Không ước lượng bù — muốn tổng thật phải lấy từ trang usage của tài khoản."
   },
@@ -421,5 +421,6 @@
   },
   "devbookEntries": 36,
   "measuredBy": "node scripts/update-telemetry.mjs — chạy lại được, không nhập tay",
-  "devbookNote": "36 mục SỰ CỐ. File có 42 gạch đầu dòng in đậm, nhưng 6 trong đó không phải sự cố: gạch con của một mục, bài học tích cực (chạy pilot 1 tỉnh trước khi dịch 62), và ghi chú uỷ quyền ở Phần B. Phân loại theo nhóm là phán đoán ngữ nghĩa nên gán tay, giống mealTypes."
+  "devbookNote": "36 mục SỰ CỐ. File có 42 gạch đầu dòng in đậm, nhưng 6 trong đó không phải sự cố: gạch con của một mục, bài học tích cực (chạy pilot 1 tỉnh trước khi dịch 62), và ghi chú uỷ quyền ở Phần B. Phân loại theo nhóm là phán đoán ngữ nghĩa nên gán tay, giống mealTypes.",
+  "devbookBullets": 42
 }

@@ -207,7 +207,12 @@ d.delivered = { ...d.delivered, ...{
 } };
 // `incidents` là MẢNG phân loại sự cố — giữ nguyên kiểu, đếm tổng để riêng.
 // (Bản trước spread nó thành object và làm hỏng trang /telemetry.)
-d.devbookEntries = measured.devbookIncidents;
+// Đếm thô số gạch đầu dòng in đậm — KHÔNG phải số sự cố.
+// `devbookEntries` (số sự cố đã phân loại tay) cố ý KHÔNG bị ghi đè ở đây: phân loại
+// sự cố là phán đoán ngữ nghĩa, giống `mealTypes` — máy đếm được dấu gạch, không đếm
+// được "cái này có phải một sự cố không". Bản trước ghi đè và xoá mất con số đã gán tay.
+d.devbookBullets = measured.devbookIncidents;
+d.devbookEntries = d.devbookEntries ?? measured.devbookIncidents;
 d.updatedAt = new Date().toISOString().slice(0, 10);
 d.measuredBy = "node scripts/update-telemetry.mjs — chạy lại được, không nhập tay";
 

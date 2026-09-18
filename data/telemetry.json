@@ -143,39 +143,39 @@
   },
   "incidents": [
     {
-      "group": "AI sai quy trình",
-      "count": 1,
-      "example": "Bỏ qua toàn bộ bước [0]-[7], nhảy thẳng vào code — PM bắt"
-    },
-    {
       "group": "AI sai code/logic",
-      "count": 5,
-      "example": "generateMetadata không await params; as Province không validate thật; mất deep-link sau redesign"
+      "count": 11,
+      "example": "node:fs lọt vào bundle trình duyệt làm build đổ; vành gradient xoay tràn thành dải chéo cắt ngang trang; deep-link không mở panel khi đổi món cùng tỉnh"
     },
     {
-      "group": "AI sai nội dung",
-      "count": 1,
-      "example": "Bánh cuốn Thanh Trì mô tả sai (có nhân — thực tế không nhân)"
+      "group": "Lỗi môi trường/thư viện",
+      "count": 9,
+      "example": "maplibre-gl@6.5.0 không load tile; 6/10 agent dịch bị ngắt vì hết hạn mức phiên; ảnh Wikimedia 429/502"
     },
     {
       "group": "AI sai thiết kế",
-      "count": 3,
-      "example": "Bản đồ 2 tầng giấu mất 55 tỉnh; khung nhìn cắt mũi Cà Mau; blur-up làm trễ LCP"
+      "count": 5,
+      "example": "Bản đồ 2 tầng giấu mất 55 tỉnh; khung nhìn mặc định không bao Hoàng Sa/Trường Sa; bubble trôi tự do đè lên ảnh món"
     },
     {
       "group": "AI sai khi tự kiểm",
-      "count": 1,
-      "example": "Playwright fullPage screenshot làm hiểu nhầm là có bug"
+      "count": 4,
+      "example": "Playwright fullPage screenshot làm hiểu nhầm bug; innerText bị text-transform đánh lừa; chính bảng telemetry tự lỗi thời (43 vs 69 commit)"
     },
     {
       "group": "Lỗi dữ liệu nguồn",
       "count": 3,
-      "example": "Centroid Khánh Hòa/Đà Nẵng nằm giữa Biển Đông; 3 link nguồn 404"
+      "example": "Centroid Khánh Hòa/Đà Nẵng nằm giữa Biển Đông; 3 link nguồn đã chết nằm im mà zod không bắt được"
     },
     {
-      "group": "Lỗi môi trường/thư viện",
-      "count": 5,
-      "example": "maplibre-gl@6.5.0 không load tile; Wikimedia 429/502; cache module-level"
+      "group": "AI sai nội dung",
+      "count": 2,
+      "example": "Bánh cuốn Thanh Trì mô tả sai; bảng thuật ngữ dịch tự phản lại chính nó (cao lâu, mắm)"
+    },
+    {
+      "group": "AI sai quy trình",
+      "count": 2,
+      "example": "Bỏ qua toàn bộ bước [0]-[7] nhảy thẳng vào code; README tự khai nhược điểm mình không còn có"
     }
   ],
   "incidentsNote": "19 sự cố phân loại, nằm trong 23 mục DEVBOOK (4 mục còn lại là ghi chú hạn chế/bối cảnh, không phải lỗi). Con số này CÒN THIẾU: ít nhất 4 lần PM bắt lỗi chỉ nằm trong commit message, chưa được ghi thành mục riêng.",
@@ -420,5 +420,6 @@
     "note": "Baseline 600h lập cho phạm vi tới 06/09. Hai lần tăng kể từ đó: (1) song ngữ — dịch 41.000 từ ẩm thực chuyên ngành ở tốc độ thực tế ~2.000–3.000 từ/ngày ⇒ ~110–160h, cộng phần kỹ thuật ~20–40h; (2) US-18 — phân loại 197 món bằng tay (~4h), dựng tính năng + 2 cổng kiểm + trang song ngữ (~20–28h), bộ tài liệu [0]→[6] (~8h) ⇒ ~35h. (3) bubble + 3 vòng tinh chỉnh giao diện theo góp ý PM ⇒ ~10h. Vẫn là ƯỚC TÍNH phản-thực, không phải số đo — điểm yếu đã nêu ở 5.4."
   },
   "devbookEntries": 36,
-  "measuredBy": "node scripts/update-telemetry.mjs — chạy lại được, không nhập tay"
+  "measuredBy": "node scripts/update-telemetry.mjs — chạy lại được, không nhập tay",
+  "devbookNote": "36 mục SỰ CỐ. File có 42 gạch đầu dòng in đậm, nhưng 6 trong đó không phải sự cố: gạch con của một mục, bài học tích cực (chạy pilot 1 tỉnh trước khi dịch 62), và ghi chú uỷ quyền ở Phần B. Phân loại theo nhóm là phán đoán ngữ nghĩa nên gán tay, giống mealTypes."
 }

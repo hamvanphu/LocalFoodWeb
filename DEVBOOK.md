@@ -300,6 +300,36 @@ nằm sâu và chỉ hiện khi ảnh lỗi hoặc mở panel. Chọn `useLocale
 prop `locale`: prop có mặc định `"vi"` mà nơi gọi quên truyền sẽ **âm thầm** hiện sai
 ngôn ngữ — đúng loại lỗi vừa mắc ở `Lightbox` khi thêm prop rồi quên truyền từ `DishCard`.
 
+## Bubble "Trưa nay ăn gì" và đợt dọn hồ sơ (2026-09-12)
+
+- **Vành gradient xoay tràn thành dải chéo cắt ngang cả trang**: viết `::before` với
+  `inset: 0` — tức một viên thuốc 324×80 — rồi cho `rotate`. Hình chữ nhật dài mà xoay thì
+  quét ra vùng rộng **gấp nhiều lần chính nó**, nên vệt vàng-xanh phủ lên cả tiêu đề và
+  chữ. `pnpm build` xanh, `tsc` sạch, `lint` 0 — **không cổng nào bắt được**, vì đây là lỗi
+  *hình học của CSS*, không phải lỗi kiểu hay cú pháp. Chỉ lộ khi **chụp ảnh trang và
+  nhìn**. Xử lý: phần tử quay phải là **hình vuông** cạnh 200% bề ngang (xoay kiểu gì cũng
+  phủ kín nút) + `overflow: hidden` ở nút để cắt lại thành viên thuốc; dùng thuộc tính
+  `rotate` riêng chứ không `transform: rotate` vì phần tử còn cần `translate` căn giữa.
+- **Bubble trôi tự do đè lên ảnh món ăn**: bản đầu cho bubble trôi ngẫu nhiên hai trục thì
+  nó đi vào giữa trang, che mất thẻ món. Xử lý: đổi sang **quỹ đạo vòng theo mép** — vừa
+  đúng nghĩa "chạy quanh màn hình" PM yêu cầu, vừa để trống cột nội dung ở giữa.
+- **Playwright không bấm nổi bubble** (`element is not stable`), phải rê chuột cho nó dừng
+  rồi mới bấm được. Đây **không phải lỗi** mà là bằng chứng: cơ chế dừng-khi-hover là
+  *điều kiện để bấm được*, không phải hiệu ứng trang trí.
+- **Ghi HTML vào file đuôi `.md`**: khi thêm chế độ xuất Markdown, ghi đoạn mã ra `/tmp`
+  bằng bash rồi đọc lại bằng Python — nhưng **Python trên Windows không thấy `/tmp` của Git
+  Bash**. Phép chèn trượt, script rơi xuống nhánh HTML và ghi HTML vào `.md`. Không lệnh
+  nào báo lỗi; chỉ lộ khi mở file xem 2 dòng đầu. Bài học: trên Windows, đừng trộn đường
+  dẫn POSIX của Git Bash với công cụ native — dùng thư mục dự án hoặc scratchpad.
+- **Chính bảng telemetry tự lỗi thời**: ghi 43 commit trong khi git nói 69, vì bảng được
+  lập **ngay trong** phiên đang đo rồi chốt số giữa chừng. Xử lý: sinh số bằng
+  `scripts/update-telemetry.mjs`, chạy lại được, không nhập tay. **Chỉ số tự động vẫn sai
+  nếu thời điểm đo nằm trong khoảng đang đo.**
+- **`README.md` tự khai nhược điểm mình không còn có**: mục "Giới hạn đã biết" vẫn ghi
+  *"chưa có đánh giá/bình luận"* (đã lên production từ 06/09) và *"Search chưa có user
+  story"* (đã đóng GAP-T2 từ 07/09). Sai ở **đúng chỗ người chấm đọc kỹ nhất**, và sai theo
+  hướng **tự làm mình thiệt**. KPI c3 bắt được — lần thứ hai.
+
 # Phần B — Quyết định uỷ quyền, cổng fail-closed, hard-stop
 
 > **Bổ sung 2026-09-06.** Phần A ở trên ghi *AI sai → PM sửa*. Nhưng `§8.3` của

@@ -9,19 +9,58 @@
 
 | KPI | Kết quả | Target | |
 |---|---|---|---|
-| c1 Traceability Coverage | **91,7%** | ≥ 80% | ✅ |
-| c2 Change Coupling | **100%** | ≥ 70% | ✅ |
-| c3 Freshness | **87%** → *cần đo lại* | ≥ 85% | ⚠️ *(xem mục "Đo lại 2026-09-11" — c3 lại bắt được lỗi thật trong `README.md`)* |
-| c4 Orphan Rate | **7,9%** | ≤ 15% | ✅ |
-| c5 Review Evidence | **92%** | ≥ 90% | ✅ |
+| c1 Traceability Coverage | **93,3%** | ≥ 80% | ✅ |
+| c2 Change Coupling | **92,5%** | ≥ 70% | ✅ |
+| c3 Freshness | **84,4%** | ≥ 85% | ❌ **KHÔNG ĐẠT** |
+| c4 Orphan Rate | **5,4%** | ≤ 15% | ✅ |
+| c5 Review Evidence | **96,9%** | ≥ 90% | ✅ |
 | c6 Decision Coverage | **100%** | ≥ 75% | ✅ |
-| c7 Retrieval Quality | **100%** | ≥ 70% | ✅ |
+| c7 Retrieval Quality | *(chưa đo lại)* | ≥ 70% | ⚠️ số của v1.0 |
+
+> **Đo lại 2026-09-18 cho bản v1.2.** Lần đo trước (07/09) là của v1.0.
 
 **Nơi xem:** panel trên `/telemetry` (dashboard đang chạy) + Interactive HTML report.
 
 ---
 
-## c3 Freshness — chỉ số duy nhất không đạt, và nó đáng giá nhất
+## ⚠️ c3 lại KHÔNG ĐẠT — lần thứ ba nó bắt được lỗi thật *(đo 2026-09-18)*
+
+**84,4%** (27/32 artefact) — dưới ngưỡng 85%. Năm file còn lệch sau khi thêm US-18:
+
+| File | Lệch chỗ nào |
+|---|---|
+| `WEEKLY-LF.md` | Báo cáo tuần dừng ở 06/09 |
+| `VIDEO-SCRIPT-LF.md` | Chưa có cảnh `/goi-y` — mà đó là tính năng dễ gây ấn tượng nhất khi quay |
+| `CASE-STUDY-LF.md` | Chưa có US-18 làm điểm dữ liệu |
+| `PERFORMANCE-LF.md` | Chưa đo `/goi-y`; cũng là artefact **duy nhất** thiếu dấu vết PM ở c5 |
+| `SPOTCHECK-LF.md` | Chưa nhắc rủi ro bản dịch (R15) |
+
+**Ba lần c3 bắt được lỗi thật, cùng một nguyên nhân gốc:** thêm tính năng thì viết tài
+liệu mới, nhưng **không rà lại tài liệu cũ**. Lần 1: bản đồ module ghi "404 chưa có" khi
+đã xong từ lâu. Lần 2: README tự khai nhược điểm mình không còn có. Lần 3: năm file trên.
+
+### Hai chỉ số khác cũng đổi, ghi thẳng
+
+- **c2 tụt 100% → 92,5%.** Số commit tăng gấp đôi; ba commit sửa lỗi gấp không kèm tài liệu.
+- **c4 cải thiện 7,9% → 5,4%** dù số module tăng gấp đôi.
+- **c5 96,9%** — chỉ `PERFORMANCE-LF.md` thiếu dấu vết can thiệp của người.
+
+### Một điều phải nói về chính phép đo c5
+
+Đo c5 **rất nhạy với cách định nghĩa "dấu vết"**. Cùng bộ dữ liệu, ba cách viết regex cho
+ba kết quả khác hẳn nhau:
+
+| Cách định nghĩa | Kết quả |
+|---|---|
+| Chặt — bắt buộc `PM` đứng trước động từ | 82,4% *(báo thừa: bỏ sót "theo yêu cầu PM")* |
+| Rộng — chỉ cần có chữ `PM` | 100% *(báo thiếu: nhắc tên ≠ can thiệp)* |
+| **Giữa — dấu vết CAN THIỆP thật** | **96,9%** ← dùng số này |
+
+Đây là **lần thứ ba trong dự án** một bộ lọc tự động của AI báo sai lệch (trước đó:
+`review-meal.mjs` gắn cờ 7 món mà 6 là báo nhầm; phép rà c3 báo thừa 14 file). Ghi ra vì
+nếu chỉ đọc con số mà không đọc phần này thì sẽ tưởng nó chính xác hơn thực tế.
+
+## c3 Freshness ở lần đo đầu (07/09) — giữ làm lịch sử
 
 Ngay lần đo đầu tiên, c3 **bắt được lỗi thật**: `MODULEMAP-LF.md` lỗi thời nghiêm trọng.
 Cột "Hiện trạng" vẫn ghi:

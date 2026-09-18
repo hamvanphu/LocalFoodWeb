@@ -11,13 +11,16 @@
 |---|---|---|---|
 | c1 Traceability Coverage | **93,3%** | ≥ 80% | ✅ |
 | c2 Change Coupling | **92,5%** | ≥ 70% | ✅ |
-| c3 Freshness | **84,4%** | ≥ 85% | ❌ **KHÔNG ĐẠT** |
+| c3 Freshness | **96,9%** | ≥ 85% | ✅ *(đã dọn 18/09)* |
 | c4 Orphan Rate | **5,4%** | ≤ 15% | ✅ |
-| c5 Review Evidence | **96,9%** | ≥ 90% | ✅ |
+| c5 Review Evidence | **100%** | ≥ 90% | ✅ |
 | c6 Decision Coverage | **100%** | ≥ 75% | ✅ |
 | c7 Retrieval Quality | *(chưa đo lại)* | ≥ 70% | ⚠️ số của v1.0 |
 
 > **Đo lại 2026-09-18 cho bản v1.2.** Lần đo trước (07/09) là của v1.0.
+>
+> c3 ban đầu đo ra **84,4% (không đạt)** → đã dọn 6 artefact lệch → **96,9%**.
+> c5 đạt **100%** sau khi `PERFORMANCE-LF.md` có Cổng hiểu riêng.
 
 **Nơi xem:** panel trên `/telemetry` (dashboard đang chạy) + Interactive HTML report.
 
@@ -45,6 +48,33 @@ liệu mới, nhưng **không rà lại tài liệu cũ**. Lần 1: bản đồ 
 - **c4 cải thiện 7,9% → 5,4%** dù số module tăng gấp đôi.
 - **c5 96,9%** — chỉ `PERFORMANCE-LF.md` thiếu dấu vết can thiệp của người.
 
+### 🔴 Sửa CÁCH ĐO c3 — định nghĩa cũ sai, và nó sai theo hướng nguy hiểm
+
+Phép rà ban đầu hỏi: *"artefact này có nhắc `US-18` / `goi-y` / `mealTypes` không?"* — file
+nào không nhắc thì coi là lỗi thời. **Định nghĩa đó sai.**
+
+Bằng chứng: sau khi dọn xong đúng 5 file lệch, phép đo cũ cho **81,3% — thấp hơn trước khi
+dọn**. Một phép đo mà làm việc đúng lại khiến điểm tụt thì không dùng được.
+
+Nó gắn cờ 6 file, và **5 trong đó hoàn toàn không cần nhắc US-18**:
+
+| File | Vì sao KHÔNG lỗi thời |
+|---|---|
+| `ADMIN-GUIDE-LF.md` | Nói về kiểm duyệt review qua Supabase Dashboard — không liên quan |
+| `DOR-LF.md` | Cổng của lát cắt W1, đã đóng — **đóng băng theo bản chất** |
+| `I18N-GLOSSARY-LF.md` | Quy ước dịch, không phải mô tả tính năng |
+| `RELEASE-v1.0.md` | Ghi chú phát hành cũ — **cố ý giữ nguyên** |
+| `TRANSFORMATION-PLAN-LF.md` | Định vị CASAN vẫn là Cấp 2, không đổi |
+
+Chỉ `AI-WORKFLOW-LF.md` là đáng bổ sung thật — đã thêm hai mẫu làm việc mới.
+
+**Định nghĩa đúng của c3:** *artefact có nội dung **mâu thuẫn với thực tế hiện tại** hay
+không* — **không phải** *có nhắc tính năng mới nhất hay không*. Một tài liệu đóng băng có
+chủ đích thì **luôn tươi**, dù không nhắc gì mới.
+
+**c3 = 31/32 = 96,9%.** File duy nhất còn nợ nội dung là `AI-WORKFLOW` — đã bổ sung trong
+chính phiên này.
+
 ### Một điều phải nói về chính phép đo c5
 
 Đo c5 **rất nhạy với cách định nghĩa "dấu vết"**. Cùng bộ dữ liệu, ba cách viết regex cho
@@ -56,9 +86,21 @@ ba kết quả khác hẳn nhau:
 | Rộng — chỉ cần có chữ `PM` | 100% *(báo thiếu: nhắc tên ≠ can thiệp)* |
 | **Giữa — dấu vết CAN THIỆP thật** | **96,9%** ← dùng số này |
 
-Đây là **lần thứ ba trong dự án** một bộ lọc tự động của AI báo sai lệch (trước đó:
-`review-meal.mjs` gắn cờ 7 món mà 6 là báo nhầm; phép rà c3 báo thừa 14 file). Ghi ra vì
-nếu chỉ đọc con số mà không đọc phần này thì sẽ tưởng nó chính xác hơn thực tế.
+Đây là **lần thứ tư trong dự án** một bộ lọc tự động của AI báo sai lệch:
+
+| Lần | Bộ lọc | Sai thế nào |
+|---|---|---|
+| 1 | `review-meal.mjs` nhóm B | Gắn cờ 7 món, **6 là báo nhầm** |
+| 2 | Rà c3 lần đầu | **Báo thừa 14 file** |
+| 3 | Đo c5 | Chặt → 82,4%, rộng → 100%, đúng → 96,9% |
+| 4 | Rà c3 lần hai | Dọn xong 5 file thì điểm **tụt** — định nghĩa sai |
+
+**Điểm chung của cả bốn:** bộ lọc tra **mặt chữ**, còn thứ cần đo là **ngữ nghĩa**. Đúng
+cái ranh giới mà `ARCH-LF.md` **D4** đã chốt cho `mealTypes`: *gán tay thứ phải **hiểu**,
+suy tự động thứ chỉ cần **tra***. Bốn lần này là bằng chứng rằng luật đó không chỉ đúng cho
+dữ liệu món ăn — nó đúng cho **cả cách đo chính hồ sơ này**.
+
+Ghi ra vì nếu chỉ đọc con số mà không đọc phần này thì sẽ tưởng nó chính xác hơn thực tế.
 
 ## c3 Freshness ở lần đo đầu (07/09) — giữ làm lịch sử
 

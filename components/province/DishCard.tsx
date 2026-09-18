@@ -45,7 +45,16 @@ export default function DishCard({
         type="button"
         onClick={() => primaryImage && setZoomed(true)}
         className={`group relative block h-56 w-full ${primaryImage ? "cursor-zoom-in" : "cursor-default"}`}
-        aria-label={primaryImage ? t(locale, "dish.zoom", { name: dish.name }) : dish.name}
+        aria-label={
+          primaryImage
+            ? // Gộp cả dòng ghi công vào tên truy cập, vì nó NẰM TRONG nút và hiện ra
+              // cho người nhìn thấy. Không gộp thì tên truy cập thiếu mất phần chữ đang
+              // hiển thị (Lighthouse: label-content-name-mismatch), mà `aria-hidden`
+              // dòng ghi công thì lại giấu mất phần credit khỏi trình đọc màn hình —
+              // thứ đúng ra người dùng nào cũng nên nghe được.
+              `${t(locale, "dish.zoom", { name: dish.name })} · ${primaryImage.attribution} · ${primaryImage.license}`
+            : dish.name
+        }
       >
         <ImageWithFallback
           slug={dish.slug}
@@ -84,7 +93,7 @@ export default function DishCard({
 
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <h4 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-herb">
+            <h4 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-herb-dark">
               <Carrot className="h-4 w-4" aria-hidden="true" />
               {t(locale, "province.ingredients")}
             </h4>
@@ -95,7 +104,7 @@ export default function DishCard({
             </ul>
           </div>
           <div>
-            <h4 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-herb">
+            <h4 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-herb-dark">
               <ListOrdered className="h-4 w-4" aria-hidden="true" />
               {t(locale, "province.steps")}
             </h4>

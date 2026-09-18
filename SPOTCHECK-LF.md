@@ -210,3 +210,35 @@ kiện** phải thừa nhận 3 giới hạn:
 chọn ngẫu nhiên từ nhóm rủi ro cao nhất, không phát hiện sai rõ ràng. Tôi không tuyên
 bố nội dung đã được kiểm chứng đầy đủ — thay vào đó tôi mở kênh cho người đọc báo nội
 dung sai, và chấp nhận đây là mitigation vận hành chứ chưa phải bảo đảm trước khi nộp."*
+
+---
+
+## Bổ sung 2026-09-18 — hai vùng nội dung MỚI chưa hề được spot-check
+
+Phiếu trên chỉ nói về **nội dung tiếng Việt**. Từ đó tới nay dự án sinh thêm hai khối nội
+dung lớn, **cả hai đều chưa ai đọc**:
+
+| Vùng | Quy mô | Đã kiểm tới đâu | Rủi ro |
+|---|---|---|---|
+| **Bản dịch tiếng Anh** | 45.192 từ, 63 tỉnh | Chỉ `pnpm check:i18n` — **kiểm cấu trúc**, không kiểm nghĩa | **R15** |
+| **Phân loại `mealTypes`** | 197 món | `pnpm check:meal` + PM duyệt **23 món đáng ngờ** (không phải 197) | **R16** |
+
+### Vì sao cách lấy mẫu phải KHÁC nhau cho từng vùng
+
+Đây là điều học được khi làm cổng W4-9, và nó sửa lại một giả định của chính phiếu này:
+
+| Vùng | Lỗi phân bố thế nào | Cách lấy mẫu đúng |
+|---|---|---|
+| Nội dung tiếng Việt *(phiếu gốc)* | **Rải đều** — hallucination có thể ở bất kỳ món nào | ✅ Bốc ngẫu nhiên có seed cố định |
+| Phân loại `mealTypes` | **Tụ ở nhóm ranh giới** — bánh xèo, gỏi, đồ nướng | ❌ Bốc ngẫu nhiên là sai. Phải **khoanh vùng chỗ dữ liệu tự mâu thuẫn với nhãn** (`scripts/review-meal.mjs`) |
+| Bản dịch tiếng Anh | **Tụ ở chỗ nhiều thuật ngữ địa phương** — Tây Bắc, Tây Nguyên, Tây Nam Bộ | Bốc có seed **trong nhóm rủi ro cao**, không bốc đều toàn bộ 63 tỉnh |
+
+**Nguyên tắc rút ra:** chọn cách lấy mẫu theo **hình dạng của lỗi**, không theo thói quen.
+Bốc ngẫu nhiên 20 mục trong một tập mà lỗi tụ ở rìa thì phần lớn sẽ trúng mục hiển nhiên
+đúng — tốn thời gian người mà không tìm ra gì.
+
+**Bằng chứng cách khoanh vùng hiệu quả hơn:** W4-9 rút 197 món xuống **23 món** cần soi,
+và 23 món đó quy về đúng **3 quyết định chính sách**. PM quyết trong vài phút.
+
+**Còn nợ:** chưa ai đọc bản dịch. Đề xuất áp cùng cách — khoanh nhóm tỉnh nhiều thuật ngữ
+địa phương, đọc thật, rồi **ghi đúng mức đã kiểm** chứ không nâng thành "đã kiểm chứng".

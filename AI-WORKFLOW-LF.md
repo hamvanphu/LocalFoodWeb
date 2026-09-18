@@ -163,6 +163,54 @@ bị commit, chỉ có tên biến.
 
 ---
 
+## Bổ sung 2026-09-18 — hai mẫu làm việc mới, rút ra từ v1.1 và v1.2
+
+### Mẫu 1 — Agent song song ghi thẳng vào dữ liệu gốc, có cổng đối chiếu canh
+
+Đợt dịch (v1.1) tránh rủi ro bằng cách cho 10 agent ghi ra **file riêng**. Đợt phân loại
+món (v1.2) **không tách được**, vì `mealTypes` là thuộc tính nội tại của món — 6 agent
+phải ghi thẳng vào `data/provinces/*.json`, tức nội dung gốc tiếng Việt **không có bản sao
+nào ngoài git**.
+
+Cách xử lý: thay vì *tránh*, thì **canh**.
+
+| Bước | Việc |
+|---|---|
+| 1 | Commit sạch trước khi phóng agent — git là bản sao lưu duy nhất |
+| 2 | Brief ghi rõ: **chỉ được thêm 2 trường**, cấm đụng mọi trường khác |
+| 3 | Cổng `check:meal` đọc `git show HEAD:<file>` và **so từng trường**, fail nếu có gì ngoài 2 trường đó bị đụng |
+
+**Kết quả: 6 agent, 197 món, 0 trường nào khác bị sửa.** Nhưng giá trị không nằm ở con số
+0 — mà ở chỗ **nếu có lỗi thì đã bắt được ngay**, thay vì lộ ra sau vài tuần.
+
+> **Luật rút ra:** *"agent báo đã xong và tự kiểm rồi"* **không phải bằng chứng**. Bằng
+> chứng là một phép đối chiếu **chạy lại được**, do bên thứ ba thực hiện. Cùng bài học với
+> việc đóng R11 bằng cách tự tấn công database chứ không bằng "đã chạy migration".
+
+### Mẫu 2 — Cổng duyệt cho việc phán đoán hàng loạt: PM quyết CHÍNH SÁCH, không duyệt KẾT QUẢ
+
+Cổng W4-9 đòi PM duyệt phân loại 197 món. Đưa cả 197 cho PM đọc là cách chắc chắn biến
+cổng thành nghi thức — sẽ bị đọc lướt, đúng kiểu **R3 rubber-stamping**.
+
+Cách làm thay thế:
+
+1. AI viết `scripts/review-meal.mjs` khoanh vùng chỗ **dữ liệu tự mâu thuẫn với nhãn**
+   (món gắn `bua-chinh` mà `howToEat` lại ghi *"ăn chơi"*, *"nhắm rượu"*) → còn **23 món**.
+2. PM đọc 23 món, thấy chúng quy về đúng **3 quyết định chính sách**.
+3. Áp chính sách bằng **code**, không sửa dữ liệu — nhãn `moi-nhau` của 10 món là **đúng**,
+   gỡ đi là làm dữ liệu nói sai sự thật chỉ để vừa một tính năng.
+
+**Cố ý KHÔNG bốc mẫu ngẫu nhiên:** lỗi phân loại **không rải đều**, nó tụ ở nhóm ranh giới.
+Khác với spot-check nội dung, nơi bốc ngẫu nhiên **mới đúng** vì hallucination rải đều.
+→ *Chọn cách lấy mẫu theo **hình dạng của lỗi**, không theo thói quen.*
+
+### Điều cả hai mẫu có chung
+
+Đều là cách **giữ cho cổng duyệt của người không bị loãng khi khối lượng tăng**. Khi AI làm
+được 197 việc một lúc, cổng "người duyệt từng việc" **vỡ ngay** — không phải vì người lười,
+mà vì nó không co giãn được. Thứ co giãn được là: **máy canh phần cơ học, người quyết phần
+chính sách.**
+
 ## Chỗ quy trình này còn yếu — biết để nói ở viva
 
 | Điểm yếu | Hệ quả thật đã xảy ra |

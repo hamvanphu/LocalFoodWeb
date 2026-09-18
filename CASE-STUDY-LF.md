@@ -186,3 +186,63 @@ Tài liệu chương trình có **hai bảng trọng số khác nhau** cho track
 
 Chưa rõ bảng nào áp dụng. **Dự án chuẩn bị đủ cho cả hai** — có Case Study, và cũng có
 WBS + Estimation đầy đủ kèm PERT. Nên hỏi Coach để biết chấm theo bảng nào.
+
+---
+
+## F. Điểm dữ liệu mới — US-18 kiểm chứng "móng trước, bề mặt sau" *(2026-09-18)*
+
+Ba mục A–C đo dự án tới 07/09. Từ đó có thêm hai tính năng lớn, và chúng cho một **phép
+thử tự nhiên** cho nguyên tắc phân tầng.
+
+### F1. Yêu cầu đổi giữa chừng — đo được cái giá
+
+PM đổi yêu cầu **sau khi** bộ tài liệu US-18 viết xong, **trước khi** code:
+*12 món + 5 bộ lọc* → *2 món kèm công thức*.
+
+| Tầng | Phải làm lại? |
+|---|---|
+| W4-1 trường `mealTypes` + zod | ❌ Không |
+| W4-2 phân loại 197 món | ❌ Không |
+| W4-3 cổng `check:meal` | ❌ Không |
+| W4-4 logic lọc & bốc | ❌ Không |
+| W4-5/6 giao diện | ✅ Làm lại |
+
+Đây là **lần thứ hai** nguyên tắc trả công đo được (lần đầu: mở rộng 8→63 tỉnh không sửa
+một dòng code). Hai lần đủ để nói đó là **tính chất của thiết kế**, không phải may.
+
+**Nhưng phải ghi cả chiều ngược lại:** nếu PM đổi yêu cầu ở **tầng dữ liệu** — ví dụ "phân
+loại theo giá tiền" thay vì theo loại bữa — thì **toàn bộ công phân loại 197 món phải làm
+lại**. "Móng trước" bảo vệ khỏi thay đổi ở bề mặt, **không** bảo vệ khỏi thay đổi ở móng.
+Ghi ra để không ai đọc mục này thành lời hứa nó không hứa.
+
+### F2. Ba vòng tinh chỉnh giao diện — chi phí thật của "wow"
+
+Nút hành động chính đi qua **3 vòng** theo góp ý PM: nút tĩnh nhiều màu → bubble chạy
+quanh mép → bubble thành lối vào duy nhất ở mọi trang. Mỗi vòng đều **bấm build xanh**,
+và mỗi vòng đều lộ ra một vấn đề chỉ thấy được bằng mắt:
+
+| Vòng | Lỗi chỉ thấy khi chụp ảnh và nhìn |
+|---|---|
+| 1 | Vành gradient xoay **tràn thành dải chéo khổng lồ cắt ngang cả trang** |
+| 2 | Bubble trôi tự do **đè lên ảnh món ăn** ở giữa trang |
+| 3 | Chữ "Trưa nay ăn gì?" vỡ dòng thành *"Trưa nay ăn"* / *"gì?"* |
+
+`pnpm build`, `tsc`, `lint` đều xanh cả ba lần. **Không cổng tự động nào bắt được lỗi bố
+cục thị giác** — đây là bằng chứng thứ ba cho §E1, và là lý do quy trình phải có bước
+*chụp ảnh và nhìn*, không chỉ đọc log.
+
+### F3. Chỉ số Nén đi xuống qua 4 lần đo — và đó là dấu hiệu TỐT
+
+| Lần đo | Nén | Vì sao đổi |
+|---|---|---|
+| 06/09 | 27–37× | Giờ người phần lớn là **ước tính gộp** |
+| 09/09 | 23–35× | Thêm song ngữ; PM khai giờ **từng phiên** |
+| 11/09 | 21–32× | Thêm US-18 |
+| 18/09 | **20–31×** | Thêm bubble; baseline tăng theo phạm vi |
+
+Đọc đúng: **không phải năng suất giảm.** Mỗi lần đo lại, mẫu số có thêm giờ PM khai trực
+tiếp thay vì gộp ước tính, còn tử số là baseline **tự ước** — mà ước thận trọng thì luôn
+kéo tỉ số xuống. Con số đang **giảm dần về phía sự thật**.
+
+Đây cũng là lý do §C tự đánh dấu là *phần yếu nhất*: baseline là phản-thực, không ai thực
+sự làm lại dự án bằng tay để so.

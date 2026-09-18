@@ -134,3 +134,50 @@ tạm (`EPERM`), khiến exit code khác 0. Script đo ban đầu coi đó là t
 "không đo được" cho 2/3 trang — **kết luận sai trong khi dữ liệu đã có sẵn trong file**.
 Đã sửa: đọc file kết quả bất kể exit code. Ghi lại đây vì đây đúng loại lỗi khiến người
 ta tưởng công cụ hỏng và bỏ cuộc.
+
+---
+
+## Đo lại 2026-09-18 — thêm trang `/goi-y` (US-18)
+
+Lighthouse, headless, trung vị 3 lần chạy, trên bản `pnpm build` + `pnpm start`.
+
+| Trang | Performance | A11y | LCP | TBT | Payload | CLS |
+|---|---|---|---|---|---|---|
+| **`/goi-y`** *(mới)* | **83/100** | **100** | 4,70s | 65ms | **0,59MB** | 0,000 |
+| Trang chủ (có bản đồ) | 46/100 | 96 | 6,20s | 4.222ms | 1,83MB | — |
+| Trang tỉnh (Hà Nội) | 80/100 | 100 | 4,54s | 114ms | 0,62MB | — |
+| `/browse` (63 tỉnh) | 65/100 | 100 | 5,93s | 260ms | 0,98MB | — |
+
+`/goi-y` là **trang nhanh nhất site** — 83/100, payload nhẹ nhất, TBT chỉ 65ms. Lý do:
+nó không tải thư viện bản đồ. Đây là bằng chứng gián tiếp cho R12: **toàn bộ khoảng cách
+hiệu năng của trang chủ là do MapLibre**, không phải do cách dựng trang.
+
+**Bubble chạy liên tục không tốn gì đo được.** Đếm khung hình trên 4 trang: **60fps, 0ms
+long task**, cả khi có lẫn khi gỡ bubble đi. Vì chuyển động dùng `translate`/`rotate` —
+chạy trên GPU, không bắt trình duyệt vẽ lại. Trên máy cảm ứng (nơi pin yếu nhất) bubble
+vốn đã neo cố định, không chạy.
+
+### 🔴 Lần đo này bắt được 3 lỗi accessibility THẬT — a11y 95, không phải 100
+
+Đây là giá trị lớn hơn bản thân con số hiệu năng. Cả ba đều là lỗi **có sẵn trong
+`DishCard`**, tức ảnh hưởng **mọi trang có món ăn**, không riêng `/goi-y`:
+
+| Lỗi | Chi tiết | Sửa |
+|---|---|---|
+| **Contrast dưới ngưỡng AA** | `text-herb` (#6b8f47) trên nền trắng chỉ **3,72:1** ở tiêu đề "NGUYÊN LIỆU CHÍNH" / "CÁCH LÀM SƠ LƯỢC"; và `text-ink/60` ở 12px chỉ **4,35:1** | Đổi sang `text-herb-dark` và `text-ink/75` |
+| **Thứ tự tiêu đề nhảy cóc** | Trang đi thẳng từ `h1` xuống `h3` của `DishCard` — nhãn "MÓN THỨ NHẤT/HAI" là `<p>` | Đổi thành `<h2>` — vốn đúng ngữ nghĩa hơn |
+| **Tên truy cập không khớp chữ nhìn thấy** | Nút phóng to ảnh chứa **dòng ghi công** (`Tác giả · Wikimedia · CC BY-SA`) mà `aria-label` không nhắc tới | Gộp dòng ghi công vào `aria-label`. **Không** dùng `aria-hidden` — làm thế là giấu mất phần credit khỏi trình đọc màn hình, thứ đúng ra ai cũng nên nghe được |
+
+**Sau khi sửa: a11y `/goi-y` = 100/100, cả ba mục đều sạch**, và Performance nhích **55 → 83**.
+
+> **Điều đáng nói nhất:** `axe-core` chạy trong đợt W1-11a từng báo **0 vi phạm** trên
+> chính những component này. Lighthouse chạy trên **trang thật đã render** thì bắt được.
+> Hai công cụ, hai kết quả — cùng một bài học đã ghi ở `CASE-STUDY-LF.md` §E1: *cổng chất
+> lượng tự động bắt được ít hơn ta tưởng*, và bắt được **ít hơn nữa** nếu chỉ chạy một loại.
+
+### 🔒 Cổng hiểu — đo lại 2026-09-18
+
+PM yêu cầu rà lại vì báo cáo build không khớp v1.2. Việc rà đó **kéo theo phát hiện này** —
+nếu chỉ sửa số trong báo cáo cho khớp mà không đo lại thật, ba lỗi a11y trên vẫn nằm im
+trên production. Đây là lý do cụ thể vì sao "cập nhật tài liệu" phải là **đo lại**, không
+phải chép số mới vào chỗ số cũ.

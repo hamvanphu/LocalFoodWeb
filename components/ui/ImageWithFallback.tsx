@@ -43,7 +43,12 @@ function PlaceholderCard({
         <span className="font-display text-lg font-semibold leading-tight">
           {name}
         </span>
-        <span className="text-xs opacity-80">
+        {/* aria-hidden: dòng này là chú thích thị giác, không phải tên của phần tử.
+            Khi ảnh giữ chỗ nằm trong một nút có `aria-label`, Lighthouse báo
+            "label-content-name-mismatch" — chữ nhìn thấy không nằm trong tên truy cập
+            được. Tên món ngay trên đã được đọc rồi, nên ẩn dòng này là đúng, không mất
+            thông tin nào với trình đọc màn hình. */}
+        <span className="text-xs opacity-80" aria-hidden="true">
           {t(locale, reason === "load-error" ? "image.failed" : "image.pending")}
         </span>
       </div>

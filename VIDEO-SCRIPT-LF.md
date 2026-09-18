@@ -27,7 +27,7 @@
 ### 0:00-0:30 · Mở đầu — nói ngay điều đắt nhất
 
 > *"Đây là Local Food — bản đồ ẩm thực 63 tỉnh Việt Nam, tôi tự lái AI xây trong khoảng
-> 17 giờ ngồi máy. Nhưng thứ tôi muốn khoe trong video này không phải cái website, mà là
+> 30 giờ ngồi máy. Nhưng thứ tôi muốn khoe trong video này không phải cái website, mà là
 > **những chỗ AI làm sai và tôi bắt được như thế nào**."*
 
 **Màn hình:** trang chủ, cuộn nhẹ qua bản đồ.
@@ -168,6 +168,37 @@ việc chấm sao.
 > *"Hiệu năng chưa đạt chuẩn tôi tự đặt, và một test case của tôi đã lỗi thời so với sản
 > phẩm. Cả ba đều ghi trong hồ sơ. Tôi thà nộp một hồ sơ trông kém hoàn hảo mà đúng sự
 > thật, còn hơn một hồ sơ đẹp mà không chống được câu hỏi đầu tiên."*
+
+### Cảnh bổ sung *(2026-09-18)* — "Trưa nay ăn gì" · ~40 giây
+
+> **Chèn vào đâu:** ngay sau cảnh giới thiệu sản phẩm, **trước** phần nói về sai sót. Đây
+> là tính năng dễ gây ấn tượng nhất trong 40 giây: một cú bấm ra kết quả đọc được ngay.
+
+**Màn hình:** bất kỳ trang nào — chỉ con bubble chạy vòng quanh mép. Rê chuột tới cho nó
+dừng, rồi bấm.
+
+> *"Tính năng này giải một câu hỏi dân văn phòng hỏi mỗi ngày: trưa nay ăn gì. Bấm một
+> nút, ra đúng hai món kèm luôn công thức."*
+
+**Bấm 2–3 lần cho thấy cặp món đổi mỗi lần.**
+
+> *"Hai — không phải một, không phải mười hai. Một món là mệnh lệnh chứ không phải gợi ý.
+> Mười hai món thì tái tạo lại đúng cái mệt mỏi mà tính năng sinh ra để gỡ."*
+
+**Cuộn xuống cho thấy nguyên liệu và cách làm ngay trên trang.**
+
+> *"Và đây mới là phần tôi muốn nói: nó chỉ bốc từ **121 trong 197 món**. Bảy mươi sáu món
+> bị loại — mồi nhậu, ăn vặt, tráng miệng, đặc sản mua về làm quà. Gợi ý một đĩa mồi nhậu
+> cho bữa trưa công sở là sai về **bản chất món**, không phải sai khẩu vị."*
+
+**Nếu còn thời gian, thêm một câu — đây là chỗ ghi điểm về phương pháp:**
+
+> *"Để làm được việc lọc đó, tôi phải phân loại tay 197 món, vì thử dò tự động thì nó xếp
+> 'Hạt điều rang' vào **cả** nhóm nhậu **lẫn** ăn vặt. Nhưng tôi **không đọc 197 món** —
+> AI khoanh vùng 23 món mà dữ liệu tự mâu thuẫn với nhãn, tôi chỉ đọc 23 món đó và ra ba
+> quyết định."*
+
+---
 
 ---
 

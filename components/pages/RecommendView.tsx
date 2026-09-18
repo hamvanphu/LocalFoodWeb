@@ -33,13 +33,13 @@ export default function RecommendView({
           {t(locale, "rec.title")}
         </h1>
         <p className="mx-auto mt-3 max-w-xl text-ink/70">{t(locale, "rec.lead")}</p>
-        <p className="mt-6 text-xs text-ink/60">
+        <p className="mt-6 text-xs text-ink/75">
           {t(locale, "rec.poolNote", { n: pool.length })}
         </p>
       </header>
 
       {picked.length === 0 ? (
-        <p className="mt-12 rounded-card border border-dashed border-border p-8 text-center text-sm text-ink/60">
+        <p className="mt-12 rounded-card border border-dashed border-border p-8 text-center text-sm text-ink/75">
           {t(locale, "rec.empty")}
         </p>
       ) : (
@@ -47,9 +47,11 @@ export default function RecommendView({
           {picked.map((item, i) => (
             <section key={`${item.provinceSlug}/${item.dish.slug}`}>
               <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-                <p className="text-xs font-medium uppercase tracking-wide text-amber-dark">
+                {/* <h2> chứ không phải <p>: đây THẬT SỰ là tiêu đề của khối, và trang
+                    đang nhảy thẳng từ h1 xuống h3 của DishCard — Lighthouse bắt đúng. */}
+                <h2 className="text-xs font-medium uppercase tracking-wide text-amber-dark">
                   {t(locale, i === 0 ? "rec.optionA" : "rec.optionB")}
-                </p>
+                </h2>
                 <OfficeFlagList flags={item.flags} locale={locale} />
               </div>
 

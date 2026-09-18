@@ -169,3 +169,89 @@ chí chấp nhận → không có test case → 2 tính năng đang chạy trên
 | Hệ thống chạy được | **Đã deploy công khai** | ✅ 68 route tĩnh + Review/Rating chạy thật trên production |
 
 **Bộ hồ sơ đã đủ.** Việc còn lại là chất lượng, không phải thiếu artefact: spot-check nội dung (R2), sửa test US-02 lỗi thời, và bổ sung test cho Search/Filter.
+
+---
+---
+
+# Báo cáo kỳ 2 — 2026-09-07 → 2026-09-18
+
+**Kỳ báo cáo:** 12 ngày, 5 phiên · **Người lập:** PM (Hàm Văn Phú)
+**Trạng thái chung:** 🟢 Đã phát hành **v1.1** và **v1.2**, site chạy công khai
+
+## 1. Tóm tắt cho người bận
+
+Kỳ trước khép lại ở v1.0 với 63 tỉnh và tính năng đánh giá. Kỳ này thêm **hai tính năng
+lớn** và một đợt siết chất lượng hồ sơ:
+
+| | |
+|---|---|
+| **v1.1** (09/09) | Song ngữ Việt–Anh đủ 63 tỉnh (~45.000 từ), chủ quyền biển đảo trên bản đồ bản tiếng Anh |
+| **v1.2** (12/09) | "Trưa nay ăn gì" — bấm một bubble ra 2 món hợp bữa trưa kèm công thức |
+| Hồ sơ | Tự đánh giá T1–T10 theo rubric bootcamp; bài rà soát requirement tìm ra **11 vấn đề thật** |
+
+**Điều cần PM biết ngay:** **c3 Freshness tụt xuống 84,4%** — dưới ngưỡng 85%. Đã dọn xong
+5 file lệch trong chính phiên 18/09 này. Và việc dọn đó **kéo theo phát hiện 3 lỗi
+accessibility thật** đang nằm trên production.
+
+## 2. Tiến độ
+
+| Hạng mục | Kỳ trước | **Kỳ này** |
+|---|---|---|
+| Commit | 53 | **83** |
+| Phiên | 5 | **10** |
+| Route sinh tĩnh | 69 | **136** |
+| Cổng kiểm chạy bằng lệnh | 1 | **3** |
+| Artefact | 25 · 43.370 từ | **34 · 73.387 từ** |
+| Giờ người | ~17,5h | **27–38h** |
+| Đánh giá bootcamp | *(chưa tự chấm)* | **9/10 assignment ≥2** |
+
+## 3. 🔴 Phát hiện mới trong kỳ — cần xử lý
+
+### 3.1 Ba lỗi accessibility trên production *(đã sửa 18/09)*
+
+Đo Lighthouse trên `/goi-y` ra **a11y 95, không phải 100**. Cả ba lỗi nằm trong `DishCard`
+— tức ảnh hưởng **mọi trang có món ăn**: contrast dưới ngưỡng AA, thứ tự tiêu đề nhảy cóc,
+tên truy cập không khớp chữ nhìn thấy.
+
+**Đáng chú ý:** `axe-core` từng báo **0 vi phạm** trên chính những component này. Lighthouse
+chạy trên trang đã render thì bắt được. Đã sửa, đo lại **a11y = 100**, và Performance nhích
+**55 → 83**. Chi tiết `PERFORMANCE-LF.md`.
+
+### 3.2 Chính báo cáo build tự lỗi thời, và tự nói dối về mình
+
+`reports/build-report.html` đứng nguyên ở 07/09 — PM phát hiện khi đối chiếu với v1.2.
+Tệ hơn: chip lọc KPI là **số cứng** trong HTML nên khi c3 tụt, báo cáo vẫn ghi *"Đạt · 7 /
+Không đạt · 0"*. Đã cho chip **tự tính từ dữ liệu**.
+
+### 3.3 Năm sự cố chưa vào DEVBOOK
+
+Vành gradient tràn thành dải chéo, bubble đè nội dung, ghi HTML vào file `.md`, telemetry
+tự lỗi thời, README khai sai nhược điểm. Đã bổ sung; phân loại lại **19 → 36 sự cố**.
+
+## 4. ⬜ Quyết định cần PM đưa ra
+
+| # | Việc | Ước lượng |
+|---|---|---|
+| **Q6** | **T8 (Meeting Summary) = 0** — assignment duy nhất dưới ngưỡng. Cần một **cuộc họp thật** rồi AI tóm tắt thành action item + owner + hạn → **10/10** | ~30 phút |
+| **Q7** | **R15 — 45.192 từ bản dịch chưa ai đọc.** Rủi ro mở lớn nhất. Đề xuất spot-check theo nhóm tỉnh nhiều thuật ngữ địa phương | ~1h |
+| **Q8** | Đặt giới hạn domain cho MapTiler key | 5 phút |
+| **Q9** | Quay video demo — kịch bản đã có, đã bổ sung cảnh `/goi-y` | 30–40 phút |
+
+## 5. Rủi ro — cập nhật
+
+| # | Trạng thái |
+|---|---|
+| **R15** *(mới)* | 🔴 Bản dịch tiếng Anh chưa ai đọc — cổng chỉ kiểm cấu trúc, không kiểm nghĩa |
+| **R16** *(mới)* | 🔴 Phân loại món là phán đoán — món gán nhầm **biến mất mà không ai thấy** |
+| **R17** *(mới)* | 🟡 Tính năng khẳng định "món hợp văn phòng" mà không nguồn nào kiểm chứng. Rào: cấm tuyệt đối nội dung dinh dưỡng/sức khoẻ |
+| R12 (LCP) | 🟡 Không đổi — nhưng `/goi-y` đạt 83/100, chứng minh khoảng cách là do MapLibre |
+| R2, R10 | 🟡 Không đổi |
+| R11, R13, R14 | 🟢 Vẫn đóng |
+
+## 6. Việc tiếp theo
+
+| Ưu tiên | Việc |
+|---|---|
+| 🔴 Cao | T8 (cuộc họp thật) → 10/10 · Spot-check bản dịch (R15) |
+| 🟡 Vừa | Quay video · Giới hạn domain MapTiler · Chọn kênh thông báo báo lỗi nội dung |
+| 🟢 Thấp | Bổ sung món "ăn no được" cho Hải Dương, Thanh Hóa, Sơn La — ba tỉnh hiện không bao giờ xuất hiện trong gợi ý |
